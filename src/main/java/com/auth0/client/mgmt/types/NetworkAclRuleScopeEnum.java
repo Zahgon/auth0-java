@@ -7,16 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class NetworkAclRuleScopeEnum {
-    public static final NetworkAclRuleScopeEnum AUTHENTICATION =
-            new NetworkAclRuleScopeEnum(Value.AUTHENTICATION, "authentication");
 
-    public static final NetworkAclRuleScopeEnum MANAGEMENT =
-            new NetworkAclRuleScopeEnum(Value.MANAGEMENT, "management");
+    public static final NetworkAclRuleScopeEnum AUTHENTICATION = new NetworkAclRuleScopeEnum(Value.AUTHENTICATION, "authentication");
+
+    public static final NetworkAclRuleScopeEnum MANAGEMENT = new NetworkAclRuleScopeEnum(Value.MANAGEMENT, "management");
 
     public static final NetworkAclRuleScopeEnum TENANT = new NetworkAclRuleScopeEnum(Value.TENANT, "tenant");
 
-    public static final NetworkAclRuleScopeEnum DYNAMIC_CLIENT_REGISTRATION =
-            new NetworkAclRuleScopeEnum(Value.DYNAMIC_CLIENT_REGISTRATION, "dynamic_client_registration");
+    public static final NetworkAclRuleScopeEnum DYNAMIC_CLIENT_REGISTRATION = new NetworkAclRuleScopeEnum(Value.DYNAMIC_CLIENT_REGISTRATION, "dynamic_client_registration");
 
     private final Value value;
 
@@ -28,72 +26,41 @@ public final class NetworkAclRuleScopeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof NetworkAclRuleScopeEnum
-                        && this.string.equals(((NetworkAclRuleScopeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTHENTICATION:
-                return visitor.visitAuthentication();
-            case MANAGEMENT:
-                return visitor.visitManagement();
-            case TENANT:
-                return visitor.visitTenant();
-            case DYNAMIC_CLIENT_REGISTRATION:
-                return visitor.visitDynamicClientRegistration();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static NetworkAclRuleScopeEnum valueOf(String value) {
-        switch (value) {
-            case "authentication":
-                return AUTHENTICATION;
-            case "management":
-                return MANAGEMENT;
-            case "tenant":
-                return TENANT;
-            case "dynamic_client_registration":
-                return DYNAMIC_CLIENT_REGISTRATION;
-            default:
-                return new NetworkAclRuleScopeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MANAGEMENT,
 
-        AUTHENTICATION,
-
-        TENANT,
-
-        DYNAMIC_CLIENT_REGISTRATION,
-
-        UNKNOWN
+        MANAGEMENT, AUTHENTICATION, TENANT, DYNAMIC_CLIENT_REGISTRATION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitManagement();
 
         T visitAuthentication();

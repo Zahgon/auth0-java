@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetOrganizationInvitationResponseContent.Builder.class)
 public final class GetOrganizationInvitationResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> organizationId;
@@ -50,21 +51,7 @@ public final class GetOrganizationInvitationResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetOrganizationInvitationResponseContent(
-            Optional<String> id,
-            Optional<String> organizationId,
-            Optional<OrganizationInvitationInviter> inviter,
-            Optional<OrganizationInvitationInvitee> invitee,
-            Optional<String> invitationUrl,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> expiresAt,
-            Optional<String> clientId,
-            Optional<String> connectionId,
-            Optional<Map<String, Object>> appMetadata,
-            Optional<Map<String, Object>> userMetadata,
-            Optional<List<String>> roles,
-            Optional<String> ticketId,
-            Map<String, Object> additionalProperties) {
+    private GetOrganizationInvitationResponseContent(Optional<String> id, Optional<String> organizationId, Optional<OrganizationInvitationInviter> inviter, Optional<OrganizationInvitationInvitee> invitee, Optional<String> invitationUrl, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> expiresAt, Optional<String> clientId, Optional<String> connectionId, Optional<Map<String, Object>> appMetadata, Optional<Map<String, Object>> userMetadata, Optional<List<String>> roles, Optional<String> ticketId, Map<String, Object> additionalProperties) {
         this.id = id;
         this.organizationId = organizationId;
         this.inviter = inviter;
@@ -86,7 +73,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,17 +81,17 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("organization_id")
     public Optional<String> getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("inviter")
     public Optional<OrganizationInvitationInviter> getInviter() {
-        return inviter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("invitee")
     public Optional<OrganizationInvitationInvitee> getInvitee() {
-        return invitee;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,7 +99,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("invitation_url")
     public Optional<String> getInvitationUrl() {
-        return invitationUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,7 +107,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -128,7 +115,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("expires_at")
     public Optional<OffsetDateTime> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -136,7 +123,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -144,17 +131,17 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_metadata")
     public Optional<Map<String, Object>> getAppMetadata() {
-        return appMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_metadata")
     public Optional<Map<String, Object>> getUserMetadata() {
-        return userMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -162,7 +149,7 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("roles")
     public Optional<List<String>> getRoles() {
-        return roles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -170,66 +157,40 @@ public final class GetOrganizationInvitationResponseContent {
      */
     @JsonProperty("ticket_id")
     public Optional<String> getTicketId() {
-        return ticketId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetOrganizationInvitationResponseContent
-                && equalTo((GetOrganizationInvitationResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetOrganizationInvitationResponseContent other) {
-        return id.equals(other.id)
-                && organizationId.equals(other.organizationId)
-                && inviter.equals(other.inviter)
-                && invitee.equals(other.invitee)
-                && invitationUrl.equals(other.invitationUrl)
-                && createdAt.equals(other.createdAt)
-                && expiresAt.equals(other.expiresAt)
-                && clientId.equals(other.clientId)
-                && connectionId.equals(other.connectionId)
-                && appMetadata.equals(other.appMetadata)
-                && userMetadata.equals(other.userMetadata)
-                && roles.equals(other.roles)
-                && ticketId.equals(other.ticketId);
+        return id.equals(other.id) && organizationId.equals(other.organizationId) && inviter.equals(other.inviter) && invitee.equals(other.invitee) && invitationUrl.equals(other.invitationUrl) && createdAt.equals(other.createdAt) && expiresAt.equals(other.expiresAt) && clientId.equals(other.clientId) && connectionId.equals(other.connectionId) && appMetadata.equals(other.appMetadata) && userMetadata.equals(other.userMetadata) && roles.equals(other.roles) && ticketId.equals(other.ticketId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.organizationId,
-                this.inviter,
-                this.invitee,
-                this.invitationUrl,
-                this.createdAt,
-                this.expiresAt,
-                this.clientId,
-                this.connectionId,
-                this.appMetadata,
-                this.userMetadata,
-                this.roles,
-                this.ticketId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> organizationId = Optional.empty();
@@ -259,23 +220,11 @@ public final class GetOrganizationInvitationResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetOrganizationInvitationResponseContent other) {
-            id(other.getId());
-            organizationId(other.getOrganizationId());
-            inviter(other.getInviter());
-            invitee(other.getInvitee());
-            invitationUrl(other.getInvitationUrl());
-            createdAt(other.getCreatedAt());
-            expiresAt(other.getExpiresAt());
-            clientId(other.getClientId());
-            connectionId(other.getConnectionId());
-            appMetadata(other.getAppMetadata());
-            userMetadata(other.getUserMetadata());
-            roles(other.getRoles());
-            ticketId(other.getTicketId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -283,13 +232,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -297,35 +244,29 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "organization_id", nulls = Nulls.SKIP)
         public Builder organizationId(Optional<String> organizationId) {
-            this.organizationId = organizationId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "inviter", nulls = Nulls.SKIP)
         public Builder inviter(Optional<OrganizationInvitationInviter> inviter) {
-            this.inviter = inviter;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder inviter(OrganizationInvitationInviter inviter) {
-            this.inviter = Optional.ofNullable(inviter);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "invitee", nulls = Nulls.SKIP)
         public Builder invitee(Optional<OrganizationInvitationInvitee> invitee) {
-            this.invitee = invitee;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder invitee(OrganizationInvitationInvitee invitee) {
-            this.invitee = Optional.ofNullable(invitee);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -333,13 +274,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "invitation_url", nulls = Nulls.SKIP)
         public Builder invitationUrl(Optional<String> invitationUrl) {
-            this.invitationUrl = invitationUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder invitationUrl(String invitationUrl) {
-            this.invitationUrl = Optional.ofNullable(invitationUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -347,13 +286,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -361,13 +298,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(Optional<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -375,13 +310,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -389,35 +322,29 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "app_metadata", nulls = Nulls.SKIP)
         public Builder appMetadata(Optional<Map<String, Object>> appMetadata) {
-            this.appMetadata = appMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appMetadata(Map<String, Object> appMetadata) {
-            this.appMetadata = Optional.ofNullable(appMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_metadata", nulls = Nulls.SKIP)
         public Builder userMetadata(Optional<Map<String, Object>> userMetadata) {
-            this.userMetadata = userMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userMetadata(Map<String, Object> userMetadata) {
-            this.userMetadata = Optional.ofNullable(userMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -425,13 +352,11 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "roles", nulls = Nulls.SKIP)
         public Builder roles(Optional<List<String>> roles) {
-            this.roles = roles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder roles(List<String> roles) {
-            this.roles = Optional.ofNullable(roles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -439,41 +364,23 @@ public final class GetOrganizationInvitationResponseContent {
          */
         @JsonSetter(value = "ticket_id", nulls = Nulls.SKIP)
         public Builder ticketId(Optional<String> ticketId) {
-            this.ticketId = ticketId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ticketId(String ticketId) {
-            this.ticketId = Optional.ofNullable(ticketId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetOrganizationInvitationResponseContent build() {
-            return new GetOrganizationInvitationResponseContent(
-                    id,
-                    organizationId,
-                    inviter,
-                    invitee,
-                    invitationUrl,
-                    createdAt,
-                    expiresAt,
-                    clientId,
-                    connectionId,
-                    appMetadata,
-                    userMetadata,
-                    roles,
-                    ticketId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

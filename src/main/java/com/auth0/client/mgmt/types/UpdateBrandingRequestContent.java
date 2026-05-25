@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBrandingRequestContent.Builder.class)
 public final class UpdateBrandingRequestContent {
+
     private final OptionalNullable<UpdateBrandingColors> colors;
 
     private final OptionalNullable<String> faviconUrl;
@@ -35,13 +36,7 @@ public final class UpdateBrandingRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBrandingRequestContent(
-            OptionalNullable<UpdateBrandingColors> colors,
-            OptionalNullable<String> faviconUrl,
-            OptionalNullable<String> logoUrl,
-            OptionalNullable<UpdateBrandingIdentifiers> identifiers,
-            OptionalNullable<UpdateBrandingFont> font,
-            Map<String, Object> additionalProperties) {
+    private UpdateBrandingRequestContent(OptionalNullable<UpdateBrandingColors> colors, OptionalNullable<String> faviconUrl, OptionalNullable<String> logoUrl, OptionalNullable<UpdateBrandingIdentifiers> identifiers, OptionalNullable<UpdateBrandingFont> font, Map<String, Object> additionalProperties) {
         this.colors = colors;
         this.faviconUrl = faviconUrl;
         this.logoUrl = logoUrl;
@@ -53,10 +48,7 @@ public final class UpdateBrandingRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("colors")
     public OptionalNullable<UpdateBrandingColors> getColors() {
-        if (colors == null) {
-            return OptionalNullable.absent();
-        }
-        return colors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,10 +57,7 @@ public final class UpdateBrandingRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("favicon_url")
     public OptionalNullable<String> getFaviconUrl() {
-        if (faviconUrl == null) {
-            return OptionalNullable.absent();
-        }
-        return faviconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,28 +66,19 @@ public final class UpdateBrandingRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("logo_url")
     public OptionalNullable<String> getLogoUrl() {
-        if (logoUrl == null) {
-            return OptionalNullable.absent();
-        }
-        return logoUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("identifiers")
     public OptionalNullable<UpdateBrandingIdentifiers> getIdentifiers() {
-        if (identifiers == null) {
-            return OptionalNullable.absent();
-        }
-        return identifiers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("font")
     public OptionalNullable<UpdateBrandingFont> getFont() {
-        if (font == null) {
-            return OptionalNullable.absent();
-        }
-        return font;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -133,39 +113,35 @@ public final class UpdateBrandingRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBrandingRequestContent && equalTo((UpdateBrandingRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBrandingRequestContent other) {
-        return colors.equals(other.colors)
-                && faviconUrl.equals(other.faviconUrl)
-                && logoUrl.equals(other.logoUrl)
-                && identifiers.equals(other.identifiers)
-                && font.equals(other.font);
+        return colors.equals(other.colors) && faviconUrl.equals(other.faviconUrl) && logoUrl.equals(other.logoUrl) && identifiers.equals(other.identifiers) && font.equals(other.font);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.colors, this.faviconUrl, this.logoUrl, this.identifiers, this.font);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<UpdateBrandingColors> colors = OptionalNullable.absent();
 
         private OptionalNullable<String> faviconUrl = OptionalNullable.absent();
@@ -179,46 +155,28 @@ public final class UpdateBrandingRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBrandingRequestContent other) {
-            colors(other.getColors());
-            faviconUrl(other.getFaviconUrl());
-            logoUrl(other.getLogoUrl());
-            identifiers(other.getIdentifiers());
-            font(other.getFont());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "colors", nulls = Nulls.SKIP)
         public Builder colors(@Nullable OptionalNullable<UpdateBrandingColors> colors) {
-            this.colors = colors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder colors(UpdateBrandingColors colors) {
-            this.colors = OptionalNullable.of(colors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder colors(Optional<UpdateBrandingColors> colors) {
-            if (colors.isPresent()) {
-                this.colors = OptionalNullable.of(colors.get());
-            } else {
-                this.colors = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder colors(com.auth0.client.mgmt.core.Nullable<UpdateBrandingColors> colors) {
-            if (colors.isNull()) {
-                this.colors = OptionalNullable.ofNull();
-            } else if (colors.isEmpty()) {
-                this.colors = OptionalNullable.absent();
-            } else {
-                this.colors = OptionalNullable.of(colors.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -226,33 +184,19 @@ public final class UpdateBrandingRequestContent {
          */
         @JsonSetter(value = "favicon_url", nulls = Nulls.SKIP)
         public Builder faviconUrl(@Nullable OptionalNullable<String> faviconUrl) {
-            this.faviconUrl = faviconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder faviconUrl(String faviconUrl) {
-            this.faviconUrl = OptionalNullable.of(faviconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder faviconUrl(Optional<String> faviconUrl) {
-            if (faviconUrl.isPresent()) {
-                this.faviconUrl = OptionalNullable.of(faviconUrl.get());
-            } else {
-                this.faviconUrl = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder faviconUrl(com.auth0.client.mgmt.core.Nullable<String> faviconUrl) {
-            if (faviconUrl.isNull()) {
-                this.faviconUrl = OptionalNullable.ofNull();
-            } else if (faviconUrl.isEmpty()) {
-                this.faviconUrl = OptionalNullable.absent();
-            } else {
-                this.faviconUrl = OptionalNullable.of(faviconUrl.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -260,110 +204,65 @@ public final class UpdateBrandingRequestContent {
          */
         @JsonSetter(value = "logo_url", nulls = Nulls.SKIP)
         public Builder logoUrl(@Nullable OptionalNullable<String> logoUrl) {
-            this.logoUrl = logoUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUrl(String logoUrl) {
-            this.logoUrl = OptionalNullable.of(logoUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUrl(Optional<String> logoUrl) {
-            if (logoUrl.isPresent()) {
-                this.logoUrl = OptionalNullable.of(logoUrl.get());
-            } else {
-                this.logoUrl = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUrl(com.auth0.client.mgmt.core.Nullable<String> logoUrl) {
-            if (logoUrl.isNull()) {
-                this.logoUrl = OptionalNullable.ofNull();
-            } else if (logoUrl.isEmpty()) {
-                this.logoUrl = OptionalNullable.absent();
-            } else {
-                this.logoUrl = OptionalNullable.of(logoUrl.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "identifiers", nulls = Nulls.SKIP)
         public Builder identifiers(@Nullable OptionalNullable<UpdateBrandingIdentifiers> identifiers) {
-            this.identifiers = identifiers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifiers(UpdateBrandingIdentifiers identifiers) {
-            this.identifiers = OptionalNullable.of(identifiers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifiers(Optional<UpdateBrandingIdentifiers> identifiers) {
-            if (identifiers.isPresent()) {
-                this.identifiers = OptionalNullable.of(identifiers.get());
-            } else {
-                this.identifiers = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifiers(com.auth0.client.mgmt.core.Nullable<UpdateBrandingIdentifiers> identifiers) {
-            if (identifiers.isNull()) {
-                this.identifiers = OptionalNullable.ofNull();
-            } else if (identifiers.isEmpty()) {
-                this.identifiers = OptionalNullable.absent();
-            } else {
-                this.identifiers = OptionalNullable.of(identifiers.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "font", nulls = Nulls.SKIP)
         public Builder font(@Nullable OptionalNullable<UpdateBrandingFont> font) {
-            this.font = font;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder font(UpdateBrandingFont font) {
-            this.font = OptionalNullable.of(font);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder font(Optional<UpdateBrandingFont> font) {
-            if (font.isPresent()) {
-                this.font = OptionalNullable.of(font.get());
-            } else {
-                this.font = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder font(com.auth0.client.mgmt.core.Nullable<UpdateBrandingFont> font) {
-            if (font.isNull()) {
-                this.font = OptionalNullable.ofNull();
-            } else if (font.isEmpty()) {
-                this.font = OptionalNullable.absent();
-            } else {
-                this.font = OptionalNullable.of(font.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBrandingRequestContent build() {
-            return new UpdateBrandingRequestContent(
-                    colors, faviconUrl, logoUrl, identifiers, font, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

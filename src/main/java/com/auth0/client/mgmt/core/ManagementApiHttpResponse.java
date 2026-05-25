@@ -17,7 +17,6 @@ public final class ManagementApiHttpResponse<T> {
 
     public ManagementApiHttpResponse(T body, Response rawResponse) {
         this.body = body;
-
         Map<String, List<String>> headers = new HashMap<>();
         rawResponse.headers().forEach(header -> {
             String key = header.component1();
@@ -28,10 +27,10 @@ public final class ManagementApiHttpResponse<T> {
     }
 
     public T body() {
-        return this.body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, List<String>> headers() {
-        return headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

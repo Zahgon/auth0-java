@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GuardianFactorPhoneFactorMessageTypeEnum {
-    public static final GuardianFactorPhoneFactorMessageTypeEnum VOICE =
-            new GuardianFactorPhoneFactorMessageTypeEnum(Value.VOICE, "voice");
 
-    public static final GuardianFactorPhoneFactorMessageTypeEnum SMS =
-            new GuardianFactorPhoneFactorMessageTypeEnum(Value.SMS, "sms");
+    public static final GuardianFactorPhoneFactorMessageTypeEnum VOICE = new GuardianFactorPhoneFactorMessageTypeEnum(Value.VOICE, "voice");
+
+    public static final GuardianFactorPhoneFactorMessageTypeEnum SMS = new GuardianFactorPhoneFactorMessageTypeEnum(Value.SMS, "sms");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class GuardianFactorPhoneFactorMessageTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GuardianFactorPhoneFactorMessageTypeEnum
-                        && this.string.equals(((GuardianFactorPhoneFactorMessageTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VOICE:
-                return visitor.visitVoice();
-            case SMS:
-                return visitor.visitSms();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GuardianFactorPhoneFactorMessageTypeEnum valueOf(String value) {
-        switch (value) {
-            case "voice":
-                return VOICE;
-            case "sms":
-                return SMS;
-            default:
-                return new GuardianFactorPhoneFactorMessageTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SMS,
 
-        VOICE,
-
-        UNKNOWN
+        SMS, VOICE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSms();
 
         T visitVoice();

@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListClientGrantPaginatedResponseContent.Builder.class)
 public final class ListClientGrantPaginatedResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<ClientGrantResponseContent>> clientGrants;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListClientGrantPaginatedResponseContent(
-            Optional<String> next,
-            Optional<List<ClientGrantResponseContent>> clientGrants,
-            Map<String, Object> additionalProperties) {
+    private ListClientGrantPaginatedResponseContent(Optional<String> next, Optional<List<ClientGrantResponseContent>> clientGrants, Map<String, Object> additionalProperties) {
         this.next = next;
         this.clientGrants = clientGrants;
         this.additionalProperties = additionalProperties;
@@ -41,24 +39,22 @@ public final class ListClientGrantPaginatedResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_grants")
     public Optional<List<ClientGrantResponseContent>> getClientGrants() {
-        return clientGrants;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListClientGrantPaginatedResponseContent
-                && equalTo((ListClientGrantPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListClientGrantPaginatedResponseContent other) {
@@ -67,20 +63,21 @@ public final class ListClientGrantPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.clientGrants);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<ClientGrantResponseContent>> clientGrants = Optional.empty();
@@ -88,12 +85,11 @@ public final class ListClientGrantPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListClientGrantPaginatedResponseContent other) {
-            next(other.getNext());
-            clientGrants(other.getClientGrants());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,38 +97,32 @@ public final class ListClientGrantPaginatedResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_grants", nulls = Nulls.SKIP)
         public Builder clientGrants(Optional<List<ClientGrantResponseContent>> clientGrants) {
-            this.clientGrants = clientGrants;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientGrants(List<ClientGrantResponseContent> clientGrants) {
-            this.clientGrants = Optional.ofNullable(clientGrants);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListClientGrantPaginatedResponseContent build() {
-            return new ListClientGrantPaginatedResponseContent(next, clientGrants, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

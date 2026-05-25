@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AsyncApprovalNotificationsChannelsEnum {
-    public static final AsyncApprovalNotificationsChannelsEnum EMAIL =
-            new AsyncApprovalNotificationsChannelsEnum(Value.EMAIL, "email");
 
-    public static final AsyncApprovalNotificationsChannelsEnum GUARDIAN_PUSH =
-            new AsyncApprovalNotificationsChannelsEnum(Value.GUARDIAN_PUSH, "guardian-push");
+    public static final AsyncApprovalNotificationsChannelsEnum EMAIL = new AsyncApprovalNotificationsChannelsEnum(Value.EMAIL, "email");
+
+    public static final AsyncApprovalNotificationsChannelsEnum GUARDIAN_PUSH = new AsyncApprovalNotificationsChannelsEnum(Value.GUARDIAN_PUSH, "guardian-push");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class AsyncApprovalNotificationsChannelsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AsyncApprovalNotificationsChannelsEnum
-                        && this.string.equals(((AsyncApprovalNotificationsChannelsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case GUARDIAN_PUSH:
-                return visitor.visitGuardianPush();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AsyncApprovalNotificationsChannelsEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "guardian-push":
-                return GUARDIAN_PUSH;
-            default:
-                return new AsyncApprovalNotificationsChannelsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GUARDIAN_PUSH,
 
-        EMAIL,
-
-        UNKNOWN
+        GUARDIAN_PUSH, EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGuardianPush();
 
         T visitEmail();

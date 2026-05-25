@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetClientCredentialResponseContent.Builder.class)
 public final class GetClientCredentialResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -43,18 +44,7 @@ public final class GetClientCredentialResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetClientCredentialResponseContent(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<String> kid,
-            Optional<ClientCredentialAlgorithmEnum> alg,
-            Optional<ClientCredentialTypeEnum> credentialType,
-            Optional<String> subjectDn,
-            Optional<String> thumbprintSha256,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Optional<OffsetDateTime> expiresAt,
-            Map<String, Object> additionalProperties) {
+    private GetClientCredentialResponseContent(Optional<String> id, Optional<String> name, Optional<String> kid, Optional<ClientCredentialAlgorithmEnum> alg, Optional<ClientCredentialTypeEnum> credentialType, Optional<String> subjectDn, Optional<String> thumbprintSha256, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Optional<OffsetDateTime> expiresAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.kid = kid;
@@ -73,7 +63,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +71,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,17 +79,17 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("kid")
     public Optional<String> getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alg")
     public Optional<ClientCredentialAlgorithmEnum> getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("credential_type")
     public Optional<ClientCredentialTypeEnum> getCredentialType() {
-        return credentialType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,7 +97,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("subject_dn")
     public Optional<String> getSubjectDn() {
-        return subjectDn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +105,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("thumbprint_sha256")
     public Optional<String> getThumbprintSha256() {
-        return thumbprintSha256;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -123,7 +113,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -131,7 +121,7 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,60 +129,40 @@ public final class GetClientCredentialResponseContent {
      */
     @JsonProperty("expires_at")
     public Optional<OffsetDateTime> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetClientCredentialResponseContent
-                && equalTo((GetClientCredentialResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetClientCredentialResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && kid.equals(other.kid)
-                && alg.equals(other.alg)
-                && credentialType.equals(other.credentialType)
-                && subjectDn.equals(other.subjectDn)
-                && thumbprintSha256.equals(other.thumbprintSha256)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && expiresAt.equals(other.expiresAt);
+        return id.equals(other.id) && name.equals(other.name) && kid.equals(other.kid) && alg.equals(other.alg) && credentialType.equals(other.credentialType) && subjectDn.equals(other.subjectDn) && thumbprintSha256.equals(other.thumbprintSha256) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && expiresAt.equals(other.expiresAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.name,
-                this.kid,
-                this.alg,
-                this.credentialType,
-                this.subjectDn,
-                this.thumbprintSha256,
-                this.createdAt,
-                this.updatedAt,
-                this.expiresAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -216,20 +186,11 @@ public final class GetClientCredentialResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetClientCredentialResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            kid(other.getKid());
-            alg(other.getAlg());
-            credentialType(other.getCredentialType());
-            subjectDn(other.getSubjectDn());
-            thumbprintSha256(other.getThumbprintSha256());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            expiresAt(other.getExpiresAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -237,13 +198,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -251,13 +210,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -265,35 +222,29 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "kid", nulls = Nulls.SKIP)
         public Builder kid(Optional<String> kid) {
-            this.kid = kid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder kid(String kid) {
-            this.kid = Optional.ofNullable(kid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "alg", nulls = Nulls.SKIP)
         public Builder alg(Optional<ClientCredentialAlgorithmEnum> alg) {
-            this.alg = alg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder alg(ClientCredentialAlgorithmEnum alg) {
-            this.alg = Optional.ofNullable(alg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "credential_type", nulls = Nulls.SKIP)
         public Builder credentialType(Optional<ClientCredentialTypeEnum> credentialType) {
-            this.credentialType = credentialType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder credentialType(ClientCredentialTypeEnum credentialType) {
-            this.credentialType = Optional.ofNullable(credentialType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -301,13 +252,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "subject_dn", nulls = Nulls.SKIP)
         public Builder subjectDn(Optional<String> subjectDn) {
-            this.subjectDn = subjectDn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectDn(String subjectDn) {
-            this.subjectDn = Optional.ofNullable(subjectDn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,13 +264,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "thumbprint_sha256", nulls = Nulls.SKIP)
         public Builder thumbprintSha256(Optional<String> thumbprintSha256) {
-            this.thumbprintSha256 = thumbprintSha256;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder thumbprintSha256(String thumbprintSha256) {
-            this.thumbprintSha256 = Optional.ofNullable(thumbprintSha256);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -329,13 +276,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -343,13 +288,11 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -357,38 +300,23 @@ public final class GetClientCredentialResponseContent {
          */
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(Optional<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetClientCredentialResponseContent build() {
-            return new GetClientCredentialResponseContent(
-                    id,
-                    name,
-                    kid,
-                    alg,
-                    credentialType,
-                    subjectDn,
-                    thumbprintSha256,
-                    createdAt,
-                    updatedAt,
-                    expiresAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

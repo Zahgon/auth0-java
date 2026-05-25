@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionAttributes.Builder.class)
 public final class ConnectionAttributes {
+
     private final Optional<EmailAttribute> email;
 
     private final Optional<PhoneAttribute> phoneNumber;
@@ -28,11 +29,7 @@ public final class ConnectionAttributes {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionAttributes(
-            Optional<EmailAttribute> email,
-            Optional<PhoneAttribute> phoneNumber,
-            Optional<UsernameAttribute> username,
-            Map<String, Object> additionalProperties) {
+    private ConnectionAttributes(Optional<EmailAttribute> email, Optional<PhoneAttribute> phoneNumber, Optional<UsernameAttribute> username, Map<String, Object> additionalProperties) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.username = username;
@@ -41,28 +38,27 @@ public final class ConnectionAttributes {
 
     @JsonProperty("email")
     public Optional<EmailAttribute> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone_number")
     public Optional<PhoneAttribute> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("username")
     public Optional<UsernameAttribute> getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionAttributes && equalTo((ConnectionAttributes) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionAttributes other) {
@@ -71,20 +67,21 @@ public final class ConnectionAttributes {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.email, this.phoneNumber, this.username);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<EmailAttribute> email = Optional.empty();
 
         private Optional<PhoneAttribute> phoneNumber = Optional.empty();
@@ -94,60 +91,50 @@ public final class ConnectionAttributes {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionAttributes other) {
-            email(other.getEmail());
-            phoneNumber(other.getPhoneNumber());
-            username(other.getUsername());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<EmailAttribute> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(EmailAttribute email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public Builder phoneNumber(Optional<PhoneAttribute> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(PhoneAttribute phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public Builder username(Optional<UsernameAttribute> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(UsernameAttribute username) {
-            this.username = Optional.ofNullable(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionAttributes build() {
-            return new ConnectionAttributes(email, phoneNumber, username, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

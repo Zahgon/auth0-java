@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.PartialGroupsEnum;
 import java.util.Map;
 
 public class PartialsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawPartialsClient rawClient;
@@ -22,34 +23,34 @@ public class PartialsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawPartialsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get template partials for a prompt
      */
     public Map<String, Object> get(PartialGroupsEnum prompt) {
-        return this.rawClient.get(prompt).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get template partials for a prompt
      */
     public Map<String, Object> get(PartialGroupsEnum prompt, RequestOptions requestOptions) {
-        return this.rawClient.get(prompt, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set template partials for a prompt
      */
     public void set(PartialGroupsEnum prompt, Map<String, Object> request) {
-        this.rawClient.set(prompt, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set template partials for a prompt
      */
     public void set(PartialGroupsEnum prompt, Map<String, Object> request, RequestOptions requestOptions) {
-        this.rawClient.set(prompt, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

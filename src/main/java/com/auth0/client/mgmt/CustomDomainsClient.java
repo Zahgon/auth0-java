@@ -20,6 +20,7 @@ import com.auth0.client.mgmt.types.VerifyCustomDomainResponseContent;
 import java.util.List;
 
 public class CustomDomainsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCustomDomainsClient rawClient;
@@ -33,35 +34,35 @@ public class CustomDomainsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCustomDomainsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public List<CustomDomain> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public List<CustomDomain> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public List<CustomDomain> list(ListCustomDomainsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public List<CustomDomain> list(ListCustomDomainsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,7 +80,7 @@ public class CustomDomainsClient {
      * </ul>
      */
     public CreateCustomDomainResponseContent create(CreateCustomDomainRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,66 +97,64 @@ public class CustomDomainsClient {
      * <li>recommended - for modern usage this includes TLS 1.2 only</li>
      * </ul>
      */
-    public CreateCustomDomainResponseContent create(
-            CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateCustomDomainResponseContent create(CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public GetDefaultDomainResponseContent getDefault() {
-        return this.rawClient.getDefault().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public GetDefaultDomainResponseContent getDefault(RequestOptions requestOptions) {
-        return this.rawClient.getDefault(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
     public UpdateDefaultDomainResponseContent setDefault(SetDefaultCustomDomainRequestContent request) {
-        return this.rawClient.setDefault(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
-    public UpdateDefaultDomainResponseContent setDefault(
-            SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setDefault(request, requestOptions).body();
+    public UpdateDefaultDomainResponseContent setDefault(SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public GetCustomDomainResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public GetCustomDomainResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -181,7 +180,7 @@ public class CustomDomainsClient {
      * </ul>
      */
     public UpdateCustomDomainResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -207,7 +206,7 @@ public class CustomDomainsClient {
      * </ul>
      */
     public UpdateCustomDomainResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -233,7 +232,7 @@ public class CustomDomainsClient {
      * </ul>
      */
     public UpdateCustomDomainResponseContent update(String id, UpdateCustomDomainRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -258,23 +257,22 @@ public class CustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public UpdateCustomDomainResponseContent update(
-            String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateCustomDomainResponseContent update(String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public TestCustomDomainResponseContent test(String id) {
-        return this.rawClient.test(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public TestCustomDomainResponseContent test(String id, RequestOptions requestOptions) {
-        return this.rawClient.test(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -285,7 +283,7 @@ public class CustomDomainsClient {
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
     public VerifyCustomDomainResponseContent verify(String id) {
-        return this.rawClient.verify(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -296,6 +294,6 @@ public class CustomDomainsClient {
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
     public VerifyCustomDomainResponseContent verify(String id, RequestOptions requestOptions) {
-        return this.rawClient.verify(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

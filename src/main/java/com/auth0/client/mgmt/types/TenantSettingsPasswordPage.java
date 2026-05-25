@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TenantSettingsPasswordPage.Builder.class)
 public final class TenantSettingsPasswordPage {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<String> html;
 
     private final Map<String, Object> additionalProperties;
 
-    private TenantSettingsPasswordPage(
-            Optional<Boolean> enabled, Optional<String> html, Map<String, Object> additionalProperties) {
+    private TenantSettingsPasswordPage(Optional<Boolean> enabled, Optional<String> html, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.html = html;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class TenantSettingsPasswordPage {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class TenantSettingsPasswordPage {
      */
     @JsonProperty("html")
     public Optional<String> getHtml() {
-        return html;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TenantSettingsPasswordPage && equalTo((TenantSettingsPasswordPage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TenantSettingsPasswordPage other) {
@@ -66,20 +65,21 @@ public final class TenantSettingsPasswordPage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.html);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<String> html = Optional.empty();
@@ -87,12 +87,11 @@ public final class TenantSettingsPasswordPage {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TenantSettingsPasswordPage other) {
-            enabled(other.getEnabled());
-            html(other.getHtml());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class TenantSettingsPasswordPage {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class TenantSettingsPasswordPage {
          */
         @JsonSetter(value = "html", nulls = Nulls.SKIP)
         public Builder html(Optional<String> html) {
-            this.html = html;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder html(String html) {
-            this.html = Optional.ofNullable(html);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TenantSettingsPasswordPage build() {
-            return new TenantSettingsPasswordPage(enabled, html, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

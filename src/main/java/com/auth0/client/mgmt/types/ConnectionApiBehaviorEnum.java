@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionApiBehaviorEnum {
+
     public static final ConnectionApiBehaviorEnum REQUIRED = new ConnectionApiBehaviorEnum(Value.REQUIRED, "required");
 
     public static final ConnectionApiBehaviorEnum OPTIONAL = new ConnectionApiBehaviorEnum(Value.OPTIONAL, "optional");
@@ -21,60 +22,41 @@ public final class ConnectionApiBehaviorEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionApiBehaviorEnum
-                        && this.string.equals(((ConnectionApiBehaviorEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case REQUIRED:
-                return visitor.visitRequired();
-            case OPTIONAL:
-                return visitor.visitOptional();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionApiBehaviorEnum valueOf(String value) {
-        switch (value) {
-            case "required":
-                return REQUIRED;
-            case "optional":
-                return OPTIONAL;
-            default:
-                return new ConnectionApiBehaviorEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        REQUIRED,
 
-        OPTIONAL,
-
-        UNKNOWN
+        REQUIRED, OPTIONAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRequired();
 
         T visitOptional();

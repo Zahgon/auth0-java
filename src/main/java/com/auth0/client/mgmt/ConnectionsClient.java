@@ -23,6 +23,7 @@ import com.auth0.client.mgmt.types.UpdateConnectionResponseContent;
 import java.util.function.Supplier;
 
 public class ConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectionsClient rawClient;
@@ -51,7 +52,7 @@ public class ConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,7 +72,7 @@ public class ConnectionsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<ConnectionForList> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +92,7 @@ public class ConnectionsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<ConnectionForList> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,7 +112,7 @@ public class ConnectionsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<ConnectionForList> list(ListConnectionsQueryParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -130,9 +131,8 @@ public class ConnectionsClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public SyncPagingIterable<ConnectionForList> list(
-            ListConnectionsQueryParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<ConnectionForList> list(ListConnectionsQueryParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,45 +140,43 @@ public class ConnectionsClient {
      * <p><b>Note:</b> If a connection with the same name was recently deleted and had a large number of associated users, the deletion may still be processing. Creating a new connection with that name before the deletion completes may fail or produce unexpected results.</p>
      */
     public CreateConnectionResponseContent create(CreateConnectionRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new connection according to the JSON object received in <code>body</code>.
      * <p><b>Note:</b> If a connection with the same name was recently deleted and had a large number of associated users, the deletion may still be processing. Creating a new connection with that name before the deletion completes may fail or produce unexpected results.</p>
      */
-    public CreateConnectionResponseContent create(
-            CreateConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateConnectionResponseContent create(CreateConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> along with options that can be used for identity provider configuration.
      */
     public GetConnectionResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> along with options that can be used for identity provider configuration.
      */
     public GetConnectionResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> along with options that can be used for identity provider configuration.
      */
     public GetConnectionResponseContent get(String id, GetConnectionRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> along with options that can be used for identity provider configuration.
      */
-    public GetConnectionResponseContent get(
-            String id, GetConnectionRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+    public GetConnectionResponseContent get(String id, GetConnectionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -186,7 +184,7 @@ public class ConnectionsClient {
      * <p><b>Note:</b> If your connection has a large amount of users associated with it, please be aware that this operation can be long running after the response is returned and may impact concurrent <a href="https://auth0.com/docs/api/management/v2/connections/post-connections">create connection</a> requests, if they use an identical connection name.</p>
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -194,7 +192,7 @@ public class ConnectionsClient {
      * <p><b>Note:</b> If your connection has a large amount of users associated with it, please be aware that this operation can be long running after the response is returned and may impact concurrent <a href="https://auth0.com/docs/api/management/v2/connections/post-connections">create connection</a> requests, if they use an identical connection name.</p>
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -202,7 +200,7 @@ public class ConnectionsClient {
      * <p><b>Note</b>: If you use the <code>options</code> parameter, the entire <code>options</code> object is overriden. To avoid partial data or other issues, ensure all parameters are present when using this option.</p>
      */
     public UpdateConnectionResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -210,7 +208,7 @@ public class ConnectionsClient {
      * <p><b>Note</b>: If you use the <code>options</code> parameter, the entire <code>options</code> object is overriden. To avoid partial data or other issues, ensure all parameters are present when using this option.</p>
      */
     public UpdateConnectionResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -218,49 +216,48 @@ public class ConnectionsClient {
      * <p><b>Note</b>: If you use the <code>options</code> parameter, the entire <code>options</code> object is overriden. To avoid partial data or other issues, ensure all parameters are present when using this option.</p>
      */
     public UpdateConnectionResponseContent update(String id, UpdateConnectionRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details for a specific <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a>, including option properties for identity provider configuration.
      * <p><b>Note</b>: If you use the <code>options</code> parameter, the entire <code>options</code> object is overriden. To avoid partial data or other issues, ensure all parameters are present when using this option.</p>
      */
-    public UpdateConnectionResponseContent update(
-            String id, UpdateConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateConnectionResponseContent update(String id, UpdateConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the status of an ad/ldap connection referenced by its <code>ID</code>. <code>200 OK</code> http status code response is returned  when the connection is online, otherwise a <code>404</code> status code is returned along with an error message
      */
     public void checkStatus(String id) {
-        this.rawClient.checkStatus(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the status of an ad/ldap connection referenced by its <code>ID</code>. <code>200 OK</code> http status code response is returned  when the connection is online, otherwise a <code>404</code> status code is returned along with an error message
      */
     public void checkStatus(String id, RequestOptions requestOptions) {
-        this.rawClient.checkStatus(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public DirectoryProvisioningClient directoryProvisioning() {
-        return this.directoryProvisioningClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ScimConfigurationClient scimConfiguration() {
-        return this.scimConfigurationClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ClientsClient clients() {
-        return this.clientsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public KeysClient keys() {
-        return this.keysClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UsersClient users() {
-        return this.usersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

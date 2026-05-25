@@ -46,6 +46,7 @@ import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 
 public class AsyncRawRenderingClient {
+
     protected final ClientOptions clientOptions;
 
     public AsyncRawRenderingClient(ClientOptions clientOptions) {
@@ -56,474 +57,83 @@ public class AsyncRawRenderingClient {
      * Get render setting configurations for all screens.
      */
     public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list() {
-        return list(ListAculsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(
-            RequestOptions requestOptions) {
-        return list(ListAculsRequestParameters.builder().build(), requestOptions);
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(
-            ListAculsRequestParameters request) {
-        return list(request, null);
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(ListAculsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(
-            ListAculsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("prompts/rendering");
-        if (!request.getFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "fields", request.getFields().orElse(null), false);
-        }
-        if (!request.getIncludeFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "include_fields", request.getIncludeFields().orElse(null), false);
-        }
-        QueryStringMapper.addQueryParameter(httpUrl, "page", request.getPage().orElse(0), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "per_page", request.getPerPage().orElse(50), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "include_totals", request.getIncludeTotals().orElse(true), false);
-        if (!request.getPrompt().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "prompt", request.getPrompt().orElse(null), false);
-        }
-        if (!request.getScreen().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "screen", request.getScreen().orElse(null), false);
-        }
-        if (!request.getRenderingMode().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "rendering_mode", request.getRenderingMode().orElse(null), false);
-        }
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> future =
-                new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        ListAculsOffsetPaginatedResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, ListAculsOffsetPaginatedResponseContent.class);
-                        int newPageNumber = request.getPage()
-                                .map((Integer page) -> page + 1)
-                                .orElse(1);
-                        ListAculsRequestParameters nextRequest = ListAculsRequestParameters.builder()
-                                .from(request)
-                                .page(newPageNumber)
-                                .build();
-                        List<ListAculsResponseContentItem> result =
-                                parsedResponse.getConfigs().orElse(Collections.emptyList());
-                        future.complete(new ManagementApiHttpResponse<>(
-                                new SyncPagingIterable<ListAculsResponseContentItem>(
-                                        true, result, parsedResponse, () -> {
-                                            try {
-                                                return list(nextRequest, requestOptions)
-                                                        .get()
-                                                        .body();
-                                            } catch (InterruptedException | ExecutionException e) {
-                                                throw new RuntimeException(e);
-                                            }
-                                        }),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 402:
-                                future.completeExceptionally(new PaymentRequiredError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<ListAculsResponseContentItem>>> list(ListAculsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<BulkUpdateAculResponseContent>> bulkUpdate(
-            BulkUpdateAculRequestContent request) {
-        return bulkUpdate(request, null);
+    public CompletableFuture<ManagementApiHttpResponse<BulkUpdateAculResponseContent>> bulkUpdate(BulkUpdateAculRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<BulkUpdateAculResponseContent>> bulkUpdate(
-            BulkUpdateAculRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("prompts/rendering");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<BulkUpdateAculResponseContent>> future = new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        future.complete(new ManagementApiHttpResponse<>(
-                                ObjectMappers.JSON_MAPPER.readValue(
-                                        responseBodyString, BulkUpdateAculResponseContent.class),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 402:
-                                future.completeExceptionally(new PaymentRequiredError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<BulkUpdateAculResponseContent>> bulkUpdate(BulkUpdateAculRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render settings for a screen.
      */
-    public CompletableFuture<ManagementApiHttpResponse<GetAculResponseContent>> get(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
-        return get(prompt, screen, null);
+    public CompletableFuture<ManagementApiHttpResponse<GetAculResponseContent>> get(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render settings for a screen.
      */
-    public CompletableFuture<ManagementApiHttpResponse<GetAculResponseContent>> get(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("prompts")
-                .addPathSegment(prompt.toString())
-                .addPathSegments("screen")
-                .addPathSegment(screen.toString())
-                .addPathSegments("rendering");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<GetAculResponseContent>> future = new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        future.complete(new ManagementApiHttpResponse<>(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, GetAculResponseContent.class),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 402:
-                                future.completeExceptionally(new PaymentRequiredError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 404:
-                                future.completeExceptionally(new NotFoundError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<GetAculResponseContent>> get(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
-        return update(prompt, screen, UpdateAculRequestContent.builder().build());
+    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
-        return update(prompt, screen, UpdateAculRequestContent.builder().build(), requestOptions);
+    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request) {
-        return update(prompt, screen, request, null);
+    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(
-            PromptGroupNameEnum prompt,
-            ScreenGroupNameEnum screen,
-            UpdateAculRequestContent request,
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("prompts")
-                .addPathSegment(prompt.toString())
-                .addPathSegments("screen")
-                .addPathSegment(screen.toString())
-                .addPathSegments("rendering");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> future = new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        future.complete(new ManagementApiHttpResponse<>(
-                                ObjectMappers.JSON_MAPPER.readValue(
-                                        responseBodyString, UpdateAculResponseContent.class),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 402:
-                                future.completeExceptionally(new PaymentRequiredError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<UpdateAculResponseContent>> update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

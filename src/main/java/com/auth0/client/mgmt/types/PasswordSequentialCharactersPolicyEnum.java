@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordSequentialCharactersPolicyEnum {
-    public static final PasswordSequentialCharactersPolicyEnum ALLOW =
-            new PasswordSequentialCharactersPolicyEnum(Value.ALLOW, "allow");
 
-    public static final PasswordSequentialCharactersPolicyEnum BLOCK =
-            new PasswordSequentialCharactersPolicyEnum(Value.BLOCK, "block");
+    public static final PasswordSequentialCharactersPolicyEnum ALLOW = new PasswordSequentialCharactersPolicyEnum(Value.ALLOW, "allow");
+
+    public static final PasswordSequentialCharactersPolicyEnum BLOCK = new PasswordSequentialCharactersPolicyEnum(Value.BLOCK, "block");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class PasswordSequentialCharactersPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordSequentialCharactersPolicyEnum
-                        && this.string.equals(((PasswordSequentialCharactersPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALLOW:
-                return visitor.visitAllow();
-            case BLOCK:
-                return visitor.visitBlock();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordSequentialCharactersPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "allow":
-                return ALLOW;
-            case "block":
-                return BLOCK;
-            default:
-                return new PasswordSequentialCharactersPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALLOW,
 
-        BLOCK,
-
-        UNKNOWN
+        ALLOW, BLOCK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAllow();
 
         T visitBlock();

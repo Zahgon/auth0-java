@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionProfileOrganization.Builder.class)
 public final class ConnectionProfileOrganization {
+
     private final Optional<ConnectionProfileOrganizationShowAsButtonEnum> showAsButton;
 
     private final Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionProfileOrganization(
-            Optional<ConnectionProfileOrganizationShowAsButtonEnum> showAsButton,
-            Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin,
-            Map<String, Object> additionalProperties) {
+    private ConnectionProfileOrganization(Optional<ConnectionProfileOrganizationShowAsButtonEnum> showAsButton, Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin, Map<String, Object> additionalProperties) {
         this.showAsButton = showAsButton;
         this.assignMembershipOnLogin = assignMembershipOnLogin;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class ConnectionProfileOrganization {
 
     @JsonProperty("show_as_button")
     public Optional<ConnectionProfileOrganizationShowAsButtonEnum> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("assign_membership_on_login")
     public Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> getAssignMembershipOnLogin() {
-        return assignMembershipOnLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionProfileOrganization && equalTo((ConnectionProfileOrganization) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionProfileOrganization other) {
@@ -62,72 +59,63 @@ public final class ConnectionProfileOrganization {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.showAsButton, this.assignMembershipOnLogin);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionProfileOrganizationShowAsButtonEnum> showAsButton = Optional.empty();
 
-        private Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin =
-                Optional.empty();
+        private Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionProfileOrganization other) {
-            showAsButton(other.getShowAsButton());
-            assignMembershipOnLogin(other.getAssignMembershipOnLogin());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public Builder showAsButton(Optional<ConnectionProfileOrganizationShowAsButtonEnum> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder showAsButton(ConnectionProfileOrganizationShowAsButtonEnum showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "assign_membership_on_login", nulls = Nulls.SKIP)
-        public Builder assignMembershipOnLogin(
-                Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = assignMembershipOnLogin;
-            return this;
+        public Builder assignMembershipOnLogin(Optional<ConnectionProfileOrganizationAssignMembershipOnLoginEnum> assignMembershipOnLogin) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder assignMembershipOnLogin(
-                ConnectionProfileOrganizationAssignMembershipOnLoginEnum assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = Optional.ofNullable(assignMembershipOnLogin);
-            return this;
+        public Builder assignMembershipOnLogin(ConnectionProfileOrganizationAssignMembershipOnLoginEnum assignMembershipOnLogin) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionProfileOrganization build() {
-            return new ConnectionProfileOrganization(showAsButton, assignMembershipOnLogin, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

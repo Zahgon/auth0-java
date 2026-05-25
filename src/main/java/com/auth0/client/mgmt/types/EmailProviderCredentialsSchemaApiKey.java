@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentialsSchemaApiKey.Builder.class)
 public final class EmailProviderCredentialsSchemaApiKey {
+
     private final Optional<String> apiKey;
 
     private final Optional<String> domain;
@@ -28,11 +29,7 @@ public final class EmailProviderCredentialsSchemaApiKey {
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailProviderCredentialsSchemaApiKey(
-            Optional<String> apiKey,
-            Optional<String> domain,
-            Optional<EmailMailgunRegionEnum> region,
-            Map<String, Object> additionalProperties) {
+    private EmailProviderCredentialsSchemaApiKey(Optional<String> apiKey, Optional<String> domain, Optional<EmailMailgunRegionEnum> region, Map<String, Object> additionalProperties) {
         this.apiKey = apiKey;
         this.domain = domain;
         this.region = region;
@@ -44,7 +41,7 @@ public final class EmailProviderCredentialsSchemaApiKey {
      */
     @JsonProperty("api_key")
     public Optional<String> getApiKey() {
-        return apiKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,24 +49,22 @@ public final class EmailProviderCredentialsSchemaApiKey {
      */
     @JsonProperty("domain")
     public Optional<String> getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("region")
     public Optional<EmailMailgunRegionEnum> getRegion() {
-        return region;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchemaApiKey
-                && equalTo((EmailProviderCredentialsSchemaApiKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchemaApiKey other) {
@@ -78,20 +73,21 @@ public final class EmailProviderCredentialsSchemaApiKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.apiKey, this.domain, this.region);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> apiKey = Optional.empty();
 
         private Optional<String> domain = Optional.empty();
@@ -101,13 +97,11 @@ public final class EmailProviderCredentialsSchemaApiKey {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailProviderCredentialsSchemaApiKey other) {
-            apiKey(other.getApiKey());
-            domain(other.getDomain());
-            region(other.getRegion());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,13 +109,11 @@ public final class EmailProviderCredentialsSchemaApiKey {
          */
         @JsonSetter(value = "api_key", nulls = Nulls.SKIP)
         public Builder apiKey(Optional<String> apiKey) {
-            this.apiKey = apiKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Optional.ofNullable(apiKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,38 +121,32 @@ public final class EmailProviderCredentialsSchemaApiKey {
          */
         @JsonSetter(value = "domain", nulls = Nulls.SKIP)
         public Builder domain(Optional<String> domain) {
-            this.domain = domain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domain(String domain) {
-            this.domain = Optional.ofNullable(domain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "region", nulls = Nulls.SKIP)
         public Builder region(Optional<EmailMailgunRegionEnum> region) {
-            this.region = region;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder region(EmailMailgunRegionEnum region) {
-            this.region = Optional.ofNullable(region);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailProviderCredentialsSchemaApiKey build() {
-            return new EmailProviderCredentialsSchemaApiKey(apiKey, domain, region, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

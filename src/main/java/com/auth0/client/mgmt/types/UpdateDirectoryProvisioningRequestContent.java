@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateDirectoryProvisioningRequestContent.Builder.class)
 public final class UpdateDirectoryProvisioningRequestContent {
+
     private final Optional<List<DirectoryProvisioningMappingItem>> mapping;
 
     private final Optional<Boolean> synchronizeAutomatically;
@@ -29,11 +30,7 @@ public final class UpdateDirectoryProvisioningRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateDirectoryProvisioningRequestContent(
-            Optional<List<DirectoryProvisioningMappingItem>> mapping,
-            Optional<Boolean> synchronizeAutomatically,
-            Optional<SynchronizeGroupsEnum> synchronizeGroups,
-            Map<String, Object> additionalProperties) {
+    private UpdateDirectoryProvisioningRequestContent(Optional<List<DirectoryProvisioningMappingItem>> mapping, Optional<Boolean> synchronizeAutomatically, Optional<SynchronizeGroupsEnum> synchronizeGroups, Map<String, Object> additionalProperties) {
         this.mapping = mapping;
         this.synchronizeAutomatically = synchronizeAutomatically;
         this.synchronizeGroups = synchronizeGroups;
@@ -45,7 +42,7 @@ public final class UpdateDirectoryProvisioningRequestContent {
      */
     @JsonProperty("mapping")
     public Optional<List<DirectoryProvisioningMappingItem>> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,48 +50,45 @@ public final class UpdateDirectoryProvisioningRequestContent {
      */
     @JsonProperty("synchronize_automatically")
     public Optional<Boolean> getSynchronizeAutomatically() {
-        return synchronizeAutomatically;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("synchronize_groups")
     public Optional<SynchronizeGroupsEnum> getSynchronizeGroups() {
-        return synchronizeGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateDirectoryProvisioningRequestContent
-                && equalTo((UpdateDirectoryProvisioningRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateDirectoryProvisioningRequestContent other) {
-        return mapping.equals(other.mapping)
-                && synchronizeAutomatically.equals(other.synchronizeAutomatically)
-                && synchronizeGroups.equals(other.synchronizeGroups);
+        return mapping.equals(other.mapping) && synchronizeAutomatically.equals(other.synchronizeAutomatically) && synchronizeGroups.equals(other.synchronizeGroups);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mapping, this.synchronizeAutomatically, this.synchronizeGroups);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<DirectoryProvisioningMappingItem>> mapping = Optional.empty();
 
         private Optional<Boolean> synchronizeAutomatically = Optional.empty();
@@ -104,13 +98,11 @@ public final class UpdateDirectoryProvisioningRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateDirectoryProvisioningRequestContent other) {
-            mapping(other.getMapping());
-            synchronizeAutomatically(other.getSynchronizeAutomatically());
-            synchronizeGroups(other.getSynchronizeGroups());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -118,13 +110,11 @@ public final class UpdateDirectoryProvisioningRequestContent {
          */
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public Builder mapping(Optional<List<DirectoryProvisioningMappingItem>> mapping) {
-            this.mapping = mapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mapping(List<DirectoryProvisioningMappingItem> mapping) {
-            this.mapping = Optional.ofNullable(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -132,39 +122,32 @@ public final class UpdateDirectoryProvisioningRequestContent {
          */
         @JsonSetter(value = "synchronize_automatically", nulls = Nulls.SKIP)
         public Builder synchronizeAutomatically(Optional<Boolean> synchronizeAutomatically) {
-            this.synchronizeAutomatically = synchronizeAutomatically;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder synchronizeAutomatically(Boolean synchronizeAutomatically) {
-            this.synchronizeAutomatically = Optional.ofNullable(synchronizeAutomatically);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "synchronize_groups", nulls = Nulls.SKIP)
         public Builder synchronizeGroups(Optional<SynchronizeGroupsEnum> synchronizeGroups) {
-            this.synchronizeGroups = synchronizeGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder synchronizeGroups(SynchronizeGroupsEnum synchronizeGroups) {
-            this.synchronizeGroups = Optional.ofNullable(synchronizeGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateDirectoryProvisioningRequestContent build() {
-            return new UpdateDirectoryProvisioningRequestContent(
-                    mapping, synchronizeAutomatically, synchronizeGroups, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

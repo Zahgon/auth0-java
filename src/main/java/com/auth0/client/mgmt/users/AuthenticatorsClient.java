@@ -7,6 +7,7 @@ import com.auth0.client.mgmt.core.ClientOptions;
 import com.auth0.client.mgmt.core.RequestOptions;
 
 public class AuthenticatorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawAuthenticatorsClient rawClient;
@@ -20,20 +21,20 @@ public class AuthenticatorsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawAuthenticatorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authenticators registered to a given user ID, such as OTP, email, phone, and push-notification. This action cannot be undone. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public void deleteAll(String id) {
-        this.rawClient.deleteAll(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authenticators registered to a given user ID, such as OTP, email, phone, and push-notification. This action cannot be undone. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public void deleteAll(String id, RequestOptions requestOptions) {
-        this.rawClient.deleteAll(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

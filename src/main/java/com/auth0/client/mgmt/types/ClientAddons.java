@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddons.Builder.class)
 public final class ClientAddons {
+
     private final Optional<ClientAddonAws> aws;
 
     private final Optional<ClientAddonAzureBlob> azureBlob;
@@ -85,38 +86,7 @@ public final class ClientAddons {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddons(
-            Optional<ClientAddonAws> aws,
-            Optional<ClientAddonAzureBlob> azureBlob,
-            Optional<ClientAddonAzureSb> azureSb,
-            Optional<ClientAddonRms> rms,
-            Optional<ClientAddonMscrm> mscrm,
-            Optional<ClientAddonSlack> slack,
-            Optional<ClientAddonSentry> sentry,
-            Optional<Map<String, Object>> box,
-            Optional<Map<String, Object>> cloudbees,
-            Optional<Map<String, Object>> concur,
-            Optional<Map<String, Object>> dropbox,
-            Optional<ClientAddonEchoSign> echosign,
-            Optional<ClientAddonEgnyte> egnyte,
-            Optional<ClientAddonFirebase> firebase,
-            Optional<ClientAddonNewRelic> newrelic,
-            Optional<ClientAddonOffice365> office365,
-            Optional<ClientAddonSalesforce> salesforce,
-            Optional<ClientAddonSalesforceApi> salesforceApi,
-            Optional<ClientAddonSalesforceSandboxApi> salesforceSandboxApi,
-            Optional<ClientAddonSaml> samlp,
-            Optional<ClientAddonLayer> layer,
-            Optional<ClientAddonSapapi> sapApi,
-            Optional<ClientAddonSharePoint> sharepoint,
-            Optional<ClientAddonSpringCm> springcm,
-            Optional<ClientAddonWams> wams,
-            Optional<Map<String, Object>> wsfed,
-            Optional<ClientAddonZendesk> zendesk,
-            Optional<ClientAddonZoom> zoom,
-            Optional<ClientAddonSsoIntegration> ssoIntegration,
-            OptionalNullable<ClientAddonOag> oag,
-            Map<String, Object> additionalProperties) {
+    private ClientAddons(Optional<ClientAddonAws> aws, Optional<ClientAddonAzureBlob> azureBlob, Optional<ClientAddonAzureSb> azureSb, Optional<ClientAddonRms> rms, Optional<ClientAddonMscrm> mscrm, Optional<ClientAddonSlack> slack, Optional<ClientAddonSentry> sentry, Optional<Map<String, Object>> box, Optional<Map<String, Object>> cloudbees, Optional<Map<String, Object>> concur, Optional<Map<String, Object>> dropbox, Optional<ClientAddonEchoSign> echosign, Optional<ClientAddonEgnyte> egnyte, Optional<ClientAddonFirebase> firebase, Optional<ClientAddonNewRelic> newrelic, Optional<ClientAddonOffice365> office365, Optional<ClientAddonSalesforce> salesforce, Optional<ClientAddonSalesforceApi> salesforceApi, Optional<ClientAddonSalesforceSandboxApi> salesforceSandboxApi, Optional<ClientAddonSaml> samlp, Optional<ClientAddonLayer> layer, Optional<ClientAddonSapapi> sapApi, Optional<ClientAddonSharePoint> sharepoint, Optional<ClientAddonSpringCm> springcm, Optional<ClientAddonWams> wams, Optional<Map<String, Object>> wsfed, Optional<ClientAddonZendesk> zendesk, Optional<ClientAddonZoom> zoom, Optional<ClientAddonSsoIntegration> ssoIntegration, OptionalNullable<ClientAddonOag> oag, Map<String, Object> additionalProperties) {
         this.aws = aws;
         this.azureBlob = azureBlob;
         this.azureSb = azureSb;
@@ -152,156 +122,153 @@ public final class ClientAddons {
 
     @JsonProperty("aws")
     public Optional<ClientAddonAws> getAws() {
-        return aws;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("azure_blob")
     public Optional<ClientAddonAzureBlob> getAzureBlob() {
-        return azureBlob;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("azure_sb")
     public Optional<ClientAddonAzureSb> getAzureSb() {
-        return azureSb;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("rms")
     public Optional<ClientAddonRms> getRms() {
-        return rms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mscrm")
     public Optional<ClientAddonMscrm> getMscrm() {
-        return mscrm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("slack")
     public Optional<ClientAddonSlack> getSlack() {
-        return slack;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sentry")
     public Optional<ClientAddonSentry> getSentry() {
-        return sentry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("box")
     public Optional<Map<String, Object>> getBox() {
-        return box;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("cloudbees")
     public Optional<Map<String, Object>> getCloudbees() {
-        return cloudbees;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("concur")
     public Optional<Map<String, Object>> getConcur() {
-        return concur;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dropbox")
     public Optional<Map<String, Object>> getDropbox() {
-        return dropbox;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("echosign")
     public Optional<ClientAddonEchoSign> getEchosign() {
-        return echosign;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("egnyte")
     public Optional<ClientAddonEgnyte> getEgnyte() {
-        return egnyte;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("firebase")
     public Optional<ClientAddonFirebase> getFirebase() {
-        return firebase;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("newrelic")
     public Optional<ClientAddonNewRelic> getNewrelic() {
-        return newrelic;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("office365")
     public Optional<ClientAddonOffice365> getOffice365() {
-        return office365;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("salesforce")
     public Optional<ClientAddonSalesforce> getSalesforce() {
-        return salesforce;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("salesforce_api")
     public Optional<ClientAddonSalesforceApi> getSalesforceApi() {
-        return salesforceApi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("salesforce_sandbox_api")
     public Optional<ClientAddonSalesforceSandboxApi> getSalesforceSandboxApi() {
-        return salesforceSandboxApi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("samlp")
     public Optional<ClientAddonSaml> getSamlp() {
-        return samlp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("layer")
     public Optional<ClientAddonLayer> getLayer() {
-        return layer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sap_api")
     public Optional<ClientAddonSapapi> getSapApi() {
-        return sapApi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sharepoint")
     public Optional<ClientAddonSharePoint> getSharepoint() {
-        return sharepoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("springcm")
     public Optional<ClientAddonSpringCm> getSpringcm() {
-        return springcm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("wams")
     public Optional<ClientAddonWams> getWams() {
-        return wams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("wsfed")
     public Optional<Map<String, Object>> getWsfed() {
-        return wsfed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("zendesk")
     public Optional<ClientAddonZendesk> getZendesk() {
-        return zendesk;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("zoom")
     public Optional<ClientAddonZoom> getZoom() {
-        return zoom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sso_integration")
     public Optional<ClientAddonSsoIntegration> getSsoIntegration() {
-        return ssoIntegration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("oag")
     public OptionalNullable<ClientAddonOag> getOag() {
-        if (oag == null) {
-            return OptionalNullable.absent();
-        }
-        return oag;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -312,94 +279,35 @@ public final class ClientAddons {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddons && equalTo((ClientAddons) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddons other) {
-        return aws.equals(other.aws)
-                && azureBlob.equals(other.azureBlob)
-                && azureSb.equals(other.azureSb)
-                && rms.equals(other.rms)
-                && mscrm.equals(other.mscrm)
-                && slack.equals(other.slack)
-                && sentry.equals(other.sentry)
-                && box.equals(other.box)
-                && cloudbees.equals(other.cloudbees)
-                && concur.equals(other.concur)
-                && dropbox.equals(other.dropbox)
-                && echosign.equals(other.echosign)
-                && egnyte.equals(other.egnyte)
-                && firebase.equals(other.firebase)
-                && newrelic.equals(other.newrelic)
-                && office365.equals(other.office365)
-                && salesforce.equals(other.salesforce)
-                && salesforceApi.equals(other.salesforceApi)
-                && salesforceSandboxApi.equals(other.salesforceSandboxApi)
-                && samlp.equals(other.samlp)
-                && layer.equals(other.layer)
-                && sapApi.equals(other.sapApi)
-                && sharepoint.equals(other.sharepoint)
-                && springcm.equals(other.springcm)
-                && wams.equals(other.wams)
-                && wsfed.equals(other.wsfed)
-                && zendesk.equals(other.zendesk)
-                && zoom.equals(other.zoom)
-                && ssoIntegration.equals(other.ssoIntegration)
-                && oag.equals(other.oag);
+        return aws.equals(other.aws) && azureBlob.equals(other.azureBlob) && azureSb.equals(other.azureSb) && rms.equals(other.rms) && mscrm.equals(other.mscrm) && slack.equals(other.slack) && sentry.equals(other.sentry) && box.equals(other.box) && cloudbees.equals(other.cloudbees) && concur.equals(other.concur) && dropbox.equals(other.dropbox) && echosign.equals(other.echosign) && egnyte.equals(other.egnyte) && firebase.equals(other.firebase) && newrelic.equals(other.newrelic) && office365.equals(other.office365) && salesforce.equals(other.salesforce) && salesforceApi.equals(other.salesforceApi) && salesforceSandboxApi.equals(other.salesforceSandboxApi) && samlp.equals(other.samlp) && layer.equals(other.layer) && sapApi.equals(other.sapApi) && sharepoint.equals(other.sharepoint) && springcm.equals(other.springcm) && wams.equals(other.wams) && wsfed.equals(other.wsfed) && zendesk.equals(other.zendesk) && zoom.equals(other.zoom) && ssoIntegration.equals(other.ssoIntegration) && oag.equals(other.oag);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.aws,
-                this.azureBlob,
-                this.azureSb,
-                this.rms,
-                this.mscrm,
-                this.slack,
-                this.sentry,
-                this.box,
-                this.cloudbees,
-                this.concur,
-                this.dropbox,
-                this.echosign,
-                this.egnyte,
-                this.firebase,
-                this.newrelic,
-                this.office365,
-                this.salesforce,
-                this.salesforceApi,
-                this.salesforceSandboxApi,
-                this.samlp,
-                this.layer,
-                this.sapApi,
-                this.sharepoint,
-                this.springcm,
-                this.wams,
-                this.wsfed,
-                this.zendesk,
-                this.zoom,
-                this.ssoIntegration,
-                this.oag);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ClientAddonAws> aws = Optional.empty();
 
         private Optional<ClientAddonAzureBlob> azureBlob = Optional.empty();
@@ -463,435 +371,301 @@ public final class ClientAddons {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddons other) {
-            aws(other.getAws());
-            azureBlob(other.getAzureBlob());
-            azureSb(other.getAzureSb());
-            rms(other.getRms());
-            mscrm(other.getMscrm());
-            slack(other.getSlack());
-            sentry(other.getSentry());
-            box(other.getBox());
-            cloudbees(other.getCloudbees());
-            concur(other.getConcur());
-            dropbox(other.getDropbox());
-            echosign(other.getEchosign());
-            egnyte(other.getEgnyte());
-            firebase(other.getFirebase());
-            newrelic(other.getNewrelic());
-            office365(other.getOffice365());
-            salesforce(other.getSalesforce());
-            salesforceApi(other.getSalesforceApi());
-            salesforceSandboxApi(other.getSalesforceSandboxApi());
-            samlp(other.getSamlp());
-            layer(other.getLayer());
-            sapApi(other.getSapApi());
-            sharepoint(other.getSharepoint());
-            springcm(other.getSpringcm());
-            wams(other.getWams());
-            wsfed(other.getWsfed());
-            zendesk(other.getZendesk());
-            zoom(other.getZoom());
-            ssoIntegration(other.getSsoIntegration());
-            oag(other.getOag());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "aws", nulls = Nulls.SKIP)
         public Builder aws(Optional<ClientAddonAws> aws) {
-            this.aws = aws;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder aws(ClientAddonAws aws) {
-            this.aws = Optional.ofNullable(aws);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "azure_blob", nulls = Nulls.SKIP)
         public Builder azureBlob(Optional<ClientAddonAzureBlob> azureBlob) {
-            this.azureBlob = azureBlob;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder azureBlob(ClientAddonAzureBlob azureBlob) {
-            this.azureBlob = Optional.ofNullable(azureBlob);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "azure_sb", nulls = Nulls.SKIP)
         public Builder azureSb(Optional<ClientAddonAzureSb> azureSb) {
-            this.azureSb = azureSb;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder azureSb(ClientAddonAzureSb azureSb) {
-            this.azureSb = Optional.ofNullable(azureSb);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "rms", nulls = Nulls.SKIP)
         public Builder rms(Optional<ClientAddonRms> rms) {
-            this.rms = rms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rms(ClientAddonRms rms) {
-            this.rms = Optional.ofNullable(rms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mscrm", nulls = Nulls.SKIP)
         public Builder mscrm(Optional<ClientAddonMscrm> mscrm) {
-            this.mscrm = mscrm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mscrm(ClientAddonMscrm mscrm) {
-            this.mscrm = Optional.ofNullable(mscrm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "slack", nulls = Nulls.SKIP)
         public Builder slack(Optional<ClientAddonSlack> slack) {
-            this.slack = slack;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder slack(ClientAddonSlack slack) {
-            this.slack = Optional.ofNullable(slack);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sentry", nulls = Nulls.SKIP)
         public Builder sentry(Optional<ClientAddonSentry> sentry) {
-            this.sentry = sentry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sentry(ClientAddonSentry sentry) {
-            this.sentry = Optional.ofNullable(sentry);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "box", nulls = Nulls.SKIP)
         public Builder box(Optional<Map<String, Object>> box) {
-            this.box = box;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder box(Map<String, Object> box) {
-            this.box = Optional.ofNullable(box);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "cloudbees", nulls = Nulls.SKIP)
         public Builder cloudbees(Optional<Map<String, Object>> cloudbees) {
-            this.cloudbees = cloudbees;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cloudbees(Map<String, Object> cloudbees) {
-            this.cloudbees = Optional.ofNullable(cloudbees);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "concur", nulls = Nulls.SKIP)
         public Builder concur(Optional<Map<String, Object>> concur) {
-            this.concur = concur;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder concur(Map<String, Object> concur) {
-            this.concur = Optional.ofNullable(concur);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "dropbox", nulls = Nulls.SKIP)
         public Builder dropbox(Optional<Map<String, Object>> dropbox) {
-            this.dropbox = dropbox;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dropbox(Map<String, Object> dropbox) {
-            this.dropbox = Optional.ofNullable(dropbox);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "echosign", nulls = Nulls.SKIP)
         public Builder echosign(Optional<ClientAddonEchoSign> echosign) {
-            this.echosign = echosign;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder echosign(ClientAddonEchoSign echosign) {
-            this.echosign = Optional.ofNullable(echosign);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "egnyte", nulls = Nulls.SKIP)
         public Builder egnyte(Optional<ClientAddonEgnyte> egnyte) {
-            this.egnyte = egnyte;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder egnyte(ClientAddonEgnyte egnyte) {
-            this.egnyte = Optional.ofNullable(egnyte);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "firebase", nulls = Nulls.SKIP)
         public Builder firebase(Optional<ClientAddonFirebase> firebase) {
-            this.firebase = firebase;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder firebase(ClientAddonFirebase firebase) {
-            this.firebase = Optional.ofNullable(firebase);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "newrelic", nulls = Nulls.SKIP)
         public Builder newrelic(Optional<ClientAddonNewRelic> newrelic) {
-            this.newrelic = newrelic;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder newrelic(ClientAddonNewRelic newrelic) {
-            this.newrelic = Optional.ofNullable(newrelic);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "office365", nulls = Nulls.SKIP)
         public Builder office365(Optional<ClientAddonOffice365> office365) {
-            this.office365 = office365;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder office365(ClientAddonOffice365 office365) {
-            this.office365 = Optional.ofNullable(office365);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "salesforce", nulls = Nulls.SKIP)
         public Builder salesforce(Optional<ClientAddonSalesforce> salesforce) {
-            this.salesforce = salesforce;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder salesforce(ClientAddonSalesforce salesforce) {
-            this.salesforce = Optional.ofNullable(salesforce);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "salesforce_api", nulls = Nulls.SKIP)
         public Builder salesforceApi(Optional<ClientAddonSalesforceApi> salesforceApi) {
-            this.salesforceApi = salesforceApi;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder salesforceApi(ClientAddonSalesforceApi salesforceApi) {
-            this.salesforceApi = Optional.ofNullable(salesforceApi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "salesforce_sandbox_api", nulls = Nulls.SKIP)
         public Builder salesforceSandboxApi(Optional<ClientAddonSalesforceSandboxApi> salesforceSandboxApi) {
-            this.salesforceSandboxApi = salesforceSandboxApi;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder salesforceSandboxApi(ClientAddonSalesforceSandboxApi salesforceSandboxApi) {
-            this.salesforceSandboxApi = Optional.ofNullable(salesforceSandboxApi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "samlp", nulls = Nulls.SKIP)
         public Builder samlp(Optional<ClientAddonSaml> samlp) {
-            this.samlp = samlp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder samlp(ClientAddonSaml samlp) {
-            this.samlp = Optional.ofNullable(samlp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "layer", nulls = Nulls.SKIP)
         public Builder layer(Optional<ClientAddonLayer> layer) {
-            this.layer = layer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder layer(ClientAddonLayer layer) {
-            this.layer = Optional.ofNullable(layer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sap_api", nulls = Nulls.SKIP)
         public Builder sapApi(Optional<ClientAddonSapapi> sapApi) {
-            this.sapApi = sapApi;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sapApi(ClientAddonSapapi sapApi) {
-            this.sapApi = Optional.ofNullable(sapApi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sharepoint", nulls = Nulls.SKIP)
         public Builder sharepoint(Optional<ClientAddonSharePoint> sharepoint) {
-            this.sharepoint = sharepoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sharepoint(ClientAddonSharePoint sharepoint) {
-            this.sharepoint = Optional.ofNullable(sharepoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "springcm", nulls = Nulls.SKIP)
         public Builder springcm(Optional<ClientAddonSpringCm> springcm) {
-            this.springcm = springcm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder springcm(ClientAddonSpringCm springcm) {
-            this.springcm = Optional.ofNullable(springcm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "wams", nulls = Nulls.SKIP)
         public Builder wams(Optional<ClientAddonWams> wams) {
-            this.wams = wams;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wams(ClientAddonWams wams) {
-            this.wams = Optional.ofNullable(wams);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "wsfed", nulls = Nulls.SKIP)
         public Builder wsfed(Optional<Map<String, Object>> wsfed) {
-            this.wsfed = wsfed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wsfed(Map<String, Object> wsfed) {
-            this.wsfed = Optional.ofNullable(wsfed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "zendesk", nulls = Nulls.SKIP)
         public Builder zendesk(Optional<ClientAddonZendesk> zendesk) {
-            this.zendesk = zendesk;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder zendesk(ClientAddonZendesk zendesk) {
-            this.zendesk = Optional.ofNullable(zendesk);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "zoom", nulls = Nulls.SKIP)
         public Builder zoom(Optional<ClientAddonZoom> zoom) {
-            this.zoom = zoom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder zoom(ClientAddonZoom zoom) {
-            this.zoom = Optional.ofNullable(zoom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sso_integration", nulls = Nulls.SKIP)
         public Builder ssoIntegration(Optional<ClientAddonSsoIntegration> ssoIntegration) {
-            this.ssoIntegration = ssoIntegration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ssoIntegration(ClientAddonSsoIntegration ssoIntegration) {
-            this.ssoIntegration = Optional.ofNullable(ssoIntegration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oag", nulls = Nulls.SKIP)
         public Builder oag(@Nullable OptionalNullable<ClientAddonOag> oag) {
-            this.oag = oag;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oag(ClientAddonOag oag) {
-            this.oag = OptionalNullable.of(oag);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oag(Optional<ClientAddonOag> oag) {
-            if (oag.isPresent()) {
-                this.oag = OptionalNullable.of(oag.get());
-            } else {
-                this.oag = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oag(com.auth0.client.mgmt.core.Nullable<ClientAddonOag> oag) {
-            if (oag.isNull()) {
-                this.oag = OptionalNullable.ofNull();
-            } else if (oag.isEmpty()) {
-                this.oag = OptionalNullable.absent();
-            } else {
-                this.oag = OptionalNullable.of(oag.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddons build() {
-            return new ClientAddons(
-                    aws,
-                    azureBlob,
-                    azureSb,
-                    rms,
-                    mscrm,
-                    slack,
-                    sentry,
-                    box,
-                    cloudbees,
-                    concur,
-                    dropbox,
-                    echosign,
-                    egnyte,
-                    firebase,
-                    newrelic,
-                    office365,
-                    salesforce,
-                    salesforceApi,
-                    salesforceSandboxApi,
-                    samlp,
-                    layer,
-                    sapApi,
-                    sharepoint,
-                    springcm,
-                    wams,
-                    wsfed,
-                    zendesk,
-                    zoom,
-                    ssoIntegration,
-                    oag,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

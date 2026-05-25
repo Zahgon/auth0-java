@@ -15,12 +15,11 @@ import java.io.IOException;
  * Non-integer values like {@code 3.14} are serialized normally.
  */
 class DoubleSerializer extends JsonSerializer<Double> {
+
     private static final SimpleModule MODULE;
 
     static {
-        MODULE = new SimpleModule()
-                .addSerializer(Double.class, new DoubleSerializer())
-                .addSerializer(double.class, new DoubleSerializer());
+        MODULE = new SimpleModule().addSerializer(Double.class, new DoubleSerializer()).addSerializer(double.class, new DoubleSerializer());
     }
 
     /**
@@ -29,15 +28,11 @@ class DoubleSerializer extends JsonSerializer<Double> {
      * @return A {@link SimpleModule} to be plugged onto Jackson ObjectMapper.
      */
     public static SimpleModule getModule() {
-        return MODULE;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void serialize(Double value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-        if (value != null && value == Math.floor(value) && !Double.isInfinite(value) && !Double.isNaN(value)) {
-            gen.writeNumber(value.longValue());
-        } else {
-            gen.writeNumber(value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

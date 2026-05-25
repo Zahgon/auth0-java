@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientOidcBackchannelLogoutInitiators.Builder.class)
 public final class ClientOidcBackchannelLogoutInitiators {
+
     private final Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> mode;
 
     private final Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientOidcBackchannelLogoutInitiators(
-            Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> mode,
-            Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators,
-            Map<String, Object> additionalProperties) {
+    private ClientOidcBackchannelLogoutInitiators(Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> mode, Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators, Map<String, Object> additionalProperties) {
         this.mode = mode;
         this.selectedInitiators = selectedInitiators;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class ClientOidcBackchannelLogoutInitiators {
 
     @JsonProperty("mode")
     public Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> getMode() {
-        return mode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("selected_initiators")
     public Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> getSelectedInitiators() {
-        return selectedInitiators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientOidcBackchannelLogoutInitiators
-                && equalTo((ClientOidcBackchannelLogoutInitiators) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientOidcBackchannelLogoutInitiators other) {
@@ -64,20 +60,21 @@ public final class ClientOidcBackchannelLogoutInitiators {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mode, this.selectedInitiators);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> mode = Optional.empty();
 
         private Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators = Optional.empty();
@@ -85,49 +82,41 @@ public final class ClientOidcBackchannelLogoutInitiators {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientOidcBackchannelLogoutInitiators other) {
-            mode(other.getMode());
-            selectedInitiators(other.getSelectedInitiators());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mode", nulls = Nulls.SKIP)
         public Builder mode(Optional<ClientOidcBackchannelLogoutInitiatorsModeEnum> mode) {
-            this.mode = mode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mode(ClientOidcBackchannelLogoutInitiatorsModeEnum mode) {
-            this.mode = Optional.ofNullable(mode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "selected_initiators", nulls = Nulls.SKIP)
-        public Builder selectedInitiators(
-                Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators) {
-            this.selectedInitiators = selectedInitiators;
-            return this;
+        public Builder selectedInitiators(Optional<List<ClientOidcBackchannelLogoutInitiatorsEnum>> selectedInitiators) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder selectedInitiators(List<ClientOidcBackchannelLogoutInitiatorsEnum> selectedInitiators) {
-            this.selectedInitiators = Optional.ofNullable(selectedInitiators);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientOidcBackchannelLogoutInitiators build() {
-            return new ClientOidcBackchannelLogoutInitiators(mode, selectedInitiators, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

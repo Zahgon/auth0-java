@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerTokenDialectSchemaEnum {
-    public static final ResourceServerTokenDialectSchemaEnum ACCESS_TOKEN_AUTHZ =
-            new ResourceServerTokenDialectSchemaEnum(Value.ACCESS_TOKEN_AUTHZ, "access_token_authz");
 
-    public static final ResourceServerTokenDialectSchemaEnum RFC9068PROFILE =
-            new ResourceServerTokenDialectSchemaEnum(Value.RFC9068PROFILE, "rfc9068_profile");
+    public static final ResourceServerTokenDialectSchemaEnum ACCESS_TOKEN_AUTHZ = new ResourceServerTokenDialectSchemaEnum(Value.ACCESS_TOKEN_AUTHZ, "access_token_authz");
 
-    public static final ResourceServerTokenDialectSchemaEnum RFC9068PROFILE_AUTHZ =
-            new ResourceServerTokenDialectSchemaEnum(Value.RFC9068PROFILE_AUTHZ, "rfc9068_profile_authz");
+    public static final ResourceServerTokenDialectSchemaEnum RFC9068PROFILE = new ResourceServerTokenDialectSchemaEnum(Value.RFC9068PROFILE, "rfc9068_profile");
 
-    public static final ResourceServerTokenDialectSchemaEnum ACCESS_TOKEN =
-            new ResourceServerTokenDialectSchemaEnum(Value.ACCESS_TOKEN, "access_token");
+    public static final ResourceServerTokenDialectSchemaEnum RFC9068PROFILE_AUTHZ = new ResourceServerTokenDialectSchemaEnum(Value.RFC9068PROFILE_AUTHZ, "rfc9068_profile_authz");
+
+    public static final ResourceServerTokenDialectSchemaEnum ACCESS_TOKEN = new ResourceServerTokenDialectSchemaEnum(Value.ACCESS_TOKEN, "access_token");
 
     private final Value value;
 
@@ -29,72 +26,41 @@ public final class ResourceServerTokenDialectSchemaEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerTokenDialectSchemaEnum
-                        && this.string.equals(((ResourceServerTokenDialectSchemaEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ACCESS_TOKEN_AUTHZ:
-                return visitor.visitAccessTokenAuthz();
-            case RFC9068PROFILE:
-                return visitor.visitRfc9068Profile();
-            case RFC9068PROFILE_AUTHZ:
-                return visitor.visitRfc9068ProfileAuthz();
-            case ACCESS_TOKEN:
-                return visitor.visitAccessToken();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerTokenDialectSchemaEnum valueOf(String value) {
-        switch (value) {
-            case "access_token_authz":
-                return ACCESS_TOKEN_AUTHZ;
-            case "rfc9068_profile":
-                return RFC9068PROFILE;
-            case "rfc9068_profile_authz":
-                return RFC9068PROFILE_AUTHZ;
-            case "access_token":
-                return ACCESS_TOKEN;
-            default:
-                return new ResourceServerTokenDialectSchemaEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ACCESS_TOKEN,
 
-        ACCESS_TOKEN_AUTHZ,
-
-        RFC9068PROFILE,
-
-        RFC9068PROFILE_AUTHZ,
-
-        UNKNOWN
+        ACCESS_TOKEN, ACCESS_TOKEN_AUTHZ, RFC9068PROFILE, RFC9068PROFILE_AUTHZ, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAccessToken();
 
         T visitAccessTokenAuthz();

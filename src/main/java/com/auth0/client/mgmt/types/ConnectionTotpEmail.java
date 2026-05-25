@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionTotpEmail.Builder.class)
 public final class ConnectionTotpEmail {
+
     private final Optional<Integer> length;
 
     private final Optional<Integer> timeStep;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionTotpEmail(
-            Optional<Integer> length, Optional<Integer> timeStep, Map<String, Object> additionalProperties) {
+    private ConnectionTotpEmail(Optional<Integer> length, Optional<Integer> timeStep, Map<String, Object> additionalProperties) {
         this.length = length;
         this.timeStep = timeStep;
         this.additionalProperties = additionalProperties;
@@ -35,23 +35,22 @@ public final class ConnectionTotpEmail {
 
     @JsonProperty("length")
     public Optional<Integer> getLength() {
-        return length;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("time_step")
     public Optional<Integer> getTimeStep() {
-        return timeStep;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionTotpEmail && equalTo((ConnectionTotpEmail) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionTotpEmail other) {
@@ -60,20 +59,21 @@ public final class ConnectionTotpEmail {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.length, this.timeStep);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> length = Optional.empty();
 
         private Optional<Integer> timeStep = Optional.empty();
@@ -81,48 +81,41 @@ public final class ConnectionTotpEmail {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionTotpEmail other) {
-            length(other.getLength());
-            timeStep(other.getTimeStep());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "length", nulls = Nulls.SKIP)
         public Builder length(Optional<Integer> length) {
-            this.length = length;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder length(Integer length) {
-            this.length = Optional.ofNullable(length);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "time_step", nulls = Nulls.SKIP)
         public Builder timeStep(Optional<Integer> timeStep) {
-            this.timeStep = timeStep;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder timeStep(Integer timeStep) {
-            this.timeStep = Optional.ofNullable(timeStep);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionTotpEmail build() {
-            return new ConnectionTotpEmail(length, timeStep, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -24,12 +24,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PatchClientCredentialRequestContent.Builder.class)
 public final class PatchClientCredentialRequestContent {
+
     private final OptionalNullable<OffsetDateTime> expiresAt;
 
     private final Map<String, Object> additionalProperties;
 
-    private PatchClientCredentialRequestContent(
-            OptionalNullable<OffsetDateTime> expiresAt, Map<String, Object> additionalProperties) {
+    private PatchClientCredentialRequestContent(OptionalNullable<OffsetDateTime> expiresAt, Map<String, Object> additionalProperties) {
         this.expiresAt = expiresAt;
         this.additionalProperties = additionalProperties;
     }
@@ -40,10 +40,7 @@ public final class PatchClientCredentialRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("expires_at")
     public OptionalNullable<OffsetDateTime> getExpiresAt() {
-        if (expiresAt == null) {
-            return OptionalNullable.absent();
-        }
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -54,14 +51,12 @@ public final class PatchClientCredentialRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PatchClientCredentialRequestContent
-                && equalTo((PatchClientCredentialRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PatchClientCredentialRequestContent other) {
@@ -70,30 +65,31 @@ public final class PatchClientCredentialRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.expiresAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<OffsetDateTime> expiresAt = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(PatchClientCredentialRequestContent other) {
-            expiresAt(other.getExpiresAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,47 +97,31 @@ public final class PatchClientCredentialRequestContent {
          */
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(@Nullable OptionalNullable<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = OptionalNullable.of(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(Optional<OffsetDateTime> expiresAt) {
-            if (expiresAt.isPresent()) {
-                this.expiresAt = OptionalNullable.of(expiresAt.get());
-            } else {
-                this.expiresAt = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(com.auth0.client.mgmt.core.Nullable<OffsetDateTime> expiresAt) {
-            if (expiresAt.isNull()) {
-                this.expiresAt = OptionalNullable.ofNull();
-            } else if (expiresAt.isEmpty()) {
-                this.expiresAt = OptionalNullable.absent();
-            } else {
-                this.expiresAt = OptionalNullable.of(expiresAt.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public PatchClientCredentialRequestContent build() {
-            return new PatchClientCredentialRequestContent(expiresAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

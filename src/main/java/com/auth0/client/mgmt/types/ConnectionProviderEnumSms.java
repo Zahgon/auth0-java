@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionProviderEnumSms {
-    public static final ConnectionProviderEnumSms SMS_GATEWAY =
-            new ConnectionProviderEnumSms(Value.SMS_GATEWAY, "sms_gateway");
+
+    public static final ConnectionProviderEnumSms SMS_GATEWAY = new ConnectionProviderEnumSms(Value.SMS_GATEWAY, "sms_gateway");
 
     public static final ConnectionProviderEnumSms TWILIO = new ConnectionProviderEnumSms(Value.TWILIO, "twilio");
 
@@ -22,60 +22,41 @@ public final class ConnectionProviderEnumSms {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionProviderEnumSms
-                        && this.string.equals(((ConnectionProviderEnumSms) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SMS_GATEWAY:
-                return visitor.visitSmsGateway();
-            case TWILIO:
-                return visitor.visitTwilio();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionProviderEnumSms valueOf(String value) {
-        switch (value) {
-            case "sms_gateway":
-                return SMS_GATEWAY;
-            case "twilio":
-                return TWILIO;
-            default:
-                return new ConnectionProviderEnumSms(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SMS_GATEWAY,
 
-        TWILIO,
-
-        UNKNOWN
+        SMS_GATEWAY, TWILIO, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSmsGateway();
 
         T visitTwilio();

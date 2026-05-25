@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordAuthenticationMethod.Builder.class)
 public final class ConnectionPasswordAuthenticationMethod {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<ConnectionApiBehaviorEnum> apiBehavior;
@@ -28,11 +29,7 @@ public final class ConnectionPasswordAuthenticationMethod {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordAuthenticationMethod(
-            Optional<Boolean> enabled,
-            Optional<ConnectionApiBehaviorEnum> apiBehavior,
-            Optional<ConnectionSignupBehaviorEnum> signupBehavior,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPasswordAuthenticationMethod(Optional<Boolean> enabled, Optional<ConnectionApiBehaviorEnum> apiBehavior, Optional<ConnectionSignupBehaviorEnum> signupBehavior, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.apiBehavior = apiBehavior;
         this.signupBehavior = signupBehavior;
@@ -44,53 +41,50 @@ public final class ConnectionPasswordAuthenticationMethod {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_behavior")
     public Optional<ConnectionApiBehaviorEnum> getApiBehavior() {
-        return apiBehavior;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signup_behavior")
     public Optional<ConnectionSignupBehaviorEnum> getSignupBehavior() {
-        return signupBehavior;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordAuthenticationMethod
-                && equalTo((ConnectionPasswordAuthenticationMethod) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordAuthenticationMethod other) {
-        return enabled.equals(other.enabled)
-                && apiBehavior.equals(other.apiBehavior)
-                && signupBehavior.equals(other.signupBehavior);
+        return enabled.equals(other.enabled) && apiBehavior.equals(other.apiBehavior) && signupBehavior.equals(other.signupBehavior);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.apiBehavior, this.signupBehavior);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<ConnectionApiBehaviorEnum> apiBehavior = Optional.empty();
@@ -100,13 +94,11 @@ public final class ConnectionPasswordAuthenticationMethod {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordAuthenticationMethod other) {
-            enabled(other.getEnabled());
-            apiBehavior(other.getApiBehavior());
-            signupBehavior(other.getSignupBehavior());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,50 +106,41 @@ public final class ConnectionPasswordAuthenticationMethod {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "api_behavior", nulls = Nulls.SKIP)
         public Builder apiBehavior(Optional<ConnectionApiBehaviorEnum> apiBehavior) {
-            this.apiBehavior = apiBehavior;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiBehavior(ConnectionApiBehaviorEnum apiBehavior) {
-            this.apiBehavior = Optional.ofNullable(apiBehavior);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signup_behavior", nulls = Nulls.SKIP)
         public Builder signupBehavior(Optional<ConnectionSignupBehaviorEnum> signupBehavior) {
-            this.signupBehavior = signupBehavior;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signupBehavior(ConnectionSignupBehaviorEnum signupBehavior) {
-            this.signupBehavior = Optional.ofNullable(signupBehavior);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordAuthenticationMethod build() {
-            return new ConnectionPasswordAuthenticationMethod(
-                    enabled, apiBehavior, signupBehavior, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

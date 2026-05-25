@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigFields.Builder.class)
 public final class FormFieldPaymentConfigFields {
+
     private final Optional<FormFieldPaymentConfigFieldProperties> cardNumber;
 
     private final Optional<FormFieldPaymentConfigFieldProperties> expirationDate;
@@ -30,12 +31,7 @@ public final class FormFieldPaymentConfigFields {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigFields(
-            Optional<FormFieldPaymentConfigFieldProperties> cardNumber,
-            Optional<FormFieldPaymentConfigFieldProperties> expirationDate,
-            Optional<FormFieldPaymentConfigFieldProperties> securityCode,
-            Optional<Boolean> trustmarks,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigFields(Optional<FormFieldPaymentConfigFieldProperties> cardNumber, Optional<FormFieldPaymentConfigFieldProperties> expirationDate, Optional<FormFieldPaymentConfigFieldProperties> securityCode, Optional<Boolean> trustmarks, Map<String, Object> additionalProperties) {
         this.cardNumber = cardNumber;
         this.expirationDate = expirationDate;
         this.securityCode = securityCode;
@@ -45,58 +41,55 @@ public final class FormFieldPaymentConfigFields {
 
     @JsonProperty("card_number")
     public Optional<FormFieldPaymentConfigFieldProperties> getCardNumber() {
-        return cardNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("expiration_date")
     public Optional<FormFieldPaymentConfigFieldProperties> getExpirationDate() {
-        return expirationDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("security_code")
     public Optional<FormFieldPaymentConfigFieldProperties> getSecurityCode() {
-        return securityCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("trustmarks")
     public Optional<Boolean> getTrustmarks() {
-        return trustmarks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigFields && equalTo((FormFieldPaymentConfigFields) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigFields other) {
-        return cardNumber.equals(other.cardNumber)
-                && expirationDate.equals(other.expirationDate)
-                && securityCode.equals(other.securityCode)
-                && trustmarks.equals(other.trustmarks);
+        return cardNumber.equals(other.cardNumber) && expirationDate.equals(other.expirationDate) && securityCode.equals(other.securityCode) && trustmarks.equals(other.trustmarks);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.cardNumber, this.expirationDate, this.securityCode, this.trustmarks);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FormFieldPaymentConfigFieldProperties> cardNumber = Optional.empty();
 
         private Optional<FormFieldPaymentConfigFieldProperties> expirationDate = Optional.empty();
@@ -108,73 +101,59 @@ public final class FormFieldPaymentConfigFields {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldPaymentConfigFields other) {
-            cardNumber(other.getCardNumber());
-            expirationDate(other.getExpirationDate());
-            securityCode(other.getSecurityCode());
-            trustmarks(other.getTrustmarks());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "card_number", nulls = Nulls.SKIP)
         public Builder cardNumber(Optional<FormFieldPaymentConfigFieldProperties> cardNumber) {
-            this.cardNumber = cardNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cardNumber(FormFieldPaymentConfigFieldProperties cardNumber) {
-            this.cardNumber = Optional.ofNullable(cardNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "expiration_date", nulls = Nulls.SKIP)
         public Builder expirationDate(Optional<FormFieldPaymentConfigFieldProperties> expirationDate) {
-            this.expirationDate = expirationDate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expirationDate(FormFieldPaymentConfigFieldProperties expirationDate) {
-            this.expirationDate = Optional.ofNullable(expirationDate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "security_code", nulls = Nulls.SKIP)
         public Builder securityCode(Optional<FormFieldPaymentConfigFieldProperties> securityCode) {
-            this.securityCode = securityCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder securityCode(FormFieldPaymentConfigFieldProperties securityCode) {
-            this.securityCode = Optional.ofNullable(securityCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "trustmarks", nulls = Nulls.SKIP)
         public Builder trustmarks(Optional<Boolean> trustmarks) {
-            this.trustmarks = trustmarks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder trustmarks(Boolean trustmarks) {
-            this.trustmarks = Optional.ofNullable(trustmarks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldPaymentConfigFields build() {
-            return new FormFieldPaymentConfigFields(
-                    cardNumber, expirationDate, securityCode, trustmarks, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

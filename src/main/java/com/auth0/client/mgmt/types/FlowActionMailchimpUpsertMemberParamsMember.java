@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionMailchimpUpsertMemberParamsMember.Builder.class)
 public final class FlowActionMailchimpUpsertMemberParamsMember {
+
     private final String emailAddress;
 
     private final String statusIfNew;
@@ -29,11 +30,7 @@ public final class FlowActionMailchimpUpsertMemberParamsMember {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionMailchimpUpsertMemberParamsMember(
-            String emailAddress,
-            String statusIfNew,
-            Optional<Map<String, Object>> mergeFields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionMailchimpUpsertMemberParamsMember(String emailAddress, String statusIfNew, Optional<Map<String, Object>> mergeFields, Map<String, Object> additionalProperties) {
         this.emailAddress = emailAddress;
         this.statusIfNew = statusIfNew;
         this.mergeFields = mergeFields;
@@ -42,62 +39,61 @@ public final class FlowActionMailchimpUpsertMemberParamsMember {
 
     @JsonProperty("email_address")
     public String getEmailAddress() {
-        return emailAddress;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status_if_new")
     public String getStatusIfNew() {
-        return statusIfNew;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("merge_fields")
     public Optional<Map<String, Object>> getMergeFields() {
-        return mergeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionMailchimpUpsertMemberParamsMember
-                && equalTo((FlowActionMailchimpUpsertMemberParamsMember) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionMailchimpUpsertMemberParamsMember other) {
-        return emailAddress.equals(other.emailAddress)
-                && statusIfNew.equals(other.statusIfNew)
-                && mergeFields.equals(other.mergeFields);
+        return emailAddress.equals(other.emailAddress) && statusIfNew.equals(other.statusIfNew) && mergeFields.equals(other.mergeFields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.emailAddress, this.statusIfNew, this.mergeFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailAddressStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EmailAddressStage {
+
         StatusIfNewStage emailAddress(@NotNull String emailAddress);
 
         Builder from(FlowActionMailchimpUpsertMemberParamsMember other);
     }
 
     public interface StatusIfNewStage {
+
         _FinalStage statusIfNew(@NotNull String statusIfNew);
     }
 
     public interface _FinalStage {
+
         FlowActionMailchimpUpsertMemberParamsMember build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -111,6 +107,7 @@ public final class FlowActionMailchimpUpsertMemberParamsMember {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EmailAddressStage, StatusIfNewStage, _FinalStage {
+
         private String emailAddress;
 
         private String statusIfNew;
@@ -120,59 +117,50 @@ public final class FlowActionMailchimpUpsertMemberParamsMember {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionMailchimpUpsertMemberParamsMember other) {
-            emailAddress(other.getEmailAddress());
-            statusIfNew(other.getStatusIfNew());
-            mergeFields(other.getMergeFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("email_address")
         public StatusIfNewStage emailAddress(@NotNull String emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress, "emailAddress must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("status_if_new")
         public _FinalStage statusIfNew(@NotNull String statusIfNew) {
-            this.statusIfNew = Objects.requireNonNull(statusIfNew, "statusIfNew must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage mergeFields(Map<String, Object> mergeFields) {
-            this.mergeFields = Optional.ofNullable(mergeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "merge_fields", nulls = Nulls.SKIP)
         public _FinalStage mergeFields(Optional<Map<String, Object>> mergeFields) {
-            this.mergeFields = mergeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionMailchimpUpsertMemberParamsMember build() {
-            return new FlowActionMailchimpUpsertMemberParamsMember(
-                    emailAddress, statusIfNew, mergeFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

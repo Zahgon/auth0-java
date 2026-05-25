@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionOptionsProtocolEnumTwitter {
-    public static final ConnectionOptionsProtocolEnumTwitter OAUTH2 =
-            new ConnectionOptionsProtocolEnumTwitter(Value.OAUTH2, "oauth2");
 
-    public static final ConnectionOptionsProtocolEnumTwitter OAUTH1 =
-            new ConnectionOptionsProtocolEnumTwitter(Value.OAUTH1, "oauth1");
+    public static final ConnectionOptionsProtocolEnumTwitter OAUTH2 = new ConnectionOptionsProtocolEnumTwitter(Value.OAUTH2, "oauth2");
+
+    public static final ConnectionOptionsProtocolEnumTwitter OAUTH1 = new ConnectionOptionsProtocolEnumTwitter(Value.OAUTH1, "oauth1");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionOptionsProtocolEnumTwitter {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionOptionsProtocolEnumTwitter
-                        && this.string.equals(((ConnectionOptionsProtocolEnumTwitter) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OAUTH2:
-                return visitor.visitOauth2();
-            case OAUTH1:
-                return visitor.visitOauth1();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionOptionsProtocolEnumTwitter valueOf(String value) {
-        switch (value) {
-            case "oauth2":
-                return OAUTH2;
-            case "oauth1":
-                return OAUTH1;
-            default:
-                return new ConnectionOptionsProtocolEnumTwitter(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OAUTH1,
 
-        OAUTH2,
-
-        UNKNOWN
+        OAUTH1, OAUTH2, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOauth1();
 
         T visitOauth2();

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetJobResponseContent.Builder.class)
 public final class GetJobResponseContent {
+
     private final String status;
 
     private final String type;
@@ -45,19 +46,7 @@ public final class GetJobResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetJobResponseContent(
-            String status,
-            String type,
-            Optional<String> createdAt,
-            String id,
-            Optional<String> connectionId,
-            Optional<String> location,
-            Optional<Integer> percentageDone,
-            Optional<Integer> timeLeftSeconds,
-            Optional<JobFileFormatEnum> format,
-            Optional<String> statusDetails,
-            Optional<GetJobSummary> summary,
-            Map<String, Object> additionalProperties) {
+    private GetJobResponseContent(String status, String type, Optional<String> createdAt, String id, Optional<String> connectionId, Optional<String> location, Optional<Integer> percentageDone, Optional<Integer> timeLeftSeconds, Optional<JobFileFormatEnum> format, Optional<String> statusDetails, Optional<GetJobSummary> summary, Map<String, Object> additionalProperties) {
         this.status = status;
         this.type = type;
         this.createdAt = createdAt;
@@ -77,7 +66,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("status")
     public String getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +74,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("type")
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -93,7 +82,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<String> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +90,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,7 +98,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,7 +106,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("location")
     public Optional<String> getLocation() {
-        return location;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,7 +114,7 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("percentage_done")
     public Optional<Integer> getPercentageDone() {
-        return percentageDone;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,12 +122,12 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("time_left_seconds")
     public Optional<Integer> getTimeLeftSeconds() {
-        return timeLeftSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("format")
     public Optional<JobFileFormatEnum> getFormat() {
-        return format;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -146,65 +135,44 @@ public final class GetJobResponseContent {
      */
     @JsonProperty("status_details")
     public Optional<String> getStatusDetails() {
-        return statusDetails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("summary")
     public Optional<GetJobSummary> getSummary() {
-        return summary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetJobResponseContent && equalTo((GetJobResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetJobResponseContent other) {
-        return status.equals(other.status)
-                && type.equals(other.type)
-                && createdAt.equals(other.createdAt)
-                && id.equals(other.id)
-                && connectionId.equals(other.connectionId)
-                && location.equals(other.location)
-                && percentageDone.equals(other.percentageDone)
-                && timeLeftSeconds.equals(other.timeLeftSeconds)
-                && format.equals(other.format)
-                && statusDetails.equals(other.statusDetails)
-                && summary.equals(other.summary);
+        return status.equals(other.status) && type.equals(other.type) && createdAt.equals(other.createdAt) && id.equals(other.id) && connectionId.equals(other.connectionId) && location.equals(other.location) && percentageDone.equals(other.percentageDone) && timeLeftSeconds.equals(other.timeLeftSeconds) && format.equals(other.format) && statusDetails.equals(other.statusDetails) && summary.equals(other.summary);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.status,
-                this.type,
-                this.createdAt,
-                this.id,
-                this.connectionId,
-                this.location,
-                this.percentageDone,
-                this.timeLeftSeconds,
-                this.format,
-                this.statusDetails,
-                this.summary);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static StatusStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface StatusStage {
+
         /**
          * <p>Status of this job.</p>
          */
@@ -214,6 +182,7 @@ public final class GetJobResponseContent {
     }
 
     public interface TypeStage {
+
         /**
          * <p>Type of job this is.</p>
          */
@@ -221,6 +190,7 @@ public final class GetJobResponseContent {
     }
 
     public interface IdStage {
+
         /**
          * <p>ID of this job.</p>
          */
@@ -228,6 +198,7 @@ public final class GetJobResponseContent {
     }
 
     public interface _FinalStage {
+
         GetJobResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -287,6 +258,7 @@ public final class GetJobResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements StatusStage, TypeStage, IdStage, _FinalStage {
+
         private String status;
 
         private String type;
@@ -312,22 +284,12 @@ public final class GetJobResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetJobResponseContent other) {
-            status(other.getStatus());
-            type(other.getType());
-            createdAt(other.getCreatedAt());
-            id(other.getId());
-            connectionId(other.getConnectionId());
-            location(other.getLocation());
-            percentageDone(other.getPercentageDone());
-            timeLeftSeconds(other.getTimeLeftSeconds());
-            format(other.getFormat());
-            statusDetails(other.getStatusDetails());
-            summary(other.getSummary());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -338,8 +300,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter("status")
         public TypeStage status(@NotNull String status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -350,8 +311,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter("type")
         public IdStage type(@NotNull String type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -362,21 +322,18 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public _FinalStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage summary(GetJobSummary summary) {
-            this.summary = Optional.ofNullable(summary);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "summary", nulls = Nulls.SKIP)
         public _FinalStage summary(Optional<GetJobSummary> summary) {
-            this.summary = summary;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -385,8 +342,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage statusDetails(String statusDetails) {
-            this.statusDetails = Optional.ofNullable(statusDetails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -395,21 +351,18 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "status_details", nulls = Nulls.SKIP)
         public _FinalStage statusDetails(Optional<String> statusDetails) {
-            this.statusDetails = statusDetails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage format(JobFileFormatEnum format) {
-            this.format = Optional.ofNullable(format);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "format", nulls = Nulls.SKIP)
         public _FinalStage format(Optional<JobFileFormatEnum> format) {
-            this.format = format;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -418,8 +371,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage timeLeftSeconds(Integer timeLeftSeconds) {
-            this.timeLeftSeconds = Optional.ofNullable(timeLeftSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -428,8 +380,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "time_left_seconds", nulls = Nulls.SKIP)
         public _FinalStage timeLeftSeconds(Optional<Integer> timeLeftSeconds) {
-            this.timeLeftSeconds = timeLeftSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -438,8 +389,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage percentageDone(Integer percentageDone) {
-            this.percentageDone = Optional.ofNullable(percentageDone);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -448,8 +398,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "percentage_done", nulls = Nulls.SKIP)
         public _FinalStage percentageDone(Optional<Integer> percentageDone) {
-            this.percentageDone = percentageDone;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -458,8 +407,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage location(String location) {
-            this.location = Optional.ofNullable(location);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -468,8 +416,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "location", nulls = Nulls.SKIP)
         public _FinalStage location(Optional<String> location) {
-            this.location = location;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -478,8 +425,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -488,8 +434,7 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public _FinalStage connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -498,8 +443,7 @@ public final class GetJobResponseContent {
          */
         @java.lang.Override
         public _FinalStage createdAt(String createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -508,37 +452,22 @@ public final class GetJobResponseContent {
         @java.lang.Override
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public _FinalStage createdAt(Optional<String> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetJobResponseContent build() {
-            return new GetJobResponseContent(
-                    status,
-                    type,
-                    createdAt,
-                    id,
-                    connectionId,
-                    location,
-                    percentageDone,
-                    timeLeftSeconds,
-                    format,
-                    statusDetails,
-                    summary,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

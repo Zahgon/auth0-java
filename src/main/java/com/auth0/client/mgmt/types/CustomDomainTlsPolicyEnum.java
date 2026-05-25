@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomDomainTlsPolicyEnum {
-    public static final CustomDomainTlsPolicyEnum RECOMMENDED =
-            new CustomDomainTlsPolicyEnum(Value.RECOMMENDED, "recommended");
+
+    public static final CustomDomainTlsPolicyEnum RECOMMENDED = new CustomDomainTlsPolicyEnum(Value.RECOMMENDED, "recommended");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CustomDomainTlsPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomDomainTlsPolicyEnum
-                        && this.string.equals(((CustomDomainTlsPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RECOMMENDED:
-                return visitor.visitRecommended();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomDomainTlsPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "recommended":
-                return RECOMMENDED;
-            default:
-                return new CustomDomainTlsPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RECOMMENDED,
 
-        UNKNOWN
+        RECOMMENDED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRecommended();
 
         T visitUnknown(String unknownType);

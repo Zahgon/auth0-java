@@ -24,16 +24,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateScimTokenRequestContent.Builder.class)
 public final class CreateScimTokenRequestContent {
+
     private final Optional<List<String>> scopes;
 
     private final OptionalNullable<Integer> tokenLifetime;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateScimTokenRequestContent(
-            Optional<List<String>> scopes,
-            OptionalNullable<Integer> tokenLifetime,
-            Map<String, Object> additionalProperties) {
+    private CreateScimTokenRequestContent(Optional<List<String>> scopes, OptionalNullable<Integer> tokenLifetime, Map<String, Object> additionalProperties) {
         this.scopes = scopes;
         this.tokenLifetime = tokenLifetime;
         this.additionalProperties = additionalProperties;
@@ -44,7 +42,7 @@ public final class CreateScimTokenRequestContent {
      */
     @JsonProperty("scopes")
     public Optional<List<String>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,10 +51,7 @@ public final class CreateScimTokenRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_lifetime")
     public OptionalNullable<Integer> getTokenLifetime() {
-        if (tokenLifetime == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -67,13 +62,12 @@ public final class CreateScimTokenRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateScimTokenRequestContent && equalTo((CreateScimTokenRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateScimTokenRequestContent other) {
@@ -82,20 +76,21 @@ public final class CreateScimTokenRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.scopes, this.tokenLifetime);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> scopes = Optional.empty();
 
         private OptionalNullable<Integer> tokenLifetime = OptionalNullable.absent();
@@ -103,12 +98,11 @@ public final class CreateScimTokenRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateScimTokenRequestContent other) {
-            scopes(other.getScopes());
-            tokenLifetime(other.getTokenLifetime());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,13 +110,11 @@ public final class CreateScimTokenRequestContent {
          */
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<List<String>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(List<String> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -130,47 +122,31 @@ public final class CreateScimTokenRequestContent {
          */
         @JsonSetter(value = "token_lifetime", nulls = Nulls.SKIP)
         public Builder tokenLifetime(@Nullable OptionalNullable<Integer> tokenLifetime) {
-            this.tokenLifetime = tokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(Integer tokenLifetime) {
-            this.tokenLifetime = OptionalNullable.of(tokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(Optional<Integer> tokenLifetime) {
-            if (tokenLifetime.isPresent()) {
-                this.tokenLifetime = OptionalNullable.of(tokenLifetime.get());
-            } else {
-                this.tokenLifetime = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(com.auth0.client.mgmt.core.Nullable<Integer> tokenLifetime) {
-            if (tokenLifetime.isNull()) {
-                this.tokenLifetime = OptionalNullable.ofNull();
-            } else if (tokenLifetime.isEmpty()) {
-                this.tokenLifetime = OptionalNullable.absent();
-            } else {
-                this.tokenLifetime = OptionalNullable.of(tokenLifetime.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateScimTokenRequestContent build() {
-            return new CreateScimTokenRequestContent(scopes, tokenLifetime, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

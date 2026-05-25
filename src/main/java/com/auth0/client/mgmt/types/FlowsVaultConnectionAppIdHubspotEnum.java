@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdHubspotEnum {
-    public static final FlowsVaultConnectionAppIdHubspotEnum HUBSPOT =
-            new FlowsVaultConnectionAppIdHubspotEnum(Value.HUBSPOT, "HUBSPOT");
+
+    public static final FlowsVaultConnectionAppIdHubspotEnum HUBSPOT = new FlowsVaultConnectionAppIdHubspotEnum(Value.HUBSPOT, "HUBSPOT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdHubspotEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdHubspotEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdHubspotEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case HUBSPOT:
-                return visitor.visitHubspot();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdHubspotEnum valueOf(String value) {
-        switch (value) {
-            case "HUBSPOT":
-                return HUBSPOT;
-            default:
-                return new FlowsVaultConnectionAppIdHubspotEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        HUBSPOT,
 
-        UNKNOWN
+        HUBSPOT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitHubspot();
 
         T visitUnknown(String unknownType);

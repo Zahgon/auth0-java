@@ -23,14 +23,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClearAssessorsRequestContent.Builder.class)
 public final class ClearAssessorsRequestContent {
+
     private final String connection;
 
     private final List<AssessorsTypeEnum> assessors;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClearAssessorsRequestContent(
-            String connection, List<AssessorsTypeEnum> assessors, Map<String, Object> additionalProperties) {
+    private ClearAssessorsRequestContent(String connection, List<AssessorsTypeEnum> assessors, Map<String, Object> additionalProperties) {
         this.connection = connection;
         this.assessors = assessors;
         this.additionalProperties = additionalProperties;
@@ -41,7 +41,7 @@ public final class ClearAssessorsRequestContent {
      */
     @JsonProperty("connection")
     public String getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,18 +49,17 @@ public final class ClearAssessorsRequestContent {
      */
     @JsonProperty("assessors")
     public List<AssessorsTypeEnum> getAssessors() {
-        return assessors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClearAssessorsRequestContent && equalTo((ClearAssessorsRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClearAssessorsRequestContent other) {
@@ -69,19 +68,20 @@ public final class ClearAssessorsRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connection, this.assessors);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionStage {
+
         /**
          * <p>The name of the connection containing the user whose assessors should be cleared.</p>
          */
@@ -91,6 +91,7 @@ public final class ClearAssessorsRequestContent {
     }
 
     public interface _FinalStage {
+
         ClearAssessorsRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -109,6 +110,7 @@ public final class ClearAssessorsRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionStage, _FinalStage {
+
         private String connection;
 
         private List<AssessorsTypeEnum> assessors = new ArrayList<>();
@@ -116,13 +118,12 @@ public final class ClearAssessorsRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClearAssessorsRequestContent other) {
-            connection(other.getConnection());
-            assessors(other.getAssessors());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,8 +134,7 @@ public final class ClearAssessorsRequestContent {
         @java.lang.Override
         @JsonSetter("connection")
         public _FinalStage connection(@NotNull String connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,10 +143,7 @@ public final class ClearAssessorsRequestContent {
          */
         @java.lang.Override
         public _FinalStage addAllAssessors(List<AssessorsTypeEnum> assessors) {
-            if (assessors != null) {
-                this.assessors.addAll(assessors);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -155,8 +152,7 @@ public final class ClearAssessorsRequestContent {
          */
         @java.lang.Override
         public _FinalStage addAssessors(AssessorsTypeEnum assessors) {
-            this.assessors.add(assessors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,28 +161,22 @@ public final class ClearAssessorsRequestContent {
         @java.lang.Override
         @JsonSetter(value = "assessors", nulls = Nulls.SKIP)
         public _FinalStage assessors(List<AssessorsTypeEnum> assessors) {
-            this.assessors.clear();
-            if (assessors != null) {
-                this.assessors.addAll(assessors);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClearAssessorsRequestContent build() {
-            return new ClearAssessorsRequestContent(connection, assessors, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

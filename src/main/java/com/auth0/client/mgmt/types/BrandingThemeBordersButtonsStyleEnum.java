@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingThemeBordersButtonsStyleEnum {
-    public static final BrandingThemeBordersButtonsStyleEnum SHARP =
-            new BrandingThemeBordersButtonsStyleEnum(Value.SHARP, "sharp");
 
-    public static final BrandingThemeBordersButtonsStyleEnum ROUNDED =
-            new BrandingThemeBordersButtonsStyleEnum(Value.ROUNDED, "rounded");
+    public static final BrandingThemeBordersButtonsStyleEnum SHARP = new BrandingThemeBordersButtonsStyleEnum(Value.SHARP, "sharp");
 
-    public static final BrandingThemeBordersButtonsStyleEnum PILL =
-            new BrandingThemeBordersButtonsStyleEnum(Value.PILL, "pill");
+    public static final BrandingThemeBordersButtonsStyleEnum ROUNDED = new BrandingThemeBordersButtonsStyleEnum(Value.ROUNDED, "rounded");
+
+    public static final BrandingThemeBordersButtonsStyleEnum PILL = new BrandingThemeBordersButtonsStyleEnum(Value.PILL, "pill");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class BrandingThemeBordersButtonsStyleEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingThemeBordersButtonsStyleEnum
-                        && this.string.equals(((BrandingThemeBordersButtonsStyleEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SHARP:
-                return visitor.visitSharp();
-            case ROUNDED:
-                return visitor.visitRounded();
-            case PILL:
-                return visitor.visitPill();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingThemeBordersButtonsStyleEnum valueOf(String value) {
-        switch (value) {
-            case "sharp":
-                return SHARP;
-            case "rounded":
-                return ROUNDED;
-            case "pill":
-                return PILL;
-            default:
-                return new BrandingThemeBordersButtonsStyleEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PILL,
 
-        ROUNDED,
-
-        SHARP,
-
-        UNKNOWN
+        PILL, ROUNDED, SHARP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPill();
 
         T visitRounded();

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentWordpressStrategy {
-    public static final ConnectionResponseContentWordpressStrategy WORDPRESS =
-            new ConnectionResponseContentWordpressStrategy(Value.WORDPRESS, "wordpress");
+
+    public static final ConnectionResponseContentWordpressStrategy WORDPRESS = new ConnectionResponseContentWordpressStrategy(Value.WORDPRESS, "wordpress");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentWordpressStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentWordpressStrategy
-                        && this.string.equals(((ConnectionResponseContentWordpressStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WORDPRESS:
-                return visitor.visitWordpress();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentWordpressStrategy valueOf(String value) {
-        switch (value) {
-            case "wordpress":
-                return WORDPRESS;
-            default:
-                return new ConnectionResponseContentWordpressStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WORDPRESS,
 
-        UNKNOWN
+        WORDPRESS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWordpress();
 
         T visitUnknown(String unknownType);

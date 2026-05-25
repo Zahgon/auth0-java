@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormStartNode.Builder.class)
 public final class FormStartNode {
+
     private final Optional<List<FormHiddenField>> hiddenFields;
 
     private final Optional<FormNodePointer> nextNode;
@@ -29,11 +30,7 @@ public final class FormStartNode {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormStartNode(
-            Optional<List<FormHiddenField>> hiddenFields,
-            Optional<FormNodePointer> nextNode,
-            Optional<FormNodeCoordinates> coordinates,
-            Map<String, Object> additionalProperties) {
+    private FormStartNode(Optional<List<FormHiddenField>> hiddenFields, Optional<FormNodePointer> nextNode, Optional<FormNodeCoordinates> coordinates, Map<String, Object> additionalProperties) {
         this.hiddenFields = hiddenFields;
         this.nextNode = nextNode;
         this.coordinates = coordinates;
@@ -42,52 +39,50 @@ public final class FormStartNode {
 
     @JsonProperty("hidden_fields")
     public Optional<List<FormHiddenField>> getHiddenFields() {
-        return hiddenFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("next_node")
     public Optional<FormNodePointer> getNextNode() {
-        return nextNode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("coordinates")
     public Optional<FormNodeCoordinates> getCoordinates() {
-        return coordinates;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormStartNode && equalTo((FormStartNode) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormStartNode other) {
-        return hiddenFields.equals(other.hiddenFields)
-                && nextNode.equals(other.nextNode)
-                && coordinates.equals(other.coordinates);
+        return hiddenFields.equals(other.hiddenFields) && nextNode.equals(other.nextNode) && coordinates.equals(other.coordinates);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.hiddenFields, this.nextNode, this.coordinates);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<FormHiddenField>> hiddenFields = Optional.empty();
 
         private Optional<FormNodePointer> nextNode = Optional.empty();
@@ -97,60 +92,50 @@ public final class FormStartNode {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormStartNode other) {
-            hiddenFields(other.getHiddenFields());
-            nextNode(other.getNextNode());
-            coordinates(other.getCoordinates());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "hidden_fields", nulls = Nulls.SKIP)
         public Builder hiddenFields(Optional<List<FormHiddenField>> hiddenFields) {
-            this.hiddenFields = hiddenFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hiddenFields(List<FormHiddenField> hiddenFields) {
-            this.hiddenFields = Optional.ofNullable(hiddenFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "next_node", nulls = Nulls.SKIP)
         public Builder nextNode(Optional<FormNodePointer> nextNode) {
-            this.nextNode = nextNode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nextNode(FormNodePointer nextNode) {
-            this.nextNode = Optional.ofNullable(nextNode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "coordinates", nulls = Nulls.SKIP)
         public Builder coordinates(Optional<FormNodeCoordinates> coordinates) {
-            this.coordinates = coordinates;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder coordinates(FormNodeCoordinates coordinates) {
-            this.coordinates = Optional.ofNullable(coordinates);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormStartNode build() {
-            return new FormStartNode(hiddenFields, nextNode, coordinates, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

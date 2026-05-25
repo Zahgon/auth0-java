@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonFirebase.Builder.class)
 public final class ClientAddonFirebase {
+
     private final Optional<String> secret;
 
     private final Optional<String> privateKeyId;
@@ -32,13 +33,7 @@ public final class ClientAddonFirebase {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonFirebase(
-            Optional<String> secret,
-            Optional<String> privateKeyId,
-            Optional<String> privateKey,
-            Optional<String> clientEmail,
-            Optional<Integer> lifetimeInSeconds,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonFirebase(Optional<String> secret, Optional<String> privateKeyId, Optional<String> privateKey, Optional<String> clientEmail, Optional<Integer> lifetimeInSeconds, Map<String, Object> additionalProperties) {
         this.secret = secret;
         this.privateKeyId = privateKeyId;
         this.privateKey = privateKey;
@@ -52,7 +47,7 @@ public final class ClientAddonFirebase {
      */
     @JsonProperty("secret")
     public Optional<String> getSecret() {
-        return secret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +55,7 @@ public final class ClientAddonFirebase {
      */
     @JsonProperty("private_key_id")
     public Optional<String> getPrivateKeyId() {
-        return privateKeyId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +63,7 @@ public final class ClientAddonFirebase {
      */
     @JsonProperty("private_key")
     public Optional<String> getPrivateKey() {
-        return privateKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +71,7 @@ public final class ClientAddonFirebase {
      */
     @JsonProperty("client_email")
     public Optional<String> getClientEmail() {
-        return clientEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,44 +79,40 @@ public final class ClientAddonFirebase {
      */
     @JsonProperty("lifetime_in_seconds")
     public Optional<Integer> getLifetimeInSeconds() {
-        return lifetimeInSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonFirebase && equalTo((ClientAddonFirebase) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonFirebase other) {
-        return secret.equals(other.secret)
-                && privateKeyId.equals(other.privateKeyId)
-                && privateKey.equals(other.privateKey)
-                && clientEmail.equals(other.clientEmail)
-                && lifetimeInSeconds.equals(other.lifetimeInSeconds);
+        return secret.equals(other.secret) && privateKeyId.equals(other.privateKeyId) && privateKey.equals(other.privateKey) && clientEmail.equals(other.clientEmail) && lifetimeInSeconds.equals(other.lifetimeInSeconds);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.secret, this.privateKeyId, this.privateKey, this.clientEmail, this.lifetimeInSeconds);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> secret = Optional.empty();
 
         private Optional<String> privateKeyId = Optional.empty();
@@ -135,15 +126,11 @@ public final class ClientAddonFirebase {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonFirebase other) {
-            secret(other.getSecret());
-            privateKeyId(other.getPrivateKeyId());
-            privateKey(other.getPrivateKey());
-            clientEmail(other.getClientEmail());
-            lifetimeInSeconds(other.getLifetimeInSeconds());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,13 +138,11 @@ public final class ClientAddonFirebase {
          */
         @JsonSetter(value = "secret", nulls = Nulls.SKIP)
         public Builder secret(Optional<String> secret) {
-            this.secret = secret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder secret(String secret) {
-            this.secret = Optional.ofNullable(secret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +150,11 @@ public final class ClientAddonFirebase {
          */
         @JsonSetter(value = "private_key_id", nulls = Nulls.SKIP)
         public Builder privateKeyId(Optional<String> privateKeyId) {
-            this.privateKeyId = privateKeyId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder privateKeyId(String privateKeyId) {
-            this.privateKeyId = Optional.ofNullable(privateKeyId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,13 +162,11 @@ public final class ClientAddonFirebase {
          */
         @JsonSetter(value = "private_key", nulls = Nulls.SKIP)
         public Builder privateKey(Optional<String> privateKey) {
-            this.privateKey = privateKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Optional.ofNullable(privateKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -193,13 +174,11 @@ public final class ClientAddonFirebase {
          */
         @JsonSetter(value = "client_email", nulls = Nulls.SKIP)
         public Builder clientEmail(Optional<String> clientEmail) {
-            this.clientEmail = clientEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientEmail(String clientEmail) {
-            this.clientEmail = Optional.ofNullable(clientEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,28 +186,23 @@ public final class ClientAddonFirebase {
          */
         @JsonSetter(value = "lifetime_in_seconds", nulls = Nulls.SKIP)
         public Builder lifetimeInSeconds(Optional<Integer> lifetimeInSeconds) {
-            this.lifetimeInSeconds = lifetimeInSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lifetimeInSeconds(Integer lifetimeInSeconds) {
-            this.lifetimeInSeconds = Optional.ofNullable(lifetimeInSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonFirebase build() {
-            return new ClientAddonFirebase(
-                    secret, privateKeyId, privateKey, clientEmail, lifetimeInSeconds, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -13,8 +13,11 @@ import org.jetbrains.annotations.Nullable;
  * Represents a file stream with associated metadata for file uploads.
  */
 public class FileStream {
+
     private final InputStream inputStream;
+
     private final String fileName;
+
     private final MediaType contentType;
 
     /**
@@ -36,17 +39,17 @@ public class FileStream {
     }
 
     public InputStream getInputStream() {
-        return inputStream;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Nullable
     public String getFileName() {
-        return fileName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Nullable
     public MediaType getContentType() {
-        return contentType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,6 +58,6 @@ public class FileStream {
      * @return A RequestBody instance representing this file stream.
      */
     public RequestBody toRequestBody() {
-        return new InputStreamRequestBody(contentType, inputStream);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

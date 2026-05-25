@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.PermissionsResponsePayload;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncPermissionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawPermissionsClient rawClient;
@@ -26,67 +27,62 @@ public class AsyncPermissionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawPermissionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
     public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
-    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
-    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(
-            String id, ListRolePermissionsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(String id, ListRolePermissionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
-    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(
-            String id, ListRolePermissionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<PermissionsResponsePayload>> list(String id, ListRolePermissionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> to a specified user role.
      */
     public CompletableFuture<Void> add(String id, AddRolePermissionsRequestContent request) {
-        return this.rawClient.add(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> to a specified user role.
      */
-    public CompletableFuture<Void> add(
-            String id, AddRolePermissionsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.add(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> add(String id, AddRolePermissionsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> from a specified user role.
      */
     public CompletableFuture<Void> delete(String id, DeleteRolePermissionsRequestContent request) {
-        return this.rawClient.delete(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> from a specified user role.
      */
-    public CompletableFuture<Void> delete(
-            String id, DeleteRolePermissionsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> delete(String id, DeleteRolePermissionsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

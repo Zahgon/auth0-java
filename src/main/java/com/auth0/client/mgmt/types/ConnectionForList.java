@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionForList.Builder.class)
 public final class ConnectionForList {
+
     private final Optional<String> name;
 
     private final Optional<String> displayName;
@@ -46,19 +47,7 @@ public final class ConnectionForList {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionForList(
-            Optional<String> name,
-            Optional<String> displayName,
-            Optional<Map<String, Object>> options,
-            Optional<String> id,
-            Optional<String> strategy,
-            Optional<List<String>> realms,
-            Optional<Boolean> isDomainConnection,
-            Optional<Boolean> showAsButton,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            Optional<ConnectionAuthenticationPurpose> authentication,
-            Optional<ConnectionConnectedAccountsPurpose> connectedAccounts,
-            Map<String, Object> additionalProperties) {
+    private ConnectionForList(Optional<String> name, Optional<String> displayName, Optional<Map<String, Object>> options, Optional<String> id, Optional<String> strategy, Optional<List<String>> realms, Optional<Boolean> isDomainConnection, Optional<Boolean> showAsButton, Optional<Map<String, OptionalNullable<String>>> metadata, Optional<ConnectionAuthenticationPurpose> authentication, Optional<ConnectionConnectedAccountsPurpose> connectedAccounts, Map<String, Object> additionalProperties) {
         this.name = name;
         this.displayName = displayName;
         this.options = options;
@@ -78,7 +67,7 @@ public final class ConnectionForList {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,12 +75,12 @@ public final class ConnectionForList {
      */
     @JsonProperty("display_name")
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<Map<String, Object>> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,7 +88,7 @@ public final class ConnectionForList {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,7 +96,7 @@ public final class ConnectionForList {
      */
     @JsonProperty("strategy")
     public Optional<String> getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +104,7 @@ public final class ConnectionForList {
      */
     @JsonProperty("realms")
     public Optional<List<String>> getRealms() {
-        return realms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -123,7 +112,7 @@ public final class ConnectionForList {
      */
     @JsonProperty("is_domain_connection")
     public Optional<Boolean> getIsDomainConnection() {
-        return isDomainConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -131,76 +120,55 @@ public final class ConnectionForList {
      */
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authentication")
     public Optional<ConnectionAuthenticationPurpose> getAuthentication() {
-        return authentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connected_accounts")
     public Optional<ConnectionConnectedAccountsPurpose> getConnectedAccounts() {
-        return connectedAccounts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionForList && equalTo((ConnectionForList) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionForList other) {
-        return name.equals(other.name)
-                && displayName.equals(other.displayName)
-                && options.equals(other.options)
-                && id.equals(other.id)
-                && strategy.equals(other.strategy)
-                && realms.equals(other.realms)
-                && isDomainConnection.equals(other.isDomainConnection)
-                && showAsButton.equals(other.showAsButton)
-                && metadata.equals(other.metadata)
-                && authentication.equals(other.authentication)
-                && connectedAccounts.equals(other.connectedAccounts);
+        return name.equals(other.name) && displayName.equals(other.displayName) && options.equals(other.options) && id.equals(other.id) && strategy.equals(other.strategy) && realms.equals(other.realms) && isDomainConnection.equals(other.isDomainConnection) && showAsButton.equals(other.showAsButton) && metadata.equals(other.metadata) && authentication.equals(other.authentication) && connectedAccounts.equals(other.connectedAccounts);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.displayName,
-                this.options,
-                this.id,
-                this.strategy,
-                this.realms,
-                this.isDomainConnection,
-                this.showAsButton,
-                this.metadata,
-                this.authentication,
-                this.connectedAccounts);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private Optional<String> displayName = Optional.empty();
@@ -226,21 +194,11 @@ public final class ConnectionForList {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionForList other) {
-            name(other.getName());
-            displayName(other.getDisplayName());
-            options(other.getOptions());
-            id(other.getId());
-            strategy(other.getStrategy());
-            realms(other.getRealms());
-            isDomainConnection(other.getIsDomainConnection());
-            showAsButton(other.getShowAsButton());
-            metadata(other.getMetadata());
-            authentication(other.getAuthentication());
-            connectedAccounts(other.getConnectedAccounts());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -248,13 +206,11 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -262,24 +218,20 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public Builder displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public Builder options(Optional<Map<String, Object>> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder options(Map<String, Object> options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -287,13 +239,11 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -301,13 +251,11 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "strategy", nulls = Nulls.SKIP)
         public Builder strategy(Optional<String> strategy) {
-            this.strategy = strategy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategy(String strategy) {
-            this.strategy = Optional.ofNullable(strategy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,13 +263,11 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "realms", nulls = Nulls.SKIP)
         public Builder realms(Optional<List<String>> realms) {
-            this.realms = realms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder realms(List<String> realms) {
-            this.realms = Optional.ofNullable(realms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -329,13 +275,11 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "is_domain_connection", nulls = Nulls.SKIP)
         public Builder isDomainConnection(Optional<Boolean> isDomainConnection) {
-            this.isDomainConnection = isDomainConnection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isDomainConnection(Boolean isDomainConnection) {
-            this.isDomainConnection = Optional.ofNullable(isDomainConnection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -343,72 +287,50 @@ public final class ConnectionForList {
          */
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public Builder showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public Builder metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authentication", nulls = Nulls.SKIP)
         public Builder authentication(Optional<ConnectionAuthenticationPurpose> authentication) {
-            this.authentication = authentication;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authentication(ConnectionAuthenticationPurpose authentication) {
-            this.authentication = Optional.ofNullable(authentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connected_accounts", nulls = Nulls.SKIP)
         public Builder connectedAccounts(Optional<ConnectionConnectedAccountsPurpose> connectedAccounts) {
-            this.connectedAccounts = connectedAccounts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectedAccounts(ConnectionConnectedAccountsPurpose connectedAccounts) {
-            this.connectedAccounts = Optional.ofNullable(connectedAccounts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionForList build() {
-            return new ConnectionForList(
-                    name,
-                    displayName,
-                    options,
-                    id,
-                    strategy,
-                    realms,
-                    isDomainConnection,
-                    showAsButton,
-                    metadata,
-                    authentication,
-                    connectedAccounts,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

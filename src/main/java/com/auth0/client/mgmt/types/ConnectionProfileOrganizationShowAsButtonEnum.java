@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionProfileOrganizationShowAsButtonEnum {
-    public static final ConnectionProfileOrganizationShowAsButtonEnum REQUIRED =
-            new ConnectionProfileOrganizationShowAsButtonEnum(Value.REQUIRED, "required");
 
-    public static final ConnectionProfileOrganizationShowAsButtonEnum OPTIONAL =
-            new ConnectionProfileOrganizationShowAsButtonEnum(Value.OPTIONAL, "optional");
+    public static final ConnectionProfileOrganizationShowAsButtonEnum REQUIRED = new ConnectionProfileOrganizationShowAsButtonEnum(Value.REQUIRED, "required");
 
-    public static final ConnectionProfileOrganizationShowAsButtonEnum NONE =
-            new ConnectionProfileOrganizationShowAsButtonEnum(Value.NONE, "none");
+    public static final ConnectionProfileOrganizationShowAsButtonEnum OPTIONAL = new ConnectionProfileOrganizationShowAsButtonEnum(Value.OPTIONAL, "optional");
+
+    public static final ConnectionProfileOrganizationShowAsButtonEnum NONE = new ConnectionProfileOrganizationShowAsButtonEnum(Value.NONE, "none");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ConnectionProfileOrganizationShowAsButtonEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionProfileOrganizationShowAsButtonEnum
-                        && this.string.equals(((ConnectionProfileOrganizationShowAsButtonEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case REQUIRED:
-                return visitor.visitRequired();
-            case OPTIONAL:
-                return visitor.visitOptional();
-            case NONE:
-                return visitor.visitNone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionProfileOrganizationShowAsButtonEnum valueOf(String value) {
-        switch (value) {
-            case "required":
-                return REQUIRED;
-            case "optional":
-                return OPTIONAL;
-            case "none":
-                return NONE;
-            default:
-                return new ConnectionProfileOrganizationShowAsButtonEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NONE,
 
-        OPTIONAL,
-
-        REQUIRED,
-
-        UNKNOWN
+        NONE, OPTIONAL, REQUIRED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitOptional();

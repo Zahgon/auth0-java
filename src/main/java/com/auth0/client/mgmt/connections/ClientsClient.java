@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.UpdateEnabledClientConnectionsRequestContentI
 import java.util.List;
 
 public class ClientsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawClientsClient rawClient;
@@ -25,7 +26,7 @@ public class ClientsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawClientsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -33,7 +34,7 @@ public class ClientsClient {
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
     public SyncPagingIterable<ConnectionEnabledClient> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -41,33 +42,30 @@ public class ClientsClient {
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
     public SyncPagingIterable<ConnectionEnabledClient> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public SyncPagingIterable<ConnectionEnabledClient> get(
-            String id, GetConnectionEnabledClientsRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+    public SyncPagingIterable<ConnectionEnabledClient> get(String id, GetConnectionEnabledClientsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public SyncPagingIterable<ConnectionEnabledClient> get(
-            String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+    public SyncPagingIterable<ConnectionEnabledClient> get(String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request) {
-        this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public void update(
-            String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
-        this.rawClient.update(id, request, requestOptions).body();
+    public void update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

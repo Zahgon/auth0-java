@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BackChannelTokenResponse {
+
     @JsonProperty("access_token")
     private String accessToken;
 
@@ -20,18 +21,18 @@ public class BackChannelTokenResponse {
     private String scope;
 
     public String getAccessToken() {
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getIdToken() {
-        return idToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public long getExpiresIn() {
-        return expiresIn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

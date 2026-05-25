@@ -19,6 +19,7 @@ import com.auth0.client.mgmt.types.UpdateRoleResponseContent;
 import java.util.function.Supplier;
 
 public class RolesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRolesClient rawClient;
@@ -38,7 +39,7 @@ public class RolesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRolesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,7 +47,7 @@ public class RolesClient {
      * <p><b>Note</b>: The returned list does not include standard roles available for tenant members, such as Admin or Support Access.</p>
      */
     public SyncPagingIterable<Role> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +55,7 @@ public class RolesClient {
      * <p><b>Note</b>: The returned list does not include standard roles available for tenant members, such as Admin or Support Access.</p>
      */
     public SyncPagingIterable<Role> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +63,7 @@ public class RolesClient {
      * <p><b>Note</b>: The returned list does not include standard roles available for tenant members, such as Admin or Support Access.</p>
      */
     public SyncPagingIterable<Role> list(ListRolesRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +71,7 @@ public class RolesClient {
      * <p><b>Note</b>: The returned list does not include standard roles available for tenant members, such as Admin or Support Access.</p>
      */
     public SyncPagingIterable<Role> list(ListRolesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +79,7 @@ public class RolesClient {
      * <p><b>Note</b>: New roles are not associated with any permissions by default. To assign existing permissions to your role, review Associate Permissions with a Role. To create new permissions, review Add API Permissions.</p>
      */
     public CreateRoleResponseContent create(CreateRoleRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,71 +87,70 @@ public class RolesClient {
      * <p><b>Note</b>: New roles are not associated with any permissions by default. To assign existing permissions to your role, review Associate Permissions with a Role. To create new permissions, review Add API Permissions.</p>
      */
     public CreateRoleResponseContent create(CreateRoleRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
     public GetRoleResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
     public GetRoleResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> from your tenant. Once deleted, it is removed from any user who was previously assigned that role. This action cannot be undone.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> from your tenant. Once deleted, it is removed from any user who was previously assigned that role. This action cannot be undone.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
     public UpdateRoleResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
     public UpdateRoleResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
     public UpdateRoleResponseContent update(String id, UpdateRoleRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">user role</a> specified by ID.
      */
-    public UpdateRoleResponseContent update(
-            String id, UpdateRoleRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateRoleResponseContent update(String id, UpdateRoleRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PermissionsClient permissions() {
-        return this.permissionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UsersClient users() {
-        return this.usersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

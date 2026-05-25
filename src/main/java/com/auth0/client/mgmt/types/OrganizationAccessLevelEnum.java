@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class OrganizationAccessLevelEnum {
-    public static final OrganizationAccessLevelEnum READONLY =
-            new OrganizationAccessLevelEnum(Value.READONLY, "readonly");
+
+    public static final OrganizationAccessLevelEnum READONLY = new OrganizationAccessLevelEnum(Value.READONLY, "readonly");
 
     public static final OrganizationAccessLevelEnum FULL = new OrganizationAccessLevelEnum(Value.FULL, "full");
 
@@ -26,72 +26,41 @@ public final class OrganizationAccessLevelEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof OrganizationAccessLevelEnum
-                        && this.string.equals(((OrganizationAccessLevelEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case READONLY:
-                return visitor.visitReadonly();
-            case FULL:
-                return visitor.visitFull();
-            case LIMITED:
-                return visitor.visitLimited();
-            case NONE:
-                return visitor.visitNone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static OrganizationAccessLevelEnum valueOf(String value) {
-        switch (value) {
-            case "readonly":
-                return READONLY;
-            case "full":
-                return FULL;
-            case "limited":
-                return LIMITED;
-            case "none":
-                return NONE;
-            default:
-                return new OrganizationAccessLevelEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NONE,
 
-        READONLY,
-
-        LIMITED,
-
-        FULL,
-
-        UNKNOWN
+        NONE, READONLY, LIMITED, FULL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitReadonly();

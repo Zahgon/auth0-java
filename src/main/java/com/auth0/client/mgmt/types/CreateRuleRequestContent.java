@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateRuleRequestContent.Builder.class)
 public final class CreateRuleRequestContent {
+
     private final String name;
 
     private final String script;
@@ -31,12 +32,7 @@ public final class CreateRuleRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateRuleRequestContent(
-            String name,
-            String script,
-            Optional<Double> order,
-            Optional<Boolean> enabled,
-            Map<String, Object> additionalProperties) {
+    private CreateRuleRequestContent(String name, String script, Optional<Double> order, Optional<Boolean> enabled, Map<String, Object> additionalProperties) {
         this.name = name;
         this.script = script;
         this.order = order;
@@ -49,7 +45,7 @@ public final class CreateRuleRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class CreateRuleRequestContent {
      */
     @JsonProperty("script")
     public String getScript() {
-        return script;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +61,7 @@ public final class CreateRuleRequestContent {
      */
     @JsonProperty("order")
     public Optional<Double> getOrder() {
-        return order;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,42 +69,39 @@ public final class CreateRuleRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateRuleRequestContent && equalTo((CreateRuleRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateRuleRequestContent other) {
-        return name.equals(other.name)
-                && script.equals(other.script)
-                && order.equals(other.order)
-                && enabled.equals(other.enabled);
+        return name.equals(other.name) && script.equals(other.script) && order.equals(other.order) && enabled.equals(other.enabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.script, this.order, this.enabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Name of this rule.</p>
          */
@@ -118,6 +111,7 @@ public final class CreateRuleRequestContent {
     }
 
     public interface ScriptStage {
+
         /**
          * <p>Code to be executed when this rule runs.</p>
          */
@@ -125,6 +119,7 @@ public final class CreateRuleRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateRuleRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -148,6 +143,7 @@ public final class CreateRuleRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, ScriptStage, _FinalStage {
+
         private String name;
 
         private String script;
@@ -159,15 +155,12 @@ public final class CreateRuleRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateRuleRequestContent other) {
-            name(other.getName());
-            script(other.getScript());
-            order(other.getOrder());
-            enabled(other.getEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -178,8 +171,7 @@ public final class CreateRuleRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public ScriptStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -190,8 +182,7 @@ public final class CreateRuleRequestContent {
         @java.lang.Override
         @JsonSetter("script")
         public _FinalStage script(@NotNull String script) {
-            this.script = Objects.requireNonNull(script, "script must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -200,8 +191,7 @@ public final class CreateRuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -210,8 +200,7 @@ public final class CreateRuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public _FinalStage enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -220,8 +209,7 @@ public final class CreateRuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage order(Double order) {
-            this.order = Optional.ofNullable(order);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -230,25 +218,22 @@ public final class CreateRuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "order", nulls = Nulls.SKIP)
         public _FinalStage order(Optional<Double> order) {
-            this.order = order;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateRuleRequestContent build() {
-            return new CreateRuleRequestContent(name, script, order, enabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

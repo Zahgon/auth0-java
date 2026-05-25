@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.ScimTokenItem;
 import java.util.List;
 
 public class TokensClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTokensClient rawClient;
@@ -24,63 +25,62 @@ public class TokensClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTokensClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves all scim tokens by its connection <code>id</code>.
      */
     public List<ScimTokenItem> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves all scim tokens by its connection <code>id</code>.
      */
     public List<ScimTokenItem> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CreateScimTokenResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CreateScimTokenResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CreateScimTokenResponseContent create(String id, CreateScimTokenRequestContent request) {
-        return this.rawClient.create(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
-    public CreateScimTokenResponseContent create(
-            String id, CreateScimTokenRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateScimTokenResponseContent create(String id, CreateScimTokenRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim token by its connection <code>id</code> and <code>tokenId</code>.
      */
     public void delete(String id, String tokenId) {
-        this.rawClient.delete(id, tokenId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim token by its connection <code>id</code> and <code>tokenId</code>.
      */
     public void delete(String id, String tokenId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, tokenId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

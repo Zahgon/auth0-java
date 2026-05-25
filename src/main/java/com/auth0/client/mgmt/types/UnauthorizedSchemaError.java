@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UnauthorizedSchemaError {
-    public static final UnauthorizedSchemaError UNAUTHORIZED =
-            new UnauthorizedSchemaError(Value.UNAUTHORIZED, "Unauthorized");
+
+    public static final UnauthorizedSchemaError UNAUTHORIZED = new UnauthorizedSchemaError(Value.UNAUTHORIZED, "Unauthorized");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class UnauthorizedSchemaError {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UnauthorizedSchemaError
-                        && this.string.equals(((UnauthorizedSchemaError) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UNAUTHORIZED:
-                return visitor.visitUnauthorized();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UnauthorizedSchemaError valueOf(String value) {
-        switch (value) {
-            case "Unauthorized":
-                return UNAUTHORIZED;
-            default:
-                return new UnauthorizedSchemaError(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UNAUTHORIZED,
 
-        UNKNOWN
+        UNAUTHORIZED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUnauthorized();
 
         T visitUnknown(String unknownType);

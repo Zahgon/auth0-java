@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionSalesforceSearchLeadsParamsSearchField {
-    public static final FlowActionSalesforceSearchLeadsParamsSearchField EMAIL =
-            new FlowActionSalesforceSearchLeadsParamsSearchField(Value.EMAIL, "email");
 
-    public static final FlowActionSalesforceSearchLeadsParamsSearchField ALL =
-            new FlowActionSalesforceSearchLeadsParamsSearchField(Value.ALL, "all");
+    public static final FlowActionSalesforceSearchLeadsParamsSearchField EMAIL = new FlowActionSalesforceSearchLeadsParamsSearchField(Value.EMAIL, "email");
 
-    public static final FlowActionSalesforceSearchLeadsParamsSearchField PHONE =
-            new FlowActionSalesforceSearchLeadsParamsSearchField(Value.PHONE, "phone");
+    public static final FlowActionSalesforceSearchLeadsParamsSearchField ALL = new FlowActionSalesforceSearchLeadsParamsSearchField(Value.ALL, "all");
 
-    public static final FlowActionSalesforceSearchLeadsParamsSearchField NAME =
-            new FlowActionSalesforceSearchLeadsParamsSearchField(Value.NAME, "name");
+    public static final FlowActionSalesforceSearchLeadsParamsSearchField PHONE = new FlowActionSalesforceSearchLeadsParamsSearchField(Value.PHONE, "phone");
+
+    public static final FlowActionSalesforceSearchLeadsParamsSearchField NAME = new FlowActionSalesforceSearchLeadsParamsSearchField(Value.NAME, "name");
 
     private final Value value;
 
@@ -29,72 +26,41 @@ public final class FlowActionSalesforceSearchLeadsParamsSearchField {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionSalesforceSearchLeadsParamsSearchField
-                        && this.string.equals(((FlowActionSalesforceSearchLeadsParamsSearchField) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case ALL:
-                return visitor.visitAll();
-            case PHONE:
-                return visitor.visitPhone();
-            case NAME:
-                return visitor.visitName();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionSalesforceSearchLeadsParamsSearchField valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "all":
-                return ALL;
-            case "phone":
-                return PHONE;
-            case "name":
-                return NAME;
-            default:
-                return new FlowActionSalesforceSearchLeadsParamsSearchField(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EMAIL,
 
-        NAME,
-
-        PHONE,
-
-        ALL,
-
-        UNKNOWN
+        EMAIL, NAME, PHONE, ALL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEmail();
 
         T visitName();

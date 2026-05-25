@@ -23,12 +23,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateSessionRequestContent.Builder.class)
 public final class UpdateSessionRequestContent {
+
     private final OptionalNullable<Map<String, Object>> sessionMetadata;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateSessionRequestContent(
-            OptionalNullable<Map<String, Object>> sessionMetadata, Map<String, Object> additionalProperties) {
+    private UpdateSessionRequestContent(OptionalNullable<Map<String, Object>> sessionMetadata, Map<String, Object> additionalProperties) {
         this.sessionMetadata = sessionMetadata;
         this.additionalProperties = additionalProperties;
     }
@@ -39,10 +39,7 @@ public final class UpdateSessionRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("session_metadata")
     public OptionalNullable<Map<String, Object>> getSessionMetadata() {
-        if (sessionMetadata == null) {
-            return OptionalNullable.absent();
-        }
-        return sessionMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -53,13 +50,12 @@ public final class UpdateSessionRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateSessionRequestContent && equalTo((UpdateSessionRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateSessionRequestContent other) {
@@ -68,30 +64,31 @@ public final class UpdateSessionRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.sessionMetadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<Map<String, Object>> sessionMetadata = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateSessionRequestContent other) {
-            sessionMetadata(other.getSessionMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,47 +96,31 @@ public final class UpdateSessionRequestContent {
          */
         @JsonSetter(value = "session_metadata", nulls = Nulls.SKIP)
         public Builder sessionMetadata(@Nullable OptionalNullable<Map<String, Object>> sessionMetadata) {
-            this.sessionMetadata = sessionMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(Map<String, Object> sessionMetadata) {
-            this.sessionMetadata = OptionalNullable.of(sessionMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(Optional<Map<String, Object>> sessionMetadata) {
-            if (sessionMetadata.isPresent()) {
-                this.sessionMetadata = OptionalNullable.of(sessionMetadata.get());
-            } else {
-                this.sessionMetadata = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(com.auth0.client.mgmt.core.Nullable<Map<String, Object>> sessionMetadata) {
-            if (sessionMetadata.isNull()) {
-                this.sessionMetadata = OptionalNullable.ofNull();
-            } else if (sessionMetadata.isEmpty()) {
-                this.sessionMetadata = OptionalNullable.absent();
-            } else {
-                this.sessionMetadata = OptionalNullable.of(sessionMetadata.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateSessionRequestContent build() {
-            return new UpdateSessionRequestContent(sessionMetadata, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

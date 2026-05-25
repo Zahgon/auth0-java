@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionTwilio.Deserializer.class)
 public final class CreateFlowsVaultConnectionTwilio {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class CreateFlowsVaultConnectionTwilio {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionTwilioApiKey) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionTwilioUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionTwilio && equalTo((CreateFlowsVaultConnectionTwilio) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionTwilio other) {
@@ -52,57 +47,38 @@ public final class CreateFlowsVaultConnectionTwilio {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionTwilio of(CreateFlowsVaultConnectionTwilioApiKey value) {
-        return new CreateFlowsVaultConnectionTwilio(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionTwilio of(CreateFlowsVaultConnectionTwilioUninitialized value) {
-        return new CreateFlowsVaultConnectionTwilio(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionTwilioApiKey value);
 
         T visit(CreateFlowsVaultConnectionTwilioUninitialized value);
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionTwilio> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionTwilio.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionTwilio deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionTwilioApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionTwilioUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionTwilio deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

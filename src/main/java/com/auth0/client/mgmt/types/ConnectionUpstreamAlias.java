@@ -20,30 +20,29 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionUpstreamAlias.Builder.class)
 public final class ConnectionUpstreamAlias {
+
     private final Optional<ConnectionUpstreamAliasEnum> alias;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionUpstreamAlias(
-            Optional<ConnectionUpstreamAliasEnum> alias, Map<String, Object> additionalProperties) {
+    private ConnectionUpstreamAlias(Optional<ConnectionUpstreamAliasEnum> alias, Map<String, Object> additionalProperties) {
         this.alias = alias;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("alias")
     public Optional<ConnectionUpstreamAliasEnum> getAlias() {
-        return alias;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionUpstreamAlias && equalTo((ConnectionUpstreamAlias) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionUpstreamAlias other) {
@@ -52,55 +51,52 @@ public final class ConnectionUpstreamAlias {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.alias);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionUpstreamAliasEnum> alias = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionUpstreamAlias other) {
-            alias(other.getAlias());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "alias", nulls = Nulls.SKIP)
         public Builder alias(Optional<ConnectionUpstreamAliasEnum> alias) {
-            this.alias = alias;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder alias(ConnectionUpstreamAliasEnum alias) {
-            this.alias = Optional.ofNullable(alias);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionUpstreamAlias build() {
-            return new ConnectionUpstreamAlias(alias, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

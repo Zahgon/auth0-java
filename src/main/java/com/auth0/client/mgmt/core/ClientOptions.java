@@ -15,6 +15,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 
 public final class ClientOptions {
+
     private final Environment environment;
 
     private final Map<String, String> headers;
@@ -27,19 +28,11 @@ public final class ClientOptions {
 
     private final int maxRetries;
 
-    private ClientOptions(
-            Environment environment,
-            Map<String, String> headers,
-            Map<String, Supplier<String>> headerSuppliers,
-            OkHttpClient httpClient,
-            int timeout,
-            int maxRetries) {
+    private ClientOptions(Environment environment, Map<String, String> headers, Map<String, Supplier<String>> headerSuppliers, OkHttpClient httpClient, int timeout, int maxRetries) {
         this.environment = environment;
         this.headers = new HashMap<>();
         this.headers.putAll(headers);
-
-        Telemetry telemetry =
-                new Telemetry("auth0-java", Telemetry.class.getPackage().getImplementationVersion());
+        Telemetry telemetry = new Telemetry("auth0-java", Telemetry.class.getPackage().getImplementationVersion());
         if (telemetry.getValue() != null) {
             this.headers.put("Auth0-Client", telemetry.getValue());
         }
@@ -50,53 +43,35 @@ public final class ClientOptions {
     }
 
     public Environment environment() {
-        return this.environment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> headers(RequestOptions requestOptions) {
-        Map<String, String> values = new HashMap<>(this.headers);
-        headerSuppliers.forEach((key, supplier) -> {
-            values.put(key, supplier.get());
-        });
-        if (requestOptions != null) {
-            values.putAll(requestOptions.getHeaders());
-        }
-        return values;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int timeout(RequestOptions requestOptions) {
-        if (requestOptions == null) {
-            return this.timeout;
-        }
-        return requestOptions.getTimeout().orElse(this.timeout);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public OkHttpClient httpClient() {
-        return this.httpClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public OkHttpClient httpClientWithTimeout(RequestOptions requestOptions) {
-        if (requestOptions == null) {
-            return this.httpClient;
-        }
-        return this.httpClient
-                .newBuilder()
-                .callTimeout(requestOptions.getTimeout().get(), requestOptions.getTimeoutTimeUnit())
-                .connectTimeout(0, TimeUnit.SECONDS)
-                .writeTimeout(0, TimeUnit.SECONDS)
-                .readTimeout(0, TimeUnit.SECONDS)
-                .build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int maxRetries() {
-        return this.maxRetries;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Builder {
+
         private Environment environment;
 
         private final Map<String, String> headers = new HashMap<>();
@@ -114,109 +89,65 @@ public final class ClientOptions {
         private LogConfig logging = null;
 
         public Builder environment(Environment environment) {
-            this.environment = environment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addHeader(String key, String value) {
-            this.headers.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addHeader(String key, Supplier<String> value) {
-            this.headerSuppliers.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Override the timeout in seconds. Defaults to 60 seconds.
          */
         public Builder timeout(int timeout) {
-            this.timeout = Optional.of(timeout);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Override the timeout in seconds. Defaults to 60 seconds.
          */
         public Builder timeout(Optional<Integer> timeout) {
-            this.timeout = timeout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Override the maximum number of retries. Defaults to 2 retries.
          */
         public Builder maxRetries(int maxRetries) {
-            this.maxRetries = maxRetries;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder httpClient(OkHttpClient httpClient) {
-            this.httpClient = httpClient;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Configure logging for the SDK. Silent by default.
          */
         public Builder logging(LogConfig logging) {
-            this.logging = logging;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Add an OkHttp interceptor to the client.
          */
         public Builder addInterceptor(Interceptor interceptor) {
-            this.interceptors.add(interceptor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientOptions build() {
-            OkHttpClient.Builder httpClientBuilder =
-                    this.httpClient != null ? this.httpClient.newBuilder() : new OkHttpClient.Builder();
-
-            if (this.httpClient != null) {
-                timeout.ifPresent(timeout -> httpClientBuilder
-                        .callTimeout(timeout, TimeUnit.SECONDS)
-                        .connectTimeout(0, TimeUnit.SECONDS)
-                        .writeTimeout(0, TimeUnit.SECONDS)
-                        .readTimeout(0, TimeUnit.SECONDS));
-            } else {
-                httpClientBuilder
-                        .callTimeout(this.timeout.orElse(60), TimeUnit.SECONDS)
-                        .connectTimeout(0, TimeUnit.SECONDS)
-                        .writeTimeout(0, TimeUnit.SECONDS)
-                        .readTimeout(0, TimeUnit.SECONDS)
-                        .addInterceptor(new RetryInterceptor(this.maxRetries));
-            }
-
-            for (Interceptor interceptor : this.interceptors) {
-                httpClientBuilder.addInterceptor(interceptor);
-            }
-
-            if (this.logging != null && !this.logging.silent()) {
-                httpClientBuilder.addInterceptor(new LoggingInterceptor(
-                        new Logger(this.logging.level(), this.logging.logger(), this.logging.silent())));
-            }
-
-            this.httpClient = httpClientBuilder.build();
-            this.timeout = Optional.of(httpClient.callTimeoutMillis() / 1000);
-
-            return new ClientOptions(
-                    environment, headers, headerSuppliers, httpClient, this.timeout.get(), this.maxRetries);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Create a new Builder initialized with values from an existing ClientOptions
          */
         public static Builder from(ClientOptions clientOptions) {
-            Builder builder = new Builder();
-            builder.environment = clientOptions.environment();
-            builder.timeout = Optional.of(clientOptions.timeout(null));
-            builder.httpClient = clientOptions.httpClient();
-            return builder;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

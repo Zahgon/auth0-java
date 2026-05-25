@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncCustomDomainsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawCustomDomainsClient rawClient;
@@ -34,36 +35,35 @@ public class AsyncCustomDomainsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawCustomDomainsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public CompletableFuture<List<CustomDomain>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public CompletableFuture<List<CustomDomain>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public CompletableFuture<List<CustomDomain>> list(ListCustomDomainsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
-    public CompletableFuture<List<CustomDomain>> list(
-            ListCustomDomainsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<CustomDomain>> list(ListCustomDomainsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +81,7 @@ public class AsyncCustomDomainsClient {
      * </ul>
      */
     public CompletableFuture<CreateCustomDomainResponseContent> create(CreateCustomDomainRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,67 +98,64 @@ public class AsyncCustomDomainsClient {
      * <li>recommended - for modern usage this includes TLS 1.2 only</li>
      * </ul>
      */
-    public CompletableFuture<CreateCustomDomainResponseContent> create(
-            CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateCustomDomainResponseContent> create(CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public CompletableFuture<GetDefaultDomainResponseContent> getDefault() {
-        return this.rawClient.getDefault().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public CompletableFuture<GetDefaultDomainResponseContent> getDefault(RequestOptions requestOptions) {
-        return this.rawClient.getDefault(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
-    public CompletableFuture<UpdateDefaultDomainResponseContent> setDefault(
-            SetDefaultCustomDomainRequestContent request) {
-        return this.rawClient.setDefault(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateDefaultDomainResponseContent> setDefault(SetDefaultCustomDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
-    public CompletableFuture<UpdateDefaultDomainResponseContent> setDefault(
-            SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setDefault(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateDefaultDomainResponseContent> setDefault(SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public CompletableFuture<GetCustomDomainResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public CompletableFuture<GetCustomDomainResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -184,7 +181,7 @@ public class AsyncCustomDomainsClient {
      * </ul>
      */
     public CompletableFuture<UpdateCustomDomainResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -210,7 +207,7 @@ public class AsyncCustomDomainsClient {
      * </ul>
      */
     public CompletableFuture<UpdateCustomDomainResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -235,9 +232,8 @@ public class AsyncCustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public CompletableFuture<UpdateCustomDomainResponseContent> update(
-            String id, UpdateCustomDomainRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateCustomDomainResponseContent> update(String id, UpdateCustomDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -262,23 +258,22 @@ public class AsyncCustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public CompletableFuture<UpdateCustomDomainResponseContent> update(
-            String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateCustomDomainResponseContent> update(String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public CompletableFuture<TestCustomDomainResponseContent> test(String id) {
-        return this.rawClient.test(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public CompletableFuture<TestCustomDomainResponseContent> test(String id, RequestOptions requestOptions) {
-        return this.rawClient.test(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -289,7 +284,7 @@ public class AsyncCustomDomainsClient {
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
     public CompletableFuture<VerifyCustomDomainResponseContent> verify(String id) {
-        return this.rawClient.verify(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -300,6 +295,6 @@ public class AsyncCustomDomainsClient {
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
     public CompletableFuture<VerifyCustomDomainResponseContent> verify(String id, RequestOptions requestOptions) {
-        return this.rawClient.verify(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

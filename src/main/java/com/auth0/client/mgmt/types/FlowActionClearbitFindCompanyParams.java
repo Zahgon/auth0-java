@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionClearbitFindCompanyParams.Builder.class)
 public final class FlowActionClearbitFindCompanyParams {
+
     private final String connectionId;
 
     private final String domain;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionClearbitFindCompanyParams(
-            String connectionId, String domain, Map<String, Object> additionalProperties) {
+    private FlowActionClearbitFindCompanyParams(String connectionId, String domain, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.domain = domain;
         this.additionalProperties = additionalProperties;
@@ -34,24 +34,22 @@ public final class FlowActionClearbitFindCompanyParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain")
     public String getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionClearbitFindCompanyParams
-                && equalTo((FlowActionClearbitFindCompanyParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionClearbitFindCompanyParams other) {
@@ -60,29 +58,32 @@ public final class FlowActionClearbitFindCompanyParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.domain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         DomainStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionClearbitFindCompanyParams other);
     }
 
     public interface DomainStage {
+
         _FinalStage domain(@NotNull String domain);
     }
 
     public interface _FinalStage {
+
         FlowActionClearbitFindCompanyParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -92,6 +93,7 @@ public final class FlowActionClearbitFindCompanyParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, DomainStage, _FinalStage {
+
         private String connectionId;
 
         private String domain;
@@ -99,44 +101,39 @@ public final class FlowActionClearbitFindCompanyParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionClearbitFindCompanyParams other) {
-            connectionId(other.getConnectionId());
-            domain(other.getDomain());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public DomainStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("domain")
         public _FinalStage domain(@NotNull String domain) {
-            this.domain = Objects.requireNonNull(domain, "domain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionClearbitFindCompanyParams build() {
-            return new FlowActionClearbitFindCompanyParams(connectionId, domain, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

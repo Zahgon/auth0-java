@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionStripeGetCustomerAction {
-    public static final FlowActionStripeGetCustomerAction GET_CUSTOMER =
-            new FlowActionStripeGetCustomerAction(Value.GET_CUSTOMER, "GET_CUSTOMER");
+
+    public static final FlowActionStripeGetCustomerAction GET_CUSTOMER = new FlowActionStripeGetCustomerAction(Value.GET_CUSTOMER, "GET_CUSTOMER");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionStripeGetCustomerAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionStripeGetCustomerAction
-                        && this.string.equals(((FlowActionStripeGetCustomerAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET_CUSTOMER:
-                return visitor.visitGetCustomer();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionStripeGetCustomerAction valueOf(String value) {
-        switch (value) {
-            case "GET_CUSTOMER":
-                return GET_CUSTOMER;
-            default:
-                return new FlowActionStripeGetCustomerAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GET_CUSTOMER,
 
-        UNKNOWN
+        GET_CUSTOMER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGetCustomer();
 
         T visitUnknown(String unknownType);

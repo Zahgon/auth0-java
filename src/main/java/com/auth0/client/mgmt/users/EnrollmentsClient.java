@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.UsersEnrollment;
 import java.util.List;
 
 public class EnrollmentsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawEnrollmentsClient rawClient;
@@ -22,20 +23,20 @@ public class EnrollmentsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawEnrollmentsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the first <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication</a> enrollment that a specific user has confirmed.
      */
     public List<UsersEnrollment> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the first <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication</a> enrollment that a specific user has confirmed.
      */
     public List<UsersEnrollment> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

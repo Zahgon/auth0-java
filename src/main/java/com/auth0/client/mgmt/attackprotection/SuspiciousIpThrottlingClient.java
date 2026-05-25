@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetSuspiciousIpThrottlingSettingsResponseCont
 import com.auth0.client.mgmt.types.UpdateSuspiciousIpThrottlingSettingsResponseContent;
 
 public class SuspiciousIpThrottlingClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSuspiciousIpThrottlingClient rawClient;
@@ -23,50 +24,48 @@ public class SuspiciousIpThrottlingClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSuspiciousIpThrottlingClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Suspicious IP Throttling configuration of your tenant.
      */
     public GetSuspiciousIpThrottlingSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Suspicious IP Throttling configuration of your tenant.
      */
     public GetSuspiciousIpThrottlingSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of the Suspicious IP Throttling configuration of your tenant.
      */
     public UpdateSuspiciousIpThrottlingSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of the Suspicious IP Throttling configuration of your tenant.
      */
     public UpdateSuspiciousIpThrottlingSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of the Suspicious IP Throttling configuration of your tenant.
      */
-    public UpdateSuspiciousIpThrottlingSettingsResponseContent update(
-            UpdateSuspiciousIpThrottlingSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+    public UpdateSuspiciousIpThrottlingSettingsResponseContent update(UpdateSuspiciousIpThrottlingSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of the Suspicious IP Throttling configuration of your tenant.
      */
-    public UpdateSuspiciousIpThrottlingSettingsResponseContent update(
-            UpdateSuspiciousIpThrottlingSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateSuspiciousIpThrottlingSettingsResponseContent update(UpdateSuspiciousIpThrottlingSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

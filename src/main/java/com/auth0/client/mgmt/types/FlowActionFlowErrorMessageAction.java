@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowErrorMessageAction {
-    public static final FlowActionFlowErrorMessageAction ERROR_MESSAGE =
-            new FlowActionFlowErrorMessageAction(Value.ERROR_MESSAGE, "ERROR_MESSAGE");
+
+    public static final FlowActionFlowErrorMessageAction ERROR_MESSAGE = new FlowActionFlowErrorMessageAction(Value.ERROR_MESSAGE, "ERROR_MESSAGE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionFlowErrorMessageAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowErrorMessageAction
-                        && this.string.equals(((FlowActionFlowErrorMessageAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ERROR_MESSAGE:
-                return visitor.visitErrorMessage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowErrorMessageAction valueOf(String value) {
-        switch (value) {
-            case "ERROR_MESSAGE":
-                return ERROR_MESSAGE;
-            default:
-                return new FlowActionFlowErrorMessageAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ERROR_MESSAGE,
 
-        UNKNOWN
+        ERROR_MESSAGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitErrorMessage();
 
         T visitUnknown(String unknownType);

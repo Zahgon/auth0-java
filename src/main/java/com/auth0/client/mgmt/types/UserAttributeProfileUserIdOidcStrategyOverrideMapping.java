@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UserAttributeProfileUserIdOidcStrategyOverrideMapping {
-    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping EMAIL =
-            new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.EMAIL, "email");
 
-    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping SUB =
-            new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.SUB, "sub");
+    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping EMAIL = new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.EMAIL, "email");
 
-    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping OID =
-            new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.OID, "oid");
+    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping SUB = new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.SUB, "sub");
+
+    public static final UserAttributeProfileUserIdOidcStrategyOverrideMapping OID = new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.OID, "oid");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class UserAttributeProfileUserIdOidcStrategyOverrideMapping {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UserAttributeProfileUserIdOidcStrategyOverrideMapping
-                        && this.string.equals(((UserAttributeProfileUserIdOidcStrategyOverrideMapping) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case SUB:
-                return visitor.visitSub();
-            case OID:
-                return visitor.visitOid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UserAttributeProfileUserIdOidcStrategyOverrideMapping valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "sub":
-                return SUB;
-            case "oid":
-                return OID;
-            default:
-                return new UserAttributeProfileUserIdOidcStrategyOverrideMapping(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SUB,
 
-        OID,
-
-        EMAIL,
-
-        UNKNOWN
+        SUB, OID, EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSub();
 
         T visitOid();

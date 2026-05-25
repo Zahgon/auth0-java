@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventErrorMessageTypeEnum {
-    public static final EventStreamCloudEventErrorMessageTypeEnum ERROR =
-            new EventStreamCloudEventErrorMessageTypeEnum(Value.ERROR, "error");
+
+    public static final EventStreamCloudEventErrorMessageTypeEnum ERROR = new EventStreamCloudEventErrorMessageTypeEnum(Value.ERROR, "error");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventErrorMessageTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventErrorMessageTypeEnum
-                        && this.string.equals(((EventStreamCloudEventErrorMessageTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ERROR:
-                return visitor.visitError();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventErrorMessageTypeEnum valueOf(String value) {
-        switch (value) {
-            case "error":
-                return ERROR;
-            default:
-                return new EventStreamCloudEventErrorMessageTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ERROR,
 
-        UNKNOWN
+        ERROR, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitError();
 
         T visitUnknown(String unknownType);

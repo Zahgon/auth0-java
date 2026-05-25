@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateHookRequestContent.Builder.class)
 public final class CreateHookRequestContent {
+
     private final String name;
 
     private final String script;
@@ -33,13 +34,7 @@ public final class CreateHookRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateHookRequestContent(
-            String name,
-            String script,
-            Optional<Boolean> enabled,
-            Optional<Map<String, String>> dependencies,
-            HookTriggerIdEnum triggerId,
-            Map<String, Object> additionalProperties) {
+    private CreateHookRequestContent(String name, String script, Optional<Boolean> enabled, Optional<Map<String, String>> dependencies, HookTriggerIdEnum triggerId, Map<String, Object> additionalProperties) {
         this.name = name;
         this.script = script;
         this.enabled = enabled;
@@ -53,7 +48,7 @@ public final class CreateHookRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,7 +56,7 @@ public final class CreateHookRequestContent {
      */
     @JsonProperty("script")
     public String getScript() {
-        return script;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,12 +64,12 @@ public final class CreateHookRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dependencies")
     public Optional<Map<String, String>> getDependencies() {
-        return dependencies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,43 +77,39 @@ public final class CreateHookRequestContent {
      */
     @JsonProperty("triggerId")
     public HookTriggerIdEnum getTriggerId() {
-        return triggerId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateHookRequestContent && equalTo((CreateHookRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateHookRequestContent other) {
-        return name.equals(other.name)
-                && script.equals(other.script)
-                && enabled.equals(other.enabled)
-                && dependencies.equals(other.dependencies)
-                && triggerId.equals(other.triggerId);
+        return name.equals(other.name) && script.equals(other.script) && enabled.equals(other.enabled) && dependencies.equals(other.dependencies) && triggerId.equals(other.triggerId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.script, this.enabled, this.dependencies, this.triggerId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Name of this hook.</p>
          */
@@ -128,6 +119,7 @@ public final class CreateHookRequestContent {
     }
 
     public interface ScriptStage {
+
         /**
          * <p>Code to be executed when this hook runs.</p>
          */
@@ -135,6 +127,7 @@ public final class CreateHookRequestContent {
     }
 
     public interface TriggerIdStage {
+
         /**
          * <p>Execution stage of this rule. Can be <code>credentials-exchange</code>, <code>pre-user-registration</code>, <code>post-user-registration</code>, <code>post-change-password</code>, or <code>send-phone-message</code>.</p>
          */
@@ -142,6 +135,7 @@ public final class CreateHookRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateHookRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -162,6 +156,7 @@ public final class CreateHookRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, ScriptStage, TriggerIdStage, _FinalStage {
+
         private String name;
 
         private String script;
@@ -175,16 +170,12 @@ public final class CreateHookRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateHookRequestContent other) {
-            name(other.getName());
-            script(other.getScript());
-            enabled(other.getEnabled());
-            dependencies(other.getDependencies());
-            triggerId(other.getTriggerId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,8 +186,7 @@ public final class CreateHookRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public ScriptStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,8 +197,7 @@ public final class CreateHookRequestContent {
         @java.lang.Override
         @JsonSetter("script")
         public TriggerIdStage script(@NotNull String script) {
-            this.script = Objects.requireNonNull(script, "script must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -219,21 +208,18 @@ public final class CreateHookRequestContent {
         @java.lang.Override
         @JsonSetter("triggerId")
         public _FinalStage triggerId(@NotNull HookTriggerIdEnum triggerId) {
-            this.triggerId = Objects.requireNonNull(triggerId, "triggerId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage dependencies(Map<String, String> dependencies) {
-            this.dependencies = Optional.ofNullable(dependencies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "dependencies", nulls = Nulls.SKIP)
         public _FinalStage dependencies(Optional<Map<String, String>> dependencies) {
-            this.dependencies = dependencies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -242,8 +228,7 @@ public final class CreateHookRequestContent {
          */
         @java.lang.Override
         public _FinalStage enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -252,25 +237,22 @@ public final class CreateHookRequestContent {
         @java.lang.Override
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public _FinalStage enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateHookRequestContent build() {
-            return new CreateHookRequestContent(name, script, enabled, dependencies, triggerId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -13,6 +13,7 @@ import okhttp3.Response;
  * This exception type will be thrown for any non-2XX API responses.
  */
 public class ManagementApiException extends ManagementException {
+
     /**
      * The error code of the response that triggered the exception.
      */
@@ -48,26 +49,25 @@ public class ManagementApiException extends ManagementException {
      * @return the statusCode
      */
     public int statusCode() {
-        return this.statusCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return the body
      */
     public Object body() {
-        return this.body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return the headers
      */
     public Map<String, List<String>> headers() {
-        return this.headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return "ManagementApiException{" + "message: " + getMessage() + ", statusCode: " + statusCode + ", body: "
-                + ObjectMappers.stringify(body) + "}";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

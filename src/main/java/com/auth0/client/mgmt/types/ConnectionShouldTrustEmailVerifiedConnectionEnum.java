@@ -7,13 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionShouldTrustEmailVerifiedConnectionEnum {
-    public static final ConnectionShouldTrustEmailVerifiedConnectionEnum NEVER_SET_EMAILS_AS_VERIFIED =
-            new ConnectionShouldTrustEmailVerifiedConnectionEnum(
-                    Value.NEVER_SET_EMAILS_AS_VERIFIED, "never_set_emails_as_verified");
 
-    public static final ConnectionShouldTrustEmailVerifiedConnectionEnum ALWAYS_SET_EMAILS_AS_VERIFIED =
-            new ConnectionShouldTrustEmailVerifiedConnectionEnum(
-                    Value.ALWAYS_SET_EMAILS_AS_VERIFIED, "always_set_emails_as_verified");
+    public static final ConnectionShouldTrustEmailVerifiedConnectionEnum NEVER_SET_EMAILS_AS_VERIFIED = new ConnectionShouldTrustEmailVerifiedConnectionEnum(Value.NEVER_SET_EMAILS_AS_VERIFIED, "never_set_emails_as_verified");
+
+    public static final ConnectionShouldTrustEmailVerifiedConnectionEnum ALWAYS_SET_EMAILS_AS_VERIFIED = new ConnectionShouldTrustEmailVerifiedConnectionEnum(Value.ALWAYS_SET_EMAILS_AS_VERIFIED, "always_set_emails_as_verified");
 
     private final Value value;
 
@@ -25,60 +22,41 @@ public final class ConnectionShouldTrustEmailVerifiedConnectionEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionShouldTrustEmailVerifiedConnectionEnum
-                        && this.string.equals(((ConnectionShouldTrustEmailVerifiedConnectionEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NEVER_SET_EMAILS_AS_VERIFIED:
-                return visitor.visitNeverSetEmailsAsVerified();
-            case ALWAYS_SET_EMAILS_AS_VERIFIED:
-                return visitor.visitAlwaysSetEmailsAsVerified();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionShouldTrustEmailVerifiedConnectionEnum valueOf(String value) {
-        switch (value) {
-            case "never_set_emails_as_verified":
-                return NEVER_SET_EMAILS_AS_VERIFIED;
-            case "always_set_emails_as_verified":
-                return ALWAYS_SET_EMAILS_AS_VERIFIED;
-            default:
-                return new ConnectionShouldTrustEmailVerifiedConnectionEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NEVER_SET_EMAILS_AS_VERIFIED,
 
-        ALWAYS_SET_EMAILS_AS_VERIFIED,
-
-        UNKNOWN
+        NEVER_SET_EMAILS_AS_VERIFIED, ALWAYS_SET_EMAILS_AS_VERIFIED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNeverSetEmailsAsVerified();
 
         T visitAlwaysSetEmailsAsVerified();

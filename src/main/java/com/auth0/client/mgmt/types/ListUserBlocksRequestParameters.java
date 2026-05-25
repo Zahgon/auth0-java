@@ -22,12 +22,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUserBlocksRequestParameters.Builder.class)
 public final class ListUserBlocksRequestParameters {
+
     private final OptionalNullable<Boolean> considerBruteForceEnablement;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUserBlocksRequestParameters(
-            OptionalNullable<Boolean> considerBruteForceEnablement, Map<String, Object> additionalProperties) {
+    private ListUserBlocksRequestParameters(OptionalNullable<Boolean> considerBruteForceEnablement, Map<String, Object> additionalProperties) {
         this.considerBruteForceEnablement = considerBruteForceEnablement;
         this.additionalProperties = additionalProperties;
     }
@@ -38,21 +38,17 @@ public final class ListUserBlocksRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getConsiderBruteForceEnablement() {
-        if (considerBruteForceEnablement == null) {
-            return OptionalNullable.absent();
-        }
-        return considerBruteForceEnablement;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUserBlocksRequestParameters && equalTo((ListUserBlocksRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUserBlocksRequestParameters other) {
@@ -61,30 +57,31 @@ public final class ListUserBlocksRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.considerBruteForceEnablement);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<Boolean> considerBruteForceEnablement = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListUserBlocksRequestParameters other) {
-            considerBruteForceEnablement(other.getConsiderBruteForceEnablement());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -93,48 +90,31 @@ public final class ListUserBlocksRequestParameters {
          */
         @JsonSetter(value = "consider_brute_force_enablement", nulls = Nulls.SKIP)
         public Builder considerBruteForceEnablement(@Nullable OptionalNullable<Boolean> considerBruteForceEnablement) {
-            this.considerBruteForceEnablement = considerBruteForceEnablement;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder considerBruteForceEnablement(Boolean considerBruteForceEnablement) {
-            this.considerBruteForceEnablement = OptionalNullable.of(considerBruteForceEnablement);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder considerBruteForceEnablement(Optional<Boolean> considerBruteForceEnablement) {
-            if (considerBruteForceEnablement.isPresent()) {
-                this.considerBruteForceEnablement = OptionalNullable.of(considerBruteForceEnablement.get());
-            } else {
-                this.considerBruteForceEnablement = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder considerBruteForceEnablement(
-                com.auth0.client.mgmt.core.Nullable<Boolean> considerBruteForceEnablement) {
-            if (considerBruteForceEnablement.isNull()) {
-                this.considerBruteForceEnablement = OptionalNullable.ofNull();
-            } else if (considerBruteForceEnablement.isEmpty()) {
-                this.considerBruteForceEnablement = OptionalNullable.absent();
-            } else {
-                this.considerBruteForceEnablement = OptionalNullable.of(considerBruteForceEnablement.get());
-            }
-            return this;
+        public Builder considerBruteForceEnablement(com.auth0.client.mgmt.core.Nullable<Boolean> considerBruteForceEnablement) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListUserBlocksRequestParameters build() {
-            return new ListUserBlocksRequestParameters(considerBruteForceEnablement, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

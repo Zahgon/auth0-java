@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class TooManyRequestsSchemaError {
-    public static final TooManyRequestsSchemaError TOO_MANY_REQUESTS =
-            new TooManyRequestsSchemaError(Value.TOO_MANY_REQUESTS, "Too Many Requests");
+
+    public static final TooManyRequestsSchemaError TOO_MANY_REQUESTS = new TooManyRequestsSchemaError(Value.TOO_MANY_REQUESTS, "Too Many Requests");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class TooManyRequestsSchemaError {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof TooManyRequestsSchemaError
-                        && this.string.equals(((TooManyRequestsSchemaError) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TOO_MANY_REQUESTS:
-                return visitor.visitTooManyRequests();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static TooManyRequestsSchemaError valueOf(String value) {
-        switch (value) {
-            case "Too Many Requests":
-                return TOO_MANY_REQUESTS;
-            default:
-                return new TooManyRequestsSchemaError(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TOO_MANY_REQUESTS,
 
-        UNKNOWN
+        TOO_MANY_REQUESTS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTooManyRequests();
 
         T visitUnknown(String unknownType);

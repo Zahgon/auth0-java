@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonAzureSb.Builder.class)
 public final class ClientAddonAzureSb {
+
     private final Optional<String> namespace;
 
     private final Optional<String> sasKeyName;
@@ -32,13 +33,7 @@ public final class ClientAddonAzureSb {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonAzureSb(
-            Optional<String> namespace,
-            Optional<String> sasKeyName,
-            Optional<String> sasKey,
-            Optional<String> entityPath,
-            Optional<Integer> expiration,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonAzureSb(Optional<String> namespace, Optional<String> sasKeyName, Optional<String> sasKey, Optional<String> entityPath, Optional<Integer> expiration, Map<String, Object> additionalProperties) {
         this.namespace = namespace;
         this.sasKeyName = sasKeyName;
         this.sasKey = sasKey;
@@ -52,7 +47,7 @@ public final class ClientAddonAzureSb {
      */
     @JsonProperty("namespace")
     public Optional<String> getNamespace() {
-        return namespace;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +55,7 @@ public final class ClientAddonAzureSb {
      */
     @JsonProperty("sasKeyName")
     public Optional<String> getSasKeyName() {
-        return sasKeyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +63,7 @@ public final class ClientAddonAzureSb {
      */
     @JsonProperty("sasKey")
     public Optional<String> getSasKey() {
-        return sasKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +71,7 @@ public final class ClientAddonAzureSb {
      */
     @JsonProperty("entityPath")
     public Optional<String> getEntityPath() {
-        return entityPath;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,44 +79,40 @@ public final class ClientAddonAzureSb {
      */
     @JsonProperty("expiration")
     public Optional<Integer> getExpiration() {
-        return expiration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonAzureSb && equalTo((ClientAddonAzureSb) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonAzureSb other) {
-        return namespace.equals(other.namespace)
-                && sasKeyName.equals(other.sasKeyName)
-                && sasKey.equals(other.sasKey)
-                && entityPath.equals(other.entityPath)
-                && expiration.equals(other.expiration);
+        return namespace.equals(other.namespace) && sasKeyName.equals(other.sasKeyName) && sasKey.equals(other.sasKey) && entityPath.equals(other.entityPath) && expiration.equals(other.expiration);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.namespace, this.sasKeyName, this.sasKey, this.entityPath, this.expiration);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> namespace = Optional.empty();
 
         private Optional<String> sasKeyName = Optional.empty();
@@ -135,15 +126,11 @@ public final class ClientAddonAzureSb {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonAzureSb other) {
-            namespace(other.getNamespace());
-            sasKeyName(other.getSasKeyName());
-            sasKey(other.getSasKey());
-            entityPath(other.getEntityPath());
-            expiration(other.getExpiration());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,13 +138,11 @@ public final class ClientAddonAzureSb {
          */
         @JsonSetter(value = "namespace", nulls = Nulls.SKIP)
         public Builder namespace(Optional<String> namespace) {
-            this.namespace = namespace;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Optional.ofNullable(namespace);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +150,11 @@ public final class ClientAddonAzureSb {
          */
         @JsonSetter(value = "sasKeyName", nulls = Nulls.SKIP)
         public Builder sasKeyName(Optional<String> sasKeyName) {
-            this.sasKeyName = sasKeyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sasKeyName(String sasKeyName) {
-            this.sasKeyName = Optional.ofNullable(sasKeyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,13 +162,11 @@ public final class ClientAddonAzureSb {
          */
         @JsonSetter(value = "sasKey", nulls = Nulls.SKIP)
         public Builder sasKey(Optional<String> sasKey) {
-            this.sasKey = sasKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sasKey(String sasKey) {
-            this.sasKey = Optional.ofNullable(sasKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -193,13 +174,11 @@ public final class ClientAddonAzureSb {
          */
         @JsonSetter(value = "entityPath", nulls = Nulls.SKIP)
         public Builder entityPath(Optional<String> entityPath) {
-            this.entityPath = entityPath;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder entityPath(String entityPath) {
-            this.entityPath = Optional.ofNullable(entityPath);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,27 +186,23 @@ public final class ClientAddonAzureSb {
          */
         @JsonSetter(value = "expiration", nulls = Nulls.SKIP)
         public Builder expiration(Optional<Integer> expiration) {
-            this.expiration = expiration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiration(Integer expiration) {
-            this.expiration = Optional.ofNullable(expiration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonAzureSb build() {
-            return new ClientAddonAzureSb(namespace, sasKeyName, sasKey, entityPath, expiration, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

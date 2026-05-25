@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateBrandingPhoneProviderRequestContent.Builder.class)
 public final class CreateBrandingPhoneProviderRequestContent {
+
     private final PhoneProviderNameEnum name;
 
     private final Optional<Boolean> disabled;
@@ -34,12 +35,7 @@ public final class CreateBrandingPhoneProviderRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateBrandingPhoneProviderRequestContent(
-            PhoneProviderNameEnum name,
-            Optional<Boolean> disabled,
-            Optional<PhoneProviderConfiguration> configuration,
-            PhoneProviderCredentials credentials,
-            Map<String, Object> additionalProperties) {
+    private CreateBrandingPhoneProviderRequestContent(PhoneProviderNameEnum name, Optional<Boolean> disabled, Optional<PhoneProviderConfiguration> configuration, PhoneProviderCredentials credentials, Map<String, Object> additionalProperties) {
         this.name = name;
         this.disabled = disabled;
         this.configuration = configuration;
@@ -49,7 +45,7 @@ public final class CreateBrandingPhoneProviderRequestContent {
 
     @JsonProperty("name")
     public PhoneProviderNameEnum getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,63 +53,61 @@ public final class CreateBrandingPhoneProviderRequestContent {
      */
     @JsonProperty("disabled")
     public Optional<Boolean> getDisabled() {
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("configuration")
     public Optional<PhoneProviderConfiguration> getConfiguration() {
-        return configuration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("credentials")
     public PhoneProviderCredentials getCredentials() {
-        return credentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateBrandingPhoneProviderRequestContent
-                && equalTo((CreateBrandingPhoneProviderRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateBrandingPhoneProviderRequestContent other) {
-        return name.equals(other.name)
-                && disabled.equals(other.disabled)
-                && configuration.equals(other.configuration)
-                && credentials.equals(other.credentials);
+        return name.equals(other.name) && disabled.equals(other.disabled) && configuration.equals(other.configuration) && credentials.equals(other.credentials);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.disabled, this.configuration, this.credentials);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         CredentialsStage name(@NotNull PhoneProviderNameEnum name);
 
         Builder from(CreateBrandingPhoneProviderRequestContent other);
     }
 
     public interface CredentialsStage {
+
         _FinalStage credentials(@NotNull PhoneProviderCredentials credentials);
     }
 
     public interface _FinalStage {
+
         CreateBrandingPhoneProviderRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -134,6 +128,7 @@ public final class CreateBrandingPhoneProviderRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, CredentialsStage, _FinalStage {
+
         private PhoneProviderNameEnum name;
 
         private PhoneProviderCredentials credentials;
@@ -145,42 +140,35 @@ public final class CreateBrandingPhoneProviderRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateBrandingPhoneProviderRequestContent other) {
-            name(other.getName());
-            disabled(other.getDisabled());
-            configuration(other.getConfiguration());
-            credentials(other.getCredentials());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public CredentialsStage name(@NotNull PhoneProviderNameEnum name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("credentials")
         public _FinalStage credentials(@NotNull PhoneProviderCredentials credentials) {
-            this.credentials = Objects.requireNonNull(credentials, "credentials must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage configuration(PhoneProviderConfiguration configuration) {
-            this.configuration = Optional.ofNullable(configuration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "configuration", nulls = Nulls.SKIP)
         public _FinalStage configuration(Optional<PhoneProviderConfiguration> configuration) {
-            this.configuration = configuration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -189,8 +177,7 @@ public final class CreateBrandingPhoneProviderRequestContent {
          */
         @java.lang.Override
         public _FinalStage disabled(Boolean disabled) {
-            this.disabled = Optional.ofNullable(disabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -199,26 +186,22 @@ public final class CreateBrandingPhoneProviderRequestContent {
         @java.lang.Override
         @JsonSetter(value = "disabled", nulls = Nulls.SKIP)
         public _FinalStage disabled(Optional<Boolean> disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateBrandingPhoneProviderRequestContent build() {
-            return new CreateBrandingPhoneProviderRequestContent(
-                    name, disabled, configuration, credentials, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

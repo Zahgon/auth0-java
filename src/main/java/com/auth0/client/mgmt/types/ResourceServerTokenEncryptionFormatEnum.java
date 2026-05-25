@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerTokenEncryptionFormatEnum {
-    public static final ResourceServerTokenEncryptionFormatEnum COMPACT_NESTED_JWE =
-            new ResourceServerTokenEncryptionFormatEnum(Value.COMPACT_NESTED_JWE, "compact-nested-jwe");
+
+    public static final ResourceServerTokenEncryptionFormatEnum COMPACT_NESTED_JWE = new ResourceServerTokenEncryptionFormatEnum(Value.COMPACT_NESTED_JWE, "compact-nested-jwe");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ResourceServerTokenEncryptionFormatEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerTokenEncryptionFormatEnum
-                        && this.string.equals(((ResourceServerTokenEncryptionFormatEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case COMPACT_NESTED_JWE:
-                return visitor.visitCompactNestedJwe();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerTokenEncryptionFormatEnum valueOf(String value) {
-        switch (value) {
-            case "compact-nested-jwe":
-                return COMPACT_NESTED_JWE;
-            default:
-                return new ResourceServerTokenEncryptionFormatEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        COMPACT_NESTED_JWE,
 
-        UNKNOWN
+        COMPACT_NESTED_JWE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCompactNestedJwe();
 
         T visitUnknown(String unknownType);

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormComponentCategoryWidgetConst {
-    public static final FormComponentCategoryWidgetConst WIDGET =
-            new FormComponentCategoryWidgetConst(Value.WIDGET, "WIDGET");
+
+    public static final FormComponentCategoryWidgetConst WIDGET = new FormComponentCategoryWidgetConst(Value.WIDGET, "WIDGET");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormComponentCategoryWidgetConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormComponentCategoryWidgetConst
-                        && this.string.equals(((FormComponentCategoryWidgetConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WIDGET:
-                return visitor.visitWidget();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormComponentCategoryWidgetConst valueOf(String value) {
-        switch (value) {
-            case "WIDGET":
-                return WIDGET;
-            default:
-                return new FormComponentCategoryWidgetConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WIDGET,
 
-        UNKNOWN
+        WIDGET, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWidget();
 
         T visitUnknown(String unknownType);

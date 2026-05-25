@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordComplexityOptions.Builder.class)
 public final class ConnectionPasswordComplexityOptions {
+
     private final Optional<Integer> minLength;
 
     private final Map<String, Object> additionalProperties;
@@ -34,19 +35,17 @@ public final class ConnectionPasswordComplexityOptions {
      */
     @JsonProperty("min_length")
     public Optional<Integer> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordComplexityOptions
-                && equalTo((ConnectionPasswordComplexityOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordComplexityOptions other) {
@@ -55,30 +54,31 @@ public final class ConnectionPasswordComplexityOptions {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.minLength);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> minLength = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordComplexityOptions other) {
-            minLength(other.getMinLength());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -86,27 +86,23 @@ public final class ConnectionPasswordComplexityOptions {
          */
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Integer> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Integer minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordComplexityOptions build() {
-            return new ConnectionPasswordComplexityOptions(minLength, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

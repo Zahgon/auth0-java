@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionWhatsappSendMessageAction {
-    public static final FlowActionWhatsappSendMessageAction SEND_MESSAGE =
-            new FlowActionWhatsappSendMessageAction(Value.SEND_MESSAGE, "SEND_MESSAGE");
+
+    public static final FlowActionWhatsappSendMessageAction SEND_MESSAGE = new FlowActionWhatsappSendMessageAction(Value.SEND_MESSAGE, "SEND_MESSAGE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionWhatsappSendMessageAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionWhatsappSendMessageAction
-                        && this.string.equals(((FlowActionWhatsappSendMessageAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEND_MESSAGE:
-                return visitor.visitSendMessage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionWhatsappSendMessageAction valueOf(String value) {
-        switch (value) {
-            case "SEND_MESSAGE":
-                return SEND_MESSAGE;
-            default:
-                return new FlowActionWhatsappSendMessageAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEND_MESSAGE,
 
-        UNKNOWN
+        SEND_MESSAGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendMessage();
 
         T visitUnknown(String unknownType);

@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreatedAuthenticationMethodTypeEnum {
-    public static final CreatedAuthenticationMethodTypeEnum EMAIL =
-            new CreatedAuthenticationMethodTypeEnum(Value.EMAIL, "email");
 
-    public static final CreatedAuthenticationMethodTypeEnum TOTP =
-            new CreatedAuthenticationMethodTypeEnum(Value.TOTP, "totp");
+    public static final CreatedAuthenticationMethodTypeEnum EMAIL = new CreatedAuthenticationMethodTypeEnum(Value.EMAIL, "email");
 
-    public static final CreatedAuthenticationMethodTypeEnum WEBAUTHN_ROAMING =
-            new CreatedAuthenticationMethodTypeEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
+    public static final CreatedAuthenticationMethodTypeEnum TOTP = new CreatedAuthenticationMethodTypeEnum(Value.TOTP, "totp");
 
-    public static final CreatedAuthenticationMethodTypeEnum PHONE =
-            new CreatedAuthenticationMethodTypeEnum(Value.PHONE, "phone");
+    public static final CreatedAuthenticationMethodTypeEnum WEBAUTHN_ROAMING = new CreatedAuthenticationMethodTypeEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
+
+    public static final CreatedAuthenticationMethodTypeEnum PHONE = new CreatedAuthenticationMethodTypeEnum(Value.PHONE, "phone");
 
     private final Value value;
 
@@ -29,72 +26,41 @@ public final class CreatedAuthenticationMethodTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreatedAuthenticationMethodTypeEnum
-                        && this.string.equals(((CreatedAuthenticationMethodTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case TOTP:
-                return visitor.visitTotp();
-            case WEBAUTHN_ROAMING:
-                return visitor.visitWebauthnRoaming();
-            case PHONE:
-                return visitor.visitPhone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreatedAuthenticationMethodTypeEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "totp":
-                return TOTP;
-            case "webauthn-roaming":
-                return WEBAUTHN_ROAMING;
-            case "phone":
-                return PHONE;
-            default:
-                return new CreatedAuthenticationMethodTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PHONE,
 
-        EMAIL,
-
-        TOTP,
-
-        WEBAUTHN_ROAMING,
-
-        UNKNOWN
+        PHONE, EMAIL, TOTP, WEBAUTHN_ROAMING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPhone();
 
         T visitEmail();

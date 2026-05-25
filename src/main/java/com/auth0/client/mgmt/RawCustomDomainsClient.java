@@ -42,6 +42,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawCustomDomainsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawCustomDomainsClient(ClientOptions clientOptions) {
@@ -52,91 +53,28 @@ public class RawCustomDomainsClient {
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public ManagementApiHttpResponse<List<CustomDomain>> list() {
-        return list(ListCustomDomainsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public ManagementApiHttpResponse<List<CustomDomain>> list(RequestOptions requestOptions) {
-        return list(ListCustomDomainsRequestParameters.builder().build(), requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
     public ManagementApiHttpResponse<List<CustomDomain>> list(ListCustomDomainsRequestParameters request) {
-        return list(request, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details on <a href="https://auth0.com/docs/custom-domains">custom domains</a>.
      */
-    public ManagementApiHttpResponse<List<CustomDomain>> list(
-            ListCustomDomainsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains");
-        if (!request.getQ().isAbsent()) {
-            QueryStringMapper.addQueryParameter(httpUrl, "q", request.getQ().orElse(null), false);
-        }
-        if (!request.getFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "fields", request.getFields().orElse(null), false);
-        }
-        if (!request.getIncludeFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "include_fields", request.getIncludeFields().orElse(null), false);
-        }
-        if (!request.getSort().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "sort", request.getSort().orElse(null), false);
-        }
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<List<CustomDomain>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<List<CustomDomain>> list(ListCustomDomainsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,9 +91,8 @@ public class RawCustomDomainsClient {
      * <li>recommended - for modern usage this includes TLS 1.2 only</li>
      * </ul>
      */
-    public ManagementApiHttpResponse<CreateCustomDomainResponseContent> create(
-            CreateCustomDomainRequestContent request) {
-        return create(request, null);
+    public ManagementApiHttpResponse<CreateCustomDomainResponseContent> create(CreateCustomDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,327 +109,64 @@ public class RawCustomDomainsClient {
      * <li>recommended - for modern usage this includes TLS 1.2 only</li>
      * </ul>
      */
-    public ManagementApiHttpResponse<CreateCustomDomainResponseContent> create(
-            CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, CreateCustomDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 409:
-                        throw new ConflictError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<CreateCustomDomainResponseContent> create(CreateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public ManagementApiHttpResponse<GetDefaultDomainResponseContent> getDefault() {
-        return getDefault(null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the tenant's default domain.
      */
     public ManagementApiHttpResponse<GetDefaultDomainResponseContent> getDefault(RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains/default");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, GetDefaultDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
-    public ManagementApiHttpResponse<UpdateDefaultDomainResponseContent> setDefault(
-            SetDefaultCustomDomainRequestContent request) {
-        return setDefault(request, null);
+    public ManagementApiHttpResponse<UpdateDefaultDomainResponseContent> setDefault(SetDefaultCustomDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the default custom domain for the tenant.
      */
-    public ManagementApiHttpResponse<UpdateDefaultDomainResponseContent> setDefault(
-            SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains/default");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, UpdateDefaultDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<UpdateDefaultDomainResponseContent> setDefault(SetDefaultCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public ManagementApiHttpResponse<GetCustomDomainResponseContent> get(String id) {
-        return get(id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a custom domain configuration and status.
      */
     public ManagementApiHttpResponse<GetCustomDomainResponseContent> get(String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains")
-                .addPathSegment(id);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, GetCustomDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public ManagementApiHttpResponse<Void> delete(String id) {
-        return delete(id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a custom domain and stop serving requests for it.
      */
     public ManagementApiHttpResponse<Void> delete(String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains")
-                .addPathSegment(id);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("DELETE", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(null, response);
-            }
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -518,7 +192,7 @@ public class RawCustomDomainsClient {
      * </ul>
      */
     public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(String id) {
-        return update(id, UpdateCustomDomainRequestContent.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -543,9 +217,8 @@ public class RawCustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(
-            String id, RequestOptions requestOptions) {
-        return update(id, UpdateCustomDomainRequestContent.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -570,9 +243,8 @@ public class RawCustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(
-            String id, UpdateCustomDomainRequestContent request) {
-        return update(id, request, null);
+    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(String id, UpdateCustomDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -597,136 +269,22 @@ public class RawCustomDomainsClient {
      * <li>The <code>compatible</code> TLS policy is no longer supported.</li>
      * </ul>
      */
-    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(
-            String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains")
-                .addPathSegment(id);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, UpdateCustomDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<UpdateCustomDomainResponseContent> update(String id, UpdateCustomDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public ManagementApiHttpResponse<TestCustomDomainResponseContent> test(String id) {
-        return test(id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Run the test process on a custom domain.
      */
     public ManagementApiHttpResponse<TestCustomDomainResponseContent> test(String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains")
-                .addPathSegment(id)
-                .addPathSegments("test");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", RequestBody.create("", null))
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, TestCustomDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 409:
-                        throw new ConflictError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -737,7 +295,7 @@ public class RawCustomDomainsClient {
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
     public ManagementApiHttpResponse<VerifyCustomDomainResponseContent> verify(String id) {
-        return verify(id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -747,63 +305,7 @@ public class RawCustomDomainsClient {
      * <p><a href="https://auth0.com/docs/custom-domains#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Auth0 Managed certificates.
      * <a href="https://auth0.com/docs/custom-domains/self-managed-certificates#step-2-verify-ownership">Learn more</a> about verifying custom domains that use Self Managed certificates.</p>
      */
-    public ManagementApiHttpResponse<VerifyCustomDomainResponseContent> verify(
-            String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("custom-domains")
-                .addPathSegment(id)
-                .addPathSegments("verify");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", RequestBody.create("", null))
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, VerifyCustomDomainResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<VerifyCustomDomainResponseContent> verify(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

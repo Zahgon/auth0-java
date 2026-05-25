@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockDividerConfig.Builder.class)
 public final class FormBlockDividerConfig {
+
     private final Optional<String> text;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class FormBlockDividerConfig {
 
     @JsonProperty("text")
     public Optional<String> getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockDividerConfig && equalTo((FormBlockDividerConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockDividerConfig other) {
@@ -51,55 +51,52 @@ public final class FormBlockDividerConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.text);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> text = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormBlockDividerConfig other) {
-            text(other.getText());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "text", nulls = Nulls.SKIP)
         public Builder text(Optional<String> text) {
-            this.text = text;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder text(String text) {
-            this.text = Optional.ofNullable(text);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormBlockDividerConfig build() {
-            return new FormBlockDividerConfig(text, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

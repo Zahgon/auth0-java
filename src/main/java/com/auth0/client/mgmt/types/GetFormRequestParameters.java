@@ -23,12 +23,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetFormRequestParameters.Builder.class)
 public final class GetFormRequestParameters {
+
     private final Optional<List<FormsRequestParametersHydrateEnum>> hydrate;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetFormRequestParameters(
-            Optional<List<FormsRequestParametersHydrateEnum>> hydrate, Map<String, Object> additionalProperties) {
+    private GetFormRequestParameters(Optional<List<FormsRequestParametersHydrateEnum>> hydrate, Map<String, Object> additionalProperties) {
         this.hydrate = hydrate;
         this.additionalProperties = additionalProperties;
     }
@@ -38,21 +38,17 @@ public final class GetFormRequestParameters {
      */
     @JsonIgnore
     public Optional<List<FormsRequestParametersHydrateEnum>> getHydrate() {
-        if (hydrate == null) {
-            return Optional.empty();
-        }
-        return hydrate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetFormRequestParameters && equalTo((GetFormRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetFormRequestParameters other) {
@@ -61,30 +57,31 @@ public final class GetFormRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.hydrate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<FormsRequestParametersHydrateEnum>> hydrate = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetFormRequestParameters other) {
-            hydrate(other.getHydrate());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -92,43 +89,31 @@ public final class GetFormRequestParameters {
          */
         @JsonSetter(value = "hydrate", nulls = Nulls.SKIP)
         public Builder hydrate(@Nullable Optional<List<FormsRequestParametersHydrateEnum>> hydrate) {
-            this.hydrate = hydrate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hydrate(List<FormsRequestParametersHydrateEnum> hydrate) {
-            this.hydrate = Optional.ofNullable(hydrate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hydrate(com.auth0.client.mgmt.core.Nullable<List<FormsRequestParametersHydrateEnum>> hydrate) {
-            if (hydrate.isNull()) {
-                this.hydrate = null;
-            } else if (hydrate.isEmpty()) {
-                this.hydrate = Optional.empty();
-            } else {
-                this.hydrate = Optional.of(hydrate.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hydrate(FormsRequestParametersHydrateEnum hydrate) {
-            this.hydrate = Optional.of(Collections.singletonList(hydrate));
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetFormRequestParameters build() {
-            return new GetFormRequestParameters(hydrate, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

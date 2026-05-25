@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentVkontakteStrategy {
-    public static final CreateConnectionRequestContentVkontakteStrategy VKONTAKTE =
-            new CreateConnectionRequestContentVkontakteStrategy(Value.VKONTAKTE, "vkontakte");
+
+    public static final CreateConnectionRequestContentVkontakteStrategy VKONTAKTE = new CreateConnectionRequestContentVkontakteStrategy(Value.VKONTAKTE, "vkontakte");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentVkontakteStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentVkontakteStrategy
-                        && this.string.equals(((CreateConnectionRequestContentVkontakteStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VKONTAKTE:
-                return visitor.visitVkontakte();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentVkontakteStrategy valueOf(String value) {
-        switch (value) {
-            case "vkontakte":
-                return VKONTAKTE;
-            default:
-                return new CreateConnectionRequestContentVkontakteStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        VKONTAKTE,
 
-        UNKNOWN
+        VKONTAKTE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitVkontakte();
 
         T visitUnknown(String unknownType);

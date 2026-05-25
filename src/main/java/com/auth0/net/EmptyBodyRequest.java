@@ -15,24 +15,18 @@ import com.fasterxml.jackson.core.type.TypeReference;
  */
 public class EmptyBodyRequest<T> extends BaseRequest<T> {
 
-    public EmptyBodyRequest(
-            Auth0HttpClient client,
-            TokenProvider tokenProvider,
-            String url,
-            HttpMethod method,
-            TypeReference<T> tType) {
+    public EmptyBodyRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method, TypeReference<T> tType) {
         super(client, tokenProvider, url, method, tType);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     protected HttpRequestBody createRequestBody() {
-        return HttpRequestBody.create("application/json", new byte[0]);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public EmptyBodyRequest<T> addParameter(String name, Object value) {
-        // do nothing
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

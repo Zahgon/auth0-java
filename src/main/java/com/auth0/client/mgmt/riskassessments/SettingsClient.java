@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.UpdateRiskAssessmentsSettingsResponseContent;
 import java.util.function.Supplier;
 
 public class SettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSettingsClient rawClient;
@@ -29,39 +30,38 @@ public class SettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the tenant settings for risk assessments
      */
     public GetRiskAssessmentsSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the tenant settings for risk assessments
      */
     public GetRiskAssessmentsSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the tenant settings for risk assessments
      */
     public UpdateRiskAssessmentsSettingsResponseContent update(UpdateRiskAssessmentsSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the tenant settings for risk assessments
      */
-    public UpdateRiskAssessmentsSettingsResponseContent update(
-            UpdateRiskAssessmentsSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateRiskAssessmentsSettingsResponseContent update(UpdateRiskAssessmentsSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public NewDeviceClient newDevice() {
-        return this.newDeviceClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CertificateSubjectDnCredentialTypeEnum {
-    public static final CertificateSubjectDnCredentialTypeEnum CERT_SUBJECT_DN =
-            new CertificateSubjectDnCredentialTypeEnum(Value.CERT_SUBJECT_DN, "cert_subject_dn");
+
+    public static final CertificateSubjectDnCredentialTypeEnum CERT_SUBJECT_DN = new CertificateSubjectDnCredentialTypeEnum(Value.CERT_SUBJECT_DN, "cert_subject_dn");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CertificateSubjectDnCredentialTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CertificateSubjectDnCredentialTypeEnum
-                        && this.string.equals(((CertificateSubjectDnCredentialTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CERT_SUBJECT_DN:
-                return visitor.visitCertSubjectDn();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CertificateSubjectDnCredentialTypeEnum valueOf(String value) {
-        switch (value) {
-            case "cert_subject_dn":
-                return CERT_SUBJECT_DN;
-            default:
-                return new CertificateSubjectDnCredentialTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CERT_SUBJECT_DN,
 
-        UNKNOWN
+        CERT_SUBJECT_DN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCertSubjectDn();
 
         T visitUnknown(String unknownType);

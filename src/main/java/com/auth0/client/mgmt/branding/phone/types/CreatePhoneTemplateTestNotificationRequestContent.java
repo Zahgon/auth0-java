@@ -22,16 +22,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreatePhoneTemplateTestNotificationRequestContent.Builder.class)
 public final class CreatePhoneTemplateTestNotificationRequestContent {
+
     private final String to;
 
     private final Optional<PhoneProviderDeliveryMethodEnum> deliveryMethod;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreatePhoneTemplateTestNotificationRequestContent(
-            String to,
-            Optional<PhoneProviderDeliveryMethodEnum> deliveryMethod,
-            Map<String, Object> additionalProperties) {
+    private CreatePhoneTemplateTestNotificationRequestContent(String to, Optional<PhoneProviderDeliveryMethodEnum> deliveryMethod, Map<String, Object> additionalProperties) {
         this.to = to;
         this.deliveryMethod = deliveryMethod;
         this.additionalProperties = additionalProperties;
@@ -42,7 +40,7 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
      */
     @JsonProperty("to")
     public String getTo() {
-        return to;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,19 +48,17 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
      */
     @JsonProperty("delivery_method")
     public Optional<PhoneProviderDeliveryMethodEnum> getDeliveryMethod() {
-        return deliveryMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreatePhoneTemplateTestNotificationRequestContent
-                && equalTo((CreatePhoneTemplateTestNotificationRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreatePhoneTemplateTestNotificationRequestContent other) {
@@ -71,19 +67,20 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.to, this.deliveryMethod);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ToStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ToStage {
+
         /**
          * <p>Destination of the testing phone notification</p>
          */
@@ -93,6 +90,7 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
     }
 
     public interface _FinalStage {
+
         CreatePhoneTemplateTestNotificationRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -109,6 +107,7 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ToStage, _FinalStage {
+
         private String to;
 
         private Optional<PhoneProviderDeliveryMethodEnum> deliveryMethod = Optional.empty();
@@ -116,13 +115,12 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreatePhoneTemplateTestNotificationRequestContent other) {
-            to(other.getTo());
-            deliveryMethod(other.getDeliveryMethod());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,8 +131,7 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
         @java.lang.Override
         @JsonSetter("to")
         public _FinalStage to(@NotNull String to) {
-            this.to = Objects.requireNonNull(to, "to must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,8 +140,7 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
          */
         @java.lang.Override
         public _FinalStage deliveryMethod(PhoneProviderDeliveryMethodEnum deliveryMethod) {
-            this.deliveryMethod = Optional.ofNullable(deliveryMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,25 +149,22 @@ public final class CreatePhoneTemplateTestNotificationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "delivery_method", nulls = Nulls.SKIP)
         public _FinalStage deliveryMethod(Optional<PhoneProviderDeliveryMethodEnum> deliveryMethod) {
-            this.deliveryMethod = deliveryMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreatePhoneTemplateTestNotificationRequestContent build() {
-            return new CreatePhoneTemplateTestNotificationRequestContent(to, deliveryMethod, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

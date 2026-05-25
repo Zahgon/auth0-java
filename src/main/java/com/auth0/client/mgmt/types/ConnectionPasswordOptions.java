@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordOptions.Builder.class)
 public final class ConnectionPasswordOptions {
+
     private final Optional<ConnectionPasswordOptionsComplexity> complexity;
 
     private final Optional<ConnectionPasswordOptionsDictionary> dictionary;
@@ -30,12 +31,7 @@ public final class ConnectionPasswordOptions {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordOptions(
-            Optional<ConnectionPasswordOptionsComplexity> complexity,
-            Optional<ConnectionPasswordOptionsDictionary> dictionary,
-            Optional<ConnectionPasswordOptionsHistory> history,
-            Optional<ConnectionPasswordOptionsProfileData> profileData,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPasswordOptions(Optional<ConnectionPasswordOptionsComplexity> complexity, Optional<ConnectionPasswordOptionsDictionary> dictionary, Optional<ConnectionPasswordOptionsHistory> history, Optional<ConnectionPasswordOptionsProfileData> profileData, Map<String, Object> additionalProperties) {
         this.complexity = complexity;
         this.dictionary = dictionary;
         this.history = history;
@@ -45,58 +41,55 @@ public final class ConnectionPasswordOptions {
 
     @JsonProperty("complexity")
     public Optional<ConnectionPasswordOptionsComplexity> getComplexity() {
-        return complexity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dictionary")
     public Optional<ConnectionPasswordOptionsDictionary> getDictionary() {
-        return dictionary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("history")
     public Optional<ConnectionPasswordOptionsHistory> getHistory() {
-        return history;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("profile_data")
     public Optional<ConnectionPasswordOptionsProfileData> getProfileData() {
-        return profileData;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordOptions && equalTo((ConnectionPasswordOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordOptions other) {
-        return complexity.equals(other.complexity)
-                && dictionary.equals(other.dictionary)
-                && history.equals(other.history)
-                && profileData.equals(other.profileData);
+        return complexity.equals(other.complexity) && dictionary.equals(other.dictionary) && history.equals(other.history) && profileData.equals(other.profileData);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.complexity, this.dictionary, this.history, this.profileData);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionPasswordOptionsComplexity> complexity = Optional.empty();
 
         private Optional<ConnectionPasswordOptionsDictionary> dictionary = Optional.empty();
@@ -108,72 +101,59 @@ public final class ConnectionPasswordOptions {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordOptions other) {
-            complexity(other.getComplexity());
-            dictionary(other.getDictionary());
-            history(other.getHistory());
-            profileData(other.getProfileData());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "complexity", nulls = Nulls.SKIP)
         public Builder complexity(Optional<ConnectionPasswordOptionsComplexity> complexity) {
-            this.complexity = complexity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder complexity(ConnectionPasswordOptionsComplexity complexity) {
-            this.complexity = Optional.ofNullable(complexity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "dictionary", nulls = Nulls.SKIP)
         public Builder dictionary(Optional<ConnectionPasswordOptionsDictionary> dictionary) {
-            this.dictionary = dictionary;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dictionary(ConnectionPasswordOptionsDictionary dictionary) {
-            this.dictionary = Optional.ofNullable(dictionary);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "history", nulls = Nulls.SKIP)
         public Builder history(Optional<ConnectionPasswordOptionsHistory> history) {
-            this.history = history;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder history(ConnectionPasswordOptionsHistory history) {
-            this.history = Optional.ofNullable(history);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "profile_data", nulls = Nulls.SKIP)
         public Builder profileData(Optional<ConnectionPasswordOptionsProfileData> profileData) {
-            this.profileData = profileData;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profileData(ConnectionPasswordOptionsProfileData profileData) {
-            this.profileData = Optional.ofNullable(profileData);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordOptions build() {
-            return new ConnectionPasswordOptions(complexity, dictionary, history, profileData, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.SetRulesConfigResponseContent;
 import java.util.List;
 
 public class RulesConfigsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRulesConfigsClient rawClient;
@@ -24,7 +25,7 @@ public class RulesConfigsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRulesConfigsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -33,7 +34,7 @@ public class RulesConfigsClient {
      * </code></pre>
      */
     public List<RulesConfig> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,35 +43,34 @@ public class RulesConfigsClient {
      * </code></pre>
      */
     public List<RulesConfig> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets a rules config variable.
      */
     public SetRulesConfigResponseContent set(String key, SetRulesConfigRequestContent request) {
-        return this.rawClient.set(key, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets a rules config variable.
      */
-    public SetRulesConfigResponseContent set(
-            String key, SetRulesConfigRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(key, request, requestOptions).body();
+    public SetRulesConfigResponseContent set(String key, SetRulesConfigRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a rules config variable identified by its key.
      */
     public void delete(String key) {
-        this.rawClient.delete(key).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a rules config variable identified by its key.
      */
     public void delete(String key, RequestOptions requestOptions) {
-        this.rawClient.delete(key, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

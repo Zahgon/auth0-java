@@ -36,6 +36,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawVersionsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawVersionsClient(ClientOptions clientOptions) {
@@ -46,243 +47,55 @@ public class RawVersionsClient {
      * List all published versions of a specific Actions Module.
      */
     public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(String id) {
-        return list(id, GetActionModuleVersionsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(
-            String id, RequestOptions requestOptions) {
-        return list(id, GetActionModuleVersionsRequestParameters.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(
-            String id, GetActionModuleVersionsRequestParameters request) {
-        return list(id, request, null);
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(String id, GetActionModuleVersionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(
-            String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("actions/modules")
-                .addPathSegment(id)
-                .addPathSegments("versions");
-        QueryStringMapper.addQueryParameter(httpUrl, "page", request.getPage().orElse(0), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "per_page", request.getPerPage().orElse(50), false);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                GetActionModuleVersionsResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                        responseBodyString, GetActionModuleVersionsResponseContent.class);
-                int newPageNumber =
-                        request.getPage().map((Integer page) -> page + 1).orElse(1);
-                GetActionModuleVersionsRequestParameters nextRequest =
-                        GetActionModuleVersionsRequestParameters.builder()
-                                .from(request)
-                                .page(newPageNumber)
-                                .build();
-                List<ActionModuleVersion> result = parsedResponse.getVersions().orElse(Collections.emptyList());
-                return new ManagementApiHttpResponse<>(
-                        new SyncPagingIterable<ActionModuleVersion>(
-                                true, result, parsedResponse, () -> list(id, nextRequest, requestOptions)
-                                        .body()),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionModuleVersion>> list(String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
     public ManagementApiHttpResponse<CreateActionModuleVersionResponseContent> create(String id) {
-        return create(id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
-    public ManagementApiHttpResponse<CreateActionModuleVersionResponseContent> create(
-            String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("actions/modules")
-                .addPathSegment(id)
-                .addPathSegments("versions");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", RequestBody.create("", null))
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, CreateActionModuleVersionResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 409:
-                        throw new ConflictError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 412:
-                        throw new PreconditionFailedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<CreateActionModuleVersionResponseContent> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
     public ManagementApiHttpResponse<GetActionModuleVersionResponseContent> get(String id, String versionId) {
-        return get(id, versionId, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
-    public ManagementApiHttpResponse<GetActionModuleVersionResponseContent> get(
-            String id, String versionId, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("actions/modules")
-                .addPathSegment(id)
-                .addPathSegments("versions")
-                .addPathSegment(versionId);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetActionModuleVersionResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<GetActionModuleVersionResponseContent> get(String id, String versionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

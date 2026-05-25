@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AuthenticationTypeEnum {
+
     public static final AuthenticationTypeEnum EMAIL = new AuthenticationTypeEnum(Value.EMAIL, "email");
 
     public static final AuthenticationTypeEnum TOTP = new AuthenticationTypeEnum(Value.TOTP, "totp");
@@ -23,66 +24,41 @@ public final class AuthenticationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AuthenticationTypeEnum
-                        && this.string.equals(((AuthenticationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case TOTP:
-                return visitor.visitTotp();
-            case PHONE:
-                return visitor.visitPhone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AuthenticationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "totp":
-                return TOTP;
-            case "phone":
-                return PHONE;
-            default:
-                return new AuthenticationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PHONE,
 
-        EMAIL,
-
-        TOTP,
-
-        UNKNOWN
+        PHONE, EMAIL, TOTP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPhone();
 
         T visitEmail();

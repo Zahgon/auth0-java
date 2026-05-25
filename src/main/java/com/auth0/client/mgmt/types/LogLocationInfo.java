@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogLocationInfo.Builder.class)
 public final class LogLocationInfo {
+
     private final Optional<String> countryCode;
 
     private final Optional<String> countryCode3;
@@ -38,16 +39,7 @@ public final class LogLocationInfo {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogLocationInfo(
-            Optional<String> countryCode,
-            Optional<String> countryCode3,
-            Optional<String> countryName,
-            Optional<String> cityName,
-            Optional<Double> latitude,
-            Optional<Double> longitude,
-            Optional<String> timeZone,
-            Optional<String> continentCode,
-            Map<String, Object> additionalProperties) {
+    private LogLocationInfo(Optional<String> countryCode, Optional<String> countryCode3, Optional<String> countryName, Optional<String> cityName, Optional<Double> latitude, Optional<Double> longitude, Optional<String> timeZone, Optional<String> continentCode, Map<String, Object> additionalProperties) {
         this.countryCode = countryCode;
         this.countryCode3 = countryCode3;
         this.countryName = countryName;
@@ -64,7 +56,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("country_code")
     public Optional<String> getCountryCode() {
-        return countryCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +64,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("country_code3")
     public Optional<String> getCountryCode3() {
-        return countryCode3;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +72,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("country_name")
     public Optional<String> getCountryName() {
-        return countryName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +80,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("city_name")
     public Optional<String> getCityName() {
-        return cityName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +88,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("latitude")
     public Optional<Double> getLatitude() {
-        return latitude;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,7 +96,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("longitude")
     public Optional<Double> getLongitude() {
-        return longitude;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,7 +104,7 @@ public final class LogLocationInfo {
      */
     @JsonProperty("time_zone")
     public Optional<String> getTimeZone() {
-        return timeZone;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,55 +112,40 @@ public final class LogLocationInfo {
      */
     @JsonProperty("continent_code")
     public Optional<String> getContinentCode() {
-        return continentCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogLocationInfo && equalTo((LogLocationInfo) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogLocationInfo other) {
-        return countryCode.equals(other.countryCode)
-                && countryCode3.equals(other.countryCode3)
-                && countryName.equals(other.countryName)
-                && cityName.equals(other.cityName)
-                && latitude.equals(other.latitude)
-                && longitude.equals(other.longitude)
-                && timeZone.equals(other.timeZone)
-                && continentCode.equals(other.continentCode);
+        return countryCode.equals(other.countryCode) && countryCode3.equals(other.countryCode3) && countryName.equals(other.countryName) && cityName.equals(other.cityName) && latitude.equals(other.latitude) && longitude.equals(other.longitude) && timeZone.equals(other.timeZone) && continentCode.equals(other.continentCode);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.countryCode,
-                this.countryCode3,
-                this.countryName,
-                this.cityName,
-                this.latitude,
-                this.longitude,
-                this.timeZone,
-                this.continentCode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> countryCode = Optional.empty();
 
         private Optional<String> countryCode3 = Optional.empty();
@@ -188,18 +165,11 @@ public final class LogLocationInfo {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LogLocationInfo other) {
-            countryCode(other.getCountryCode());
-            countryCode3(other.getCountryCode3());
-            countryName(other.getCountryName());
-            cityName(other.getCityName());
-            latitude(other.getLatitude());
-            longitude(other.getLongitude());
-            timeZone(other.getTimeZone());
-            continentCode(other.getContinentCode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,13 +177,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "country_code", nulls = Nulls.SKIP)
         public Builder countryCode(Optional<String> countryCode) {
-            this.countryCode = countryCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder countryCode(String countryCode) {
-            this.countryCode = Optional.ofNullable(countryCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,13 +189,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "country_code3", nulls = Nulls.SKIP)
         public Builder countryCode3(Optional<String> countryCode3) {
-            this.countryCode3 = countryCode3;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder countryCode3(String countryCode3) {
-            this.countryCode3 = Optional.ofNullable(countryCode3);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -235,13 +201,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "country_name", nulls = Nulls.SKIP)
         public Builder countryName(Optional<String> countryName) {
-            this.countryName = countryName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder countryName(String countryName) {
-            this.countryName = Optional.ofNullable(countryName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -249,13 +213,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "city_name", nulls = Nulls.SKIP)
         public Builder cityName(Optional<String> cityName) {
-            this.cityName = cityName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cityName(String cityName) {
-            this.cityName = Optional.ofNullable(cityName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -263,13 +225,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "latitude", nulls = Nulls.SKIP)
         public Builder latitude(Optional<Double> latitude) {
-            this.latitude = latitude;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder latitude(Double latitude) {
-            this.latitude = Optional.ofNullable(latitude);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -277,13 +237,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "longitude", nulls = Nulls.SKIP)
         public Builder longitude(Optional<Double> longitude) {
-            this.longitude = longitude;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder longitude(Double longitude) {
-            this.longitude = Optional.ofNullable(longitude);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -291,13 +249,11 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "time_zone", nulls = Nulls.SKIP)
         public Builder timeZone(Optional<String> timeZone) {
-            this.timeZone = timeZone;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder timeZone(String timeZone) {
-            this.timeZone = Optional.ofNullable(timeZone);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -305,36 +261,23 @@ public final class LogLocationInfo {
          */
         @JsonSetter(value = "continent_code", nulls = Nulls.SKIP)
         public Builder continentCode(Optional<String> continentCode) {
-            this.continentCode = continentCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder continentCode(String continentCode) {
-            this.continentCode = Optional.ofNullable(continentCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogLocationInfo build() {
-            return new LogLocationInfo(
-                    countryCode,
-                    countryCode3,
-                    countryName,
-                    cityName,
-                    latitude,
-                    longitude,
-                    timeZone,
-                    continentCode,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GuardianFactor.Builder.class)
 public final class GuardianFactor {
+
     private final boolean enabled;
 
     private final Optional<Boolean> trialExpired;
@@ -28,11 +29,7 @@ public final class GuardianFactor {
 
     private final Map<String, Object> additionalProperties;
 
-    private GuardianFactor(
-            boolean enabled,
-            Optional<Boolean> trialExpired,
-            Optional<GuardianFactorNameEnum> name,
-            Map<String, Object> additionalProperties) {
+    private GuardianFactor(boolean enabled, Optional<Boolean> trialExpired, Optional<GuardianFactorNameEnum> name, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.trialExpired = trialExpired;
         this.name = name;
@@ -44,7 +41,7 @@ public final class GuardianFactor {
      */
     @JsonProperty("enabled")
     public boolean getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,23 +49,22 @@ public final class GuardianFactor {
      */
     @JsonProperty("trial_expired")
     public Optional<Boolean> getTrialExpired() {
-        return trialExpired;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public Optional<GuardianFactorNameEnum> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GuardianFactor && equalTo((GuardianFactor) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GuardianFactor other) {
@@ -77,19 +73,20 @@ public final class GuardianFactor {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.trialExpired, this.name);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EnabledStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EnabledStage {
+
         /**
          * <p>Whether this factor is enabled (true) or disabled (false).</p>
          */
@@ -99,6 +96,7 @@ public final class GuardianFactor {
     }
 
     public interface _FinalStage {
+
         GuardianFactor build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -119,6 +117,7 @@ public final class GuardianFactor {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EnabledStage, _FinalStage {
+
         private boolean enabled;
 
         private Optional<GuardianFactorNameEnum> name = Optional.empty();
@@ -128,14 +127,12 @@ public final class GuardianFactor {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GuardianFactor other) {
-            enabled(other.getEnabled());
-            trialExpired(other.getTrialExpired());
-            name(other.getName());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -146,21 +143,18 @@ public final class GuardianFactor {
         @java.lang.Override
         @JsonSetter("enabled")
         public _FinalStage enabled(boolean enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage name(GuardianFactorNameEnum name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<GuardianFactorNameEnum> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -169,8 +163,7 @@ public final class GuardianFactor {
          */
         @java.lang.Override
         public _FinalStage trialExpired(Boolean trialExpired) {
-            this.trialExpired = Optional.ofNullable(trialExpired);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,25 +172,22 @@ public final class GuardianFactor {
         @java.lang.Override
         @JsonSetter(value = "trial_expired", nulls = Nulls.SKIP)
         public _FinalStage trialExpired(Optional<Boolean> trialExpired) {
-            this.trialExpired = trialExpired;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GuardianFactor build() {
-            return new GuardianFactor(enabled, trialExpired, name, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

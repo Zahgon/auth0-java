@@ -24,7 +24,7 @@ public class UserInfo implements Serializable {
 
     @JsonAnySetter
     void setValue(String key, Object value) {
-        values.put(key, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,6 +34,6 @@ public class UserInfo implements Serializable {
      */
     @JsonAnyGetter
     public Map<String, Object> getValues() {
-        return values;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

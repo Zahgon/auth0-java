@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionStripeCreateCustomer.Builder.class)
 public final class FlowActionStripeCreateCustomer {
+
     private final String id;
 
     private final Optional<String> alias;
@@ -37,15 +38,7 @@ public final class FlowActionStripeCreateCustomer {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionStripeCreateCustomer(
-            String id,
-            Optional<String> alias,
-            FlowActionStripeCreateCustomerType type,
-            FlowActionStripeCreateCustomerAction action,
-            Optional<Boolean> allowFailure,
-            Optional<Boolean> maskOutput,
-            FlowActionStripeCreateCustomerParams params,
-            Map<String, Object> additionalProperties) {
+    private FlowActionStripeCreateCustomer(String id, Optional<String> alias, FlowActionStripeCreateCustomerType type, FlowActionStripeCreateCustomerAction action, Optional<Boolean> allowFailure, Optional<Boolean> maskOutput, FlowActionStripeCreateCustomerParams params, Map<String, Object> additionalProperties) {
         this.id = id;
         this.alias = alias;
         this.type = type;
@@ -58,94 +51,91 @@ public final class FlowActionStripeCreateCustomer {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alias")
     public Optional<String> getAlias() {
-        return alias;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FlowActionStripeCreateCustomerType getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("action")
     public FlowActionStripeCreateCustomerAction getAction() {
-        return action;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allow_failure")
     public Optional<Boolean> getAllowFailure() {
-        return allowFailure;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mask_output")
     public Optional<Boolean> getMaskOutput() {
-        return maskOutput;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("params")
     public FlowActionStripeCreateCustomerParams getParams() {
-        return params;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionStripeCreateCustomer && equalTo((FlowActionStripeCreateCustomer) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionStripeCreateCustomer other) {
-        return id.equals(other.id)
-                && alias.equals(other.alias)
-                && type.equals(other.type)
-                && action.equals(other.action)
-                && allowFailure.equals(other.allowFailure)
-                && maskOutput.equals(other.maskOutput)
-                && params.equals(other.params);
+        return id.equals(other.id) && alias.equals(other.alias) && type.equals(other.type) && action.equals(other.action) && allowFailure.equals(other.allowFailure) && maskOutput.equals(other.maskOutput) && params.equals(other.params);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.alias, this.type, this.action, this.allowFailure, this.maskOutput, this.params);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         TypeStage id(@NotNull String id);
 
         Builder from(FlowActionStripeCreateCustomer other);
     }
 
     public interface TypeStage {
+
         ActionStage type(@NotNull FlowActionStripeCreateCustomerType type);
     }
 
     public interface ActionStage {
+
         ParamsStage action(@NotNull FlowActionStripeCreateCustomerAction action);
     }
 
     public interface ParamsStage {
+
         _FinalStage params(@NotNull FlowActionStripeCreateCustomerParams params);
     }
 
     public interface _FinalStage {
+
         FlowActionStripeCreateCustomer build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -167,6 +157,7 @@ public final class FlowActionStripeCreateCustomer {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, TypeStage, ActionStage, ParamsStage, _FinalStage {
+
         private String id;
 
         private FlowActionStripeCreateCustomerType type;
@@ -184,103 +175,84 @@ public final class FlowActionStripeCreateCustomer {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionStripeCreateCustomer other) {
-            id(other.getId());
-            alias(other.getAlias());
-            type(other.getType());
-            action(other.getAction());
-            allowFailure(other.getAllowFailure());
-            maskOutput(other.getMaskOutput());
-            params(other.getParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public TypeStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ActionStage type(@NotNull FlowActionStripeCreateCustomerType type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("action")
         public ParamsStage action(@NotNull FlowActionStripeCreateCustomerAction action) {
-            this.action = Objects.requireNonNull(action, "action must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("params")
         public _FinalStage params(@NotNull FlowActionStripeCreateCustomerParams params) {
-            this.params = Objects.requireNonNull(params, "params must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage maskOutput(Boolean maskOutput) {
-            this.maskOutput = Optional.ofNullable(maskOutput);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "mask_output", nulls = Nulls.SKIP)
         public _FinalStage maskOutput(Optional<Boolean> maskOutput) {
-            this.maskOutput = maskOutput;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage allowFailure(Boolean allowFailure) {
-            this.allowFailure = Optional.ofNullable(allowFailure);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "allow_failure", nulls = Nulls.SKIP)
         public _FinalStage allowFailure(Optional<Boolean> allowFailure) {
-            this.allowFailure = allowFailure;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage alias(String alias) {
-            this.alias = Optional.ofNullable(alias);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "alias", nulls = Nulls.SKIP)
         public _FinalStage alias(Optional<String> alias) {
-            this.alias = alias;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionStripeCreateCustomer build() {
-            return new FlowActionStripeCreateCustomer(
-                    id, alias, type, action, allowFailure, maskOutput, params, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingThemeWidgetSocialButtonsLayoutEnum {
-    public static final BrandingThemeWidgetSocialButtonsLayoutEnum BOTTOM =
-            new BrandingThemeWidgetSocialButtonsLayoutEnum(Value.BOTTOM, "bottom");
 
-    public static final BrandingThemeWidgetSocialButtonsLayoutEnum TOP =
-            new BrandingThemeWidgetSocialButtonsLayoutEnum(Value.TOP, "top");
+    public static final BrandingThemeWidgetSocialButtonsLayoutEnum BOTTOM = new BrandingThemeWidgetSocialButtonsLayoutEnum(Value.BOTTOM, "bottom");
+
+    public static final BrandingThemeWidgetSocialButtonsLayoutEnum TOP = new BrandingThemeWidgetSocialButtonsLayoutEnum(Value.TOP, "top");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class BrandingThemeWidgetSocialButtonsLayoutEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingThemeWidgetSocialButtonsLayoutEnum
-                        && this.string.equals(((BrandingThemeWidgetSocialButtonsLayoutEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BOTTOM:
-                return visitor.visitBottom();
-            case TOP:
-                return visitor.visitTop();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingThemeWidgetSocialButtonsLayoutEnum valueOf(String value) {
-        switch (value) {
-            case "bottom":
-                return BOTTOM;
-            case "top":
-                return TOP;
-            default:
-                return new BrandingThemeWidgetSocialButtonsLayoutEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BOTTOM,
 
-        TOP,
-
-        UNKNOWN
+        BOTTOM, TOP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBottom();
 
         T visitTop();

@@ -21,6 +21,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncScimConfigurationClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawScimConfigurationClient rawClient;
@@ -37,129 +38,122 @@ public class AsyncScimConfigurationClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawScimConfigurationClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
     public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
     public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
-    public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list(
-            ListScimConfigurationsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list(ListScimConfigurationsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
-    public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list(
-            ListScimConfigurationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ScimConfiguration>> list(ListScimConfigurationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration by its <code>connectionId</code>.
      */
     public CompletableFuture<GetScimConfigurationResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration by its <code>connectionId</code>.
      */
     public CompletableFuture<GetScimConfigurationResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
     public CompletableFuture<CreateScimConfigurationResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
     public CompletableFuture<CreateScimConfigurationResponseContent> create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
-    public CompletableFuture<CreateScimConfigurationResponseContent> create(
-            String id, OptionalNullable<CreateScimConfigurationRequestContent> request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateScimConfigurationResponseContent> create(String id, OptionalNullable<CreateScimConfigurationRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
-    public CompletableFuture<CreateScimConfigurationResponseContent> create(
-            String id, OptionalNullable<CreateScimConfigurationRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateScimConfigurationResponseContent> create(String id, OptionalNullable<CreateScimConfigurationRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim configuration by its <code>connectionId</code>.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim configuration by its <code>connectionId</code>.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a scim configuration by its <code>connectionId</code>.
      */
-    public CompletableFuture<UpdateScimConfigurationResponseContent> update(
-            String id, UpdateScimConfigurationRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateScimConfigurationResponseContent> update(String id, UpdateScimConfigurationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a scim configuration by its <code>connectionId</code>.
      */
-    public CompletableFuture<UpdateScimConfigurationResponseContent> update(
-            String id, UpdateScimConfigurationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateScimConfigurationResponseContent> update(String id, UpdateScimConfigurationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration's default mapping by its <code>connectionId</code>.
      */
     public CompletableFuture<GetScimConfigurationDefaultMappingResponseContent> getDefaultMapping(String id) {
-        return this.rawClient.getDefaultMapping(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration's default mapping by its <code>connectionId</code>.
      */
-    public CompletableFuture<GetScimConfigurationDefaultMappingResponseContent> getDefaultMapping(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.getDefaultMapping(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetScimConfigurationDefaultMappingResponseContent> getDefaultMapping(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncTokensClient tokens() {
-        return this.tokensClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

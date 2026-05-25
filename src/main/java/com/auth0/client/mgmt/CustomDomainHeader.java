@@ -22,7 +22,8 @@ import com.auth0.client.mgmt.core.RequestOptions;
  */
 public final class CustomDomainHeader {
 
-    private CustomDomainHeader() {}
+    private CustomDomainHeader() {
+    }
 
     /**
      * Creates a {@link RequestOptions} instance with the Auth0-Custom-Domain header set.
@@ -31,8 +32,6 @@ public final class CustomDomainHeader {
      * @return RequestOptions with the custom domain header configured
      */
     public static RequestOptions of(String domain) {
-        return RequestOptions.builder()
-                .addHeader(CustomDomainInterceptor.HEADER_NAME, domain)
-                .build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

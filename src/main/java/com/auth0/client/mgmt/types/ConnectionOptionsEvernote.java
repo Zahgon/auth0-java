@@ -24,26 +24,20 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsEvernote.Builder.class)
 public final class ConnectionOptionsEvernote implements IConnectionOptionsOAuth1Common, IConnectionOptionsCommon {
+
     private final Optional<String> clientId;
 
     private final Optional<String> clientSecret;
 
     private final Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsEvernote(
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<List<String>> nonPersistentAttrs,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsEvernote(Optional<String> clientId, Optional<String> clientSecret, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<List<String>> nonPersistentAttrs, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.setUserRootAttributes = setUserRootAttributes;
@@ -58,7 +52,7 @@ public final class ConnectionOptionsEvernote implements IConnectionOptionsOAuth1
     @JsonProperty("client_id")
     @java.lang.Override
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,101 +61,83 @@ public final class ConnectionOptionsEvernote implements IConnectionOptionsOAuth1
     @JsonProperty("client_secret")
     @java.lang.Override
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     @java.lang.Override
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     @java.lang.Override
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsEvernote && equalTo((ConnectionOptionsEvernote) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsEvernote other) {
-        return clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && upstreamParams.equals(other.upstreamParams)
-                && nonPersistentAttrs.equals(other.nonPersistentAttrs);
+        return clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && setUserRootAttributes.equals(other.setUserRootAttributes) && upstreamParams.equals(other.upstreamParams) && nonPersistentAttrs.equals(other.nonPersistentAttrs);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.clientId,
-                this.clientSecret,
-                this.setUserRootAttributes,
-                this.upstreamParams,
-                this.nonPersistentAttrs);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientId = Optional.empty();
 
         private Optional<String> clientSecret = Optional.empty();
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsEvernote other) {
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            upstreamParams(other.getUpstreamParams());
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -169,13 +145,11 @@ public final class ConnectionOptionsEvernote implements IConnectionOptionsOAuth1
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -183,94 +157,58 @@ public final class ConnectionOptionsEvernote implements IConnectionOptionsOAuth1
          */
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsEvernote build() {
-            return new ConnectionOptionsEvernote(
-                    clientId,
-                    clientSecret,
-                    setUserRootAttributes,
-                    upstreamParams,
-                    nonPersistentAttrs,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

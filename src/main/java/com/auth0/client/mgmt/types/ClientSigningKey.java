@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientSigningKey.Builder.class)
 public final class ClientSigningKey {
+
     private final Optional<String> pkcs7;
 
     private final Optional<String> cert;
@@ -28,11 +29,7 @@ public final class ClientSigningKey {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientSigningKey(
-            Optional<String> pkcs7,
-            Optional<String> cert,
-            Optional<String> subject,
-            Map<String, Object> additionalProperties) {
+    private ClientSigningKey(Optional<String> pkcs7, Optional<String> cert, Optional<String> subject, Map<String, Object> additionalProperties) {
         this.pkcs7 = pkcs7;
         this.cert = cert;
         this.subject = subject;
@@ -44,7 +41,7 @@ public final class ClientSigningKey {
      */
     @JsonProperty("pkcs7")
     public Optional<String> getPkcs7() {
-        return pkcs7;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class ClientSigningKey {
      */
     @JsonProperty("cert")
     public Optional<String> getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,18 +57,17 @@ public final class ClientSigningKey {
      */
     @JsonProperty("subject")
     public Optional<String> getSubject() {
-        return subject;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientSigningKey && equalTo((ClientSigningKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientSigningKey other) {
@@ -80,20 +76,21 @@ public final class ClientSigningKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.pkcs7, this.cert, this.subject);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> pkcs7 = Optional.empty();
 
         private Optional<String> cert = Optional.empty();
@@ -103,13 +100,11 @@ public final class ClientSigningKey {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientSigningKey other) {
-            pkcs7(other.getPkcs7());
-            cert(other.getCert());
-            subject(other.getSubject());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -117,13 +112,11 @@ public final class ClientSigningKey {
          */
         @JsonSetter(value = "pkcs7", nulls = Nulls.SKIP)
         public Builder pkcs7(Optional<String> pkcs7) {
-            this.pkcs7 = pkcs7;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pkcs7(String pkcs7) {
-            this.pkcs7 = Optional.ofNullable(pkcs7);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +124,11 @@ public final class ClientSigningKey {
          */
         @JsonSetter(value = "cert", nulls = Nulls.SKIP)
         public Builder cert(Optional<String> cert) {
-            this.cert = cert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cert(String cert) {
-            this.cert = Optional.ofNullable(cert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,27 +136,23 @@ public final class ClientSigningKey {
          */
         @JsonSetter(value = "subject", nulls = Nulls.SKIP)
         public Builder subject(Optional<String> subject) {
-            this.subject = subject;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subject(String subject) {
-            this.subject = Optional.ofNullable(subject);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientSigningKey build() {
-            return new ClientSigningKey(pkcs7, cert, subject, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

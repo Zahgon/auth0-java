@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncAuthenticatorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawAuthenticatorsClient rawClient;
@@ -21,20 +22,20 @@ public class AsyncAuthenticatorsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawAuthenticatorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authenticators registered to a given user ID, such as OTP, email, phone, and push-notification. This action cannot be undone. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public CompletableFuture<Void> deleteAll(String id) {
-        return this.rawClient.deleteAll(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authenticators registered to a given user ID, such as OTP, email, phone, and push-notification. This action cannot be undone. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public CompletableFuture<Void> deleteAll(String id, RequestOptions requestOptions) {
-        return this.rawClient.deleteAll(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EncryptionKeyState {
+
     public static final EncryptionKeyState DESTROYED = new EncryptionKeyState(Value.DESTROYED, "destroyed");
 
-    public static final EncryptionKeyState PRE_ACTIVATION =
-            new EncryptionKeyState(Value.PRE_ACTIVATION, "pre-activation");
+    public static final EncryptionKeyState PRE_ACTIVATION = new EncryptionKeyState(Value.PRE_ACTIVATION, "pre-activation");
 
     public static final EncryptionKeyState DEACTIVATED = new EncryptionKeyState(Value.DEACTIVATED, "deactivated");
 
@@ -26,71 +26,41 @@ public final class EncryptionKeyState {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EncryptionKeyState && this.string.equals(((EncryptionKeyState) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DESTROYED:
-                return visitor.visitDestroyed();
-            case PRE_ACTIVATION:
-                return visitor.visitPreActivation();
-            case DEACTIVATED:
-                return visitor.visitDeactivated();
-            case ACTIVE:
-                return visitor.visitActive();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EncryptionKeyState valueOf(String value) {
-        switch (value) {
-            case "destroyed":
-                return DESTROYED;
-            case "pre-activation":
-                return PRE_ACTIVATION;
-            case "deactivated":
-                return DEACTIVATED;
-            case "active":
-                return ACTIVE;
-            default:
-                return new EncryptionKeyState(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PRE_ACTIVATION,
 
-        ACTIVE,
-
-        DEACTIVATED,
-
-        DESTROYED,
-
-        UNKNOWN
+        PRE_ACTIVATION, ACTIVE, DEACTIVATED, DESTROYED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPreActivation();
 
         T visitActive();

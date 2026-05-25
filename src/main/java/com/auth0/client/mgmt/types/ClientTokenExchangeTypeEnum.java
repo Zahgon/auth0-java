@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientTokenExchangeTypeEnum {
-    public static final ClientTokenExchangeTypeEnum CUSTOM_AUTHENTICATION =
-            new ClientTokenExchangeTypeEnum(Value.CUSTOM_AUTHENTICATION, "custom_authentication");
 
-    public static final ClientTokenExchangeTypeEnum ON_BEHALF_OF_TOKEN_EXCHANGE =
-            new ClientTokenExchangeTypeEnum(Value.ON_BEHALF_OF_TOKEN_EXCHANGE, "on_behalf_of_token_exchange");
+    public static final ClientTokenExchangeTypeEnum CUSTOM_AUTHENTICATION = new ClientTokenExchangeTypeEnum(Value.CUSTOM_AUTHENTICATION, "custom_authentication");
+
+    public static final ClientTokenExchangeTypeEnum ON_BEHALF_OF_TOKEN_EXCHANGE = new ClientTokenExchangeTypeEnum(Value.ON_BEHALF_OF_TOKEN_EXCHANGE, "on_behalf_of_token_exchange");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientTokenExchangeTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientTokenExchangeTypeEnum
-                        && this.string.equals(((ClientTokenExchangeTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CUSTOM_AUTHENTICATION:
-                return visitor.visitCustomAuthentication();
-            case ON_BEHALF_OF_TOKEN_EXCHANGE:
-                return visitor.visitOnBehalfOfTokenExchange();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientTokenExchangeTypeEnum valueOf(String value) {
-        switch (value) {
-            case "custom_authentication":
-                return CUSTOM_AUTHENTICATION;
-            case "on_behalf_of_token_exchange":
-                return ON_BEHALF_OF_TOKEN_EXCHANGE;
-            default:
-                return new ClientTokenExchangeTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CUSTOM_AUTHENTICATION,
 
-        ON_BEHALF_OF_TOKEN_EXCHANGE,
-
-        UNKNOWN
+        CUSTOM_AUTHENTICATION, ON_BEHALF_OF_TOKEN_EXCHANGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCustomAuthentication();
 
         T visitOnBehalfOfTokenExchange();

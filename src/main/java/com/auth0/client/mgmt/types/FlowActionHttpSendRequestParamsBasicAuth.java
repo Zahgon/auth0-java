@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionHttpSendRequestParamsBasicAuth.Builder.class)
 public final class FlowActionHttpSendRequestParamsBasicAuth {
+
     private final Optional<String> username;
 
     private final Optional<String> password;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionHttpSendRequestParamsBasicAuth(
-            Optional<String> username, Optional<String> password, Map<String, Object> additionalProperties) {
+    private FlowActionHttpSendRequestParamsBasicAuth(Optional<String> username, Optional<String> password, Map<String, Object> additionalProperties) {
         this.username = username;
         this.password = password;
         this.additionalProperties = additionalProperties;
@@ -35,24 +35,22 @@ public final class FlowActionHttpSendRequestParamsBasicAuth {
 
     @JsonProperty("username")
     public Optional<String> getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("password")
     public Optional<String> getPassword() {
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionHttpSendRequestParamsBasicAuth
-                && equalTo((FlowActionHttpSendRequestParamsBasicAuth) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionHttpSendRequestParamsBasicAuth other) {
@@ -61,20 +59,21 @@ public final class FlowActionHttpSendRequestParamsBasicAuth {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.username, this.password);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> username = Optional.empty();
 
         private Optional<String> password = Optional.empty();
@@ -82,48 +81,41 @@ public final class FlowActionHttpSendRequestParamsBasicAuth {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionHttpSendRequestParamsBasicAuth other) {
-            username(other.getUsername());
-            password(other.getPassword());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public Builder username(Optional<String> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(String username) {
-            this.username = Optional.ofNullable(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password", nulls = Nulls.SKIP)
         public Builder password(Optional<String> password) {
-            this.password = password;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder password(String password) {
-            this.password = Optional.ofNullable(password);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionHttpSendRequestParamsBasicAuth build() {
-            return new FlowActionHttpSendRequestParamsBasicAuth(username, password, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

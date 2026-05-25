@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionStripeCreateCustomerParams.Builder.class)
 public final class FlowActionStripeCreateCustomerParams {
+
     private final String connectionId;
 
     private final Optional<FlowActionStripeTaxId> taxId;
@@ -41,17 +42,7 @@ public final class FlowActionStripeCreateCustomerParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionStripeCreateCustomerParams(
-            String connectionId,
-            Optional<FlowActionStripeTaxId> taxId,
-            Optional<String> name,
-            Optional<String> description,
-            Optional<String> email,
-            Optional<String> phone,
-            Optional<String> taxExempt,
-            Optional<FlowActionStripeAddress> address,
-            Optional<Map<String, String>> metadata,
-            Map<String, Object> additionalProperties) {
+    private FlowActionStripeCreateCustomerParams(String connectionId, Optional<FlowActionStripeTaxId> taxId, Optional<String> name, Optional<String> description, Optional<String> email, Optional<String> phone, Optional<String> taxExempt, Optional<FlowActionStripeAddress> address, Optional<Map<String, String>> metadata, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.taxId = taxId;
         this.name = name;
@@ -66,103 +57,86 @@ public final class FlowActionStripeCreateCustomerParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tax_id")
     public Optional<FlowActionStripeTaxId> getTaxId() {
-        return taxId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone")
     public Optional<String> getPhone() {
-        return phone;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tax_exempt")
     public Optional<String> getTaxExempt() {
-        return taxExempt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("address")
     public Optional<FlowActionStripeAddress> getAddress() {
-        return address;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     public Optional<Map<String, String>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionStripeCreateCustomerParams
-                && equalTo((FlowActionStripeCreateCustomerParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionStripeCreateCustomerParams other) {
-        return connectionId.equals(other.connectionId)
-                && taxId.equals(other.taxId)
-                && name.equals(other.name)
-                && description.equals(other.description)
-                && email.equals(other.email)
-                && phone.equals(other.phone)
-                && taxExempt.equals(other.taxExempt)
-                && address.equals(other.address)
-                && metadata.equals(other.metadata);
+        return connectionId.equals(other.connectionId) && taxId.equals(other.taxId) && name.equals(other.name) && description.equals(other.description) && email.equals(other.email) && phone.equals(other.phone) && taxExempt.equals(other.taxExempt) && address.equals(other.address) && metadata.equals(other.metadata);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId,
-                this.taxId,
-                this.name,
-                this.description,
-                this.email,
-                this.phone,
-                this.taxExempt,
-                this.address,
-                this.metadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         _FinalStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionStripeCreateCustomerParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionStripeCreateCustomerParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -204,6 +178,7 @@ public final class FlowActionStripeCreateCustomerParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, _FinalStage {
+
         private String connectionId;
 
         private Optional<Map<String, String>> metadata = Optional.empty();
@@ -225,158 +200,121 @@ public final class FlowActionStripeCreateCustomerParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionStripeCreateCustomerParams other) {
-            connectionId(other.getConnectionId());
-            taxId(other.getTaxId());
-            name(other.getName());
-            description(other.getDescription());
-            email(other.getEmail());
-            phone(other.getPhone());
-            taxExempt(other.getTaxExempt());
-            address(other.getAddress());
-            metadata(other.getMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public _FinalStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(Map<String, String> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Optional<Map<String, String>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage address(FlowActionStripeAddress address) {
-            this.address = Optional.ofNullable(address);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "address", nulls = Nulls.SKIP)
         public _FinalStage address(Optional<FlowActionStripeAddress> address) {
-            this.address = address;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage taxExempt(String taxExempt) {
-            this.taxExempt = Optional.ofNullable(taxExempt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tax_exempt", nulls = Nulls.SKIP)
         public _FinalStage taxExempt(Optional<String> taxExempt) {
-            this.taxExempt = taxExempt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage phone(String phone) {
-            this.phone = Optional.ofNullable(phone);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "phone", nulls = Nulls.SKIP)
         public _FinalStage phone(Optional<String> phone) {
-            this.phone = phone;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public _FinalStage email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public _FinalStage description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage taxId(FlowActionStripeTaxId taxId) {
-            this.taxId = Optional.ofNullable(taxId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tax_id", nulls = Nulls.SKIP)
         public _FinalStage taxId(Optional<FlowActionStripeTaxId> taxId) {
-            this.taxId = taxId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionStripeCreateCustomerParams build() {
-            return new FlowActionStripeCreateCustomerParams(
-                    connectionId,
-                    taxId,
-                    name,
-                    description,
-                    email,
-                    phone,
-                    taxExempt,
-                    address,
-                    metadata,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

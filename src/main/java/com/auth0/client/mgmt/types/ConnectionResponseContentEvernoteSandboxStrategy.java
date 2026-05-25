@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentEvernoteSandboxStrategy {
-    public static final ConnectionResponseContentEvernoteSandboxStrategy EVERNOTE_SANDBOX =
-            new ConnectionResponseContentEvernoteSandboxStrategy(Value.EVERNOTE_SANDBOX, "evernote-sandbox");
+
+    public static final ConnectionResponseContentEvernoteSandboxStrategy EVERNOTE_SANDBOX = new ConnectionResponseContentEvernoteSandboxStrategy(Value.EVERNOTE_SANDBOX, "evernote-sandbox");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentEvernoteSandboxStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentEvernoteSandboxStrategy
-                        && this.string.equals(((ConnectionResponseContentEvernoteSandboxStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EVERNOTE_SANDBOX:
-                return visitor.visitEvernoteSandbox();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentEvernoteSandboxStrategy valueOf(String value) {
-        switch (value) {
-            case "evernote-sandbox":
-                return EVERNOTE_SANDBOX;
-            default:
-                return new ConnectionResponseContentEvernoteSandboxStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EVERNOTE_SANDBOX,
 
-        UNKNOWN
+        EVERNOTE_SANDBOX, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEvernoteSandbox();
 
         T visitUnknown(String unknownType);

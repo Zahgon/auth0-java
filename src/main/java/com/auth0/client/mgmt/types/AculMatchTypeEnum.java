@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AculMatchTypeEnum {
+
     public static final AculMatchTypeEnum EXCLUDES_ANY = new AculMatchTypeEnum(Value.EXCLUDES_ANY, "excludes_any");
 
     public static final AculMatchTypeEnum INCLUDES_ANY = new AculMatchTypeEnum(Value.INCLUDES_ANY, "includes_any");
@@ -21,59 +22,41 @@ public final class AculMatchTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AculMatchTypeEnum && this.string.equals(((AculMatchTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EXCLUDES_ANY:
-                return visitor.visitExcludesAny();
-            case INCLUDES_ANY:
-                return visitor.visitIncludesAny();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AculMatchTypeEnum valueOf(String value) {
-        switch (value) {
-            case "excludes_any":
-                return EXCLUDES_ANY;
-            case "includes_any":
-                return INCLUDES_ANY;
-            default:
-                return new AculMatchTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        INCLUDES_ANY,
 
-        EXCLUDES_ANY,
-
-        UNKNOWN
+        INCLUDES_ANY, EXCLUDES_ANY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitIncludesAny();
 
         T visitExcludesAny();

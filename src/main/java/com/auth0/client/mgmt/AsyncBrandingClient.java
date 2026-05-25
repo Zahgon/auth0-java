@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncBrandingClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawBrandingClient rawClient;
@@ -38,61 +39,60 @@ public class AsyncBrandingClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawBrandingClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding settings.
      */
     public CompletableFuture<GetBrandingResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding settings.
      */
     public CompletableFuture<GetBrandingResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public CompletableFuture<UpdateBrandingResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public CompletableFuture<UpdateBrandingResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public CompletableFuture<UpdateBrandingResponseContent> update(UpdateBrandingRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
-    public CompletableFuture<UpdateBrandingResponseContent> update(
-            UpdateBrandingRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBrandingResponseContent> update(UpdateBrandingRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncTemplatesClient templates() {
-        return this.templatesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncThemesClient themes() {
-        return this.themesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPhoneClient phone() {
-        return this.phoneClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

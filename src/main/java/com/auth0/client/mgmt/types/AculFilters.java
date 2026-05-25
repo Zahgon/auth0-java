@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AculFilters.Builder.class)
 public final class AculFilters {
+
     private final Optional<AculMatchTypeEnum> matchType;
 
     private final Optional<List<AculClientFilter>> clients;
@@ -31,12 +32,7 @@ public final class AculFilters {
 
     private final Map<String, Object> additionalProperties;
 
-    private AculFilters(
-            Optional<AculMatchTypeEnum> matchType,
-            Optional<List<AculClientFilter>> clients,
-            Optional<List<AculOrganizationFilter>> organizations,
-            Optional<List<AculDomainFilter>> domains,
-            Map<String, Object> additionalProperties) {
+    private AculFilters(Optional<AculMatchTypeEnum> matchType, Optional<List<AculClientFilter>> clients, Optional<List<AculOrganizationFilter>> organizations, Optional<List<AculDomainFilter>> domains, Map<String, Object> additionalProperties) {
         this.matchType = matchType;
         this.clients = clients;
         this.organizations = organizations;
@@ -46,7 +42,7 @@ public final class AculFilters {
 
     @JsonProperty("match_type")
     public Optional<AculMatchTypeEnum> getMatchType() {
-        return matchType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +50,7 @@ public final class AculFilters {
      */
     @JsonProperty("clients")
     public Optional<List<AculClientFilter>> getClients() {
-        return clients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class AculFilters {
      */
     @JsonProperty("organizations")
     public Optional<List<AculOrganizationFilter>> getOrganizations() {
-        return organizations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,43 +66,40 @@ public final class AculFilters {
      */
     @JsonProperty("domains")
     public Optional<List<AculDomainFilter>> getDomains() {
-        return domains;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AculFilters && equalTo((AculFilters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AculFilters other) {
-        return matchType.equals(other.matchType)
-                && clients.equals(other.clients)
-                && organizations.equals(other.organizations)
-                && domains.equals(other.domains);
+        return matchType.equals(other.matchType) && clients.equals(other.clients) && organizations.equals(other.organizations) && domains.equals(other.domains);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.matchType, this.clients, this.organizations, this.domains);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<AculMatchTypeEnum> matchType = Optional.empty();
 
         private Optional<List<AculClientFilter>> clients = Optional.empty();
@@ -118,25 +111,20 @@ public final class AculFilters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AculFilters other) {
-            matchType(other.getMatchType());
-            clients(other.getClients());
-            organizations(other.getOrganizations());
-            domains(other.getDomains());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "match_type", nulls = Nulls.SKIP)
         public Builder matchType(Optional<AculMatchTypeEnum> matchType) {
-            this.matchType = matchType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder matchType(AculMatchTypeEnum matchType) {
-            this.matchType = Optional.ofNullable(matchType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -144,13 +132,11 @@ public final class AculFilters {
          */
         @JsonSetter(value = "clients", nulls = Nulls.SKIP)
         public Builder clients(Optional<List<AculClientFilter>> clients) {
-            this.clients = clients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clients(List<AculClientFilter> clients) {
-            this.clients = Optional.ofNullable(clients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -158,13 +144,11 @@ public final class AculFilters {
          */
         @JsonSetter(value = "organizations", nulls = Nulls.SKIP)
         public Builder organizations(Optional<List<AculOrganizationFilter>> organizations) {
-            this.organizations = organizations;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizations(List<AculOrganizationFilter> organizations) {
-            this.organizations = Optional.ofNullable(organizations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,27 +156,23 @@ public final class AculFilters {
          */
         @JsonSetter(value = "domains", nulls = Nulls.SKIP)
         public Builder domains(Optional<List<AculDomainFilter>> domains) {
-            this.domains = domains;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domains(List<AculDomainFilter> domains) {
-            this.domains = Optional.ofNullable(domains);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AculFilters build() {
-            return new AculFilters(matchType, clients, organizations, domains, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

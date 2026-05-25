@@ -23,12 +23,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateGuardianFactorsProviderPushNotificationFcmRequestContent.Builder.class)
 public final class UpdateGuardianFactorsProviderPushNotificationFcmRequestContent {
+
     private final OptionalNullable<String> serverKey;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateGuardianFactorsProviderPushNotificationFcmRequestContent(
-            OptionalNullable<String> serverKey, Map<String, Object> additionalProperties) {
+    private UpdateGuardianFactorsProviderPushNotificationFcmRequestContent(OptionalNullable<String> serverKey, Map<String, Object> additionalProperties) {
         this.serverKey = serverKey;
         this.additionalProperties = additionalProperties;
     }
@@ -36,10 +36,7 @@ public final class UpdateGuardianFactorsProviderPushNotificationFcmRequestConten
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("server_key")
     public OptionalNullable<String> getServerKey() {
-        if (serverKey == null) {
-            return OptionalNullable.absent();
-        }
-        return serverKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -50,14 +47,12 @@ public final class UpdateGuardianFactorsProviderPushNotificationFcmRequestConten
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateGuardianFactorsProviderPushNotificationFcmRequestContent
-                && equalTo((UpdateGuardianFactorsProviderPushNotificationFcmRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent other) {
@@ -66,75 +61,60 @@ public final class UpdateGuardianFactorsProviderPushNotificationFcmRequestConten
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.serverKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> serverKey = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent other) {
-            serverKey(other.getServerKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "server_key", nulls = Nulls.SKIP)
         public Builder serverKey(@Nullable OptionalNullable<String> serverKey) {
-            this.serverKey = serverKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder serverKey(String serverKey) {
-            this.serverKey = OptionalNullable.of(serverKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder serverKey(Optional<String> serverKey) {
-            if (serverKey.isPresent()) {
-                this.serverKey = OptionalNullable.of(serverKey.get());
-            } else {
-                this.serverKey = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder serverKey(com.auth0.client.mgmt.core.Nullable<String> serverKey) {
-            if (serverKey.isNull()) {
-                this.serverKey = OptionalNullable.ofNull();
-            } else if (serverKey.isEmpty()) {
-                this.serverKey = OptionalNullable.absent();
-            } else {
-                this.serverKey = OptionalNullable.of(serverKey.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateGuardianFactorsProviderPushNotificationFcmRequestContent build() {
-            return new UpdateGuardianFactorsProviderPushNotificationFcmRequestContent(serverKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

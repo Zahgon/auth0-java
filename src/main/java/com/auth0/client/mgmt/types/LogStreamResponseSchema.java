@@ -15,6 +15,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = LogStreamResponseSchema.Deserializer.class)
 public final class LogStreamResponseSchema {
+
     private final Object value;
 
     private final int type;
@@ -26,35 +27,17 @@ public final class LogStreamResponseSchema {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((LogStreamHttpResponseSchema) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((LogStreamEventBridgeResponseSchema) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((LogStreamEventGridResponseSchema) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((LogStreamDatadogResponseSchema) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((LogStreamSplunkResponseSchema) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((LogStreamSumoResponseSchema) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((LogStreamSegmentResponseSchema) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((LogStreamMixpanelResponseSchema) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamResponseSchema && equalTo((LogStreamResponseSchema) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamResponseSchema other) {
@@ -63,47 +46,48 @@ public final class LogStreamResponseSchema {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamHttpResponseSchema value) {
-        return new LogStreamResponseSchema(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamEventBridgeResponseSchema value) {
-        return new LogStreamResponseSchema(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamEventGridResponseSchema value) {
-        return new LogStreamResponseSchema(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamDatadogResponseSchema value) {
-        return new LogStreamResponseSchema(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamSplunkResponseSchema value) {
-        return new LogStreamResponseSchema(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamSumoResponseSchema value) {
-        return new LogStreamResponseSchema(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamSegmentResponseSchema value) {
-        return new LogStreamResponseSchema(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamResponseSchema of(LogStreamMixpanelResponseSchema value) {
-        return new LogStreamResponseSchema(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(LogStreamHttpResponseSchema value);
 
         T visit(LogStreamEventBridgeResponseSchema value);
@@ -122,46 +106,14 @@ public final class LogStreamResponseSchema {
     }
 
     static final class Deserializer extends StdDeserializer<LogStreamResponseSchema> {
+
         Deserializer() {
             super(LogStreamResponseSchema.class);
         }
 
         @java.lang.Override
         public LogStreamResponseSchema deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamHttpResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamEventBridgeResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamEventGridResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamDatadogResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSplunkResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSumoResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSegmentResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamMixpanelResponseSchema.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

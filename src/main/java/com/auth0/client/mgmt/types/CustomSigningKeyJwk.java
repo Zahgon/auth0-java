@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CustomSigningKeyJwk.Builder.class)
 public final class CustomSigningKeyJwk {
+
     private final CustomSigningKeyTypeEnum kty;
 
     private final Optional<String> kid;
@@ -52,22 +53,7 @@ public final class CustomSigningKeyJwk {
 
     private final Map<String, Object> additionalProperties;
 
-    private CustomSigningKeyJwk(
-            CustomSigningKeyTypeEnum kty,
-            Optional<String> kid,
-            Optional<CustomSigningKeyUseEnum> use,
-            Optional<List<CustomSigningKeyOperationEnum>> keyOps,
-            Optional<CustomSigningKeyAlgorithmEnum> alg,
-            Optional<String> n,
-            Optional<String> e,
-            Optional<CustomSigningKeyCurveEnum> crv,
-            Optional<String> x,
-            Optional<String> y,
-            Optional<String> x5U,
-            Optional<List<String>> x5C,
-            Optional<String> x5T,
-            Optional<String> x5TS256,
-            Map<String, Object> additionalProperties) {
+    private CustomSigningKeyJwk(CustomSigningKeyTypeEnum kty, Optional<String> kid, Optional<CustomSigningKeyUseEnum> use, Optional<List<CustomSigningKeyOperationEnum>> keyOps, Optional<CustomSigningKeyAlgorithmEnum> alg, Optional<String> n, Optional<String> e, Optional<CustomSigningKeyCurveEnum> crv, Optional<String> x, Optional<String> y, Optional<String> x5U, Optional<List<String>> x5C, Optional<String> x5T, Optional<String> x5TS256, Map<String, Object> additionalProperties) {
         this.kty = kty;
         this.kid = kid;
         this.use = use;
@@ -87,7 +73,7 @@ public final class CustomSigningKeyJwk {
 
     @JsonProperty("kty")
     public CustomSigningKeyTypeEnum getKty() {
-        return kty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,12 +81,12 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("kid")
     public Optional<String> getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("use")
     public Optional<CustomSigningKeyUseEnum> getUse() {
-        return use;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -108,12 +94,12 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("key_ops")
     public Optional<List<CustomSigningKeyOperationEnum>> getKeyOps() {
-        return keyOps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alg")
     public Optional<CustomSigningKeyAlgorithmEnum> getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +107,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("n")
     public Optional<String> getN() {
-        return n;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -129,12 +115,12 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("e")
     public Optional<String> getE() {
-        return e;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("crv")
     public Optional<CustomSigningKeyCurveEnum> getCrv() {
-        return crv;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -142,7 +128,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("x")
     public Optional<String> getX() {
-        return x;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -150,7 +136,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("y")
     public Optional<String> getY() {
-        return y;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -158,7 +144,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("x5u")
     public Optional<String> getX5U() {
-        return x5U;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -166,7 +152,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("x5c")
     public Optional<List<String>> getX5C() {
-        return x5C;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -174,7 +160,7 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("x5t")
     public Optional<String> getX5T() {
-        return x5T;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -182,72 +168,46 @@ public final class CustomSigningKeyJwk {
      */
     @JsonProperty("x5t#S256")
     public Optional<String> getX5TS256() {
-        return x5TS256;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CustomSigningKeyJwk && equalTo((CustomSigningKeyJwk) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CustomSigningKeyJwk other) {
-        return kty.equals(other.kty)
-                && kid.equals(other.kid)
-                && use.equals(other.use)
-                && keyOps.equals(other.keyOps)
-                && alg.equals(other.alg)
-                && n.equals(other.n)
-                && e.equals(other.e)
-                && crv.equals(other.crv)
-                && x.equals(other.x)
-                && y.equals(other.y)
-                && x5U.equals(other.x5U)
-                && x5C.equals(other.x5C)
-                && x5T.equals(other.x5T)
-                && x5TS256.equals(other.x5TS256);
+        return kty.equals(other.kty) && kid.equals(other.kid) && use.equals(other.use) && keyOps.equals(other.keyOps) && alg.equals(other.alg) && n.equals(other.n) && e.equals(other.e) && crv.equals(other.crv) && x.equals(other.x) && y.equals(other.y) && x5U.equals(other.x5U) && x5C.equals(other.x5C) && x5T.equals(other.x5T) && x5TS256.equals(other.x5TS256);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.kty,
-                this.kid,
-                this.use,
-                this.keyOps,
-                this.alg,
-                this.n,
-                this.e,
-                this.crv,
-                this.x,
-                this.y,
-                this.x5U,
-                this.x5C,
-                this.x5T,
-                this.x5TS256);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KtyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KtyStage {
+
         _FinalStage kty(@NotNull CustomSigningKeyTypeEnum kty);
 
         Builder from(CustomSigningKeyJwk other);
     }
 
     public interface _FinalStage {
+
         CustomSigningKeyJwk build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -339,6 +299,7 @@ public final class CustomSigningKeyJwk {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements KtyStage, _FinalStage {
+
         private CustomSigningKeyTypeEnum kty;
 
         private Optional<String> x5TS256 = Optional.empty();
@@ -370,32 +331,18 @@ public final class CustomSigningKeyJwk {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CustomSigningKeyJwk other) {
-            kty(other.getKty());
-            kid(other.getKid());
-            use(other.getUse());
-            keyOps(other.getKeyOps());
-            alg(other.getAlg());
-            n(other.getN());
-            e(other.getE());
-            crv(other.getCrv());
-            x(other.getX());
-            y(other.getY());
-            x5U(other.getX5U());
-            x5C(other.getX5C());
-            x5T(other.getX5T());
-            x5TS256(other.getX5TS256());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("kty")
         public _FinalStage kty(@NotNull CustomSigningKeyTypeEnum kty) {
-            this.kty = Objects.requireNonNull(kty, "kty must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -404,8 +351,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage x5TS256(String x5TS256) {
-            this.x5TS256 = Optional.ofNullable(x5TS256);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -414,8 +360,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "x5t#S256", nulls = Nulls.SKIP)
         public _FinalStage x5TS256(Optional<String> x5TS256) {
-            this.x5TS256 = x5TS256;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -424,8 +369,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage x5T(String x5T) {
-            this.x5T = Optional.ofNullable(x5T);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -434,8 +378,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "x5t", nulls = Nulls.SKIP)
         public _FinalStage x5T(Optional<String> x5T) {
-            this.x5T = x5T;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -444,8 +387,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage x5C(List<String> x5C) {
-            this.x5C = Optional.ofNullable(x5C);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -454,8 +396,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "x5c", nulls = Nulls.SKIP)
         public _FinalStage x5C(Optional<List<String>> x5C) {
-            this.x5C = x5C;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -464,8 +405,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage x5U(String x5U) {
-            this.x5U = Optional.ofNullable(x5U);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -474,8 +414,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "x5u", nulls = Nulls.SKIP)
         public _FinalStage x5U(Optional<String> x5U) {
-            this.x5U = x5U;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -484,8 +423,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage y(String y) {
-            this.y = Optional.ofNullable(y);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -494,8 +432,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "y", nulls = Nulls.SKIP)
         public _FinalStage y(Optional<String> y) {
-            this.y = y;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -504,8 +441,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage x(String x) {
-            this.x = Optional.ofNullable(x);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -514,21 +450,18 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "x", nulls = Nulls.SKIP)
         public _FinalStage x(Optional<String> x) {
-            this.x = x;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage crv(CustomSigningKeyCurveEnum crv) {
-            this.crv = Optional.ofNullable(crv);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "crv", nulls = Nulls.SKIP)
         public _FinalStage crv(Optional<CustomSigningKeyCurveEnum> crv) {
-            this.crv = crv;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -537,8 +470,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage e(String e) {
-            this.e = Optional.ofNullable(e);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -547,8 +479,7 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "e", nulls = Nulls.SKIP)
         public _FinalStage e(Optional<String> e) {
-            this.e = e;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -557,8 +488,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage n(String n) {
-            this.n = Optional.ofNullable(n);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -567,21 +497,18 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "n", nulls = Nulls.SKIP)
         public _FinalStage n(Optional<String> n) {
-            this.n = n;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage alg(CustomSigningKeyAlgorithmEnum alg) {
-            this.alg = Optional.ofNullable(alg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "alg", nulls = Nulls.SKIP)
         public _FinalStage alg(Optional<CustomSigningKeyAlgorithmEnum> alg) {
-            this.alg = alg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -590,8 +517,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage keyOps(List<CustomSigningKeyOperationEnum> keyOps) {
-            this.keyOps = Optional.ofNullable(keyOps);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -600,21 +526,18 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "key_ops", nulls = Nulls.SKIP)
         public _FinalStage keyOps(Optional<List<CustomSigningKeyOperationEnum>> keyOps) {
-            this.keyOps = keyOps;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage use(CustomSigningKeyUseEnum use) {
-            this.use = Optional.ofNullable(use);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "use", nulls = Nulls.SKIP)
         public _FinalStage use(Optional<CustomSigningKeyUseEnum> use) {
-            this.use = use;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -623,8 +546,7 @@ public final class CustomSigningKeyJwk {
          */
         @java.lang.Override
         public _FinalStage kid(String kid) {
-            this.kid = Optional.ofNullable(kid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -633,26 +555,22 @@ public final class CustomSigningKeyJwk {
         @java.lang.Override
         @JsonSetter(value = "kid", nulls = Nulls.SKIP)
         public _FinalStage kid(Optional<String> kid) {
-            this.kid = kid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CustomSigningKeyJwk build() {
-            return new CustomSigningKeyJwk(
-                    kty, kid, use, keyOps, alg, n, e, crv, x, y, x5U, x5C, x5T, x5TS256, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

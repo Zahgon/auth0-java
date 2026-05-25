@@ -21,16 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionFlowDelayFlowParams.Builder.class)
 public final class FlowActionFlowDelayFlowParams {
+
     private final FlowActionFlowDelayFlowParamsNumber number;
 
     private final Optional<FlowActionFlowDelayFlowParamsUnits> units;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionFlowDelayFlowParams(
-            FlowActionFlowDelayFlowParamsNumber number,
-            Optional<FlowActionFlowDelayFlowParamsUnits> units,
-            Map<String, Object> additionalProperties) {
+    private FlowActionFlowDelayFlowParams(FlowActionFlowDelayFlowParamsNumber number, Optional<FlowActionFlowDelayFlowParamsUnits> units, Map<String, Object> additionalProperties) {
         this.number = number;
         this.units = units;
         this.additionalProperties = additionalProperties;
@@ -38,23 +36,22 @@ public final class FlowActionFlowDelayFlowParams {
 
     @JsonProperty("number")
     public FlowActionFlowDelayFlowParamsNumber getNumber() {
-        return number;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("units")
     public Optional<FlowActionFlowDelayFlowParamsUnits> getUnits() {
-        return units;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionFlowDelayFlowParams && equalTo((FlowActionFlowDelayFlowParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionFlowDelayFlowParams other) {
@@ -63,25 +60,27 @@ public final class FlowActionFlowDelayFlowParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.number, this.units);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NumberStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NumberStage {
+
         _FinalStage number(@NotNull FlowActionFlowDelayFlowParamsNumber number);
 
         Builder from(FlowActionFlowDelayFlowParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionFlowDelayFlowParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -95,6 +94,7 @@ public final class FlowActionFlowDelayFlowParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NumberStage, _FinalStage {
+
         private FlowActionFlowDelayFlowParamsNumber number;
 
         private Optional<FlowActionFlowDelayFlowParamsUnits> units = Optional.empty();
@@ -102,50 +102,44 @@ public final class FlowActionFlowDelayFlowParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionFlowDelayFlowParams other) {
-            number(other.getNumber());
-            units(other.getUnits());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("number")
         public _FinalStage number(@NotNull FlowActionFlowDelayFlowParamsNumber number) {
-            this.number = Objects.requireNonNull(number, "number must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage units(FlowActionFlowDelayFlowParamsUnits units) {
-            this.units = Optional.ofNullable(units);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "units", nulls = Nulls.SKIP)
         public _FinalStage units(Optional<FlowActionFlowDelayFlowParamsUnits> units) {
-            this.units = units;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionFlowDelayFlowParams build() {
-            return new FlowActionFlowDelayFlowParams(number, units, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

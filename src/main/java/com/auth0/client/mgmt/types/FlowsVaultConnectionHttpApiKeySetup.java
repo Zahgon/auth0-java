@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectionHttpApiKeySetup.Builder.class)
 public final class FlowsVaultConnectionHttpApiKeySetup {
+
     private final FlowsVaultConnectionSetupTypeApiKeyEnum type;
 
     private final String name;
@@ -29,12 +30,7 @@ public final class FlowsVaultConnectionHttpApiKeySetup {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectionHttpApiKeySetup(
-            FlowsVaultConnectionSetupTypeApiKeyEnum type,
-            String name,
-            String value,
-            FlowsVaultConnectionHttpApiKeySetupInEnum in,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectionHttpApiKeySetup(FlowsVaultConnectionSetupTypeApiKeyEnum type, String name, String value, FlowsVaultConnectionHttpApiKeySetupInEnum in, Map<String, Object> additionalProperties) {
         this.type = type;
         this.name = name;
         this.value = value;
@@ -44,34 +40,32 @@ public final class FlowsVaultConnectionHttpApiKeySetup {
 
     @JsonProperty("type")
     public FlowsVaultConnectionSetupTypeApiKeyEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("in")
     public FlowsVaultConnectionHttpApiKeySetupInEnum getIn() {
-        return in;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectionHttpApiKeySetup
-                && equalTo((FlowsVaultConnectionHttpApiKeySetup) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectionHttpApiKeySetup other) {
@@ -80,37 +74,42 @@ public final class FlowsVaultConnectionHttpApiKeySetup {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.name, this.value, this.in);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         NameStage type(@NotNull FlowsVaultConnectionSetupTypeApiKeyEnum type);
 
         Builder from(FlowsVaultConnectionHttpApiKeySetup other);
     }
 
     public interface NameStage {
+
         ValueStage name(@NotNull String name);
     }
 
     public interface ValueStage {
+
         InStage value(@NotNull String value);
     }
 
     public interface InStage {
+
         _FinalStage in(@NotNull FlowsVaultConnectionHttpApiKeySetupInEnum in);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectionHttpApiKeySetup build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -120,6 +119,7 @@ public final class FlowsVaultConnectionHttpApiKeySetup {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, NameStage, ValueStage, InStage, _FinalStage {
+
         private FlowsVaultConnectionSetupTypeApiKeyEnum type;
 
         private String name;
@@ -131,60 +131,51 @@ public final class FlowsVaultConnectionHttpApiKeySetup {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectionHttpApiKeySetup other) {
-            type(other.getType());
-            name(other.getName());
-            value(other.getValue());
-            in(other.getIn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public NameStage type(@NotNull FlowsVaultConnectionSetupTypeApiKeyEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public ValueStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("value")
         public InStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("in")
         public _FinalStage in(@NotNull FlowsVaultConnectionHttpApiKeySetupInEnum in) {
-            this.in = Objects.requireNonNull(in, "in must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectionHttpApiKeySetup build() {
-            return new FlowsVaultConnectionHttpApiKeySetup(type, name, value, in, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

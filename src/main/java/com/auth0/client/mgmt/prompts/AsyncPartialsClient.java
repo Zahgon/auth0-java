@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncPartialsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawPartialsClient rawClient;
@@ -23,35 +24,34 @@ public class AsyncPartialsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawPartialsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get template partials for a prompt
      */
     public CompletableFuture<Map<String, Object>> get(PartialGroupsEnum prompt) {
-        return this.rawClient.get(prompt).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get template partials for a prompt
      */
     public CompletableFuture<Map<String, Object>> get(PartialGroupsEnum prompt, RequestOptions requestOptions) {
-        return this.rawClient.get(prompt, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set template partials for a prompt
      */
     public CompletableFuture<Void> set(PartialGroupsEnum prompt, Map<String, Object> request) {
-        return this.rawClient.set(prompt, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set template partials for a prompt
      */
-    public CompletableFuture<Void> set(
-            PartialGroupsEnum prompt, Map<String, Object> request, RequestOptions requestOptions) {
-        return this.rawClient.set(prompt, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> set(PartialGroupsEnum prompt, Map<String, Object> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientGrantSubjectTypeEnum {
+
     public static final ClientGrantSubjectTypeEnum USER = new ClientGrantSubjectTypeEnum(Value.USER, "user");
 
     public static final ClientGrantSubjectTypeEnum CLIENT = new ClientGrantSubjectTypeEnum(Value.CLIENT, "client");
@@ -21,60 +22,41 @@ public final class ClientGrantSubjectTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientGrantSubjectTypeEnum
-                        && this.string.equals(((ClientGrantSubjectTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case USER:
-                return visitor.visitUser();
-            case CLIENT:
-                return visitor.visitClient();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientGrantSubjectTypeEnum valueOf(String value) {
-        switch (value) {
-            case "user":
-                return USER;
-            case "client":
-                return CLIENT;
-            default:
-                return new ClientGrantSubjectTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CLIENT,
 
-        USER,
-
-        UNKNOWN
+        CLIENT, USER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitClient();
 
         T visitUser();

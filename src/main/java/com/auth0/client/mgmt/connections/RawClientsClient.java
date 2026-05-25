@@ -34,6 +34,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawClientsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawClientsClient(ClientOptions clientOptions) {
@@ -45,174 +46,38 @@ public class RawClientsClient {
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
     public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(String id) {
-        return get(id, GetConnectionEnabledClientsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, RequestOptions requestOptions) {
-        return get(id, GetConnectionEnabledClientsRequestParameters.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, GetConnectionEnabledClientsRequestParameters request) {
-        return get(id, request, null);
+    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(String id, GetConnectionEnabledClientsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("connections")
-                .addPathSegment(id)
-                .addPathSegments("clients");
-        QueryStringMapper.addQueryParameter(httpUrl, "take", request.getTake().orElse(50), false);
-        if (!request.getFrom().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "from", request.getFrom().orElse(null), false);
-        }
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                GetConnectionEnabledClientsResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                        responseBodyString, GetConnectionEnabledClientsResponseContent.class);
-                Optional<String> startingAfter = parsedResponse.getNext();
-                GetConnectionEnabledClientsRequestParameters nextRequest =
-                        GetConnectionEnabledClientsRequestParameters.builder()
-                                .from(request)
-                                .from(startingAfter)
-                                .build();
-                List<ConnectionEnabledClient> result = parsedResponse.getClients();
-                return new ManagementApiHttpResponse<>(
-                        new SyncPagingIterable<ConnectionEnabledClient>(
-                                startingAfter.isPresent(), result, parsedResponse, () -> get(
-                                                id, nextRequest, requestOptions)
-                                        .body()),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SyncPagingIterable<ConnectionEnabledClient>> get(String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<Void> update(
-            String id, List<UpdateEnabledClientConnectionsRequestContentItem> request) {
-        return update(id, request, null);
+    public ManagementApiHttpResponse<Void> update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<Void> update(
-            String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("connections")
-                .addPathSegment(id)
-                .addPathSegments("clients");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(null, response);
-            }
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<Void> update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

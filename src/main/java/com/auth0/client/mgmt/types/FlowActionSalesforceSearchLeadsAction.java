@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionSalesforceSearchLeadsAction {
-    public static final FlowActionSalesforceSearchLeadsAction SEARCH_LEADS =
-            new FlowActionSalesforceSearchLeadsAction(Value.SEARCH_LEADS, "SEARCH_LEADS");
+
+    public static final FlowActionSalesforceSearchLeadsAction SEARCH_LEADS = new FlowActionSalesforceSearchLeadsAction(Value.SEARCH_LEADS, "SEARCH_LEADS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionSalesforceSearchLeadsAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionSalesforceSearchLeadsAction
-                        && this.string.equals(((FlowActionSalesforceSearchLeadsAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEARCH_LEADS:
-                return visitor.visitSearchLeads();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionSalesforceSearchLeadsAction valueOf(String value) {
-        switch (value) {
-            case "SEARCH_LEADS":
-                return SEARCH_LEADS;
-            default:
-                return new FlowActionSalesforceSearchLeadsAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEARCH_LEADS,
 
-        UNKNOWN
+        SEARCH_LEADS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSearchLeads();
 
         T visitUnknown(String unknownType);

@@ -13,6 +13,7 @@ import okhttp3.Response;
 public class TelemetryInterceptor implements Interceptor {
 
     private Telemetry telemetry;
+
     private boolean enabled;
 
     public TelemetryInterceptor() {
@@ -26,30 +27,22 @@ public class TelemetryInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        if (!enabled) {
-            return chain.proceed(chain.request());
-        }
-
-        okhttp3.Request request = chain.request()
-                .newBuilder()
-                .addHeader(Telemetry.HEADER_NAME, telemetry.getValue())
-                .build();
-        return chain.proceed(request);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setTelemetry(Telemetry telemetry) {
-        this.telemetry = telemetry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Telemetry getTelemetry() {
-        return this.telemetry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

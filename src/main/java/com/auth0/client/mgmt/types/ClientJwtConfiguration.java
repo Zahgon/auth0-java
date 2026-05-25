@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientJwtConfiguration.Builder.class)
 public final class ClientJwtConfiguration {
+
     private final Optional<Integer> lifetimeInSeconds;
 
     private final Optional<Boolean> secretEncoded;
@@ -30,12 +31,7 @@ public final class ClientJwtConfiguration {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientJwtConfiguration(
-            Optional<Integer> lifetimeInSeconds,
-            Optional<Boolean> secretEncoded,
-            Optional<Map<String, Object>> scopes,
-            Optional<SigningAlgorithmEnum> alg,
-            Map<String, Object> additionalProperties) {
+    private ClientJwtConfiguration(Optional<Integer> lifetimeInSeconds, Optional<Boolean> secretEncoded, Optional<Map<String, Object>> scopes, Optional<SigningAlgorithmEnum> alg, Map<String, Object> additionalProperties) {
         this.lifetimeInSeconds = lifetimeInSeconds;
         this.secretEncoded = secretEncoded;
         this.scopes = scopes;
@@ -48,7 +44,7 @@ public final class ClientJwtConfiguration {
      */
     @JsonProperty("lifetime_in_seconds")
     public Optional<Integer> getLifetimeInSeconds() {
-        return lifetimeInSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,53 +52,50 @@ public final class ClientJwtConfiguration {
      */
     @JsonProperty("secret_encoded")
     public Optional<Boolean> getSecretEncoded() {
-        return secretEncoded;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scopes")
     public Optional<Map<String, Object>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alg")
     public Optional<SigningAlgorithmEnum> getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientJwtConfiguration && equalTo((ClientJwtConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientJwtConfiguration other) {
-        return lifetimeInSeconds.equals(other.lifetimeInSeconds)
-                && secretEncoded.equals(other.secretEncoded)
-                && scopes.equals(other.scopes)
-                && alg.equals(other.alg);
+        return lifetimeInSeconds.equals(other.lifetimeInSeconds) && secretEncoded.equals(other.secretEncoded) && scopes.equals(other.scopes) && alg.equals(other.alg);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.lifetimeInSeconds, this.secretEncoded, this.scopes, this.alg);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> lifetimeInSeconds = Optional.empty();
 
         private Optional<Boolean> secretEncoded = Optional.empty();
@@ -114,14 +107,11 @@ public final class ClientJwtConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientJwtConfiguration other) {
-            lifetimeInSeconds(other.getLifetimeInSeconds());
-            secretEncoded(other.getSecretEncoded());
-            scopes(other.getScopes());
-            alg(other.getAlg());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,13 +119,11 @@ public final class ClientJwtConfiguration {
          */
         @JsonSetter(value = "lifetime_in_seconds", nulls = Nulls.SKIP)
         public Builder lifetimeInSeconds(Optional<Integer> lifetimeInSeconds) {
-            this.lifetimeInSeconds = lifetimeInSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lifetimeInSeconds(Integer lifetimeInSeconds) {
-            this.lifetimeInSeconds = Optional.ofNullable(lifetimeInSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,49 +131,41 @@ public final class ClientJwtConfiguration {
          */
         @JsonSetter(value = "secret_encoded", nulls = Nulls.SKIP)
         public Builder secretEncoded(Optional<Boolean> secretEncoded) {
-            this.secretEncoded = secretEncoded;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder secretEncoded(Boolean secretEncoded) {
-            this.secretEncoded = Optional.ofNullable(secretEncoded);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<Map<String, Object>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(Map<String, Object> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "alg", nulls = Nulls.SKIP)
         public Builder alg(Optional<SigningAlgorithmEnum> alg) {
-            this.alg = alg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder alg(SigningAlgorithmEnum alg) {
-            this.alg = Optional.ofNullable(alg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientJwtConfiguration build() {
-            return new ClientJwtConfiguration(lifetimeInSeconds, secretEncoded, scopes, alg, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

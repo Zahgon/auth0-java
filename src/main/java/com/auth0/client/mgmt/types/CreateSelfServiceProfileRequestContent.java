@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateSelfServiceProfileRequestContent.Builder.class)
 public final class CreateSelfServiceProfileRequestContent {
+
     private final String name;
 
     private final Optional<String> description;
@@ -36,14 +37,7 @@ public final class CreateSelfServiceProfileRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateSelfServiceProfileRequestContent(
-            String name,
-            Optional<String> description,
-            Optional<SelfServiceProfileBrandingProperties> branding,
-            Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies,
-            Optional<List<SelfServiceProfileUserAttribute>> userAttributes,
-            Optional<String> userAttributeProfileId,
-            Map<String, Object> additionalProperties) {
+    private CreateSelfServiceProfileRequestContent(String name, Optional<String> description, Optional<SelfServiceProfileBrandingProperties> branding, Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies, Optional<List<SelfServiceProfileUserAttribute>> userAttributes, Optional<String> userAttributeProfileId, Map<String, Object> additionalProperties) {
         this.name = name;
         this.description = description;
         this.branding = branding;
@@ -58,7 +52,7 @@ public final class CreateSelfServiceProfileRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,12 +60,12 @@ public final class CreateSelfServiceProfileRequestContent {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("branding")
     public Optional<SelfServiceProfileBrandingProperties> getBranding() {
-        return branding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,7 +73,7 @@ public final class CreateSelfServiceProfileRequestContent {
      */
     @JsonProperty("allowed_strategies")
     public Optional<List<SelfServiceProfileAllowedStrategyEnum>> getAllowedStrategies() {
-        return allowedStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,7 +81,7 @@ public final class CreateSelfServiceProfileRequestContent {
      */
     @JsonProperty("user_attributes")
     public Optional<List<SelfServiceProfileUserAttribute>> getUserAttributes() {
-        return userAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,51 +89,39 @@ public final class CreateSelfServiceProfileRequestContent {
      */
     @JsonProperty("user_attribute_profile_id")
     public Optional<String> getUserAttributeProfileId() {
-        return userAttributeProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateSelfServiceProfileRequestContent
-                && equalTo((CreateSelfServiceProfileRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateSelfServiceProfileRequestContent other) {
-        return name.equals(other.name)
-                && description.equals(other.description)
-                && branding.equals(other.branding)
-                && allowedStrategies.equals(other.allowedStrategies)
-                && userAttributes.equals(other.userAttributes)
-                && userAttributeProfileId.equals(other.userAttributeProfileId);
+        return name.equals(other.name) && description.equals(other.description) && branding.equals(other.branding) && allowedStrategies.equals(other.allowedStrategies) && userAttributes.equals(other.userAttributes) && userAttributeProfileId.equals(other.userAttributeProfileId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.description,
-                this.branding,
-                this.allowedStrategies,
-                this.userAttributes,
-                this.userAttributeProfileId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of the self-service Profile.</p>
          */
@@ -149,6 +131,7 @@ public final class CreateSelfServiceProfileRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateSelfServiceProfileRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -190,6 +173,7 @@ public final class CreateSelfServiceProfileRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<String> userAttributeProfileId = Optional.empty();
@@ -205,17 +189,12 @@ public final class CreateSelfServiceProfileRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateSelfServiceProfileRequestContent other) {
-            name(other.getName());
-            description(other.getDescription());
-            branding(other.getBranding());
-            allowedStrategies(other.getAllowedStrategies());
-            userAttributes(other.getUserAttributes());
-            userAttributeProfileId(other.getUserAttributeProfileId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -226,8 +205,7 @@ public final class CreateSelfServiceProfileRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -236,8 +214,7 @@ public final class CreateSelfServiceProfileRequestContent {
          */
         @java.lang.Override
         public _FinalStage userAttributeProfileId(String userAttributeProfileId) {
-            this.userAttributeProfileId = Optional.ofNullable(userAttributeProfileId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -246,8 +223,7 @@ public final class CreateSelfServiceProfileRequestContent {
         @java.lang.Override
         @JsonSetter(value = "user_attribute_profile_id", nulls = Nulls.SKIP)
         public _FinalStage userAttributeProfileId(Optional<String> userAttributeProfileId) {
-            this.userAttributeProfileId = userAttributeProfileId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -256,8 +232,7 @@ public final class CreateSelfServiceProfileRequestContent {
          */
         @java.lang.Override
         public _FinalStage userAttributes(List<SelfServiceProfileUserAttribute> userAttributes) {
-            this.userAttributes = Optional.ofNullable(userAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -266,8 +241,7 @@ public final class CreateSelfServiceProfileRequestContent {
         @java.lang.Override
         @JsonSetter(value = "user_attributes", nulls = Nulls.SKIP)
         public _FinalStage userAttributes(Optional<List<SelfServiceProfileUserAttribute>> userAttributes) {
-            this.userAttributes = userAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -276,8 +250,7 @@ public final class CreateSelfServiceProfileRequestContent {
          */
         @java.lang.Override
         public _FinalStage allowedStrategies(List<SelfServiceProfileAllowedStrategyEnum> allowedStrategies) {
-            this.allowedStrategies = Optional.ofNullable(allowedStrategies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -286,21 +259,18 @@ public final class CreateSelfServiceProfileRequestContent {
         @java.lang.Override
         @JsonSetter(value = "allowed_strategies", nulls = Nulls.SKIP)
         public _FinalStage allowedStrategies(Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies) {
-            this.allowedStrategies = allowedStrategies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage branding(SelfServiceProfileBrandingProperties branding) {
-            this.branding = Optional.ofNullable(branding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "branding", nulls = Nulls.SKIP)
         public _FinalStage branding(Optional<SelfServiceProfileBrandingProperties> branding) {
-            this.branding = branding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -309,8 +279,7 @@ public final class CreateSelfServiceProfileRequestContent {
          */
         @java.lang.Override
         public _FinalStage description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -319,32 +288,22 @@ public final class CreateSelfServiceProfileRequestContent {
         @java.lang.Override
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public _FinalStage description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateSelfServiceProfileRequestContent build() {
-            return new CreateSelfServiceProfileRequestContent(
-                    name,
-                    description,
-                    branding,
-                    allowedStrategies,
-                    userAttributes,
-                    userAttributeProfileId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

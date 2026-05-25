@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordDefaultDictionariesEnum {
-    public static final PasswordDefaultDictionariesEnum EN10K =
-            new PasswordDefaultDictionariesEnum(Value.EN10K, "en_10k");
 
-    public static final PasswordDefaultDictionariesEnum EN100K =
-            new PasswordDefaultDictionariesEnum(Value.EN100K, "en_100k");
+    public static final PasswordDefaultDictionariesEnum EN10K = new PasswordDefaultDictionariesEnum(Value.EN10K, "en_10k");
+
+    public static final PasswordDefaultDictionariesEnum EN100K = new PasswordDefaultDictionariesEnum(Value.EN100K, "en_100k");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class PasswordDefaultDictionariesEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordDefaultDictionariesEnum
-                        && this.string.equals(((PasswordDefaultDictionariesEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EN10K:
-                return visitor.visitEn10K();
-            case EN100K:
-                return visitor.visitEn100K();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordDefaultDictionariesEnum valueOf(String value) {
-        switch (value) {
-            case "en_10k":
-                return EN10K;
-            case "en_100k":
-                return EN100K;
-            default:
-                return new PasswordDefaultDictionariesEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EN10K,
 
-        EN100K,
-
-        UNKNOWN
+        EN10K, EN100K, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEn10K();
 
         T visitEn100K();

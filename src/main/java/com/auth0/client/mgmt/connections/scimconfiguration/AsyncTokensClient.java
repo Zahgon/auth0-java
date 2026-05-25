@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTokensClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTokensClient rawClient;
@@ -25,63 +26,62 @@ public class AsyncTokensClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTokensClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves all scim tokens by its connection <code>id</code>.
      */
     public CompletableFuture<List<ScimTokenItem>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves all scim tokens by its connection <code>id</code>.
      */
     public CompletableFuture<List<ScimTokenItem>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CompletableFuture<CreateScimTokenResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CompletableFuture<CreateScimTokenResponseContent> create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
     public CompletableFuture<CreateScimTokenResponseContent> create(String id, CreateScimTokenRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim token for a scim client.
      */
-    public CompletableFuture<CreateScimTokenResponseContent> create(
-            String id, CreateScimTokenRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateScimTokenResponseContent> create(String id, CreateScimTokenRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim token by its connection <code>id</code> and <code>tokenId</code>.
      */
     public CompletableFuture<Void> delete(String id, String tokenId) {
-        return this.rawClient.delete(id, tokenId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim token by its connection <code>id</code> and <code>tokenId</code>.
      */
     public CompletableFuture<Void> delete(String id, String tokenId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, tokenId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

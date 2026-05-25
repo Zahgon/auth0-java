@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise.Builder.class)
 public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise {
+
     private final String connection;
 
     private final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId;
@@ -33,13 +34,7 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise(
-            String connection,
-            EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId,
-            Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData,
-            EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider,
-            boolean isSocial,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise(String connection, EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId, Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData, EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider, boolean isSocial, Map<String, Object> additionalProperties) {
         this.connection = connection;
         this.userId = userId;
         this.profileData = profileData;
@@ -53,64 +48,59 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
      */
     @JsonProperty("connection")
     public String getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_id")
     public EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("profileData")
     public Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> getProfileData() {
-        return profileData;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("provider")
     public EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("isSocial")
     public boolean getIsSocial() {
-        return isSocial;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise
-                && equalTo((EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise other) {
-        return connection.equals(other.connection)
-                && userId.equals(other.userId)
-                && profileData.equals(other.profileData)
-                && provider.equals(other.provider)
-                && isSocial == other.isSocial;
+        return connection.equals(other.connection) && userId.equals(other.userId) && profileData.equals(other.profileData) && provider.equals(other.provider) && isSocial == other.isSocial;
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connection, this.userId, this.profileData, this.provider, this.isSocial);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionStage {
+
         /**
          * <p>Name of the connection containing this identity.</p>
          */
@@ -120,34 +110,36 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
     }
 
     public interface UserIdStage {
+
         ProviderStage userId(@NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId);
     }
 
     public interface ProviderStage {
-        IsSocialStage provider(
-                @NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider);
+
+        IsSocialStage provider(@NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider);
     }
 
     public interface IsSocialStage {
+
         _FinalStage isSocial(boolean isSocial);
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise build();
 
         _FinalStage additionalProperty(String key, Object value);
 
         _FinalStage additionalProperties(Map<String, Object> additionalProperties);
 
-        _FinalStage profileData(
-                Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData);
+        _FinalStage profileData(Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData);
 
         _FinalStage profileData(EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData profileData);
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ConnectionStage, UserIdStage, ProviderStage, IsSocialStage, _FinalStage {
+    public static final class Builder implements ConnectionStage, UserIdStage, ProviderStage, IsSocialStage, _FinalStage {
+
         private String connection;
 
         private EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId;
@@ -156,22 +148,17 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
 
         private boolean isSocial;
 
-        private Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData =
-                Optional.empty();
+        private Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise other) {
-            connection(other.getConnection());
-            userId(other.getUserId());
-            profileData(other.getProfileData());
-            provider(other.getProvider());
-            isSocial(other.getIsSocial());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,64 +169,51 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
         @java.lang.Override
         @JsonSetter("connection")
         public UserIdStage connection(@NotNull String connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("user_id")
-        public ProviderStage userId(
-                @NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+        public ProviderStage userId(@NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseUserId userId) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("provider")
-        public IsSocialStage provider(
-                @NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider) {
-            this.provider = Objects.requireNonNull(provider, "provider must not be null");
-            return this;
+        public IsSocialStage provider(@NotNull EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum provider) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("isSocial")
         public _FinalStage isSocial(boolean isSocial) {
-            this.isSocial = isSocial;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage profileData(
-                EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData profileData) {
-            this.profileData = Optional.ofNullable(profileData);
-            return this;
+        public _FinalStage profileData(EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData profileData) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "profileData", nulls = Nulls.SKIP)
-        public _FinalStage profileData(
-                Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData) {
-            this.profileData = profileData;
-            return this;
+        public _FinalStage profileData(Optional<EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProfileData> profileData) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise build() {
-            return new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterprise(
-                    connection, userId, profileData, provider, isSocial, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

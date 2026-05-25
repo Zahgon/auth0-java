@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0SendEmailAction {
-    public static final FlowActionAuth0SendEmailAction SEND_EMAIL =
-            new FlowActionAuth0SendEmailAction(Value.SEND_EMAIL, "SEND_EMAIL");
+
+    public static final FlowActionAuth0SendEmailAction SEND_EMAIL = new FlowActionAuth0SendEmailAction(Value.SEND_EMAIL, "SEND_EMAIL");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAuth0SendEmailAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0SendEmailAction
-                        && this.string.equals(((FlowActionAuth0SendEmailAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEND_EMAIL:
-                return visitor.visitSendEmail();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0SendEmailAction valueOf(String value) {
-        switch (value) {
-            case "SEND_EMAIL":
-                return SEND_EMAIL;
-            default:
-                return new FlowActionAuth0SendEmailAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEND_EMAIL,
 
-        UNKNOWN
+        SEND_EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendEmail();
 
         T visitUnknown(String unknownType);

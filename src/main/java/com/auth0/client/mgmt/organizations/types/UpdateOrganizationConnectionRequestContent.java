@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateOrganizationConnectionRequestContent.Builder.class)
 public final class UpdateOrganizationConnectionRequestContent {
+
     private final Optional<Boolean> assignMembershipOnLogin;
 
     private final Optional<Boolean> isSignupEnabled;
@@ -28,11 +29,7 @@ public final class UpdateOrganizationConnectionRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateOrganizationConnectionRequestContent(
-            Optional<Boolean> assignMembershipOnLogin,
-            Optional<Boolean> isSignupEnabled,
-            Optional<Boolean> showAsButton,
-            Map<String, Object> additionalProperties) {
+    private UpdateOrganizationConnectionRequestContent(Optional<Boolean> assignMembershipOnLogin, Optional<Boolean> isSignupEnabled, Optional<Boolean> showAsButton, Map<String, Object> additionalProperties) {
         this.assignMembershipOnLogin = assignMembershipOnLogin;
         this.isSignupEnabled = isSignupEnabled;
         this.showAsButton = showAsButton;
@@ -44,7 +41,7 @@ public final class UpdateOrganizationConnectionRequestContent {
      */
     @JsonProperty("assign_membership_on_login")
     public Optional<Boolean> getAssignMembershipOnLogin() {
-        return assignMembershipOnLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class UpdateOrganizationConnectionRequestContent {
      */
     @JsonProperty("is_signup_enabled")
     public Optional<Boolean> getIsSignupEnabled() {
-        return isSignupEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,43 +57,40 @@ public final class UpdateOrganizationConnectionRequestContent {
      */
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateOrganizationConnectionRequestContent
-                && equalTo((UpdateOrganizationConnectionRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateOrganizationConnectionRequestContent other) {
-        return assignMembershipOnLogin.equals(other.assignMembershipOnLogin)
-                && isSignupEnabled.equals(other.isSignupEnabled)
-                && showAsButton.equals(other.showAsButton);
+        return assignMembershipOnLogin.equals(other.assignMembershipOnLogin) && isSignupEnabled.equals(other.isSignupEnabled) && showAsButton.equals(other.showAsButton);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.assignMembershipOnLogin, this.isSignupEnabled, this.showAsButton);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> assignMembershipOnLogin = Optional.empty();
 
         private Optional<Boolean> isSignupEnabled = Optional.empty();
@@ -106,13 +100,11 @@ public final class UpdateOrganizationConnectionRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateOrganizationConnectionRequestContent other) {
-            assignMembershipOnLogin(other.getAssignMembershipOnLogin());
-            isSignupEnabled(other.getIsSignupEnabled());
-            showAsButton(other.getShowAsButton());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -120,13 +112,11 @@ public final class UpdateOrganizationConnectionRequestContent {
          */
         @JsonSetter(value = "assign_membership_on_login", nulls = Nulls.SKIP)
         public Builder assignMembershipOnLogin(Optional<Boolean> assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = assignMembershipOnLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder assignMembershipOnLogin(Boolean assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = Optional.ofNullable(assignMembershipOnLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,13 +124,11 @@ public final class UpdateOrganizationConnectionRequestContent {
          */
         @JsonSetter(value = "is_signup_enabled", nulls = Nulls.SKIP)
         public Builder isSignupEnabled(Optional<Boolean> isSignupEnabled) {
-            this.isSignupEnabled = isSignupEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isSignupEnabled(Boolean isSignupEnabled) {
-            this.isSignupEnabled = Optional.ofNullable(isSignupEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,28 +136,23 @@ public final class UpdateOrganizationConnectionRequestContent {
          */
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public Builder showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateOrganizationConnectionRequestContent build() {
-            return new UpdateOrganizationConnectionRequestContent(
-                    assignMembershipOnLogin, isSignupEnabled, showAsButton, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

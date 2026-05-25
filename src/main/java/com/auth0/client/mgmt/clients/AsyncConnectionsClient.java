@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.ConnectionForList;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawConnectionsClient rawClient;
@@ -24,7 +25,7 @@ public class AsyncConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -39,7 +40,7 @@ public class AsyncConnectionsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<ConnectionForList>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +55,7 @@ public class AsyncConnectionsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<ConnectionForList>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +70,7 @@ public class AsyncConnectionsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<ConnectionForList>> get(String id, ConnectionsGetRequest request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,8 +84,7 @@ public class AsyncConnectionsClient {
      *   </li>
      * </ul></p>
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionForList>> get(
-            String id, ConnectionsGetRequest request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionForList>> get(String id, ConnectionsGetRequest request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

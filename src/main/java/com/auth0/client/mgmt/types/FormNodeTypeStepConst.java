@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormNodeTypeStepConst {
+
     public static final FormNodeTypeStepConst STEP = new FormNodeTypeStepConst(Value.STEP, "STEP");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormNodeTypeStepConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormNodeTypeStepConst
-                        && this.string.equals(((FormNodeTypeStepConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case STEP:
-                return visitor.visitStep();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormNodeTypeStepConst valueOf(String value) {
-        switch (value) {
-            case "STEP":
-                return STEP;
-            default:
-                return new FormNodeTypeStepConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STEP,
 
-        UNKNOWN
+        STEP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStep();
 
         T visitUnknown(String unknownType);

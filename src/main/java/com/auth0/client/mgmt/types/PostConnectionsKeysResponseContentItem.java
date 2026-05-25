@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PostConnectionsKeysResponseContentItem.Builder.class)
 public final class PostConnectionsKeysResponseContentItem {
+
     private final String kid;
 
     private final String cert;
@@ -45,19 +46,7 @@ public final class PostConnectionsKeysResponseContentItem {
 
     private final Map<String, Object> additionalProperties;
 
-    private PostConnectionsKeysResponseContentItem(
-            String kid,
-            String cert,
-            Optional<String> pkcs,
-            Optional<Boolean> current,
-            Optional<Boolean> next,
-            Optional<String> currentSince,
-            String fingerprint,
-            String thumbprint,
-            Optional<String> algorithm,
-            Optional<ConnectionKeyUseEnum> keyUse,
-            Optional<String> subjectDn,
-            Map<String, Object> additionalProperties) {
+    private PostConnectionsKeysResponseContentItem(String kid, String cert, Optional<String> pkcs, Optional<Boolean> current, Optional<Boolean> next, Optional<String> currentSince, String fingerprint, String thumbprint, Optional<String> algorithm, Optional<ConnectionKeyUseEnum> keyUse, Optional<String> subjectDn, Map<String, Object> additionalProperties) {
         this.kid = kid;
         this.cert = cert;
         this.pkcs = pkcs;
@@ -77,7 +66,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +74,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("cert")
     public String getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -93,7 +82,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("pkcs")
     public Optional<String> getPkcs() {
-        return pkcs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +90,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("current")
     public Optional<Boolean> getCurrent() {
-        return current;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,7 +98,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("next")
     public Optional<Boolean> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,7 +106,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("current_since")
     public Optional<String> getCurrentSince() {
-        return currentSince;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,7 +114,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("fingerprint")
     public String getFingerprint() {
-        return fingerprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,7 +122,7 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("thumbprint")
     public String getThumbprint() {
-        return thumbprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,71 +130,49 @@ public final class PostConnectionsKeysResponseContentItem {
      */
     @JsonProperty("algorithm")
     public Optional<String> getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("key_use")
     public Optional<ConnectionKeyUseEnum> getKeyUse() {
-        return keyUse;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject_dn")
     public Optional<String> getSubjectDn() {
-        return subjectDn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PostConnectionsKeysResponseContentItem
-                && equalTo((PostConnectionsKeysResponseContentItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PostConnectionsKeysResponseContentItem other) {
-        return kid.equals(other.kid)
-                && cert.equals(other.cert)
-                && pkcs.equals(other.pkcs)
-                && current.equals(other.current)
-                && next.equals(other.next)
-                && currentSince.equals(other.currentSince)
-                && fingerprint.equals(other.fingerprint)
-                && thumbprint.equals(other.thumbprint)
-                && algorithm.equals(other.algorithm)
-                && keyUse.equals(other.keyUse)
-                && subjectDn.equals(other.subjectDn);
+        return kid.equals(other.kid) && cert.equals(other.cert) && pkcs.equals(other.pkcs) && current.equals(other.current) && next.equals(other.next) && currentSince.equals(other.currentSince) && fingerprint.equals(other.fingerprint) && thumbprint.equals(other.thumbprint) && algorithm.equals(other.algorithm) && keyUse.equals(other.keyUse) && subjectDn.equals(other.subjectDn);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.kid,
-                this.cert,
-                this.pkcs,
-                this.current,
-                this.next,
-                this.currentSince,
-                this.fingerprint,
-                this.thumbprint,
-                this.algorithm,
-                this.keyUse,
-                this.subjectDn);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KidStage {
+
         /**
          * <p>The key id of the signing key</p>
          */
@@ -215,6 +182,7 @@ public final class PostConnectionsKeysResponseContentItem {
     }
 
     public interface CertStage {
+
         /**
          * <p>The public certificate of the signing key</p>
          */
@@ -222,6 +190,7 @@ public final class PostConnectionsKeysResponseContentItem {
     }
 
     public interface FingerprintStage {
+
         /**
          * <p>The cert fingerprint</p>
          */
@@ -229,6 +198,7 @@ public final class PostConnectionsKeysResponseContentItem {
     }
 
     public interface ThumbprintStage {
+
         /**
          * <p>The cert thumbprint</p>
          */
@@ -236,6 +206,7 @@ public final class PostConnectionsKeysResponseContentItem {
     }
 
     public interface _FinalStage {
+
         PostConnectionsKeysResponseContentItem build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -288,6 +259,7 @@ public final class PostConnectionsKeysResponseContentItem {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements KidStage, CertStage, FingerprintStage, ThumbprintStage, _FinalStage {
+
         private String kid;
 
         private String cert;
@@ -313,22 +285,12 @@ public final class PostConnectionsKeysResponseContentItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(PostConnectionsKeysResponseContentItem other) {
-            kid(other.getKid());
-            cert(other.getCert());
-            pkcs(other.getPkcs());
-            current(other.getCurrent());
-            next(other.getNext());
-            currentSince(other.getCurrentSince());
-            fingerprint(other.getFingerprint());
-            thumbprint(other.getThumbprint());
-            algorithm(other.getAlgorithm());
-            keyUse(other.getKeyUse());
-            subjectDn(other.getSubjectDn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -339,8 +301,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter("kid")
         public CertStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,8 +312,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter("cert")
         public FingerprintStage cert(@NotNull String cert) {
-            this.cert = Objects.requireNonNull(cert, "cert must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -363,8 +323,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter("fingerprint")
         public ThumbprintStage fingerprint(@NotNull String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint, "fingerprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -375,34 +334,29 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter("thumbprint")
         public _FinalStage thumbprint(@NotNull String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint, "thumbprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subjectDn(String subjectDn) {
-            this.subjectDn = Optional.ofNullable(subjectDn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subject_dn", nulls = Nulls.SKIP)
         public _FinalStage subjectDn(Optional<String> subjectDn) {
-            this.subjectDn = subjectDn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage keyUse(ConnectionKeyUseEnum keyUse) {
-            this.keyUse = Optional.ofNullable(keyUse);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "key_use", nulls = Nulls.SKIP)
         public _FinalStage keyUse(Optional<ConnectionKeyUseEnum> keyUse) {
-            this.keyUse = keyUse;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -411,8 +365,7 @@ public final class PostConnectionsKeysResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage algorithm(String algorithm) {
-            this.algorithm = Optional.ofNullable(algorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -421,8 +374,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "algorithm", nulls = Nulls.SKIP)
         public _FinalStage algorithm(Optional<String> algorithm) {
-            this.algorithm = algorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -431,8 +383,7 @@ public final class PostConnectionsKeysResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage currentSince(String currentSince) {
-            this.currentSince = Optional.ofNullable(currentSince);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -441,8 +392,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "current_since", nulls = Nulls.SKIP)
         public _FinalStage currentSince(Optional<String> currentSince) {
-            this.currentSince = currentSince;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -451,8 +401,7 @@ public final class PostConnectionsKeysResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage next(Boolean next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -461,8 +410,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public _FinalStage next(Optional<Boolean> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -471,8 +419,7 @@ public final class PostConnectionsKeysResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage current(Boolean current) {
-            this.current = Optional.ofNullable(current);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -481,8 +428,7 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "current", nulls = Nulls.SKIP)
         public _FinalStage current(Optional<Boolean> current) {
-            this.current = current;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -491,8 +437,7 @@ public final class PostConnectionsKeysResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage pkcs(String pkcs) {
-            this.pkcs = Optional.ofNullable(pkcs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -501,37 +446,22 @@ public final class PostConnectionsKeysResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "pkcs", nulls = Nulls.SKIP)
         public _FinalStage pkcs(Optional<String> pkcs) {
-            this.pkcs = pkcs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public PostConnectionsKeysResponseContentItem build() {
-            return new PostConnectionsKeysResponseContentItem(
-                    kid,
-                    cert,
-                    pkcs,
-                    current,
-                    next,
-                    currentSince,
-                    fingerprint,
-                    thumbprint,
-                    algorithm,
-                    keyUse,
-                    subjectDn,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

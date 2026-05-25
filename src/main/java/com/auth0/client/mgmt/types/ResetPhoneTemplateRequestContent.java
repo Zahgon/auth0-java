@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResetPhoneTemplateRequestContent implements WrappedAlias {
+
     private final Object value;
 
     private ResetPhoneTemplateRequestContent(Object value) {
@@ -16,28 +17,26 @@ public final class ResetPhoneTemplateRequestContent implements WrappedAlias {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return this == other
-                || (other instanceof ResetPhoneTemplateRequestContent
-                        && this.value.equals(((ResetPhoneTemplateRequestContent) other).value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return value.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResetPhoneTemplateRequestContent of(Object value) {
-        return new ResetPhoneTemplateRequestContent(value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

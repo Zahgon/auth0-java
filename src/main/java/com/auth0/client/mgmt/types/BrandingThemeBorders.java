@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemeBorders.Builder.class)
 public final class BrandingThemeBorders {
+
     private final double buttonBorderRadius;
 
     private final double buttonBorderWeight;
@@ -39,17 +40,7 @@ public final class BrandingThemeBorders {
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingThemeBorders(
-            double buttonBorderRadius,
-            double buttonBorderWeight,
-            BrandingThemeBordersButtonsStyleEnum buttonsStyle,
-            double inputBorderRadius,
-            double inputBorderWeight,
-            BrandingThemeBordersInputsStyleEnum inputsStyle,
-            boolean showWidgetShadow,
-            double widgetBorderWeight,
-            double widgetCornerRadius,
-            Map<String, Object> additionalProperties) {
+    private BrandingThemeBorders(double buttonBorderRadius, double buttonBorderWeight, BrandingThemeBordersButtonsStyleEnum buttonsStyle, double inputBorderRadius, double inputBorderWeight, BrandingThemeBordersInputsStyleEnum inputsStyle, boolean showWidgetShadow, double widgetBorderWeight, double widgetCornerRadius, Map<String, Object> additionalProperties) {
         this.buttonBorderRadius = buttonBorderRadius;
         this.buttonBorderWeight = buttonBorderWeight;
         this.buttonsStyle = buttonsStyle;
@@ -67,7 +58,7 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("button_border_radius")
     public double getButtonBorderRadius() {
-        return buttonBorderRadius;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,12 +66,12 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("button_border_weight")
     public double getButtonBorderWeight() {
-        return buttonBorderWeight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("buttons_style")
     public BrandingThemeBordersButtonsStyleEnum getButtonsStyle() {
-        return buttonsStyle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +79,7 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("input_border_radius")
     public double getInputBorderRadius() {
-        return inputBorderRadius;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,12 +87,12 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("input_border_weight")
     public double getInputBorderWeight() {
-        return inputBorderWeight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("inputs_style")
     public BrandingThemeBordersInputsStyleEnum getInputsStyle() {
-        return inputsStyle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,7 +100,7 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("show_widget_shadow")
     public boolean getShowWidgetShadow() {
-        return showWidgetShadow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,7 +108,7 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("widget_border_weight")
     public double getWidgetBorderWeight() {
-        return widgetBorderWeight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,56 +116,39 @@ public final class BrandingThemeBorders {
      */
     @JsonProperty("widget_corner_radius")
     public double getWidgetCornerRadius() {
-        return widgetCornerRadius;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemeBorders && equalTo((BrandingThemeBorders) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemeBorders other) {
-        return buttonBorderRadius == other.buttonBorderRadius
-                && buttonBorderWeight == other.buttonBorderWeight
-                && buttonsStyle.equals(other.buttonsStyle)
-                && inputBorderRadius == other.inputBorderRadius
-                && inputBorderWeight == other.inputBorderWeight
-                && inputsStyle.equals(other.inputsStyle)
-                && showWidgetShadow == other.showWidgetShadow
-                && widgetBorderWeight == other.widgetBorderWeight
-                && widgetCornerRadius == other.widgetCornerRadius;
+        return buttonBorderRadius == other.buttonBorderRadius && buttonBorderWeight == other.buttonBorderWeight && buttonsStyle.equals(other.buttonsStyle) && inputBorderRadius == other.inputBorderRadius && inputBorderWeight == other.inputBorderWeight && inputsStyle.equals(other.inputsStyle) && showWidgetShadow == other.showWidgetShadow && widgetBorderWeight == other.widgetBorderWeight && widgetCornerRadius == other.widgetCornerRadius;
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.buttonBorderRadius,
-                this.buttonBorderWeight,
-                this.buttonsStyle,
-                this.inputBorderRadius,
-                this.inputBorderWeight,
-                this.inputsStyle,
-                this.showWidgetShadow,
-                this.widgetBorderWeight,
-                this.widgetCornerRadius);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ButtonBorderRadiusStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ButtonBorderRadiusStage {
+
         /**
          * <p>Button border radius</p>
          */
@@ -184,6 +158,7 @@ public final class BrandingThemeBorders {
     }
 
     public interface ButtonBorderWeightStage {
+
         /**
          * <p>Button border weight</p>
          */
@@ -191,10 +166,12 @@ public final class BrandingThemeBorders {
     }
 
     public interface ButtonsStyleStage {
+
         InputBorderRadiusStage buttonsStyle(@NotNull BrandingThemeBordersButtonsStyleEnum buttonsStyle);
     }
 
     public interface InputBorderRadiusStage {
+
         /**
          * <p>Input border radius</p>
          */
@@ -202,6 +179,7 @@ public final class BrandingThemeBorders {
     }
 
     public interface InputBorderWeightStage {
+
         /**
          * <p>Input border weight</p>
          */
@@ -209,10 +187,12 @@ public final class BrandingThemeBorders {
     }
 
     public interface InputsStyleStage {
+
         ShowWidgetShadowStage inputsStyle(@NotNull BrandingThemeBordersInputsStyleEnum inputsStyle);
     }
 
     public interface ShowWidgetShadowStage {
+
         /**
          * <p>Show widget shadow</p>
          */
@@ -220,6 +200,7 @@ public final class BrandingThemeBorders {
     }
 
     public interface WidgetBorderWeightStage {
+
         /**
          * <p>Widget border weight</p>
          */
@@ -227,6 +208,7 @@ public final class BrandingThemeBorders {
     }
 
     public interface WidgetCornerRadiusStage {
+
         /**
          * <p>Widget corner radius</p>
          */
@@ -234,6 +216,7 @@ public final class BrandingThemeBorders {
     }
 
     public interface _FinalStage {
+
         BrandingThemeBorders build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -242,17 +225,8 @@ public final class BrandingThemeBorders {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ButtonBorderRadiusStage,
-                    ButtonBorderWeightStage,
-                    ButtonsStyleStage,
-                    InputBorderRadiusStage,
-                    InputBorderWeightStage,
-                    InputsStyleStage,
-                    ShowWidgetShadowStage,
-                    WidgetBorderWeightStage,
-                    WidgetCornerRadiusStage,
-                    _FinalStage {
+    public static final class Builder implements ButtonBorderRadiusStage, ButtonBorderWeightStage, ButtonsStyleStage, InputBorderRadiusStage, InputBorderWeightStage, InputsStyleStage, ShowWidgetShadowStage, WidgetBorderWeightStage, WidgetCornerRadiusStage, _FinalStage {
+
         private double buttonBorderRadius;
 
         private double buttonBorderWeight;
@@ -274,20 +248,12 @@ public final class BrandingThemeBorders {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemeBorders other) {
-            buttonBorderRadius(other.getButtonBorderRadius());
-            buttonBorderWeight(other.getButtonBorderWeight());
-            buttonsStyle(other.getButtonsStyle());
-            inputBorderRadius(other.getInputBorderRadius());
-            inputBorderWeight(other.getInputBorderWeight());
-            inputsStyle(other.getInputsStyle());
-            showWidgetShadow(other.getShowWidgetShadow());
-            widgetBorderWeight(other.getWidgetBorderWeight());
-            widgetCornerRadius(other.getWidgetCornerRadius());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -298,8 +264,7 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("button_border_radius")
         public ButtonBorderWeightStage buttonBorderRadius(double buttonBorderRadius) {
-            this.buttonBorderRadius = buttonBorderRadius;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -310,15 +275,13 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("button_border_weight")
         public ButtonsStyleStage buttonBorderWeight(double buttonBorderWeight) {
-            this.buttonBorderWeight = buttonBorderWeight;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("buttons_style")
         public InputBorderRadiusStage buttonsStyle(@NotNull BrandingThemeBordersButtonsStyleEnum buttonsStyle) {
-            this.buttonsStyle = Objects.requireNonNull(buttonsStyle, "buttonsStyle must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -329,8 +292,7 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("input_border_radius")
         public InputBorderWeightStage inputBorderRadius(double inputBorderRadius) {
-            this.inputBorderRadius = inputBorderRadius;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -341,15 +303,13 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("input_border_weight")
         public InputsStyleStage inputBorderWeight(double inputBorderWeight) {
-            this.inputBorderWeight = inputBorderWeight;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("inputs_style")
         public ShowWidgetShadowStage inputsStyle(@NotNull BrandingThemeBordersInputsStyleEnum inputsStyle) {
-            this.inputsStyle = Objects.requireNonNull(inputsStyle, "inputsStyle must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -360,8 +320,7 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("show_widget_shadow")
         public WidgetBorderWeightStage showWidgetShadow(boolean showWidgetShadow) {
-            this.showWidgetShadow = showWidgetShadow;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -372,8 +331,7 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("widget_border_weight")
         public WidgetCornerRadiusStage widgetBorderWeight(double widgetBorderWeight) {
-            this.widgetBorderWeight = widgetBorderWeight;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -384,35 +342,22 @@ public final class BrandingThemeBorders {
         @java.lang.Override
         @JsonSetter("widget_corner_radius")
         public _FinalStage widgetCornerRadius(double widgetCornerRadius) {
-            this.widgetCornerRadius = widgetCornerRadius;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemeBorders build() {
-            return new BrandingThemeBorders(
-                    buttonBorderRadius,
-                    buttonBorderWeight,
-                    buttonsStyle,
-                    inputBorderRadius,
-                    inputBorderWeight,
-                    inputsStyle,
-                    showWidgetShadow,
-                    widgetBorderWeight,
-                    widgetCornerRadius,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

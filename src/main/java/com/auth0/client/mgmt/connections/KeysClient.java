@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.RotateConnectionsKeysResponseContent;
 import java.util.List;
 
 public class KeysClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawKeysClient rawClient;
@@ -27,80 +28,76 @@ public class KeysClient {
      * Get responses with HTTP metadata like headers
      */
     public RawKeysClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the connection keys for the Okta or OIDC connection strategy.
      */
     public List<ConnectionKey> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the connection keys for the Okta or OIDC connection strategy.
      */
     public List<ConnectionKey> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
     public List<PostConnectionsKeysResponseContentItem> create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
     public List<PostConnectionsKeysResponseContentItem> create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
-    public List<PostConnectionsKeysResponseContentItem> create(
-            String id, OptionalNullable<PostConnectionKeysRequestContent> request) {
-        return this.rawClient.create(id, request).body();
+    public List<PostConnectionsKeysResponseContentItem> create(String id, OptionalNullable<PostConnectionKeysRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
-    public List<PostConnectionsKeysResponseContentItem> create(
-            String id, OptionalNullable<PostConnectionKeysRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public List<PostConnectionsKeysResponseContentItem> create(String id, OptionalNullable<PostConnectionKeysRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
     public RotateConnectionsKeysResponseContent rotate(String id) {
-        return this.rawClient.rotate(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
     public RotateConnectionsKeysResponseContent rotate(String id, RequestOptions requestOptions) {
-        return this.rawClient.rotate(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
-    public RotateConnectionsKeysResponseContent rotate(
-            String id, OptionalNullable<RotateConnectionKeysRequestContent> request) {
-        return this.rawClient.rotate(id, request).body();
+    public RotateConnectionsKeysResponseContent rotate(String id, OptionalNullable<RotateConnectionKeysRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
-    public RotateConnectionsKeysResponseContent rotate(
-            String id, OptionalNullable<RotateConnectionKeysRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.rotate(id, request, requestOptions).body();
+    public RotateConnectionsKeysResponseContent rotate(String id, OptionalNullable<RotateConnectionKeysRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

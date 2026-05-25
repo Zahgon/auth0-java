@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateExportUsersFields.Builder.class)
 public final class CreateExportUsersFields {
+
     private final String name;
 
     private final Optional<String> exportAs;
@@ -38,7 +39,7 @@ public final class CreateExportUsersFields {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +47,17 @@ public final class CreateExportUsersFields {
      */
     @JsonProperty("export_as")
     public Optional<String> getExportAs() {
-        return exportAs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateExportUsersFields && equalTo((CreateExportUsersFields) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateExportUsersFields other) {
@@ -66,19 +66,20 @@ public final class CreateExportUsersFields {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.exportAs);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Name of the field in the profile.</p>
          */
@@ -88,6 +89,7 @@ public final class CreateExportUsersFields {
     }
 
     public interface _FinalStage {
+
         CreateExportUsersFields build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +106,7 @@ public final class CreateExportUsersFields {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<String> exportAs = Optional.empty();
@@ -111,13 +114,12 @@ public final class CreateExportUsersFields {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateExportUsersFields other) {
-            name(other.getName());
-            exportAs(other.getExportAs());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,8 +130,7 @@ public final class CreateExportUsersFields {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,8 +139,7 @@ public final class CreateExportUsersFields {
          */
         @java.lang.Override
         public _FinalStage exportAs(String exportAs) {
-            this.exportAs = Optional.ofNullable(exportAs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,25 +148,22 @@ public final class CreateExportUsersFields {
         @java.lang.Override
         @JsonSetter(value = "export_as", nulls = Nulls.SKIP)
         public _FinalStage exportAs(Optional<String> exportAs) {
-            this.exportAs = exportAs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateExportUsersFields build() {
-            return new CreateExportUsersFields(name, exportAs, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionModuleSecretRequest.Builder.class)
 public final class ActionModuleSecretRequest {
+
     private final String name;
 
     private final String value;
@@ -36,7 +37,7 @@ public final class ActionModuleSecretRequest {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,18 +45,17 @@ public final class ActionModuleSecretRequest {
      */
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionModuleSecretRequest && equalTo((ActionModuleSecretRequest) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionModuleSecretRequest other) {
@@ -64,19 +64,20 @@ public final class ActionModuleSecretRequest {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of the secret.</p>
          */
@@ -86,6 +87,7 @@ public final class ActionModuleSecretRequest {
     }
 
     public interface ValueStage {
+
         /**
          * <p>The value of the secret.</p>
          */
@@ -93,6 +95,7 @@ public final class ActionModuleSecretRequest {
     }
 
     public interface _FinalStage {
+
         ActionModuleSecretRequest build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -102,6 +105,7 @@ public final class ActionModuleSecretRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, ValueStage, _FinalStage {
+
         private String name;
 
         private String value;
@@ -109,13 +113,12 @@ public final class ActionModuleSecretRequest {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ActionModuleSecretRequest other) {
-            name(other.getName());
-            value(other.getValue());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -126,8 +129,7 @@ public final class ActionModuleSecretRequest {
         @java.lang.Override
         @JsonSetter("name")
         public ValueStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,25 +140,22 @@ public final class ActionModuleSecretRequest {
         @java.lang.Override
         @JsonSetter("value")
         public _FinalStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ActionModuleSecretRequest build() {
-            return new ActionModuleSecretRequest(name, value, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

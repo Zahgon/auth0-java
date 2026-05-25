@@ -22,12 +22,12 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ReplaceSynchronizedGroupsRequestContent.Builder.class)
 public final class ReplaceSynchronizedGroupsRequestContent {
+
     private final List<SynchronizedGroupPayload> groups;
 
     private final Map<String, Object> additionalProperties;
 
-    private ReplaceSynchronizedGroupsRequestContent(
-            List<SynchronizedGroupPayload> groups, Map<String, Object> additionalProperties) {
+    private ReplaceSynchronizedGroupsRequestContent(List<SynchronizedGroupPayload> groups, Map<String, Object> additionalProperties) {
         this.groups = groups;
         this.additionalProperties = additionalProperties;
     }
@@ -37,19 +37,17 @@ public final class ReplaceSynchronizedGroupsRequestContent {
      */
     @JsonProperty("groups")
     public List<SynchronizedGroupPayload> getGroups() {
-        return groups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ReplaceSynchronizedGroupsRequestContent
-                && equalTo((ReplaceSynchronizedGroupsRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ReplaceSynchronizedGroupsRequestContent other) {
@@ -58,30 +56,31 @@ public final class ReplaceSynchronizedGroupsRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.groups);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<SynchronizedGroupPayload> groups = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ReplaceSynchronizedGroupsRequestContent other) {
-            groups(other.getGroups());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -89,37 +88,27 @@ public final class ReplaceSynchronizedGroupsRequestContent {
          */
         @JsonSetter(value = "groups", nulls = Nulls.SKIP)
         public Builder groups(List<SynchronizedGroupPayload> groups) {
-            this.groups.clear();
-            if (groups != null) {
-                this.groups.addAll(groups);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addGroups(SynchronizedGroupPayload groups) {
-            this.groups.add(groups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllGroups(List<SynchronizedGroupPayload> groups) {
-            if (groups != null) {
-                this.groups.addAll(groups);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ReplaceSynchronizedGroupsRequestContent build() {
-            return new ReplaceSynchronizedGroupsRequestContent(groups, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

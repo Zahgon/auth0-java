@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateLogStreamEventBridgeRequestBody.Builder.class)
 public final class CreateLogStreamEventBridgeRequestBody {
+
     private final Optional<String> name;
 
     private final LogStreamEventBridgeEnum type;
@@ -38,15 +39,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateLogStreamEventBridgeRequestBody(
-            Optional<String> name,
-            LogStreamEventBridgeEnum type,
-            Optional<Boolean> isPriority,
-            Optional<List<LogStreamFilter>> filters,
-            Optional<LogStreamPiiConfig> piiConfig,
-            LogStreamEventBridgeSink sink,
-            Optional<String> startFrom,
-            Map<String, Object> additionalProperties) {
+    private CreateLogStreamEventBridgeRequestBody(Optional<String> name, LogStreamEventBridgeEnum type, Optional<Boolean> isPriority, Optional<List<LogStreamFilter>> filters, Optional<LogStreamPiiConfig> piiConfig, LogStreamEventBridgeSink sink, Optional<String> startFrom, Map<String, Object> additionalProperties) {
         this.name = name;
         this.type = type;
         this.isPriority = isPriority;
@@ -62,12 +55,12 @@ public final class CreateLogStreamEventBridgeRequestBody {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public LogStreamEventBridgeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +68,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
      */
     @JsonProperty("isPriority")
     public Optional<Boolean> getIsPriority() {
-        return isPriority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,17 +76,17 @@ public final class CreateLogStreamEventBridgeRequestBody {
      */
     @JsonProperty("filters")
     public Optional<List<LogStreamFilter>> getFilters() {
-        return filters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pii_config")
     public Optional<LogStreamPiiConfig> getPiiConfig() {
-        return piiConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sink")
     public LogStreamEventBridgeSink getSink() {
-        return sink;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,57 +94,51 @@ public final class CreateLogStreamEventBridgeRequestBody {
      */
     @JsonProperty("startFrom")
     public Optional<String> getStartFrom() {
-        return startFrom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateLogStreamEventBridgeRequestBody
-                && equalTo((CreateLogStreamEventBridgeRequestBody) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateLogStreamEventBridgeRequestBody other) {
-        return name.equals(other.name)
-                && type.equals(other.type)
-                && isPriority.equals(other.isPriority)
-                && filters.equals(other.filters)
-                && piiConfig.equals(other.piiConfig)
-                && sink.equals(other.sink)
-                && startFrom.equals(other.startFrom);
+        return name.equals(other.name) && type.equals(other.type) && isPriority.equals(other.isPriority) && filters.equals(other.filters) && piiConfig.equals(other.piiConfig) && sink.equals(other.sink) && startFrom.equals(other.startFrom);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name, this.type, this.isPriority, this.filters, this.piiConfig, this.sink, this.startFrom);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         SinkStage type(@NotNull LogStreamEventBridgeEnum type);
 
         Builder from(CreateLogStreamEventBridgeRequestBody other);
     }
 
     public interface SinkStage {
+
         _FinalStage sink(@NotNull LogStreamEventBridgeSink sink);
     }
 
     public interface _FinalStage {
+
         CreateLogStreamEventBridgeRequestBody build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -193,6 +180,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, SinkStage, _FinalStage {
+
         private LogStreamEventBridgeEnum type;
 
         private LogStreamEventBridgeSink sink;
@@ -210,32 +198,24 @@ public final class CreateLogStreamEventBridgeRequestBody {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateLogStreamEventBridgeRequestBody other) {
-            name(other.getName());
-            type(other.getType());
-            isPriority(other.getIsPriority());
-            filters(other.getFilters());
-            piiConfig(other.getPiiConfig());
-            sink(other.getSink());
-            startFrom(other.getStartFrom());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public SinkStage type(@NotNull LogStreamEventBridgeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("sink")
         public _FinalStage sink(@NotNull LogStreamEventBridgeSink sink) {
-            this.sink = Objects.requireNonNull(sink, "sink must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -244,8 +224,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
          */
         @java.lang.Override
         public _FinalStage startFrom(String startFrom) {
-            this.startFrom = Optional.ofNullable(startFrom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -254,21 +233,18 @@ public final class CreateLogStreamEventBridgeRequestBody {
         @java.lang.Override
         @JsonSetter(value = "startFrom", nulls = Nulls.SKIP)
         public _FinalStage startFrom(Optional<String> startFrom) {
-            this.startFrom = startFrom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage piiConfig(LogStreamPiiConfig piiConfig) {
-            this.piiConfig = Optional.ofNullable(piiConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "pii_config", nulls = Nulls.SKIP)
         public _FinalStage piiConfig(Optional<LogStreamPiiConfig> piiConfig) {
-            this.piiConfig = piiConfig;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -277,8 +253,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
          */
         @java.lang.Override
         public _FinalStage filters(List<LogStreamFilter> filters) {
-            this.filters = Optional.ofNullable(filters);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -287,8 +262,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
         @java.lang.Override
         @JsonSetter(value = "filters", nulls = Nulls.SKIP)
         public _FinalStage filters(Optional<List<LogStreamFilter>> filters) {
-            this.filters = filters;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -297,8 +271,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
          */
         @java.lang.Override
         public _FinalStage isPriority(Boolean isPriority) {
-            this.isPriority = Optional.ofNullable(isPriority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,8 +280,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
         @java.lang.Override
         @JsonSetter(value = "isPriority", nulls = Nulls.SKIP)
         public _FinalStage isPriority(Optional<Boolean> isPriority) {
-            this.isPriority = isPriority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -317,8 +289,7 @@ public final class CreateLogStreamEventBridgeRequestBody {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -327,26 +298,22 @@ public final class CreateLogStreamEventBridgeRequestBody {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateLogStreamEventBridgeRequestBody build() {
-            return new CreateLogStreamEventBridgeRequestBody(
-                    name, type, isPriority, filters, piiConfig, sink, startFrom, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

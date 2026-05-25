@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionCustomScripts.Builder.class)
 public final class ConnectionCustomScripts {
+
     private final Optional<String> login;
 
     private final Optional<String> getUser;
@@ -40,17 +41,7 @@ public final class ConnectionCustomScripts {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionCustomScripts(
-            Optional<String> login,
-            Optional<String> getUser,
-            Optional<String> delete,
-            Optional<String> changePassword,
-            Optional<String> verify,
-            Optional<String> create,
-            Optional<String> changeUsername,
-            Optional<String> changeEmail,
-            Optional<String> changePhoneNumber,
-            Map<String, Object> additionalProperties) {
+    private ConnectionCustomScripts(Optional<String> login, Optional<String> getUser, Optional<String> delete, Optional<String> changePassword, Optional<String> verify, Optional<String> create, Optional<String> changeUsername, Optional<String> changeEmail, Optional<String> changePhoneNumber, Map<String, Object> additionalProperties) {
         this.login = login;
         this.getUser = getUser;
         this.delete = delete;
@@ -65,97 +56,80 @@ public final class ConnectionCustomScripts {
 
     @JsonProperty("login")
     public Optional<String> getLogin() {
-        return login;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("get_user")
     public Optional<String> getGetUser() {
-        return getUser;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("delete")
     public Optional<String> getDelete() {
-        return delete;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("change_password")
     public Optional<String> getChangePassword() {
-        return changePassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("verify")
     public Optional<String> getVerify() {
-        return verify;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("create")
     public Optional<String> getCreate() {
-        return create;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("change_username")
     public Optional<String> getChangeUsername() {
-        return changeUsername;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("change_email")
     public Optional<String> getChangeEmail() {
-        return changeEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("change_phone_number")
     public Optional<String> getChangePhoneNumber() {
-        return changePhoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionCustomScripts && equalTo((ConnectionCustomScripts) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionCustomScripts other) {
-        return login.equals(other.login)
-                && getUser.equals(other.getUser)
-                && delete.equals(other.delete)
-                && changePassword.equals(other.changePassword)
-                && verify.equals(other.verify)
-                && create.equals(other.create)
-                && changeUsername.equals(other.changeUsername)
-                && changeEmail.equals(other.changeEmail)
-                && changePhoneNumber.equals(other.changePhoneNumber);
+        return login.equals(other.login) && getUser.equals(other.getUser) && delete.equals(other.delete) && changePassword.equals(other.changePassword) && verify.equals(other.verify) && create.equals(other.create) && changeUsername.equals(other.changeUsername) && changeEmail.equals(other.changeEmail) && changePhoneNumber.equals(other.changePhoneNumber);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.login,
-                this.getUser,
-                this.delete,
-                this.changePassword,
-                this.verify,
-                this.create,
-                this.changeUsername,
-                this.changeEmail,
-                this.changePhoneNumber);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> login = Optional.empty();
 
         private Optional<String> getUser = Optional.empty();
@@ -177,142 +151,104 @@ public final class ConnectionCustomScripts {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionCustomScripts other) {
-            login(other.getLogin());
-            getUser(other.getGetUser());
-            delete(other.getDelete());
-            changePassword(other.getChangePassword());
-            verify(other.getVerify());
-            create(other.getCreate());
-            changeUsername(other.getChangeUsername());
-            changeEmail(other.getChangeEmail());
-            changePhoneNumber(other.getChangePhoneNumber());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "login", nulls = Nulls.SKIP)
         public Builder login(Optional<String> login) {
-            this.login = login;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder login(String login) {
-            this.login = Optional.ofNullable(login);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "get_user", nulls = Nulls.SKIP)
         public Builder getUser(Optional<String> getUser) {
-            this.getUser = getUser;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder getUser(String getUser) {
-            this.getUser = Optional.ofNullable(getUser);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "delete", nulls = Nulls.SKIP)
         public Builder delete(Optional<String> delete) {
-            this.delete = delete;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder delete(String delete) {
-            this.delete = Optional.ofNullable(delete);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "change_password", nulls = Nulls.SKIP)
         public Builder changePassword(Optional<String> changePassword) {
-            this.changePassword = changePassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePassword(String changePassword) {
-            this.changePassword = Optional.ofNullable(changePassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "verify", nulls = Nulls.SKIP)
         public Builder verify(Optional<String> verify) {
-            this.verify = verify;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verify(String verify) {
-            this.verify = Optional.ofNullable(verify);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "create", nulls = Nulls.SKIP)
         public Builder create(Optional<String> create) {
-            this.create = create;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder create(String create) {
-            this.create = Optional.ofNullable(create);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "change_username", nulls = Nulls.SKIP)
         public Builder changeUsername(Optional<String> changeUsername) {
-            this.changeUsername = changeUsername;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changeUsername(String changeUsername) {
-            this.changeUsername = Optional.ofNullable(changeUsername);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "change_email", nulls = Nulls.SKIP)
         public Builder changeEmail(Optional<String> changeEmail) {
-            this.changeEmail = changeEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changeEmail(String changeEmail) {
-            this.changeEmail = Optional.ofNullable(changeEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "change_phone_number", nulls = Nulls.SKIP)
         public Builder changePhoneNumber(Optional<String> changePhoneNumber) {
-            this.changePhoneNumber = changePhoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePhoneNumber(String changePhoneNumber) {
-            this.changePhoneNumber = Optional.ofNullable(changePhoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionCustomScripts build() {
-            return new ConnectionCustomScripts(
-                    login,
-                    getUser,
-                    delete,
-                    changePassword,
-                    verify,
-                    create,
-                    changeUsername,
-                    changeEmail,
-                    changePhoneNumber,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionZapierTriggerWebhookParamsMethod {
-    public static final FlowActionZapierTriggerWebhookParamsMethod GET =
-            new FlowActionZapierTriggerWebhookParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionZapierTriggerWebhookParamsMethod PUT =
-            new FlowActionZapierTriggerWebhookParamsMethod(Value.PUT, "PUT");
+    public static final FlowActionZapierTriggerWebhookParamsMethod GET = new FlowActionZapierTriggerWebhookParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionZapierTriggerWebhookParamsMethod POST =
-            new FlowActionZapierTriggerWebhookParamsMethod(Value.POST, "POST");
+    public static final FlowActionZapierTriggerWebhookParamsMethod PUT = new FlowActionZapierTriggerWebhookParamsMethod(Value.PUT, "PUT");
+
+    public static final FlowActionZapierTriggerWebhookParamsMethod POST = new FlowActionZapierTriggerWebhookParamsMethod(Value.POST, "POST");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class FlowActionZapierTriggerWebhookParamsMethod {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionZapierTriggerWebhookParamsMethod
-                        && this.string.equals(((FlowActionZapierTriggerWebhookParamsMethod) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET:
-                return visitor.visitGet();
-            case PUT:
-                return visitor.visitPut();
-            case POST:
-                return visitor.visitPost();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionZapierTriggerWebhookParamsMethod valueOf(String value) {
-        switch (value) {
-            case "GET":
-                return GET;
-            case "PUT":
-                return PUT;
-            case "POST":
-                return POST;
-            default:
-                return new FlowActionZapierTriggerWebhookParamsMethod(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GET,
 
-        POST,
-
-        PUT,
-
-        UNKNOWN
+        GET, POST, PUT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGet();
 
         T visitPost();

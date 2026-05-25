@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.CreateEventStreamRedeliveryResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRedeliveriesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRedeliveriesClient rawClient;
@@ -23,33 +24,30 @@ public class AsyncRedeliveriesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRedeliveriesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(
-            String id, CreateEventStreamRedeliveryRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(String id, CreateEventStreamRedeliveryRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(
-            String id, CreateEventStreamRedeliveryRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateEventStreamRedeliveryResponseContent> create(String id, CreateEventStreamRedeliveryRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> createById(String id, String eventId) {
-        return this.rawClient.createById(id, eventId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> createById(String id, String eventId, RequestOptions requestOptions) {
-        return this.rawClient.createById(id, eventId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

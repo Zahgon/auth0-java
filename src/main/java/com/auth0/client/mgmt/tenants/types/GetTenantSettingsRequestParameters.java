@@ -22,16 +22,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetTenantSettingsRequestParameters.Builder.class)
 public final class GetTenantSettingsRequestParameters {
+
     private final OptionalNullable<String> fields;
 
     private final OptionalNullable<Boolean> includeFields;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetTenantSettingsRequestParameters(
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            Map<String, Object> additionalProperties) {
+    private GetTenantSettingsRequestParameters(OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, Map<String, Object> additionalProperties) {
         this.fields = fields;
         this.includeFields = includeFields;
         this.additionalProperties = additionalProperties;
@@ -42,10 +40,7 @@ public final class GetTenantSettingsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,22 +48,17 @@ public final class GetTenantSettingsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetTenantSettingsRequestParameters
-                && equalTo((GetTenantSettingsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetTenantSettingsRequestParameters other) {
@@ -77,20 +67,21 @@ public final class GetTenantSettingsRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.fields, this.includeFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> fields = OptionalNullable.absent();
 
         private OptionalNullable<Boolean> includeFields = OptionalNullable.absent();
@@ -98,12 +89,11 @@ public final class GetTenantSettingsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetTenantSettingsRequestParameters other) {
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -111,33 +101,19 @@ public final class GetTenantSettingsRequestParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,47 +121,31 @@ public final class GetTenantSettingsRequestParameters {
          */
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public Builder includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetTenantSettingsRequestParameters build() {
-            return new GetTenantSettingsRequestParameters(fields, includeFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

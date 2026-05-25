@@ -26,6 +26,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateSelfServiceProfileSsoTicketRequestContent.Builder.class)
 public final class CreateSelfServiceProfileSsoTicketRequestContent {
+
     private final Optional<String> connectionId;
 
     private final Optional<SelfServiceProfileSsoTicketConnectionConfig> connectionConfig;
@@ -46,17 +47,7 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateSelfServiceProfileSsoTicketRequestContent(
-            Optional<String> connectionId,
-            Optional<SelfServiceProfileSsoTicketConnectionConfig> connectionConfig,
-            Optional<List<String>> enabledClients,
-            Optional<List<SelfServiceProfileSsoTicketEnabledOrganization>> enabledOrganizations,
-            Optional<Integer> ttlSec,
-            Optional<SelfServiceProfileSsoTicketDomainAliasesConfig> domainAliasesConfig,
-            Optional<SelfServiceProfileSsoTicketProvisioningConfig> provisioningConfig,
-            Optional<Boolean> useForOrganizationDiscovery,
-            Optional<SelfServiceProfileSsoTicketEnabledFeatures> enabledFeatures,
-            Map<String, Object> additionalProperties) {
+    private CreateSelfServiceProfileSsoTicketRequestContent(Optional<String> connectionId, Optional<SelfServiceProfileSsoTicketConnectionConfig> connectionConfig, Optional<List<String>> enabledClients, Optional<List<SelfServiceProfileSsoTicketEnabledOrganization>> enabledOrganizations, Optional<Integer> ttlSec, Optional<SelfServiceProfileSsoTicketDomainAliasesConfig> domainAliasesConfig, Optional<SelfServiceProfileSsoTicketProvisioningConfig> provisioningConfig, Optional<Boolean> useForOrganizationDiscovery, Optional<SelfServiceProfileSsoTicketEnabledFeatures> enabledFeatures, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.connectionConfig = connectionConfig;
         this.enabledClients = enabledClients;
@@ -74,12 +65,12 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection_config")
     public Optional<SelfServiceProfileSsoTicketConnectionConfig> getConnectionConfig() {
-        return connectionConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,7 +78,7 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
      */
     @JsonProperty("enabled_clients")
     public Optional<List<String>> getEnabledClients() {
-        return enabledClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,7 +86,7 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
      */
     @JsonProperty("enabled_organizations")
     public Optional<List<SelfServiceProfileSsoTicketEnabledOrganization>> getEnabledOrganizations() {
-        return enabledOrganizations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,17 +94,17 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
      */
     @JsonProperty("ttl_sec")
     public Optional<Integer> getTtlSec() {
-        return ttlSec;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases_config")
     public Optional<SelfServiceProfileSsoTicketDomainAliasesConfig> getDomainAliasesConfig() {
-        return domainAliasesConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("provisioning_config")
     public Optional<SelfServiceProfileSsoTicketProvisioningConfig> getProvisioningConfig() {
-        return provisioningConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,63 +112,45 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
      */
     @JsonProperty("use_for_organization_discovery")
     public Optional<Boolean> getUseForOrganizationDiscovery() {
-        return useForOrganizationDiscovery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("enabled_features")
     public Optional<SelfServiceProfileSsoTicketEnabledFeatures> getEnabledFeatures() {
-        return enabledFeatures;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateSelfServiceProfileSsoTicketRequestContent
-                && equalTo((CreateSelfServiceProfileSsoTicketRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateSelfServiceProfileSsoTicketRequestContent other) {
-        return connectionId.equals(other.connectionId)
-                && connectionConfig.equals(other.connectionConfig)
-                && enabledClients.equals(other.enabledClients)
-                && enabledOrganizations.equals(other.enabledOrganizations)
-                && ttlSec.equals(other.ttlSec)
-                && domainAliasesConfig.equals(other.domainAliasesConfig)
-                && provisioningConfig.equals(other.provisioningConfig)
-                && useForOrganizationDiscovery.equals(other.useForOrganizationDiscovery)
-                && enabledFeatures.equals(other.enabledFeatures);
+        return connectionId.equals(other.connectionId) && connectionConfig.equals(other.connectionConfig) && enabledClients.equals(other.enabledClients) && enabledOrganizations.equals(other.enabledOrganizations) && ttlSec.equals(other.ttlSec) && domainAliasesConfig.equals(other.domainAliasesConfig) && provisioningConfig.equals(other.provisioningConfig) && useForOrganizationDiscovery.equals(other.useForOrganizationDiscovery) && enabledFeatures.equals(other.enabledFeatures);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId,
-                this.connectionConfig,
-                this.enabledClients,
-                this.enabledOrganizations,
-                this.ttlSec,
-                this.domainAliasesConfig,
-                this.provisioningConfig,
-                this.useForOrganizationDiscovery,
-                this.enabledFeatures);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> connectionId = Optional.empty();
 
         private Optional<SelfServiceProfileSsoTicketConnectionConfig> connectionConfig = Optional.empty();
@@ -199,19 +172,11 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateSelfServiceProfileSsoTicketRequestContent other) {
-            connectionId(other.getConnectionId());
-            connectionConfig(other.getConnectionConfig());
-            enabledClients(other.getEnabledClients());
-            enabledOrganizations(other.getEnabledOrganizations());
-            ttlSec(other.getTtlSec());
-            domainAliasesConfig(other.getDomainAliasesConfig());
-            provisioningConfig(other.getProvisioningConfig());
-            useForOrganizationDiscovery(other.getUseForOrganizationDiscovery());
-            enabledFeatures(other.getEnabledFeatures());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -219,24 +184,20 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connection_config", nulls = Nulls.SKIP)
         public Builder connectionConfig(Optional<SelfServiceProfileSsoTicketConnectionConfig> connectionConfig) {
-            this.connectionConfig = connectionConfig;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionConfig(SelfServiceProfileSsoTicketConnectionConfig connectionConfig) {
-            this.connectionConfig = Optional.ofNullable(connectionConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -244,28 +205,23 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
          */
         @JsonSetter(value = "enabled_clients", nulls = Nulls.SKIP)
         public Builder enabledClients(Optional<List<String>> enabledClients) {
-            this.enabledClients = enabledClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledClients(List<String> enabledClients) {
-            this.enabledClients = Optional.ofNullable(enabledClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>List of organizations that the connection will be enabled for.</p>
          */
         @JsonSetter(value = "enabled_organizations", nulls = Nulls.SKIP)
-        public Builder enabledOrganizations(
-                Optional<List<SelfServiceProfileSsoTicketEnabledOrganization>> enabledOrganizations) {
-            this.enabledOrganizations = enabledOrganizations;
-            return this;
+        public Builder enabledOrganizations(Optional<List<SelfServiceProfileSsoTicketEnabledOrganization>> enabledOrganizations) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledOrganizations(List<SelfServiceProfileSsoTicketEnabledOrganization> enabledOrganizations) {
-            this.enabledOrganizations = Optional.ofNullable(enabledOrganizations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -273,36 +229,29 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
          */
         @JsonSetter(value = "ttl_sec", nulls = Nulls.SKIP)
         public Builder ttlSec(Optional<Integer> ttlSec) {
-            this.ttlSec = ttlSec;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ttlSec(Integer ttlSec) {
-            this.ttlSec = Optional.ofNullable(ttlSec);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "domain_aliases_config", nulls = Nulls.SKIP)
-        public Builder domainAliasesConfig(
-                Optional<SelfServiceProfileSsoTicketDomainAliasesConfig> domainAliasesConfig) {
-            this.domainAliasesConfig = domainAliasesConfig;
-            return this;
+        public Builder domainAliasesConfig(Optional<SelfServiceProfileSsoTicketDomainAliasesConfig> domainAliasesConfig) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliasesConfig(SelfServiceProfileSsoTicketDomainAliasesConfig domainAliasesConfig) {
-            this.domainAliasesConfig = Optional.ofNullable(domainAliasesConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "provisioning_config", nulls = Nulls.SKIP)
         public Builder provisioningConfig(Optional<SelfServiceProfileSsoTicketProvisioningConfig> provisioningConfig) {
-            this.provisioningConfig = provisioningConfig;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder provisioningConfig(SelfServiceProfileSsoTicketProvisioningConfig provisioningConfig) {
-            this.provisioningConfig = Optional.ofNullable(provisioningConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -310,48 +259,32 @@ public final class CreateSelfServiceProfileSsoTicketRequestContent {
          */
         @JsonSetter(value = "use_for_organization_discovery", nulls = Nulls.SKIP)
         public Builder useForOrganizationDiscovery(Optional<Boolean> useForOrganizationDiscovery) {
-            this.useForOrganizationDiscovery = useForOrganizationDiscovery;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder useForOrganizationDiscovery(Boolean useForOrganizationDiscovery) {
-            this.useForOrganizationDiscovery = Optional.ofNullable(useForOrganizationDiscovery);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enabled_features", nulls = Nulls.SKIP)
         public Builder enabledFeatures(Optional<SelfServiceProfileSsoTicketEnabledFeatures> enabledFeatures) {
-            this.enabledFeatures = enabledFeatures;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledFeatures(SelfServiceProfileSsoTicketEnabledFeatures enabledFeatures) {
-            this.enabledFeatures = Optional.ofNullable(enabledFeatures);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateSelfServiceProfileSsoTicketRequestContent build() {
-            return new CreateSelfServiceProfileSsoTicketRequestContent(
-                    connectionId,
-                    connectionConfig,
-                    enabledClients,
-                    enabledOrganizations,
-                    ttlSec,
-                    domainAliasesConfig,
-                    provisioningConfig,
-                    useForOrganizationDiscovery,
-                    enabledFeatures,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

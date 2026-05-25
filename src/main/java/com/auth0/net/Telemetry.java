@@ -16,19 +16,29 @@ import java.util.Map;
  */
 @SuppressWarnings("WeakerAccess")
 public class Telemetry {
+
     static final String HEADER_NAME = "Auth0-Client";
 
     private static final String JAVA_SPECIFICATION_VERSION = "java.specification.version";
+
     private static final String NAME_KEY = "name";
+
     private static final String VERSION_KEY = "version";
+
     private static final String LIBRARY_VERSION_KEY = "auth0-java";
+
     private static final String ENV_KEY = "env";
+
     private static final String JAVA_KEY = "java";
 
     private final String name;
+
     private final String version;
+
     private final String libraryVersion;
+
     private final Map<String, String> env;
+
     private final String value;
 
     public Telemetry(String name, String version) {
@@ -39,19 +49,16 @@ public class Telemetry {
         this.name = name;
         this.version = version;
         this.libraryVersion = libraryVersion;
-
         if (name == null) {
             env = Collections.emptyMap();
             value = null;
             return;
         }
-
         Map<String, Object> values = new HashMap<>();
         values.put(NAME_KEY, name);
         if (version != null) {
             values.put(VERSION_KEY, version);
         }
-
         HashMap<String, String> tmpEnv = new HashMap<>();
         tmpEnv.put(JAVA_KEY, getJDKVersion());
         if (libraryVersion != null) {
@@ -59,7 +66,6 @@ public class Telemetry {
         }
         this.env = Collections.unmodifiableMap(tmpEnv);
         values.put(ENV_KEY, env);
-
         String tmpValue;
         try {
             String json = ObjectMapperProvider.getMapper().writeValueAsString(values);
@@ -72,25 +78,25 @@ public class Telemetry {
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getVersion() {
-        return version;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     // Visible for testing
     String getLibraryVersion() {
-        return libraryVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     // Visible for testing
     Map<String, String> getEnvironment() {
-        return env;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getJDKVersion() {

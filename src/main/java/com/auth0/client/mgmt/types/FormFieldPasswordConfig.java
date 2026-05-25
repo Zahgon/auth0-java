@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPasswordConfig.Builder.class)
 public final class FormFieldPasswordConfig {
+
     private final Optional<FormFieldPasswordConfigHashEnum> hash;
 
     private final Optional<String> placeholder;
@@ -36,15 +37,7 @@ public final class FormFieldPasswordConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPasswordConfig(
-            Optional<FormFieldPasswordConfigHashEnum> hash,
-            Optional<String> placeholder,
-            Optional<Integer> minLength,
-            Optional<Integer> maxLength,
-            Optional<Boolean> complexity,
-            Optional<Boolean> nist,
-            Optional<Boolean> strengthMeter,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPasswordConfig(Optional<FormFieldPasswordConfigHashEnum> hash, Optional<String> placeholder, Optional<Integer> minLength, Optional<Integer> maxLength, Optional<Boolean> complexity, Optional<Boolean> nist, Optional<Boolean> strengthMeter, Map<String, Object> additionalProperties) {
         this.hash = hash;
         this.placeholder = placeholder;
         this.minLength = minLength;
@@ -57,83 +50,70 @@ public final class FormFieldPasswordConfig {
 
     @JsonProperty("hash")
     public Optional<FormFieldPasswordConfigHashEnum> getHash() {
-        return hash;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("min_length")
     public Optional<Integer> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_length")
     public Optional<Integer> getMaxLength() {
-        return maxLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("complexity")
     public Optional<Boolean> getComplexity() {
-        return complexity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("nist")
     public Optional<Boolean> getNist() {
-        return nist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strength_meter")
     public Optional<Boolean> getStrengthMeter() {
-        return strengthMeter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPasswordConfig && equalTo((FormFieldPasswordConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPasswordConfig other) {
-        return hash.equals(other.hash)
-                && placeholder.equals(other.placeholder)
-                && minLength.equals(other.minLength)
-                && maxLength.equals(other.maxLength)
-                && complexity.equals(other.complexity)
-                && nist.equals(other.nist)
-                && strengthMeter.equals(other.strengthMeter);
+        return hash.equals(other.hash) && placeholder.equals(other.placeholder) && minLength.equals(other.minLength) && maxLength.equals(other.maxLength) && complexity.equals(other.complexity) && nist.equals(other.nist) && strengthMeter.equals(other.strengthMeter);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.hash,
-                this.placeholder,
-                this.minLength,
-                this.maxLength,
-                this.complexity,
-                this.nist,
-                this.strengthMeter);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FormFieldPasswordConfigHashEnum> hash = Optional.empty();
 
         private Optional<String> placeholder = Optional.empty();
@@ -151,109 +131,86 @@ public final class FormFieldPasswordConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldPasswordConfig other) {
-            hash(other.getHash());
-            placeholder(other.getPlaceholder());
-            minLength(other.getMinLength());
-            maxLength(other.getMaxLength());
-            complexity(other.getComplexity());
-            nist(other.getNist());
-            strengthMeter(other.getStrengthMeter());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "hash", nulls = Nulls.SKIP)
         public Builder hash(Optional<FormFieldPasswordConfigHashEnum> hash) {
-            this.hash = hash;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hash(FormFieldPasswordConfigHashEnum hash) {
-            this.hash = Optional.ofNullable(hash);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Integer> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Integer minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "max_length", nulls = Nulls.SKIP)
         public Builder maxLength(Optional<Integer> maxLength) {
-            this.maxLength = maxLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxLength(Integer maxLength) {
-            this.maxLength = Optional.ofNullable(maxLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "complexity", nulls = Nulls.SKIP)
         public Builder complexity(Optional<Boolean> complexity) {
-            this.complexity = complexity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder complexity(Boolean complexity) {
-            this.complexity = Optional.ofNullable(complexity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "nist", nulls = Nulls.SKIP)
         public Builder nist(Optional<Boolean> nist) {
-            this.nist = nist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nist(Boolean nist) {
-            this.nist = Optional.ofNullable(nist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "strength_meter", nulls = Nulls.SKIP)
         public Builder strengthMeter(Optional<Boolean> strengthMeter) {
-            this.strengthMeter = strengthMeter;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strengthMeter(Boolean strengthMeter) {
-            this.strengthMeter = Optional.ofNullable(strengthMeter);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldPasswordConfig build() {
-            return new FormFieldPasswordConfig(
-                    hash, placeholder, minLength, maxLength, complexity, nist, strengthMeter, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

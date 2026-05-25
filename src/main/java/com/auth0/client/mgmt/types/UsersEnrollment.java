@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UsersEnrollment.Builder.class)
 public final class UsersEnrollment {
+
     private final Optional<String> id;
 
     private final Optional<UserEnrollmentStatusEnum> status;
@@ -41,17 +42,7 @@ public final class UsersEnrollment {
 
     private final Map<String, Object> additionalProperties;
 
-    private UsersEnrollment(
-            Optional<String> id,
-            Optional<UserEnrollmentStatusEnum> status,
-            Optional<String> type,
-            Optional<String> name,
-            Optional<String> identifier,
-            Optional<String> phoneNumber,
-            Optional<UserEnrollmentAuthMethodEnum> authMethod,
-            Optional<OffsetDateTime> enrolledAt,
-            Optional<OffsetDateTime> lastAuth,
-            Map<String, Object> additionalProperties) {
+    private UsersEnrollment(Optional<String> id, Optional<UserEnrollmentStatusEnum> status, Optional<String> type, Optional<String> name, Optional<String> identifier, Optional<String> phoneNumber, Optional<UserEnrollmentAuthMethodEnum> authMethod, Optional<OffsetDateTime> enrolledAt, Optional<OffsetDateTime> lastAuth, Map<String, Object> additionalProperties) {
         this.id = id;
         this.status = status;
         this.type = type;
@@ -69,12 +60,12 @@ public final class UsersEnrollment {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<UserEnrollmentStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +73,7 @@ public final class UsersEnrollment {
      */
     @JsonProperty("type")
     public Optional<String> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,7 +81,7 @@ public final class UsersEnrollment {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,7 +89,7 @@ public final class UsersEnrollment {
      */
     @JsonProperty("identifier")
     public Optional<String> getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -106,12 +97,12 @@ public final class UsersEnrollment {
      */
     @JsonProperty("phone_number")
     public Optional<String> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("auth_method")
     public Optional<UserEnrollmentAuthMethodEnum> getAuthMethod() {
-        return authMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,7 +110,7 @@ public final class UsersEnrollment {
      */
     @JsonProperty("enrolled_at")
     public Optional<OffsetDateTime> getEnrolledAt() {
-        return enrolledAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -127,57 +118,40 @@ public final class UsersEnrollment {
      */
     @JsonProperty("last_auth")
     public Optional<OffsetDateTime> getLastAuth() {
-        return lastAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UsersEnrollment && equalTo((UsersEnrollment) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UsersEnrollment other) {
-        return id.equals(other.id)
-                && status.equals(other.status)
-                && type.equals(other.type)
-                && name.equals(other.name)
-                && identifier.equals(other.identifier)
-                && phoneNumber.equals(other.phoneNumber)
-                && authMethod.equals(other.authMethod)
-                && enrolledAt.equals(other.enrolledAt)
-                && lastAuth.equals(other.lastAuth);
+        return id.equals(other.id) && status.equals(other.status) && type.equals(other.type) && name.equals(other.name) && identifier.equals(other.identifier) && phoneNumber.equals(other.phoneNumber) && authMethod.equals(other.authMethod) && enrolledAt.equals(other.enrolledAt) && lastAuth.equals(other.lastAuth);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.status,
-                this.type,
-                this.name,
-                this.identifier,
-                this.phoneNumber,
-                this.authMethod,
-                this.enrolledAt,
-                this.lastAuth);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<UserEnrollmentStatusEnum> status = Optional.empty();
@@ -199,19 +173,11 @@ public final class UsersEnrollment {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UsersEnrollment other) {
-            id(other.getId());
-            status(other.getStatus());
-            type(other.getType());
-            name(other.getName());
-            identifier(other.getIdentifier());
-            phoneNumber(other.getPhoneNumber());
-            authMethod(other.getAuthMethod());
-            enrolledAt(other.getEnrolledAt());
-            lastAuth(other.getLastAuth());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -219,24 +185,20 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<UserEnrollmentStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(UserEnrollmentStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -244,13 +206,11 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<String> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(String type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -258,13 +218,11 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -272,13 +230,11 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "identifier", nulls = Nulls.SKIP)
         public Builder identifier(Optional<String> identifier) {
-            this.identifier = identifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Optional.ofNullable(identifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -286,24 +242,20 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public Builder phoneNumber(Optional<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "auth_method", nulls = Nulls.SKIP)
         public Builder authMethod(Optional<UserEnrollmentAuthMethodEnum> authMethod) {
-            this.authMethod = authMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authMethod(UserEnrollmentAuthMethodEnum authMethod) {
-            this.authMethod = Optional.ofNullable(authMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -311,13 +263,11 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "enrolled_at", nulls = Nulls.SKIP)
         public Builder enrolledAt(Optional<OffsetDateTime> enrolledAt) {
-            this.enrolledAt = enrolledAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enrolledAt(OffsetDateTime enrolledAt) {
-            this.enrolledAt = Optional.ofNullable(enrolledAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -325,37 +275,23 @@ public final class UsersEnrollment {
          */
         @JsonSetter(value = "last_auth", nulls = Nulls.SKIP)
         public Builder lastAuth(Optional<OffsetDateTime> lastAuth) {
-            this.lastAuth = lastAuth;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastAuth(OffsetDateTime lastAuth) {
-            this.lastAuth = Optional.ofNullable(lastAuth);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UsersEnrollment build() {
-            return new UsersEnrollment(
-                    id,
-                    status,
-                    type,
-                    name,
-                    identifier,
-                    phoneNumber,
-                    authMethod,
-                    enrolledAt,
-                    lastAuth,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

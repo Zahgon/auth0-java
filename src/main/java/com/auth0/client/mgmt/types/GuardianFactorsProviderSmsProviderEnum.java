@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GuardianFactorsProviderSmsProviderEnum {
-    public static final GuardianFactorsProviderSmsProviderEnum PHONE_MESSAGE_HOOK =
-            new GuardianFactorsProviderSmsProviderEnum(Value.PHONE_MESSAGE_HOOK, "phone-message-hook");
 
-    public static final GuardianFactorsProviderSmsProviderEnum AUTH0 =
-            new GuardianFactorsProviderSmsProviderEnum(Value.AUTH0, "auth0");
+    public static final GuardianFactorsProviderSmsProviderEnum PHONE_MESSAGE_HOOK = new GuardianFactorsProviderSmsProviderEnum(Value.PHONE_MESSAGE_HOOK, "phone-message-hook");
 
-    public static final GuardianFactorsProviderSmsProviderEnum TWILIO =
-            new GuardianFactorsProviderSmsProviderEnum(Value.TWILIO, "twilio");
+    public static final GuardianFactorsProviderSmsProviderEnum AUTH0 = new GuardianFactorsProviderSmsProviderEnum(Value.AUTH0, "auth0");
+
+    public static final GuardianFactorsProviderSmsProviderEnum TWILIO = new GuardianFactorsProviderSmsProviderEnum(Value.TWILIO, "twilio");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class GuardianFactorsProviderSmsProviderEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GuardianFactorsProviderSmsProviderEnum
-                        && this.string.equals(((GuardianFactorsProviderSmsProviderEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PHONE_MESSAGE_HOOK:
-                return visitor.visitPhoneMessageHook();
-            case AUTH0:
-                return visitor.visitAuth0();
-            case TWILIO:
-                return visitor.visitTwilio();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GuardianFactorsProviderSmsProviderEnum valueOf(String value) {
-        switch (value) {
-            case "phone-message-hook":
-                return PHONE_MESSAGE_HOOK;
-            case "auth0":
-                return AUTH0;
-            case "twilio":
-                return TWILIO;
-            default:
-                return new GuardianFactorsProviderSmsProviderEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0,
 
-        TWILIO,
-
-        PHONE_MESSAGE_HOOK,
-
-        UNKNOWN
+        AUTH0, TWILIO, PHONE_MESSAGE_HOOK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0();
 
         T visitTwilio();

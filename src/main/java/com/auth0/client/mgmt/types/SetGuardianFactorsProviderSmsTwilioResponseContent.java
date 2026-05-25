@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetGuardianFactorsProviderSmsTwilioResponseContent.Builder.class)
 public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
+
     private final OptionalNullable<String> from;
 
     private final OptionalNullable<String> messagingServiceSid;
@@ -33,12 +34,7 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private SetGuardianFactorsProviderSmsTwilioResponseContent(
-            OptionalNullable<String> from,
-            OptionalNullable<String> messagingServiceSid,
-            OptionalNullable<String> authToken,
-            OptionalNullable<String> sid,
-            Map<String, Object> additionalProperties) {
+    private SetGuardianFactorsProviderSmsTwilioResponseContent(OptionalNullable<String> from, OptionalNullable<String> messagingServiceSid, OptionalNullable<String> authToken, OptionalNullable<String> sid, Map<String, Object> additionalProperties) {
         this.from = from;
         this.messagingServiceSid = messagingServiceSid;
         this.authToken = authToken;
@@ -52,10 +48,7 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("from")
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,10 +57,7 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("messaging_service_sid")
     public OptionalNullable<String> getMessagingServiceSid() {
-        if (messagingServiceSid == null) {
-            return OptionalNullable.absent();
-        }
-        return messagingServiceSid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,10 +66,7 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("auth_token")
     public OptionalNullable<String> getAuthToken() {
-        if (authToken == null) {
-            return OptionalNullable.absent();
-        }
-        return authToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,10 +75,7 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("sid")
     public OptionalNullable<String> getSid() {
-        if (sid == null) {
-            return OptionalNullable.absent();
-        }
-        return sid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -120,39 +104,35 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetGuardianFactorsProviderSmsTwilioResponseContent
-                && equalTo((SetGuardianFactorsProviderSmsTwilioResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetGuardianFactorsProviderSmsTwilioResponseContent other) {
-        return from.equals(other.from)
-                && messagingServiceSid.equals(other.messagingServiceSid)
-                && authToken.equals(other.authToken)
-                && sid.equals(other.sid);
+        return from.equals(other.from) && messagingServiceSid.equals(other.messagingServiceSid) && authToken.equals(other.authToken) && sid.equals(other.sid);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.from, this.messagingServiceSid, this.authToken, this.sid);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> from = OptionalNullable.absent();
 
         private OptionalNullable<String> messagingServiceSid = OptionalNullable.absent();
@@ -164,14 +144,11 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SetGuardianFactorsProviderSmsTwilioResponseContent other) {
-            from(other.getFrom());
-            messagingServiceSid(other.getMessagingServiceSid());
-            authToken(other.getAuthToken());
-            sid(other.getSid());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,33 +156,19 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,33 +176,19 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
          */
         @JsonSetter(value = "messaging_service_sid", nulls = Nulls.SKIP)
         public Builder messagingServiceSid(@Nullable OptionalNullable<String> messagingServiceSid) {
-            this.messagingServiceSid = messagingServiceSid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder messagingServiceSid(String messagingServiceSid) {
-            this.messagingServiceSid = OptionalNullable.of(messagingServiceSid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder messagingServiceSid(Optional<String> messagingServiceSid) {
-            if (messagingServiceSid.isPresent()) {
-                this.messagingServiceSid = OptionalNullable.of(messagingServiceSid.get());
-            } else {
-                this.messagingServiceSid = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder messagingServiceSid(com.auth0.client.mgmt.core.Nullable<String> messagingServiceSid) {
-            if (messagingServiceSid.isNull()) {
-                this.messagingServiceSid = OptionalNullable.ofNull();
-            } else if (messagingServiceSid.isEmpty()) {
-                this.messagingServiceSid = OptionalNullable.absent();
-            } else {
-                this.messagingServiceSid = OptionalNullable.of(messagingServiceSid.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -247,33 +196,19 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
          */
         @JsonSetter(value = "auth_token", nulls = Nulls.SKIP)
         public Builder authToken(@Nullable OptionalNullable<String> authToken) {
-            this.authToken = authToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authToken(String authToken) {
-            this.authToken = OptionalNullable.of(authToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authToken(Optional<String> authToken) {
-            if (authToken.isPresent()) {
-                this.authToken = OptionalNullable.of(authToken.get());
-            } else {
-                this.authToken = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authToken(com.auth0.client.mgmt.core.Nullable<String> authToken) {
-            if (authToken.isNull()) {
-                this.authToken = OptionalNullable.ofNull();
-            } else if (authToken.isEmpty()) {
-                this.authToken = OptionalNullable.absent();
-            } else {
-                this.authToken = OptionalNullable.of(authToken.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,48 +216,31 @@ public final class SetGuardianFactorsProviderSmsTwilioResponseContent {
          */
         @JsonSetter(value = "sid", nulls = Nulls.SKIP)
         public Builder sid(@Nullable OptionalNullable<String> sid) {
-            this.sid = sid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sid(String sid) {
-            this.sid = OptionalNullable.of(sid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sid(Optional<String> sid) {
-            if (sid.isPresent()) {
-                this.sid = OptionalNullable.of(sid.get());
-            } else {
-                this.sid = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sid(com.auth0.client.mgmt.core.Nullable<String> sid) {
-            if (sid.isNull()) {
-                this.sid = OptionalNullable.ofNull();
-            } else if (sid.isEmpty()) {
-                this.sid = OptionalNullable.absent();
-            } else {
-                this.sid = OptionalNullable.of(sid.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SetGuardianFactorsProviderSmsTwilioResponseContent build() {
-            return new SetGuardianFactorsProviderSmsTwilioResponseContent(
-                    from, messagingServiceSid, authToken, sid, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

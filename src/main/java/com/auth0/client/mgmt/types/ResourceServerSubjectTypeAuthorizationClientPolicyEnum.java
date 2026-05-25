@@ -7,12 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerSubjectTypeAuthorizationClientPolicyEnum {
-    public static final ResourceServerSubjectTypeAuthorizationClientPolicyEnum DENY_ALL =
-            new ResourceServerSubjectTypeAuthorizationClientPolicyEnum(Value.DENY_ALL, "deny_all");
 
-    public static final ResourceServerSubjectTypeAuthorizationClientPolicyEnum REQUIRE_CLIENT_GRANT =
-            new ResourceServerSubjectTypeAuthorizationClientPolicyEnum(
-                    Value.REQUIRE_CLIENT_GRANT, "require_client_grant");
+    public static final ResourceServerSubjectTypeAuthorizationClientPolicyEnum DENY_ALL = new ResourceServerSubjectTypeAuthorizationClientPolicyEnum(Value.DENY_ALL, "deny_all");
+
+    public static final ResourceServerSubjectTypeAuthorizationClientPolicyEnum REQUIRE_CLIENT_GRANT = new ResourceServerSubjectTypeAuthorizationClientPolicyEnum(Value.REQUIRE_CLIENT_GRANT, "require_client_grant");
 
     private final Value value;
 
@@ -24,60 +22,41 @@ public final class ResourceServerSubjectTypeAuthorizationClientPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerSubjectTypeAuthorizationClientPolicyEnum
-                        && this.string.equals(((ResourceServerSubjectTypeAuthorizationClientPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DENY_ALL:
-                return visitor.visitDenyAll();
-            case REQUIRE_CLIENT_GRANT:
-                return visitor.visitRequireClientGrant();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerSubjectTypeAuthorizationClientPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "deny_all":
-                return DENY_ALL;
-            case "require_client_grant":
-                return REQUIRE_CLIENT_GRANT;
-            default:
-                return new ResourceServerSubjectTypeAuthorizationClientPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DENY_ALL,
 
-        REQUIRE_CLIENT_GRANT,
-
-        UNKNOWN
+        DENY_ALL, REQUIRE_CLIENT_GRANT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDenyAll();
 
         T visitRequireClientGrant();

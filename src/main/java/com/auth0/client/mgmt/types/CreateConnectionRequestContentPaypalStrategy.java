@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentPaypalStrategy {
-    public static final CreateConnectionRequestContentPaypalStrategy PAYPAL =
-            new CreateConnectionRequestContentPaypalStrategy(Value.PAYPAL, "paypal");
+
+    public static final CreateConnectionRequestContentPaypalStrategy PAYPAL = new CreateConnectionRequestContentPaypalStrategy(Value.PAYPAL, "paypal");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentPaypalStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentPaypalStrategy
-                        && this.string.equals(((CreateConnectionRequestContentPaypalStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PAYPAL:
-                return visitor.visitPaypal();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentPaypalStrategy valueOf(String value) {
-        switch (value) {
-            case "paypal":
-                return PAYPAL;
-            default:
-                return new CreateConnectionRequestContentPaypalStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PAYPAL,
 
-        UNKNOWN
+        PAYPAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPaypal();
 
         T visitUnknown(String unknownType);

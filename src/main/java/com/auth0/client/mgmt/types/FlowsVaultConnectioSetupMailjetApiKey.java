@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupMailjetApiKey.Builder.class)
 public final class FlowsVaultConnectioSetupMailjetApiKey {
+
     private final FlowsVaultConnectioSetupTypeApiKeyEnum type;
 
     private final String apiKey;
@@ -27,11 +28,7 @@ public final class FlowsVaultConnectioSetupMailjetApiKey {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupMailjetApiKey(
-            FlowsVaultConnectioSetupTypeApiKeyEnum type,
-            String apiKey,
-            String secretKey,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupMailjetApiKey(FlowsVaultConnectioSetupTypeApiKeyEnum type, String apiKey, String secretKey, Map<String, Object> additionalProperties) {
         this.type = type;
         this.apiKey = apiKey;
         this.secretKey = secretKey;
@@ -40,29 +37,27 @@ public final class FlowsVaultConnectioSetupMailjetApiKey {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeApiKeyEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_key")
     public String getApiKey() {
-        return apiKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("secret_key")
     public String getSecretKey() {
-        return secretKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupMailjetApiKey
-                && equalTo((FlowsVaultConnectioSetupMailjetApiKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupMailjetApiKey other) {
@@ -71,33 +66,37 @@ public final class FlowsVaultConnectioSetupMailjetApiKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.apiKey, this.secretKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         ApiKeyStage type(@NotNull FlowsVaultConnectioSetupTypeApiKeyEnum type);
 
         Builder from(FlowsVaultConnectioSetupMailjetApiKey other);
     }
 
     public interface ApiKeyStage {
+
         SecretKeyStage apiKey(@NotNull String apiKey);
     }
 
     public interface SecretKeyStage {
+
         _FinalStage secretKey(@NotNull String secretKey);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupMailjetApiKey build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -107,6 +106,7 @@ public final class FlowsVaultConnectioSetupMailjetApiKey {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, ApiKeyStage, SecretKeyStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeApiKeyEnum type;
 
         private String apiKey;
@@ -116,52 +116,45 @@ public final class FlowsVaultConnectioSetupMailjetApiKey {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupMailjetApiKey other) {
-            type(other.getType());
-            apiKey(other.getApiKey());
-            secretKey(other.getSecretKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ApiKeyStage type(@NotNull FlowsVaultConnectioSetupTypeApiKeyEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("api_key")
         public SecretKeyStage apiKey(@NotNull String apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey, "apiKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("secret_key")
         public _FinalStage secretKey(@NotNull String secretKey) {
-            this.secretKey = Objects.requireNonNull(secretKey, "secretKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupMailjetApiKey build() {
-            return new FlowsVaultConnectioSetupMailjetApiKey(type, apiKey, secretKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

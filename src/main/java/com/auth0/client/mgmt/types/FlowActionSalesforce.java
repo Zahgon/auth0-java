@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionSalesforce.Deserializer.class)
 public final class FlowActionSalesforce {
+
     private final Object value;
 
     private final int type;
@@ -27,27 +28,17 @@ public final class FlowActionSalesforce {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionSalesforceCreateLead) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionSalesforceGetLead) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowActionSalesforceSearchLeads) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowActionSalesforceUpdateLead) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSalesforce && equalTo((FlowActionSalesforce) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSalesforce other) {
@@ -56,31 +47,32 @@ public final class FlowActionSalesforce {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionSalesforce of(FlowActionSalesforceCreateLead value) {
-        return new FlowActionSalesforce(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionSalesforce of(FlowActionSalesforceGetLead value) {
-        return new FlowActionSalesforce(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionSalesforce of(FlowActionSalesforceSearchLeads value) {
-        return new FlowActionSalesforce(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionSalesforce of(FlowActionSalesforceUpdateLead value) {
-        return new FlowActionSalesforce(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionSalesforceCreateLead value);
 
         T visit(FlowActionSalesforceGetLead value);
@@ -91,54 +83,14 @@ public final class FlowActionSalesforce {
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionSalesforce> {
+
         Deserializer() {
             super(FlowActionSalesforce.class);
         }
 
         @java.lang.Override
         public FlowActionSalesforce deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSalesforceCreateLead.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSalesforceGetLead.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSalesforceSearchLeads.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSalesforceUpdateLead.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -18,12 +18,12 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetRiskAssessmentsSettingsNewDeviceResponseContent.Builder.class)
 public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
+
     private final int rememberFor;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetRiskAssessmentsSettingsNewDeviceResponseContent(
-            int rememberFor, Map<String, Object> additionalProperties) {
+    private GetRiskAssessmentsSettingsNewDeviceResponseContent(int rememberFor, Map<String, Object> additionalProperties) {
         this.rememberFor = rememberFor;
         this.additionalProperties = additionalProperties;
     }
@@ -33,19 +33,17 @@ public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
      */
     @JsonProperty("remember_for")
     public int getRememberFor() {
-        return rememberFor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetRiskAssessmentsSettingsNewDeviceResponseContent
-                && equalTo((GetRiskAssessmentsSettingsNewDeviceResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetRiskAssessmentsSettingsNewDeviceResponseContent other) {
@@ -54,19 +52,20 @@ public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.rememberFor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static RememberForStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface RememberForStage {
+
         /**
          * <p>Length of time to remember devices for, in days.</p>
          */
@@ -76,6 +75,7 @@ public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
     }
 
     public interface _FinalStage {
+
         GetRiskAssessmentsSettingsNewDeviceResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +85,18 @@ public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements RememberForStage, _FinalStage {
+
         private int rememberFor;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetRiskAssessmentsSettingsNewDeviceResponseContent other) {
-            rememberFor(other.getRememberFor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +107,22 @@ public final class GetRiskAssessmentsSettingsNewDeviceResponseContent {
         @java.lang.Override
         @JsonSetter("remember_for")
         public _FinalStage rememberFor(int rememberFor) {
-            this.rememberFor = rememberFor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetRiskAssessmentsSettingsNewDeviceResponseContent build() {
-            return new GetRiskAssessmentsSettingsNewDeviceResponseContent(rememberFor, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

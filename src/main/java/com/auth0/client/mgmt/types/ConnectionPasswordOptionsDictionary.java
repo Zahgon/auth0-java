@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordOptionsDictionary.Builder.class)
 public final class ConnectionPasswordOptionsDictionary {
+
     private final Optional<Boolean> active;
 
     private final Optional<List<String>> custom;
@@ -29,11 +30,7 @@ public final class ConnectionPasswordOptionsDictionary {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordOptionsDictionary(
-            Optional<Boolean> active,
-            Optional<List<String>> custom,
-            Optional<PasswordDefaultDictionariesEnum> default_,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPasswordOptionsDictionary(Optional<Boolean> active, Optional<List<String>> custom, Optional<PasswordDefaultDictionariesEnum> default_, Map<String, Object> additionalProperties) {
         this.active = active;
         this.custom = custom;
         this.default_ = default_;
@@ -45,7 +42,7 @@ public final class ConnectionPasswordOptionsDictionary {
      */
     @JsonProperty("active")
     public Optional<Boolean> getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,24 +50,22 @@ public final class ConnectionPasswordOptionsDictionary {
      */
     @JsonProperty("custom")
     public Optional<List<String>> getCustom() {
-        return custom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default")
     public Optional<PasswordDefaultDictionariesEnum> getDefault() {
-        return default_;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordOptionsDictionary
-                && equalTo((ConnectionPasswordOptionsDictionary) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordOptionsDictionary other) {
@@ -79,20 +74,21 @@ public final class ConnectionPasswordOptionsDictionary {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active, this.custom, this.default_);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> active = Optional.empty();
 
         private Optional<List<String>> custom = Optional.empty();
@@ -102,13 +98,11 @@ public final class ConnectionPasswordOptionsDictionary {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordOptionsDictionary other) {
-            active(other.getActive());
-            custom(other.getCustom());
-            default_(other.getDefault());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,13 +110,11 @@ public final class ConnectionPasswordOptionsDictionary {
          */
         @JsonSetter(value = "active", nulls = Nulls.SKIP)
         public Builder active(Optional<Boolean> active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder active(Boolean active) {
-            this.active = Optional.ofNullable(active);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -130,38 +122,32 @@ public final class ConnectionPasswordOptionsDictionary {
          */
         @JsonSetter(value = "custom", nulls = Nulls.SKIP)
         public Builder custom(Optional<List<String>> custom) {
-            this.custom = custom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder custom(List<String> custom) {
-            this.custom = Optional.ofNullable(custom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default", nulls = Nulls.SKIP)
         public Builder default_(Optional<PasswordDefaultDictionariesEnum> default_) {
-            this.default_ = default_;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder default_(PasswordDefaultDictionariesEnum default_) {
-            this.default_ = Optional.ofNullable(default_);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordOptionsDictionary build() {
-            return new ConnectionPasswordOptionsDictionary(active, custom, default_, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

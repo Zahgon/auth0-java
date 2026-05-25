@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetJobSummary.Builder.class)
 public final class GetJobSummary {
+
     private final Optional<Integer> failed;
 
     private final Optional<Integer> updated;
@@ -30,12 +31,7 @@ public final class GetJobSummary {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetJobSummary(
-            Optional<Integer> failed,
-            Optional<Integer> updated,
-            Optional<Integer> inserted,
-            Optional<Integer> total,
-            Map<String, Object> additionalProperties) {
+    private GetJobSummary(Optional<Integer> failed, Optional<Integer> updated, Optional<Integer> inserted, Optional<Integer> total, Map<String, Object> additionalProperties) {
         this.failed = failed;
         this.updated = updated;
         this.inserted = inserted;
@@ -48,7 +44,7 @@ public final class GetJobSummary {
      */
     @JsonProperty("failed")
     public Optional<Integer> getFailed() {
-        return failed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class GetJobSummary {
      */
     @JsonProperty("updated")
     public Optional<Integer> getUpdated() {
-        return updated;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +60,7 @@ public final class GetJobSummary {
      */
     @JsonProperty("inserted")
     public Optional<Integer> getInserted() {
-        return inserted;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,43 +68,40 @@ public final class GetJobSummary {
      */
     @JsonProperty("total")
     public Optional<Integer> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetJobSummary && equalTo((GetJobSummary) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetJobSummary other) {
-        return failed.equals(other.failed)
-                && updated.equals(other.updated)
-                && inserted.equals(other.inserted)
-                && total.equals(other.total);
+        return failed.equals(other.failed) && updated.equals(other.updated) && inserted.equals(other.inserted) && total.equals(other.total);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.failed, this.updated, this.inserted, this.total);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> failed = Optional.empty();
 
         private Optional<Integer> updated = Optional.empty();
@@ -120,14 +113,11 @@ public final class GetJobSummary {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetJobSummary other) {
-            failed(other.getFailed());
-            updated(other.getUpdated());
-            inserted(other.getInserted());
-            total(other.getTotal());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -135,13 +125,11 @@ public final class GetJobSummary {
          */
         @JsonSetter(value = "failed", nulls = Nulls.SKIP)
         public Builder failed(Optional<Integer> failed) {
-            this.failed = failed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder failed(Integer failed) {
-            this.failed = Optional.ofNullable(failed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,13 +137,11 @@ public final class GetJobSummary {
          */
         @JsonSetter(value = "updated", nulls = Nulls.SKIP)
         public Builder updated(Optional<Integer> updated) {
-            this.updated = updated;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updated(Integer updated) {
-            this.updated = Optional.ofNullable(updated);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,13 +149,11 @@ public final class GetJobSummary {
          */
         @JsonSetter(value = "inserted", nulls = Nulls.SKIP)
         public Builder inserted(Optional<Integer> inserted) {
-            this.inserted = inserted;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder inserted(Integer inserted) {
-            this.inserted = Optional.ofNullable(inserted);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,27 +161,23 @@ public final class GetJobSummary {
          */
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Integer> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Integer total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetJobSummary build() {
-            return new GetJobSummary(failed, updated, inserted, total, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

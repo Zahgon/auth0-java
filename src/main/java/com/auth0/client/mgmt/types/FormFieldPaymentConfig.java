@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfig.Builder.class)
 public final class FormFieldPaymentConfig {
+
     private final Optional<FormFieldPaymentConfigProviderEnum> provider;
 
     private final FormFieldPaymentConfigCharge charge;
@@ -33,13 +34,7 @@ public final class FormFieldPaymentConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfig(
-            Optional<FormFieldPaymentConfigProviderEnum> provider,
-            FormFieldPaymentConfigCharge charge,
-            FormFieldPaymentConfigCredentials credentials,
-            Optional<Map<String, Object>> customer,
-            Optional<FormFieldPaymentConfigFields> fields,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfig(Optional<FormFieldPaymentConfigProviderEnum> provider, FormFieldPaymentConfigCharge charge, FormFieldPaymentConfigCredentials credentials, Optional<Map<String, Object>> customer, Optional<FormFieldPaymentConfigFields> fields, Map<String, Object> additionalProperties) {
         this.provider = provider;
         this.charge = charge;
         this.credentials = credentials;
@@ -50,73 +45,71 @@ public final class FormFieldPaymentConfig {
 
     @JsonProperty("provider")
     public Optional<FormFieldPaymentConfigProviderEnum> getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("charge")
     public FormFieldPaymentConfigCharge getCharge() {
-        return charge;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("credentials")
     public FormFieldPaymentConfigCredentials getCredentials() {
-        return credentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("customer")
     public Optional<Map<String, Object>> getCustomer() {
-        return customer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fields")
     public Optional<FormFieldPaymentConfigFields> getFields() {
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfig && equalTo((FormFieldPaymentConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfig other) {
-        return provider.equals(other.provider)
-                && charge.equals(other.charge)
-                && credentials.equals(other.credentials)
-                && customer.equals(other.customer)
-                && fields.equals(other.fields);
+        return provider.equals(other.provider) && charge.equals(other.charge) && credentials.equals(other.credentials) && customer.equals(other.customer) && fields.equals(other.fields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.provider, this.charge, this.credentials, this.customer, this.fields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ChargeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ChargeStage {
+
         CredentialsStage charge(@NotNull FormFieldPaymentConfigCharge charge);
 
         Builder from(FormFieldPaymentConfig other);
     }
 
     public interface CredentialsStage {
+
         _FinalStage credentials(@NotNull FormFieldPaymentConfigCredentials credentials);
     }
 
     public interface _FinalStage {
+
         FormFieldPaymentConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -138,6 +131,7 @@ public final class FormFieldPaymentConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ChargeStage, CredentialsStage, _FinalStage {
+
         private FormFieldPaymentConfigCharge charge;
 
         private FormFieldPaymentConfigCredentials credentials;
@@ -151,86 +145,72 @@ public final class FormFieldPaymentConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldPaymentConfig other) {
-            provider(other.getProvider());
-            charge(other.getCharge());
-            credentials(other.getCredentials());
-            customer(other.getCustomer());
-            fields(other.getFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("charge")
         public CredentialsStage charge(@NotNull FormFieldPaymentConfigCharge charge) {
-            this.charge = Objects.requireNonNull(charge, "charge must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("credentials")
         public _FinalStage credentials(@NotNull FormFieldPaymentConfigCredentials credentials) {
-            this.credentials = Objects.requireNonNull(credentials, "credentials must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage fields(FormFieldPaymentConfigFields fields) {
-            this.fields = Optional.ofNullable(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public _FinalStage fields(Optional<FormFieldPaymentConfigFields> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customer(Map<String, Object> customer) {
-            this.customer = Optional.ofNullable(customer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "customer", nulls = Nulls.SKIP)
         public _FinalStage customer(Optional<Map<String, Object>> customer) {
-            this.customer = customer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage provider(FormFieldPaymentConfigProviderEnum provider) {
-            this.provider = Optional.ofNullable(provider);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "provider", nulls = Nulls.SKIP)
         public _FinalStage provider(Optional<FormFieldPaymentConfigProviderEnum> provider) {
-            this.provider = provider;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldPaymentConfig build() {
-            return new FormFieldPaymentConfig(provider, charge, credentials, customer, fields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

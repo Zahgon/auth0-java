@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetRulesConfigResponseContent.Builder.class)
 public final class SetRulesConfigResponseContent {
+
     private final String key;
 
     private final String value;
@@ -36,7 +37,7 @@ public final class SetRulesConfigResponseContent {
      */
     @JsonProperty("key")
     public String getKey() {
-        return key;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,18 +45,17 @@ public final class SetRulesConfigResponseContent {
      */
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetRulesConfigResponseContent && equalTo((SetRulesConfigResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetRulesConfigResponseContent other) {
@@ -64,19 +64,20 @@ public final class SetRulesConfigResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.key, this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KeyStage {
+
         /**
          * <p>Key for a rules config variable.</p>
          */
@@ -86,6 +87,7 @@ public final class SetRulesConfigResponseContent {
     }
 
     public interface ValueStage {
+
         /**
          * <p>Value for a rules config variable.</p>
          */
@@ -93,6 +95,7 @@ public final class SetRulesConfigResponseContent {
     }
 
     public interface _FinalStage {
+
         SetRulesConfigResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -102,6 +105,7 @@ public final class SetRulesConfigResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements KeyStage, ValueStage, _FinalStage {
+
         private String key;
 
         private String value;
@@ -109,13 +113,12 @@ public final class SetRulesConfigResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SetRulesConfigResponseContent other) {
-            key(other.getKey());
-            value(other.getValue());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -126,8 +129,7 @@ public final class SetRulesConfigResponseContent {
         @java.lang.Override
         @JsonSetter("key")
         public ValueStage key(@NotNull String key) {
-            this.key = Objects.requireNonNull(key, "key must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,25 +140,22 @@ public final class SetRulesConfigResponseContent {
         @java.lang.Override
         @JsonSetter("value")
         public _FinalStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SetRulesConfigResponseContent build() {
-            return new SetRulesConfigResponseContent(key, value, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

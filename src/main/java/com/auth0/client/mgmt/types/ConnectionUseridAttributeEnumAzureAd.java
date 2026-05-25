@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionUseridAttributeEnumAzureAd {
-    public static final ConnectionUseridAttributeEnumAzureAd SUB =
-            new ConnectionUseridAttributeEnumAzureAd(Value.SUB, "sub");
 
-    public static final ConnectionUseridAttributeEnumAzureAd OID =
-            new ConnectionUseridAttributeEnumAzureAd(Value.OID, "oid");
+    public static final ConnectionUseridAttributeEnumAzureAd SUB = new ConnectionUseridAttributeEnumAzureAd(Value.SUB, "sub");
+
+    public static final ConnectionUseridAttributeEnumAzureAd OID = new ConnectionUseridAttributeEnumAzureAd(Value.OID, "oid");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionUseridAttributeEnumAzureAd {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionUseridAttributeEnumAzureAd
-                        && this.string.equals(((ConnectionUseridAttributeEnumAzureAd) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SUB:
-                return visitor.visitSub();
-            case OID:
-                return visitor.visitOid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionUseridAttributeEnumAzureAd valueOf(String value) {
-        switch (value) {
-            case "sub":
-                return SUB;
-            case "oid":
-                return OID;
-            default:
-                return new ConnectionUseridAttributeEnumAzureAd(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OID,
 
-        SUB,
-
-        UNKNOWN
+        OID, SUB, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOid();
 
         T visitSub();

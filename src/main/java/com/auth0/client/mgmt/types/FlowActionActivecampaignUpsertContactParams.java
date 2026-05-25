@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionActivecampaignUpsertContactParams.Builder.class)
 public final class FlowActionActivecampaignUpsertContactParams {
+
     private final String connectionId;
 
     private final String email;
@@ -35,14 +36,7 @@ public final class FlowActionActivecampaignUpsertContactParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionActivecampaignUpsertContactParams(
-            String connectionId,
-            String email,
-            Optional<String> firstName,
-            Optional<String> lastName,
-            Optional<String> phone,
-            Optional<Map<String, Object>> customFields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionActivecampaignUpsertContactParams(String connectionId, String email, Optional<String> firstName, Optional<String> lastName, Optional<String> phone, Optional<Map<String, Object>> customFields, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.email = email;
         this.firstName = firstName;
@@ -54,81 +48,76 @@ public final class FlowActionActivecampaignUpsertContactParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email")
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("first_name")
     public Optional<String> getFirstName() {
-        return firstName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("last_name")
     public Optional<String> getLastName() {
-        return lastName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone")
     public Optional<String> getPhone() {
-        return phone;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("custom_fields")
     public Optional<Map<String, Object>> getCustomFields() {
-        return customFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionActivecampaignUpsertContactParams
-                && equalTo((FlowActionActivecampaignUpsertContactParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionActivecampaignUpsertContactParams other) {
-        return connectionId.equals(other.connectionId)
-                && email.equals(other.email)
-                && firstName.equals(other.firstName)
-                && lastName.equals(other.lastName)
-                && phone.equals(other.phone)
-                && customFields.equals(other.customFields);
+        return connectionId.equals(other.connectionId) && email.equals(other.email) && firstName.equals(other.firstName) && lastName.equals(other.lastName) && phone.equals(other.phone) && customFields.equals(other.customFields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId, this.email, this.firstName, this.lastName, this.phone, this.customFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         EmailStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionActivecampaignUpsertContactParams other);
     }
 
     public interface EmailStage {
+
         _FinalStage email(@NotNull String email);
     }
 
     public interface _FinalStage {
+
         FlowActionActivecampaignUpsertContactParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -154,6 +143,7 @@ public final class FlowActionActivecampaignUpsertContactParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, EmailStage, _FinalStage {
+
         private String connectionId;
 
         private String email;
@@ -169,101 +159,83 @@ public final class FlowActionActivecampaignUpsertContactParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionActivecampaignUpsertContactParams other) {
-            connectionId(other.getConnectionId());
-            email(other.getEmail());
-            firstName(other.getFirstName());
-            lastName(other.getLastName());
-            phone(other.getPhone());
-            customFields(other.getCustomFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public EmailStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("email")
         public _FinalStage email(@NotNull String email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customFields(Map<String, Object> customFields) {
-            this.customFields = Optional.ofNullable(customFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "custom_fields", nulls = Nulls.SKIP)
         public _FinalStage customFields(Optional<Map<String, Object>> customFields) {
-            this.customFields = customFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage phone(String phone) {
-            this.phone = Optional.ofNullable(phone);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "phone", nulls = Nulls.SKIP)
         public _FinalStage phone(Optional<String> phone) {
-            this.phone = phone;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage lastName(String lastName) {
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "last_name", nulls = Nulls.SKIP)
         public _FinalStage lastName(Optional<String> lastName) {
-            this.lastName = lastName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage firstName(String firstName) {
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "first_name", nulls = Nulls.SKIP)
         public _FinalStage firstName(Optional<String> firstName) {
-            this.firstName = firstName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionActivecampaignUpsertContactParams build() {
-            return new FlowActionActivecampaignUpsertContactParams(
-                    connectionId, email, firstName, lastName, phone, customFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

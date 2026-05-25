@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0GetUserAction {
-    public static final FlowActionAuth0GetUserAction GET_USER =
-            new FlowActionAuth0GetUserAction(Value.GET_USER, "GET_USER");
+
+    public static final FlowActionAuth0GetUserAction GET_USER = new FlowActionAuth0GetUserAction(Value.GET_USER, "GET_USER");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAuth0GetUserAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0GetUserAction
-                        && this.string.equals(((FlowActionAuth0GetUserAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET_USER:
-                return visitor.visitGetUser();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0GetUserAction valueOf(String value) {
-        switch (value) {
-            case "GET_USER":
-                return GET_USER;
-            default:
-                return new FlowActionAuth0GetUserAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GET_USER,
 
-        UNKNOWN
+        GET_USER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGetUser();
 
         T visitUnknown(String unknownType);

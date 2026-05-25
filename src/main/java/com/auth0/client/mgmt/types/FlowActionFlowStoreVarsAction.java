@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowStoreVarsAction {
-    public static final FlowActionFlowStoreVarsAction STORE_VARS =
-            new FlowActionFlowStoreVarsAction(Value.STORE_VARS, "STORE_VARS");
+
+    public static final FlowActionFlowStoreVarsAction STORE_VARS = new FlowActionFlowStoreVarsAction(Value.STORE_VARS, "STORE_VARS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionFlowStoreVarsAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowStoreVarsAction
-                        && this.string.equals(((FlowActionFlowStoreVarsAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case STORE_VARS:
-                return visitor.visitStoreVars();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowStoreVarsAction valueOf(String value) {
-        switch (value) {
-            case "STORE_VARS":
-                return STORE_VARS;
-            default:
-                return new FlowActionFlowStoreVarsAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STORE_VARS,
 
-        UNKNOWN
+        STORE_VARS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStoreVars();
 
         T visitUnknown(String unknownType);

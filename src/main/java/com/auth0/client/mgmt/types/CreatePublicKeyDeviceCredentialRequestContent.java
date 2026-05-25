@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreatePublicKeyDeviceCredentialRequestContent.Builder.class)
 public final class CreatePublicKeyDeviceCredentialRequestContent {
+
     private final String deviceName;
 
     private final DeviceCredentialPublicKeyTypeEnum type;
@@ -33,13 +34,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreatePublicKeyDeviceCredentialRequestContent(
-            String deviceName,
-            DeviceCredentialPublicKeyTypeEnum type,
-            String value,
-            String deviceId,
-            Optional<String> clientId,
-            Map<String, Object> additionalProperties) {
+    private CreatePublicKeyDeviceCredentialRequestContent(String deviceName, DeviceCredentialPublicKeyTypeEnum type, String value, String deviceId, Optional<String> clientId, Map<String, Object> additionalProperties) {
         this.deviceName = deviceName;
         this.type = type;
         this.value = value;
@@ -53,12 +48,12 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
      */
     @JsonProperty("device_name")
     public String getDeviceName() {
-        return deviceName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public DeviceCredentialPublicKeyTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,7 +61,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
      */
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +69,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
      */
     @JsonProperty("device_id")
     public String getDeviceId() {
-        return deviceId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,44 +77,39 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreatePublicKeyDeviceCredentialRequestContent
-                && equalTo((CreatePublicKeyDeviceCredentialRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreatePublicKeyDeviceCredentialRequestContent other) {
-        return deviceName.equals(other.deviceName)
-                && type.equals(other.type)
-                && value.equals(other.value)
-                && deviceId.equals(other.deviceId)
-                && clientId.equals(other.clientId);
+        return deviceName.equals(other.deviceName) && type.equals(other.type) && value.equals(other.value) && deviceId.equals(other.deviceId) && clientId.equals(other.clientId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.deviceName, this.type, this.value, this.deviceId, this.clientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DeviceNameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DeviceNameStage {
+
         /**
          * <p>Name for this device easily recognized by owner.</p>
          */
@@ -129,10 +119,12 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
     }
 
     public interface TypeStage {
+
         ValueStage type(@NotNull DeviceCredentialPublicKeyTypeEnum type);
     }
 
     public interface ValueStage {
+
         /**
          * <p>Base64 encoded string containing the credential.</p>
          */
@@ -140,6 +132,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
     }
 
     public interface DeviceIdStage {
+
         /**
          * <p>Unique identifier for the device. Recommend using <a href="http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID">Android_ID</a> on Android and <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor">identifierForVendor</a>.</p>
          */
@@ -147,6 +140,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
     }
 
     public interface _FinalStage {
+
         CreatePublicKeyDeviceCredentialRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -163,6 +157,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DeviceNameStage, TypeStage, ValueStage, DeviceIdStage, _FinalStage {
+
         private String deviceName;
 
         private DeviceCredentialPublicKeyTypeEnum type;
@@ -176,16 +171,12 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreatePublicKeyDeviceCredentialRequestContent other) {
-            deviceName(other.getDeviceName());
-            type(other.getType());
-            value(other.getValue());
-            deviceId(other.getDeviceId());
-            clientId(other.getClientId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,15 +187,13 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
         @java.lang.Override
         @JsonSetter("device_name")
         public TypeStage deviceName(@NotNull String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName, "deviceName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ValueStage type(@NotNull DeviceCredentialPublicKeyTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -215,8 +204,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
         @java.lang.Override
         @JsonSetter("value")
         public DeviceIdStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -227,8 +215,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
         @java.lang.Override
         @JsonSetter("device_id")
         public _FinalStage deviceId(@NotNull String deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId, "deviceId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -237,8 +224,7 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -247,26 +233,22 @@ public final class CreatePublicKeyDeviceCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public _FinalStage clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreatePublicKeyDeviceCredentialRequestContent build() {
-            return new CreatePublicKeyDeviceCredentialRequestContent(
-                    deviceName, type, value, deviceId, clientId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

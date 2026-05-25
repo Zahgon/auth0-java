@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.PatchSupplementalSignalsResponseContent;
 import com.auth0.client.mgmt.types.UpdateSupplementalSignalsRequestContent;
 
 public class SupplementalSignalsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSupplementalSignalsClient rawClient;
@@ -23,35 +24,34 @@ public class SupplementalSignalsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSupplementalSignalsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the supplemental signals configuration for a tenant.
      */
     public GetSupplementalSignalsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the supplemental signals configuration for a tenant.
      */
     public GetSupplementalSignalsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the supplemental signals configuration for a tenant.
      */
     public PatchSupplementalSignalsResponseContent patch(UpdateSupplementalSignalsRequestContent request) {
-        return this.rawClient.patch(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the supplemental signals configuration for a tenant.
      */
-    public PatchSupplementalSignalsResponseContent patch(
-            UpdateSupplementalSignalsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.patch(request, requestOptions).body();
+    public PatchSupplementalSignalsResponseContent patch(UpdateSupplementalSignalsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

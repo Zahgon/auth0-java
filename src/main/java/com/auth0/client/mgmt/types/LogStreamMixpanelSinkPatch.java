@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamMixpanelSinkPatch.Builder.class)
 public final class LogStreamMixpanelSinkPatch {
+
     private final LogStreamMixpanelRegionEnum mixpanelRegion;
 
     private final String mixpanelProjectId;
@@ -31,12 +32,7 @@ public final class LogStreamMixpanelSinkPatch {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamMixpanelSinkPatch(
-            LogStreamMixpanelRegionEnum mixpanelRegion,
-            String mixpanelProjectId,
-            String mixpanelServiceAccountUsername,
-            Optional<String> mixpanelServiceAccountPassword,
-            Map<String, Object> additionalProperties) {
+    private LogStreamMixpanelSinkPatch(LogStreamMixpanelRegionEnum mixpanelRegion, String mixpanelProjectId, String mixpanelServiceAccountUsername, Optional<String> mixpanelServiceAccountPassword, Map<String, Object> additionalProperties) {
         this.mixpanelRegion = mixpanelRegion;
         this.mixpanelProjectId = mixpanelProjectId;
         this.mixpanelServiceAccountUsername = mixpanelServiceAccountUsername;
@@ -46,7 +42,7 @@ public final class LogStreamMixpanelSinkPatch {
 
     @JsonProperty("mixpanelRegion")
     public LogStreamMixpanelRegionEnum getMixpanelRegion() {
-        return mixpanelRegion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +50,7 @@ public final class LogStreamMixpanelSinkPatch {
      */
     @JsonProperty("mixpanelProjectId")
     public String getMixpanelProjectId() {
-        return mixpanelProjectId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class LogStreamMixpanelSinkPatch {
      */
     @JsonProperty("mixpanelServiceAccountUsername")
     public String getMixpanelServiceAccountUsername() {
-        return mixpanelServiceAccountUsername;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,52 +66,46 @@ public final class LogStreamMixpanelSinkPatch {
      */
     @JsonProperty("mixpanelServiceAccountPassword")
     public Optional<String> getMixpanelServiceAccountPassword() {
-        return mixpanelServiceAccountPassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamMixpanelSinkPatch && equalTo((LogStreamMixpanelSinkPatch) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamMixpanelSinkPatch other) {
-        return mixpanelRegion.equals(other.mixpanelRegion)
-                && mixpanelProjectId.equals(other.mixpanelProjectId)
-                && mixpanelServiceAccountUsername.equals(other.mixpanelServiceAccountUsername)
-                && mixpanelServiceAccountPassword.equals(other.mixpanelServiceAccountPassword);
+        return mixpanelRegion.equals(other.mixpanelRegion) && mixpanelProjectId.equals(other.mixpanelProjectId) && mixpanelServiceAccountUsername.equals(other.mixpanelServiceAccountUsername) && mixpanelServiceAccountPassword.equals(other.mixpanelServiceAccountPassword);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.mixpanelRegion,
-                this.mixpanelProjectId,
-                this.mixpanelServiceAccountUsername,
-                this.mixpanelServiceAccountPassword);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MixpanelRegionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MixpanelRegionStage {
+
         MixpanelProjectIdStage mixpanelRegion(@NotNull LogStreamMixpanelRegionEnum mixpanelRegion);
 
         Builder from(LogStreamMixpanelSinkPatch other);
     }
 
     public interface MixpanelProjectIdStage {
+
         /**
          * <p>Mixpanel Project Id</p>
          */
@@ -123,6 +113,7 @@ public final class LogStreamMixpanelSinkPatch {
     }
 
     public interface MixpanelServiceAccountUsernameStage {
+
         /**
          * <p>Mixpanel Service Account Username</p>
          */
@@ -130,6 +121,7 @@ public final class LogStreamMixpanelSinkPatch {
     }
 
     public interface _FinalStage {
+
         LogStreamMixpanelSinkPatch build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -145,8 +137,8 @@ public final class LogStreamMixpanelSinkPatch {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements MixpanelRegionStage, MixpanelProjectIdStage, MixpanelServiceAccountUsernameStage, _FinalStage {
+    public static final class Builder implements MixpanelRegionStage, MixpanelProjectIdStage, MixpanelServiceAccountUsernameStage, _FinalStage {
+
         private LogStreamMixpanelRegionEnum mixpanelRegion;
 
         private String mixpanelProjectId;
@@ -158,22 +150,18 @@ public final class LogStreamMixpanelSinkPatch {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamMixpanelSinkPatch other) {
-            mixpanelRegion(other.getMixpanelRegion());
-            mixpanelProjectId(other.getMixpanelProjectId());
-            mixpanelServiceAccountUsername(other.getMixpanelServiceAccountUsername());
-            mixpanelServiceAccountPassword(other.getMixpanelServiceAccountPassword());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("mixpanelRegion")
         public MixpanelProjectIdStage mixpanelRegion(@NotNull LogStreamMixpanelRegionEnum mixpanelRegion) {
-            this.mixpanelRegion = Objects.requireNonNull(mixpanelRegion, "mixpanelRegion must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,8 +172,7 @@ public final class LogStreamMixpanelSinkPatch {
         @java.lang.Override
         @JsonSetter("mixpanelProjectId")
         public MixpanelServiceAccountUsernameStage mixpanelProjectId(@NotNull String mixpanelProjectId) {
-            this.mixpanelProjectId = Objects.requireNonNull(mixpanelProjectId, "mixpanelProjectId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,9 +183,7 @@ public final class LogStreamMixpanelSinkPatch {
         @java.lang.Override
         @JsonSetter("mixpanelServiceAccountUsername")
         public _FinalStage mixpanelServiceAccountUsername(@NotNull String mixpanelServiceAccountUsername) {
-            this.mixpanelServiceAccountUsername = Objects.requireNonNull(
-                    mixpanelServiceAccountUsername, "mixpanelServiceAccountUsername must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,8 +192,7 @@ public final class LogStreamMixpanelSinkPatch {
          */
         @java.lang.Override
         public _FinalStage mixpanelServiceAccountPassword(String mixpanelServiceAccountPassword) {
-            this.mixpanelServiceAccountPassword = Optional.ofNullable(mixpanelServiceAccountPassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -217,30 +201,22 @@ public final class LogStreamMixpanelSinkPatch {
         @java.lang.Override
         @JsonSetter(value = "mixpanelServiceAccountPassword", nulls = Nulls.SKIP)
         public _FinalStage mixpanelServiceAccountPassword(Optional<String> mixpanelServiceAccountPassword) {
-            this.mixpanelServiceAccountPassword = mixpanelServiceAccountPassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamMixpanelSinkPatch build() {
-            return new LogStreamMixpanelSinkPatch(
-                    mixpanelRegion,
-                    mixpanelProjectId,
-                    mixpanelServiceAccountUsername,
-                    mixpanelServiceAccountPassword,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

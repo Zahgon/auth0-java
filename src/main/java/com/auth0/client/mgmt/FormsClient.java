@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateFormRequestContent;
 import com.auth0.client.mgmt.types.UpdateFormResponseContent;
 
 public class FormsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawFormsClient rawClient;
@@ -29,71 +30,70 @@ public class FormsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawFormsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FormSummary> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FormSummary> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FormSummary> list(ListFormsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FormSummary> list(ListFormsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateFormResponseContent create(CreateFormRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateFormResponseContent create(CreateFormRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFormResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFormResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFormResponseContent get(String id, GetFormRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFormResponseContent get(String id, GetFormRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFormResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFormResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFormResponseContent update(String id, UpdateFormRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateFormResponseContent update(
-            String id, UpdateFormRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateFormResponseContent update(String id, UpdateFormRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

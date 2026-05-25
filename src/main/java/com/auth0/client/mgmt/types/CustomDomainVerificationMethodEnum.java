@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomDomainVerificationMethodEnum {
-    public static final CustomDomainVerificationMethodEnum TXT =
-            new CustomDomainVerificationMethodEnum(Value.TXT, "txt");
+
+    public static final CustomDomainVerificationMethodEnum TXT = new CustomDomainVerificationMethodEnum(Value.TXT, "txt");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CustomDomainVerificationMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomDomainVerificationMethodEnum
-                        && this.string.equals(((CustomDomainVerificationMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TXT:
-                return visitor.visitTxt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomDomainVerificationMethodEnum valueOf(String value) {
-        switch (value) {
-            case "txt":
-                return TXT;
-            default:
-                return new CustomDomainVerificationMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TXT,
 
-        UNKNOWN
+        TXT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTxt();
 
         T visitUnknown(String unknownType);

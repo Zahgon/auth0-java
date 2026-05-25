@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SessionCookieSchema.Builder.class)
 public final class SessionCookieSchema {
+
     private final SessionCookieModeEnum mode;
 
     private final Map<String, Object> additionalProperties;
@@ -30,18 +31,17 @@ public final class SessionCookieSchema {
 
     @JsonProperty("mode")
     public SessionCookieModeEnum getMode() {
-        return mode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SessionCookieSchema && equalTo((SessionCookieSchema) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SessionCookieSchema other) {
@@ -50,25 +50,27 @@ public final class SessionCookieSchema {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ModeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ModeStage {
+
         _FinalStage mode(@NotNull SessionCookieModeEnum mode);
 
         Builder from(SessionCookieSchema other);
     }
 
     public interface _FinalStage {
+
         SessionCookieSchema build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -78,41 +80,39 @@ public final class SessionCookieSchema {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ModeStage, _FinalStage {
+
         private SessionCookieModeEnum mode;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SessionCookieSchema other) {
-            mode(other.getMode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("mode")
         public _FinalStage mode(@NotNull SessionCookieModeEnum mode) {
-            this.mode = Objects.requireNonNull(mode, "mode must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SessionCookieSchema build() {
-            return new SessionCookieSchema(mode, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

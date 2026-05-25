@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormStepConfig.Builder.class)
 public final class FormStepConfig {
+
     private final Optional<List<FormComponent>> components;
 
     private final Optional<FormNodePointer> nextNode;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormStepConfig(
-            Optional<List<FormComponent>> components,
-            Optional<FormNodePointer> nextNode,
-            Map<String, Object> additionalProperties) {
+    private FormStepConfig(Optional<List<FormComponent>> components, Optional<FormNodePointer> nextNode, Map<String, Object> additionalProperties) {
         this.components = components;
         this.nextNode = nextNode;
         this.additionalProperties = additionalProperties;
@@ -38,23 +36,22 @@ public final class FormStepConfig {
 
     @JsonProperty("components")
     public Optional<List<FormComponent>> getComponents() {
-        return components;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("next_node")
     public Optional<FormNodePointer> getNextNode() {
-        return nextNode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormStepConfig && equalTo((FormStepConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormStepConfig other) {
@@ -63,20 +60,21 @@ public final class FormStepConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.components, this.nextNode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<FormComponent>> components = Optional.empty();
 
         private Optional<FormNodePointer> nextNode = Optional.empty();
@@ -84,48 +82,41 @@ public final class FormStepConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormStepConfig other) {
-            components(other.getComponents());
-            nextNode(other.getNextNode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "components", nulls = Nulls.SKIP)
         public Builder components(Optional<List<FormComponent>> components) {
-            this.components = components;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder components(List<FormComponent> components) {
-            this.components = Optional.ofNullable(components);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "next_node", nulls = Nulls.SKIP)
         public Builder nextNode(Optional<FormNodePointer> nextNode) {
-            this.nextNode = nextNode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nextNode(FormNodePointer nextNode) {
-            this.nextNode = Optional.ofNullable(nextNode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormStepConfig build() {
-            return new FormStepConfig(components, nextNode, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

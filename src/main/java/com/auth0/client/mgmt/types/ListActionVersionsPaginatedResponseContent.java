@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListActionVersionsPaginatedResponseContent.Builder.class)
 public final class ListActionVersionsPaginatedResponseContent {
+
     private final Optional<Double> total;
 
     private final Optional<Double> page;
@@ -31,12 +32,7 @@ public final class ListActionVersionsPaginatedResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListActionVersionsPaginatedResponseContent(
-            Optional<Double> total,
-            Optional<Double> page,
-            Optional<Double> perPage,
-            Optional<List<ActionVersion>> versions,
-            Map<String, Object> additionalProperties) {
+    private ListActionVersionsPaginatedResponseContent(Optional<Double> total, Optional<Double> page, Optional<Double> perPage, Optional<List<ActionVersion>> versions, Map<String, Object> additionalProperties) {
         this.total = total;
         this.page = page;
         this.perPage = perPage;
@@ -49,7 +45,7 @@ public final class ListActionVersionsPaginatedResponseContent {
      */
     @JsonProperty("total")
     public Optional<Double> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class ListActionVersionsPaginatedResponseContent {
      */
     @JsonProperty("page")
     public Optional<Double> getPage() {
-        return page;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,49 +61,45 @@ public final class ListActionVersionsPaginatedResponseContent {
      */
     @JsonProperty("per_page")
     public Optional<Double> getPerPage() {
-        return perPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("versions")
     public Optional<List<ActionVersion>> getVersions() {
-        return versions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListActionVersionsPaginatedResponseContent
-                && equalTo((ListActionVersionsPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListActionVersionsPaginatedResponseContent other) {
-        return total.equals(other.total)
-                && page.equals(other.page)
-                && perPage.equals(other.perPage)
-                && versions.equals(other.versions);
+        return total.equals(other.total) && page.equals(other.page) && perPage.equals(other.perPage) && versions.equals(other.versions);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.total, this.page, this.perPage, this.versions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> total = Optional.empty();
 
         private Optional<Double> page = Optional.empty();
@@ -119,14 +111,11 @@ public final class ListActionVersionsPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListActionVersionsPaginatedResponseContent other) {
-            total(other.getTotal());
-            page(other.getPage());
-            perPage(other.getPerPage());
-            versions(other.getVersions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,13 +123,11 @@ public final class ListActionVersionsPaginatedResponseContent {
          */
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Double> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Double total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,13 +135,11 @@ public final class ListActionVersionsPaginatedResponseContent {
          */
         @JsonSetter(value = "page", nulls = Nulls.SKIP)
         public Builder page(Optional<Double> page) {
-            this.page = page;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Double page) {
-            this.page = Optional.ofNullable(page);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -162,38 +147,32 @@ public final class ListActionVersionsPaginatedResponseContent {
          */
         @JsonSetter(value = "per_page", nulls = Nulls.SKIP)
         public Builder perPage(Optional<Double> perPage) {
-            this.perPage = perPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Double perPage) {
-            this.perPage = Optional.ofNullable(perPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "versions", nulls = Nulls.SKIP)
         public Builder versions(Optional<List<ActionVersion>> versions) {
-            this.versions = versions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder versions(List<ActionVersion> versions) {
-            this.versions = Optional.ofNullable(versions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListActionVersionsPaginatedResponseContent build() {
-            return new ListActionVersionsPaginatedResponseContent(total, page, perPage, versions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

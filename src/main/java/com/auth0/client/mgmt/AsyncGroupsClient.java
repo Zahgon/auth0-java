@@ -15,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncGroupsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawGroupsClient rawClient;
@@ -31,67 +32,66 @@ public class AsyncGroupsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawGroupsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public CompletableFuture<SyncPagingIterable<Group>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public CompletableFuture<SyncPagingIterable<Group>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public CompletableFuture<SyncPagingIterable<Group>> list(ListGroupsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
-    public CompletableFuture<SyncPagingIterable<Group>> list(
-            ListGroupsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Group>> list(ListGroupsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a group by its ID.
      */
     public CompletableFuture<GetGroupResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a group by its ID.
      */
     public CompletableFuture<GetGroupResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a group by its ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a group by its ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncMembersClient members() {
-        return this.membersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

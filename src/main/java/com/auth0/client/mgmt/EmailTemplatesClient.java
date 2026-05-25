@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.UpdateEmailTemplateRequestContent;
 import com.auth0.client.mgmt.types.UpdateEmailTemplateResponseContent;
 
 public class EmailTemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawEmailTemplatesClient rawClient;
@@ -28,84 +29,76 @@ public class EmailTemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawEmailTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email template.
      */
     public CreateEmailTemplateResponseContent create(CreateEmailTemplateRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email template.
      */
-    public CreateEmailTemplateResponseContent create(
-            CreateEmailTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateEmailTemplateResponseContent create(CreateEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an email template by pre-defined name. These names are <code>verify_email</code>, <code>verify_email_by_code</code>, <code>reset_email</code>, <code>reset_email_by_code</code>, <code>welcome_email</code>, <code>blocked_account</code>, <code>stolen_credentials</code>, <code>enrollment_email</code>, <code>mfa_oob_code</code>, <code>user_invitation</code>, and <code>async_approval</code>. The names <code>change_password</code>, and <code>password_reset</code> are also supported for legacy scenarios.
      */
     public GetEmailTemplateResponseContent get(EmailTemplateNameEnum templateName) {
-        return this.rawClient.get(templateName).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an email template by pre-defined name. These names are <code>verify_email</code>, <code>verify_email_by_code</code>, <code>reset_email</code>, <code>reset_email_by_code</code>, <code>welcome_email</code>, <code>blocked_account</code>, <code>stolen_credentials</code>, <code>enrollment_email</code>, <code>mfa_oob_code</code>, <code>user_invitation</code>, and <code>async_approval</code>. The names <code>change_password</code>, and <code>password_reset</code> are also supported for legacy scenarios.
      */
     public GetEmailTemplateResponseContent get(EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
-        return this.rawClient.get(templateName, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an email template.
      */
-    public SetEmailTemplateResponseContent set(
-            EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request) {
-        return this.rawClient.set(templateName, request).body();
+    public SetEmailTemplateResponseContent set(EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an email template.
      */
-    public SetEmailTemplateResponseContent set(
-            EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(templateName, request, requestOptions).body();
+    public SetEmailTemplateResponseContent set(EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
     public UpdateEmailTemplateResponseContent update(EmailTemplateNameEnum templateName) {
-        return this.rawClient.update(templateName).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public UpdateEmailTemplateResponseContent update(
-            EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
-        return this.rawClient.update(templateName, requestOptions).body();
+    public UpdateEmailTemplateResponseContent update(EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public UpdateEmailTemplateResponseContent update(
-            EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request) {
-        return this.rawClient.update(templateName, request).body();
+    public UpdateEmailTemplateResponseContent update(EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public UpdateEmailTemplateResponseContent update(
-            EmailTemplateNameEnum templateName,
-            UpdateEmailTemplateRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(templateName, request, requestOptions).body();
+    public UpdateEmailTemplateResponseContent update(EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -23,6 +23,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateCustomDomainRequestContent.Builder.class)
 public final class UpdateCustomDomainRequestContent {
+
     private final Optional<CustomDomainTlsPolicyEnum> tlsPolicy;
 
     private final OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader;
@@ -33,12 +34,7 @@ public final class UpdateCustomDomainRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateCustomDomainRequestContent(
-            Optional<CustomDomainTlsPolicyEnum> tlsPolicy,
-            OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader,
-            Optional<Map<String, OptionalNullable<String>>> domainMetadata,
-            OptionalNullable<String> relyingPartyIdentifier,
-            Map<String, Object> additionalProperties) {
+    private UpdateCustomDomainRequestContent(Optional<CustomDomainTlsPolicyEnum> tlsPolicy, OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader, Optional<Map<String, OptionalNullable<String>>> domainMetadata, OptionalNullable<String> relyingPartyIdentifier, Map<String, Object> additionalProperties) {
         this.tlsPolicy = tlsPolicy;
         this.customClientIpHeader = customClientIpHeader;
         this.domainMetadata = domainMetadata;
@@ -51,18 +47,18 @@ public final class UpdateCustomDomainRequestContent {
      */
     @JsonProperty("tls_policy")
     public Optional<CustomDomainTlsPolicyEnum> getTlsPolicy() {
-        return tlsPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("custom_client_ip_header")
     public OptionalNullable<CustomDomainCustomClientIpHeaderEnum> getCustomClientIpHeader() {
-        return customClientIpHeader;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_metadata")
     public Optional<Map<String, OptionalNullable<String>>> getDomainMetadata() {
-        return domainMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,10 +67,7 @@ public final class UpdateCustomDomainRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("relying_party_identifier")
     public OptionalNullable<String> getRelyingPartyIdentifier() {
-        if (relyingPartyIdentifier == null) {
-            return OptionalNullable.absent();
-        }
-        return relyingPartyIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -85,39 +78,35 @@ public final class UpdateCustomDomainRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateCustomDomainRequestContent && equalTo((UpdateCustomDomainRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateCustomDomainRequestContent other) {
-        return tlsPolicy.equals(other.tlsPolicy)
-                && customClientIpHeader.equals(other.customClientIpHeader)
-                && domainMetadata.equals(other.domainMetadata)
-                && relyingPartyIdentifier.equals(other.relyingPartyIdentifier);
+        return tlsPolicy.equals(other.tlsPolicy) && customClientIpHeader.equals(other.customClientIpHeader) && domainMetadata.equals(other.domainMetadata) && relyingPartyIdentifier.equals(other.relyingPartyIdentifier);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.tlsPolicy, this.customClientIpHeader, this.domainMetadata, this.relyingPartyIdentifier);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<CustomDomainTlsPolicyEnum> tlsPolicy = Optional.empty();
 
         private OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader = OptionalNullable.absent();
@@ -129,14 +118,11 @@ public final class UpdateCustomDomainRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateCustomDomainRequestContent other) {
-            tlsPolicy(other.getTlsPolicy());
-            customClientIpHeader(other.getCustomClientIpHeader());
-            domainMetadata(other.getDomainMetadata());
-            relyingPartyIdentifier(other.getRelyingPartyIdentifier());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -144,106 +130,69 @@ public final class UpdateCustomDomainRequestContent {
          */
         @JsonSetter(value = "tls_policy", nulls = Nulls.SKIP)
         public Builder tlsPolicy(Optional<CustomDomainTlsPolicyEnum> tlsPolicy) {
-            this.tlsPolicy = tlsPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tlsPolicy(CustomDomainTlsPolicyEnum tlsPolicy) {
-            this.tlsPolicy = Optional.ofNullable(tlsPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "custom_client_ip_header", nulls = Nulls.SKIP)
-        public Builder customClientIpHeader(
-                OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            this.customClientIpHeader = customClientIpHeader;
-            return this;
+        public Builder customClientIpHeader(OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customClientIpHeader(CustomDomainCustomClientIpHeaderEnum customClientIpHeader) {
-            this.customClientIpHeader = OptionalNullable.of(customClientIpHeader);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customClientIpHeader(Optional<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            if (customClientIpHeader.isPresent()) {
-                this.customClientIpHeader = OptionalNullable.of(customClientIpHeader.get());
-            } else {
-                this.customClientIpHeader = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customClientIpHeader(Nullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            if (customClientIpHeader.isNull()) {
-                this.customClientIpHeader = OptionalNullable.ofNull();
-            } else if (customClientIpHeader.isEmpty()) {
-                this.customClientIpHeader = OptionalNullable.absent();
-            } else {
-                this.customClientIpHeader = OptionalNullable.of(customClientIpHeader.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "domain_metadata", nulls = Nulls.SKIP)
         public Builder domainMetadata(Optional<Map<String, OptionalNullable<String>>> domainMetadata) {
-            this.domainMetadata = domainMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainMetadata(Map<String, OptionalNullable<String>> domainMetadata) {
-            this.domainMetadata = Optional.ofNullable(domainMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Relying Party ID (rpId) to be used for Passkeys on this custom domain. Set to null to remove the rpId and fall back to using the full domain.</p>
          */
         @JsonSetter(value = "relying_party_identifier", nulls = Nulls.SKIP)
-        public Builder relyingPartyIdentifier(
-                @org.jetbrains.annotations.Nullable OptionalNullable<String> relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = relyingPartyIdentifier;
-            return this;
+        public Builder relyingPartyIdentifier(@org.jetbrains.annotations.Nullable OptionalNullable<String> relyingPartyIdentifier) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder relyingPartyIdentifier(String relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = OptionalNullable.of(relyingPartyIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder relyingPartyIdentifier(Optional<String> relyingPartyIdentifier) {
-            if (relyingPartyIdentifier.isPresent()) {
-                this.relyingPartyIdentifier = OptionalNullable.of(relyingPartyIdentifier.get());
-            } else {
-                this.relyingPartyIdentifier = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder relyingPartyIdentifier(Nullable<String> relyingPartyIdentifier) {
-            if (relyingPartyIdentifier.isNull()) {
-                this.relyingPartyIdentifier = OptionalNullable.ofNull();
-            } else if (relyingPartyIdentifier.isEmpty()) {
-                this.relyingPartyIdentifier = OptionalNullable.absent();
-            } else {
-                this.relyingPartyIdentifier = OptionalNullable.of(relyingPartyIdentifier.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateCustomDomainRequestContent build() {
-            return new UpdateCustomDomainRequestContent(
-                    tlsPolicy, customClientIpHeader, domainMetadata, relyingPartyIdentifier, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

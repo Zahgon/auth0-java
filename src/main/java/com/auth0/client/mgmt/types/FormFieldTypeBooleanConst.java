@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeBooleanConst {
+
     public static final FormFieldTypeBooleanConst BOOLEAN = new FormFieldTypeBooleanConst(Value.BOOLEAN, "BOOLEAN");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeBooleanConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeBooleanConst
-                        && this.string.equals(((FormFieldTypeBooleanConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BOOLEAN:
-                return visitor.visitBoolean();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeBooleanConst valueOf(String value) {
-        switch (value) {
-            case "BOOLEAN":
-                return BOOLEAN;
-            default:
-                return new FormFieldTypeBooleanConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BOOLEAN,
 
-        UNKNOWN
+        BOOLEAN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBoolean();
 
         T visitUnknown(String unknownType);

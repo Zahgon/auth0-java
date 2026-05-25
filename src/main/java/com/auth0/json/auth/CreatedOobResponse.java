@@ -25,22 +25,22 @@ public class CreatedOobResponse {
     private List<String> recoveryCodes;
 
     public String getOobCode() {
-        return oobCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getBarcodeUri() {
-        return barcodeUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getAuthenticatorType() {
-        return authenticatorType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getRecoveryCodes() {
-        return recoveryCodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getOobChannel() {
-        return oobChannel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

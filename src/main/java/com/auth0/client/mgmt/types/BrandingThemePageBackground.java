@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemePageBackground.Builder.class)
 public final class BrandingThemePageBackground {
+
     private final String backgroundColor;
 
     private final String backgroundImageUrl;
@@ -27,11 +28,7 @@ public final class BrandingThemePageBackground {
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingThemePageBackground(
-            String backgroundColor,
-            String backgroundImageUrl,
-            BrandingThemePageBackgroundPageLayoutEnum pageLayout,
-            Map<String, Object> additionalProperties) {
+    private BrandingThemePageBackground(String backgroundColor, String backgroundImageUrl, BrandingThemePageBackgroundPageLayoutEnum pageLayout, Map<String, Object> additionalProperties) {
         this.backgroundColor = backgroundColor;
         this.backgroundImageUrl = backgroundImageUrl;
         this.pageLayout = pageLayout;
@@ -43,7 +40,7 @@ public final class BrandingThemePageBackground {
      */
     @JsonProperty("background_color")
     public String getBackgroundColor() {
-        return backgroundColor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,46 +48,44 @@ public final class BrandingThemePageBackground {
      */
     @JsonProperty("background_image_url")
     public String getBackgroundImageUrl() {
-        return backgroundImageUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("page_layout")
     public BrandingThemePageBackgroundPageLayoutEnum getPageLayout() {
-        return pageLayout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemePageBackground && equalTo((BrandingThemePageBackground) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemePageBackground other) {
-        return backgroundColor.equals(other.backgroundColor)
-                && backgroundImageUrl.equals(other.backgroundImageUrl)
-                && pageLayout.equals(other.pageLayout);
+        return backgroundColor.equals(other.backgroundColor) && backgroundImageUrl.equals(other.backgroundImageUrl) && pageLayout.equals(other.pageLayout);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.backgroundColor, this.backgroundImageUrl, this.pageLayout);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BackgroundColorStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BackgroundColorStage {
+
         /**
          * <p>Background color</p>
          */
@@ -100,6 +95,7 @@ public final class BrandingThemePageBackground {
     }
 
     public interface BackgroundImageUrlStage {
+
         /**
          * <p>Background image url</p>
          */
@@ -107,10 +103,12 @@ public final class BrandingThemePageBackground {
     }
 
     public interface PageLayoutStage {
+
         _FinalStage pageLayout(@NotNull BrandingThemePageBackgroundPageLayoutEnum pageLayout);
     }
 
     public interface _FinalStage {
+
         BrandingThemePageBackground build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -119,8 +117,8 @@ public final class BrandingThemePageBackground {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements BackgroundColorStage, BackgroundImageUrlStage, PageLayoutStage, _FinalStage {
+    public static final class Builder implements BackgroundColorStage, BackgroundImageUrlStage, PageLayoutStage, _FinalStage {
+
         private String backgroundColor;
 
         private String backgroundImageUrl;
@@ -130,14 +128,12 @@ public final class BrandingThemePageBackground {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemePageBackground other) {
-            backgroundColor(other.getBackgroundColor());
-            backgroundImageUrl(other.getBackgroundImageUrl());
-            pageLayout(other.getPageLayout());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,8 +144,7 @@ public final class BrandingThemePageBackground {
         @java.lang.Override
         @JsonSetter("background_color")
         public BackgroundImageUrlStage backgroundColor(@NotNull String backgroundColor) {
-            this.backgroundColor = Objects.requireNonNull(backgroundColor, "backgroundColor must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -160,33 +155,28 @@ public final class BrandingThemePageBackground {
         @java.lang.Override
         @JsonSetter("background_image_url")
         public PageLayoutStage backgroundImageUrl(@NotNull String backgroundImageUrl) {
-            this.backgroundImageUrl = Objects.requireNonNull(backgroundImageUrl, "backgroundImageUrl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("page_layout")
         public _FinalStage pageLayout(@NotNull BrandingThemePageBackgroundPageLayoutEnum pageLayout) {
-            this.pageLayout = Objects.requireNonNull(pageLayout, "pageLayout must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemePageBackground build() {
-            return new BrandingThemePageBackground(
-                    backgroundColor, backgroundImageUrl, pageLayout, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

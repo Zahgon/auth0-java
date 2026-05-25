@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.GetEmailProviderResponseContent;
 import com.auth0.client.mgmt.types.UpdateEmailProviderResponseContent;
 
 public class ProviderClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawProviderClient rawClient;
@@ -26,36 +27,35 @@ public class ProviderClient {
      * Get responses with HTTP metadata like headers
      */
     public RawProviderClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the <a href="https://auth0.com/docs/customize/email/smtp-email-providers">email provider configuration</a> in your tenant. A list of fields to include or exclude may also be specified.
      */
     public GetEmailProviderResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the <a href="https://auth0.com/docs/customize/email/smtp-email-providers">email provider configuration</a> in your tenant. A list of fields to include or exclude may also be specified.
      */
     public GetEmailProviderResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the <a href="https://auth0.com/docs/customize/email/smtp-email-providers">email provider configuration</a> in your tenant. A list of fields to include or exclude may also be specified.
      */
     public GetEmailProviderResponseContent get(GetEmailProviderRequestParameters request) {
-        return this.rawClient.get(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the <a href="https://auth0.com/docs/customize/email/smtp-email-providers">email provider configuration</a> in your tenant. A list of fields to include or exclude may also be specified.
      */
-    public GetEmailProviderResponseContent get(
-            GetEmailProviderRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(request, requestOptions).body();
+    public GetEmailProviderResponseContent get(GetEmailProviderRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +103,7 @@ public class ProviderClient {
      * </ul></p>
      */
     public CreateEmailProviderResponseContent create(CreateEmailProviderRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -150,23 +150,22 @@ public class ProviderClient {
      *   </li>
      * </ul></p>
      */
-    public CreateEmailProviderResponseContent create(
-            CreateEmailProviderRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateEmailProviderResponseContent create(CreateEmailProviderRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the email provider.
      */
     public void delete() {
-        this.rawClient.delete().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the email provider.
      */
     public void delete(RequestOptions requestOptions) {
-        this.rawClient.delete(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -212,7 +211,7 @@ public class ProviderClient {
      * </ul></p>
      */
     public UpdateEmailProviderResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -258,7 +257,7 @@ public class ProviderClient {
      * </ul></p>
      */
     public UpdateEmailProviderResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -304,7 +303,7 @@ public class ProviderClient {
      * </ul></p>
      */
     public UpdateEmailProviderResponseContent update(UpdateEmailProviderRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -349,8 +348,7 @@ public class ProviderClient {
      *   </li>
      * </ul></p>
      */
-    public UpdateEmailProviderResponseContent update(
-            UpdateEmailProviderRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateEmailProviderResponseContent update(UpdateEmailProviderRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

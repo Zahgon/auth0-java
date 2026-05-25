@@ -35,6 +35,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawBindingsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawBindingsClient(ClientOptions clientOptions) {
@@ -45,195 +46,55 @@ public class RawBindingsClient {
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
     public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(ActionTriggerTypeEnum triggerId) {
-        return list(
-                triggerId, ListActionTriggerBindingsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(
-            ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
-        return list(
-                triggerId, ListActionTriggerBindingsRequestParameters.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(
-            ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request) {
-        return list(triggerId, request, null);
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(
-            ActionTriggerTypeEnum triggerId,
-            ListActionTriggerBindingsRequestParameters request,
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("actions/triggers")
-                .addPathSegment(triggerId.toString())
-                .addPathSegments("bindings");
-        QueryStringMapper.addQueryParameter(httpUrl, "page", request.getPage().orElse(0), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "per_page", request.getPerPage().orElse(50), false);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                ListActionBindingsPaginatedResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                        responseBodyString, ListActionBindingsPaginatedResponseContent.class);
-                int newPageNumber =
-                        request.getPage().map((Integer page) -> page + 1).orElse(1);
-                ListActionTriggerBindingsRequestParameters nextRequest =
-                        ListActionTriggerBindingsRequestParameters.builder()
-                                .from(request)
-                                .page(newPageNumber)
-                                .build();
-                List<ActionBinding> result = parsedResponse.getBindings().orElse(Collections.emptyList());
-                return new ManagementApiHttpResponse<>(
-                        new SyncPagingIterable<ActionBinding>(
-                                true, result, parsedResponse, () -> list(triggerId, nextRequest, requestOptions)
-                                        .body()),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SyncPagingIterable<ActionBinding>> list(ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
     public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(ActionTriggerTypeEnum triggerId) {
-        return updateMany(
-                triggerId, UpdateActionBindingsRequestContent.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(
-            ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
-        return updateMany(
-                triggerId, UpdateActionBindingsRequestContent.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(
-            ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request) {
-        return updateMany(triggerId, request, null);
+    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(
-            ActionTriggerTypeEnum triggerId,
-            UpdateActionBindingsRequestContent request,
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("actions/triggers")
-                .addPathSegment(triggerId.toString())
-                .addPathSegments("bindings");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, UpdateActionBindingsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<UpdateActionBindingsResponseContent> updateMany(ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

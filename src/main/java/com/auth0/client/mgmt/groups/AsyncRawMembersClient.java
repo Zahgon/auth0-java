@@ -35,6 +35,7 @@ import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 
 public class AsyncRawMembersClient {
+
     protected final ClientOptions clientOptions;
 
     public AsyncRawMembersClient(ClientOptions clientOptions) {
@@ -45,133 +46,27 @@ public class AsyncRawMembersClient {
      * List all users that are a member of this group.
      */
     public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(String id) {
-        return get(id, GetGroupMembersRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(
-            String id, RequestOptions requestOptions) {
-        return get(id, GetGroupMembersRequestParameters.builder().build(), requestOptions);
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(
-            String id, GetGroupMembersRequestParameters request) {
-        return get(id, request, null);
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(String id, GetGroupMembersRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
-    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(
-            String id, GetGroupMembersRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("groups")
-                .addPathSegment(id)
-                .addPathSegments("members");
-        if (!request.getFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "fields", request.getFields().orElse(null), false);
-        }
-        if (!request.getIncludeFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "include_fields", request.getIncludeFields().orElse(null), false);
-        }
-        if (!request.getFrom().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "from", request.getFrom().orElse(null), false);
-        }
-        QueryStringMapper.addQueryParameter(httpUrl, "take", request.getTake().orElse(50), false);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> future =
-                new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        GetGroupMembersResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetGroupMembersResponseContent.class);
-                        Optional<String> startingAfter = parsedResponse.getNext();
-                        GetGroupMembersRequestParameters nextRequest = GetGroupMembersRequestParameters.builder()
-                                .from(request)
-                                .from(startingAfter)
-                                .build();
-                        List<GroupMember> result = parsedResponse.getMembers();
-                        future.complete(new ManagementApiHttpResponse<>(
-                                new SyncPagingIterable<GroupMember>(
-                                        startingAfter.isPresent(), result, parsedResponse, () -> {
-                                            try {
-                                                return get(id, nextRequest, requestOptions)
-                                                        .get()
-                                                        .body();
-                                            } catch (InterruptedException | ExecutionException e) {
-                                                throw new RuntimeException(e);
-                                            }
-                                        }),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<SyncPagingIterable<GroupMember>>> get(String id, GetGroupMembersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

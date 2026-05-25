@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GetFlowExecutionRequestParametersHydrateEnum {
-    public static final GetFlowExecutionRequestParametersHydrateEnum DEBUG =
-            new GetFlowExecutionRequestParametersHydrateEnum(Value.DEBUG, "debug");
+
+    public static final GetFlowExecutionRequestParametersHydrateEnum DEBUG = new GetFlowExecutionRequestParametersHydrateEnum(Value.DEBUG, "debug");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class GetFlowExecutionRequestParametersHydrateEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GetFlowExecutionRequestParametersHydrateEnum
-                        && this.string.equals(((GetFlowExecutionRequestParametersHydrateEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DEBUG:
-                return visitor.visitDebug();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GetFlowExecutionRequestParametersHydrateEnum valueOf(String value) {
-        switch (value) {
-            case "debug":
-                return DEBUG;
-            default:
-                return new GetFlowExecutionRequestParametersHydrateEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DEBUG,
 
-        UNKNOWN
+        DEBUG, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDebug();
 
         T visitUnknown(String unknownType);

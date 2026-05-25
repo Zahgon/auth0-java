@@ -30,32 +30,14 @@ public class CustomDomainInterceptor implements Interceptor {
 
     public static final String HEADER_NAME = "Auth0-Custom-Domain";
 
-    private static final List<Pattern> WHITELISTED_PATHS = Arrays.asList(
-            Pattern.compile(".*/jobs/verification-email$"),
-            Pattern.compile(".*/tickets/email-verification$"),
-            Pattern.compile(".*/tickets/password-change$"),
-            Pattern.compile(".*/organizations/[^/]+/invitations(/[^/]+)?$"),
-            Pattern.compile(".*/users(/[^/]+)?$"),
-            Pattern.compile(".*/guardian/enrollments/ticket$"),
-            Pattern.compile(".*/self-service-profiles/[^/]+/sso-ticket(/[^/]+/revoke)?$"));
+    private static final List<Pattern> WHITELISTED_PATHS = Arrays.asList(Pattern.compile(".*/jobs/verification-email$"), Pattern.compile(".*/tickets/email-verification$"), Pattern.compile(".*/tickets/password-change$"), Pattern.compile(".*/organizations/[^/]+/invitations(/[^/]+)?$"), Pattern.compile(".*/users(/[^/]+)?$"), Pattern.compile(".*/guardian/enrollments/ticket$"), Pattern.compile(".*/self-service-profiles/[^/]+/sso-ticket(/[^/]+/revoke)?$"));
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Request request = chain.request();
-
-        if (request.header(HEADER_NAME) != null && !isWhitelisted(request.url().encodedPath())) {
-            request = request.newBuilder().removeHeader(HEADER_NAME).build();
-        }
-
-        return chain.proceed(request);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static boolean isWhitelisted(String path) {
-        for (Pattern pattern : WHITELISTED_PATHS) {
-            if (pattern.matcher(path).matches()) {
-                return true;
-            }
-        }
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

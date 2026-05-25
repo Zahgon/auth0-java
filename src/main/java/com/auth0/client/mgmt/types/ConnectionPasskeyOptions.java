@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasskeyOptions.Builder.class)
 public final class ConnectionPasskeyOptions {
+
     private final Optional<ConnectionPasskeyChallengeUiEnum> challengeUi;
 
     private final Optional<Boolean> progressiveEnrollmentEnabled;
@@ -28,11 +29,7 @@ public final class ConnectionPasskeyOptions {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasskeyOptions(
-            Optional<ConnectionPasskeyChallengeUiEnum> challengeUi,
-            Optional<Boolean> progressiveEnrollmentEnabled,
-            Optional<Boolean> localEnrollmentEnabled,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPasskeyOptions(Optional<ConnectionPasskeyChallengeUiEnum> challengeUi, Optional<Boolean> progressiveEnrollmentEnabled, Optional<Boolean> localEnrollmentEnabled, Map<String, Object> additionalProperties) {
         this.challengeUi = challengeUi;
         this.progressiveEnrollmentEnabled = progressiveEnrollmentEnabled;
         this.localEnrollmentEnabled = localEnrollmentEnabled;
@@ -41,7 +38,7 @@ public final class ConnectionPasskeyOptions {
 
     @JsonProperty("challenge_ui")
     public Optional<ConnectionPasskeyChallengeUiEnum> getChallengeUi() {
-        return challengeUi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,7 +46,7 @@ public final class ConnectionPasskeyOptions {
      */
     @JsonProperty("progressive_enrollment_enabled")
     public Optional<Boolean> getProgressiveEnrollmentEnabled() {
-        return progressiveEnrollmentEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,42 +54,40 @@ public final class ConnectionPasskeyOptions {
      */
     @JsonProperty("local_enrollment_enabled")
     public Optional<Boolean> getLocalEnrollmentEnabled() {
-        return localEnrollmentEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasskeyOptions && equalTo((ConnectionPasskeyOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasskeyOptions other) {
-        return challengeUi.equals(other.challengeUi)
-                && progressiveEnrollmentEnabled.equals(other.progressiveEnrollmentEnabled)
-                && localEnrollmentEnabled.equals(other.localEnrollmentEnabled);
+        return challengeUi.equals(other.challengeUi) && progressiveEnrollmentEnabled.equals(other.progressiveEnrollmentEnabled) && localEnrollmentEnabled.equals(other.localEnrollmentEnabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.challengeUi, this.progressiveEnrollmentEnabled, this.localEnrollmentEnabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionPasskeyChallengeUiEnum> challengeUi = Optional.empty();
 
         private Optional<Boolean> progressiveEnrollmentEnabled = Optional.empty();
@@ -102,24 +97,20 @@ public final class ConnectionPasskeyOptions {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasskeyOptions other) {
-            challengeUi(other.getChallengeUi());
-            progressiveEnrollmentEnabled(other.getProgressiveEnrollmentEnabled());
-            localEnrollmentEnabled(other.getLocalEnrollmentEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "challenge_ui", nulls = Nulls.SKIP)
         public Builder challengeUi(Optional<ConnectionPasskeyChallengeUiEnum> challengeUi) {
-            this.challengeUi = challengeUi;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder challengeUi(ConnectionPasskeyChallengeUiEnum challengeUi) {
-            this.challengeUi = Optional.ofNullable(challengeUi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -127,13 +118,11 @@ public final class ConnectionPasskeyOptions {
          */
         @JsonSetter(value = "progressive_enrollment_enabled", nulls = Nulls.SKIP)
         public Builder progressiveEnrollmentEnabled(Optional<Boolean> progressiveEnrollmentEnabled) {
-            this.progressiveEnrollmentEnabled = progressiveEnrollmentEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder progressiveEnrollmentEnabled(Boolean progressiveEnrollmentEnabled) {
-            this.progressiveEnrollmentEnabled = Optional.ofNullable(progressiveEnrollmentEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -141,28 +130,23 @@ public final class ConnectionPasskeyOptions {
          */
         @JsonSetter(value = "local_enrollment_enabled", nulls = Nulls.SKIP)
         public Builder localEnrollmentEnabled(Optional<Boolean> localEnrollmentEnabled) {
-            this.localEnrollmentEnabled = localEnrollmentEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder localEnrollmentEnabled(Boolean localEnrollmentEnabled) {
-            this.localEnrollmentEnabled = Optional.ofNullable(localEnrollmentEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasskeyOptions build() {
-            return new ConnectionPasskeyOptions(
-                    challengeUi, progressiveEnrollmentEnabled, localEnrollmentEnabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -26,6 +26,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncClientsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawClientsClient rawClient;
@@ -45,7 +46,7 @@ public class AsyncClientsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawClientsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +84,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<Client>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +122,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<Client>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -159,7 +160,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<SyncPagingIterable<Client>> list(ListClientsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -196,9 +197,8 @@ public class AsyncClientsClient {
      *   </li>
      * </ul></p>
      */
-    public CompletableFuture<SyncPagingIterable<Client>> list(
-            ListClientsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Client>> list(ListClientsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -218,7 +218,7 @@ public class AsyncClientsClient {
      * <p><div class="alert alert-warning">SSO Integrations created via this endpoint will accept login requests and share user profile information.</div></p>
      */
     public CompletableFuture<CreateClientResponseContent> create(CreateClientRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -237,9 +237,8 @@ public class AsyncClientsClient {
      * </ul>
      * <p><div class="alert alert-warning">SSO Integrations created via this endpoint will accept login requests and share user profile information.</div></p>
      */
-    public CompletableFuture<CreateClientResponseContent> create(
-            CreateClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateClientResponseContent> create(CreateClientRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -247,9 +246,8 @@ public class AsyncClientsClient {
      * Returns the raw metadata and how it would be mapped to Auth0 client fields.
      * This endpoint is useful for testing metadata URIs before creating CIMD clients.
      */
-    public CompletableFuture<PreviewCimdMetadataResponseContent> previewCimdMetadata(
-            PreviewCimdMetadataRequestContent request) {
-        return this.rawClient.previewCimdMetadata(request).thenApply(response -> response.body());
+    public CompletableFuture<PreviewCimdMetadataResponseContent> previewCimdMetadata(PreviewCimdMetadataRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -257,9 +255,8 @@ public class AsyncClientsClient {
      * Returns the raw metadata and how it would be mapped to Auth0 client fields.
      * This endpoint is useful for testing metadata URIs before creating CIMD clients.
      */
-    public CompletableFuture<PreviewCimdMetadataResponseContent> previewCimdMetadata(
-            PreviewCimdMetadataRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.previewCimdMetadata(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<PreviewCimdMetadataResponseContent> previewCimdMetadata(PreviewCimdMetadataRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -275,9 +272,8 @@ public class AsyncClientsClient {
      *   <li>Enforces CIMD security policies (HTTPS-only, no shared secrets)</li>
      * </ul></p>
      */
-    public CompletableFuture<RegisterCimdClientResponseContent> registerCimdClient(
-            RegisterCimdClientRequestContent request) {
-        return this.rawClient.registerCimdClient(request).thenApply(response -> response.body());
+    public CompletableFuture<RegisterCimdClientResponseContent> registerCimdClient(RegisterCimdClientRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -293,9 +289,8 @@ public class AsyncClientsClient {
      *   <li>Enforces CIMD security policies (HTTPS-only, no shared secrets)</li>
      * </ul></p>
      */
-    public CompletableFuture<RegisterCimdClientResponseContent> registerCimdClient(
-            RegisterCimdClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.registerCimdClient(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<RegisterCimdClientResponseContent> registerCimdClient(RegisterCimdClientRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -332,7 +327,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<GetClientResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -369,7 +364,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<GetClientResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -406,7 +401,7 @@ public class AsyncClientsClient {
      * </ul></p>
      */
     public CompletableFuture<GetClientResponseContent> get(String id, GetClientRequestParameters request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -442,23 +437,22 @@ public class AsyncClientsClient {
      *   </li>
      * </ul></p>
      */
-    public CompletableFuture<GetClientResponseContent> get(
-            String id, GetClientRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetClientResponseContent> get(String id, GetClientRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client and related configuration (rules, connections, etc).
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client and related configuration (rules, connections, etc).
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -474,7 +468,7 @@ public class AsyncClientsClient {
      * </ul>
      */
     public CompletableFuture<UpdateClientResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -490,7 +484,7 @@ public class AsyncClientsClient {
      * </ul>
      */
     public CompletableFuture<UpdateClientResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -506,7 +500,7 @@ public class AsyncClientsClient {
      * </ul>
      */
     public CompletableFuture<UpdateClientResponseContent> update(String id, UpdateClientRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -521,9 +515,8 @@ public class AsyncClientsClient {
      * <li>To change a client's <code>is_first_party</code> property to <code>false</code>, the <code>organization_usage</code> and <code>organization_require_behavior</code> properties must be unset.</li>
      * </ul>
      */
-    public CompletableFuture<UpdateClientResponseContent> update(
-            String id, UpdateClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateClientResponseContent> update(String id, UpdateClientRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -532,7 +525,7 @@ public class AsyncClientsClient {
      * <p>For more information, read <a href="https://www.auth0.com/docs/get-started/applications/rotate-client-secret">Rotate Client Secrets</a>.</p>
      */
     public CompletableFuture<RotateClientSecretResponseContent> rotateSecret(String id) {
-        return this.rawClient.rotateSecret(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -541,14 +534,14 @@ public class AsyncClientsClient {
      * <p>For more information, read <a href="https://www.auth0.com/docs/get-started/applications/rotate-client-secret">Rotate Client Secrets</a>.</p>
      */
     public CompletableFuture<RotateClientSecretResponseContent> rotateSecret(String id, RequestOptions requestOptions) {
-        return this.rawClient.rotateSecret(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncCredentialsClient credentials() {
-        return this.credentialsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

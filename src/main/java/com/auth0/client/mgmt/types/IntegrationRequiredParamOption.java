@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = IntegrationRequiredParamOption.Builder.class)
 public final class IntegrationRequiredParamOption {
+
     private final Optional<String> value;
 
     private final Optional<String> label;
 
     private final Map<String, Object> additionalProperties;
 
-    private IntegrationRequiredParamOption(
-            Optional<String> value, Optional<String> label, Map<String, Object> additionalProperties) {
+    private IntegrationRequiredParamOption(Optional<String> value, Optional<String> label, Map<String, Object> additionalProperties) {
         this.value = value;
         this.label = label;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class IntegrationRequiredParamOption {
      */
     @JsonProperty("value")
     public Optional<String> getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class IntegrationRequiredParamOption {
      */
     @JsonProperty("label")
     public Optional<String> getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof IntegrationRequiredParamOption && equalTo((IntegrationRequiredParamOption) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(IntegrationRequiredParamOption other) {
@@ -66,20 +65,21 @@ public final class IntegrationRequiredParamOption {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value, this.label);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> value = Optional.empty();
 
         private Optional<String> label = Optional.empty();
@@ -87,12 +87,11 @@ public final class IntegrationRequiredParamOption {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(IntegrationRequiredParamOption other) {
-            value(other.getValue());
-            label(other.getLabel());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class IntegrationRequiredParamOption {
          */
         @JsonSetter(value = "value", nulls = Nulls.SKIP)
         public Builder value(Optional<String> value) {
-            this.value = value;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder value(String value) {
-            this.value = Optional.ofNullable(value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class IntegrationRequiredParamOption {
          */
         @JsonSetter(value = "label", nulls = Nulls.SKIP)
         public Builder label(Optional<String> label) {
-            this.label = label;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder label(String label) {
-            this.label = Optional.ofNullable(label);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public IntegrationRequiredParamOption build() {
-            return new IntegrationRequiredParamOption(value, label, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

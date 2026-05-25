@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UserMultifactorProviderEnum {
+
     public static final UserMultifactorProviderEnum DUO = new UserMultifactorProviderEnum(Value.DUO, "duo");
 
-    public static final UserMultifactorProviderEnum GOOGLE_AUTHENTICATOR =
-            new UserMultifactorProviderEnum(Value.GOOGLE_AUTHENTICATOR, "google-authenticator");
+    public static final UserMultifactorProviderEnum GOOGLE_AUTHENTICATOR = new UserMultifactorProviderEnum(Value.GOOGLE_AUTHENTICATOR, "google-authenticator");
 
     private final Value value;
 
@@ -22,60 +22,41 @@ public final class UserMultifactorProviderEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UserMultifactorProviderEnum
-                        && this.string.equals(((UserMultifactorProviderEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DUO:
-                return visitor.visitDuo();
-            case GOOGLE_AUTHENTICATOR:
-                return visitor.visitGoogleAuthenticator();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UserMultifactorProviderEnum valueOf(String value) {
-        switch (value) {
-            case "duo":
-                return DUO;
-            case "google-authenticator":
-                return GOOGLE_AUTHENTICATOR;
-            default:
-                return new UserMultifactorProviderEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DUO,
 
-        GOOGLE_AUTHENTICATOR,
-
-        UNKNOWN
+        DUO, GOOGLE_AUTHENTICATOR, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDuo();
 
         T visitGoogleAuthenticator();

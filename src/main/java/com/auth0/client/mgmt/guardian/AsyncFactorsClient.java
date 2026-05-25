@@ -19,6 +19,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncFactorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawFactorsClient rawClient;
@@ -44,52 +45,50 @@ public class AsyncFactorsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawFactorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication factors</a> associated with your tenant.
      */
     public CompletableFuture<List<GuardianFactor>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication factors</a> associated with your tenant.
      */
     public CompletableFuture<List<GuardianFactor>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the status (i.e., enabled or disabled) of a specific multi-factor authentication factor.
      */
-    public CompletableFuture<SetGuardianFactorResponseContent> set(
-            GuardianFactorNameEnum name, SetGuardianFactorRequestContent request) {
-        return this.rawClient.set(name, request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorResponseContent> set(GuardianFactorNameEnum name, SetGuardianFactorRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the status (i.e., enabled or disabled) of a specific multi-factor authentication factor.
      */
-    public CompletableFuture<SetGuardianFactorResponseContent> set(
-            GuardianFactorNameEnum name, SetGuardianFactorRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(name, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorResponseContent> set(GuardianFactorNameEnum name, SetGuardianFactorRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPhoneClient phone() {
-        return this.phoneClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPushNotificationClient pushNotification() {
-        return this.pushNotificationClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSmsClient sms() {
-        return this.smsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncDuoClient duo() {
-        return this.duoClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

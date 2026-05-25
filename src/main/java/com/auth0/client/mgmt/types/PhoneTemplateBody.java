@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PhoneTemplateBody.Builder.class)
 public final class PhoneTemplateBody {
+
     private final Optional<String> text;
 
     private final Optional<String> voice;
@@ -37,7 +38,7 @@ public final class PhoneTemplateBody {
      */
     @JsonProperty("text")
     public Optional<String> getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,18 +46,17 @@ public final class PhoneTemplateBody {
      */
     @JsonProperty("voice")
     public Optional<String> getVoice() {
-        return voice;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PhoneTemplateBody && equalTo((PhoneTemplateBody) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PhoneTemplateBody other) {
@@ -65,20 +65,21 @@ public final class PhoneTemplateBody {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.text, this.voice);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> text = Optional.empty();
 
         private Optional<String> voice = Optional.empty();
@@ -86,12 +87,11 @@ public final class PhoneTemplateBody {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(PhoneTemplateBody other) {
-            text(other.getText());
-            voice(other.getVoice());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,13 +99,11 @@ public final class PhoneTemplateBody {
          */
         @JsonSetter(value = "text", nulls = Nulls.SKIP)
         public Builder text(Optional<String> text) {
-            this.text = text;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder text(String text) {
-            this.text = Optional.ofNullable(text);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -113,27 +111,23 @@ public final class PhoneTemplateBody {
          */
         @JsonSetter(value = "voice", nulls = Nulls.SKIP)
         public Builder voice(Optional<String> voice) {
-            this.voice = voice;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder voice(String voice) {
-            this.voice = Optional.ofNullable(voice);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public PhoneTemplateBody build() {
-            return new PhoneTemplateBody(text, voice, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

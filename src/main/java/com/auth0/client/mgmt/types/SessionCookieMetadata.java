@@ -20,30 +20,29 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SessionCookieMetadata.Builder.class)
 public final class SessionCookieMetadata {
+
     private final Optional<SessionCookieMetadataModeEnum> mode;
 
     private final Map<String, Object> additionalProperties;
 
-    private SessionCookieMetadata(
-            Optional<SessionCookieMetadataModeEnum> mode, Map<String, Object> additionalProperties) {
+    private SessionCookieMetadata(Optional<SessionCookieMetadataModeEnum> mode, Map<String, Object> additionalProperties) {
         this.mode = mode;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("mode")
     public Optional<SessionCookieMetadataModeEnum> getMode() {
-        return mode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SessionCookieMetadata && equalTo((SessionCookieMetadata) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SessionCookieMetadata other) {
@@ -52,55 +51,52 @@ public final class SessionCookieMetadata {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<SessionCookieMetadataModeEnum> mode = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SessionCookieMetadata other) {
-            mode(other.getMode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mode", nulls = Nulls.SKIP)
         public Builder mode(Optional<SessionCookieMetadataModeEnum> mode) {
-            this.mode = mode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mode(SessionCookieMetadataModeEnum mode) {
-            this.mode = Optional.ofNullable(mode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SessionCookieMetadata build() {
-            return new SessionCookieMetadata(mode, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

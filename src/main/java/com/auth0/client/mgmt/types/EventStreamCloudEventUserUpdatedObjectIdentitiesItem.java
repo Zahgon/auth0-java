@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EventStreamCloudEventUserUpdatedObjectIdentitiesItem.Deserializer.class)
 public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItem {
+
     private final Object value;
 
     private final int type;
@@ -27,30 +28,17 @@ public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItem {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EventStreamCloudEventUserUpdatedObjectIdentitiesItemCustom) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EventStreamCloudEventUserUpdatedObjectIdentitiesItemDatabase) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((EventStreamCloudEventUserUpdatedObjectIdentitiesItemEnterprise) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordless) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((EventStreamCloudEventUserUpdatedObjectIdentitiesItemSocial) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventUserUpdatedObjectIdentitiesItem
-                && equalTo((EventStreamCloudEventUserUpdatedObjectIdentitiesItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventUserUpdatedObjectIdentitiesItem other) {
@@ -59,40 +47,36 @@ public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItem {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(
-            EventStreamCloudEventUserUpdatedObjectIdentitiesItemCustom value) {
-        return new EventStreamCloudEventUserUpdatedObjectIdentitiesItem(value, 0);
+    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(EventStreamCloudEventUserUpdatedObjectIdentitiesItemCustom value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(
-            EventStreamCloudEventUserUpdatedObjectIdentitiesItemDatabase value) {
-        return new EventStreamCloudEventUserUpdatedObjectIdentitiesItem(value, 1);
+    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(EventStreamCloudEventUserUpdatedObjectIdentitiesItemDatabase value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(
-            EventStreamCloudEventUserUpdatedObjectIdentitiesItemEnterprise value) {
-        return new EventStreamCloudEventUserUpdatedObjectIdentitiesItem(value, 2);
+    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(EventStreamCloudEventUserUpdatedObjectIdentitiesItemEnterprise value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(
-            EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordless value) {
-        return new EventStreamCloudEventUserUpdatedObjectIdentitiesItem(value, 3);
+    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordless value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(
-            EventStreamCloudEventUserUpdatedObjectIdentitiesItemSocial value) {
-        return new EventStreamCloudEventUserUpdatedObjectIdentitiesItem(value, 4);
+    public static EventStreamCloudEventUserUpdatedObjectIdentitiesItem of(EventStreamCloudEventUserUpdatedObjectIdentitiesItemSocial value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EventStreamCloudEventUserUpdatedObjectIdentitiesItemCustom value);
 
         T visit(EventStreamCloudEventUserUpdatedObjectIdentitiesItemDatabase value);
@@ -105,70 +89,14 @@ public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItem {
     }
 
     static final class Deserializer extends StdDeserializer<EventStreamCloudEventUserUpdatedObjectIdentitiesItem> {
+
         Deserializer() {
             super(EventStreamCloudEventUserUpdatedObjectIdentitiesItem.class);
         }
 
         @java.lang.Override
-        public EventStreamCloudEventUserUpdatedObjectIdentitiesItem deserialize(
-                JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("connection")
-                    && ((Map<?, ?>) value).containsKey("user_id")
-                    && ((Map<?, ?>) value).containsKey("provider")
-                    && ((Map<?, ?>) value).containsKey("isSocial")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventUserUpdatedObjectIdentitiesItemCustom.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("connection")
-                    && ((Map<?, ?>) value).containsKey("user_id")
-                    && ((Map<?, ?>) value).containsKey("provider")
-                    && ((Map<?, ?>) value).containsKey("isSocial")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventUserUpdatedObjectIdentitiesItemDatabase.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("connection")
-                    && ((Map<?, ?>) value).containsKey("user_id")
-                    && ((Map<?, ?>) value).containsKey("provider")
-                    && ((Map<?, ?>) value).containsKey("isSocial")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventUserUpdatedObjectIdentitiesItemEnterprise.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("connection")
-                    && ((Map<?, ?>) value).containsKey("user_id")
-                    && ((Map<?, ?>) value).containsKey("provider")
-                    && ((Map<?, ?>) value).containsKey("isSocial")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordless.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("connection")
-                    && ((Map<?, ?>) value).containsKey("user_id")
-                    && ((Map<?, ?>) value).containsKey("provider")
-                    && ((Map<?, ?>) value).containsKey("isSocial")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventUserUpdatedObjectIdentitiesItemSocial.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public EventStreamCloudEventUserUpdatedObjectIdentitiesItem deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

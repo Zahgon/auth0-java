@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateGuardianEnrollmentTicketRequestContent.Builder.class)
 public final class CreateGuardianEnrollmentTicketRequestContent {
+
     private final String userId;
 
     private final Optional<String> email;
@@ -36,14 +37,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateGuardianEnrollmentTicketRequestContent(
-            String userId,
-            Optional<String> email,
-            Optional<Boolean> sendMail,
-            Optional<String> emailLocale,
-            Optional<GuardianEnrollmentFactorEnum> factor,
-            Optional<Boolean> allowMultipleEnrollments,
-            Map<String, Object> additionalProperties) {
+    private CreateGuardianEnrollmentTicketRequestContent(String userId, Optional<String> email, Optional<Boolean> sendMail, Optional<String> emailLocale, Optional<GuardianEnrollmentFactorEnum> factor, Optional<Boolean> allowMultipleEnrollments, Map<String, Object> additionalProperties) {
         this.userId = userId;
         this.email = email;
         this.sendMail = sendMail;
@@ -58,7 +52,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
      */
     @JsonProperty("user_id")
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,7 +60,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +68,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
      */
     @JsonProperty("send_mail")
     public Optional<Boolean> getSendMail() {
-        return sendMail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,12 +76,12 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
      */
     @JsonProperty("email_locale")
     public Optional<String> getEmailLocale() {
-        return emailLocale;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("factor")
     public Optional<GuardianEnrollmentFactorEnum> getFactor() {
-        return factor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,46 +89,39 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
      */
     @JsonProperty("allow_multiple_enrollments")
     public Optional<Boolean> getAllowMultipleEnrollments() {
-        return allowMultipleEnrollments;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateGuardianEnrollmentTicketRequestContent
-                && equalTo((CreateGuardianEnrollmentTicketRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateGuardianEnrollmentTicketRequestContent other) {
-        return userId.equals(other.userId)
-                && email.equals(other.email)
-                && sendMail.equals(other.sendMail)
-                && emailLocale.equals(other.emailLocale)
-                && factor.equals(other.factor)
-                && allowMultipleEnrollments.equals(other.allowMultipleEnrollments);
+        return userId.equals(other.userId) && email.equals(other.email) && sendMail.equals(other.sendMail) && emailLocale.equals(other.emailLocale) && factor.equals(other.factor) && allowMultipleEnrollments.equals(other.allowMultipleEnrollments);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.userId, this.email, this.sendMail, this.emailLocale, this.factor, this.allowMultipleEnrollments);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UserIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UserIdStage {
+
         /**
          * <p>user_id for the enrollment ticket</p>
          */
@@ -144,6 +131,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateGuardianEnrollmentTicketRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -185,6 +173,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements UserIdStage, _FinalStage {
+
         private String userId;
 
         private Optional<Boolean> allowMultipleEnrollments = Optional.empty();
@@ -200,17 +189,12 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateGuardianEnrollmentTicketRequestContent other) {
-            userId(other.getUserId());
-            email(other.getEmail());
-            sendMail(other.getSendMail());
-            emailLocale(other.getEmailLocale());
-            factor(other.getFactor());
-            allowMultipleEnrollments(other.getAllowMultipleEnrollments());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,8 +205,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @java.lang.Override
         @JsonSetter("user_id")
         public _FinalStage userId(@NotNull String userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -231,8 +214,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage allowMultipleEnrollments(Boolean allowMultipleEnrollments) {
-            this.allowMultipleEnrollments = Optional.ofNullable(allowMultipleEnrollments);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -241,21 +223,18 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "allow_multiple_enrollments", nulls = Nulls.SKIP)
         public _FinalStage allowMultipleEnrollments(Optional<Boolean> allowMultipleEnrollments) {
-            this.allowMultipleEnrollments = allowMultipleEnrollments;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage factor(GuardianEnrollmentFactorEnum factor) {
-            this.factor = Optional.ofNullable(factor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "factor", nulls = Nulls.SKIP)
         public _FinalStage factor(Optional<GuardianEnrollmentFactorEnum> factor) {
-            this.factor = factor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -264,8 +243,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage emailLocale(String emailLocale) {
-            this.emailLocale = Optional.ofNullable(emailLocale);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -274,8 +252,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "email_locale", nulls = Nulls.SKIP)
         public _FinalStage emailLocale(Optional<String> emailLocale) {
-            this.emailLocale = emailLocale;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -284,8 +261,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage sendMail(Boolean sendMail) {
-            this.sendMail = Optional.ofNullable(sendMail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -294,8 +270,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "send_mail", nulls = Nulls.SKIP)
         public _FinalStage sendMail(Optional<Boolean> sendMail) {
-            this.sendMail = sendMail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -304,8 +279,7 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -314,26 +288,22 @@ public final class CreateGuardianEnrollmentTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public _FinalStage email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateGuardianEnrollmentTicketRequestContent build() {
-            return new CreateGuardianEnrollmentTicketRequestContent(
-                    userId, email, sendMail, emailLocale, factor, allowMultipleEnrollments, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

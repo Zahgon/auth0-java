@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionBase.Builder.class)
 public final class ActionBase {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -36,14 +37,7 @@ public final class ActionBase {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionBase(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<List<ActionTrigger>> supportedTriggers,
-            Optional<Boolean> allChangesDeployed,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private ActionBase(Optional<String> id, Optional<String> name, Optional<List<ActionTrigger>> supportedTriggers, Optional<Boolean> allChangesDeployed, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.supportedTriggers = supportedTriggers;
@@ -58,7 +52,7 @@ public final class ActionBase {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,7 +60,7 @@ public final class ActionBase {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +68,7 @@ public final class ActionBase {
      */
     @JsonProperty("supported_triggers")
     public Optional<List<ActionTrigger>> getSupportedTriggers() {
-        return supportedTriggers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +76,7 @@ public final class ActionBase {
      */
     @JsonProperty("all_changes_deployed")
     public Optional<Boolean> getAllChangesDeployed() {
-        return allChangesDeployed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,7 +84,7 @@ public final class ActionBase {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,46 +92,40 @@ public final class ActionBase {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionBase && equalTo((ActionBase) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionBase other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && supportedTriggers.equals(other.supportedTriggers)
-                && allChangesDeployed.equals(other.allChangesDeployed)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && name.equals(other.name) && supportedTriggers.equals(other.supportedTriggers) && allChangesDeployed.equals(other.allChangesDeployed) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.name, this.supportedTriggers, this.allChangesDeployed, this.createdAt, this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -153,16 +141,11 @@ public final class ActionBase {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ActionBase other) {
-            id(other.getId());
-            name(other.getName());
-            supportedTriggers(other.getSupportedTriggers());
-            allChangesDeployed(other.getAllChangesDeployed());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -170,13 +153,11 @@ public final class ActionBase {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,13 +165,11 @@ public final class ActionBase {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -198,13 +177,11 @@ public final class ActionBase {
          */
         @JsonSetter(value = "supported_triggers", nulls = Nulls.SKIP)
         public Builder supportedTriggers(Optional<List<ActionTrigger>> supportedTriggers) {
-            this.supportedTriggers = supportedTriggers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder supportedTriggers(List<ActionTrigger> supportedTriggers) {
-            this.supportedTriggers = Optional.ofNullable(supportedTriggers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -212,13 +189,11 @@ public final class ActionBase {
          */
         @JsonSetter(value = "all_changes_deployed", nulls = Nulls.SKIP)
         public Builder allChangesDeployed(Optional<Boolean> allChangesDeployed) {
-            this.allChangesDeployed = allChangesDeployed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allChangesDeployed(Boolean allChangesDeployed) {
-            this.allChangesDeployed = Optional.ofNullable(allChangesDeployed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -226,13 +201,11 @@ public final class ActionBase {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -240,28 +213,23 @@ public final class ActionBase {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ActionBase build() {
-            return new ActionBase(
-                    id, name, supportedTriggers, allChangesDeployed, createdAt, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

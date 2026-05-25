@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ExpressConfigurationOrNull.Builder.class)
 public final class ExpressConfigurationOrNull {
+
     private final String initiateLoginUriTemplate;
 
     private final String userAttributeProfileId;
@@ -42,17 +43,7 @@ public final class ExpressConfigurationOrNull {
 
     private final Map<String, Object> additionalProperties;
 
-    private ExpressConfigurationOrNull(
-            String initiateLoginUriTemplate,
-            String userAttributeProfileId,
-            String connectionProfileId,
-            boolean enableClient,
-            boolean enableOrganization,
-            Optional<List<LinkedClientConfiguration>> linkedClients,
-            String oktaOinClientId,
-            String adminLoginDomain,
-            Optional<String> oinSubmissionId,
-            Map<String, Object> additionalProperties) {
+    private ExpressConfigurationOrNull(String initiateLoginUriTemplate, String userAttributeProfileId, String connectionProfileId, boolean enableClient, boolean enableOrganization, Optional<List<LinkedClientConfiguration>> linkedClients, String oktaOinClientId, String adminLoginDomain, Optional<String> oinSubmissionId, Map<String, Object> additionalProperties) {
         this.initiateLoginUriTemplate = initiateLoginUriTemplate;
         this.userAttributeProfileId = userAttributeProfileId;
         this.connectionProfileId = connectionProfileId;
@@ -70,7 +61,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("initiate_login_uri_template")
     public String getInitiateLoginUriTemplate() {
-        return initiateLoginUriTemplate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +69,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("user_attribute_profile_id")
     public String getUserAttributeProfileId() {
-        return userAttributeProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +77,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("connection_profile_id")
     public String getConnectionProfileId() {
-        return connectionProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +85,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("enable_client")
     public boolean getEnableClient() {
-        return enableClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +93,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("enable_organization")
     public boolean getEnableOrganization() {
-        return enableOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,7 +101,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("linked_clients")
     public Optional<List<LinkedClientConfiguration>> getLinkedClients() {
-        return linkedClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -118,7 +109,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("okta_oin_client_id")
     public String getOktaOinClientId() {
-        return oktaOinClientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -126,7 +117,7 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("admin_login_domain")
     public String getAdminLoginDomain() {
-        return adminLoginDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -134,56 +125,39 @@ public final class ExpressConfigurationOrNull {
      */
     @JsonProperty("oin_submission_id")
     public Optional<String> getOinSubmissionId() {
-        return oinSubmissionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ExpressConfigurationOrNull && equalTo((ExpressConfigurationOrNull) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ExpressConfigurationOrNull other) {
-        return initiateLoginUriTemplate.equals(other.initiateLoginUriTemplate)
-                && userAttributeProfileId.equals(other.userAttributeProfileId)
-                && connectionProfileId.equals(other.connectionProfileId)
-                && enableClient == other.enableClient
-                && enableOrganization == other.enableOrganization
-                && linkedClients.equals(other.linkedClients)
-                && oktaOinClientId.equals(other.oktaOinClientId)
-                && adminLoginDomain.equals(other.adminLoginDomain)
-                && oinSubmissionId.equals(other.oinSubmissionId);
+        return initiateLoginUriTemplate.equals(other.initiateLoginUriTemplate) && userAttributeProfileId.equals(other.userAttributeProfileId) && connectionProfileId.equals(other.connectionProfileId) && enableClient == other.enableClient && enableOrganization == other.enableOrganization && linkedClients.equals(other.linkedClients) && oktaOinClientId.equals(other.oktaOinClientId) && adminLoginDomain.equals(other.adminLoginDomain) && oinSubmissionId.equals(other.oinSubmissionId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.initiateLoginUriTemplate,
-                this.userAttributeProfileId,
-                this.connectionProfileId,
-                this.enableClient,
-                this.enableOrganization,
-                this.linkedClients,
-                this.oktaOinClientId,
-                this.adminLoginDomain,
-                this.oinSubmissionId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static InitiateLoginUriTemplateStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface InitiateLoginUriTemplateStage {
+
         /**
          * <p>The URI users should bookmark to log in to this application. Variable substitution is permitted for the following properties: organization_name, organization_id, and connection_name.</p>
          */
@@ -193,6 +167,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface UserAttributeProfileIdStage {
+
         /**
          * <p>The ID of the user attribute profile to use for this application.</p>
          */
@@ -200,6 +175,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface ConnectionProfileIdStage {
+
         /**
          * <p>The ID of the connection profile to use for this application.</p>
          */
@@ -207,6 +183,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface EnableClientStage {
+
         /**
          * <p>When true, all connections made via express configuration will be enabled for this application.</p>
          */
@@ -214,6 +191,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface EnableOrganizationStage {
+
         /**
          * <p>When true, all connections made via express configuration will have the associated organization enabled.</p>
          */
@@ -221,6 +199,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface OktaOinClientIdStage {
+
         /**
          * <p>This is the unique identifier for the Okta OIN Express Configuration Client, which Okta will use for this application.</p>
          */
@@ -228,6 +207,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface AdminLoginDomainStage {
+
         /**
          * <p>This is the domain that admins are expected to log in via for authenticating for express configuration. It can be either the canonical domain or a registered custom domain.</p>
          */
@@ -235,6 +215,7 @@ public final class ExpressConfigurationOrNull {
     }
 
     public interface _FinalStage {
+
         ExpressConfigurationOrNull build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -257,15 +238,8 @@ public final class ExpressConfigurationOrNull {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements InitiateLoginUriTemplateStage,
-                    UserAttributeProfileIdStage,
-                    ConnectionProfileIdStage,
-                    EnableClientStage,
-                    EnableOrganizationStage,
-                    OktaOinClientIdStage,
-                    AdminLoginDomainStage,
-                    _FinalStage {
+    public static final class Builder implements InitiateLoginUriTemplateStage, UserAttributeProfileIdStage, ConnectionProfileIdStage, EnableClientStage, EnableOrganizationStage, OktaOinClientIdStage, AdminLoginDomainStage, _FinalStage {
+
         private String initiateLoginUriTemplate;
 
         private String userAttributeProfileId;
@@ -287,20 +261,12 @@ public final class ExpressConfigurationOrNull {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ExpressConfigurationOrNull other) {
-            initiateLoginUriTemplate(other.getInitiateLoginUriTemplate());
-            userAttributeProfileId(other.getUserAttributeProfileId());
-            connectionProfileId(other.getConnectionProfileId());
-            enableClient(other.getEnableClient());
-            enableOrganization(other.getEnableOrganization());
-            linkedClients(other.getLinkedClients());
-            oktaOinClientId(other.getOktaOinClientId());
-            adminLoginDomain(other.getAdminLoginDomain());
-            oinSubmissionId(other.getOinSubmissionId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -311,9 +277,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("initiate_login_uri_template")
         public UserAttributeProfileIdStage initiateLoginUriTemplate(@NotNull String initiateLoginUriTemplate) {
-            this.initiateLoginUriTemplate =
-                    Objects.requireNonNull(initiateLoginUriTemplate, "initiateLoginUriTemplate must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -324,9 +288,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("user_attribute_profile_id")
         public ConnectionProfileIdStage userAttributeProfileId(@NotNull String userAttributeProfileId) {
-            this.userAttributeProfileId =
-                    Objects.requireNonNull(userAttributeProfileId, "userAttributeProfileId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -337,9 +299,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("connection_profile_id")
         public EnableClientStage connectionProfileId(@NotNull String connectionProfileId) {
-            this.connectionProfileId =
-                    Objects.requireNonNull(connectionProfileId, "connectionProfileId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -350,8 +310,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("enable_client")
         public EnableOrganizationStage enableClient(boolean enableClient) {
-            this.enableClient = enableClient;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -362,8 +321,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("enable_organization")
         public OktaOinClientIdStage enableOrganization(boolean enableOrganization) {
-            this.enableOrganization = enableOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -374,8 +332,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("okta_oin_client_id")
         public AdminLoginDomainStage oktaOinClientId(@NotNull String oktaOinClientId) {
-            this.oktaOinClientId = Objects.requireNonNull(oktaOinClientId, "oktaOinClientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -386,8 +343,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter("admin_login_domain")
         public _FinalStage adminLoginDomain(@NotNull String adminLoginDomain) {
-            this.adminLoginDomain = Objects.requireNonNull(adminLoginDomain, "adminLoginDomain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -396,8 +352,7 @@ public final class ExpressConfigurationOrNull {
          */
         @java.lang.Override
         public _FinalStage oinSubmissionId(String oinSubmissionId) {
-            this.oinSubmissionId = Optional.ofNullable(oinSubmissionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -406,8 +361,7 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter(value = "oin_submission_id", nulls = Nulls.SKIP)
         public _FinalStage oinSubmissionId(Optional<String> oinSubmissionId) {
-            this.oinSubmissionId = oinSubmissionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -416,8 +370,7 @@ public final class ExpressConfigurationOrNull {
          */
         @java.lang.Override
         public _FinalStage linkedClients(List<LinkedClientConfiguration> linkedClients) {
-            this.linkedClients = Optional.ofNullable(linkedClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -426,35 +379,22 @@ public final class ExpressConfigurationOrNull {
         @java.lang.Override
         @JsonSetter(value = "linked_clients", nulls = Nulls.SKIP)
         public _FinalStage linkedClients(Optional<List<LinkedClientConfiguration>> linkedClients) {
-            this.linkedClients = linkedClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ExpressConfigurationOrNull build() {
-            return new ExpressConfigurationOrNull(
-                    initiateLoginUriTemplate,
-                    userAttributeProfileId,
-                    connectionProfileId,
-                    enableClient,
-                    enableOrganization,
-                    linkedClients,
-                    oktaOinClientId,
-                    adminLoginDomain,
-                    oinSubmissionId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

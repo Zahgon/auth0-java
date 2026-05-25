@@ -21,14 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateRoleRequestContent.Builder.class)
 public final class CreateRoleRequestContent {
+
     private final String name;
 
     private final Optional<String> description;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateRoleRequestContent(
-            String name, Optional<String> description, Map<String, Object> additionalProperties) {
+    private CreateRoleRequestContent(String name, Optional<String> description, Map<String, Object> additionalProperties) {
         this.name = name;
         this.description = description;
         this.additionalProperties = additionalProperties;
@@ -39,7 +39,7 @@ public final class CreateRoleRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,18 +47,17 @@ public final class CreateRoleRequestContent {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateRoleRequestContent && equalTo((CreateRoleRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateRoleRequestContent other) {
@@ -67,19 +66,20 @@ public final class CreateRoleRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.description);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Name of the role.</p>
          */
@@ -89,6 +89,7 @@ public final class CreateRoleRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateRoleRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -105,6 +106,7 @@ public final class CreateRoleRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<String> description = Optional.empty();
@@ -112,13 +114,12 @@ public final class CreateRoleRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateRoleRequestContent other) {
-            name(other.getName());
-            description(other.getDescription());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,8 +130,7 @@ public final class CreateRoleRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -139,8 +139,7 @@ public final class CreateRoleRequestContent {
          */
         @java.lang.Override
         public _FinalStage description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,25 +148,22 @@ public final class CreateRoleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public _FinalStage description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateRoleRequestContent build() {
-            return new CreateRoleRequestContent(name, description, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

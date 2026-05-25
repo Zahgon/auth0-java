@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UserAttributeProfileUserIdOidcMappingEnum {
-    public static final UserAttributeProfileUserIdOidcMappingEnum SUB =
-            new UserAttributeProfileUserIdOidcMappingEnum(Value.SUB, "sub");
+
+    public static final UserAttributeProfileUserIdOidcMappingEnum SUB = new UserAttributeProfileUserIdOidcMappingEnum(Value.SUB, "sub");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class UserAttributeProfileUserIdOidcMappingEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UserAttributeProfileUserIdOidcMappingEnum
-                        && this.string.equals(((UserAttributeProfileUserIdOidcMappingEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SUB:
-                return visitor.visitSub();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UserAttributeProfileUserIdOidcMappingEnum valueOf(String value) {
-        switch (value) {
-            case "sub":
-                return SUB;
-            default:
-                return new UserAttributeProfileUserIdOidcMappingEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SUB,
 
-        UNKNOWN
+        SUB, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSub();
 
         T visitUnknown(String unknownType);

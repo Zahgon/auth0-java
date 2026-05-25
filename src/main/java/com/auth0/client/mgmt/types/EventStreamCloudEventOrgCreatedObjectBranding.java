@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOrgCreatedObjectBranding.Builder.class)
 public final class EventStreamCloudEventOrgCreatedObjectBranding {
+
     private final Optional<String> logoUrl;
 
     private final Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> colors;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventOrgCreatedObjectBranding(
-            Optional<String> logoUrl,
-            Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> colors,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventOrgCreatedObjectBranding(Optional<String> logoUrl, Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> colors, Map<String, Object> additionalProperties) {
         this.logoUrl = logoUrl;
         this.colors = colors;
         this.additionalProperties = additionalProperties;
@@ -40,24 +38,22 @@ public final class EventStreamCloudEventOrgCreatedObjectBranding {
      */
     @JsonProperty("logo_url")
     public Optional<String> getLogoUrl() {
-        return logoUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("colors")
     public Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> getColors() {
-        return colors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgCreatedObjectBranding
-                && equalTo((EventStreamCloudEventOrgCreatedObjectBranding) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgCreatedObjectBranding other) {
@@ -66,20 +62,21 @@ public final class EventStreamCloudEventOrgCreatedObjectBranding {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.logoUrl, this.colors);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> logoUrl = Optional.empty();
 
         private Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> colors = Optional.empty();
@@ -87,12 +84,11 @@ public final class EventStreamCloudEventOrgCreatedObjectBranding {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EventStreamCloudEventOrgCreatedObjectBranding other) {
-            logoUrl(other.getLogoUrl());
-            colors(other.getColors());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,38 +96,32 @@ public final class EventStreamCloudEventOrgCreatedObjectBranding {
          */
         @JsonSetter(value = "logo_url", nulls = Nulls.SKIP)
         public Builder logoUrl(Optional<String> logoUrl) {
-            this.logoUrl = logoUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUrl(String logoUrl) {
-            this.logoUrl = Optional.ofNullable(logoUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "colors", nulls = Nulls.SKIP)
         public Builder colors(Optional<EventStreamCloudEventOrgCreatedObjectBrandingColors> colors) {
-            this.colors = colors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder colors(EventStreamCloudEventOrgCreatedObjectBrandingColors colors) {
-            this.colors = Optional.ofNullable(colors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EventStreamCloudEventOrgCreatedObjectBranding build() {
-            return new EventStreamCloudEventOrgCreatedObjectBranding(logoUrl, colors, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

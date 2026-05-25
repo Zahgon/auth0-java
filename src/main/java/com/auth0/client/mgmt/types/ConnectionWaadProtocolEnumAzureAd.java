@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionWaadProtocolEnumAzureAd {
-    public static final ConnectionWaadProtocolEnumAzureAd OPENID_CONNECT =
-            new ConnectionWaadProtocolEnumAzureAd(Value.OPENID_CONNECT, "openid-connect");
 
-    public static final ConnectionWaadProtocolEnumAzureAd WS_FEDERATION =
-            new ConnectionWaadProtocolEnumAzureAd(Value.WS_FEDERATION, "ws-federation");
+    public static final ConnectionWaadProtocolEnumAzureAd OPENID_CONNECT = new ConnectionWaadProtocolEnumAzureAd(Value.OPENID_CONNECT, "openid-connect");
+
+    public static final ConnectionWaadProtocolEnumAzureAd WS_FEDERATION = new ConnectionWaadProtocolEnumAzureAd(Value.WS_FEDERATION, "ws-federation");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionWaadProtocolEnumAzureAd {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionWaadProtocolEnumAzureAd
-                        && this.string.equals(((ConnectionWaadProtocolEnumAzureAd) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OPENID_CONNECT:
-                return visitor.visitOpenidConnect();
-            case WS_FEDERATION:
-                return visitor.visitWsFederation();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionWaadProtocolEnumAzureAd valueOf(String value) {
-        switch (value) {
-            case "openid-connect":
-                return OPENID_CONNECT;
-            case "ws-federation":
-                return WS_FEDERATION;
-            default:
-                return new ConnectionWaadProtocolEnumAzureAd(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WS_FEDERATION,
 
-        OPENID_CONNECT,
-
-        UNKNOWN
+        WS_FEDERATION, OPENID_CONNECT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWsFederation();
 
         T visitOpenidConnect();

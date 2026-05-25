@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomSigningKeyUseEnum {
+
     public static final CustomSigningKeyUseEnum SIG = new CustomSigningKeyUseEnum(Value.SIG, "sig");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class CustomSigningKeyUseEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomSigningKeyUseEnum
-                        && this.string.equals(((CustomSigningKeyUseEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SIG:
-                return visitor.visitSig();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomSigningKeyUseEnum valueOf(String value) {
-        switch (value) {
-            case "sig":
-                return SIG;
-            default:
-                return new CustomSigningKeyUseEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SIG,
 
-        UNKNOWN
+        SIG, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSig();
 
         T visitUnknown(String unknownType);

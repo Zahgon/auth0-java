@@ -36,6 +36,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawClientGrantsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawClientGrantsClient(ClientOptions clientOptions) {
@@ -43,240 +44,34 @@ public class RawClientGrantsClient {
     }
 
     public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(String id) {
-        return list(id, ListOrganizationClientGrantsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, RequestOptions requestOptions) {
-        return list(id, ListOrganizationClientGrantsRequestParameters.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, ListOrganizationClientGrantsRequestParameters request) {
-        return list(id, request, null);
+    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(String id, ListOrganizationClientGrantsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("organizations")
-                .addPathSegment(id)
-                .addPathSegments("client-grants");
-        if (!request.getAudience().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "audience", request.getAudience().orElse(null), false);
-        }
-        if (!request.getClientId().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "client_id", request.getClientId().orElse(null), false);
-        }
-        QueryStringMapper.addQueryParameter(httpUrl, "page", request.getPage().orElse(0), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "per_page", request.getPerPage().orElse(50), false);
-        QueryStringMapper.addQueryParameter(
-                httpUrl, "include_totals", request.getIncludeTotals().orElse(true), false);
-        if (request.getGrantIds().isPresent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "grant_ids", request.getGrantIds().get(), true);
-        }
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                ListOrganizationClientGrantsOffsetPaginatedResponseContent parsedResponse =
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, ListOrganizationClientGrantsOffsetPaginatedResponseContent.class);
-                int newPageNumber =
-                        request.getPage().map((Integer page) -> page + 1).orElse(1);
-                ListOrganizationClientGrantsRequestParameters nextRequest =
-                        ListOrganizationClientGrantsRequestParameters.builder()
-                                .from(request)
-                                .page(newPageNumber)
-                                .build();
-                List<OrganizationClientGrant> result =
-                        parsedResponse.getClientGrants().orElse(Collections.emptyList());
-                return new ManagementApiHttpResponse<>(
-                        new SyncPagingIterable<OrganizationClientGrant>(
-                                true, result, parsedResponse, () -> list(id, nextRequest, requestOptions)
-                                        .body()),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SyncPagingIterable<OrganizationClientGrant>> list(String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<AssociateOrganizationClientGrantResponseContent> create(
-            String id, AssociateOrganizationClientGrantRequestContent request) {
-        return create(id, request, null);
+    public ManagementApiHttpResponse<AssociateOrganizationClientGrantResponseContent> create(String id, AssociateOrganizationClientGrantRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<AssociateOrganizationClientGrantResponseContent> create(
-            String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("organizations")
-                .addPathSegment(id)
-                .addPathSegments("client-grants");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, AssociateOrganizationClientGrantResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 409:
-                        throw new ConflictError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<AssociateOrganizationClientGrantResponseContent> create(String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ManagementApiHttpResponse<Void> delete(String id, String grantId) {
-        return delete(id, grantId, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ManagementApiHttpResponse<Void> delete(String id, String grantId, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("organizations")
-                .addPathSegment(id)
-                .addPathSegments("client-grants")
-                .addPathSegment(grantId);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("DELETE", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(null, response);
-            }
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

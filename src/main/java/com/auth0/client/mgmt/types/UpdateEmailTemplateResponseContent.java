@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateEmailTemplateResponseContent.Builder.class)
 public final class UpdateEmailTemplateResponseContent {
+
     private final Optional<EmailTemplateNameEnum> template;
 
     private final OptionalNullable<String> body;
@@ -43,17 +44,7 @@ public final class UpdateEmailTemplateResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateEmailTemplateResponseContent(
-            Optional<EmailTemplateNameEnum> template,
-            OptionalNullable<String> body,
-            OptionalNullable<String> from,
-            OptionalNullable<String> resultUrl,
-            OptionalNullable<String> subject,
-            OptionalNullable<String> syntax,
-            OptionalNullable<Double> urlLifetimeInSeconds,
-            Optional<Boolean> includeEmailInRedirect,
-            OptionalNullable<Boolean> enabled,
-            Map<String, Object> additionalProperties) {
+    private UpdateEmailTemplateResponseContent(Optional<EmailTemplateNameEnum> template, OptionalNullable<String> body, OptionalNullable<String> from, OptionalNullable<String> resultUrl, OptionalNullable<String> subject, OptionalNullable<String> syntax, OptionalNullable<Double> urlLifetimeInSeconds, Optional<Boolean> includeEmailInRedirect, OptionalNullable<Boolean> enabled, Map<String, Object> additionalProperties) {
         this.template = template;
         this.body = body;
         this.from = from;
@@ -68,7 +59,7 @@ public final class UpdateEmailTemplateResponseContent {
 
     @JsonProperty("template")
     public Optional<EmailTemplateNameEnum> getTemplate() {
-        return template;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,10 +68,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("body")
     public OptionalNullable<String> getBody() {
-        if (body == null) {
-            return OptionalNullable.absent();
-        }
-        return body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,10 +77,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("from")
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,10 +86,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("resultUrl")
     public OptionalNullable<String> getResultUrl() {
-        if (resultUrl == null) {
-            return OptionalNullable.absent();
-        }
-        return resultUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,10 +95,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("subject")
     public OptionalNullable<String> getSubject() {
-        if (subject == null) {
-            return OptionalNullable.absent();
-        }
-        return subject;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,10 +104,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("syntax")
     public OptionalNullable<String> getSyntax() {
-        if (syntax == null) {
-            return OptionalNullable.absent();
-        }
-        return syntax;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -137,10 +113,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("urlLifetimeInSeconds")
     public OptionalNullable<Double> getUrlLifetimeInSeconds() {
-        if (urlLifetimeInSeconds == null) {
-            return OptionalNullable.absent();
-        }
-        return urlLifetimeInSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +121,7 @@ public final class UpdateEmailTemplateResponseContent {
      */
     @JsonProperty("includeEmailInRedirect")
     public Optional<Boolean> getIncludeEmailInRedirect() {
-        return includeEmailInRedirect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -157,10 +130,7 @@ public final class UpdateEmailTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("enabled")
     public OptionalNullable<Boolean> getEnabled() {
-        if (enabled == null) {
-            return OptionalNullable.absent();
-        }
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -207,53 +177,35 @@ public final class UpdateEmailTemplateResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateEmailTemplateResponseContent
-                && equalTo((UpdateEmailTemplateResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateEmailTemplateResponseContent other) {
-        return template.equals(other.template)
-                && body.equals(other.body)
-                && from.equals(other.from)
-                && resultUrl.equals(other.resultUrl)
-                && subject.equals(other.subject)
-                && syntax.equals(other.syntax)
-                && urlLifetimeInSeconds.equals(other.urlLifetimeInSeconds)
-                && includeEmailInRedirect.equals(other.includeEmailInRedirect)
-                && enabled.equals(other.enabled);
+        return template.equals(other.template) && body.equals(other.body) && from.equals(other.from) && resultUrl.equals(other.resultUrl) && subject.equals(other.subject) && syntax.equals(other.syntax) && urlLifetimeInSeconds.equals(other.urlLifetimeInSeconds) && includeEmailInRedirect.equals(other.includeEmailInRedirect) && enabled.equals(other.enabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.template,
-                this.body,
-                this.from,
-                this.resultUrl,
-                this.subject,
-                this.syntax,
-                this.urlLifetimeInSeconds,
-                this.includeEmailInRedirect,
-                this.enabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<EmailTemplateNameEnum> template = Optional.empty();
 
         private OptionalNullable<String> body = OptionalNullable.absent();
@@ -275,30 +227,20 @@ public final class UpdateEmailTemplateResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateEmailTemplateResponseContent other) {
-            template(other.getTemplate());
-            body(other.getBody());
-            from(other.getFrom());
-            resultUrl(other.getResultUrl());
-            subject(other.getSubject());
-            syntax(other.getSyntax());
-            urlLifetimeInSeconds(other.getUrlLifetimeInSeconds());
-            includeEmailInRedirect(other.getIncludeEmailInRedirect());
-            enabled(other.getEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "template", nulls = Nulls.SKIP)
         public Builder template(Optional<EmailTemplateNameEnum> template) {
-            this.template = template;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder template(EmailTemplateNameEnum template) {
-            this.template = Optional.ofNullable(template);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -306,33 +248,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "body", nulls = Nulls.SKIP)
         public Builder body(@Nullable OptionalNullable<String> body) {
-            this.body = body;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder body(String body) {
-            this.body = OptionalNullable.of(body);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder body(Optional<String> body) {
-            if (body.isPresent()) {
-                this.body = OptionalNullable.of(body.get());
-            } else {
-                this.body = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder body(com.auth0.client.mgmt.core.Nullable<String> body) {
-            if (body.isNull()) {
-                this.body = OptionalNullable.ofNull();
-            } else if (body.isEmpty()) {
-                this.body = OptionalNullable.absent();
-            } else {
-                this.body = OptionalNullable.of(body.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -340,33 +268,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -374,33 +288,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "resultUrl", nulls = Nulls.SKIP)
         public Builder resultUrl(@Nullable OptionalNullable<String> resultUrl) {
-            this.resultUrl = resultUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resultUrl(String resultUrl) {
-            this.resultUrl = OptionalNullable.of(resultUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resultUrl(Optional<String> resultUrl) {
-            if (resultUrl.isPresent()) {
-                this.resultUrl = OptionalNullable.of(resultUrl.get());
-            } else {
-                this.resultUrl = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resultUrl(com.auth0.client.mgmt.core.Nullable<String> resultUrl) {
-            if (resultUrl.isNull()) {
-                this.resultUrl = OptionalNullable.ofNull();
-            } else if (resultUrl.isEmpty()) {
-                this.resultUrl = OptionalNullable.absent();
-            } else {
-                this.resultUrl = OptionalNullable.of(resultUrl.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -408,33 +308,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "subject", nulls = Nulls.SKIP)
         public Builder subject(@Nullable OptionalNullable<String> subject) {
-            this.subject = subject;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subject(String subject) {
-            this.subject = OptionalNullable.of(subject);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subject(Optional<String> subject) {
-            if (subject.isPresent()) {
-                this.subject = OptionalNullable.of(subject.get());
-            } else {
-                this.subject = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subject(com.auth0.client.mgmt.core.Nullable<String> subject) {
-            if (subject.isNull()) {
-                this.subject = OptionalNullable.ofNull();
-            } else if (subject.isEmpty()) {
-                this.subject = OptionalNullable.absent();
-            } else {
-                this.subject = OptionalNullable.of(subject.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -442,33 +328,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "syntax", nulls = Nulls.SKIP)
         public Builder syntax(@Nullable OptionalNullable<String> syntax) {
-            this.syntax = syntax;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder syntax(String syntax) {
-            this.syntax = OptionalNullable.of(syntax);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder syntax(Optional<String> syntax) {
-            if (syntax.isPresent()) {
-                this.syntax = OptionalNullable.of(syntax.get());
-            } else {
-                this.syntax = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder syntax(com.auth0.client.mgmt.core.Nullable<String> syntax) {
-            if (syntax.isNull()) {
-                this.syntax = OptionalNullable.ofNull();
-            } else if (syntax.isEmpty()) {
-                this.syntax = OptionalNullable.absent();
-            } else {
-                this.syntax = OptionalNullable.of(syntax.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -476,33 +348,19 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "urlLifetimeInSeconds", nulls = Nulls.SKIP)
         public Builder urlLifetimeInSeconds(@Nullable OptionalNullable<Double> urlLifetimeInSeconds) {
-            this.urlLifetimeInSeconds = urlLifetimeInSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder urlLifetimeInSeconds(Double urlLifetimeInSeconds) {
-            this.urlLifetimeInSeconds = OptionalNullable.of(urlLifetimeInSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder urlLifetimeInSeconds(Optional<Double> urlLifetimeInSeconds) {
-            if (urlLifetimeInSeconds.isPresent()) {
-                this.urlLifetimeInSeconds = OptionalNullable.of(urlLifetimeInSeconds.get());
-            } else {
-                this.urlLifetimeInSeconds = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder urlLifetimeInSeconds(com.auth0.client.mgmt.core.Nullable<Double> urlLifetimeInSeconds) {
-            if (urlLifetimeInSeconds.isNull()) {
-                this.urlLifetimeInSeconds = OptionalNullable.ofNull();
-            } else if (urlLifetimeInSeconds.isEmpty()) {
-                this.urlLifetimeInSeconds = OptionalNullable.absent();
-            } else {
-                this.urlLifetimeInSeconds = OptionalNullable.of(urlLifetimeInSeconds.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -510,13 +368,11 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "includeEmailInRedirect", nulls = Nulls.SKIP)
         public Builder includeEmailInRedirect(Optional<Boolean> includeEmailInRedirect) {
-            this.includeEmailInRedirect = includeEmailInRedirect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeEmailInRedirect(Boolean includeEmailInRedirect) {
-            this.includeEmailInRedirect = Optional.ofNullable(includeEmailInRedirect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -524,57 +380,31 @@ public final class UpdateEmailTemplateResponseContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(@Nullable OptionalNullable<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = OptionalNullable.of(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Optional<Boolean> enabled) {
-            if (enabled.isPresent()) {
-                this.enabled = OptionalNullable.of(enabled.get());
-            } else {
-                this.enabled = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(com.auth0.client.mgmt.core.Nullable<Boolean> enabled) {
-            if (enabled.isNull()) {
-                this.enabled = OptionalNullable.ofNull();
-            } else if (enabled.isEmpty()) {
-                this.enabled = OptionalNullable.absent();
-            } else {
-                this.enabled = OptionalNullable.of(enabled.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateEmailTemplateResponseContent build() {
-            return new UpdateEmailTemplateResponseContent(
-                    template,
-                    body,
-                    from,
-                    resultUrl,
-                    subject,
-                    syntax,
-                    urlLifetimeInSeconds,
-                    includeEmailInRedirect,
-                    enabled,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

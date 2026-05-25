@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionZapierTriggerWebhookAction {
-    public static final FlowActionZapierTriggerWebhookAction TRIGGER_WEBHOOK =
-            new FlowActionZapierTriggerWebhookAction(Value.TRIGGER_WEBHOOK, "TRIGGER_WEBHOOK");
+
+    public static final FlowActionZapierTriggerWebhookAction TRIGGER_WEBHOOK = new FlowActionZapierTriggerWebhookAction(Value.TRIGGER_WEBHOOK, "TRIGGER_WEBHOOK");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionZapierTriggerWebhookAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionZapierTriggerWebhookAction
-                        && this.string.equals(((FlowActionZapierTriggerWebhookAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TRIGGER_WEBHOOK:
-                return visitor.visitTriggerWebhook();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionZapierTriggerWebhookAction valueOf(String value) {
-        switch (value) {
-            case "TRIGGER_WEBHOOK":
-                return TRIGGER_WEBHOOK;
-            default:
-                return new FlowActionZapierTriggerWebhookAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TRIGGER_WEBHOOK,
 
-        UNKNOWN
+        TRIGGER_WEBHOOK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTriggerWebhook();
 
         T visitUnknown(String unknownType);

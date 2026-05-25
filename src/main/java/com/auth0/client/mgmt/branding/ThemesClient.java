@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.GetBrandingThemeResponseContent;
 import com.auth0.client.mgmt.types.UpdateBrandingThemeResponseContent;
 
 public class ThemesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawThemesClient rawClient;
@@ -26,78 +27,76 @@ public class ThemesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawThemesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create branding theme.
      */
     public CreateBrandingThemeResponseContent create(CreateBrandingThemeRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create branding theme.
      */
-    public CreateBrandingThemeResponseContent create(
-            CreateBrandingThemeRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateBrandingThemeResponseContent create(CreateBrandingThemeRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve default branding theme.
      */
     public GetBrandingDefaultThemeResponseContent getDefault() {
-        return this.rawClient.getDefault().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve default branding theme.
      */
     public GetBrandingDefaultThemeResponseContent getDefault(RequestOptions requestOptions) {
-        return this.rawClient.getDefault(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding theme.
      */
     public GetBrandingThemeResponseContent get(String themeId) {
-        return this.rawClient.get(themeId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding theme.
      */
     public GetBrandingThemeResponseContent get(String themeId, RequestOptions requestOptions) {
-        return this.rawClient.get(themeId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete branding theme.
      */
     public void delete(String themeId) {
-        this.rawClient.delete(themeId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete branding theme.
      */
     public void delete(String themeId, RequestOptions requestOptions) {
-        this.rawClient.delete(themeId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding theme.
      */
     public UpdateBrandingThemeResponseContent update(String themeId, UpdateBrandingThemeRequestContent request) {
-        return this.rawClient.update(themeId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding theme.
      */
-    public UpdateBrandingThemeResponseContent update(
-            String themeId, UpdateBrandingThemeRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(themeId, request, requestOptions).body();
+    public UpdateBrandingThemeResponseContent update(String themeId, UpdateBrandingThemeRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

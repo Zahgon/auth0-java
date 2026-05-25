@@ -18,12 +18,12 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketGoogleWorkspaceConfig.Builder.class)
 public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
+
     private final boolean syncUsers;
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketGoogleWorkspaceConfig(
-            boolean syncUsers, Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketGoogleWorkspaceConfig(boolean syncUsers, Map<String, Object> additionalProperties) {
         this.syncUsers = syncUsers;
         this.additionalProperties = additionalProperties;
     }
@@ -33,19 +33,17 @@ public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
      */
     @JsonProperty("sync_users")
     public boolean getSyncUsers() {
-        return syncUsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketGoogleWorkspaceConfig
-                && equalTo((SelfServiceProfileSsoTicketGoogleWorkspaceConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketGoogleWorkspaceConfig other) {
@@ -54,19 +52,20 @@ public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.syncUsers);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SyncUsersStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SyncUsersStage {
+
         /**
          * <p>Whether to enable Google Workspace Directory Sync for users during the self-service flow.</p>
          */
@@ -76,6 +75,7 @@ public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
     }
 
     public interface _FinalStage {
+
         SelfServiceProfileSsoTicketGoogleWorkspaceConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +85,18 @@ public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SyncUsersStage, _FinalStage {
+
         private boolean syncUsers;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SelfServiceProfileSsoTicketGoogleWorkspaceConfig other) {
-            syncUsers(other.getSyncUsers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +107,22 @@ public final class SelfServiceProfileSsoTicketGoogleWorkspaceConfig {
         @java.lang.Override
         @JsonSetter("sync_users")
         public _FinalStage syncUsers(boolean syncUsers) {
-            this.syncUsers = syncUsers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SelfServiceProfileSsoTicketGoogleWorkspaceConfig build() {
-            return new SelfServiceProfileSsoTicketGoogleWorkspaceConfig(syncUsers, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJwtDecodeJwtAction {
-    public static final FlowActionJwtDecodeJwtAction DECODE_JWT =
-            new FlowActionJwtDecodeJwtAction(Value.DECODE_JWT, "DECODE_JWT");
+
+    public static final FlowActionJwtDecodeJwtAction DECODE_JWT = new FlowActionJwtDecodeJwtAction(Value.DECODE_JWT, "DECODE_JWT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionJwtDecodeJwtAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJwtDecodeJwtAction
-                        && this.string.equals(((FlowActionJwtDecodeJwtAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DECODE_JWT:
-                return visitor.visitDecodeJwt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJwtDecodeJwtAction valueOf(String value) {
-        switch (value) {
-            case "DECODE_JWT":
-                return DECODE_JWT;
-            default:
-                return new FlowActionJwtDecodeJwtAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DECODE_JWT,
 
-        UNKNOWN
+        DECODE_JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDecodeJwt();
 
         T visitUnknown(String unknownType);

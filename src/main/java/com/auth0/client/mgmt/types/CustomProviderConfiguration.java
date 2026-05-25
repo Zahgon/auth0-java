@@ -21,30 +21,29 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CustomProviderConfiguration.Builder.class)
 public final class CustomProviderConfiguration {
+
     private final List<CustomProviderDeliveryMethodEnum> deliveryMethods;
 
     private final Map<String, Object> additionalProperties;
 
-    private CustomProviderConfiguration(
-            List<CustomProviderDeliveryMethodEnum> deliveryMethods, Map<String, Object> additionalProperties) {
+    private CustomProviderConfiguration(List<CustomProviderDeliveryMethodEnum> deliveryMethods, Map<String, Object> additionalProperties) {
         this.deliveryMethods = deliveryMethods;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("delivery_methods")
     public List<CustomProviderDeliveryMethodEnum> getDeliveryMethods() {
-        return deliveryMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CustomProviderConfiguration && equalTo((CustomProviderConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CustomProviderConfiguration other) {
@@ -53,65 +52,56 @@ public final class CustomProviderConfiguration {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.deliveryMethods);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<CustomProviderDeliveryMethodEnum> deliveryMethods = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CustomProviderConfiguration other) {
-            deliveryMethods(other.getDeliveryMethods());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "delivery_methods", nulls = Nulls.SKIP)
         public Builder deliveryMethods(List<CustomProviderDeliveryMethodEnum> deliveryMethods) {
-            this.deliveryMethods.clear();
-            if (deliveryMethods != null) {
-                this.deliveryMethods.addAll(deliveryMethods);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addDeliveryMethods(CustomProviderDeliveryMethodEnum deliveryMethods) {
-            this.deliveryMethods.add(deliveryMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllDeliveryMethods(List<CustomProviderDeliveryMethodEnum> deliveryMethods) {
-            if (deliveryMethods != null) {
-                this.deliveryMethods.addAll(deliveryMethods);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CustomProviderConfiguration build() {
-            return new CustomProviderConfiguration(deliveryMethods, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

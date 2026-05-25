@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientMobileAndroid.Builder.class)
 public final class ClientMobileAndroid {
+
     private final Optional<String> appPackageName;
 
     private final Optional<List<String>> sha256CertFingerprints;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientMobileAndroid(
-            Optional<String> appPackageName,
-            Optional<List<String>> sha256CertFingerprints,
-            Map<String, Object> additionalProperties) {
+    private ClientMobileAndroid(Optional<String> appPackageName, Optional<List<String>> sha256CertFingerprints, Map<String, Object> additionalProperties) {
         this.appPackageName = appPackageName;
         this.sha256CertFingerprints = sha256CertFingerprints;
         this.additionalProperties = additionalProperties;
@@ -41,7 +39,7 @@ public final class ClientMobileAndroid {
      */
     @JsonProperty("app_package_name")
     public Optional<String> getAppPackageName() {
-        return appPackageName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,41 +47,40 @@ public final class ClientMobileAndroid {
      */
     @JsonProperty("sha256_cert_fingerprints")
     public Optional<List<String>> getSha256CertFingerprints() {
-        return sha256CertFingerprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientMobileAndroid && equalTo((ClientMobileAndroid) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientMobileAndroid other) {
-        return appPackageName.equals(other.appPackageName)
-                && sha256CertFingerprints.equals(other.sha256CertFingerprints);
+        return appPackageName.equals(other.appPackageName) && sha256CertFingerprints.equals(other.sha256CertFingerprints);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.appPackageName, this.sha256CertFingerprints);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> appPackageName = Optional.empty();
 
         private Optional<List<String>> sha256CertFingerprints = Optional.empty();
@@ -91,12 +88,11 @@ public final class ClientMobileAndroid {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientMobileAndroid other) {
-            appPackageName(other.getAppPackageName());
-            sha256CertFingerprints(other.getSha256CertFingerprints());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -104,13 +100,11 @@ public final class ClientMobileAndroid {
          */
         @JsonSetter(value = "app_package_name", nulls = Nulls.SKIP)
         public Builder appPackageName(Optional<String> appPackageName) {
-            this.appPackageName = appPackageName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appPackageName(String appPackageName) {
-            this.appPackageName = Optional.ofNullable(appPackageName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -118,27 +112,23 @@ public final class ClientMobileAndroid {
          */
         @JsonSetter(value = "sha256_cert_fingerprints", nulls = Nulls.SKIP)
         public Builder sha256CertFingerprints(Optional<List<String>> sha256CertFingerprints) {
-            this.sha256CertFingerprints = sha256CertFingerprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sha256CertFingerprints(List<String> sha256CertFingerprints) {
-            this.sha256CertFingerprints = Optional.ofNullable(sha256CertFingerprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientMobileAndroid build() {
-            return new ClientMobileAndroid(appPackageName, sha256CertFingerprints, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = GetDefaultDomainResponseContent.Deserializer.class)
 public final class GetDefaultDomainResponseContent {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class GetDefaultDomainResponseContent {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((GetDefaultCustomDomainResponseContent) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((GetDefaultCanonicalDomainResponseContent) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetDefaultDomainResponseContent && equalTo((GetDefaultDomainResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetDefaultDomainResponseContent other) {
@@ -52,57 +47,38 @@ public final class GetDefaultDomainResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static GetDefaultDomainResponseContent of(GetDefaultCustomDomainResponseContent value) {
-        return new GetDefaultDomainResponseContent(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static GetDefaultDomainResponseContent of(GetDefaultCanonicalDomainResponseContent value) {
-        return new GetDefaultDomainResponseContent(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(GetDefaultCustomDomainResponseContent value);
 
         T visit(GetDefaultCanonicalDomainResponseContent value);
     }
 
     static final class Deserializer extends StdDeserializer<GetDefaultDomainResponseContent> {
+
         Deserializer() {
             super(GetDefaultDomainResponseContent.class);
         }
 
         @java.lang.Override
-        public GetDefaultDomainResponseContent deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("custom_domain_id")
-                    && ((Map<?, ?>) value).containsKey("domain")
-                    && ((Map<?, ?>) value).containsKey("primary")
-                    && ((Map<?, ?>) value).containsKey("status")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, GetDefaultCustomDomainResponseContent.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("domain")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, GetDefaultCanonicalDomainResponseContent.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public GetDefaultDomainResponseContent deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

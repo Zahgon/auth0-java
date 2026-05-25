@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdSendgridEnum {
-    public static final FlowsVaultConnectionAppIdSendgridEnum SENDGRID =
-            new FlowsVaultConnectionAppIdSendgridEnum(Value.SENDGRID, "SENDGRID");
+
+    public static final FlowsVaultConnectionAppIdSendgridEnum SENDGRID = new FlowsVaultConnectionAppIdSendgridEnum(Value.SENDGRID, "SENDGRID");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdSendgridEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdSendgridEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdSendgridEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SENDGRID:
-                return visitor.visitSendgrid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdSendgridEnum valueOf(String value) {
-        switch (value) {
-            case "SENDGRID":
-                return SENDGRID;
-            default:
-                return new FlowsVaultConnectionAppIdSendgridEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SENDGRID,
 
-        UNKNOWN
+        SENDGRID, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendgrid();
 
         T visitUnknown(String unknownType);

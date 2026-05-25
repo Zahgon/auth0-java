@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionAuth0SendSmsParams.Builder.class)
 public final class FlowActionAuth0SendSmsParams {
+
     private final Optional<String> from;
 
     private final String to;
@@ -31,12 +32,7 @@ public final class FlowActionAuth0SendSmsParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionAuth0SendSmsParams(
-            Optional<String> from,
-            String to,
-            String message,
-            Optional<Map<String, Object>> customVars,
-            Map<String, Object> additionalProperties) {
+    private FlowActionAuth0SendSmsParams(Optional<String> from, String to, String message, Optional<Map<String, Object>> customVars, Map<String, Object> additionalProperties) {
         this.from = from;
         this.to = to;
         this.message = message;
@@ -46,67 +42,66 @@ public final class FlowActionAuth0SendSmsParams {
 
     @JsonProperty("from")
     public Optional<String> getFrom() {
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("to")
     public String getTo() {
-        return to;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("message")
     public String getMessage() {
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("custom_vars")
     public Optional<Map<String, Object>> getCustomVars() {
-        return customVars;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionAuth0SendSmsParams && equalTo((FlowActionAuth0SendSmsParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionAuth0SendSmsParams other) {
-        return from.equals(other.from)
-                && to.equals(other.to)
-                && message.equals(other.message)
-                && customVars.equals(other.customVars);
+        return from.equals(other.from) && to.equals(other.to) && message.equals(other.message) && customVars.equals(other.customVars);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.from, this.to, this.message, this.customVars);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ToStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ToStage {
+
         MessageStage to(@NotNull String to);
 
         Builder from(FlowActionAuth0SendSmsParams other);
     }
 
     public interface MessageStage {
+
         _FinalStage message(@NotNull String message);
     }
 
     public interface _FinalStage {
+
         FlowActionAuth0SendSmsParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +119,7 @@ public final class FlowActionAuth0SendSmsParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ToStage, MessageStage, _FinalStage {
+
         private String to;
 
         private String message;
@@ -135,72 +131,61 @@ public final class FlowActionAuth0SendSmsParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionAuth0SendSmsParams other) {
-            from(other.getFrom());
-            to(other.getTo());
-            message(other.getMessage());
-            customVars(other.getCustomVars());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("to")
         public MessageStage to(@NotNull String to) {
-            this.to = Objects.requireNonNull(to, "to must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("message")
         public _FinalStage message(@NotNull String message) {
-            this.message = Objects.requireNonNull(message, "message must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customVars(Map<String, Object> customVars) {
-            this.customVars = Optional.ofNullable(customVars);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "custom_vars", nulls = Nulls.SKIP)
         public _FinalStage customVars(Optional<Map<String, Object>> customVars) {
-            this.customVars = customVars;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage from(String from) {
-            this.from = Optional.ofNullable(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public _FinalStage from(Optional<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionAuth0SendSmsParams build() {
-            return new FlowActionAuth0SendSmsParams(from, to, message, customVars, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

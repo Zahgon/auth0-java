@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionAttributeMapOkta.Builder.class)
 public final class ConnectionAttributeMapOkta {
+
     private final Optional<Map<String, Object>> attributes;
 
     private final Optional<ConnectionMappingModeEnumOkta> mappingMode;
@@ -28,11 +29,7 @@ public final class ConnectionAttributeMapOkta {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionAttributeMapOkta(
-            Optional<Map<String, Object>> attributes,
-            Optional<ConnectionMappingModeEnumOkta> mappingMode,
-            Optional<String> userinfoScope,
-            Map<String, Object> additionalProperties) {
+    private ConnectionAttributeMapOkta(Optional<Map<String, Object>> attributes, Optional<ConnectionMappingModeEnumOkta> mappingMode, Optional<String> userinfoScope, Map<String, Object> additionalProperties) {
         this.attributes = attributes;
         this.mappingMode = mappingMode;
         this.userinfoScope = userinfoScope;
@@ -41,52 +38,50 @@ public final class ConnectionAttributeMapOkta {
 
     @JsonProperty("attributes")
     public Optional<Map<String, Object>> getAttributes() {
-        return attributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mapping_mode")
     public Optional<ConnectionMappingModeEnumOkta> getMappingMode() {
-        return mappingMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_scope")
     public Optional<String> getUserinfoScope() {
-        return userinfoScope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionAttributeMapOkta && equalTo((ConnectionAttributeMapOkta) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionAttributeMapOkta other) {
-        return attributes.equals(other.attributes)
-                && mappingMode.equals(other.mappingMode)
-                && userinfoScope.equals(other.userinfoScope);
+        return attributes.equals(other.attributes) && mappingMode.equals(other.mappingMode) && userinfoScope.equals(other.userinfoScope);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.attributes, this.mappingMode, this.userinfoScope);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Map<String, Object>> attributes = Optional.empty();
 
         private Optional<ConnectionMappingModeEnumOkta> mappingMode = Optional.empty();
@@ -96,60 +91,50 @@ public final class ConnectionAttributeMapOkta {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionAttributeMapOkta other) {
-            attributes(other.getAttributes());
-            mappingMode(other.getMappingMode());
-            userinfoScope(other.getUserinfoScope());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "attributes", nulls = Nulls.SKIP)
         public Builder attributes(Optional<Map<String, Object>> attributes) {
-            this.attributes = attributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder attributes(Map<String, Object> attributes) {
-            this.attributes = Optional.ofNullable(attributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mapping_mode", nulls = Nulls.SKIP)
         public Builder mappingMode(Optional<ConnectionMappingModeEnumOkta> mappingMode) {
-            this.mappingMode = mappingMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mappingMode(ConnectionMappingModeEnumOkta mappingMode) {
-            this.mappingMode = Optional.ofNullable(mappingMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "userinfo_scope", nulls = Nulls.SKIP)
         public Builder userinfoScope(Optional<String> userinfoScope) {
-            this.userinfoScope = userinfoScope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userinfoScope(String userinfoScope) {
-            this.userinfoScope = Optional.ofNullable(userinfoScope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionAttributeMapOkta build() {
-            return new ConnectionAttributeMapOkta(attributes, mappingMode, userinfoScope, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

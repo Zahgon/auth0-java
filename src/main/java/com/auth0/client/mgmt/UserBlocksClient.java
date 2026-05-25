@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.ListUserBlocksRequestParameters;
 import com.auth0.client.mgmt.types.ListUserBlocksResponseContent;
 
 public class UserBlocksClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUserBlocksClient rawClient;
@@ -25,23 +26,21 @@ public class UserBlocksClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUserBlocksClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for a user with the given identifier (username, phone number, or email).
      */
-    public ListUserBlocksByIdentifierResponseContent listByIdentifier(
-            ListUserBlocksByIdentifierRequestParameters request) {
-        return this.rawClient.listByIdentifier(request).body();
+    public ListUserBlocksByIdentifierResponseContent listByIdentifier(ListUserBlocksByIdentifierRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for a user with the given identifier (username, phone number, or email).
      */
-    public ListUserBlocksByIdentifierResponseContent listByIdentifier(
-            ListUserBlocksByIdentifierRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.listByIdentifier(request, requestOptions).body();
+    public ListUserBlocksByIdentifierResponseContent listByIdentifier(ListUserBlocksByIdentifierRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,45 +48,43 @@ public class UserBlocksClient {
      * <p>Note: This endpoint does not unblock users that were <a href="https://auth0.com/docs/user-profile#block-and-unblock-a-user">blocked by a tenant administrator</a>.</p>
      */
     public void deleteByIdentifier(DeleteUserBlocksByIdentifierRequestParameters request) {
-        this.rawClient.deleteByIdentifier(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for the user with the given identifier (username, phone number, or email).
      * <p>Note: This endpoint does not unblock users that were <a href="https://auth0.com/docs/user-profile#block-and-unblock-a-user">blocked by a tenant administrator</a>.</p>
      */
-    public void deleteByIdentifier(
-            DeleteUserBlocksByIdentifierRequestParameters request, RequestOptions requestOptions) {
-        this.rawClient.deleteByIdentifier(request, requestOptions).body();
+    public void deleteByIdentifier(DeleteUserBlocksByIdentifierRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for the user with the given ID.
      */
     public ListUserBlocksResponseContent list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for the user with the given ID.
      */
     public ListUserBlocksResponseContent list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for the user with the given ID.
      */
     public ListUserBlocksResponseContent list(String id, ListUserBlocksRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/attack-protection/brute-force-protection">Brute-force Protection</a> blocks for the user with the given ID.
      */
-    public ListUserBlocksResponseContent list(
-            String id, ListUserBlocksRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public ListUserBlocksResponseContent list(String id, ListUserBlocksRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,7 +92,7 @@ public class UserBlocksClient {
      * <p>Note: This endpoint does not unblock users that were <a href="https://auth0.com/docs/user-profile#block-and-unblock-a-user">blocked by a tenant administrator</a>.</p>
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,6 +100,6 @@ public class UserBlocksClient {
      * <p>Note: This endpoint does not unblock users that were <a href="https://auth0.com/docs/user-profile#block-and-unblock-a-user">blocked by a tenant administrator</a>.</p>
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

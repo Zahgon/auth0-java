@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldChoiceConfigOption.Builder.class)
 public final class FormFieldChoiceConfigOption {
+
     private final String value;
 
     private final String label;
@@ -33,23 +34,22 @@ public final class FormFieldChoiceConfigOption {
 
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("label")
     public String getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldChoiceConfigOption && equalTo((FormFieldChoiceConfigOption) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldChoiceConfigOption other) {
@@ -58,29 +58,32 @@ public final class FormFieldChoiceConfigOption {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value, this.label);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ValueStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ValueStage {
+
         LabelStage value(@NotNull String value);
 
         Builder from(FormFieldChoiceConfigOption other);
     }
 
     public interface LabelStage {
+
         _FinalStage label(@NotNull String label);
     }
 
     public interface _FinalStage {
+
         FormFieldChoiceConfigOption build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -90,6 +93,7 @@ public final class FormFieldChoiceConfigOption {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ValueStage, LabelStage, _FinalStage {
+
         private String value;
 
         private String label;
@@ -97,44 +101,39 @@ public final class FormFieldChoiceConfigOption {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldChoiceConfigOption other) {
-            value(other.getValue());
-            label(other.getLabel());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("value")
         public LabelStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("label")
         public _FinalStage label(@NotNull String label) {
-            this.label = Objects.requireNonNull(label, "label must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldChoiceConfigOption build() {
-            return new FormFieldChoiceConfigOption(value, label, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

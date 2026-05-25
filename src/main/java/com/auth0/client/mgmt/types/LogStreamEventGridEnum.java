@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamEventGridEnum {
+
     public static final LogStreamEventGridEnum EVENTGRID = new LogStreamEventGridEnum(Value.EVENTGRID, "eventgrid");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class LogStreamEventGridEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamEventGridEnum
-                        && this.string.equals(((LogStreamEventGridEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EVENTGRID:
-                return visitor.visitEventgrid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamEventGridEnum valueOf(String value) {
-        switch (value) {
-            case "eventgrid":
-                return EVENTGRID;
-            default:
-                return new LogStreamEventGridEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EVENTGRID,
 
-        UNKNOWN
+        EVENTGRID, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEventgrid();
 
         T visitUnknown(String unknownType);

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RevokeRefreshTokensRequestContent.Builder.class)
 public final class RevokeRefreshTokensRequestContent {
+
     private final Optional<List<String>> ids;
 
     private final Optional<String> userId;
@@ -31,12 +32,7 @@ public final class RevokeRefreshTokensRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private RevokeRefreshTokensRequestContent(
-            Optional<List<String>> ids,
-            Optional<String> userId,
-            Optional<String> clientId,
-            Optional<String> audience,
-            Map<String, Object> additionalProperties) {
+    private RevokeRefreshTokensRequestContent(Optional<List<String>> ids, Optional<String> userId, Optional<String> clientId, Optional<String> audience, Map<String, Object> additionalProperties) {
         this.ids = ids;
         this.userId = userId;
         this.clientId = clientId;
@@ -49,7 +45,7 @@ public final class RevokeRefreshTokensRequestContent {
      */
     @JsonProperty("ids")
     public Optional<List<String>> getIds() {
-        return ids;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class RevokeRefreshTokensRequestContent {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +61,7 @@ public final class RevokeRefreshTokensRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,43 +69,40 @@ public final class RevokeRefreshTokensRequestContent {
      */
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RevokeRefreshTokensRequestContent && equalTo((RevokeRefreshTokensRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RevokeRefreshTokensRequestContent other) {
-        return ids.equals(other.ids)
-                && userId.equals(other.userId)
-                && clientId.equals(other.clientId)
-                && audience.equals(other.audience);
+        return ids.equals(other.ids) && userId.equals(other.userId) && clientId.equals(other.clientId) && audience.equals(other.audience);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ids, this.userId, this.clientId, this.audience);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> ids = Optional.empty();
 
         private Optional<String> userId = Optional.empty();
@@ -121,14 +114,11 @@ public final class RevokeRefreshTokensRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RevokeRefreshTokensRequestContent other) {
-            ids(other.getIds());
-            userId(other.getUserId());
-            clientId(other.getClientId());
-            audience(other.getAudience());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -136,13 +126,11 @@ public final class RevokeRefreshTokensRequestContent {
          */
         @JsonSetter(value = "ids", nulls = Nulls.SKIP)
         public Builder ids(Optional<List<String>> ids) {
-            this.ids = ids;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ids(List<String> ids) {
-            this.ids = Optional.ofNullable(ids);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,13 +138,11 @@ public final class RevokeRefreshTokensRequestContent {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -164,13 +150,11 @@ public final class RevokeRefreshTokensRequestContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -178,27 +162,23 @@ public final class RevokeRefreshTokensRequestContent {
          */
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RevokeRefreshTokensRequestContent build() {
-            return new RevokeRefreshTokensRequestContent(ids, userId, clientId, audience, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

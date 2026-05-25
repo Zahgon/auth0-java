@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamPiiAlgorithmEnum {
+
     public static final LogStreamPiiAlgorithmEnum XXHASH = new LogStreamPiiAlgorithmEnum(Value.XXHASH, "xxhash");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class LogStreamPiiAlgorithmEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamPiiAlgorithmEnum
-                        && this.string.equals(((LogStreamPiiAlgorithmEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case XXHASH:
-                return visitor.visitXxhash();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamPiiAlgorithmEnum valueOf(String value) {
-        switch (value) {
-            case "xxhash":
-                return XXHASH;
-            default:
-                return new LogStreamPiiAlgorithmEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        XXHASH,
 
-        UNKNOWN
+        XXHASH, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitXxhash();
 
         T visitUnknown(String unknownType);

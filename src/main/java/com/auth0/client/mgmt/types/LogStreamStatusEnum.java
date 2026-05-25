@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamStatusEnum {
+
     public static final LogStreamStatusEnum SUSPENDED = new LogStreamStatusEnum(Value.SUSPENDED, "suspended");
 
     public static final LogStreamStatusEnum PAUSED = new LogStreamStatusEnum(Value.PAUSED, "paused");
@@ -23,65 +24,41 @@ public final class LogStreamStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamStatusEnum && this.string.equals(((LogStreamStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SUSPENDED:
-                return visitor.visitSuspended();
-            case PAUSED:
-                return visitor.visitPaused();
-            case ACTIVE:
-                return visitor.visitActive();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamStatusEnum valueOf(String value) {
-        switch (value) {
-            case "suspended":
-                return SUSPENDED;
-            case "paused":
-                return PAUSED;
-            case "active":
-                return ACTIVE;
-            default:
-                return new LogStreamStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ACTIVE,
 
-        PAUSED,
-
-        SUSPENDED,
-
-        UNKNOWN
+        ACTIVE, PAUSED, SUSPENDED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitActive();
 
         T visitPaused();

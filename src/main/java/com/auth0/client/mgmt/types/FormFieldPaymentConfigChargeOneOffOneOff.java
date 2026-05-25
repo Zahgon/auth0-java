@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigChargeOneOffOneOff.Builder.class)
 public final class FormFieldPaymentConfigChargeOneOffOneOff {
+
     private final FormFieldPaymentConfigChargeOneOffOneOffAmount amount;
 
     private final FormFieldPaymentConfigChargeOneOffCurrencyEnum currency;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigChargeOneOffOneOff(
-            FormFieldPaymentConfigChargeOneOffOneOffAmount amount,
-            FormFieldPaymentConfigChargeOneOffCurrencyEnum currency,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigChargeOneOffOneOff(FormFieldPaymentConfigChargeOneOffOneOffAmount amount, FormFieldPaymentConfigChargeOneOffCurrencyEnum currency, Map<String, Object> additionalProperties) {
         this.amount = amount;
         this.currency = currency;
         this.additionalProperties = additionalProperties;
@@ -36,24 +34,22 @@ public final class FormFieldPaymentConfigChargeOneOffOneOff {
 
     @JsonProperty("amount")
     public FormFieldPaymentConfigChargeOneOffOneOffAmount getAmount() {
-        return amount;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("currency")
     public FormFieldPaymentConfigChargeOneOffCurrencyEnum getCurrency() {
-        return currency;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigChargeOneOffOneOff
-                && equalTo((FormFieldPaymentConfigChargeOneOffOneOff) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigChargeOneOffOneOff other) {
@@ -62,29 +58,32 @@ public final class FormFieldPaymentConfigChargeOneOffOneOff {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.amount, this.currency);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AmountStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AmountStage {
+
         CurrencyStage amount(@NotNull FormFieldPaymentConfigChargeOneOffOneOffAmount amount);
 
         Builder from(FormFieldPaymentConfigChargeOneOffOneOff other);
     }
 
     public interface CurrencyStage {
+
         _FinalStage currency(@NotNull FormFieldPaymentConfigChargeOneOffCurrencyEnum currency);
     }
 
     public interface _FinalStage {
+
         FormFieldPaymentConfigChargeOneOffOneOff build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -94,6 +93,7 @@ public final class FormFieldPaymentConfigChargeOneOffOneOff {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AmountStage, CurrencyStage, _FinalStage {
+
         private FormFieldPaymentConfigChargeOneOffOneOffAmount amount;
 
         private FormFieldPaymentConfigChargeOneOffCurrencyEnum currency;
@@ -101,44 +101,39 @@ public final class FormFieldPaymentConfigChargeOneOffOneOff {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldPaymentConfigChargeOneOffOneOff other) {
-            amount(other.getAmount());
-            currency(other.getCurrency());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("amount")
         public CurrencyStage amount(@NotNull FormFieldPaymentConfigChargeOneOffOneOffAmount amount) {
-            this.amount = Objects.requireNonNull(amount, "amount must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("currency")
         public _FinalStage currency(@NotNull FormFieldPaymentConfigChargeOneOffCurrencyEnum currency) {
-            this.currency = Objects.requireNonNull(currency, "currency must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldPaymentConfigChargeOneOffOneOff build() {
-            return new FormFieldPaymentConfigChargeOneOffOneOff(amount, currency, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

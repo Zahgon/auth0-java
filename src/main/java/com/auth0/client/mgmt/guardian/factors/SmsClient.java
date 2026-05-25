@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.SetGuardianFactorsProviderSmsResponseContent;
 import com.auth0.client.mgmt.types.SetGuardianFactorsProviderSmsTwilioResponseContent;
 
 public class SmsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSmsClient rawClient;
@@ -29,7 +30,7 @@ public class SmsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSmsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -38,7 +39,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorsProviderSmsTwilioResponseContent getTwilioProvider() {
-        return this.rawClient.getTwilioProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,7 +48,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorsProviderSmsTwilioResponseContent getTwilioProvider(RequestOptions requestOptions) {
-        return this.rawClient.getTwilioProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +57,7 @@ public class SmsClient {
      * </code></pre>
      */
     public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider() {
-        return this.rawClient.setTwilioProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +66,7 @@ public class SmsClient {
      * </code></pre>
      */
     public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider(RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,9 +74,8 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Update the Twilio SMS provider configuration.
      * </code></pre>
      */
-    public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider(
-            SetGuardianFactorsProviderSmsTwilioRequestContent request) {
-        return this.rawClient.setTwilioProvider(request).body();
+    public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider(SetGuardianFactorsProviderSmsTwilioRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,9 +83,8 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Update the Twilio SMS provider configuration.
      * </code></pre>
      */
-    public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider(
-            SetGuardianFactorsProviderSmsTwilioRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(request, requestOptions).body();
+    public SetGuardianFactorsProviderSmsTwilioResponseContent setTwilioProvider(SetGuardianFactorsProviderSmsTwilioRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +93,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorsProviderSmsResponseContent getSelectedProvider() {
-        return this.rawClient.getSelectedProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +102,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorsProviderSmsResponseContent getSelectedProvider(RequestOptions requestOptions) {
-        return this.rawClient.getSelectedProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,9 +110,8 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Update the multi-factor authentication SMS provider configuration in your tenant.
      * </code></pre>
      */
-    public SetGuardianFactorsProviderSmsResponseContent setProvider(
-            SetGuardianFactorsProviderSmsRequestContent request) {
-        return this.rawClient.setProvider(request).body();
+    public SetGuardianFactorsProviderSmsResponseContent setProvider(SetGuardianFactorsProviderSmsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,9 +119,8 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Update the multi-factor authentication SMS provider configuration in your tenant.
      * </code></pre>
      */
-    public SetGuardianFactorsProviderSmsResponseContent setProvider(
-            SetGuardianFactorsProviderSmsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setProvider(request, requestOptions).body();
+    public SetGuardianFactorsProviderSmsResponseContent setProvider(SetGuardianFactorsProviderSmsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +129,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorSmsTemplatesResponseContent getTemplates() {
-        return this.rawClient.getTemplates().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +138,7 @@ public class SmsClient {
      * </code></pre>
      */
     public GetGuardianFactorSmsTemplatesResponseContent getTemplates(RequestOptions requestOptions) {
-        return this.rawClient.getTemplates(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -149,9 +146,8 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Customize the messages sent to complete SMS enrollment and verification.
      * </code></pre>
      */
-    public SetGuardianFactorSmsTemplatesResponseContent setTemplates(
-            SetGuardianFactorSmsTemplatesRequestContent request) {
-        return this.rawClient.setTemplates(request).body();
+    public SetGuardianFactorSmsTemplatesResponseContent setTemplates(SetGuardianFactorSmsTemplatesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -159,8 +155,7 @@ public class SmsClient {
      * <pre><code><b>Previous functionality</b>: Customize the messages sent to complete SMS enrollment and verification.
      * </code></pre>
      */
-    public SetGuardianFactorSmsTemplatesResponseContent setTemplates(
-            SetGuardianFactorSmsTemplatesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTemplates(request, requestOptions).body();
+    public SetGuardianFactorSmsTemplatesResponseContent setTemplates(SetGuardianFactorSmsTemplatesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

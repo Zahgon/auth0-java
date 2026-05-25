@@ -24,6 +24,7 @@ import com.auth0.client.mgmt.types.UpdateOrganizationResponseContent;
 import java.util.function.Supplier;
 
 public class OrganizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawOrganizationsClient rawClient;
@@ -55,7 +56,7 @@ public class OrganizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawOrganizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +76,7 @@ public class OrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<Organization> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,7 +96,7 @@ public class OrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<Organization> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +116,7 @@ public class OrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<Organization> list(ListOrganizationsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -134,52 +135,50 @@ public class OrganizationsClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public SyncPagingIterable<Organization> list(
-            ListOrganizationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<Organization> list(ListOrganizationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Organization within your tenant.  To learn more about Organization settings, behavior, and configuration options, review <a href="https://auth0.com/docs/manage-users/organizations/create-first-organization">Create Your First Organization</a>.
      */
     public CreateOrganizationResponseContent create(CreateOrganizationRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Organization within your tenant.  To learn more about Organization settings, behavior, and configuration options, review <a href="https://auth0.com/docs/manage-users/organizations/create-first-organization">Create Your First Organization</a>.
      */
-    public CreateOrganizationResponseContent create(
-            CreateOrganizationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateOrganizationResponseContent create(CreateOrganizationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by name.
      */
     public GetOrganizationByNameResponseContent getByName(String name) {
-        return this.rawClient.getByName(name).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by name.
      */
     public GetOrganizationByNameResponseContent getByName(String name, RequestOptions requestOptions) {
-        return this.rawClient.getByName(name, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by ID.
      */
     public GetOrganizationResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by ID.
      */
     public GetOrganizationResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -187,7 +186,7 @@ public class OrganizationsClient {
      * <p><b>Note</b>: Members are automatically disassociated from an Organization when it is deleted. However, this action does <b>not</b> delete these users from your tenant.</p>
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -195,59 +194,58 @@ public class OrganizationsClient {
      * <p><b>Note</b>: Members are automatically disassociated from an Organization when it is deleted. However, this action does <b>not</b> delete these users from your tenant.</p>
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
     public UpdateOrganizationResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
     public UpdateOrganizationResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
     public UpdateOrganizationResponseContent update(String id, UpdateOrganizationRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
-    public UpdateOrganizationResponseContent update(
-            String id, UpdateOrganizationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateOrganizationResponseContent update(String id, UpdateOrganizationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ClientGrantsClient clientGrants() {
-        return this.clientGrantsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public DiscoveryDomainsClient discoveryDomains() {
-        return this.discoveryDomainsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EnabledConnectionsClient enabledConnections() {
-        return this.enabledConnectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public InvitationsClient invitations() {
-        return this.invitationsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MembersClient members() {
-        return this.membersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

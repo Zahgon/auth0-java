@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionClearbitFindPersonAction {
-    public static final FlowActionClearbitFindPersonAction FIND_PERSON =
-            new FlowActionClearbitFindPersonAction(Value.FIND_PERSON, "FIND_PERSON");
+
+    public static final FlowActionClearbitFindPersonAction FIND_PERSON = new FlowActionClearbitFindPersonAction(Value.FIND_PERSON, "FIND_PERSON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionClearbitFindPersonAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionClearbitFindPersonAction
-                        && this.string.equals(((FlowActionClearbitFindPersonAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FIND_PERSON:
-                return visitor.visitFindPerson();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionClearbitFindPersonAction valueOf(String value) {
-        switch (value) {
-            case "FIND_PERSON":
-                return FIND_PERSON;
-            default:
-                return new FlowActionClearbitFindPersonAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FIND_PERSON,
 
-        UNKNOWN
+        FIND_PERSON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFindPerson();
 
         T visitUnknown(String unknownType);

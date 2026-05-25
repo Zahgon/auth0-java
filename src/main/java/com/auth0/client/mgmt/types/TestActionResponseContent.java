@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TestActionResponseContent.Builder.class)
 public final class TestActionResponseContent {
+
     private final Optional<Map<String, Object>> payload;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class TestActionResponseContent {
 
     @JsonProperty("payload")
     public Optional<Map<String, Object>> getPayload() {
-        return payload;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TestActionResponseContent && equalTo((TestActionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TestActionResponseContent other) {
@@ -51,55 +51,52 @@ public final class TestActionResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.payload);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Map<String, Object>> payload = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TestActionResponseContent other) {
-            payload(other.getPayload());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "payload", nulls = Nulls.SKIP)
         public Builder payload(Optional<Map<String, Object>> payload) {
-            this.payload = payload;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder payload(Map<String, Object> payload) {
-            this.payload = Optional.ofNullable(payload);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TestActionResponseContent build() {
-            return new TestActionResponseContent(payload, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncTriggersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTriggersClient rawClient;
@@ -28,24 +29,24 @@ public class AsyncTriggersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTriggersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the set of triggers currently available within actions. A trigger is an extensibility point to which actions can be bound.
      */
     public CompletableFuture<ListActionTriggersResponseContent> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the set of triggers currently available within actions. A trigger is an extensibility point to which actions can be bound.
      */
     public CompletableFuture<ListActionTriggersResponseContent> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncBindingsClient bindings() {
-        return this.bindingsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

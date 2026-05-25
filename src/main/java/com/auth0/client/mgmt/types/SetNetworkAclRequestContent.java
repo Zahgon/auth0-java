@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetNetworkAclRequestContent.Builder.class)
 public final class SetNetworkAclRequestContent {
+
     private final String description;
 
     private final boolean active;
@@ -31,12 +32,7 @@ public final class SetNetworkAclRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private SetNetworkAclRequestContent(
-            String description,
-            boolean active,
-            Optional<Double> priority,
-            NetworkAclRule rule,
-            Map<String, Object> additionalProperties) {
+    private SetNetworkAclRequestContent(String description, boolean active, Optional<Double> priority, NetworkAclRule rule, Map<String, Object> additionalProperties) {
         this.description = description;
         this.active = active;
         this.priority = priority;
@@ -46,7 +42,7 @@ public final class SetNetworkAclRequestContent {
 
     @JsonProperty("description")
     public String getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +50,7 @@ public final class SetNetworkAclRequestContent {
      */
     @JsonProperty("active")
     public boolean getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,53 +58,51 @@ public final class SetNetworkAclRequestContent {
      */
     @JsonProperty("priority")
     public Optional<Double> getPriority() {
-        return priority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("rule")
     public NetworkAclRule getRule() {
-        return rule;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetNetworkAclRequestContent && equalTo((SetNetworkAclRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetNetworkAclRequestContent other) {
-        return description.equals(other.description)
-                && active == other.active
-                && priority.equals(other.priority)
-                && rule.equals(other.rule);
+        return description.equals(other.description) && active == other.active && priority.equals(other.priority) && rule.equals(other.rule);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.description, this.active, this.priority, this.rule);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DescriptionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DescriptionStage {
+
         ActiveStage description(@NotNull String description);
 
         Builder from(SetNetworkAclRequestContent other);
     }
 
     public interface ActiveStage {
+
         /**
          * <p>Indicates whether or not this access control list is actively being used</p>
          */
@@ -116,10 +110,12 @@ public final class SetNetworkAclRequestContent {
     }
 
     public interface RuleStage {
+
         _FinalStage rule(@NotNull NetworkAclRule rule);
     }
 
     public interface _FinalStage {
+
         SetNetworkAclRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -136,6 +132,7 @@ public final class SetNetworkAclRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DescriptionStage, ActiveStage, RuleStage, _FinalStage {
+
         private String description;
 
         private boolean active;
@@ -147,22 +144,18 @@ public final class SetNetworkAclRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SetNetworkAclRequestContent other) {
-            description(other.getDescription());
-            active(other.getActive());
-            priority(other.getPriority());
-            rule(other.getRule());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("description")
         public ActiveStage description(@NotNull String description) {
-            this.description = Objects.requireNonNull(description, "description must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -173,15 +166,13 @@ public final class SetNetworkAclRequestContent {
         @java.lang.Override
         @JsonSetter("active")
         public RuleStage active(boolean active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("rule")
         public _FinalStage rule(@NotNull NetworkAclRule rule) {
-            this.rule = Objects.requireNonNull(rule, "rule must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -190,8 +181,7 @@ public final class SetNetworkAclRequestContent {
          */
         @java.lang.Override
         public _FinalStage priority(Double priority) {
-            this.priority = Optional.ofNullable(priority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -200,25 +190,22 @@ public final class SetNetworkAclRequestContent {
         @java.lang.Override
         @JsonSetter(value = "priority", nulls = Nulls.SKIP)
         public _FinalStage priority(Optional<Double> priority) {
-            this.priority = priority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SetNetworkAclRequestContent build() {
-            return new SetNetworkAclRequestContent(description, active, priority, rule, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateLogStreamRequestContent.Deserializer.class)
 public final class CreateLogStreamRequestContent {
+
     private final Object value;
 
     private final int type;
@@ -27,35 +28,17 @@ public final class CreateLogStreamRequestContent {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateLogStreamHttpRequestBody) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateLogStreamEventBridgeRequestBody) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((CreateLogStreamEventGridRequestBody) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((CreateLogStreamDatadogRequestBody) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((CreateLogStreamSplunkRequestBody) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((CreateLogStreamSumoRequestBody) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((CreateLogStreamSegmentRequestBody) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((CreateLogStreamMixpanelRequestBody) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateLogStreamRequestContent && equalTo((CreateLogStreamRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateLogStreamRequestContent other) {
@@ -64,47 +47,48 @@ public final class CreateLogStreamRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamHttpRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamEventBridgeRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamEventGridRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamDatadogRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamSplunkRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamSumoRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamSegmentRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateLogStreamRequestContent of(CreateLogStreamMixpanelRequestBody value) {
-        return new CreateLogStreamRequestContent(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateLogStreamHttpRequestBody value);
 
         T visit(CreateLogStreamEventBridgeRequestBody value);
@@ -123,80 +107,14 @@ public final class CreateLogStreamRequestContent {
     }
 
     static final class Deserializer extends StdDeserializer<CreateLogStreamRequestContent> {
+
         Deserializer() {
             super(CreateLogStreamRequestContent.class);
         }
 
         @java.lang.Override
-        public CreateLogStreamRequestContent deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamHttpRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamEventBridgeRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamEventGridRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamDatadogRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamSplunkRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamSumoRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamSegmentRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("sink")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateLogStreamMixpanelRequestBody.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateLogStreamRequestContent deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

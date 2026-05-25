@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventUserDeletedObject.Builder.class)
 public final class EventStreamCloudEventUserDeletedObject {
+
     private final String userId;
 
     private final Optional<String> email;
@@ -70,30 +71,7 @@ public final class EventStreamCloudEventUserDeletedObject {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventUserDeletedObject(
-            String userId,
-            Optional<String> email,
-            Optional<Boolean> emailVerified,
-            Optional<String> username,
-            Optional<String> phoneNumber,
-            Optional<Boolean> phoneVerified,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            List<EventStreamCloudEventUserDeletedObjectIdentitiesItem> identities,
-            Optional<Map<String, Object>> appMetadata,
-            Optional<Map<String, Object>> userMetadata,
-            Optional<String> picture,
-            Optional<String> name,
-            Optional<String> nickname,
-            Optional<List<String>> multifactor,
-            Optional<String> lastIp,
-            Optional<OffsetDateTime> lastLogin,
-            Optional<Integer> loginsCount,
-            Optional<Boolean> blocked,
-            Optional<String> givenName,
-            Optional<String> familyName,
-            OffsetDateTime deletedAt,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventUserDeletedObject(String userId, Optional<String> email, Optional<Boolean> emailVerified, Optional<String> username, Optional<String> phoneNumber, Optional<Boolean> phoneVerified, OffsetDateTime createdAt, OffsetDateTime updatedAt, List<EventStreamCloudEventUserDeletedObjectIdentitiesItem> identities, Optional<Map<String, Object>> appMetadata, Optional<Map<String, Object>> userMetadata, Optional<String> picture, Optional<String> name, Optional<String> nickname, Optional<List<String>> multifactor, Optional<String> lastIp, Optional<OffsetDateTime> lastLogin, Optional<Integer> loginsCount, Optional<Boolean> blocked, Optional<String> givenName, Optional<String> familyName, OffsetDateTime deletedAt, Map<String, Object> additionalProperties) {
         this.userId = userId;
         this.email = email;
         this.emailVerified = emailVerified;
@@ -124,7 +102,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("user_id")
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +110,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,7 +118,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("email_verified")
     public Optional<Boolean> getEmailVerified() {
-        return emailVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +126,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("username")
     public Optional<String> getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,7 +134,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("phone_number")
     public Optional<String> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -164,7 +142,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("phone_verified")
     public Optional<Boolean> getPhoneVerified() {
-        return phoneVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,7 +150,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -180,7 +158,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -188,17 +166,17 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("identities")
     public List<EventStreamCloudEventUserDeletedObjectIdentitiesItem> getIdentities() {
-        return identities;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_metadata")
     public Optional<Map<String, Object>> getAppMetadata() {
-        return appMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_metadata")
     public Optional<Map<String, Object>> getUserMetadata() {
-        return userMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -206,7 +184,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("picture")
     public Optional<String> getPicture() {
-        return picture;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -214,7 +192,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -222,7 +200,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("nickname")
     public Optional<String> getNickname() {
-        return nickname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -230,7 +208,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("multifactor")
     public Optional<List<String>> getMultifactor() {
-        return multifactor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -238,7 +216,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("last_ip")
     public Optional<String> getLastIp() {
-        return lastIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -246,7 +224,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("last_login")
     public Optional<OffsetDateTime> getLastLogin() {
-        return lastLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -254,7 +232,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("logins_count")
     public Optional<Integer> getLoginsCount() {
-        return loginsCount;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -262,7 +240,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("blocked")
     public Optional<Boolean> getBlocked() {
-        return blocked;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -270,7 +248,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("given_name")
     public Optional<String> getGivenName() {
-        return givenName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -278,7 +256,7 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("family_name")
     public Optional<String> getFamilyName() {
-        return familyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -286,83 +264,39 @@ public final class EventStreamCloudEventUserDeletedObject {
      */
     @JsonProperty("deleted_at")
     public OffsetDateTime getDeletedAt() {
-        return deletedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventUserDeletedObject
-                && equalTo((EventStreamCloudEventUserDeletedObject) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventUserDeletedObject other) {
-        return userId.equals(other.userId)
-                && email.equals(other.email)
-                && emailVerified.equals(other.emailVerified)
-                && username.equals(other.username)
-                && phoneNumber.equals(other.phoneNumber)
-                && phoneVerified.equals(other.phoneVerified)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && identities.equals(other.identities)
-                && appMetadata.equals(other.appMetadata)
-                && userMetadata.equals(other.userMetadata)
-                && picture.equals(other.picture)
-                && name.equals(other.name)
-                && nickname.equals(other.nickname)
-                && multifactor.equals(other.multifactor)
-                && lastIp.equals(other.lastIp)
-                && lastLogin.equals(other.lastLogin)
-                && loginsCount.equals(other.loginsCount)
-                && blocked.equals(other.blocked)
-                && givenName.equals(other.givenName)
-                && familyName.equals(other.familyName)
-                && deletedAt.equals(other.deletedAt);
+        return userId.equals(other.userId) && email.equals(other.email) && emailVerified.equals(other.emailVerified) && username.equals(other.username) && phoneNumber.equals(other.phoneNumber) && phoneVerified.equals(other.phoneVerified) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && identities.equals(other.identities) && appMetadata.equals(other.appMetadata) && userMetadata.equals(other.userMetadata) && picture.equals(other.picture) && name.equals(other.name) && nickname.equals(other.nickname) && multifactor.equals(other.multifactor) && lastIp.equals(other.lastIp) && lastLogin.equals(other.lastLogin) && loginsCount.equals(other.loginsCount) && blocked.equals(other.blocked) && givenName.equals(other.givenName) && familyName.equals(other.familyName) && deletedAt.equals(other.deletedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.userId,
-                this.email,
-                this.emailVerified,
-                this.username,
-                this.phoneNumber,
-                this.phoneVerified,
-                this.createdAt,
-                this.updatedAt,
-                this.identities,
-                this.appMetadata,
-                this.userMetadata,
-                this.picture,
-                this.name,
-                this.nickname,
-                this.multifactor,
-                this.lastIp,
-                this.lastLogin,
-                this.loginsCount,
-                this.blocked,
-                this.givenName,
-                this.familyName,
-                this.deletedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UserIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UserIdStage {
+
         /**
          * <p>ID of the user which can be used when interacting with other APIs.</p>
          */
@@ -372,6 +306,7 @@ public final class EventStreamCloudEventUserDeletedObject {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>Date and time when this entity was created (ISO_8601 format).</p>
          */
@@ -379,6 +314,7 @@ public final class EventStreamCloudEventUserDeletedObject {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>Date and time when this entity was last updated/modified (ISO_8601 format).</p>
          */
@@ -386,6 +322,7 @@ public final class EventStreamCloudEventUserDeletedObject {
     }
 
     public interface DeletedAtStage {
+
         /**
          * <p>Date and time when this entity was deleted (ISO_8601 format).</p>
          */
@@ -393,6 +330,7 @@ public final class EventStreamCloudEventUserDeletedObject {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventUserDeletedObject build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -523,8 +461,8 @@ public final class EventStreamCloudEventUserDeletedObject {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements UserIdStage, CreatedAtStage, UpdatedAtStage, DeletedAtStage, _FinalStage {
+    public static final class Builder implements UserIdStage, CreatedAtStage, UpdatedAtStage, DeletedAtStage, _FinalStage {
+
         private String userId;
 
         private OffsetDateTime createdAt;
@@ -572,33 +510,12 @@ public final class EventStreamCloudEventUserDeletedObject {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventUserDeletedObject other) {
-            userId(other.getUserId());
-            email(other.getEmail());
-            emailVerified(other.getEmailVerified());
-            username(other.getUsername());
-            phoneNumber(other.getPhoneNumber());
-            phoneVerified(other.getPhoneVerified());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            identities(other.getIdentities());
-            appMetadata(other.getAppMetadata());
-            userMetadata(other.getUserMetadata());
-            picture(other.getPicture());
-            name(other.getName());
-            nickname(other.getNickname());
-            multifactor(other.getMultifactor());
-            lastIp(other.getLastIp());
-            lastLogin(other.getLastLogin());
-            loginsCount(other.getLoginsCount());
-            blocked(other.getBlocked());
-            givenName(other.getGivenName());
-            familyName(other.getFamilyName());
-            deletedAt(other.getDeletedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -609,8 +526,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter("user_id")
         public CreatedAtStage userId(@NotNull String userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -621,8 +537,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -633,8 +548,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter("updated_at")
         public DeletedAtStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -645,8 +559,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter("deleted_at")
         public _FinalStage deletedAt(@NotNull OffsetDateTime deletedAt) {
-            this.deletedAt = Objects.requireNonNull(deletedAt, "deletedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -655,8 +568,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage familyName(String familyName) {
-            this.familyName = Optional.ofNullable(familyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -665,8 +577,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "family_name", nulls = Nulls.SKIP)
         public _FinalStage familyName(Optional<String> familyName) {
-            this.familyName = familyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -675,8 +586,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage givenName(String givenName) {
-            this.givenName = Optional.ofNullable(givenName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -685,8 +595,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "given_name", nulls = Nulls.SKIP)
         public _FinalStage givenName(Optional<String> givenName) {
-            this.givenName = givenName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -695,8 +604,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage blocked(Boolean blocked) {
-            this.blocked = Optional.ofNullable(blocked);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -705,8 +613,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "blocked", nulls = Nulls.SKIP)
         public _FinalStage blocked(Optional<Boolean> blocked) {
-            this.blocked = blocked;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -715,8 +622,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage loginsCount(Integer loginsCount) {
-            this.loginsCount = Optional.ofNullable(loginsCount);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -725,8 +631,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "logins_count", nulls = Nulls.SKIP)
         public _FinalStage loginsCount(Optional<Integer> loginsCount) {
-            this.loginsCount = loginsCount;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -735,8 +640,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage lastLogin(OffsetDateTime lastLogin) {
-            this.lastLogin = Optional.ofNullable(lastLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -745,8 +649,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "last_login", nulls = Nulls.SKIP)
         public _FinalStage lastLogin(Optional<OffsetDateTime> lastLogin) {
-            this.lastLogin = lastLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -755,8 +658,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage lastIp(String lastIp) {
-            this.lastIp = Optional.ofNullable(lastIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -765,8 +667,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "last_ip", nulls = Nulls.SKIP)
         public _FinalStage lastIp(Optional<String> lastIp) {
-            this.lastIp = lastIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -775,8 +676,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage multifactor(List<String> multifactor) {
-            this.multifactor = Optional.ofNullable(multifactor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -785,8 +685,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "multifactor", nulls = Nulls.SKIP)
         public _FinalStage multifactor(Optional<List<String>> multifactor) {
-            this.multifactor = multifactor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -795,8 +694,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage nickname(String nickname) {
-            this.nickname = Optional.ofNullable(nickname);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -805,8 +703,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "nickname", nulls = Nulls.SKIP)
         public _FinalStage nickname(Optional<String> nickname) {
-            this.nickname = nickname;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -815,8 +712,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -825,8 +721,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -835,8 +730,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage picture(String picture) {
-            this.picture = Optional.ofNullable(picture);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -845,34 +739,29 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "picture", nulls = Nulls.SKIP)
         public _FinalStage picture(Optional<String> picture) {
-            this.picture = picture;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userMetadata(Map<String, Object> userMetadata) {
-            this.userMetadata = Optional.ofNullable(userMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "user_metadata", nulls = Nulls.SKIP)
         public _FinalStage userMetadata(Optional<Map<String, Object>> userMetadata) {
-            this.userMetadata = userMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage appMetadata(Map<String, Object> appMetadata) {
-            this.appMetadata = Optional.ofNullable(appMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "app_metadata", nulls = Nulls.SKIP)
         public _FinalStage appMetadata(Optional<Map<String, Object>> appMetadata) {
-            this.appMetadata = appMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -881,10 +770,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage addAllIdentities(List<EventStreamCloudEventUserDeletedObjectIdentitiesItem> identities) {
-            if (identities != null) {
-                this.identities.addAll(identities);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -893,8 +779,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage addIdentities(EventStreamCloudEventUserDeletedObjectIdentitiesItem identities) {
-            this.identities.add(identities);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -903,11 +788,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "identities", nulls = Nulls.SKIP)
         public _FinalStage identities(List<EventStreamCloudEventUserDeletedObjectIdentitiesItem> identities) {
-            this.identities.clear();
-            if (identities != null) {
-                this.identities.addAll(identities);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -916,8 +797,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage phoneVerified(Boolean phoneVerified) {
-            this.phoneVerified = Optional.ofNullable(phoneVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -926,8 +806,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "phone_verified", nulls = Nulls.SKIP)
         public _FinalStage phoneVerified(Optional<Boolean> phoneVerified) {
-            this.phoneVerified = phoneVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -936,8 +815,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage phoneNumber(String phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -946,8 +824,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public _FinalStage phoneNumber(Optional<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -956,8 +833,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage username(String username) {
-            this.username = Optional.ofNullable(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -966,8 +842,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public _FinalStage username(Optional<String> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -976,8 +851,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage emailVerified(Boolean emailVerified) {
-            this.emailVerified = Optional.ofNullable(emailVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -986,8 +860,7 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "email_verified", nulls = Nulls.SKIP)
         public _FinalStage emailVerified(Optional<Boolean> emailVerified) {
-            this.emailVerified = emailVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -996,8 +869,7 @@ public final class EventStreamCloudEventUserDeletedObject {
          */
         @java.lang.Override
         public _FinalStage email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1006,48 +878,22 @@ public final class EventStreamCloudEventUserDeletedObject {
         @java.lang.Override
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public _FinalStage email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventUserDeletedObject build() {
-            return new EventStreamCloudEventUserDeletedObject(
-                    userId,
-                    email,
-                    emailVerified,
-                    username,
-                    phoneNumber,
-                    phoneVerified,
-                    createdAt,
-                    updatedAt,
-                    identities,
-                    appMetadata,
-                    userMetadata,
-                    picture,
-                    name,
-                    nickname,
-                    multifactor,
-                    lastIp,
-                    lastLogin,
-                    loginsCount,
-                    blocked,
-                    givenName,
-                    familyName,
-                    deletedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

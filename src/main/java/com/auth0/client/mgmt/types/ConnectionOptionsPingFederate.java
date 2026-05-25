@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsPingFederate.Builder.class)
 public final class ConnectionOptionsPingFederate implements IConnectionOptionsCommonSaml, IConnectionOptionsCommon {
+
     private final Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings;
 
     private final Optional<String> cert;
@@ -55,8 +56,7 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
 
     private final Optional<List<String>> thumbprints;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<List<String>> nonPersistentAttrs;
 
@@ -66,27 +66,7 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsPingFederate(
-            Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings,
-            Optional<String> cert,
-            Optional<ConnectionDecryptionKeySaml> decryptionKey,
-            Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm,
-            Optional<List<String>> domainAliases,
-            Optional<String> entityId,
-            Optional<String> iconUrl,
-            Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated,
-            Optional<ConnectionProtocolBindingEnumSaml> protocolBinding,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> signInEndpoint,
-            Optional<Boolean> signSamlRequest,
-            Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm,
-            Optional<String> tenantDomain,
-            Optional<List<String>> thumbprints,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<List<String>> nonPersistentAttrs,
-            String pingFederateBaseUrl,
-            Optional<String> signingCert,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsPingFederate(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings, Optional<String> cert, Optional<ConnectionDecryptionKeySaml> decryptionKey, Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm, Optional<List<String>> domainAliases, Optional<String> entityId, Optional<String> iconUrl, Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated, Optional<ConnectionProtocolBindingEnumSaml> protocolBinding, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> signInEndpoint, Optional<Boolean> signSamlRequest, Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm, Optional<String> tenantDomain, Optional<List<String>> thumbprints, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<List<String>> nonPersistentAttrs, String pingFederateBaseUrl, Optional<String> signingCert, Map<String, Object> additionalProperties) {
         this.assertionDecryptionSettings = assertionDecryptionSettings;
         this.cert = cert;
         this.decryptionKey = decryptionKey;
@@ -112,207 +92,166 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
     @JsonProperty("assertion_decryption_settings")
     @java.lang.Override
     public Optional<ConnectionAssertionDecryptionSettings> getAssertionDecryptionSettings() {
-        return assertionDecryptionSettings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("cert")
     @java.lang.Override
     public Optional<String> getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("decryptionKey")
     @java.lang.Override
     public Optional<ConnectionDecryptionKeySaml> getDecryptionKey() {
-        return decryptionKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("digestAlgorithm")
     @java.lang.Override
     public Optional<ConnectionDigestAlgorithmEnumSaml> getDigestAlgorithm() {
-        return digestAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     @java.lang.Override
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("entityId")
     @java.lang.Override
     public Optional<String> getEntityId() {
-        return entityId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     @java.lang.Override
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("idpinitiated")
     @java.lang.Override
     public Optional<ConnectionOptionsIdpinitiatedSaml> getIdpinitiated() {
-        return idpinitiated;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("protocolBinding")
     @java.lang.Override
     public Optional<ConnectionProtocolBindingEnumSaml> getProtocolBinding() {
-        return protocolBinding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     @java.lang.Override
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signInEndpoint")
     @java.lang.Override
     public Optional<String> getSignInEndpoint() {
-        return signInEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signSAMLRequest")
     @java.lang.Override
     public Optional<Boolean> getSignSamlRequest() {
-        return signSamlRequest;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signatureAlgorithm")
     @java.lang.Override
     public Optional<ConnectionSignatureAlgorithmEnumSaml> getSignatureAlgorithm() {
-        return signatureAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     @java.lang.Override
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("thumbprints")
     @java.lang.Override
     public Optional<List<String>> getThumbprints() {
-        return thumbprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     @java.lang.Override
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pingFederateBaseUrl")
     public String getPingFederateBaseUrl() {
-        return pingFederateBaseUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signingCert")
     public Optional<String> getSigningCert() {
-        return signingCert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsPingFederate && equalTo((ConnectionOptionsPingFederate) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsPingFederate other) {
-        return assertionDecryptionSettings.equals(other.assertionDecryptionSettings)
-                && cert.equals(other.cert)
-                && decryptionKey.equals(other.decryptionKey)
-                && digestAlgorithm.equals(other.digestAlgorithm)
-                && domainAliases.equals(other.domainAliases)
-                && entityId.equals(other.entityId)
-                && iconUrl.equals(other.iconUrl)
-                && idpinitiated.equals(other.idpinitiated)
-                && protocolBinding.equals(other.protocolBinding)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && signInEndpoint.equals(other.signInEndpoint)
-                && signSamlRequest.equals(other.signSamlRequest)
-                && signatureAlgorithm.equals(other.signatureAlgorithm)
-                && tenantDomain.equals(other.tenantDomain)
-                && thumbprints.equals(other.thumbprints)
-                && upstreamParams.equals(other.upstreamParams)
-                && nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && pingFederateBaseUrl.equals(other.pingFederateBaseUrl)
-                && signingCert.equals(other.signingCert);
+        return assertionDecryptionSettings.equals(other.assertionDecryptionSettings) && cert.equals(other.cert) && decryptionKey.equals(other.decryptionKey) && digestAlgorithm.equals(other.digestAlgorithm) && domainAliases.equals(other.domainAliases) && entityId.equals(other.entityId) && iconUrl.equals(other.iconUrl) && idpinitiated.equals(other.idpinitiated) && protocolBinding.equals(other.protocolBinding) && setUserRootAttributes.equals(other.setUserRootAttributes) && signInEndpoint.equals(other.signInEndpoint) && signSamlRequest.equals(other.signSamlRequest) && signatureAlgorithm.equals(other.signatureAlgorithm) && tenantDomain.equals(other.tenantDomain) && thumbprints.equals(other.thumbprints) && upstreamParams.equals(other.upstreamParams) && nonPersistentAttrs.equals(other.nonPersistentAttrs) && pingFederateBaseUrl.equals(other.pingFederateBaseUrl) && signingCert.equals(other.signingCert);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.assertionDecryptionSettings,
-                this.cert,
-                this.decryptionKey,
-                this.digestAlgorithm,
-                this.domainAliases,
-                this.entityId,
-                this.iconUrl,
-                this.idpinitiated,
-                this.protocolBinding,
-                this.setUserRootAttributes,
-                this.signInEndpoint,
-                this.signSamlRequest,
-                this.signatureAlgorithm,
-                this.tenantDomain,
-                this.thumbprints,
-                this.upstreamParams,
-                this.nonPersistentAttrs,
-                this.pingFederateBaseUrl,
-                this.signingCert);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PingFederateBaseUrlStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PingFederateBaseUrlStage {
+
         _FinalStage pingFederateBaseUrl(@NotNull String pingFederateBaseUrl);
 
         Builder from(ConnectionOptionsPingFederate other);
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsPingFederate build();
 
         _FinalStage additionalProperty(String key, Object value);
 
         _FinalStage additionalProperties(Map<String, Object> additionalProperties);
 
-        _FinalStage assertionDecryptionSettings(
-                Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings);
+        _FinalStage assertionDecryptionSettings(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings);
 
         _FinalStage assertionDecryptionSettings(ConnectionAssertionDecryptionSettings assertionDecryptionSettings);
 
@@ -372,21 +311,13 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
 
         _FinalStage thumbprints(List<String> thumbprints);
 
-        _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams);
+        _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
+        _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
+        _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams);
+        _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
         _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs);
 
@@ -399,14 +330,14 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PingFederateBaseUrlStage, _FinalStage {
+
         private String pingFederateBaseUrl;
 
         private Optional<String> signingCert = Optional.empty();
 
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<List<String>> thumbprints = Optional.empty();
 
@@ -441,341 +372,241 @@ public final class ConnectionOptionsPingFederate implements IConnectionOptionsCo
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsPingFederate other) {
-            assertionDecryptionSettings(other.getAssertionDecryptionSettings());
-            cert(other.getCert());
-            decryptionKey(other.getDecryptionKey());
-            digestAlgorithm(other.getDigestAlgorithm());
-            domainAliases(other.getDomainAliases());
-            entityId(other.getEntityId());
-            iconUrl(other.getIconUrl());
-            idpinitiated(other.getIdpinitiated());
-            protocolBinding(other.getProtocolBinding());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            signInEndpoint(other.getSignInEndpoint());
-            signSamlRequest(other.getSignSamlRequest());
-            signatureAlgorithm(other.getSignatureAlgorithm());
-            tenantDomain(other.getTenantDomain());
-            thumbprints(other.getThumbprints());
-            upstreamParams(other.getUpstreamParams());
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            pingFederateBaseUrl(other.getPingFederateBaseUrl());
-            signingCert(other.getSigningCert());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("pingFederateBaseUrl")
         public _FinalStage pingFederateBaseUrl(@NotNull String pingFederateBaseUrl) {
-            this.pingFederateBaseUrl =
-                    Objects.requireNonNull(pingFederateBaseUrl, "pingFederateBaseUrl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage signingCert(String signingCert) {
-            this.signingCert = Optional.ofNullable(signingCert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "signingCert", nulls = Nulls.SKIP)
         public _FinalStage signingCert(Optional<String> signingCert) {
-            this.signingCert = signingCert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage thumbprints(List<String> thumbprints) {
-            this.thumbprints = Optional.ofNullable(thumbprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "thumbprints", nulls = Nulls.SKIP)
         public _FinalStage thumbprints(Optional<List<String>> thumbprints) {
-            this.thumbprints = thumbprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public _FinalStage tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage signatureAlgorithm(ConnectionSignatureAlgorithmEnumSaml signatureAlgorithm) {
-            this.signatureAlgorithm = Optional.ofNullable(signatureAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "signatureAlgorithm", nulls = Nulls.SKIP)
         public _FinalStage signatureAlgorithm(Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm) {
-            this.signatureAlgorithm = signatureAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage signSamlRequest(Boolean signSamlRequest) {
-            this.signSamlRequest = Optional.ofNullable(signSamlRequest);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "signSAMLRequest", nulls = Nulls.SKIP)
         public _FinalStage signSamlRequest(Optional<Boolean> signSamlRequest) {
-            this.signSamlRequest = signSamlRequest;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage signInEndpoint(String signInEndpoint) {
-            this.signInEndpoint = Optional.ofNullable(signInEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "signInEndpoint", nulls = Nulls.SKIP)
         public _FinalStage signInEndpoint(Optional<String> signInEndpoint) {
-            this.signInEndpoint = signInEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public _FinalStage setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage protocolBinding(ConnectionProtocolBindingEnumSaml protocolBinding) {
-            this.protocolBinding = Optional.ofNullable(protocolBinding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "protocolBinding", nulls = Nulls.SKIP)
         public _FinalStage protocolBinding(Optional<ConnectionProtocolBindingEnumSaml> protocolBinding) {
-            this.protocolBinding = protocolBinding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage idpinitiated(ConnectionOptionsIdpinitiatedSaml idpinitiated) {
-            this.idpinitiated = Optional.ofNullable(idpinitiated);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "idpinitiated", nulls = Nulls.SKIP)
         public _FinalStage idpinitiated(Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated) {
-            this.idpinitiated = idpinitiated;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public _FinalStage iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage entityId(String entityId) {
-            this.entityId = Optional.ofNullable(entityId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "entityId", nulls = Nulls.SKIP)
         public _FinalStage entityId(Optional<String> entityId) {
-            this.entityId = entityId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public _FinalStage domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage digestAlgorithm(ConnectionDigestAlgorithmEnumSaml digestAlgorithm) {
-            this.digestAlgorithm = Optional.ofNullable(digestAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "digestAlgorithm", nulls = Nulls.SKIP)
         public _FinalStage digestAlgorithm(Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm) {
-            this.digestAlgorithm = digestAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage decryptionKey(ConnectionDecryptionKeySaml decryptionKey) {
-            this.decryptionKey = Optional.ofNullable(decryptionKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "decryptionKey", nulls = Nulls.SKIP)
         public _FinalStage decryptionKey(Optional<ConnectionDecryptionKeySaml> decryptionKey) {
-            this.decryptionKey = decryptionKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage cert(String cert) {
-            this.cert = Optional.ofNullable(cert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "cert", nulls = Nulls.SKIP)
         public _FinalStage cert(Optional<String> cert) {
-            this.cert = cert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage assertionDecryptionSettings(
-                ConnectionAssertionDecryptionSettings assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = Optional.ofNullable(assertionDecryptionSettings);
-            return this;
+        public _FinalStage assertionDecryptionSettings(ConnectionAssertionDecryptionSettings assertionDecryptionSettings) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "assertion_decryption_settings", nulls = Nulls.SKIP)
-        public _FinalStage assertionDecryptionSettings(
-                Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = assertionDecryptionSettings;
-            return this;
+        public _FinalStage assertionDecryptionSettings(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsPingFederate build() {
-            return new ConnectionOptionsPingFederate(
-                    assertionDecryptionSettings,
-                    cert,
-                    decryptionKey,
-                    digestAlgorithm,
-                    domainAliases,
-                    entityId,
-                    iconUrl,
-                    idpinitiated,
-                    protocolBinding,
-                    setUserRootAttributes,
-                    signInEndpoint,
-                    signSamlRequest,
-                    signatureAlgorithm,
-                    tenantDomain,
-                    thumbprints,
-                    upstreamParams,
-                    nonPersistentAttrs,
-                    pingFederateBaseUrl,
-                    signingCert,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

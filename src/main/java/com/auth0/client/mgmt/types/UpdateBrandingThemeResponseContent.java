@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBrandingThemeResponseContent.Builder.class)
 public final class UpdateBrandingThemeResponseContent {
+
     private final BrandingThemeBorders borders;
 
     private final BrandingThemeColors colors;
@@ -35,15 +36,7 @@ public final class UpdateBrandingThemeResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBrandingThemeResponseContent(
-            BrandingThemeBorders borders,
-            BrandingThemeColors colors,
-            String displayName,
-            BrandingThemeFonts fonts,
-            BrandingThemePageBackground pageBackground,
-            String themeId,
-            BrandingThemeWidget widget,
-            Map<String, Object> additionalProperties) {
+    private UpdateBrandingThemeResponseContent(BrandingThemeBorders borders, BrandingThemeColors colors, String displayName, BrandingThemeFonts fonts, BrandingThemePageBackground pageBackground, String themeId, BrandingThemeWidget widget, Map<String, Object> additionalProperties) {
         this.borders = borders;
         this.colors = colors;
         this.displayName = displayName;
@@ -56,12 +49,12 @@ public final class UpdateBrandingThemeResponseContent {
 
     @JsonProperty("borders")
     public BrandingThemeBorders getBorders() {
-        return borders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("colors")
     public BrandingThemeColors getColors() {
-        return colors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,17 +62,17 @@ public final class UpdateBrandingThemeResponseContent {
      */
     @JsonProperty("displayName")
     public String getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fonts")
     public BrandingThemeFonts getFonts() {
-        return fonts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("page_background")
     public BrandingThemePageBackground getPageBackground() {
-        return pageBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,68 +80,56 @@ public final class UpdateBrandingThemeResponseContent {
      */
     @JsonProperty("themeId")
     public String getThemeId() {
-        return themeId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("widget")
     public BrandingThemeWidget getWidget() {
-        return widget;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBrandingThemeResponseContent
-                && equalTo((UpdateBrandingThemeResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBrandingThemeResponseContent other) {
-        return borders.equals(other.borders)
-                && colors.equals(other.colors)
-                && displayName.equals(other.displayName)
-                && fonts.equals(other.fonts)
-                && pageBackground.equals(other.pageBackground)
-                && themeId.equals(other.themeId)
-                && widget.equals(other.widget);
+        return borders.equals(other.borders) && colors.equals(other.colors) && displayName.equals(other.displayName) && fonts.equals(other.fonts) && pageBackground.equals(other.pageBackground) && themeId.equals(other.themeId) && widget.equals(other.widget);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.borders,
-                this.colors,
-                this.displayName,
-                this.fonts,
-                this.pageBackground,
-                this.themeId,
-                this.widget);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BordersStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BordersStage {
+
         ColorsStage borders(@NotNull BrandingThemeBorders borders);
 
         Builder from(UpdateBrandingThemeResponseContent other);
     }
 
     public interface ColorsStage {
+
         DisplayNameStage colors(@NotNull BrandingThemeColors colors);
     }
 
     public interface DisplayNameStage {
+
         /**
          * <p>Display Name</p>
          */
@@ -156,14 +137,17 @@ public final class UpdateBrandingThemeResponseContent {
     }
 
     public interface FontsStage {
+
         PageBackgroundStage fonts(@NotNull BrandingThemeFonts fonts);
     }
 
     public interface PageBackgroundStage {
+
         ThemeIdStage pageBackground(@NotNull BrandingThemePageBackground pageBackground);
     }
 
     public interface ThemeIdStage {
+
         /**
          * <p>Theme Id</p>
          */
@@ -171,10 +155,12 @@ public final class UpdateBrandingThemeResponseContent {
     }
 
     public interface WidgetStage {
+
         _FinalStage widget(@NotNull BrandingThemeWidget widget);
     }
 
     public interface _FinalStage {
+
         UpdateBrandingThemeResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -183,15 +169,8 @@ public final class UpdateBrandingThemeResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements BordersStage,
-                    ColorsStage,
-                    DisplayNameStage,
-                    FontsStage,
-                    PageBackgroundStage,
-                    ThemeIdStage,
-                    WidgetStage,
-                    _FinalStage {
+    public static final class Builder implements BordersStage, ColorsStage, DisplayNameStage, FontsStage, PageBackgroundStage, ThemeIdStage, WidgetStage, _FinalStage {
+
         private BrandingThemeBorders borders;
 
         private BrandingThemeColors colors;
@@ -209,32 +188,24 @@ public final class UpdateBrandingThemeResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateBrandingThemeResponseContent other) {
-            borders(other.getBorders());
-            colors(other.getColors());
-            displayName(other.getDisplayName());
-            fonts(other.getFonts());
-            pageBackground(other.getPageBackground());
-            themeId(other.getThemeId());
-            widget(other.getWidget());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("borders")
         public ColorsStage borders(@NotNull BrandingThemeBorders borders) {
-            this.borders = Objects.requireNonNull(borders, "borders must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("colors")
         public DisplayNameStage colors(@NotNull BrandingThemeColors colors) {
-            this.colors = Objects.requireNonNull(colors, "colors must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -245,22 +216,19 @@ public final class UpdateBrandingThemeResponseContent {
         @java.lang.Override
         @JsonSetter("displayName")
         public FontsStage displayName(@NotNull String displayName) {
-            this.displayName = Objects.requireNonNull(displayName, "displayName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("fonts")
         public PageBackgroundStage fonts(@NotNull BrandingThemeFonts fonts) {
-            this.fonts = Objects.requireNonNull(fonts, "fonts must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("page_background")
         public ThemeIdStage pageBackground(@NotNull BrandingThemePageBackground pageBackground) {
-            this.pageBackground = Objects.requireNonNull(pageBackground, "pageBackground must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -271,33 +239,28 @@ public final class UpdateBrandingThemeResponseContent {
         @java.lang.Override
         @JsonSetter("themeId")
         public WidgetStage themeId(@NotNull String themeId) {
-            this.themeId = Objects.requireNonNull(themeId, "themeId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("widget")
         public _FinalStage widget(@NotNull BrandingThemeWidget widget) {
-            this.widget = Objects.requireNonNull(widget, "widget must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateBrandingThemeResponseContent build() {
-            return new UpdateBrandingThemeResponseContent(
-                    borders, colors, displayName, fonts, pageBackground, themeId, widget, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

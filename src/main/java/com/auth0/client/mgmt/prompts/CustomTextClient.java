@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.PromptLanguageEnum;
 import java.util.Map;
 
 public class CustomTextClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCustomTextClient rawClient;
@@ -23,39 +24,34 @@ public class CustomTextClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCustomTextClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve custom text for a specific prompt and language.
      */
     public Map<String, Object> get(PromptGroupNameEnum prompt, PromptLanguageEnum language) {
-        return this.rawClient.get(prompt, language).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve custom text for a specific prompt and language.
      */
-    public Map<String, Object> get(
-            PromptGroupNameEnum prompt, PromptLanguageEnum language, RequestOptions requestOptions) {
-        return this.rawClient.get(prompt, language, requestOptions).body();
+    public Map<String, Object> get(PromptGroupNameEnum prompt, PromptLanguageEnum language, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set custom text for a specific prompt. Existing texts will be overwritten.
      */
     public void set(PromptGroupNameEnum prompt, PromptLanguageEnum language, Map<String, Object> request) {
-        this.rawClient.set(prompt, language, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set custom text for a specific prompt. Existing texts will be overwritten.
      */
-    public void set(
-            PromptGroupNameEnum prompt,
-            PromptLanguageEnum language,
-            Map<String, Object> request,
-            RequestOptions requestOptions) {
-        this.rawClient.set(prompt, language, request, requestOptions).body();
+    public void set(PromptGroupNameEnum prompt, PromptLanguageEnum language, Map<String, Object> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

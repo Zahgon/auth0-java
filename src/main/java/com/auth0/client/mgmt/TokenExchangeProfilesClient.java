@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.TokenExchangeProfilesListRequest;
 import com.auth0.client.mgmt.types.UpdateTokenExchangeProfileRequestContent;
 
 public class TokenExchangeProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTokenExchangeProfilesClient rawClient;
@@ -27,7 +28,7 @@ public class TokenExchangeProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTokenExchangeProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -41,7 +42,7 @@ public class TokenExchangeProfilesClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<TokenExchangeProfileResponseContent> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +56,7 @@ public class TokenExchangeProfilesClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<TokenExchangeProfileResponseContent> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +70,7 @@ public class TokenExchangeProfilesClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<TokenExchangeProfileResponseContent> list(TokenExchangeProfilesListRequest request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,9 +83,8 @@ public class TokenExchangeProfilesClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public SyncPagingIterable<TokenExchangeProfileResponseContent> list(
-            TokenExchangeProfilesListRequest request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<TokenExchangeProfileResponseContent> list(TokenExchangeProfilesListRequest request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,16 +92,15 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CreateTokenExchangeProfileResponseContent create(CreateTokenExchangeProfileRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Token Exchange Profile within your tenant.
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
-    public CreateTokenExchangeProfileResponseContent create(
-            CreateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateTokenExchangeProfileResponseContent create(CreateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,7 +108,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public GetTokenExchangeProfileResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,7 +116,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public GetTokenExchangeProfileResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,7 +124,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,7 +132,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +140,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void update(String id) {
-        this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -149,7 +148,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void update(String id, RequestOptions requestOptions) {
-        this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -157,7 +156,7 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void update(String id, UpdateTokenExchangeProfileRequestContent request) {
-        this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -165,6 +164,6 @@ public class TokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public void update(String id, UpdateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.update(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListClientsRequestParameters.Builder.class)
 public final class ListClientsRequestParameters {
+
     private final OptionalNullable<String> fields;
 
     private final OptionalNullable<Boolean> includeFields;
@@ -44,18 +45,7 @@ public final class ListClientsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListClientsRequestParameters(
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            OptionalNullable<Integer> page,
-            OptionalNullable<Integer> perPage,
-            OptionalNullable<Boolean> includeTotals,
-            OptionalNullable<Boolean> isGlobal,
-            OptionalNullable<Boolean> isFirstParty,
-            OptionalNullable<String> appType,
-            OptionalNullable<String> externalClientId,
-            OptionalNullable<String> q,
-            Map<String, Object> additionalProperties) {
+    private ListClientsRequestParameters(OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, OptionalNullable<Integer> page, OptionalNullable<Integer> perPage, OptionalNullable<Boolean> includeTotals, OptionalNullable<Boolean> isGlobal, OptionalNullable<Boolean> isFirstParty, OptionalNullable<String> appType, OptionalNullable<String> externalClientId, OptionalNullable<String> q, Map<String, Object> additionalProperties) {
         this.fields = fields;
         this.includeFields = includeFields;
         this.page = page;
@@ -74,10 +64,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,10 +72,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,10 +80,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPage() {
-        if (page == null) {
-            return OptionalNullable.absent();
-        }
-        return page;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,10 +88,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPerPage() {
-        if (perPage == null) {
-            return OptionalNullable.absent();
-        }
-        return perPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -118,10 +96,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeTotals() {
-        if (includeTotals == null) {
-            return OptionalNullable.absent();
-        }
-        return includeTotals;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -129,10 +104,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIsGlobal() {
-        if (isGlobal == null) {
-            return OptionalNullable.absent();
-        }
-        return isGlobal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,10 +112,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIsFirstParty() {
-        if (isFirstParty == null) {
-            return OptionalNullable.absent();
-        }
-        return isFirstParty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -151,10 +120,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getAppType() {
-        if (appType == null) {
-            return OptionalNullable.absent();
-        }
-        return appType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -162,10 +128,7 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getExternalClientId() {
-        if (externalClientId == null) {
-            return OptionalNullable.absent();
-        }
-        return externalClientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -173,62 +136,40 @@ public final class ListClientsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getQ() {
-        if (q == null) {
-            return OptionalNullable.absent();
-        }
-        return q;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListClientsRequestParameters && equalTo((ListClientsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListClientsRequestParameters other) {
-        return fields.equals(other.fields)
-                && includeFields.equals(other.includeFields)
-                && page.equals(other.page)
-                && perPage.equals(other.perPage)
-                && includeTotals.equals(other.includeTotals)
-                && isGlobal.equals(other.isGlobal)
-                && isFirstParty.equals(other.isFirstParty)
-                && appType.equals(other.appType)
-                && externalClientId.equals(other.externalClientId)
-                && q.equals(other.q);
+        return fields.equals(other.fields) && includeFields.equals(other.includeFields) && page.equals(other.page) && perPage.equals(other.perPage) && includeTotals.equals(other.includeTotals) && isGlobal.equals(other.isGlobal) && isFirstParty.equals(other.isFirstParty) && appType.equals(other.appType) && externalClientId.equals(other.externalClientId) && q.equals(other.q);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.fields,
-                this.includeFields,
-                this.page,
-                this.perPage,
-                this.includeTotals,
-                this.isGlobal,
-                this.isFirstParty,
-                this.appType,
-                this.externalClientId,
-                this.q);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> fields = OptionalNullable.absent();
 
         private OptionalNullable<Boolean> includeFields = OptionalNullable.absent();
@@ -252,20 +193,11 @@ public final class ListClientsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListClientsRequestParameters other) {
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            page(other.getPage());
-            perPage(other.getPerPage());
-            includeTotals(other.getIncludeTotals());
-            isGlobal(other.getIsGlobal());
-            isFirstParty(other.getIsFirstParty());
-            appType(other.getAppType());
-            externalClientId(other.getExternalClientId());
-            q(other.getQ());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -273,33 +205,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,33 +225,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public Builder includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -341,33 +245,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "page", nulls = Nulls.SKIP)
         public Builder page(@Nullable OptionalNullable<Integer> page) {
-            this.page = page;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Integer page) {
-            this.page = OptionalNullable.of(page);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Optional<Integer> page) {
-            if (page.isPresent()) {
-                this.page = OptionalNullable.of(page.get());
-            } else {
-                this.page = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(com.auth0.client.mgmt.core.Nullable<Integer> page) {
-            if (page.isNull()) {
-                this.page = OptionalNullable.ofNull();
-            } else if (page.isEmpty()) {
-                this.page = OptionalNullable.absent();
-            } else {
-                this.page = OptionalNullable.of(page.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -375,33 +265,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "per_page", nulls = Nulls.SKIP)
         public Builder perPage(@Nullable OptionalNullable<Integer> perPage) {
-            this.perPage = perPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Integer perPage) {
-            this.perPage = OptionalNullable.of(perPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Optional<Integer> perPage) {
-            if (perPage.isPresent()) {
-                this.perPage = OptionalNullable.of(perPage.get());
-            } else {
-                this.perPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(com.auth0.client.mgmt.core.Nullable<Integer> perPage) {
-            if (perPage.isNull()) {
-                this.perPage = OptionalNullable.ofNull();
-            } else if (perPage.isEmpty()) {
-                this.perPage = OptionalNullable.absent();
-            } else {
-                this.perPage = OptionalNullable.of(perPage.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -409,33 +285,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "include_totals", nulls = Nulls.SKIP)
         public Builder includeTotals(@Nullable OptionalNullable<Boolean> includeTotals) {
-            this.includeTotals = includeTotals;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Boolean includeTotals) {
-            this.includeTotals = OptionalNullable.of(includeTotals);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Optional<Boolean> includeTotals) {
-            if (includeTotals.isPresent()) {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            } else {
-                this.includeTotals = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(com.auth0.client.mgmt.core.Nullable<Boolean> includeTotals) {
-            if (includeTotals.isNull()) {
-                this.includeTotals = OptionalNullable.ofNull();
-            } else if (includeTotals.isEmpty()) {
-                this.includeTotals = OptionalNullable.absent();
-            } else {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -443,33 +305,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "is_global", nulls = Nulls.SKIP)
         public Builder isGlobal(@Nullable OptionalNullable<Boolean> isGlobal) {
-            this.isGlobal = isGlobal;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isGlobal(Boolean isGlobal) {
-            this.isGlobal = OptionalNullable.of(isGlobal);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isGlobal(Optional<Boolean> isGlobal) {
-            if (isGlobal.isPresent()) {
-                this.isGlobal = OptionalNullable.of(isGlobal.get());
-            } else {
-                this.isGlobal = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isGlobal(com.auth0.client.mgmt.core.Nullable<Boolean> isGlobal) {
-            if (isGlobal.isNull()) {
-                this.isGlobal = OptionalNullable.ofNull();
-            } else if (isGlobal.isEmpty()) {
-                this.isGlobal = OptionalNullable.absent();
-            } else {
-                this.isGlobal = OptionalNullable.of(isGlobal.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -477,33 +325,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "is_first_party", nulls = Nulls.SKIP)
         public Builder isFirstParty(@Nullable OptionalNullable<Boolean> isFirstParty) {
-            this.isFirstParty = isFirstParty;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isFirstParty(Boolean isFirstParty) {
-            this.isFirstParty = OptionalNullable.of(isFirstParty);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isFirstParty(Optional<Boolean> isFirstParty) {
-            if (isFirstParty.isPresent()) {
-                this.isFirstParty = OptionalNullable.of(isFirstParty.get());
-            } else {
-                this.isFirstParty = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isFirstParty(com.auth0.client.mgmt.core.Nullable<Boolean> isFirstParty) {
-            if (isFirstParty.isNull()) {
-                this.isFirstParty = OptionalNullable.ofNull();
-            } else if (isFirstParty.isEmpty()) {
-                this.isFirstParty = OptionalNullable.absent();
-            } else {
-                this.isFirstParty = OptionalNullable.of(isFirstParty.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -511,33 +345,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "app_type", nulls = Nulls.SKIP)
         public Builder appType(@Nullable OptionalNullable<String> appType) {
-            this.appType = appType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appType(String appType) {
-            this.appType = OptionalNullable.of(appType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appType(Optional<String> appType) {
-            if (appType.isPresent()) {
-                this.appType = OptionalNullable.of(appType.get());
-            } else {
-                this.appType = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appType(com.auth0.client.mgmt.core.Nullable<String> appType) {
-            if (appType.isNull()) {
-                this.appType = OptionalNullable.ofNull();
-            } else if (appType.isEmpty()) {
-                this.appType = OptionalNullable.absent();
-            } else {
-                this.appType = OptionalNullable.of(appType.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -545,33 +365,19 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "external_client_id", nulls = Nulls.SKIP)
         public Builder externalClientId(@Nullable OptionalNullable<String> externalClientId) {
-            this.externalClientId = externalClientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalClientId(String externalClientId) {
-            this.externalClientId = OptionalNullable.of(externalClientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalClientId(Optional<String> externalClientId) {
-            if (externalClientId.isPresent()) {
-                this.externalClientId = OptionalNullable.of(externalClientId.get());
-            } else {
-                this.externalClientId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalClientId(com.auth0.client.mgmt.core.Nullable<String> externalClientId) {
-            if (externalClientId.isNull()) {
-                this.externalClientId = OptionalNullable.ofNull();
-            } else if (externalClientId.isEmpty()) {
-                this.externalClientId = OptionalNullable.absent();
-            } else {
-                this.externalClientId = OptionalNullable.of(externalClientId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -579,58 +385,31 @@ public final class ListClientsRequestParameters {
          */
         @JsonSetter(value = "q", nulls = Nulls.SKIP)
         public Builder q(@Nullable OptionalNullable<String> q) {
-            this.q = q;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(String q) {
-            this.q = OptionalNullable.of(q);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(Optional<String> q) {
-            if (q.isPresent()) {
-                this.q = OptionalNullable.of(q.get());
-            } else {
-                this.q = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(com.auth0.client.mgmt.core.Nullable<String> q) {
-            if (q.isNull()) {
-                this.q = OptionalNullable.ofNull();
-            } else if (q.isEmpty()) {
-                this.q = OptionalNullable.absent();
-            } else {
-                this.q = OptionalNullable.of(q.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListClientsRequestParameters build() {
-            return new ListClientsRequestParameters(
-                    fields,
-                    includeFields,
-                    page,
-                    perPage,
-                    includeTotals,
-                    isGlobal,
-                    isFirstParty,
-                    appType,
-                    externalClientId,
-                    q,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

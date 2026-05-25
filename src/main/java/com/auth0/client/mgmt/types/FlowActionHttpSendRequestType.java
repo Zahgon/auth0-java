@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionHttpSendRequestType {
+
     public static final FlowActionHttpSendRequestType HTTP = new FlowActionHttpSendRequestType(Value.HTTP, "HTTP");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionHttpSendRequestType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionHttpSendRequestType
-                        && this.string.equals(((FlowActionHttpSendRequestType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case HTTP:
-                return visitor.visitHttp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionHttpSendRequestType valueOf(String value) {
-        switch (value) {
-            case "HTTP":
-                return HTTP;
-            default:
-                return new FlowActionHttpSendRequestType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        HTTP,
 
-        UNKNOWN
+        HTTP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitHttp();
 
         T visitUnknown(String unknownType);

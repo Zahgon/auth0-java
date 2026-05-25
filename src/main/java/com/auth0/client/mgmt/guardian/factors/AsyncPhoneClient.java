@@ -20,6 +20,7 @@ import com.auth0.client.mgmt.types.SetGuardianFactorsProviderPhoneTwilioResponse
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncPhoneClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawPhoneClient rawClient;
@@ -33,139 +34,126 @@ public class AsyncPhoneClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawPhoneClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">phone-type MFA factors</a> (i.e., sms and voice) that are enabled for your tenant.
      */
     public CompletableFuture<GetGuardianFactorPhoneMessageTypesResponseContent> getMessageTypes() {
-        return this.rawClient.getMessageTypes().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">phone-type MFA factors</a> (i.e., sms and voice) that are enabled for your tenant.
      */
-    public CompletableFuture<GetGuardianFactorPhoneMessageTypesResponseContent> getMessageTypes(
-            RequestOptions requestOptions) {
-        return this.rawClient.getMessageTypes(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorPhoneMessageTypesResponseContent> getMessageTypes(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Replace the list of <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">phone-type MFA factors</a> (i.e., sms and voice) that are enabled for your tenant.
      */
-    public CompletableFuture<SetGuardianFactorPhoneMessageTypesResponseContent> setMessageTypes(
-            SetGuardianFactorPhoneMessageTypesRequestContent request) {
-        return this.rawClient.setMessageTypes(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorPhoneMessageTypesResponseContent> setMessageTypes(SetGuardianFactorPhoneMessageTypesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Replace the list of <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">phone-type MFA factors</a> (i.e., sms and voice) that are enabled for your tenant.
      */
-    public CompletableFuture<SetGuardianFactorPhoneMessageTypesResponseContent> setMessageTypes(
-            SetGuardianFactorPhoneMessageTypesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setMessageTypes(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorPhoneMessageTypesResponseContent> setMessageTypes(SetGuardianFactorPhoneMessageTypesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
     public CompletableFuture<GetGuardianFactorsProviderPhoneTwilioResponseContent> getTwilioProvider() {
-        return this.rawClient.getTwilioProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
-    public CompletableFuture<GetGuardianFactorsProviderPhoneTwilioResponseContent> getTwilioProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.getTwilioProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorsProviderPhoneTwilioResponseContent> getTwilioProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the configuration of a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
     public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider() {
-        return this.rawClient.setTwilioProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the configuration of a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
-    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the configuration of a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
-    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(
-            SetGuardianFactorsProviderPhoneTwilioRequestContent request) {
-        return this.rawClient.setTwilioProvider(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(SetGuardianFactorsProviderPhoneTwilioRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the configuration of a Twilio phone provider that has been set up in your tenant. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa">Configure SMS and Voice Notifications for MFA</a>.
      */
-    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(
-            SetGuardianFactorsProviderPhoneTwilioRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderPhoneTwilioResponseContent> setTwilioProvider(SetGuardianFactorsProviderPhoneTwilioRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the multi-factor authentication phone provider configured for your tenant.
      */
     public CompletableFuture<GetGuardianFactorsProviderPhoneResponseContent> getSelectedProvider() {
-        return this.rawClient.getSelectedProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the multi-factor authentication phone provider configured for your tenant.
      */
-    public CompletableFuture<GetGuardianFactorsProviderPhoneResponseContent> getSelectedProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.getSelectedProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorsProviderPhoneResponseContent> getSelectedProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SetGuardianFactorsProviderPhoneResponseContent> setProvider(
-            SetGuardianFactorsProviderPhoneRequestContent request) {
-        return this.rawClient.setProvider(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderPhoneResponseContent> setProvider(SetGuardianFactorsProviderPhoneRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SetGuardianFactorsProviderPhoneResponseContent> setProvider(
-            SetGuardianFactorsProviderPhoneRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setProvider(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderPhoneResponseContent> setProvider(SetGuardianFactorsProviderPhoneRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the multi-factor authentication enrollment and verification templates for phone-type factors available in your tenant.
      */
     public CompletableFuture<GetGuardianFactorPhoneTemplatesResponseContent> getTemplates() {
-        return this.rawClient.getTemplates().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the multi-factor authentication enrollment and verification templates for phone-type factors available in your tenant.
      */
-    public CompletableFuture<GetGuardianFactorPhoneTemplatesResponseContent> getTemplates(
-            RequestOptions requestOptions) {
-        return this.rawClient.getTemplates(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorPhoneTemplatesResponseContent> getTemplates(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Customize the messages sent to complete phone enrollment and verification (subscription required).
      */
-    public CompletableFuture<SetGuardianFactorPhoneTemplatesResponseContent> setTemplates(
-            SetGuardianFactorPhoneTemplatesRequestContent request) {
-        return this.rawClient.setTemplates(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorPhoneTemplatesResponseContent> setTemplates(SetGuardianFactorPhoneTemplatesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Customize the messages sent to complete phone enrollment and verification (subscription required).
      */
-    public CompletableFuture<SetGuardianFactorPhoneTemplatesResponseContent> setTemplates(
-            SetGuardianFactorPhoneTemplatesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTemplates(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorPhoneTemplatesResponseContent> setTemplates(SetGuardianFactorPhoneTemplatesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

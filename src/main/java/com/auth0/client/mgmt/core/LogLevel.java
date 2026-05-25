@@ -8,10 +8,8 @@ package com.auth0.client.mgmt.core;
  * Silent by default — no log output unless explicitly configured.
  */
 public enum LogLevel {
-    DEBUG(1),
-    INFO(2),
-    WARN(3),
-    ERROR(4);
+
+    DEBUG(1), INFO(2), WARN(3), ERROR(4);
 
     private final int value;
 
@@ -20,7 +18,7 @@ public enum LogLevel {
     }
 
     public int getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -31,6 +29,6 @@ public enum LogLevel {
      * @throws IllegalArgumentException if the string does not match any level
      */
     public static LogLevel fromString(String level) {
-        return LogLevel.valueOf(level.toUpperCase());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

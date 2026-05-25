@@ -1,7 +1,6 @@
 package com.auth0.client.auth;
 
 import static com.auth0.utils.Asserts.assertNotNull;
-
 import java.util.HashMap;
 import java.util.Map;
 import okhttp3.HttpUrl;
@@ -17,6 +16,7 @@ import okhttp3.HttpUrl;
 public class AuthorizeUrlBuilder {
 
     private final HttpUrl.Builder builder;
+
     private final Map<String, String> parameters;
 
     /**
@@ -29,19 +29,15 @@ public class AuthorizeUrlBuilder {
      * @return a new instance of the {@link AuthorizeUrlBuilder} to configure.
      */
     static AuthorizeUrlBuilder newInstance(HttpUrl baseUrl, String clientId, String redirectUri) {
-        return new AuthorizeUrlBuilder(baseUrl, clientId, redirectUri);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private AuthorizeUrlBuilder(HttpUrl url, String clientId, String redirectUri) {
         assertNotNull(url, "base url");
         assertNotNull(clientId, "client id");
         assertNotNull(redirectUri, "redirect uri");
-
         parameters = new HashMap<>();
-        builder = url.newBuilder()
-                .addPathSegment("authorize")
-                .addEncodedQueryParameter("redirect_uri", redirectUri)
-                .addQueryParameter("client_id", clientId);
+        builder = url.newBuilder().addPathSegment("authorize").addEncodedQueryParameter("redirect_uri", redirectUri).addQueryParameter("client_id", clientId);
         withParameter("response_type", "code");
     }
 
@@ -52,9 +48,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withConnection(String connection) {
-        assertNotNull(connection, "connection");
-        parameters.put("connection", connection);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,9 +58,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withAudience(String audience) {
-        assertNotNull(audience, "audience");
-        parameters.put("audience", audience);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,9 +68,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withState(String state) {
-        assertNotNull(state, "state");
-        parameters.put("state", state);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,9 +78,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withScope(String scope) {
-        assertNotNull(scope, "scope");
-        parameters.put("scope", scope);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,9 +88,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withResponseType(String responseType) {
-        assertNotNull(responseType, "response type");
-        parameters.put("response_type", responseType);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,9 +98,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance.
      */
     public AuthorizeUrlBuilder withOrganization(String organization) {
-        assertNotNull(organization, "organization");
-        parameters.put("organization", organization);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,9 +109,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance.
      */
     public AuthorizeUrlBuilder withInvitation(String invitation) {
-        assertNotNull(invitation, "invitation");
-        parameters.put("invitation", invitation);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -138,10 +120,7 @@ public class AuthorizeUrlBuilder {
      * @return the builder instance
      */
     public AuthorizeUrlBuilder withParameter(String name, String value) {
-        assertNotNull(name, "name");
-        assertNotNull(value, "value");
-        parameters.put(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -154,10 +133,7 @@ public class AuthorizeUrlBuilder {
      * @see <a href="https://auth0.com/docs/get-started/authentication-and-authorization-flow/add-login-using-the-authorization-code-flow-with-pkce">Authorization Code Flow with Proof of Code Exchange (PKCE)</a>
      */
     public AuthorizeUrlBuilder withCodeChallenge(String challenge) {
-        assertNotNull(challenge, "challenge");
-        parameters.put("code_challenge", challenge);
-        parameters.put("code_challenge_method", "S256");
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -166,9 +142,6 @@ public class AuthorizeUrlBuilder {
      * @return the string URL
      */
     public String build() {
-        for (Map.Entry<String, String> p : parameters.entrySet()) {
-            builder.addQueryParameter(p.getKey(), p.getValue());
-        }
-        return builder.build().toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

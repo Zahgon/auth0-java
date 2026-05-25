@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientOrganizationRequireBehaviorPatchEnum {
-    public static final ClientOrganizationRequireBehaviorPatchEnum POST_LOGIN_PROMPT =
-            new ClientOrganizationRequireBehaviorPatchEnum(Value.POST_LOGIN_PROMPT, "post_login_prompt");
 
-    public static final ClientOrganizationRequireBehaviorPatchEnum PRE_LOGIN_PROMPT =
-            new ClientOrganizationRequireBehaviorPatchEnum(Value.PRE_LOGIN_PROMPT, "pre_login_prompt");
+    public static final ClientOrganizationRequireBehaviorPatchEnum POST_LOGIN_PROMPT = new ClientOrganizationRequireBehaviorPatchEnum(Value.POST_LOGIN_PROMPT, "post_login_prompt");
 
-    public static final ClientOrganizationRequireBehaviorPatchEnum NO_PROMPT =
-            new ClientOrganizationRequireBehaviorPatchEnum(Value.NO_PROMPT, "no_prompt");
+    public static final ClientOrganizationRequireBehaviorPatchEnum PRE_LOGIN_PROMPT = new ClientOrganizationRequireBehaviorPatchEnum(Value.PRE_LOGIN_PROMPT, "pre_login_prompt");
+
+    public static final ClientOrganizationRequireBehaviorPatchEnum NO_PROMPT = new ClientOrganizationRequireBehaviorPatchEnum(Value.NO_PROMPT, "no_prompt");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ClientOrganizationRequireBehaviorPatchEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientOrganizationRequireBehaviorPatchEnum
-                        && this.string.equals(((ClientOrganizationRequireBehaviorPatchEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case POST_LOGIN_PROMPT:
-                return visitor.visitPostLoginPrompt();
-            case PRE_LOGIN_PROMPT:
-                return visitor.visitPreLoginPrompt();
-            case NO_PROMPT:
-                return visitor.visitNoPrompt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientOrganizationRequireBehaviorPatchEnum valueOf(String value) {
-        switch (value) {
-            case "post_login_prompt":
-                return POST_LOGIN_PROMPT;
-            case "pre_login_prompt":
-                return PRE_LOGIN_PROMPT;
-            case "no_prompt":
-                return NO_PROMPT;
-            default:
-                return new ClientOrganizationRequireBehaviorPatchEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NO_PROMPT,
 
-        PRE_LOGIN_PROMPT,
-
-        POST_LOGIN_PROMPT,
-
-        UNKNOWN
+        NO_PROMPT, PRE_LOGIN_PROMPT, POST_LOGIN_PROMPT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNoPrompt();
 
         T visitPreLoginPrompt();

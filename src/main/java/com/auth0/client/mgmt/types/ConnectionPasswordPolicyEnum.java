@@ -7,12 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionPasswordPolicyEnum {
+
     public static final ConnectionPasswordPolicyEnum FAIR = new ConnectionPasswordPolicyEnum(Value.FAIR, "fair");
 
     public static final ConnectionPasswordPolicyEnum LOW = new ConnectionPasswordPolicyEnum(Value.LOW, "low");
 
-    public static final ConnectionPasswordPolicyEnum EXCELLENT =
-            new ConnectionPasswordPolicyEnum(Value.EXCELLENT, "excellent");
+    public static final ConnectionPasswordPolicyEnum EXCELLENT = new ConnectionPasswordPolicyEnum(Value.EXCELLENT, "excellent");
 
     public static final ConnectionPasswordPolicyEnum GOOD = new ConnectionPasswordPolicyEnum(Value.GOOD, "good");
 
@@ -28,78 +28,46 @@ public final class ConnectionPasswordPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionPasswordPolicyEnum
-                        && this.string.equals(((ConnectionPasswordPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FAIR:
-                return visitor.visitFair();
-            case LOW:
-                return visitor.visitLow();
-            case EXCELLENT:
-                return visitor.visitExcellent();
-            case GOOD:
-                return visitor.visitGood();
-            case NONE:
-                return visitor.visitNone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionPasswordPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "fair":
-                return FAIR;
-            case "low":
-                return LOW;
-            case "excellent":
-                return EXCELLENT;
-            case "good":
-                return GOOD;
-            case "none":
-                return NONE;
-            default:
-                return new ConnectionPasswordPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         NONE,
-
         LOW,
-
         FAIR,
-
         GOOD,
-
         EXCELLENT,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitLow();

@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateBruteForceSettingsResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncBruteForceProtectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawBruteForceProtectionClient rawClient;
@@ -24,50 +25,48 @@ public class AsyncBruteForceProtectionClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawBruteForceProtectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Brute-force Protection configuration of your tenant.
      */
     public CompletableFuture<GetBruteForceSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Brute-force Protection configuration of your tenant.
      */
     public CompletableFuture<GetBruteForceSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
     public CompletableFuture<UpdateBruteForceSettingsResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
     public CompletableFuture<UpdateBruteForceSettingsResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBruteForceSettingsResponseContent> update(
-            UpdateBruteForceSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBruteForceSettingsResponseContent> update(UpdateBruteForceSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBruteForceSettingsResponseContent> update(
-            UpdateBruteForceSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBruteForceSettingsResponseContent> update(UpdateBruteForceSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

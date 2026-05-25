@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.users.types.ListUserLogsRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncLogsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawLogsClient rawClient;
@@ -24,7 +25,7 @@ public class AsyncLogsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawLogsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,7 +35,7 @@ public class AsyncLogsClient {
      * <p>Auth0 <a href="https://auth0.com/docs/logs/retrieve-log-events-using-mgmt-api#limitations">limits the number of logs</a> you can return by search criteria to 100 logs per request. Furthermore, you may only paginate through up to 1,000 search results. If you exceed this threshold, please redefine your search.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,7 +45,7 @@ public class AsyncLogsClient {
      * <p>Auth0 <a href="https://auth0.com/docs/logs/retrieve-log-events-using-mgmt-api#limitations">limits the number of logs</a> you can return by search criteria to 100 logs per request. Furthermore, you may only paginate through up to 1,000 search results. If you exceed this threshold, please redefine your search.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +55,7 @@ public class AsyncLogsClient {
      * <p>Auth0 <a href="https://auth0.com/docs/logs/retrieve-log-events-using-mgmt-api#limitations">limits the number of logs</a> you can return by search criteria to 100 logs per request. Furthermore, you may only paginate through up to 1,000 search results. If you exceed this threshold, please redefine your search.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list(String id, ListUserLogsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,8 +64,7 @@ public class AsyncLogsClient {
      * <p>For more information on the list of fields that can be used in <code>sort</code>, see <a href="https://auth0.com/docs/logs/log-search-query-syntax#searchable-fields">Searchable Fields</a>.</p>
      * <p>Auth0 <a href="https://auth0.com/docs/logs/retrieve-log-events-using-mgmt-api#limitations">limits the number of logs</a> you can return by search criteria to 100 logs per request. Furthermore, you may only paginate through up to 1,000 search results. If you exceed this threshold, please redefine your search.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Log>> list(
-            String id, ListUserLogsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Log>> list(String id, ListUserLogsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

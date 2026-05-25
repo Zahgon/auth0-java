@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectedAccountAccessTypeEnum {
-    public static final ConnectedAccountAccessTypeEnum OFFLINE =
-            new ConnectedAccountAccessTypeEnum(Value.OFFLINE, "offline");
+
+    public static final ConnectedAccountAccessTypeEnum OFFLINE = new ConnectedAccountAccessTypeEnum(Value.OFFLINE, "offline");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectedAccountAccessTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectedAccountAccessTypeEnum
-                        && this.string.equals(((ConnectedAccountAccessTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OFFLINE:
-                return visitor.visitOffline();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectedAccountAccessTypeEnum valueOf(String value) {
-        switch (value) {
-            case "offline":
-                return OFFLINE;
-            default:
-                return new ConnectedAccountAccessTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OFFLINE,
 
-        UNKNOWN
+        OFFLINE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOffline();
 
         T visitUnknown(String unknownType);

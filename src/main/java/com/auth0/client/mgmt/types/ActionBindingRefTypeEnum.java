@@ -7,13 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ActionBindingRefTypeEnum {
-    public static final ActionBindingRefTypeEnum BINDING_ID =
-            new ActionBindingRefTypeEnum(Value.BINDING_ID, "binding_id");
+
+    public static final ActionBindingRefTypeEnum BINDING_ID = new ActionBindingRefTypeEnum(Value.BINDING_ID, "binding_id");
 
     public static final ActionBindingRefTypeEnum ACTION_ID = new ActionBindingRefTypeEnum(Value.ACTION_ID, "action_id");
 
-    public static final ActionBindingRefTypeEnum ACTION_NAME =
-            new ActionBindingRefTypeEnum(Value.ACTION_NAME, "action_name");
+    public static final ActionBindingRefTypeEnum ACTION_NAME = new ActionBindingRefTypeEnum(Value.ACTION_NAME, "action_name");
 
     private final Value value;
 
@@ -25,66 +24,41 @@ public final class ActionBindingRefTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ActionBindingRefTypeEnum
-                        && this.string.equals(((ActionBindingRefTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BINDING_ID:
-                return visitor.visitBindingId();
-            case ACTION_ID:
-                return visitor.visitActionId();
-            case ACTION_NAME:
-                return visitor.visitActionName();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ActionBindingRefTypeEnum valueOf(String value) {
-        switch (value) {
-            case "binding_id":
-                return BINDING_ID;
-            case "action_id":
-                return ACTION_ID;
-            case "action_name":
-                return ACTION_NAME;
-            default:
-                return new ActionBindingRefTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BINDING_ID,
 
-        ACTION_ID,
-
-        ACTION_NAME,
-
-        UNKNOWN
+        BINDING_ID, ACTION_ID, ACTION_NAME, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBindingId();
 
         T visitActionId();

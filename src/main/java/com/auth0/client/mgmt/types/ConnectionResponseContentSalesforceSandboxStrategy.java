@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentSalesforceSandboxStrategy {
-    public static final ConnectionResponseContentSalesforceSandboxStrategy SALESFORCE_SANDBOX =
-            new ConnectionResponseContentSalesforceSandboxStrategy(Value.SALESFORCE_SANDBOX, "salesforce-sandbox");
+
+    public static final ConnectionResponseContentSalesforceSandboxStrategy SALESFORCE_SANDBOX = new ConnectionResponseContentSalesforceSandboxStrategy(Value.SALESFORCE_SANDBOX, "salesforce-sandbox");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentSalesforceSandboxStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentSalesforceSandboxStrategy
-                        && this.string.equals(((ConnectionResponseContentSalesforceSandboxStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SALESFORCE_SANDBOX:
-                return visitor.visitSalesforceSandbox();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentSalesforceSandboxStrategy valueOf(String value) {
-        switch (value) {
-            case "salesforce-sandbox":
-                return SALESFORCE_SANDBOX;
-            default:
-                return new ConnectionResponseContentSalesforceSandboxStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SALESFORCE_SANDBOX,
 
-        UNKNOWN
+        SALESFORCE_SANDBOX, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSalesforceSandbox();
 
         T visitUnknown(String unknownType);

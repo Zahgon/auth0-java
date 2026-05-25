@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowBooleanConditionAction {
-    public static final FlowActionFlowBooleanConditionAction BOOLEAN_CONDITION =
-            new FlowActionFlowBooleanConditionAction(Value.BOOLEAN_CONDITION, "BOOLEAN_CONDITION");
+
+    public static final FlowActionFlowBooleanConditionAction BOOLEAN_CONDITION = new FlowActionFlowBooleanConditionAction(Value.BOOLEAN_CONDITION, "BOOLEAN_CONDITION");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionFlowBooleanConditionAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowBooleanConditionAction
-                        && this.string.equals(((FlowActionFlowBooleanConditionAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BOOLEAN_CONDITION:
-                return visitor.visitBooleanCondition();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowBooleanConditionAction valueOf(String value) {
-        switch (value) {
-            case "BOOLEAN_CONDITION":
-                return BOOLEAN_CONDITION;
-            default:
-                return new FlowActionFlowBooleanConditionAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BOOLEAN_CONDITION,
 
-        UNKNOWN
+        BOOLEAN_CONDITION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBooleanCondition();
 
         T visitUnknown(String unknownType);

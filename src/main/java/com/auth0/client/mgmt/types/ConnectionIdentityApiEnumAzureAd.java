@@ -7,12 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionIdentityApiEnumAzureAd {
-    public static final ConnectionIdentityApiEnumAzureAd AZURE_ACTIVE_DIRECTORY_V10 =
-            new ConnectionIdentityApiEnumAzureAd(Value.AZURE_ACTIVE_DIRECTORY_V10, "azure-active-directory-v1.0");
 
-    public static final ConnectionIdentityApiEnumAzureAd MICROSOFT_IDENTITY_PLATFORM_V20 =
-            new ConnectionIdentityApiEnumAzureAd(
-                    Value.MICROSOFT_IDENTITY_PLATFORM_V20, "microsoft-identity-platform-v2.0");
+    public static final ConnectionIdentityApiEnumAzureAd AZURE_ACTIVE_DIRECTORY_V10 = new ConnectionIdentityApiEnumAzureAd(Value.AZURE_ACTIVE_DIRECTORY_V10, "azure-active-directory-v1.0");
+
+    public static final ConnectionIdentityApiEnumAzureAd MICROSOFT_IDENTITY_PLATFORM_V20 = new ConnectionIdentityApiEnumAzureAd(Value.MICROSOFT_IDENTITY_PLATFORM_V20, "microsoft-identity-platform-v2.0");
 
     private final Value value;
 
@@ -24,60 +22,41 @@ public final class ConnectionIdentityApiEnumAzureAd {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionIdentityApiEnumAzureAd
-                        && this.string.equals(((ConnectionIdentityApiEnumAzureAd) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AZURE_ACTIVE_DIRECTORY_V10:
-                return visitor.visitAzureActiveDirectoryV10();
-            case MICROSOFT_IDENTITY_PLATFORM_V20:
-                return visitor.visitMicrosoftIdentityPlatformV20();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionIdentityApiEnumAzureAd valueOf(String value) {
-        switch (value) {
-            case "azure-active-directory-v1.0":
-                return AZURE_ACTIVE_DIRECTORY_V10;
-            case "microsoft-identity-platform-v2.0":
-                return MICROSOFT_IDENTITY_PLATFORM_V20;
-            default:
-                return new ConnectionIdentityApiEnumAzureAd(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MICROSOFT_IDENTITY_PLATFORM_V20,
 
-        AZURE_ACTIVE_DIRECTORY_V10,
-
-        UNKNOWN
+        MICROSOFT_IDENTITY_PLATFORM_V20, AZURE_ACTIVE_DIRECTORY_V10, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMicrosoftIdentityPlatformV20();
 
         T visitAzureActiveDirectoryV10();

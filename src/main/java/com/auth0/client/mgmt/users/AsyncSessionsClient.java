@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.users.types.ListUserSessionsRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSessionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSessionsClient rawClient;
@@ -24,51 +25,48 @@ public class AsyncSessionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSessionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
     public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(String userId) {
-        return this.rawClient.list(userId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
-    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(
-            String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(String userId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
-    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(
-            String userId, ListUserSessionsRequestParameters request) {
-        return this.rawClient.list(userId, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(String userId, ListUserSessionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
-    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(
-            String userId, ListUserSessionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<SessionResponseContent>> list(String userId, ListUserSessionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all sessions for a user.
      */
     public CompletableFuture<Void> delete(String userId) {
-        return this.rawClient.delete(userId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all sessions for a user.
      */
     public CompletableFuture<Void> delete(String userId, RequestOptions requestOptions) {
-        return this.rawClient.delete(userId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

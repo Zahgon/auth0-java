@@ -20,6 +20,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AculClientFilterByMetadata.Builder.class)
 public final class AculClientFilterByMetadata {
+
     private final Map<String, Object> metadata;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class AculClientFilterByMetadata {
 
     @JsonProperty("metadata")
     public Map<String, Object> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AculClientFilterByMetadata && equalTo((AculClientFilterByMetadata) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AculClientFilterByMetadata other) {
@@ -51,65 +51,56 @@ public final class AculClientFilterByMetadata {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.metadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Map<String, Object> metadata = new LinkedHashMap<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AculClientFilterByMetadata other) {
-            metadata(other.getMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public Builder metadata(Map<String, Object> metadata) {
-            this.metadata.clear();
-            if (metadata != null) {
-                this.metadata.putAll(metadata);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder putAllMetadata(Map<String, Object> metadata) {
-            if (metadata != null) {
-                this.metadata.putAll(metadata);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder metadata(String key, Object value) {
-            this.metadata.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AculClientFilterByMetadata build() {
-            return new AculClientFilterByMetadata(metadata, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

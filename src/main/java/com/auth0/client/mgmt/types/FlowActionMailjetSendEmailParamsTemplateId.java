@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionMailjetSendEmailParamsTemplateId.Builder.class)
 public final class FlowActionMailjetSendEmailParamsTemplateId {
+
     private final int templateId;
 
     private final Optional<Map<String, Object>> variables;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionMailjetSendEmailParamsTemplateId(
-            int templateId, Optional<Map<String, Object>> variables, Map<String, Object> additionalProperties) {
+    private FlowActionMailjetSendEmailParamsTemplateId(int templateId, Optional<Map<String, Object>> variables, Map<String, Object> additionalProperties) {
         this.templateId = templateId;
         this.variables = variables;
         this.additionalProperties = additionalProperties;
@@ -35,24 +35,22 @@ public final class FlowActionMailjetSendEmailParamsTemplateId {
 
     @JsonProperty("template_id")
     public int getTemplateId() {
-        return templateId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("variables")
     public Optional<Map<String, Object>> getVariables() {
-        return variables;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionMailjetSendEmailParamsTemplateId
-                && equalTo((FlowActionMailjetSendEmailParamsTemplateId) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionMailjetSendEmailParamsTemplateId other) {
@@ -61,25 +59,27 @@ public final class FlowActionMailjetSendEmailParamsTemplateId {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.templateId, this.variables);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TemplateIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TemplateIdStage {
+
         _FinalStage templateId(int templateId);
 
         Builder from(FlowActionMailjetSendEmailParamsTemplateId other);
     }
 
     public interface _FinalStage {
+
         FlowActionMailjetSendEmailParamsTemplateId build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class FlowActionMailjetSendEmailParamsTemplateId {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TemplateIdStage, _FinalStage {
+
         private int templateId;
 
         private Optional<Map<String, Object>> variables = Optional.empty();
@@ -100,50 +101,44 @@ public final class FlowActionMailjetSendEmailParamsTemplateId {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionMailjetSendEmailParamsTemplateId other) {
-            templateId(other.getTemplateId());
-            variables(other.getVariables());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("template_id")
         public _FinalStage templateId(int templateId) {
-            this.templateId = templateId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage variables(Map<String, Object> variables) {
-            this.variables = Optional.ofNullable(variables);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "variables", nulls = Nulls.SKIP)
         public _FinalStage variables(Optional<Map<String, Object>> variables) {
-            this.variables = variables;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionMailjetSendEmailParamsTemplateId build() {
-            return new FlowActionMailjetSendEmailParamsTemplateId(templateId, variables, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AttackProtectionCaptchaArkoseResponseContent.Builder.class)
 public final class AttackProtectionCaptchaArkoseResponseContent {
+
     private final Optional<String> siteKey;
 
     private final Optional<Boolean> failOpen;
@@ -30,12 +31,7 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private AttackProtectionCaptchaArkoseResponseContent(
-            Optional<String> siteKey,
-            Optional<Boolean> failOpen,
-            Optional<String> clientSubdomain,
-            Optional<String> verifySubdomain,
-            Map<String, Object> additionalProperties) {
+    private AttackProtectionCaptchaArkoseResponseContent(Optional<String> siteKey, Optional<Boolean> failOpen, Optional<String> clientSubdomain, Optional<String> verifySubdomain, Map<String, Object> additionalProperties) {
         this.siteKey = siteKey;
         this.failOpen = failOpen;
         this.clientSubdomain = clientSubdomain;
@@ -48,7 +44,7 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
      */
     @JsonProperty("site_key")
     public Optional<String> getSiteKey() {
-        return siteKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
      */
     @JsonProperty("fail_open")
     public Optional<Boolean> getFailOpen() {
-        return failOpen;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +60,7 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
      */
     @JsonProperty("client_subdomain")
     public Optional<String> getClientSubdomain() {
-        return clientSubdomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,44 +68,40 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
      */
     @JsonProperty("verify_subdomain")
     public Optional<String> getVerifySubdomain() {
-        return verifySubdomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AttackProtectionCaptchaArkoseResponseContent
-                && equalTo((AttackProtectionCaptchaArkoseResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AttackProtectionCaptchaArkoseResponseContent other) {
-        return siteKey.equals(other.siteKey)
-                && failOpen.equals(other.failOpen)
-                && clientSubdomain.equals(other.clientSubdomain)
-                && verifySubdomain.equals(other.verifySubdomain);
+        return siteKey.equals(other.siteKey) && failOpen.equals(other.failOpen) && clientSubdomain.equals(other.clientSubdomain) && verifySubdomain.equals(other.verifySubdomain);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.siteKey, this.failOpen, this.clientSubdomain, this.verifySubdomain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> siteKey = Optional.empty();
 
         private Optional<Boolean> failOpen = Optional.empty();
@@ -121,14 +113,11 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AttackProtectionCaptchaArkoseResponseContent other) {
-            siteKey(other.getSiteKey());
-            failOpen(other.getFailOpen());
-            clientSubdomain(other.getClientSubdomain());
-            verifySubdomain(other.getVerifySubdomain());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -136,13 +125,11 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
          */
         @JsonSetter(value = "site_key", nulls = Nulls.SKIP)
         public Builder siteKey(Optional<String> siteKey) {
-            this.siteKey = siteKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder siteKey(String siteKey) {
-            this.siteKey = Optional.ofNullable(siteKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,13 +137,11 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
          */
         @JsonSetter(value = "fail_open", nulls = Nulls.SKIP)
         public Builder failOpen(Optional<Boolean> failOpen) {
-            this.failOpen = failOpen;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder failOpen(Boolean failOpen) {
-            this.failOpen = Optional.ofNullable(failOpen);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -164,13 +149,11 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
          */
         @JsonSetter(value = "client_subdomain", nulls = Nulls.SKIP)
         public Builder clientSubdomain(Optional<String> clientSubdomain) {
-            this.clientSubdomain = clientSubdomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSubdomain(String clientSubdomain) {
-            this.clientSubdomain = Optional.ofNullable(clientSubdomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -178,28 +161,23 @@ public final class AttackProtectionCaptchaArkoseResponseContent {
          */
         @JsonSetter(value = "verify_subdomain", nulls = Nulls.SKIP)
         public Builder verifySubdomain(Optional<String> verifySubdomain) {
-            this.verifySubdomain = verifySubdomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verifySubdomain(String verifySubdomain) {
-            this.verifySubdomain = Optional.ofNullable(verifySubdomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AttackProtectionCaptchaArkoseResponseContent build() {
-            return new AttackProtectionCaptchaArkoseResponseContent(
-                    siteKey, failOpen, clientSubdomain, verifySubdomain, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

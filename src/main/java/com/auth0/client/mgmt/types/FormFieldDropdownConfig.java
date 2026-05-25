@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldDropdownConfig.Builder.class)
 public final class FormFieldDropdownConfig {
+
     private final Optional<Boolean> multiple;
 
     private final Optional<List<FormFieldDropdownConfigOption>> options;
@@ -29,11 +30,7 @@ public final class FormFieldDropdownConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldDropdownConfig(
-            Optional<Boolean> multiple,
-            Optional<List<FormFieldDropdownConfigOption>> options,
-            Optional<String> placeholder,
-            Map<String, Object> additionalProperties) {
+    private FormFieldDropdownConfig(Optional<Boolean> multiple, Optional<List<FormFieldDropdownConfigOption>> options, Optional<String> placeholder, Map<String, Object> additionalProperties) {
         this.multiple = multiple;
         this.options = options;
         this.placeholder = placeholder;
@@ -42,52 +39,50 @@ public final class FormFieldDropdownConfig {
 
     @JsonProperty("multiple")
     public Optional<Boolean> getMultiple() {
-        return multiple;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<List<FormFieldDropdownConfigOption>> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldDropdownConfig && equalTo((FormFieldDropdownConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldDropdownConfig other) {
-        return multiple.equals(other.multiple)
-                && options.equals(other.options)
-                && placeholder.equals(other.placeholder);
+        return multiple.equals(other.multiple) && options.equals(other.options) && placeholder.equals(other.placeholder);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.multiple, this.options, this.placeholder);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> multiple = Optional.empty();
 
         private Optional<List<FormFieldDropdownConfigOption>> options = Optional.empty();
@@ -97,60 +92,50 @@ public final class FormFieldDropdownConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldDropdownConfig other) {
-            multiple(other.getMultiple());
-            options(other.getOptions());
-            placeholder(other.getPlaceholder());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "multiple", nulls = Nulls.SKIP)
         public Builder multiple(Optional<Boolean> multiple) {
-            this.multiple = multiple;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder multiple(Boolean multiple) {
-            this.multiple = Optional.ofNullable(multiple);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public Builder options(Optional<List<FormFieldDropdownConfigOption>> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder options(List<FormFieldDropdownConfigOption> options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldDropdownConfig build() {
-            return new FormFieldDropdownConfig(multiple, options, placeholder, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

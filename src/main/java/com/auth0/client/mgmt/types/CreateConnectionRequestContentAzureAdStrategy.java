@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentAzureAdStrategy {
-    public static final CreateConnectionRequestContentAzureAdStrategy WAAD =
-            new CreateConnectionRequestContentAzureAdStrategy(Value.WAAD, "waad");
+
+    public static final CreateConnectionRequestContentAzureAdStrategy WAAD = new CreateConnectionRequestContentAzureAdStrategy(Value.WAAD, "waad");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentAzureAdStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentAzureAdStrategy
-                        && this.string.equals(((CreateConnectionRequestContentAzureAdStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WAAD:
-                return visitor.visitWaad();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentAzureAdStrategy valueOf(String value) {
-        switch (value) {
-            case "waad":
-                return WAAD;
-            default:
-                return new CreateConnectionRequestContentAzureAdStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WAAD,
 
-        UNKNOWN
+        WAAD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWaad();
 
         T visitUnknown(String unknownType);

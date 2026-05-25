@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PhoneTemplateNotificationTypeEnum {
-    public static final PhoneTemplateNotificationTypeEnum CHANGE_PASSWORD =
-            new PhoneTemplateNotificationTypeEnum(Value.CHANGE_PASSWORD, "change_password");
 
-    public static final PhoneTemplateNotificationTypeEnum OTP_VERIFY =
-            new PhoneTemplateNotificationTypeEnum(Value.OTP_VERIFY, "otp_verify");
+    public static final PhoneTemplateNotificationTypeEnum CHANGE_PASSWORD = new PhoneTemplateNotificationTypeEnum(Value.CHANGE_PASSWORD, "change_password");
 
-    public static final PhoneTemplateNotificationTypeEnum OTP_ENROLL =
-            new PhoneTemplateNotificationTypeEnum(Value.OTP_ENROLL, "otp_enroll");
+    public static final PhoneTemplateNotificationTypeEnum OTP_VERIFY = new PhoneTemplateNotificationTypeEnum(Value.OTP_VERIFY, "otp_verify");
 
-    public static final PhoneTemplateNotificationTypeEnum BLOCKED_ACCOUNT =
-            new PhoneTemplateNotificationTypeEnum(Value.BLOCKED_ACCOUNT, "blocked_account");
+    public static final PhoneTemplateNotificationTypeEnum OTP_ENROLL = new PhoneTemplateNotificationTypeEnum(Value.OTP_ENROLL, "otp_enroll");
 
-    public static final PhoneTemplateNotificationTypeEnum PASSWORD_BREACH =
-            new PhoneTemplateNotificationTypeEnum(Value.PASSWORD_BREACH, "password_breach");
+    public static final PhoneTemplateNotificationTypeEnum BLOCKED_ACCOUNT = new PhoneTemplateNotificationTypeEnum(Value.BLOCKED_ACCOUNT, "blocked_account");
+
+    public static final PhoneTemplateNotificationTypeEnum PASSWORD_BREACH = new PhoneTemplateNotificationTypeEnum(Value.PASSWORD_BREACH, "password_breach");
 
     private final Value value;
 
@@ -32,78 +28,46 @@ public final class PhoneTemplateNotificationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PhoneTemplateNotificationTypeEnum
-                        && this.string.equals(((PhoneTemplateNotificationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CHANGE_PASSWORD:
-                return visitor.visitChangePassword();
-            case OTP_VERIFY:
-                return visitor.visitOtpVerify();
-            case OTP_ENROLL:
-                return visitor.visitOtpEnroll();
-            case BLOCKED_ACCOUNT:
-                return visitor.visitBlockedAccount();
-            case PASSWORD_BREACH:
-                return visitor.visitPasswordBreach();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PhoneTemplateNotificationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "change_password":
-                return CHANGE_PASSWORD;
-            case "otp_verify":
-                return OTP_VERIFY;
-            case "otp_enroll":
-                return OTP_ENROLL;
-            case "blocked_account":
-                return BLOCKED_ACCOUNT;
-            case "password_breach":
-                return PASSWORD_BREACH;
-            default:
-                return new PhoneTemplateNotificationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         OTP_VERIFY,
-
         OTP_ENROLL,
-
         CHANGE_PASSWORD,
-
         BLOCKED_ACCOUNT,
-
         PASSWORD_BREACH,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOtpVerify();
 
         T visitOtpEnroll();

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamDatadogEnum {
+
     public static final LogStreamDatadogEnum DATADOG = new LogStreamDatadogEnum(Value.DATADOG, "datadog");
 
     private final Value value;
@@ -19,53 +20,41 @@ public final class LogStreamDatadogEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamDatadogEnum && this.string.equals(((LogStreamDatadogEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DATADOG:
-                return visitor.visitDatadog();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamDatadogEnum valueOf(String value) {
-        switch (value) {
-            case "datadog":
-                return DATADOG;
-            default:
-                return new LogStreamDatadogEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DATADOG,
 
-        UNKNOWN
+        DATADOG, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDatadog();
 
         T visitUnknown(String unknownType);

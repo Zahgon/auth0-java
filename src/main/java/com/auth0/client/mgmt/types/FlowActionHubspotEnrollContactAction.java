@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionHubspotEnrollContactAction {
-    public static final FlowActionHubspotEnrollContactAction ENROLL_CONTACT =
-            new FlowActionHubspotEnrollContactAction(Value.ENROLL_CONTACT, "ENROLL_CONTACT");
+
+    public static final FlowActionHubspotEnrollContactAction ENROLL_CONTACT = new FlowActionHubspotEnrollContactAction(Value.ENROLL_CONTACT, "ENROLL_CONTACT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionHubspotEnrollContactAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionHubspotEnrollContactAction
-                        && this.string.equals(((FlowActionHubspotEnrollContactAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ENROLL_CONTACT:
-                return visitor.visitEnrollContact();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionHubspotEnrollContactAction valueOf(String value) {
-        switch (value) {
-            case "ENROLL_CONTACT":
-                return ENROLL_CONTACT;
-            default:
-                return new FlowActionHubspotEnrollContactAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ENROLL_CONTACT,
 
-        UNKNOWN
+        ENROLL_CONTACT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEnrollContact();
 
         T visitUnknown(String unknownType);

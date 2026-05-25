@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetAttackProtectionCaptchaResponseContent.Builder.class)
 public final class GetAttackProtectionCaptchaResponseContent {
+
     private final Optional<String> activeProviderId;
 
     private final Optional<AttackProtectionCaptchaArkoseResponseContent> arkose;
@@ -38,16 +39,7 @@ public final class GetAttackProtectionCaptchaResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetAttackProtectionCaptchaResponseContent(
-            Optional<String> activeProviderId,
-            Optional<AttackProtectionCaptchaArkoseResponseContent> arkose,
-            Optional<AttackProtectionCaptchaAuthChallengeResponseContent> authChallenge,
-            Optional<AttackProtectionCaptchaHcaptchaResponseContent> hcaptcha,
-            Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> friendlyCaptcha,
-            Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise,
-            Optional<AttackProtectionCaptchaRecaptchaV2ResponseContent> recaptchaV2,
-            Optional<Map<String, Object>> simpleCaptcha,
-            Map<String, Object> additionalProperties) {
+    private GetAttackProtectionCaptchaResponseContent(Optional<String> activeProviderId, Optional<AttackProtectionCaptchaArkoseResponseContent> arkose, Optional<AttackProtectionCaptchaAuthChallengeResponseContent> authChallenge, Optional<AttackProtectionCaptchaHcaptchaResponseContent> hcaptcha, Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> friendlyCaptcha, Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise, Optional<AttackProtectionCaptchaRecaptchaV2ResponseContent> recaptchaV2, Optional<Map<String, Object>> simpleCaptcha, Map<String, Object> additionalProperties) {
         this.activeProviderId = activeProviderId;
         this.arkose = arkose;
         this.authChallenge = authChallenge;
@@ -61,91 +53,75 @@ public final class GetAttackProtectionCaptchaResponseContent {
 
     @JsonProperty("active_provider_id")
     public Optional<String> getActiveProviderId() {
-        return activeProviderId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("arkose")
     public Optional<AttackProtectionCaptchaArkoseResponseContent> getArkose() {
-        return arkose;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("auth_challenge")
     public Optional<AttackProtectionCaptchaAuthChallengeResponseContent> getAuthChallenge() {
-        return authChallenge;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("hcaptcha")
     public Optional<AttackProtectionCaptchaHcaptchaResponseContent> getHcaptcha() {
-        return hcaptcha;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("friendly_captcha")
     public Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> getFriendlyCaptcha() {
-        return friendlyCaptcha;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("recaptcha_enterprise")
     public Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> getRecaptchaEnterprise() {
-        return recaptchaEnterprise;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("recaptcha_v2")
     public Optional<AttackProtectionCaptchaRecaptchaV2ResponseContent> getRecaptchaV2() {
-        return recaptchaV2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("simple_captcha")
     public Optional<Map<String, Object>> getSimpleCaptcha() {
-        return simpleCaptcha;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetAttackProtectionCaptchaResponseContent
-                && equalTo((GetAttackProtectionCaptchaResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetAttackProtectionCaptchaResponseContent other) {
-        return activeProviderId.equals(other.activeProviderId)
-                && arkose.equals(other.arkose)
-                && authChallenge.equals(other.authChallenge)
-                && hcaptcha.equals(other.hcaptcha)
-                && friendlyCaptcha.equals(other.friendlyCaptcha)
-                && recaptchaEnterprise.equals(other.recaptchaEnterprise)
-                && recaptchaV2.equals(other.recaptchaV2)
-                && simpleCaptcha.equals(other.simpleCaptcha);
+        return activeProviderId.equals(other.activeProviderId) && arkose.equals(other.arkose) && authChallenge.equals(other.authChallenge) && hcaptcha.equals(other.hcaptcha) && friendlyCaptcha.equals(other.friendlyCaptcha) && recaptchaEnterprise.equals(other.recaptchaEnterprise) && recaptchaV2.equals(other.recaptchaV2) && simpleCaptcha.equals(other.simpleCaptcha);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.activeProviderId,
-                this.arkose,
-                this.authChallenge,
-                this.hcaptcha,
-                this.friendlyCaptcha,
-                this.recaptchaEnterprise,
-                this.recaptchaV2,
-                this.simpleCaptcha);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> activeProviderId = Optional.empty();
 
         private Optional<AttackProtectionCaptchaArkoseResponseContent> arkose = Optional.empty();
@@ -156,8 +132,7 @@ public final class GetAttackProtectionCaptchaResponseContent {
 
         private Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> friendlyCaptcha = Optional.empty();
 
-        private Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise =
-                Optional.empty();
+        private Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise = Optional.empty();
 
         private Optional<AttackProtectionCaptchaRecaptchaV2ResponseContent> recaptchaV2 = Optional.empty();
 
@@ -166,132 +141,95 @@ public final class GetAttackProtectionCaptchaResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetAttackProtectionCaptchaResponseContent other) {
-            activeProviderId(other.getActiveProviderId());
-            arkose(other.getArkose());
-            authChallenge(other.getAuthChallenge());
-            hcaptcha(other.getHcaptcha());
-            friendlyCaptcha(other.getFriendlyCaptcha());
-            recaptchaEnterprise(other.getRecaptchaEnterprise());
-            recaptchaV2(other.getRecaptchaV2());
-            simpleCaptcha(other.getSimpleCaptcha());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "active_provider_id", nulls = Nulls.SKIP)
         public Builder activeProviderId(Optional<String> activeProviderId) {
-            this.activeProviderId = activeProviderId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder activeProviderId(String activeProviderId) {
-            this.activeProviderId = Optional.ofNullable(activeProviderId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "arkose", nulls = Nulls.SKIP)
         public Builder arkose(Optional<AttackProtectionCaptchaArkoseResponseContent> arkose) {
-            this.arkose = arkose;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder arkose(AttackProtectionCaptchaArkoseResponseContent arkose) {
-            this.arkose = Optional.ofNullable(arkose);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "auth_challenge", nulls = Nulls.SKIP)
         public Builder authChallenge(Optional<AttackProtectionCaptchaAuthChallengeResponseContent> authChallenge) {
-            this.authChallenge = authChallenge;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authChallenge(AttackProtectionCaptchaAuthChallengeResponseContent authChallenge) {
-            this.authChallenge = Optional.ofNullable(authChallenge);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "hcaptcha", nulls = Nulls.SKIP)
         public Builder hcaptcha(Optional<AttackProtectionCaptchaHcaptchaResponseContent> hcaptcha) {
-            this.hcaptcha = hcaptcha;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hcaptcha(AttackProtectionCaptchaHcaptchaResponseContent hcaptcha) {
-            this.hcaptcha = Optional.ofNullable(hcaptcha);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "friendly_captcha", nulls = Nulls.SKIP)
-        public Builder friendlyCaptcha(
-                Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> friendlyCaptcha) {
-            this.friendlyCaptcha = friendlyCaptcha;
-            return this;
+        public Builder friendlyCaptcha(Optional<AttackProtectionCaptchaFriendlyCaptchaResponseContent> friendlyCaptcha) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder friendlyCaptcha(AttackProtectionCaptchaFriendlyCaptchaResponseContent friendlyCaptcha) {
-            this.friendlyCaptcha = Optional.ofNullable(friendlyCaptcha);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "recaptcha_enterprise", nulls = Nulls.SKIP)
-        public Builder recaptchaEnterprise(
-                Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise) {
-            this.recaptchaEnterprise = recaptchaEnterprise;
-            return this;
+        public Builder recaptchaEnterprise(Optional<AttackProtectionCaptchaRecaptchaEnterpriseResponseContent> recaptchaEnterprise) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder recaptchaEnterprise(
-                AttackProtectionCaptchaRecaptchaEnterpriseResponseContent recaptchaEnterprise) {
-            this.recaptchaEnterprise = Optional.ofNullable(recaptchaEnterprise);
-            return this;
+        public Builder recaptchaEnterprise(AttackProtectionCaptchaRecaptchaEnterpriseResponseContent recaptchaEnterprise) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "recaptcha_v2", nulls = Nulls.SKIP)
         public Builder recaptchaV2(Optional<AttackProtectionCaptchaRecaptchaV2ResponseContent> recaptchaV2) {
-            this.recaptchaV2 = recaptchaV2;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder recaptchaV2(AttackProtectionCaptchaRecaptchaV2ResponseContent recaptchaV2) {
-            this.recaptchaV2 = Optional.ofNullable(recaptchaV2);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "simple_captcha", nulls = Nulls.SKIP)
         public Builder simpleCaptcha(Optional<Map<String, Object>> simpleCaptcha) {
-            this.simpleCaptcha = simpleCaptcha;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder simpleCaptcha(Map<String, Object> simpleCaptcha) {
-            this.simpleCaptcha = Optional.ofNullable(simpleCaptcha);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetAttackProtectionCaptchaResponseContent build() {
-            return new GetAttackProtectionCaptchaResponseContent(
-                    activeProviderId,
-                    arkose,
-                    authChallenge,
-                    hcaptcha,
-                    friendlyCaptcha,
-                    recaptchaEnterprise,
-                    recaptchaV2,
-                    simpleCaptcha,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateConnectionOptions.Builder.class)
 public final class UpdateConnectionOptions {
+
     private final OptionalNullable<ConnectionValidationOptions> validation;
 
     private final OptionalNullable<List<String>> nonPersistentAttrs;
@@ -76,8 +77,7 @@ public final class UpdateConnectionOptions {
 
     private final Optional<Boolean> disableSelfServiceChangePassword;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes;
 
@@ -99,44 +99,7 @@ public final class UpdateConnectionOptions {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateConnectionOptions(
-            OptionalNullable<ConnectionValidationOptions> validation,
-            OptionalNullable<List<String>> nonPersistentAttrs,
-            Optional<List<ConnectionIdentifierPrecedenceEnum>> precedence,
-            Optional<ConnectionAttributes> attributes,
-            Optional<Boolean> enableScriptContext,
-            Optional<Boolean> enabledDatabaseCustomization,
-            Optional<Boolean> importMode,
-            OptionalNullable<Map<String, OptionalNullable<String>>> configuration,
-            Optional<ConnectionCustomScripts> customScripts,
-            OptionalNullable<ConnectionAuthenticationMethods> authenticationMethods,
-            OptionalNullable<ConnectionPasskeyOptions> passkeyOptions,
-            OptionalNullable<ConnectionPasswordPolicyEnum> passwordPolicy,
-            OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions,
-            OptionalNullable<ConnectionPasswordHistoryOptions> passwordHistory,
-            OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo,
-            OptionalNullable<ConnectionPasswordDictionaryOptions> passwordDictionary,
-            Optional<Boolean> apiEnableUsers,
-            Optional<Boolean> apiEnableGroups,
-            Optional<Boolean> basicProfile,
-            Optional<Boolean> extAdmin,
-            Optional<Boolean> extIsSuspended,
-            Optional<Boolean> extAgreedTerms,
-            Optional<Boolean> extGroups,
-            Optional<Boolean> extAssignedPlans,
-            Optional<Boolean> extProfile,
-            Optional<Boolean> disableSelfServiceChangePassword,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<ConnectionGatewayAuthentication> gatewayAuthentication,
-            OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens,
-            Optional<ConnectionPasswordOptions> passwordOptions,
-            Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings,
-            OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs,
-            OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod,
-            OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg,
-            Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat,
-            Map<String, Object> additionalProperties) {
+    private UpdateConnectionOptions(OptionalNullable<ConnectionValidationOptions> validation, OptionalNullable<List<String>> nonPersistentAttrs, Optional<List<ConnectionIdentifierPrecedenceEnum>> precedence, Optional<ConnectionAttributes> attributes, Optional<Boolean> enableScriptContext, Optional<Boolean> enabledDatabaseCustomization, Optional<Boolean> importMode, OptionalNullable<Map<String, OptionalNullable<String>>> configuration, Optional<ConnectionCustomScripts> customScripts, OptionalNullable<ConnectionAuthenticationMethods> authenticationMethods, OptionalNullable<ConnectionPasskeyOptions> passkeyOptions, OptionalNullable<ConnectionPasswordPolicyEnum> passwordPolicy, OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions, OptionalNullable<ConnectionPasswordHistoryOptions> passwordHistory, OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo, OptionalNullable<ConnectionPasswordDictionaryOptions> passwordDictionary, Optional<Boolean> apiEnableUsers, Optional<Boolean> apiEnableGroups, Optional<Boolean> basicProfile, Optional<Boolean> extAdmin, Optional<Boolean> extIsSuspended, Optional<Boolean> extAgreedTerms, Optional<Boolean> extGroups, Optional<Boolean> extAssignedPlans, Optional<Boolean> extProfile, Optional<Boolean> disableSelfServiceChangePassword, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<ConnectionGatewayAuthentication> gatewayAuthentication, OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens, Optional<ConnectionPasswordOptions> passwordOptions, Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings, OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs, OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod, OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg, Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat, Map<String, Object> additionalProperties) {
         this.validation = validation;
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.precedence = precedence;
@@ -179,10 +142,7 @@ public final class UpdateConnectionOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("validation")
     public OptionalNullable<ConnectionValidationOptions> getValidation() {
-        if (validation == null) {
-            return OptionalNullable.absent();
-        }
-        return validation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -191,10 +151,7 @@ public final class UpdateConnectionOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("non_persistent_attrs")
     public OptionalNullable<List<String>> getNonPersistentAttrs() {
-        if (nonPersistentAttrs == null) {
-            return OptionalNullable.absent();
-        }
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -202,12 +159,12 @@ public final class UpdateConnectionOptions {
      */
     @JsonProperty("precedence")
     public Optional<List<ConnectionIdentifierPrecedenceEnum>> getPrecedence() {
-        return precedence;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("attributes")
     public Optional<ConnectionAttributes> getAttributes() {
-        return attributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -215,7 +172,7 @@ public final class UpdateConnectionOptions {
      */
     @JsonProperty("enable_script_context")
     public Optional<Boolean> getEnableScriptContext() {
-        return enableScriptContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -223,7 +180,7 @@ public final class UpdateConnectionOptions {
      */
     @JsonProperty("enabledDatabaseCustomization")
     public Optional<Boolean> getEnabledDatabaseCustomization() {
-        return enabledDatabaseCustomization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -231,7 +188,7 @@ public final class UpdateConnectionOptions {
      */
     @JsonProperty("import_mode")
     public Optional<Boolean> getImportMode() {
-        return importMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -240,202 +197,160 @@ public final class UpdateConnectionOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("configuration")
     public OptionalNullable<Map<String, OptionalNullable<String>>> getConfiguration() {
-        if (configuration == null) {
-            return OptionalNullable.absent();
-        }
-        return configuration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("customScripts")
     public Optional<ConnectionCustomScripts> getCustomScripts() {
-        return customScripts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("authentication_methods")
     public OptionalNullable<ConnectionAuthenticationMethods> getAuthenticationMethods() {
-        if (authenticationMethods == null) {
-            return OptionalNullable.absent();
-        }
-        return authenticationMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("passkey_options")
     public OptionalNullable<ConnectionPasskeyOptions> getPasskeyOptions() {
-        if (passkeyOptions == null) {
-            return OptionalNullable.absent();
-        }
-        return passkeyOptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("passwordPolicy")
     public OptionalNullable<ConnectionPasswordPolicyEnum> getPasswordPolicy() {
-        if (passwordPolicy == null) {
-            return OptionalNullable.absent();
-        }
-        return passwordPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("password_complexity_options")
     public OptionalNullable<ConnectionPasswordComplexityOptions> getPasswordComplexityOptions() {
-        if (passwordComplexityOptions == null) {
-            return OptionalNullable.absent();
-        }
-        return passwordComplexityOptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("password_history")
     public OptionalNullable<ConnectionPasswordHistoryOptions> getPasswordHistory() {
-        if (passwordHistory == null) {
-            return OptionalNullable.absent();
-        }
-        return passwordHistory;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("password_no_personal_info")
     public OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> getPasswordNoPersonalInfo() {
-        if (passwordNoPersonalInfo == null) {
-            return OptionalNullable.absent();
-        }
-        return passwordNoPersonalInfo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("password_dictionary")
     public OptionalNullable<ConnectionPasswordDictionaryOptions> getPasswordDictionary() {
-        if (passwordDictionary == null) {
-            return OptionalNullable.absent();
-        }
-        return passwordDictionary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_enable_users")
     public Optional<Boolean> getApiEnableUsers() {
-        return apiEnableUsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_enable_groups")
     public Optional<Boolean> getApiEnableGroups() {
-        return apiEnableGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("basic_profile")
     public Optional<Boolean> getBasicProfile() {
-        return basicProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_admin")
     public Optional<Boolean> getExtAdmin() {
-        return extAdmin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_is_suspended")
     public Optional<Boolean> getExtIsSuspended() {
-        return extIsSuspended;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_agreed_terms")
     public Optional<Boolean> getExtAgreedTerms() {
-        return extAgreedTerms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_groups")
     public Optional<Boolean> getExtGroups() {
-        return extGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_assigned_plans")
     public Optional<Boolean> getExtAssignedPlans() {
-        return extAssignedPlans;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_profile")
     public Optional<Boolean> getExtProfile() {
-        return extProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("disable_self_service_change_password")
     public Optional<Boolean> getDisableSelfServiceChangePassword() {
-        return disableSelfServiceChangePassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("gateway_authentication")
     public OptionalNullable<ConnectionGatewayAuthentication> getGatewayAuthentication() {
-        if (gatewayAuthentication == null) {
-            return OptionalNullable.absent();
-        }
-        return gatewayAuthentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("federated_connections_access_tokens")
     public OptionalNullable<ConnectionFederatedConnectionsAccessTokens> getFederatedConnectionsAccessTokens() {
-        if (federatedConnectionsAccessTokens == null) {
-            return OptionalNullable.absent();
-        }
-        return federatedConnectionsAccessTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("password_options")
     public Optional<ConnectionPasswordOptions> getPasswordOptions() {
-        return passwordOptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("assertion_decryption_settings")
     public Optional<ConnectionAssertionDecryptionSettings> getAssertionDecryptionSettings() {
-        return assertionDecryptionSettings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("id_token_signed_response_algs")
     public OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> getIdTokenSignedResponseAlgs() {
-        if (idTokenSignedResponseAlgs == null) {
-            return OptionalNullable.absent();
-        }
-        return idTokenSignedResponseAlgs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_endpoint_auth_method")
     public OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> getTokenEndpointAuthMethod() {
-        if (tokenEndpointAuthMethod == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenEndpointAuthMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_endpoint_auth_signing_alg")
     public OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> getTokenEndpointAuthSigningAlg() {
-        if (tokenEndpointAuthSigningAlg == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenEndpointAuthSigningAlg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint_jwtca_aud_format")
     public Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> getTokenEndpointJwtcaAudFormat() {
-        return tokenEndpointJwtcaAudFormat;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -500,8 +415,7 @@ public final class UpdateConnectionOptions {
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
@@ -537,106 +451,35 @@ public final class UpdateConnectionOptions {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateConnectionOptions && equalTo((UpdateConnectionOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateConnectionOptions other) {
-        return validation.equals(other.validation)
-                && nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && precedence.equals(other.precedence)
-                && attributes.equals(other.attributes)
-                && enableScriptContext.equals(other.enableScriptContext)
-                && enabledDatabaseCustomization.equals(other.enabledDatabaseCustomization)
-                && importMode.equals(other.importMode)
-                && configuration.equals(other.configuration)
-                && customScripts.equals(other.customScripts)
-                && authenticationMethods.equals(other.authenticationMethods)
-                && passkeyOptions.equals(other.passkeyOptions)
-                && passwordPolicy.equals(other.passwordPolicy)
-                && passwordComplexityOptions.equals(other.passwordComplexityOptions)
-                && passwordHistory.equals(other.passwordHistory)
-                && passwordNoPersonalInfo.equals(other.passwordNoPersonalInfo)
-                && passwordDictionary.equals(other.passwordDictionary)
-                && apiEnableUsers.equals(other.apiEnableUsers)
-                && apiEnableGroups.equals(other.apiEnableGroups)
-                && basicProfile.equals(other.basicProfile)
-                && extAdmin.equals(other.extAdmin)
-                && extIsSuspended.equals(other.extIsSuspended)
-                && extAgreedTerms.equals(other.extAgreedTerms)
-                && extGroups.equals(other.extGroups)
-                && extAssignedPlans.equals(other.extAssignedPlans)
-                && extProfile.equals(other.extProfile)
-                && disableSelfServiceChangePassword.equals(other.disableSelfServiceChangePassword)
-                && upstreamParams.equals(other.upstreamParams)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && gatewayAuthentication.equals(other.gatewayAuthentication)
-                && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens)
-                && passwordOptions.equals(other.passwordOptions)
-                && assertionDecryptionSettings.equals(other.assertionDecryptionSettings)
-                && idTokenSignedResponseAlgs.equals(other.idTokenSignedResponseAlgs)
-                && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod)
-                && tokenEndpointAuthSigningAlg.equals(other.tokenEndpointAuthSigningAlg)
-                && tokenEndpointJwtcaAudFormat.equals(other.tokenEndpointJwtcaAudFormat);
+        return validation.equals(other.validation) && nonPersistentAttrs.equals(other.nonPersistentAttrs) && precedence.equals(other.precedence) && attributes.equals(other.attributes) && enableScriptContext.equals(other.enableScriptContext) && enabledDatabaseCustomization.equals(other.enabledDatabaseCustomization) && importMode.equals(other.importMode) && configuration.equals(other.configuration) && customScripts.equals(other.customScripts) && authenticationMethods.equals(other.authenticationMethods) && passkeyOptions.equals(other.passkeyOptions) && passwordPolicy.equals(other.passwordPolicy) && passwordComplexityOptions.equals(other.passwordComplexityOptions) && passwordHistory.equals(other.passwordHistory) && passwordNoPersonalInfo.equals(other.passwordNoPersonalInfo) && passwordDictionary.equals(other.passwordDictionary) && apiEnableUsers.equals(other.apiEnableUsers) && apiEnableGroups.equals(other.apiEnableGroups) && basicProfile.equals(other.basicProfile) && extAdmin.equals(other.extAdmin) && extIsSuspended.equals(other.extIsSuspended) && extAgreedTerms.equals(other.extAgreedTerms) && extGroups.equals(other.extGroups) && extAssignedPlans.equals(other.extAssignedPlans) && extProfile.equals(other.extProfile) && disableSelfServiceChangePassword.equals(other.disableSelfServiceChangePassword) && upstreamParams.equals(other.upstreamParams) && setUserRootAttributes.equals(other.setUserRootAttributes) && gatewayAuthentication.equals(other.gatewayAuthentication) && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens) && passwordOptions.equals(other.passwordOptions) && assertionDecryptionSettings.equals(other.assertionDecryptionSettings) && idTokenSignedResponseAlgs.equals(other.idTokenSignedResponseAlgs) && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod) && tokenEndpointAuthSigningAlg.equals(other.tokenEndpointAuthSigningAlg) && tokenEndpointJwtcaAudFormat.equals(other.tokenEndpointJwtcaAudFormat);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.validation,
-                this.nonPersistentAttrs,
-                this.precedence,
-                this.attributes,
-                this.enableScriptContext,
-                this.enabledDatabaseCustomization,
-                this.importMode,
-                this.configuration,
-                this.customScripts,
-                this.authenticationMethods,
-                this.passkeyOptions,
-                this.passwordPolicy,
-                this.passwordComplexityOptions,
-                this.passwordHistory,
-                this.passwordNoPersonalInfo,
-                this.passwordDictionary,
-                this.apiEnableUsers,
-                this.apiEnableGroups,
-                this.basicProfile,
-                this.extAdmin,
-                this.extIsSuspended,
-                this.extAgreedTerms,
-                this.extGroups,
-                this.extAssignedPlans,
-                this.extProfile,
-                this.disableSelfServiceChangePassword,
-                this.upstreamParams,
-                this.setUserRootAttributes,
-                this.gatewayAuthentication,
-                this.federatedConnectionsAccessTokens,
-                this.passwordOptions,
-                this.assertionDecryptionSettings,
-                this.idTokenSignedResponseAlgs,
-                this.tokenEndpointAuthMethod,
-                this.tokenEndpointAuthSigningAlg,
-                this.tokenEndpointJwtcaAudFormat);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<ConnectionValidationOptions> validation = OptionalNullable.absent();
 
         private OptionalNullable<List<String>> nonPersistentAttrs = OptionalNullable.absent();
@@ -661,13 +504,11 @@ public final class UpdateConnectionOptions {
 
         private OptionalNullable<ConnectionPasswordPolicyEnum> passwordPolicy = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions = OptionalNullable.absent();
 
         private OptionalNullable<ConnectionPasswordHistoryOptions> passwordHistory = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo = OptionalNullable.absent();
 
         private OptionalNullable<ConnectionPasswordDictionaryOptions> passwordDictionary = OptionalNullable.absent();
 
@@ -691,105 +532,51 @@ public final class UpdateConnectionOptions {
 
         private Optional<Boolean> disableSelfServiceChangePassword = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
         private OptionalNullable<ConnectionGatewayAuthentication> gatewayAuthentication = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens = OptionalNullable.absent();
 
         private Optional<ConnectionPasswordOptions> passwordOptions = Optional.empty();
 
         private Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings = Optional.empty();
 
-        private OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs =
-                OptionalNullable.absent();
+        private OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg = OptionalNullable.absent();
 
         private Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateConnectionOptions other) {
-            validation(other.getValidation());
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            precedence(other.getPrecedence());
-            attributes(other.getAttributes());
-            enableScriptContext(other.getEnableScriptContext());
-            enabledDatabaseCustomization(other.getEnabledDatabaseCustomization());
-            importMode(other.getImportMode());
-            configuration(other.getConfiguration());
-            customScripts(other.getCustomScripts());
-            authenticationMethods(other.getAuthenticationMethods());
-            passkeyOptions(other.getPasskeyOptions());
-            passwordPolicy(other.getPasswordPolicy());
-            passwordComplexityOptions(other.getPasswordComplexityOptions());
-            passwordHistory(other.getPasswordHistory());
-            passwordNoPersonalInfo(other.getPasswordNoPersonalInfo());
-            passwordDictionary(other.getPasswordDictionary());
-            apiEnableUsers(other.getApiEnableUsers());
-            apiEnableGroups(other.getApiEnableGroups());
-            basicProfile(other.getBasicProfile());
-            extAdmin(other.getExtAdmin());
-            extIsSuspended(other.getExtIsSuspended());
-            extAgreedTerms(other.getExtAgreedTerms());
-            extGroups(other.getExtGroups());
-            extAssignedPlans(other.getExtAssignedPlans());
-            extProfile(other.getExtProfile());
-            disableSelfServiceChangePassword(other.getDisableSelfServiceChangePassword());
-            upstreamParams(other.getUpstreamParams());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            gatewayAuthentication(other.getGatewayAuthentication());
-            federatedConnectionsAccessTokens(other.getFederatedConnectionsAccessTokens());
-            passwordOptions(other.getPasswordOptions());
-            assertionDecryptionSettings(other.getAssertionDecryptionSettings());
-            idTokenSignedResponseAlgs(other.getIdTokenSignedResponseAlgs());
-            tokenEndpointAuthMethod(other.getTokenEndpointAuthMethod());
-            tokenEndpointAuthSigningAlg(other.getTokenEndpointAuthSigningAlg());
-            tokenEndpointJwtcaAudFormat(other.getTokenEndpointJwtcaAudFormat());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "validation", nulls = Nulls.SKIP)
         public Builder validation(@Nullable OptionalNullable<ConnectionValidationOptions> validation) {
-            this.validation = validation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder validation(ConnectionValidationOptions validation) {
-            this.validation = OptionalNullable.of(validation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder validation(Optional<ConnectionValidationOptions> validation) {
-            if (validation.isPresent()) {
-                this.validation = OptionalNullable.of(validation.get());
-            } else {
-                this.validation = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder validation(com.auth0.client.mgmt.core.Nullable<ConnectionValidationOptions> validation) {
-            if (validation.isNull()) {
-                this.validation = OptionalNullable.ofNull();
-            } else if (validation.isEmpty()) {
-                this.validation = OptionalNullable.absent();
-            } else {
-                this.validation = OptionalNullable.of(validation.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -797,33 +584,19 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(@Nullable OptionalNullable<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = OptionalNullable.of(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            if (nonPersistentAttrs.isPresent()) {
-                this.nonPersistentAttrs = OptionalNullable.of(nonPersistentAttrs.get());
-            } else {
-                this.nonPersistentAttrs = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(com.auth0.client.mgmt.core.Nullable<List<String>> nonPersistentAttrs) {
-            if (nonPersistentAttrs.isNull()) {
-                this.nonPersistentAttrs = OptionalNullable.ofNull();
-            } else if (nonPersistentAttrs.isEmpty()) {
-                this.nonPersistentAttrs = OptionalNullable.absent();
-            } else {
-                this.nonPersistentAttrs = OptionalNullable.of(nonPersistentAttrs.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -831,24 +604,20 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "precedence", nulls = Nulls.SKIP)
         public Builder precedence(Optional<List<ConnectionIdentifierPrecedenceEnum>> precedence) {
-            this.precedence = precedence;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder precedence(List<ConnectionIdentifierPrecedenceEnum> precedence) {
-            this.precedence = Optional.ofNullable(precedence);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "attributes", nulls = Nulls.SKIP)
         public Builder attributes(Optional<ConnectionAttributes> attributes) {
-            this.attributes = attributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder attributes(ConnectionAttributes attributes) {
-            this.attributes = Optional.ofNullable(attributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -856,13 +625,11 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "enable_script_context", nulls = Nulls.SKIP)
         public Builder enableScriptContext(Optional<Boolean> enableScriptContext) {
-            this.enableScriptContext = enableScriptContext;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableScriptContext(Boolean enableScriptContext) {
-            this.enableScriptContext = Optional.ofNullable(enableScriptContext);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -870,13 +637,11 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "enabledDatabaseCustomization", nulls = Nulls.SKIP)
         public Builder enabledDatabaseCustomization(Optional<Boolean> enabledDatabaseCustomization) {
-            this.enabledDatabaseCustomization = enabledDatabaseCustomization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledDatabaseCustomization(Boolean enabledDatabaseCustomization) {
-            this.enabledDatabaseCustomization = Optional.ofNullable(enabledDatabaseCustomization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -884,13 +649,11 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "import_mode", nulls = Nulls.SKIP)
         public Builder importMode(Optional<Boolean> importMode) {
-            this.importMode = importMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder importMode(Boolean importMode) {
-            this.importMode = Optional.ofNullable(importMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -898,697 +661,387 @@ public final class UpdateConnectionOptions {
          */
         @JsonSetter(value = "configuration", nulls = Nulls.SKIP)
         public Builder configuration(@Nullable OptionalNullable<Map<String, OptionalNullable<String>>> configuration) {
-            this.configuration = configuration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder configuration(Map<String, OptionalNullable<String>> configuration) {
-            this.configuration = OptionalNullable.of(configuration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder configuration(Optional<Map<String, OptionalNullable<String>>> configuration) {
-            if (configuration.isPresent()) {
-                this.configuration = OptionalNullable.of(configuration.get());
-            } else {
-                this.configuration = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder configuration(
-                com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<String>>> configuration) {
-            if (configuration.isNull()) {
-                this.configuration = OptionalNullable.ofNull();
-            } else if (configuration.isEmpty()) {
-                this.configuration = OptionalNullable.absent();
-            } else {
-                this.configuration = OptionalNullable.of(configuration.get());
-            }
-            return this;
+        public Builder configuration(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<String>>> configuration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "customScripts", nulls = Nulls.SKIP)
         public Builder customScripts(Optional<ConnectionCustomScripts> customScripts) {
-            this.customScripts = customScripts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customScripts(ConnectionCustomScripts customScripts) {
-            this.customScripts = Optional.ofNullable(customScripts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authentication_methods", nulls = Nulls.SKIP)
-        public Builder authenticationMethods(
-                @Nullable OptionalNullable<ConnectionAuthenticationMethods> authenticationMethods) {
-            this.authenticationMethods = authenticationMethods;
-            return this;
+        public Builder authenticationMethods(@Nullable OptionalNullable<ConnectionAuthenticationMethods> authenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authenticationMethods(ConnectionAuthenticationMethods authenticationMethods) {
-            this.authenticationMethods = OptionalNullable.of(authenticationMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authenticationMethods(Optional<ConnectionAuthenticationMethods> authenticationMethods) {
-            if (authenticationMethods.isPresent()) {
-                this.authenticationMethods = OptionalNullable.of(authenticationMethods.get());
-            } else {
-                this.authenticationMethods = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder authenticationMethods(
-                com.auth0.client.mgmt.core.Nullable<ConnectionAuthenticationMethods> authenticationMethods) {
-            if (authenticationMethods.isNull()) {
-                this.authenticationMethods = OptionalNullable.ofNull();
-            } else if (authenticationMethods.isEmpty()) {
-                this.authenticationMethods = OptionalNullable.absent();
-            } else {
-                this.authenticationMethods = OptionalNullable.of(authenticationMethods.get());
-            }
-            return this;
+        public Builder authenticationMethods(com.auth0.client.mgmt.core.Nullable<ConnectionAuthenticationMethods> authenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "passkey_options", nulls = Nulls.SKIP)
         public Builder passkeyOptions(@Nullable OptionalNullable<ConnectionPasskeyOptions> passkeyOptions) {
-            this.passkeyOptions = passkeyOptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passkeyOptions(ConnectionPasskeyOptions passkeyOptions) {
-            this.passkeyOptions = OptionalNullable.of(passkeyOptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passkeyOptions(Optional<ConnectionPasskeyOptions> passkeyOptions) {
-            if (passkeyOptions.isPresent()) {
-                this.passkeyOptions = OptionalNullable.of(passkeyOptions.get());
-            } else {
-                this.passkeyOptions = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passkeyOptions(com.auth0.client.mgmt.core.Nullable<ConnectionPasskeyOptions> passkeyOptions) {
-            if (passkeyOptions.isNull()) {
-                this.passkeyOptions = OptionalNullable.ofNull();
-            } else if (passkeyOptions.isEmpty()) {
-                this.passkeyOptions = OptionalNullable.absent();
-            } else {
-                this.passkeyOptions = OptionalNullable.of(passkeyOptions.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "passwordPolicy", nulls = Nulls.SKIP)
         public Builder passwordPolicy(@Nullable OptionalNullable<ConnectionPasswordPolicyEnum> passwordPolicy) {
-            this.passwordPolicy = passwordPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordPolicy(ConnectionPasswordPolicyEnum passwordPolicy) {
-            this.passwordPolicy = OptionalNullable.of(passwordPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordPolicy(Optional<ConnectionPasswordPolicyEnum> passwordPolicy) {
-            if (passwordPolicy.isPresent()) {
-                this.passwordPolicy = OptionalNullable.of(passwordPolicy.get());
-            } else {
-                this.passwordPolicy = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordPolicy(
-                com.auth0.client.mgmt.core.Nullable<ConnectionPasswordPolicyEnum> passwordPolicy) {
-            if (passwordPolicy.isNull()) {
-                this.passwordPolicy = OptionalNullable.ofNull();
-            } else if (passwordPolicy.isEmpty()) {
-                this.passwordPolicy = OptionalNullable.absent();
-            } else {
-                this.passwordPolicy = OptionalNullable.of(passwordPolicy.get());
-            }
-            return this;
+        public Builder passwordPolicy(com.auth0.client.mgmt.core.Nullable<ConnectionPasswordPolicyEnum> passwordPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password_complexity_options", nulls = Nulls.SKIP)
-        public Builder passwordComplexityOptions(
-                @Nullable OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
-            this.passwordComplexityOptions = passwordComplexityOptions;
-            return this;
+        public Builder passwordComplexityOptions(@Nullable OptionalNullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordComplexityOptions(ConnectionPasswordComplexityOptions passwordComplexityOptions) {
-            this.passwordComplexityOptions = OptionalNullable.of(passwordComplexityOptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordComplexityOptions(
-                Optional<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
-            if (passwordComplexityOptions.isPresent()) {
-                this.passwordComplexityOptions = OptionalNullable.of(passwordComplexityOptions.get());
-            } else {
-                this.passwordComplexityOptions = OptionalNullable.absent();
-            }
-            return this;
+        public Builder passwordComplexityOptions(Optional<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordComplexityOptions(
-                com.auth0.client.mgmt.core.Nullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
-            if (passwordComplexityOptions.isNull()) {
-                this.passwordComplexityOptions = OptionalNullable.ofNull();
-            } else if (passwordComplexityOptions.isEmpty()) {
-                this.passwordComplexityOptions = OptionalNullable.absent();
-            } else {
-                this.passwordComplexityOptions = OptionalNullable.of(passwordComplexityOptions.get());
-            }
-            return this;
+        public Builder passwordComplexityOptions(com.auth0.client.mgmt.core.Nullable<ConnectionPasswordComplexityOptions> passwordComplexityOptions) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password_history", nulls = Nulls.SKIP)
         public Builder passwordHistory(@Nullable OptionalNullable<ConnectionPasswordHistoryOptions> passwordHistory) {
-            this.passwordHistory = passwordHistory;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordHistory(ConnectionPasswordHistoryOptions passwordHistory) {
-            this.passwordHistory = OptionalNullable.of(passwordHistory);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordHistory(Optional<ConnectionPasswordHistoryOptions> passwordHistory) {
-            if (passwordHistory.isPresent()) {
-                this.passwordHistory = OptionalNullable.of(passwordHistory.get());
-            } else {
-                this.passwordHistory = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordHistory(
-                com.auth0.client.mgmt.core.Nullable<ConnectionPasswordHistoryOptions> passwordHistory) {
-            if (passwordHistory.isNull()) {
-                this.passwordHistory = OptionalNullable.ofNull();
-            } else if (passwordHistory.isEmpty()) {
-                this.passwordHistory = OptionalNullable.absent();
-            } else {
-                this.passwordHistory = OptionalNullable.of(passwordHistory.get());
-            }
-            return this;
+        public Builder passwordHistory(com.auth0.client.mgmt.core.Nullable<ConnectionPasswordHistoryOptions> passwordHistory) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password_no_personal_info", nulls = Nulls.SKIP)
-        public Builder passwordNoPersonalInfo(
-                @Nullable OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
-            this.passwordNoPersonalInfo = passwordNoPersonalInfo;
-            return this;
+        public Builder passwordNoPersonalInfo(@Nullable OptionalNullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordNoPersonalInfo(ConnectionPasswordNoPersonalInfoOptions passwordNoPersonalInfo) {
-            this.passwordNoPersonalInfo = OptionalNullable.of(passwordNoPersonalInfo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordNoPersonalInfo(
-                Optional<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
-            if (passwordNoPersonalInfo.isPresent()) {
-                this.passwordNoPersonalInfo = OptionalNullable.of(passwordNoPersonalInfo.get());
-            } else {
-                this.passwordNoPersonalInfo = OptionalNullable.absent();
-            }
-            return this;
+        public Builder passwordNoPersonalInfo(Optional<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordNoPersonalInfo(
-                com.auth0.client.mgmt.core.Nullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
-            if (passwordNoPersonalInfo.isNull()) {
-                this.passwordNoPersonalInfo = OptionalNullable.ofNull();
-            } else if (passwordNoPersonalInfo.isEmpty()) {
-                this.passwordNoPersonalInfo = OptionalNullable.absent();
-            } else {
-                this.passwordNoPersonalInfo = OptionalNullable.of(passwordNoPersonalInfo.get());
-            }
-            return this;
+        public Builder passwordNoPersonalInfo(com.auth0.client.mgmt.core.Nullable<ConnectionPasswordNoPersonalInfoOptions> passwordNoPersonalInfo) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password_dictionary", nulls = Nulls.SKIP)
-        public Builder passwordDictionary(
-                @Nullable OptionalNullable<ConnectionPasswordDictionaryOptions> passwordDictionary) {
-            this.passwordDictionary = passwordDictionary;
-            return this;
+        public Builder passwordDictionary(@Nullable OptionalNullable<ConnectionPasswordDictionaryOptions> passwordDictionary) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordDictionary(ConnectionPasswordDictionaryOptions passwordDictionary) {
-            this.passwordDictionary = OptionalNullable.of(passwordDictionary);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordDictionary(Optional<ConnectionPasswordDictionaryOptions> passwordDictionary) {
-            if (passwordDictionary.isPresent()) {
-                this.passwordDictionary = OptionalNullable.of(passwordDictionary.get());
-            } else {
-                this.passwordDictionary = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder passwordDictionary(
-                com.auth0.client.mgmt.core.Nullable<ConnectionPasswordDictionaryOptions> passwordDictionary) {
-            if (passwordDictionary.isNull()) {
-                this.passwordDictionary = OptionalNullable.ofNull();
-            } else if (passwordDictionary.isEmpty()) {
-                this.passwordDictionary = OptionalNullable.absent();
-            } else {
-                this.passwordDictionary = OptionalNullable.of(passwordDictionary.get());
-            }
-            return this;
+        public Builder passwordDictionary(com.auth0.client.mgmt.core.Nullable<ConnectionPasswordDictionaryOptions> passwordDictionary) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "api_enable_users", nulls = Nulls.SKIP)
         public Builder apiEnableUsers(Optional<Boolean> apiEnableUsers) {
-            this.apiEnableUsers = apiEnableUsers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiEnableUsers(Boolean apiEnableUsers) {
-            this.apiEnableUsers = Optional.ofNullable(apiEnableUsers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "api_enable_groups", nulls = Nulls.SKIP)
         public Builder apiEnableGroups(Optional<Boolean> apiEnableGroups) {
-            this.apiEnableGroups = apiEnableGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiEnableGroups(Boolean apiEnableGroups) {
-            this.apiEnableGroups = Optional.ofNullable(apiEnableGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "basic_profile", nulls = Nulls.SKIP)
         public Builder basicProfile(Optional<Boolean> basicProfile) {
-            this.basicProfile = basicProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder basicProfile(Boolean basicProfile) {
-            this.basicProfile = Optional.ofNullable(basicProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_admin", nulls = Nulls.SKIP)
         public Builder extAdmin(Optional<Boolean> extAdmin) {
-            this.extAdmin = extAdmin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extAdmin(Boolean extAdmin) {
-            this.extAdmin = Optional.ofNullable(extAdmin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_is_suspended", nulls = Nulls.SKIP)
         public Builder extIsSuspended(Optional<Boolean> extIsSuspended) {
-            this.extIsSuspended = extIsSuspended;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extIsSuspended(Boolean extIsSuspended) {
-            this.extIsSuspended = Optional.ofNullable(extIsSuspended);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_agreed_terms", nulls = Nulls.SKIP)
         public Builder extAgreedTerms(Optional<Boolean> extAgreedTerms) {
-            this.extAgreedTerms = extAgreedTerms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extAgreedTerms(Boolean extAgreedTerms) {
-            this.extAgreedTerms = Optional.ofNullable(extAgreedTerms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_groups", nulls = Nulls.SKIP)
         public Builder extGroups(Optional<Boolean> extGroups) {
-            this.extGroups = extGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extGroups(Boolean extGroups) {
-            this.extGroups = Optional.ofNullable(extGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_assigned_plans", nulls = Nulls.SKIP)
         public Builder extAssignedPlans(Optional<Boolean> extAssignedPlans) {
-            this.extAssignedPlans = extAssignedPlans;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extAssignedPlans(Boolean extAssignedPlans) {
-            this.extAssignedPlans = Optional.ofNullable(extAssignedPlans);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ext_profile", nulls = Nulls.SKIP)
         public Builder extProfile(Optional<Boolean> extProfile) {
-            this.extProfile = extProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extProfile(Boolean extProfile) {
-            this.extProfile = Optional.ofNullable(extProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "disable_self_service_change_password", nulls = Nulls.SKIP)
         public Builder disableSelfServiceChangePassword(Optional<Boolean> disableSelfServiceChangePassword) {
-            this.disableSelfServiceChangePassword = disableSelfServiceChangePassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableSelfServiceChangePassword(Boolean disableSelfServiceChangePassword) {
-            this.disableSelfServiceChangePassword = Optional.ofNullable(disableSelfServiceChangePassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "gateway_authentication", nulls = Nulls.SKIP)
-        public Builder gatewayAuthentication(
-                @Nullable OptionalNullable<ConnectionGatewayAuthentication> gatewayAuthentication) {
-            this.gatewayAuthentication = gatewayAuthentication;
-            return this;
+        public Builder gatewayAuthentication(@Nullable OptionalNullable<ConnectionGatewayAuthentication> gatewayAuthentication) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gatewayAuthentication(ConnectionGatewayAuthentication gatewayAuthentication) {
-            this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gatewayAuthentication(Optional<ConnectionGatewayAuthentication> gatewayAuthentication) {
-            if (gatewayAuthentication.isPresent()) {
-                this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication.get());
-            } else {
-                this.gatewayAuthentication = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder gatewayAuthentication(
-                com.auth0.client.mgmt.core.Nullable<ConnectionGatewayAuthentication> gatewayAuthentication) {
-            if (gatewayAuthentication.isNull()) {
-                this.gatewayAuthentication = OptionalNullable.ofNull();
-            } else if (gatewayAuthentication.isEmpty()) {
-                this.gatewayAuthentication = OptionalNullable.absent();
-            } else {
-                this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication.get());
-            }
-            return this;
+        public Builder gatewayAuthentication(com.auth0.client.mgmt.core.Nullable<ConnectionGatewayAuthentication> gatewayAuthentication) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "federated_connections_access_tokens", nulls = Nulls.SKIP)
-        public Builder federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = federatedConnectionsAccessTokens;
-            return this;
+        public Builder federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens);
-            return this;
+        public Builder federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isPresent()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            }
-            return this;
+        public Builder federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isNull()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.ofNull();
-            } else if (federatedConnectionsAccessTokens.isEmpty()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            }
-            return this;
+        public Builder federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password_options", nulls = Nulls.SKIP)
         public Builder passwordOptions(Optional<ConnectionPasswordOptions> passwordOptions) {
-            this.passwordOptions = passwordOptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passwordOptions(ConnectionPasswordOptions passwordOptions) {
-            this.passwordOptions = Optional.ofNullable(passwordOptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "assertion_decryption_settings", nulls = Nulls.SKIP)
-        public Builder assertionDecryptionSettings(
-                Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = assertionDecryptionSettings;
-            return this;
+        public Builder assertionDecryptionSettings(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder assertionDecryptionSettings(ConnectionAssertionDecryptionSettings assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = Optional.ofNullable(assertionDecryptionSettings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "id_token_signed_response_algs", nulls = Nulls.SKIP)
-        public Builder idTokenSignedResponseAlgs(
-                @Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
-            this.idTokenSignedResponseAlgs = idTokenSignedResponseAlgs;
-            return this;
+        public Builder idTokenSignedResponseAlgs(@Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder idTokenSignedResponseAlgs(
-                List<ConnectionIdTokenSignedResponseAlgEnum> idTokenSignedResponseAlgs) {
-            this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs);
-            return this;
+        public Builder idTokenSignedResponseAlgs(List<ConnectionIdTokenSignedResponseAlgEnum> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder idTokenSignedResponseAlgs(
-                Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
-            if (idTokenSignedResponseAlgs.isPresent()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs.get());
-            } else {
-                this.idTokenSignedResponseAlgs = OptionalNullable.absent();
-            }
-            return this;
+        public Builder idTokenSignedResponseAlgs(Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder idTokenSignedResponseAlgs(
-                com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>>
-                        idTokenSignedResponseAlgs) {
-            if (idTokenSignedResponseAlgs.isNull()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.ofNull();
-            } else if (idTokenSignedResponseAlgs.isEmpty()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.absent();
-            } else {
-                this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs.get());
-            }
-            return this;
+        public Builder idTokenSignedResponseAlgs(com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_endpoint_auth_method", nulls = Nulls.SKIP)
-        public Builder tokenEndpointAuthMethod(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = tokenEndpointAuthMethod;
-            return this;
+        public Builder tokenEndpointAuthMethod(@Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEndpointAuthMethod(ConnectionTokenEndpointAuthMethodEnum tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointAuthMethod(
-                Optional<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            if (tokenEndpointAuthMethod.isPresent()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod.get());
-            } else {
-                this.tokenEndpointAuthMethod = OptionalNullable.absent();
-            }
-            return this;
+        public Builder tokenEndpointAuthMethod(Optional<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointAuthMethod(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            if (tokenEndpointAuthMethod.isNull()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.ofNull();
-            } else if (tokenEndpointAuthMethod.isEmpty()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.absent();
-            } else {
-                this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod.get());
-            }
-            return this;
+        public Builder tokenEndpointAuthMethod(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_endpoint_auth_signing_alg", nulls = Nulls.SKIP)
-        public Builder tokenEndpointAuthSigningAlg(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
-            this.tokenEndpointAuthSigningAlg = tokenEndpointAuthSigningAlg;
-            return this;
+        public Builder tokenEndpointAuthSigningAlg(@Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointAuthSigningAlg(
-                ConnectionTokenEndpointAuthSigningAlgEnum tokenEndpointAuthSigningAlg) {
-            this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg);
-            return this;
+        public Builder tokenEndpointAuthSigningAlg(ConnectionTokenEndpointAuthSigningAlgEnum tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointAuthSigningAlg(
-                Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
-            if (tokenEndpointAuthSigningAlg.isPresent()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg.get());
-            } else {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.absent();
-            }
-            return this;
+        public Builder tokenEndpointAuthSigningAlg(Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointAuthSigningAlg(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum>
-                        tokenEndpointAuthSigningAlg) {
-            if (tokenEndpointAuthSigningAlg.isNull()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.ofNull();
-            } else if (tokenEndpointAuthSigningAlg.isEmpty()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.absent();
-            } else {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg.get());
-            }
-            return this;
+        public Builder tokenEndpointAuthSigningAlg(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_endpoint_jwtca_aud_format", nulls = Nulls.SKIP)
-        public Builder tokenEndpointJwtcaAudFormat(
-                Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat) {
-            this.tokenEndpointJwtcaAudFormat = tokenEndpointJwtcaAudFormat;
-            return this;
+        public Builder tokenEndpointJwtcaAudFormat(Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEndpointJwtcaAudFormat(
-                ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat) {
-            this.tokenEndpointJwtcaAudFormat = Optional.ofNullable(tokenEndpointJwtcaAudFormat);
-            return this;
+        public Builder tokenEndpointJwtcaAudFormat(ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateConnectionOptions build() {
-            return new UpdateConnectionOptions(
-                    validation,
-                    nonPersistentAttrs,
-                    precedence,
-                    attributes,
-                    enableScriptContext,
-                    enabledDatabaseCustomization,
-                    importMode,
-                    configuration,
-                    customScripts,
-                    authenticationMethods,
-                    passkeyOptions,
-                    passwordPolicy,
-                    passwordComplexityOptions,
-                    passwordHistory,
-                    passwordNoPersonalInfo,
-                    passwordDictionary,
-                    apiEnableUsers,
-                    apiEnableGroups,
-                    basicProfile,
-                    extAdmin,
-                    extIsSuspended,
-                    extAgreedTerms,
-                    extGroups,
-                    extAssignedPlans,
-                    extProfile,
-                    disableSelfServiceChangePassword,
-                    upstreamParams,
-                    setUserRootAttributes,
-                    gatewayAuthentication,
-                    federatedConnectionsAccessTokens,
-                    passwordOptions,
-                    assertionDecryptionSettings,
-                    idTokenSignedResponseAlgs,
-                    tokenEndpointAuthMethod,
-                    tokenEndpointAuthSigningAlg,
-                    tokenEndpointJwtcaAudFormat,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

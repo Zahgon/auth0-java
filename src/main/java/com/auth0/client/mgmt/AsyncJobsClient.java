@@ -15,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncJobsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawJobsClient rawClient;
@@ -40,36 +41,36 @@ public class AsyncJobsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawJobsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a job. Useful to check its status.
      */
     public CompletableFuture<GetJobResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a job. Useful to check its status.
      */
     public CompletableFuture<GetJobResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUsersExportsClient usersExports() {
-        return this.usersExportsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUsersImportsClient usersImports() {
-        return this.usersImportsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncVerificationEmailClient verificationEmail() {
-        return this.verificationEmailClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncErrorsClient errors() {
-        return this.errorsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

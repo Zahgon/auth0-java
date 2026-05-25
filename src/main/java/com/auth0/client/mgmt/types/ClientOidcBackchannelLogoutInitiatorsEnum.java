@@ -7,32 +7,24 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientOidcBackchannelLogoutInitiatorsEnum {
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum SESSION_REVOKED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.SESSION_REVOKED, "session-revoked");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum ACCOUNT_DELETED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.ACCOUNT_DELETED, "account-deleted");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum SESSION_REVOKED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.SESSION_REVOKED, "session-revoked");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum EMAIL_IDENTIFIER_CHANGED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.EMAIL_IDENTIFIER_CHANGED, "email-identifier-changed");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum ACCOUNT_DELETED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.ACCOUNT_DELETED, "account-deleted");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum ACCOUNT_DEACTIVATED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.ACCOUNT_DEACTIVATED, "account-deactivated");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum EMAIL_IDENTIFIER_CHANGED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.EMAIL_IDENTIFIER_CHANGED, "email-identifier-changed");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum IDP_LOGOUT =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.IDP_LOGOUT, "idp-logout");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum ACCOUNT_DEACTIVATED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.ACCOUNT_DEACTIVATED, "account-deactivated");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum RP_LOGOUT =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.RP_LOGOUT, "rp-logout");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum IDP_LOGOUT = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.IDP_LOGOUT, "idp-logout");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum PASSWORD_CHANGED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.PASSWORD_CHANGED, "password-changed");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum RP_LOGOUT = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.RP_LOGOUT, "rp-logout");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum SESSION_EXPIRED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.SESSION_EXPIRED, "session-expired");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum PASSWORD_CHANGED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.PASSWORD_CHANGED, "password-changed");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsEnum MFA_PHONE_UNENROLLED =
-            new ClientOidcBackchannelLogoutInitiatorsEnum(Value.MFA_PHONE_UNENROLLED, "mfa-phone-unenrolled");
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum SESSION_EXPIRED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.SESSION_EXPIRED, "session-expired");
+
+    public static final ClientOidcBackchannelLogoutInitiatorsEnum MFA_PHONE_UNENROLLED = new ClientOidcBackchannelLogoutInitiatorsEnum(Value.MFA_PHONE_UNENROLLED, "mfa-phone-unenrolled");
 
     private final Value value;
 
@@ -44,102 +36,50 @@ public final class ClientOidcBackchannelLogoutInitiatorsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientOidcBackchannelLogoutInitiatorsEnum
-                        && this.string.equals(((ClientOidcBackchannelLogoutInitiatorsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SESSION_REVOKED:
-                return visitor.visitSessionRevoked();
-            case ACCOUNT_DELETED:
-                return visitor.visitAccountDeleted();
-            case EMAIL_IDENTIFIER_CHANGED:
-                return visitor.visitEmailIdentifierChanged();
-            case ACCOUNT_DEACTIVATED:
-                return visitor.visitAccountDeactivated();
-            case IDP_LOGOUT:
-                return visitor.visitIdpLogout();
-            case RP_LOGOUT:
-                return visitor.visitRpLogout();
-            case PASSWORD_CHANGED:
-                return visitor.visitPasswordChanged();
-            case SESSION_EXPIRED:
-                return visitor.visitSessionExpired();
-            case MFA_PHONE_UNENROLLED:
-                return visitor.visitMfaPhoneUnenrolled();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientOidcBackchannelLogoutInitiatorsEnum valueOf(String value) {
-        switch (value) {
-            case "session-revoked":
-                return SESSION_REVOKED;
-            case "account-deleted":
-                return ACCOUNT_DELETED;
-            case "email-identifier-changed":
-                return EMAIL_IDENTIFIER_CHANGED;
-            case "account-deactivated":
-                return ACCOUNT_DEACTIVATED;
-            case "idp-logout":
-                return IDP_LOGOUT;
-            case "rp-logout":
-                return RP_LOGOUT;
-            case "password-changed":
-                return PASSWORD_CHANGED;
-            case "session-expired":
-                return SESSION_EXPIRED;
-            case "mfa-phone-unenrolled":
-                return MFA_PHONE_UNENROLLED;
-            default:
-                return new ClientOidcBackchannelLogoutInitiatorsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         RP_LOGOUT,
-
         IDP_LOGOUT,
-
         PASSWORD_CHANGED,
-
         SESSION_EXPIRED,
-
         SESSION_REVOKED,
-
         ACCOUNT_DELETED,
-
         EMAIL_IDENTIFIER_CHANGED,
-
         MFA_PHONE_UNENROLLED,
-
         ACCOUNT_DEACTIVATED,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRpLogout();
 
         T visitIdpLogout();

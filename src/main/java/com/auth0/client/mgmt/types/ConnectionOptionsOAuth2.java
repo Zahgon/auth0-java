@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsOAuth2.Builder.class)
 public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<Map<String, String>> authParams;
@@ -54,32 +55,13 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
 
     private final Optional<String> tokenUrl;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> useOauthSpecScope;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsOAuth2(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<Map<String, String>> authParams,
-            Optional<Map<String, String>> authParamsMap,
-            Optional<String> authorizationUrl,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<Map<String, String>> customHeaders,
-            Optional<Map<String, String>> fieldsMap,
-            Optional<String> iconUrl,
-            Optional<String> logoutUrl,
-            Optional<Boolean> pkceEnabled,
-            Optional<ConnectionScopeOAuth2> scope,
-            Optional<ConnectionScriptsOAuth2> scripts,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> tokenUrl,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> useOauthSpecScope,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsOAuth2(Optional<List<String>> nonPersistentAttrs, Optional<Map<String, String>> authParams, Optional<Map<String, String>> authParamsMap, Optional<String> authorizationUrl, Optional<String> clientId, Optional<String> clientSecret, Optional<Map<String, String>> customHeaders, Optional<Map<String, String>> fieldsMap, Optional<String> iconUrl, Optional<String> logoutUrl, Optional<Boolean> pkceEnabled, Optional<ConnectionScopeOAuth2> scope, Optional<ConnectionScriptsOAuth2> scripts, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> tokenUrl, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> useOauthSpecScope, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.authParams = authParams;
         this.authParamsMap = authParamsMap;
@@ -103,52 +85,52 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authParams")
     public Optional<Map<String, String>> getAuthParams() {
-        return authParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authParamsMap")
     public Optional<Map<String, String>> getAuthParamsMap() {
-        return authParamsMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authorizationURL")
     public Optional<String> getAuthorizationUrl() {
-        return authorizationUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("customHeaders")
     public Optional<Map<String, String>> getCustomHeaders() {
-        return customHeaders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fieldsMap")
     public Optional<Map<String, String>> getFieldsMap() {
-        return fieldsMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("logoutUrl")
     public Optional<String> getLogoutUrl() {
-        return logoutUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,36 +138,33 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
      */
     @JsonProperty("pkce_enabled")
     public Optional<Boolean> getPkceEnabled() {
-        return pkceEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<ConnectionScopeOAuth2> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scripts")
     public Optional<ConnectionScriptsOAuth2> getScripts() {
-        return scripts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tokenURL")
     public Optional<String> getTokenUrl() {
-        return tokenUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -193,80 +172,46 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
      */
     @JsonProperty("useOauthSpecScope")
     public Optional<Boolean> getUseOauthSpecScope() {
-        return useOauthSpecScope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsOAuth2 && equalTo((ConnectionOptionsOAuth2) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsOAuth2 other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && authParams.equals(other.authParams)
-                && authParamsMap.equals(other.authParamsMap)
-                && authorizationUrl.equals(other.authorizationUrl)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && customHeaders.equals(other.customHeaders)
-                && fieldsMap.equals(other.fieldsMap)
-                && iconUrl.equals(other.iconUrl)
-                && logoutUrl.equals(other.logoutUrl)
-                && pkceEnabled.equals(other.pkceEnabled)
-                && scope.equals(other.scope)
-                && scripts.equals(other.scripts)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && tokenUrl.equals(other.tokenUrl)
-                && upstreamParams.equals(other.upstreamParams)
-                && useOauthSpecScope.equals(other.useOauthSpecScope);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && authParams.equals(other.authParams) && authParamsMap.equals(other.authParamsMap) && authorizationUrl.equals(other.authorizationUrl) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && customHeaders.equals(other.customHeaders) && fieldsMap.equals(other.fieldsMap) && iconUrl.equals(other.iconUrl) && logoutUrl.equals(other.logoutUrl) && pkceEnabled.equals(other.pkceEnabled) && scope.equals(other.scope) && scripts.equals(other.scripts) && setUserRootAttributes.equals(other.setUserRootAttributes) && tokenUrl.equals(other.tokenUrl) && upstreamParams.equals(other.upstreamParams) && useOauthSpecScope.equals(other.useOauthSpecScope);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.authParams,
-                this.authParamsMap,
-                this.authorizationUrl,
-                this.clientId,
-                this.clientSecret,
-                this.customHeaders,
-                this.fieldsMap,
-                this.iconUrl,
-                this.logoutUrl,
-                this.pkceEnabled,
-                this.scope,
-                this.scripts,
-                this.setUserRootAttributes,
-                this.tokenUrl,
-                this.upstreamParams,
-                this.useOauthSpecScope);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<Map<String, String>> authParams = Optional.empty();
@@ -297,145 +242,108 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
 
         private Optional<String> tokenUrl = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<Boolean> useOauthSpecScope = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsOAuth2 other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            authParams(other.getAuthParams());
-            authParamsMap(other.getAuthParamsMap());
-            authorizationUrl(other.getAuthorizationUrl());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            customHeaders(other.getCustomHeaders());
-            fieldsMap(other.getFieldsMap());
-            iconUrl(other.getIconUrl());
-            logoutUrl(other.getLogoutUrl());
-            pkceEnabled(other.getPkceEnabled());
-            scope(other.getScope());
-            scripts(other.getScripts());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            tokenUrl(other.getTokenUrl());
-            upstreamParams(other.getUpstreamParams());
-            useOauthSpecScope(other.getUseOauthSpecScope());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authParams", nulls = Nulls.SKIP)
         public Builder authParams(Optional<Map<String, String>> authParams) {
-            this.authParams = authParams;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authParams(Map<String, String> authParams) {
-            this.authParams = Optional.ofNullable(authParams);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authParamsMap", nulls = Nulls.SKIP)
         public Builder authParamsMap(Optional<Map<String, String>> authParamsMap) {
-            this.authParamsMap = authParamsMap;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authParamsMap(Map<String, String> authParamsMap) {
-            this.authParamsMap = Optional.ofNullable(authParamsMap);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authorizationURL", nulls = Nulls.SKIP)
         public Builder authorizationUrl(Optional<String> authorizationUrl) {
-            this.authorizationUrl = authorizationUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationUrl(String authorizationUrl) {
-            this.authorizationUrl = Optional.ofNullable(authorizationUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "customHeaders", nulls = Nulls.SKIP)
         public Builder customHeaders(Optional<Map<String, String>> customHeaders) {
-            this.customHeaders = customHeaders;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customHeaders(Map<String, String> customHeaders) {
-            this.customHeaders = Optional.ofNullable(customHeaders);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "fieldsMap", nulls = Nulls.SKIP)
         public Builder fieldsMap(Optional<Map<String, String>> fieldsMap) {
-            this.fieldsMap = fieldsMap;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fieldsMap(Map<String, String> fieldsMap) {
-            this.fieldsMap = Optional.ofNullable(fieldsMap);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public Builder iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "logoutUrl", nulls = Nulls.SKIP)
         public Builder logoutUrl(Optional<String> logoutUrl) {
-            this.logoutUrl = logoutUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoutUrl(String logoutUrl) {
-            this.logoutUrl = Optional.ofNullable(logoutUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -443,96 +351,64 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "pkce_enabled", nulls = Nulls.SKIP)
         public Builder pkceEnabled(Optional<Boolean> pkceEnabled) {
-            this.pkceEnabled = pkceEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pkceEnabled(Boolean pkceEnabled) {
-            this.pkceEnabled = Optional.ofNullable(pkceEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<ConnectionScopeOAuth2> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(ConnectionScopeOAuth2 scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scripts", nulls = Nulls.SKIP)
         public Builder scripts(Optional<ConnectionScriptsOAuth2> scripts) {
-            this.scripts = scripts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scripts(ConnectionScriptsOAuth2 scripts) {
-            this.scripts = Optional.ofNullable(scripts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "tokenURL", nulls = Nulls.SKIP)
         public Builder tokenUrl(Optional<String> tokenUrl) {
-            this.tokenUrl = tokenUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenUrl(String tokenUrl) {
-            this.tokenUrl = Optional.ofNullable(tokenUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -540,45 +416,23 @@ public final class ConnectionOptionsOAuth2 implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "useOauthSpecScope", nulls = Nulls.SKIP)
         public Builder useOauthSpecScope(Optional<Boolean> useOauthSpecScope) {
-            this.useOauthSpecScope = useOauthSpecScope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder useOauthSpecScope(Boolean useOauthSpecScope) {
-            this.useOauthSpecScope = Optional.ofNullable(useOauthSpecScope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsOAuth2 build() {
-            return new ConnectionOptionsOAuth2(
-                    nonPersistentAttrs,
-                    authParams,
-                    authParamsMap,
-                    authorizationUrl,
-                    clientId,
-                    clientSecret,
-                    customHeaders,
-                    fieldsMap,
-                    iconUrl,
-                    logoutUrl,
-                    pkceEnabled,
-                    scope,
-                    scripts,
-                    setUserRootAttributes,
-                    tokenUrl,
-                    upstreamParams,
-                    useOauthSpecScope,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

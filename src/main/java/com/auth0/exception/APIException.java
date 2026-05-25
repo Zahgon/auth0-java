@@ -20,15 +20,23 @@ import java.util.Map;
 public class APIException extends Auth0Exception {
 
     private static final String ERROR_DESCRIPTION = "error_description";
+
     private static final String DESCRIPTION = "description";
+
     private static final String MESSAGE = "message";
+
     private static final String ERROR = "error";
+
     private static final String ERROR_CODE = "errorCode";
+
     private static final String CODE = "code";
 
     private String error;
+
     private final String description;
+
     private final int statusCode;
+
     private Map<String, Object> values;
 
     public APIException(String payload, int statusCode, Throwable cause) {
@@ -52,7 +60,7 @@ public class APIException extends Auth0Exception {
      * @return the status code.
      */
     public int getStatusCode() {
-        return statusCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +70,7 @@ public class APIException extends Auth0Exception {
      * @return the error code.
      */
     public String getError() {
-        return error;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,10 +80,7 @@ public class APIException extends Auth0Exception {
      * @return the value if found or null
      */
     public Object getValue(String key) {
-        if (values == null) {
-            return null;
-        }
-        return values.get(key);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,51 +90,49 @@ public class APIException extends Auth0Exception {
      * @return the description.
      */
     public String getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when an MFA code is required to authenticate, {@code false} otherwise.
      */
     public boolean isMultifactorRequired() {
-        return "mfa_required".equals(error);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when the username and/or password used for authentication are invalid, {@code false} otherwise.
      */
     public boolean isInvalidCredentials() {
-        return "invalid_user_password".equals(error)
-                || "invalid_grant".equals(error) && "Wrong email or password.".equals(description);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when MFA is required and the user is not enrolled, {@code false} otherwise.
      */
     public boolean isMultifactorEnrollRequired() {
-        return "unsupported_challenge_type".equals(error);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when Bot Protection flags the request as suspicious, {@code false} otherwise.
      */
     public boolean isVerificationRequired() {
-        return "requires_verification".equals(error);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when the MFA Token used on the login request is malformed or has expired, {@code false} otherwise.
      */
     public boolean isMultifactorTokenInvalid() {
-        return "expired_token".equals(error) && "mfa_token is expired".equals(description)
-                || "invalid_grant".equals(error) && "Malformed mfa_token".equals(description);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return {@code true} when authenticating with web-based authentiction and the resource server denied access per the OAuth 2 spec, {@code false} otherwise.
      */
     public boolean isAccessDenied() {
-        return "access_denied".equals(error);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static String createMessage(String description, int statusCode) {

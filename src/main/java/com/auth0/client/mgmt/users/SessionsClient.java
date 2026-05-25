@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.SessionResponseContent;
 import com.auth0.client.mgmt.users.types.ListUserSessionsRequestParameters;
 
 public class SessionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSessionsClient rawClient;
@@ -23,49 +24,48 @@ public class SessionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSessionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
     public SyncPagingIterable<SessionResponseContent> list(String userId) {
-        return this.rawClient.list(userId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
     public SyncPagingIterable<SessionResponseContent> list(String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
     public SyncPagingIterable<SessionResponseContent> list(String userId, ListUserSessionsRequestParameters request) {
-        return this.rawClient.list(userId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's sessions.
      */
-    public SyncPagingIterable<SessionResponseContent> list(
-            String userId, ListUserSessionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, request, requestOptions).body();
+    public SyncPagingIterable<SessionResponseContent> list(String userId, ListUserSessionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all sessions for a user.
      */
     public void delete(String userId) {
-        this.rawClient.delete(userId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all sessions for a user.
      */
     public void delete(String userId, RequestOptions requestOptions) {
-        this.rawClient.delete(userId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

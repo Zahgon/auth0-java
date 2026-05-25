@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockJumpButtonConfig.Builder.class)
 public final class FormBlockJumpButtonConfig {
+
     private final String text;
 
     private final FormNodePointer nextNode;
@@ -29,11 +30,7 @@ public final class FormBlockJumpButtonConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormBlockJumpButtonConfig(
-            String text,
-            FormNodePointer nextNode,
-            Optional<FormBlockJumpButtonConfigStyle> style,
-            Map<String, Object> additionalProperties) {
+    private FormBlockJumpButtonConfig(String text, FormNodePointer nextNode, Optional<FormBlockJumpButtonConfigStyle> style, Map<String, Object> additionalProperties) {
         this.text = text;
         this.nextNode = nextNode;
         this.style = style;
@@ -42,28 +39,27 @@ public final class FormBlockJumpButtonConfig {
 
     @JsonProperty("text")
     public String getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("next_node")
     public FormNodePointer getNextNode() {
-        return nextNode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("style")
     public Optional<FormBlockJumpButtonConfigStyle> getStyle() {
-        return style;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockJumpButtonConfig && equalTo((FormBlockJumpButtonConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockJumpButtonConfig other) {
@@ -72,29 +68,32 @@ public final class FormBlockJumpButtonConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.text, this.nextNode, this.style);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TextStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TextStage {
+
         NextNodeStage text(@NotNull String text);
 
         Builder from(FormBlockJumpButtonConfig other);
     }
 
     public interface NextNodeStage {
+
         _FinalStage nextNode(@NotNull FormNodePointer nextNode);
     }
 
     public interface _FinalStage {
+
         FormBlockJumpButtonConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -108,6 +107,7 @@ public final class FormBlockJumpButtonConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TextStage, NextNodeStage, _FinalStage {
+
         private String text;
 
         private FormNodePointer nextNode;
@@ -117,58 +117,50 @@ public final class FormBlockJumpButtonConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockJumpButtonConfig other) {
-            text(other.getText());
-            nextNode(other.getNextNode());
-            style(other.getStyle());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("text")
         public NextNodeStage text(@NotNull String text) {
-            this.text = Objects.requireNonNull(text, "text must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("next_node")
         public _FinalStage nextNode(@NotNull FormNodePointer nextNode) {
-            this.nextNode = Objects.requireNonNull(nextNode, "nextNode must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage style(FormBlockJumpButtonConfigStyle style) {
-            this.style = Optional.ofNullable(style);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "style", nulls = Nulls.SKIP)
         public _FinalStage style(Optional<FormBlockJumpButtonConfigStyle> style) {
-            this.style = style;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockJumpButtonConfig build() {
-            return new FormBlockJumpButtonConfig(text, nextNode, style, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.ClientOptions;
 import com.auth0.client.mgmt.core.RequestOptions;
 
 public class UsersClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUsersClient rawClient;
@@ -21,21 +22,20 @@ public class UsersClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUsersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a specified connection user by its email (you cannot delete all users from specific connection). Currently, only Database Connections are supported.
      */
     public void deleteByEmail(String id, DeleteConnectionUsersByEmailQueryParameters request) {
-        this.rawClient.deleteByEmail(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a specified connection user by its email (you cannot delete all users from specific connection). Currently, only Database Connections are supported.
      */
-    public void deleteByEmail(
-            String id, DeleteConnectionUsersByEmailQueryParameters request, RequestOptions requestOptions) {
-        this.rawClient.deleteByEmail(id, request, requestOptions).body();
+    public void deleteByEmail(String id, DeleteConnectionUsersByEmailQueryParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

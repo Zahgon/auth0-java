@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateGuardianEnrollmentTicketResponseContent.Builder.class)
 public final class CreateGuardianEnrollmentTicketResponseContent {
+
     private final Optional<String> ticketId;
 
     private final Optional<String> ticketUrl;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateGuardianEnrollmentTicketResponseContent(
-            Optional<String> ticketId, Optional<String> ticketUrl, Map<String, Object> additionalProperties) {
+    private CreateGuardianEnrollmentTicketResponseContent(Optional<String> ticketId, Optional<String> ticketUrl, Map<String, Object> additionalProperties) {
         this.ticketId = ticketId;
         this.ticketUrl = ticketUrl;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
      */
     @JsonProperty("ticket_id")
     public Optional<String> getTicketId() {
-        return ticketId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +46,17 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
      */
     @JsonProperty("ticket_url")
     public Optional<String> getTicketUrl() {
-        return ticketUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateGuardianEnrollmentTicketResponseContent
-                && equalTo((CreateGuardianEnrollmentTicketResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateGuardianEnrollmentTicketResponseContent other) {
@@ -67,20 +65,21 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ticketId, this.ticketUrl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> ticketId = Optional.empty();
 
         private Optional<String> ticketUrl = Optional.empty();
@@ -88,12 +87,11 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateGuardianEnrollmentTicketResponseContent other) {
-            ticketId(other.getTicketId());
-            ticketUrl(other.getTicketUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,13 +99,11 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
          */
         @JsonSetter(value = "ticket_id", nulls = Nulls.SKIP)
         public Builder ticketId(Optional<String> ticketId) {
-            this.ticketId = ticketId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ticketId(String ticketId) {
-            this.ticketId = Optional.ofNullable(ticketId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,27 +111,23 @@ public final class CreateGuardianEnrollmentTicketResponseContent {
          */
         @JsonSetter(value = "ticket_url", nulls = Nulls.SKIP)
         public Builder ticketUrl(Optional<String> ticketUrl) {
-            this.ticketUrl = ticketUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ticketUrl(String ticketUrl) {
-            this.ticketUrl = Optional.ofNullable(ticketUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateGuardianEnrollmentTicketResponseContent build() {
-            return new CreateGuardianEnrollmentTicketResponseContent(ticketId, ticketUrl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

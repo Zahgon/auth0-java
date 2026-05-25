@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketEnabledFeatures.Builder.class)
 public final class SelfServiceProfileSsoTicketEnabledFeatures {
+
     private final Optional<Boolean> sso;
 
     private final Optional<Boolean> domainVerification;
@@ -28,11 +29,7 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketEnabledFeatures(
-            Optional<Boolean> sso,
-            Optional<Boolean> domainVerification,
-            Optional<Boolean> provisioning,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketEnabledFeatures(Optional<Boolean> sso, Optional<Boolean> domainVerification, Optional<Boolean> provisioning, Map<String, Object> additionalProperties) {
         this.sso = sso;
         this.domainVerification = domainVerification;
         this.provisioning = provisioning;
@@ -44,7 +41,7 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
      */
     @JsonProperty("sso")
     public Optional<Boolean> getSso() {
-        return sso;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
      */
     @JsonProperty("domain_verification")
     public Optional<Boolean> getDomainVerification() {
-        return domainVerification;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,43 +57,40 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
      */
     @JsonProperty("provisioning")
     public Optional<Boolean> getProvisioning() {
-        return provisioning;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketEnabledFeatures
-                && equalTo((SelfServiceProfileSsoTicketEnabledFeatures) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketEnabledFeatures other) {
-        return sso.equals(other.sso)
-                && domainVerification.equals(other.domainVerification)
-                && provisioning.equals(other.provisioning);
+        return sso.equals(other.sso) && domainVerification.equals(other.domainVerification) && provisioning.equals(other.provisioning);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.sso, this.domainVerification, this.provisioning);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> sso = Optional.empty();
 
         private Optional<Boolean> domainVerification = Optional.empty();
@@ -106,13 +100,11 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SelfServiceProfileSsoTicketEnabledFeatures other) {
-            sso(other.getSso());
-            domainVerification(other.getDomainVerification());
-            provisioning(other.getProvisioning());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -120,13 +112,11 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
          */
         @JsonSetter(value = "sso", nulls = Nulls.SKIP)
         public Builder sso(Optional<Boolean> sso) {
-            this.sso = sso;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sso(Boolean sso) {
-            this.sso = Optional.ofNullable(sso);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,13 +124,11 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
          */
         @JsonSetter(value = "domain_verification", nulls = Nulls.SKIP)
         public Builder domainVerification(Optional<Boolean> domainVerification) {
-            this.domainVerification = domainVerification;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainVerification(Boolean domainVerification) {
-            this.domainVerification = Optional.ofNullable(domainVerification);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,28 +136,23 @@ public final class SelfServiceProfileSsoTicketEnabledFeatures {
          */
         @JsonSetter(value = "provisioning", nulls = Nulls.SKIP)
         public Builder provisioning(Optional<Boolean> provisioning) {
-            this.provisioning = provisioning;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder provisioning(Boolean provisioning) {
-            this.provisioning = Optional.ofNullable(provisioning);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SelfServiceProfileSsoTicketEnabledFeatures build() {
-            return new SelfServiceProfileSsoTicketEnabledFeatures(
-                    sso, domainVerification, provisioning, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

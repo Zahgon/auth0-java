@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.GetEventStreamDeliveryHistoryResponseContent;
 import java.util.List;
 
 public class DeliveriesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawDeliveriesClient rawClient;
@@ -24,32 +25,30 @@ public class DeliveriesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawDeliveriesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<EventStreamDelivery> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<EventStreamDelivery> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<EventStreamDelivery> list(String id, ListEventStreamDeliveriesRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public List<EventStreamDelivery> list(
-            String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public List<EventStreamDelivery> list(String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetEventStreamDeliveryHistoryResponseContent getHistory(String id, String eventId) {
-        return this.rawClient.getHistory(id, eventId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public GetEventStreamDeliveryHistoryResponseContent getHistory(
-            String id, String eventId, RequestOptions requestOptions) {
-        return this.rawClient.getHistory(id, eventId, requestOptions).body();
+    public GetEventStreamDeliveryHistoryResponseContent getHistory(String id, String eventId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

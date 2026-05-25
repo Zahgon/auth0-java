@@ -31,25 +31,26 @@ public class BaseRequest<T> implements Request<T> {
     private static final String CONTENT_TYPE_APPLICATION_JSON = "application/json";
 
     private final String url;
+
     private final HttpMethod method;
+
     private final ObjectMapper mapper;
+
     private final Map<String, String> headers;
+
     private final TypeReference<T> tType;
+
     private final Map<String, Object> parameters;
+
     private Object body;
 
     private static final int STATUS_CODE_TOO_MANY_REQUEST = 429;
 
     private final Auth0HttpClient client;
+
     private final TokenProvider tokenProvider;
 
-    BaseRequest(
-            Auth0HttpClient client,
-            TokenProvider tokenProvider,
-            String url,
-            HttpMethod method,
-            ObjectMapper mapper,
-            TypeReference<T> tType) {
+    BaseRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method, ObjectMapper mapper, TypeReference<T> tType) {
         this.client = client;
         this.tokenProvider = tokenProvider;
         this.url = url;
@@ -60,45 +61,16 @@ public class BaseRequest<T> implements Request<T> {
         this.parameters = new HashMap<>();
     }
 
-    public BaseRequest(
-            Auth0HttpClient client,
-            TokenProvider tokenProvider,
-            String url,
-            HttpMethod method,
-            TypeReference<T> tType) {
+    public BaseRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method, TypeReference<T> tType) {
         this(client, tokenProvider, url, method, ObjectMapperProvider.getMapper(), tType);
     }
 
     protected Auth0HttpRequest createRequest(String apiToken) throws Auth0Exception {
-        HttpRequestBody body;
-        try {
-            body = this.createRequestBody();
-        } catch (IOException e) {
-            throw new Auth0Exception("Couldn't create the request body.", e);
-        }
-        headers.put("Content-Type", getContentType());
-        // Auth APIs don't take tokens
-        if (Objects.nonNull(apiToken)) {
-            headers.put("Authorization", "Bearer " + apiToken);
-        }
-        Auth0HttpRequest request = Auth0HttpRequest.newBuilder(url, method)
-                .withBody(body)
-                .withHeaders(headers)
-                .build();
-
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected T parseResponseBody(Auth0HttpResponse response) throws Auth0Exception {
-        if (!response.isSuccessful()) {
-            throw createResponseException(response);
-        }
-
-        try {
-            return readResponseBody(response);
-        } catch (IOException e) {
-            throw new APIException("Failed to parse the response body.", response.getCode(), e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,11 +81,7 @@ public class BaseRequest<T> implements Request<T> {
      */
     @SuppressWarnings("deprecation")
     protected HttpRequestBody createRequestBody() throws IOException {
-        if (body == null && parameters.isEmpty()) {
-            return null;
-        }
-        byte[] jsonBody = mapper.writeValueAsBytes(body != null ? body : parameters);
-        return HttpRequestBody.create(CONTENT_TYPE_APPLICATION_JSON, jsonBody);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,13 +92,13 @@ public class BaseRequest<T> implements Request<T> {
      * @throws IOException if an error is raised during the parsing of the body.
      */
     protected T readResponseBody(Auth0HttpResponse response) throws IOException {
-        String payload = response.getBody();
-        return mapper.readValue(payload, tType);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected Map<String, Object> getParameters() {
-        return this.parameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
+
     /**
      * Executes this request.
      *
@@ -139,51 +107,19 @@ public class BaseRequest<T> implements Request<T> {
      */
     @Override
     public Response<T> execute() throws Auth0Exception {
-        String apiToken = null;
-        if (Objects.nonNull(tokenProvider)) {
-            apiToken = tokenProvider.getToken();
-        }
-        Auth0HttpRequest request = createRequest(apiToken);
-        try {
-            Auth0HttpResponse response = client.sendRequest(request);
-            T body = parseResponseBody(response);
-            return new ResponseImpl<T>(response.getHeaders(), body, response.getCode());
-        } catch (Auth0Exception e) {
-            throw e;
-        } catch (IOException ioe) {
-            throw new Auth0Exception("Failed to execute the request", ioe);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public CompletableFuture<Response<T>> executeAsync() {
-        final CompletableFuture<Response<T>> future = new CompletableFuture<>();
-
-        if (Objects.nonNull(tokenProvider)) {
-            return tokenProvider.getTokenAsync().thenCompose(token -> {
-                try {
-                    return client.sendRequestAsync(createRequest(token)).thenCompose(this::getResponseFuture);
-                } catch (Auth0Exception e) {
-                    future.completeExceptionally(e);
-                    return future;
-                }
-            });
-        }
-
-        try {
-            return client.sendRequestAsync(createRequest(null)).thenCompose(this::getResponseFuture);
-        } catch (Auth0Exception e) {
-            future.completeExceptionally(e);
-            return future;
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private CompletableFuture<Response<T>> getResponseFuture(Auth0HttpResponse httpResponse) {
         CompletableFuture<Response<T>> future = new CompletableFuture<>();
         try {
             T body = parseResponseBody(httpResponse);
-            future = CompletableFuture.completedFuture(
-                    new ResponseImpl<>(httpResponse.getHeaders(), body, httpResponse.getCode()));
+            future = CompletableFuture.completedFuture(new ResponseImpl<>(httpResponse.getHeaders(), body, httpResponse.getCode()));
         } catch (Auth0Exception e) {
             future.completeExceptionally(e);
             return future;
@@ -197,7 +133,7 @@ public class BaseRequest<T> implements Request<T> {
      * @return the content-type
      */
     protected String getContentType() {
-        return CONTENT_TYPE_APPLICATION_JSON;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -208,18 +144,7 @@ public class BaseRequest<T> implements Request<T> {
      * @return the exception with the error details.
      */
     protected Auth0Exception createResponseException(Auth0HttpResponse response) {
-        if (response.getCode() == STATUS_CODE_TOO_MANY_REQUEST) {
-            return createRateLimitException(response);
-        }
-
-        String payload = response.getBody();
-        MapType mapType = mapper.getTypeFactory().constructMapType(HashMap.class, String.class, Object.class);
-        try {
-            Map<String, Object> values = mapper.readValue(payload, mapType);
-            return new APIException(values, response.getCode());
-        } catch (IOException e) {
-            return new APIException(payload, response.getCode(), e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private RateLimitException createRateLimitException(Auth0HttpResponse response) {
@@ -227,24 +152,17 @@ public class BaseRequest<T> implements Request<T> {
         long limit = Long.parseLong(response.getHeader("x-ratelimit-limit", "-1"));
         long remaining = Long.parseLong(response.getHeader("x-ratelimit-remaining", "-1"));
         long reset = Long.parseLong(response.getHeader("x-ratelimit-reset", "-1"));
-
         TokenQuotaBucket clientQuotaLimit = HttpResponseHeadersUtils.getClientQuotaLimit(response.getHeaders());
-        TokenQuotaBucket organizationQuotaLimit =
-                HttpResponseHeadersUtils.getOrganizationQuotaLimit(response.getHeaders());
-
+        TokenQuotaBucket organizationQuotaLimit = HttpResponseHeadersUtils.getOrganizationQuotaLimit(response.getHeaders());
         long retryAfter = Long.parseLong(response.getHeader("retry-after", "-1"));
-
         String payload = response.getBody();
         MapType mapType = mapper.getTypeFactory().constructMapType(HashMap.class, String.class, Object.class);
         try {
             Map<String, Object> values = mapper.readValue(payload, mapType);
-
             RateLimitException.Builder builder = new RateLimitException.Builder(limit, remaining, reset, values);
-
             builder.clientQuotaLimit(clientQuotaLimit);
             builder.organizationQuotaLimit(organizationQuotaLimit);
             builder.retryAfter(retryAfter);
-
             return builder.build();
         } catch (IOException e) {
             RateLimitException.Builder builder = new RateLimitException.Builder(limit, remaining, reset);
@@ -263,19 +181,16 @@ public class BaseRequest<T> implements Request<T> {
      * @return this same request instance
      */
     public BaseRequest<T> addHeader(String name, String value) {
-        headers.put(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public BaseRequest<T> addParameter(String name, Object value) {
-        parameters.put(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public BaseRequest<T> setBody(Object value) {
-        body = value;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

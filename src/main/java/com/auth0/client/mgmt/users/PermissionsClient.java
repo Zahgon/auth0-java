@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.users.types.DeleteUserPermissionsRequestContent;
 import com.auth0.client.mgmt.users.types.ListUserPermissionsRequestParameters;
 
 public class PermissionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawPermissionsClient rawClient;
@@ -25,63 +26,62 @@ public class PermissionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawPermissionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all permissions associated with the user.
      */
     public SyncPagingIterable<UserPermissionSchema> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all permissions associated with the user.
      */
     public SyncPagingIterable<UserPermissionSchema> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all permissions associated with the user.
      */
     public SyncPagingIterable<UserPermissionSchema> list(String id, ListUserPermissionsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all permissions associated with the user.
      */
-    public SyncPagingIterable<UserPermissionSchema> list(
-            String id, ListUserPermissionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<UserPermissionSchema> list(String id, ListUserPermissionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign permissions to a user.
      */
     public void create(String id, CreateUserPermissionsRequestContent request) {
-        this.rawClient.create(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign permissions to a user.
      */
     public void create(String id, CreateUserPermissionsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.create(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove permissions from a user.
      */
     public void delete(String id, DeleteUserPermissionsRequestContent request) {
-        this.rawClient.delete(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove permissions from a user.
      */
     public void delete(String id, DeleteUserPermissionsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.delete(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

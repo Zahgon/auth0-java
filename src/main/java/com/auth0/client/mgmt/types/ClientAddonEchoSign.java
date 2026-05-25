@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonEchoSign.Builder.class)
 public final class ClientAddonEchoSign {
+
     private final Optional<String> domain;
 
     private final Map<String, Object> additionalProperties;
@@ -34,18 +35,17 @@ public final class ClientAddonEchoSign {
      */
     @JsonProperty("domain")
     public Optional<String> getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonEchoSign && equalTo((ClientAddonEchoSign) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonEchoSign other) {
@@ -54,30 +54,31 @@ public final class ClientAddonEchoSign {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.domain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> domain = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonEchoSign other) {
-            domain(other.getDomain());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -85,27 +86,23 @@ public final class ClientAddonEchoSign {
          */
         @JsonSetter(value = "domain", nulls = Nulls.SKIP)
         public Builder domain(Optional<String> domain) {
-            this.domain = domain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domain(String domain) {
-            this.domain = Optional.ofNullable(domain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonEchoSign build() {
-            return new ClientAddonEchoSign(domain, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

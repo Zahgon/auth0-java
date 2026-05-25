@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PasswordlessSmsResponse {
+
     @JsonProperty("_id")
     private String id;
 
@@ -29,7 +30,7 @@ public class PasswordlessSmsResponse {
      */
     @JsonProperty("_id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -39,7 +40,7 @@ public class PasswordlessSmsResponse {
      */
     @JsonProperty("phone_number")
     public String getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,7 +50,7 @@ public class PasswordlessSmsResponse {
      */
     @JsonProperty("phone_verified")
     public Boolean isPhoneVerified() {
-        return phoneVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,6 +60,6 @@ public class PasswordlessSmsResponse {
      */
     @JsonProperty("request_language")
     public String getRequestLanguage() {
-        return requestLanguage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

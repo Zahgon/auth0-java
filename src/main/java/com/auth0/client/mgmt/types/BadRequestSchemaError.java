@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BadRequestSchemaError {
+
     public static final BadRequestSchemaError BAD_REQUEST = new BadRequestSchemaError(Value.BAD_REQUEST, "Bad Request");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class BadRequestSchemaError {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BadRequestSchemaError
-                        && this.string.equals(((BadRequestSchemaError) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BAD_REQUEST:
-                return visitor.visitBadRequest();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BadRequestSchemaError valueOf(String value) {
-        switch (value) {
-            case "Bad Request":
-                return BAD_REQUEST;
-            default:
-                return new BadRequestSchemaError(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BAD_REQUEST,
 
-        UNKNOWN
+        BAD_REQUEST, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBadRequest();
 
         T visitUnknown(String unknownType);

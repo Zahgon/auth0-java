@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventUserUpdated.Builder.class)
 public final class EventStreamCloudEventUserUpdated {
+
     private final String offset;
 
     private final EventStreamCloudEventUserUpdatedCloudEvent event;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventUserUpdated(
-            String offset, EventStreamCloudEventUserUpdatedCloudEvent event, Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventUserUpdated(String offset, EventStreamCloudEventUserUpdatedCloudEvent event, Map<String, Object> additionalProperties) {
         this.offset = offset;
         this.event = event;
         this.additionalProperties = additionalProperties;
@@ -37,23 +37,22 @@ public final class EventStreamCloudEventUserUpdated {
      */
     @JsonProperty("offset")
     public String getOffset() {
-        return offset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("event")
     public EventStreamCloudEventUserUpdatedCloudEvent getEvent() {
-        return event;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventUserUpdated && equalTo((EventStreamCloudEventUserUpdated) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventUserUpdated other) {
@@ -62,19 +61,20 @@ public final class EventStreamCloudEventUserUpdated {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.offset, this.event);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OffsetStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OffsetStage {
+
         /**
          * <p>Opaque cursor representing position in the stream. Pass as the <code>from</code> query parameter to resume.</p>
          */
@@ -84,10 +84,12 @@ public final class EventStreamCloudEventUserUpdated {
     }
 
     public interface EventStage {
+
         _FinalStage event(@NotNull EventStreamCloudEventUserUpdatedCloudEvent event);
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventUserUpdated build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -97,6 +99,7 @@ public final class EventStreamCloudEventUserUpdated {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OffsetStage, EventStage, _FinalStage {
+
         private String offset;
 
         private EventStreamCloudEventUserUpdatedCloudEvent event;
@@ -104,13 +107,12 @@ public final class EventStreamCloudEventUserUpdated {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventUserUpdated other) {
-            offset(other.getOffset());
-            event(other.getEvent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -121,32 +123,28 @@ public final class EventStreamCloudEventUserUpdated {
         @java.lang.Override
         @JsonSetter("offset")
         public EventStage offset(@NotNull String offset) {
-            this.offset = Objects.requireNonNull(offset, "offset must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("event")
         public _FinalStage event(@NotNull EventStreamCloudEventUserUpdatedCloudEvent event) {
-            this.event = Objects.requireNonNull(event, "event must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventUserUpdated build() {
-            return new EventStreamCloudEventUserUpdated(offset, event, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

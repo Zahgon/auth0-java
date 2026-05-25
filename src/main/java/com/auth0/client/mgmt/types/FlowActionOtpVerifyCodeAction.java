@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionOtpVerifyCodeAction {
-    public static final FlowActionOtpVerifyCodeAction VERIFY_CODE =
-            new FlowActionOtpVerifyCodeAction(Value.VERIFY_CODE, "VERIFY_CODE");
+
+    public static final FlowActionOtpVerifyCodeAction VERIFY_CODE = new FlowActionOtpVerifyCodeAction(Value.VERIFY_CODE, "VERIFY_CODE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionOtpVerifyCodeAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionOtpVerifyCodeAction
-                        && this.string.equals(((FlowActionOtpVerifyCodeAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VERIFY_CODE:
-                return visitor.visitVerifyCode();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionOtpVerifyCodeAction valueOf(String value) {
-        switch (value) {
-            case "VERIFY_CODE":
-                return VERIFY_CODE;
-            default:
-                return new FlowActionOtpVerifyCodeAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        VERIFY_CODE,
 
-        UNKNOWN
+        VERIFY_CODE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitVerifyCode();
 
         T visitUnknown(String unknownType);

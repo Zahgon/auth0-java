@@ -22,16 +22,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientDefaultOrganization.Builder.class)
 public final class ClientDefaultOrganization {
+
     private final String organizationId;
 
     private final List<ClientDefaultOrganizationFlowsEnum> flows;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientDefaultOrganization(
-            String organizationId,
-            List<ClientDefaultOrganizationFlowsEnum> flows,
-            Map<String, Object> additionalProperties) {
+    private ClientDefaultOrganization(String organizationId, List<ClientDefaultOrganizationFlowsEnum> flows, Map<String, Object> additionalProperties) {
         this.organizationId = organizationId;
         this.flows = flows;
         this.additionalProperties = additionalProperties;
@@ -42,7 +40,7 @@ public final class ClientDefaultOrganization {
      */
     @JsonProperty("organization_id")
     public String getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,18 +48,17 @@ public final class ClientDefaultOrganization {
      */
     @JsonProperty("flows")
     public List<ClientDefaultOrganizationFlowsEnum> getFlows() {
-        return flows;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientDefaultOrganization && equalTo((ClientDefaultOrganization) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientDefaultOrganization other) {
@@ -70,19 +67,20 @@ public final class ClientDefaultOrganization {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.organizationId, this.flows);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrganizationIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrganizationIdStage {
+
         /**
          * <p>The default Organization ID to be used</p>
          */
@@ -92,6 +90,7 @@ public final class ClientDefaultOrganization {
     }
 
     public interface _FinalStage {
+
         ClientDefaultOrganization build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -110,6 +109,7 @@ public final class ClientDefaultOrganization {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrganizationIdStage, _FinalStage {
+
         private String organizationId;
 
         private List<ClientDefaultOrganizationFlowsEnum> flows = new ArrayList<>();
@@ -117,13 +117,12 @@ public final class ClientDefaultOrganization {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientDefaultOrganization other) {
-            organizationId(other.getOrganizationId());
-            flows(other.getFlows());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,8 +133,7 @@ public final class ClientDefaultOrganization {
         @java.lang.Override
         @JsonSetter("organization_id")
         public _FinalStage organizationId(@NotNull String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId, "organizationId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -144,10 +142,7 @@ public final class ClientDefaultOrganization {
          */
         @java.lang.Override
         public _FinalStage addAllFlows(List<ClientDefaultOrganizationFlowsEnum> flows) {
-            if (flows != null) {
-                this.flows.addAll(flows);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -156,8 +151,7 @@ public final class ClientDefaultOrganization {
          */
         @java.lang.Override
         public _FinalStage addFlows(ClientDefaultOrganizationFlowsEnum flows) {
-            this.flows.add(flows);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,28 +160,22 @@ public final class ClientDefaultOrganization {
         @java.lang.Override
         @JsonSetter(value = "flows", nulls = Nulls.SKIP)
         public _FinalStage flows(List<ClientDefaultOrganizationFlowsEnum> flows) {
-            this.flows.clear();
-            if (flows != null) {
-                this.flows.addAll(flows);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientDefaultOrganization build() {
-            return new ClientDefaultOrganization(organizationId, flows, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

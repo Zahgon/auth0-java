@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionWhatsapp.Deserializer.class)
 public final class CreateFlowsVaultConnectionWhatsapp {
+
     private final Object value;
 
     private final int type;
@@ -27,24 +28,17 @@ public final class CreateFlowsVaultConnectionWhatsapp {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionWhatsappToken) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionWhatsappUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionWhatsapp
-                && equalTo((CreateFlowsVaultConnectionWhatsapp) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionWhatsapp other) {
@@ -53,57 +47,38 @@ public final class CreateFlowsVaultConnectionWhatsapp {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionWhatsapp of(CreateFlowsVaultConnectionWhatsappToken value) {
-        return new CreateFlowsVaultConnectionWhatsapp(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionWhatsapp of(CreateFlowsVaultConnectionWhatsappUninitialized value) {
-        return new CreateFlowsVaultConnectionWhatsapp(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionWhatsappToken value);
 
         T visit(CreateFlowsVaultConnectionWhatsappUninitialized value);
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionWhatsapp> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionWhatsapp.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionWhatsapp deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionWhatsappToken.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionWhatsappUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionWhatsapp deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

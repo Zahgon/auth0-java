@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormNodeTypeRouterConst {
+
     public static final FormNodeTypeRouterConst ROUTER = new FormNodeTypeRouterConst(Value.ROUTER, "ROUTER");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormNodeTypeRouterConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormNodeTypeRouterConst
-                        && this.string.equals(((FormNodeTypeRouterConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ROUTER:
-                return visitor.visitRouter();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormNodeTypeRouterConst valueOf(String value) {
-        switch (value) {
-            case "ROUTER":
-                return ROUTER;
-            default:
-                return new FormNodeTypeRouterConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ROUTER,
 
-        UNKNOWN
+        ROUTER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRouter();
 
         T visitUnknown(String unknownType);

@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileBrandingProperties.Builder.class)
 public final class SelfServiceProfileBrandingProperties {
+
     private final Optional<String> logoUrl;
 
     private final Optional<SelfServiceProfileBrandingColors> colors;
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileBrandingProperties(
-            Optional<String> logoUrl,
-            Optional<SelfServiceProfileBrandingColors> colors,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileBrandingProperties(Optional<String> logoUrl, Optional<SelfServiceProfileBrandingColors> colors, Map<String, Object> additionalProperties) {
         this.logoUrl = logoUrl;
         this.colors = colors;
         this.additionalProperties = additionalProperties;
@@ -37,24 +35,22 @@ public final class SelfServiceProfileBrandingProperties {
 
     @JsonProperty("logo_url")
     public Optional<String> getLogoUrl() {
-        return logoUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("colors")
     public Optional<SelfServiceProfileBrandingColors> getColors() {
-        return colors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileBrandingProperties
-                && equalTo((SelfServiceProfileBrandingProperties) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileBrandingProperties other) {
@@ -63,20 +59,21 @@ public final class SelfServiceProfileBrandingProperties {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.logoUrl, this.colors);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> logoUrl = Optional.empty();
 
         private Optional<SelfServiceProfileBrandingColors> colors = Optional.empty();
@@ -84,48 +81,41 @@ public final class SelfServiceProfileBrandingProperties {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SelfServiceProfileBrandingProperties other) {
-            logoUrl(other.getLogoUrl());
-            colors(other.getColors());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "logo_url", nulls = Nulls.SKIP)
         public Builder logoUrl(Optional<String> logoUrl) {
-            this.logoUrl = logoUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUrl(String logoUrl) {
-            this.logoUrl = Optional.ofNullable(logoUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "colors", nulls = Nulls.SKIP)
         public Builder colors(Optional<SelfServiceProfileBrandingColors> colors) {
-            this.colors = colors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder colors(SelfServiceProfileBrandingColors colors) {
-            this.colors = Optional.ofNullable(colors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SelfServiceProfileBrandingProperties build() {
-            return new SelfServiceProfileBrandingProperties(logoUrl, colors, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncCustomTextClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawCustomTextClient rawClient;
@@ -24,40 +25,34 @@ public class AsyncCustomTextClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawCustomTextClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve custom text for a specific prompt and language.
      */
     public CompletableFuture<Map<String, Object>> get(PromptGroupNameEnum prompt, PromptLanguageEnum language) {
-        return this.rawClient.get(prompt, language).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve custom text for a specific prompt and language.
      */
-    public CompletableFuture<Map<String, Object>> get(
-            PromptGroupNameEnum prompt, PromptLanguageEnum language, RequestOptions requestOptions) {
-        return this.rawClient.get(prompt, language, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Map<String, Object>> get(PromptGroupNameEnum prompt, PromptLanguageEnum language, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set custom text for a specific prompt. Existing texts will be overwritten.
      */
-    public CompletableFuture<Void> set(
-            PromptGroupNameEnum prompt, PromptLanguageEnum language, Map<String, Object> request) {
-        return this.rawClient.set(prompt, language, request).thenApply(response -> response.body());
+    public CompletableFuture<Void> set(PromptGroupNameEnum prompt, PromptLanguageEnum language, Map<String, Object> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set custom text for a specific prompt. Existing texts will be overwritten.
      */
-    public CompletableFuture<Void> set(
-            PromptGroupNameEnum prompt,
-            PromptLanguageEnum language,
-            Map<String, Object> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.set(prompt, language, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> set(PromptGroupNameEnum prompt, PromptLanguageEnum language, Map<String, Object> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

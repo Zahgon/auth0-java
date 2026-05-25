@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonAzureBlob.Builder.class)
 public final class ClientAddonAzureBlob {
+
     private final Optional<String> accountName;
 
     private final Optional<String> storageAccessKey;
@@ -48,21 +49,7 @@ public final class ClientAddonAzureBlob {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonAzureBlob(
-            Optional<String> accountName,
-            Optional<String> storageAccessKey,
-            Optional<String> containerName,
-            Optional<String> blobName,
-            Optional<Integer> expiration,
-            Optional<String> signedIdentifier,
-            Optional<Boolean> blobRead,
-            Optional<Boolean> blobWrite,
-            Optional<Boolean> blobDelete,
-            Optional<Boolean> containerRead,
-            Optional<Boolean> containerWrite,
-            Optional<Boolean> containerDelete,
-            Optional<Boolean> containerList,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonAzureBlob(Optional<String> accountName, Optional<String> storageAccessKey, Optional<String> containerName, Optional<String> blobName, Optional<Integer> expiration, Optional<String> signedIdentifier, Optional<Boolean> blobRead, Optional<Boolean> blobWrite, Optional<Boolean> blobDelete, Optional<Boolean> containerRead, Optional<Boolean> containerWrite, Optional<Boolean> containerDelete, Optional<Boolean> containerList, Map<String, Object> additionalProperties) {
         this.accountName = accountName;
         this.storageAccessKey = storageAccessKey;
         this.containerName = containerName;
@@ -84,7 +71,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("accountName")
     public Optional<String> getAccountName() {
-        return accountName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,7 +79,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("storageAccessKey")
     public Optional<String> getStorageAccessKey() {
-        return storageAccessKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,7 +87,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("containerName")
     public Optional<String> getContainerName() {
-        return containerName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -108,7 +95,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("blobName")
     public Optional<String> getBlobName() {
-        return blobName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,7 +103,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("expiration")
     public Optional<Integer> getExpiration() {
-        return expiration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,7 +111,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("signedIdentifier")
     public Optional<String> getSignedIdentifier() {
-        return signedIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +119,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("blob_read")
     public Optional<Boolean> getBlobRead() {
-        return blobRead;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,7 +127,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("blob_write")
     public Optional<Boolean> getBlobWrite() {
-        return blobWrite;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +135,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("blob_delete")
     public Optional<Boolean> getBlobDelete() {
-        return blobDelete;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,7 +143,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("container_read")
     public Optional<Boolean> getContainerRead() {
-        return containerRead;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -164,7 +151,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("container_write")
     public Optional<Boolean> getContainerWrite() {
-        return containerWrite;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,7 +159,7 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("container_delete")
     public Optional<Boolean> getContainerDelete() {
-        return containerDelete;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -180,65 +167,40 @@ public final class ClientAddonAzureBlob {
      */
     @JsonProperty("container_list")
     public Optional<Boolean> getContainerList() {
-        return containerList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonAzureBlob && equalTo((ClientAddonAzureBlob) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonAzureBlob other) {
-        return accountName.equals(other.accountName)
-                && storageAccessKey.equals(other.storageAccessKey)
-                && containerName.equals(other.containerName)
-                && blobName.equals(other.blobName)
-                && expiration.equals(other.expiration)
-                && signedIdentifier.equals(other.signedIdentifier)
-                && blobRead.equals(other.blobRead)
-                && blobWrite.equals(other.blobWrite)
-                && blobDelete.equals(other.blobDelete)
-                && containerRead.equals(other.containerRead)
-                && containerWrite.equals(other.containerWrite)
-                && containerDelete.equals(other.containerDelete)
-                && containerList.equals(other.containerList);
+        return accountName.equals(other.accountName) && storageAccessKey.equals(other.storageAccessKey) && containerName.equals(other.containerName) && blobName.equals(other.blobName) && expiration.equals(other.expiration) && signedIdentifier.equals(other.signedIdentifier) && blobRead.equals(other.blobRead) && blobWrite.equals(other.blobWrite) && blobDelete.equals(other.blobDelete) && containerRead.equals(other.containerRead) && containerWrite.equals(other.containerWrite) && containerDelete.equals(other.containerDelete) && containerList.equals(other.containerList);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.accountName,
-                this.storageAccessKey,
-                this.containerName,
-                this.blobName,
-                this.expiration,
-                this.signedIdentifier,
-                this.blobRead,
-                this.blobWrite,
-                this.blobDelete,
-                this.containerRead,
-                this.containerWrite,
-                this.containerDelete,
-                this.containerList);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> accountName = Optional.empty();
 
         private Optional<String> storageAccessKey = Optional.empty();
@@ -268,23 +230,11 @@ public final class ClientAddonAzureBlob {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonAzureBlob other) {
-            accountName(other.getAccountName());
-            storageAccessKey(other.getStorageAccessKey());
-            containerName(other.getContainerName());
-            blobName(other.getBlobName());
-            expiration(other.getExpiration());
-            signedIdentifier(other.getSignedIdentifier());
-            blobRead(other.getBlobRead());
-            blobWrite(other.getBlobWrite());
-            blobDelete(other.getBlobDelete());
-            containerRead(other.getContainerRead());
-            containerWrite(other.getContainerWrite());
-            containerDelete(other.getContainerDelete());
-            containerList(other.getContainerList());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -292,13 +242,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "accountName", nulls = Nulls.SKIP)
         public Builder accountName(Optional<String> accountName) {
-            this.accountName = accountName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Optional.ofNullable(accountName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -306,13 +254,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "storageAccessKey", nulls = Nulls.SKIP)
         public Builder storageAccessKey(Optional<String> storageAccessKey) {
-            this.storageAccessKey = storageAccessKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder storageAccessKey(String storageAccessKey) {
-            this.storageAccessKey = Optional.ofNullable(storageAccessKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -320,13 +266,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "containerName", nulls = Nulls.SKIP)
         public Builder containerName(Optional<String> containerName) {
-            this.containerName = containerName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Optional.ofNullable(containerName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -334,13 +278,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "blobName", nulls = Nulls.SKIP)
         public Builder blobName(Optional<String> blobName) {
-            this.blobName = blobName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blobName(String blobName) {
-            this.blobName = Optional.ofNullable(blobName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,13 +290,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "expiration", nulls = Nulls.SKIP)
         public Builder expiration(Optional<Integer> expiration) {
-            this.expiration = expiration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiration(Integer expiration) {
-            this.expiration = Optional.ofNullable(expiration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -362,13 +302,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "signedIdentifier", nulls = Nulls.SKIP)
         public Builder signedIdentifier(Optional<String> signedIdentifier) {
-            this.signedIdentifier = signedIdentifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signedIdentifier(String signedIdentifier) {
-            this.signedIdentifier = Optional.ofNullable(signedIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -376,13 +314,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "blob_read", nulls = Nulls.SKIP)
         public Builder blobRead(Optional<Boolean> blobRead) {
-            this.blobRead = blobRead;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blobRead(Boolean blobRead) {
-            this.blobRead = Optional.ofNullable(blobRead);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -390,13 +326,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "blob_write", nulls = Nulls.SKIP)
         public Builder blobWrite(Optional<Boolean> blobWrite) {
-            this.blobWrite = blobWrite;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blobWrite(Boolean blobWrite) {
-            this.blobWrite = Optional.ofNullable(blobWrite);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -404,13 +338,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "blob_delete", nulls = Nulls.SKIP)
         public Builder blobDelete(Optional<Boolean> blobDelete) {
-            this.blobDelete = blobDelete;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blobDelete(Boolean blobDelete) {
-            this.blobDelete = Optional.ofNullable(blobDelete);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -418,13 +350,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "container_read", nulls = Nulls.SKIP)
         public Builder containerRead(Optional<Boolean> containerRead) {
-            this.containerRead = containerRead;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder containerRead(Boolean containerRead) {
-            this.containerRead = Optional.ofNullable(containerRead);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -432,13 +362,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "container_write", nulls = Nulls.SKIP)
         public Builder containerWrite(Optional<Boolean> containerWrite) {
-            this.containerWrite = containerWrite;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder containerWrite(Boolean containerWrite) {
-            this.containerWrite = Optional.ofNullable(containerWrite);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -446,13 +374,11 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "container_delete", nulls = Nulls.SKIP)
         public Builder containerDelete(Optional<Boolean> containerDelete) {
-            this.containerDelete = containerDelete;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder containerDelete(Boolean containerDelete) {
-            this.containerDelete = Optional.ofNullable(containerDelete);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -460,41 +386,23 @@ public final class ClientAddonAzureBlob {
          */
         @JsonSetter(value = "container_list", nulls = Nulls.SKIP)
         public Builder containerList(Optional<Boolean> containerList) {
-            this.containerList = containerList;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder containerList(Boolean containerList) {
-            this.containerList = Optional.ofNullable(containerList);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonAzureBlob build() {
-            return new ClientAddonAzureBlob(
-                    accountName,
-                    storageAccessKey,
-                    containerName,
-                    blobName,
-                    expiration,
-                    signedIdentifier,
-                    blobRead,
-                    blobWrite,
-                    blobDelete,
-                    containerRead,
-                    containerWrite,
-                    containerDelete,
-                    containerList,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormComponentCategoryBlockConst {
-    public static final FormComponentCategoryBlockConst BLOCK =
-            new FormComponentCategoryBlockConst(Value.BLOCK, "BLOCK");
+
+    public static final FormComponentCategoryBlockConst BLOCK = new FormComponentCategoryBlockConst(Value.BLOCK, "BLOCK");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormComponentCategoryBlockConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormComponentCategoryBlockConst
-                        && this.string.equals(((FormComponentCategoryBlockConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BLOCK:
-                return visitor.visitBlock();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormComponentCategoryBlockConst valueOf(String value) {
-        switch (value) {
-            case "BLOCK":
-                return BLOCK;
-            default:
-                return new FormComponentCategoryBlockConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BLOCK,
 
-        UNKNOWN
+        BLOCK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBlock();
 
         T visitUnknown(String unknownType);

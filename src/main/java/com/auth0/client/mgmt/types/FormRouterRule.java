@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormRouterRule.Builder.class)
 public final class FormRouterRule {
+
     private final String id;
 
     private final Optional<String> alias;
@@ -29,11 +30,7 @@ public final class FormRouterRule {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormRouterRule(
-            String id,
-            Optional<String> alias,
-            Optional<FormNodePointer> nextNode,
-            Map<String, Object> additionalProperties) {
+    private FormRouterRule(String id, Optional<String> alias, Optional<FormNodePointer> nextNode, Map<String, Object> additionalProperties) {
         this.id = id;
         this.alias = alias;
         this.nextNode = nextNode;
@@ -42,28 +39,27 @@ public final class FormRouterRule {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alias")
     public Optional<String> getAlias() {
-        return alias;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("next_node")
     public Optional<FormNodePointer> getNextNode() {
-        return nextNode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormRouterRule && equalTo((FormRouterRule) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormRouterRule other) {
@@ -72,25 +68,27 @@ public final class FormRouterRule {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.alias, this.nextNode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         _FinalStage id(@NotNull String id);
 
         Builder from(FormRouterRule other);
     }
 
     public interface _FinalStage {
+
         FormRouterRule build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -108,6 +106,7 @@ public final class FormRouterRule {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, _FinalStage {
+
         private String id;
 
         private Optional<FormNodePointer> nextNode = Optional.empty();
@@ -117,64 +116,55 @@ public final class FormRouterRule {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormRouterRule other) {
-            id(other.getId());
-            alias(other.getAlias());
-            nextNode(other.getNextNode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public _FinalStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nextNode(FormNodePointer nextNode) {
-            this.nextNode = Optional.ofNullable(nextNode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "next_node", nulls = Nulls.SKIP)
         public _FinalStage nextNode(Optional<FormNodePointer> nextNode) {
-            this.nextNode = nextNode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage alias(String alias) {
-            this.alias = Optional.ofNullable(alias);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "alias", nulls = Nulls.SKIP)
         public _FinalStage alias(Optional<String> alias) {
-            this.alias = alias;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormRouterRule build() {
-            return new FormRouterRule(id, alias, nextNode, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

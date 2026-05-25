@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdDocusignEnum {
-    public static final FlowsVaultConnectionAppIdDocusignEnum DOCUSIGN =
-            new FlowsVaultConnectionAppIdDocusignEnum(Value.DOCUSIGN, "DOCUSIGN");
+
+    public static final FlowsVaultConnectionAppIdDocusignEnum DOCUSIGN = new FlowsVaultConnectionAppIdDocusignEnum(Value.DOCUSIGN, "DOCUSIGN");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdDocusignEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdDocusignEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdDocusignEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DOCUSIGN:
-                return visitor.visitDocusign();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdDocusignEnum valueOf(String value) {
-        switch (value) {
-            case "DOCUSIGN":
-                return DOCUSIGN;
-            default:
-                return new FlowsVaultConnectionAppIdDocusignEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DOCUSIGN,
 
-        UNKNOWN
+        DOCUSIGN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDocusign();
 
         T visitUnknown(String unknownType);

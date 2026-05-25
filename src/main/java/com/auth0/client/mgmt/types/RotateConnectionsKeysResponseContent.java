@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RotateConnectionsKeysResponseContent.Builder.class)
 public final class RotateConnectionsKeysResponseContent {
+
     private final String kid;
 
     private final String cert;
@@ -41,17 +42,7 @@ public final class RotateConnectionsKeysResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private RotateConnectionsKeysResponseContent(
-            String kid,
-            String cert,
-            Optional<String> pkcs,
-            Optional<Boolean> next,
-            String fingerprint,
-            String thumbprint,
-            Optional<String> algorithm,
-            Optional<ConnectionKeyUseEnum> keyUse,
-            Optional<String> subjectDn,
-            Map<String, Object> additionalProperties) {
+    private RotateConnectionsKeysResponseContent(String kid, String cert, Optional<String> pkcs, Optional<Boolean> next, String fingerprint, String thumbprint, Optional<String> algorithm, Optional<ConnectionKeyUseEnum> keyUse, Optional<String> subjectDn, Map<String, Object> additionalProperties) {
         this.kid = kid;
         this.cert = cert;
         this.pkcs = pkcs;
@@ -69,7 +60,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,7 +68,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("cert")
     public String getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +76,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("pkcs")
     public Optional<String> getPkcs() {
-        return pkcs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -93,7 +84,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("next")
     public Optional<Boolean> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +92,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("fingerprint")
     public String getFingerprint() {
-        return fingerprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,7 +100,7 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("thumbprint")
     public String getThumbprint() {
-        return thumbprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,67 +108,49 @@ public final class RotateConnectionsKeysResponseContent {
      */
     @JsonProperty("algorithm")
     public Optional<String> getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("key_use")
     public Optional<ConnectionKeyUseEnum> getKeyUse() {
-        return keyUse;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject_dn")
     public Optional<String> getSubjectDn() {
-        return subjectDn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RotateConnectionsKeysResponseContent
-                && equalTo((RotateConnectionsKeysResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RotateConnectionsKeysResponseContent other) {
-        return kid.equals(other.kid)
-                && cert.equals(other.cert)
-                && pkcs.equals(other.pkcs)
-                && next.equals(other.next)
-                && fingerprint.equals(other.fingerprint)
-                && thumbprint.equals(other.thumbprint)
-                && algorithm.equals(other.algorithm)
-                && keyUse.equals(other.keyUse)
-                && subjectDn.equals(other.subjectDn);
+        return kid.equals(other.kid) && cert.equals(other.cert) && pkcs.equals(other.pkcs) && next.equals(other.next) && fingerprint.equals(other.fingerprint) && thumbprint.equals(other.thumbprint) && algorithm.equals(other.algorithm) && keyUse.equals(other.keyUse) && subjectDn.equals(other.subjectDn);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.kid,
-                this.cert,
-                this.pkcs,
-                this.next,
-                this.fingerprint,
-                this.thumbprint,
-                this.algorithm,
-                this.keyUse,
-                this.subjectDn);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KidStage {
+
         /**
          * <p>The key id of the signing key</p>
          */
@@ -187,6 +160,7 @@ public final class RotateConnectionsKeysResponseContent {
     }
 
     public interface CertStage {
+
         /**
          * <p>The public certificate of the signing key</p>
          */
@@ -194,6 +168,7 @@ public final class RotateConnectionsKeysResponseContent {
     }
 
     public interface FingerprintStage {
+
         /**
          * <p>The cert fingerprint</p>
          */
@@ -201,6 +176,7 @@ public final class RotateConnectionsKeysResponseContent {
     }
 
     public interface ThumbprintStage {
+
         /**
          * <p>The cert thumbprint</p>
          */
@@ -208,6 +184,7 @@ public final class RotateConnectionsKeysResponseContent {
     }
 
     public interface _FinalStage {
+
         RotateConnectionsKeysResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -246,6 +223,7 @@ public final class RotateConnectionsKeysResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements KidStage, CertStage, FingerprintStage, ThumbprintStage, _FinalStage {
+
         private String kid;
 
         private String cert;
@@ -267,20 +245,12 @@ public final class RotateConnectionsKeysResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(RotateConnectionsKeysResponseContent other) {
-            kid(other.getKid());
-            cert(other.getCert());
-            pkcs(other.getPkcs());
-            next(other.getNext());
-            fingerprint(other.getFingerprint());
-            thumbprint(other.getThumbprint());
-            algorithm(other.getAlgorithm());
-            keyUse(other.getKeyUse());
-            subjectDn(other.getSubjectDn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -291,8 +261,7 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter("kid")
         public CertStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -303,8 +272,7 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter("cert")
         public FingerprintStage cert(@NotNull String cert) {
-            this.cert = Objects.requireNonNull(cert, "cert must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,8 +283,7 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter("fingerprint")
         public ThumbprintStage fingerprint(@NotNull String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint, "fingerprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -327,34 +294,29 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter("thumbprint")
         public _FinalStage thumbprint(@NotNull String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint, "thumbprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subjectDn(String subjectDn) {
-            this.subjectDn = Optional.ofNullable(subjectDn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subject_dn", nulls = Nulls.SKIP)
         public _FinalStage subjectDn(Optional<String> subjectDn) {
-            this.subjectDn = subjectDn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage keyUse(ConnectionKeyUseEnum keyUse) {
-            this.keyUse = Optional.ofNullable(keyUse);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "key_use", nulls = Nulls.SKIP)
         public _FinalStage keyUse(Optional<ConnectionKeyUseEnum> keyUse) {
-            this.keyUse = keyUse;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -363,8 +325,7 @@ public final class RotateConnectionsKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage algorithm(String algorithm) {
-            this.algorithm = Optional.ofNullable(algorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -373,8 +334,7 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "algorithm", nulls = Nulls.SKIP)
         public _FinalStage algorithm(Optional<String> algorithm) {
-            this.algorithm = algorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -383,8 +343,7 @@ public final class RotateConnectionsKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage next(Boolean next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -393,8 +352,7 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public _FinalStage next(Optional<Boolean> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -403,8 +361,7 @@ public final class RotateConnectionsKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage pkcs(String pkcs) {
-            this.pkcs = Optional.ofNullable(pkcs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -413,26 +370,22 @@ public final class RotateConnectionsKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "pkcs", nulls = Nulls.SKIP)
         public _FinalStage pkcs(Optional<String> pkcs) {
-            this.pkcs = pkcs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public RotateConnectionsKeysResponseContent build() {
-            return new RotateConnectionsKeysResponseContent(
-                    kid, cert, pkcs, next, fingerprint, thumbprint, algorithm, keyUse, subjectDn, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.GetFlowExecutionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncExecutionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawExecutionsClient rawClient;
@@ -26,55 +27,46 @@ public class AsyncExecutionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawExecutionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(String flowId) {
-        return this.rawClient.list(flowId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(
-            String flowId, RequestOptions requestOptions) {
-        return this.rawClient.list(flowId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(String flowId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(
-            String flowId, ListFlowExecutionsRequestParameters request) {
-        return this.rawClient.list(flowId, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(String flowId, ListFlowExecutionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(
-            String flowId, ListFlowExecutionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(flowId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<FlowExecutionSummary>> list(String flowId, ListFlowExecutionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetFlowExecutionResponseContent> get(String flowId, String executionId) {
-        return this.rawClient.get(flowId, executionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetFlowExecutionResponseContent> get(
-            String flowId, String executionId, RequestOptions requestOptions) {
-        return this.rawClient.get(flowId, executionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetFlowExecutionResponseContent> get(String flowId, String executionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetFlowExecutionResponseContent> get(
-            String flowId, String executionId, GetFlowExecutionRequestParameters request) {
-        return this.rawClient.get(flowId, executionId, request).thenApply(response -> response.body());
+    public CompletableFuture<GetFlowExecutionResponseContent> get(String flowId, String executionId, GetFlowExecutionRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetFlowExecutionResponseContent> get(
-            String flowId,
-            String executionId,
-            GetFlowExecutionRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.get(flowId, executionId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetFlowExecutionResponseContent> get(String flowId, String executionId, GetFlowExecutionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String flowId, String executionId) {
-        return this.rawClient.delete(flowId, executionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String flowId, String executionId, RequestOptions requestOptions) {
-        return this.rawClient.delete(flowId, executionId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

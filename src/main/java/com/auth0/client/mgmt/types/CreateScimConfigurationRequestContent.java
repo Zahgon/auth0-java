@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateScimConfigurationRequestContent.Builder.class)
 public final class CreateScimConfigurationRequestContent {
+
     private final Optional<String> userIdAttribute;
 
     private final Optional<List<ScimMappingItem>> mapping;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateScimConfigurationRequestContent(
-            Optional<String> userIdAttribute,
-            Optional<List<ScimMappingItem>> mapping,
-            Map<String, Object> additionalProperties) {
+    private CreateScimConfigurationRequestContent(Optional<String> userIdAttribute, Optional<List<ScimMappingItem>> mapping, Map<String, Object> additionalProperties) {
         this.userIdAttribute = userIdAttribute;
         this.mapping = mapping;
         this.additionalProperties = additionalProperties;
@@ -41,7 +39,7 @@ public final class CreateScimConfigurationRequestContent {
      */
     @JsonProperty("user_id_attribute")
     public Optional<String> getUserIdAttribute() {
-        return userIdAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,19 +47,17 @@ public final class CreateScimConfigurationRequestContent {
      */
     @JsonProperty("mapping")
     public Optional<List<ScimMappingItem>> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateScimConfigurationRequestContent
-                && equalTo((CreateScimConfigurationRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateScimConfigurationRequestContent other) {
@@ -70,20 +66,21 @@ public final class CreateScimConfigurationRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.userIdAttribute, this.mapping);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> userIdAttribute = Optional.empty();
 
         private Optional<List<ScimMappingItem>> mapping = Optional.empty();
@@ -91,12 +88,11 @@ public final class CreateScimConfigurationRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateScimConfigurationRequestContent other) {
-            userIdAttribute(other.getUserIdAttribute());
-            mapping(other.getMapping());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -104,13 +100,11 @@ public final class CreateScimConfigurationRequestContent {
          */
         @JsonSetter(value = "user_id_attribute", nulls = Nulls.SKIP)
         public Builder userIdAttribute(Optional<String> userIdAttribute) {
-            this.userIdAttribute = userIdAttribute;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userIdAttribute(String userIdAttribute) {
-            this.userIdAttribute = Optional.ofNullable(userIdAttribute);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -118,27 +112,23 @@ public final class CreateScimConfigurationRequestContent {
          */
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public Builder mapping(Optional<List<ScimMappingItem>> mapping) {
-            this.mapping = mapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mapping(List<ScimMappingItem> mapping) {
-            this.mapping = Optional.ofNullable(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateScimConfigurationRequestContent build() {
-            return new CreateScimConfigurationRequestContent(userIdAttribute, mapping, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DeleteUserIdentityResponseContentItem.Builder.class)
 public final class DeleteUserIdentityResponseContentItem {
+
     private final String connection;
 
     private final String userId;
@@ -39,16 +40,7 @@ public final class DeleteUserIdentityResponseContentItem {
 
     private final Map<String, Object> additionalProperties;
 
-    private DeleteUserIdentityResponseContentItem(
-            String connection,
-            String userId,
-            String provider,
-            Optional<Boolean> isSocial,
-            Optional<String> accessToken,
-            Optional<String> accessTokenSecret,
-            Optional<String> refreshToken,
-            Optional<UserProfileData> profileData,
-            Map<String, Object> additionalProperties) {
+    private DeleteUserIdentityResponseContentItem(String connection, String userId, String provider, Optional<Boolean> isSocial, Optional<String> accessToken, Optional<String> accessTokenSecret, Optional<String> refreshToken, Optional<UserProfileData> profileData, Map<String, Object> additionalProperties) {
         this.connection = connection;
         this.userId = userId;
         this.provider = provider;
@@ -65,7 +57,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("connection")
     public String getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +65,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("user_id")
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +73,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("provider")
     public String getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +81,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("isSocial")
     public Optional<Boolean> getIsSocial() {
-        return isSocial;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,7 +89,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("access_token")
     public Optional<String> getAccessToken() {
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,7 +97,7 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("access_token_secret")
     public Optional<String> getAccessTokenSecret() {
-        return accessTokenSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,60 +105,44 @@ public final class DeleteUserIdentityResponseContentItem {
      */
     @JsonProperty("refresh_token")
     public Optional<String> getRefreshToken() {
-        return refreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("profileData")
     public Optional<UserProfileData> getProfileData() {
-        return profileData;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DeleteUserIdentityResponseContentItem
-                && equalTo((DeleteUserIdentityResponseContentItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DeleteUserIdentityResponseContentItem other) {
-        return connection.equals(other.connection)
-                && userId.equals(other.userId)
-                && provider.equals(other.provider)
-                && isSocial.equals(other.isSocial)
-                && accessToken.equals(other.accessToken)
-                && accessTokenSecret.equals(other.accessTokenSecret)
-                && refreshToken.equals(other.refreshToken)
-                && profileData.equals(other.profileData);
+        return connection.equals(other.connection) && userId.equals(other.userId) && provider.equals(other.provider) && isSocial.equals(other.isSocial) && accessToken.equals(other.accessToken) && accessTokenSecret.equals(other.accessTokenSecret) && refreshToken.equals(other.refreshToken) && profileData.equals(other.profileData);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connection,
-                this.userId,
-                this.provider,
-                this.isSocial,
-                this.accessToken,
-                this.accessTokenSecret,
-                this.refreshToken,
-                this.profileData);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionStage {
+
         /**
          * <p>The name of the connection for the identity.</p>
          */
@@ -176,6 +152,7 @@ public final class DeleteUserIdentityResponseContentItem {
     }
 
     public interface UserIdStage {
+
         /**
          * <p>The unique identifier for the user for the identity.</p>
          */
@@ -183,6 +160,7 @@ public final class DeleteUserIdentityResponseContentItem {
     }
 
     public interface ProviderStage {
+
         /**
          * <p>The type of identity provider.</p>
          */
@@ -190,6 +168,7 @@ public final class DeleteUserIdentityResponseContentItem {
     }
 
     public interface _FinalStage {
+
         DeleteUserIdentityResponseContentItem build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -231,6 +210,7 @@ public final class DeleteUserIdentityResponseContentItem {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionStage, UserIdStage, ProviderStage, _FinalStage {
+
         private String connection;
 
         private String userId;
@@ -250,19 +230,12 @@ public final class DeleteUserIdentityResponseContentItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(DeleteUserIdentityResponseContentItem other) {
-            connection(other.getConnection());
-            userId(other.getUserId());
-            provider(other.getProvider());
-            isSocial(other.getIsSocial());
-            accessToken(other.getAccessToken());
-            accessTokenSecret(other.getAccessTokenSecret());
-            refreshToken(other.getRefreshToken());
-            profileData(other.getProfileData());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -273,8 +246,7 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter("connection")
         public UserIdStage connection(@NotNull String connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -285,8 +257,7 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter("user_id")
         public ProviderStage userId(@NotNull String userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -297,21 +268,18 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter("provider")
         public _FinalStage provider(@NotNull String provider) {
-            this.provider = Objects.requireNonNull(provider, "provider must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage profileData(UserProfileData profileData) {
-            this.profileData = Optional.ofNullable(profileData);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "profileData", nulls = Nulls.SKIP)
         public _FinalStage profileData(Optional<UserProfileData> profileData) {
-            this.profileData = profileData;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -320,8 +288,7 @@ public final class DeleteUserIdentityResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage refreshToken(String refreshToken) {
-            this.refreshToken = Optional.ofNullable(refreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -330,8 +297,7 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "refresh_token", nulls = Nulls.SKIP)
         public _FinalStage refreshToken(Optional<String> refreshToken) {
-            this.refreshToken = refreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -340,8 +306,7 @@ public final class DeleteUserIdentityResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage accessTokenSecret(String accessTokenSecret) {
-            this.accessTokenSecret = Optional.ofNullable(accessTokenSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -350,8 +315,7 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "access_token_secret", nulls = Nulls.SKIP)
         public _FinalStage accessTokenSecret(Optional<String> accessTokenSecret) {
-            this.accessTokenSecret = accessTokenSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -360,8 +324,7 @@ public final class DeleteUserIdentityResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage accessToken(String accessToken) {
-            this.accessToken = Optional.ofNullable(accessToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -370,8 +333,7 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "access_token", nulls = Nulls.SKIP)
         public _FinalStage accessToken(Optional<String> accessToken) {
-            this.accessToken = accessToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -380,8 +342,7 @@ public final class DeleteUserIdentityResponseContentItem {
          */
         @java.lang.Override
         public _FinalStage isSocial(Boolean isSocial) {
-            this.isSocial = Optional.ofNullable(isSocial);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -390,34 +351,22 @@ public final class DeleteUserIdentityResponseContentItem {
         @java.lang.Override
         @JsonSetter(value = "isSocial", nulls = Nulls.SKIP)
         public _FinalStage isSocial(Optional<Boolean> isSocial) {
-            this.isSocial = isSocial;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public DeleteUserIdentityResponseContentItem build() {
-            return new DeleteUserIdentityResponseContentItem(
-                    connection,
-                    userId,
-                    provider,
-                    isSocial,
-                    accessToken,
-                    accessTokenSecret,
-                    refreshToken,
-                    profileData,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

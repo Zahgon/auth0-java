@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventGroupCreatedTypeEnum {
-    public static final EventStreamCloudEventGroupCreatedTypeEnum GROUP_CREATED =
-            new EventStreamCloudEventGroupCreatedTypeEnum(Value.GROUP_CREATED, "group.created");
+
+    public static final EventStreamCloudEventGroupCreatedTypeEnum GROUP_CREATED = new EventStreamCloudEventGroupCreatedTypeEnum(Value.GROUP_CREATED, "group.created");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventGroupCreatedTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventGroupCreatedTypeEnum
-                        && this.string.equals(((EventStreamCloudEventGroupCreatedTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GROUP_CREATED:
-                return visitor.visitGroupCreated();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventGroupCreatedTypeEnum valueOf(String value) {
-        switch (value) {
-            case "group.created":
-                return GROUP_CREATED;
-            default:
-                return new EventStreamCloudEventGroupCreatedTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GROUP_CREATED,
 
-        UNKNOWN
+        GROUP_CREATED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGroupCreated();
 
         T visitUnknown(String unknownType);

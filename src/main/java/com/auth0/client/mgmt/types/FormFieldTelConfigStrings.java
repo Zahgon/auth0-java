@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldTelConfigStrings.Builder.class)
 public final class FormFieldTelConfigStrings {
+
     private final Optional<String> filterPlaceholder;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class FormFieldTelConfigStrings {
 
     @JsonProperty("filter_placeholder")
     public Optional<String> getFilterPlaceholder() {
-        return filterPlaceholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldTelConfigStrings && equalTo((FormFieldTelConfigStrings) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldTelConfigStrings other) {
@@ -51,55 +51,52 @@ public final class FormFieldTelConfigStrings {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.filterPlaceholder);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> filterPlaceholder = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldTelConfigStrings other) {
-            filterPlaceholder(other.getFilterPlaceholder());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "filter_placeholder", nulls = Nulls.SKIP)
         public Builder filterPlaceholder(Optional<String> filterPlaceholder) {
-            this.filterPlaceholder = filterPlaceholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder filterPlaceholder(String filterPlaceholder) {
-            this.filterPlaceholder = Optional.ofNullable(filterPlaceholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldTelConfigStrings build() {
-            return new FormFieldTelConfigStrings(filterPlaceholder, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

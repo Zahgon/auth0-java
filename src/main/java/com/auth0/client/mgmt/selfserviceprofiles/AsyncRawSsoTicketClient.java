@@ -31,6 +31,7 @@ import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 
 public class AsyncRawSsoTicketClient {
+
     protected final ClientOptions clientOptions;
 
     public AsyncRawSsoTicketClient(ClientOptions clientOptions) {
@@ -40,117 +41,29 @@ public class AsyncRawSsoTicketClient {
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(
-            String id) {
-        return create(
-                id, CreateSelfServiceProfileSsoTicketRequestContent.builder().build());
+    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(String id) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(
-            String id, RequestOptions requestOptions) {
-        return create(
-                id, CreateSelfServiceProfileSsoTicketRequestContent.builder().build(), requestOptions);
+    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(
-            String id, CreateSelfServiceProfileSsoTicketRequestContent request) {
-        return create(id, request, null);
+    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(String id, CreateSelfServiceProfileSsoTicketRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(
-            String id, CreateSelfServiceProfileSsoTicketRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("self-service-profiles")
-                .addPathSegment(id)
-                .addPathSegments("sso-ticket");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> future =
-                new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    if (response.isSuccessful()) {
-                        future.complete(new ManagementApiHttpResponse<>(
-                                ObjectMappers.JSON_MAPPER.readValue(
-                                        responseBodyString, CreateSelfServiceProfileSsoTicketResponseContent.class),
-                                response));
-                        return;
-                    }
-                    try {
-                        switch (response.code()) {
-                            case 400:
-                                future.completeExceptionally(new BadRequestError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<CreateSelfServiceProfileSsoTicketResponseContent>> create(String id, CreateSelfServiceProfileSsoTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -158,82 +71,14 @@ public class AsyncRawSsoTicketClient {
      * Clients should treat these <code>202</code> responses as an acknowledgment that the request has been accepted and is in progress, even if the ticket was not found.
      */
     public CompletableFuture<ManagementApiHttpResponse<Void>> revoke(String profileId, String id) {
-        return revoke(profileId, id, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes a Self-Service Enterprise Configuration access ticket and invalidates associated sessions. The ticket will no longer be accepted to initiate a Self-Service Enterprise Configuration session. If any users have already started a session through this ticket, their session will be terminated. Clients should expect a <code>202 Accepted</code> response upon successful processing, indicating that the request has been acknowledged and that the revocation is underway but may not be fully completed at the time of response. If the specified ticket does not exist, a <code>202 Accepted</code> response is also returned, signaling that no further action is required.
      * Clients should treat these <code>202</code> responses as an acknowledgment that the request has been accepted and is in progress, even if the ticket was not found.
      */
-    public CompletableFuture<ManagementApiHttpResponse<Void>> revoke(
-            String profileId, String id, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("self-service-profiles")
-                .addPathSegment(profileId)
-                .addPathSegments("sso-ticket")
-                .addPathSegment(id)
-                .addPathSegments("revoke");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("POST", RequestBody.create("", null))
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        CompletableFuture<ManagementApiHttpResponse<Void>> future = new CompletableFuture<>();
-        client.newCall(okhttpRequest).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    if (response.isSuccessful()) {
-                        future.complete(new ManagementApiHttpResponse<>(null, response));
-                        return;
-                    }
-                    String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-                    try {
-                        switch (response.code()) {
-                            case 401:
-                                future.completeExceptionally(new UnauthorizedError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 403:
-                                future.completeExceptionally(new ForbiddenError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                            case 429:
-                                future.completeExceptionally(new TooManyRequestsError(
-                                        ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class),
-                                        response));
-                                return;
-                        }
-                    } catch (JsonProcessingException ignored) {
-                        // unable to map error response, throwing generic error
-                    }
-                    Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-                    future.completeExceptionally(new ManagementApiException(
-                            "Error with status code " + response.code(), response.code(), errorBody, response));
-                    return;
-                } catch (IOException e) {
-                    future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-                }
-            }
-
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(new ManagementException("Network error executing HTTP request", e));
-            }
-        });
-        return future;
+    public CompletableFuture<ManagementApiHttpResponse<Void>> revoke(String profileId, String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

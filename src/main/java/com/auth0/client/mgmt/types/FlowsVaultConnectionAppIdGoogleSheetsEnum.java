@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdGoogleSheetsEnum {
-    public static final FlowsVaultConnectionAppIdGoogleSheetsEnum GOOGLE_SHEETS =
-            new FlowsVaultConnectionAppIdGoogleSheetsEnum(Value.GOOGLE_SHEETS, "GOOGLE_SHEETS");
+
+    public static final FlowsVaultConnectionAppIdGoogleSheetsEnum GOOGLE_SHEETS = new FlowsVaultConnectionAppIdGoogleSheetsEnum(Value.GOOGLE_SHEETS, "GOOGLE_SHEETS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdGoogleSheetsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdGoogleSheetsEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdGoogleSheetsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GOOGLE_SHEETS:
-                return visitor.visitGoogleSheets();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdGoogleSheetsEnum valueOf(String value) {
-        switch (value) {
-            case "GOOGLE_SHEETS":
-                return GOOGLE_SHEETS;
-            default:
-                return new FlowsVaultConnectionAppIdGoogleSheetsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GOOGLE_SHEETS,
 
-        UNKNOWN
+        GOOGLE_SHEETS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGoogleSheets();
 
         T visitUnknown(String unknownType);

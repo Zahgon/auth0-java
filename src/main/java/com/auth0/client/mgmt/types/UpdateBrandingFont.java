@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBrandingFont.Builder.class)
 public final class UpdateBrandingFont {
+
     private final OptionalNullable<String> url;
 
     private final Map<String, Object> additionalProperties;
@@ -38,10 +39,7 @@ public final class UpdateBrandingFont {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("url")
     public OptionalNullable<String> getUrl() {
-        if (url == null) {
-            return OptionalNullable.absent();
-        }
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -52,13 +50,12 @@ public final class UpdateBrandingFont {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBrandingFont && equalTo((UpdateBrandingFont) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBrandingFont other) {
@@ -67,30 +64,31 @@ public final class UpdateBrandingFont {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> url = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBrandingFont other) {
-            url(other.getUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -98,47 +96,31 @@ public final class UpdateBrandingFont {
          */
         @JsonSetter(value = "url", nulls = Nulls.SKIP)
         public Builder url(@Nullable OptionalNullable<String> url) {
-            this.url = url;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(String url) {
-            this.url = OptionalNullable.of(url);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(Optional<String> url) {
-            if (url.isPresent()) {
-                this.url = OptionalNullable.of(url.get());
-            } else {
-                this.url = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(com.auth0.client.mgmt.core.Nullable<String> url) {
-            if (url.isNull()) {
-                this.url = OptionalNullable.ofNull();
-            } else if (url.isEmpty()) {
-                this.url = OptionalNullable.absent();
-            } else {
-                this.url = OptionalNullable.of(url.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBrandingFont build() {
-            return new UpdateBrandingFont(url, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

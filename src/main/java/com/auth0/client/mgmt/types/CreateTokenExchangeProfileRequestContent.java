@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateTokenExchangeProfileRequestContent.Builder.class)
 public final class CreateTokenExchangeProfileRequestContent {
+
     private final String name;
 
     private final String subjectTokenType;
@@ -29,12 +30,7 @@ public final class CreateTokenExchangeProfileRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateTokenExchangeProfileRequestContent(
-            String name,
-            String subjectTokenType,
-            String actionId,
-            TokenExchangeProfileTypeEnum type,
-            Map<String, Object> additionalProperties) {
+    private CreateTokenExchangeProfileRequestContent(String name, String subjectTokenType, String actionId, TokenExchangeProfileTypeEnum type, Map<String, Object> additionalProperties) {
         this.name = name;
         this.subjectTokenType = subjectTokenType;
         this.actionId = actionId;
@@ -47,7 +43,7 @@ public final class CreateTokenExchangeProfileRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +51,7 @@ public final class CreateTokenExchangeProfileRequestContent {
      */
     @JsonProperty("subject_token_type")
     public String getSubjectTokenType() {
-        return subjectTokenType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,48 +59,44 @@ public final class CreateTokenExchangeProfileRequestContent {
      */
     @JsonProperty("action_id")
     public String getActionId() {
-        return actionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public TokenExchangeProfileTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateTokenExchangeProfileRequestContent
-                && equalTo((CreateTokenExchangeProfileRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateTokenExchangeProfileRequestContent other) {
-        return name.equals(other.name)
-                && subjectTokenType.equals(other.subjectTokenType)
-                && actionId.equals(other.actionId)
-                && type.equals(other.type);
+        return name.equals(other.name) && subjectTokenType.equals(other.subjectTokenType) && actionId.equals(other.actionId) && type.equals(other.type);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.subjectTokenType, this.actionId, this.type);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Friendly name of this profile.</p>
          */
@@ -114,6 +106,7 @@ public final class CreateTokenExchangeProfileRequestContent {
     }
 
     public interface SubjectTokenTypeStage {
+
         /**
          * <p>Subject token type for this profile. When receiving a token exchange request on the Authentication API, the corresponding token exchange profile with a matching subject_token_type will be executed. This must be a URI.</p>
          */
@@ -121,6 +114,7 @@ public final class CreateTokenExchangeProfileRequestContent {
     }
 
     public interface ActionIdStage {
+
         /**
          * <p>The ID of the Custom Token Exchange action to execute for this profile, in order to validate the subject_token. The action must use the custom-token-exchange trigger.</p>
          */
@@ -128,10 +122,12 @@ public final class CreateTokenExchangeProfileRequestContent {
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull TokenExchangeProfileTypeEnum type);
     }
 
     public interface _FinalStage {
+
         CreateTokenExchangeProfileRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -140,8 +136,8 @@ public final class CreateTokenExchangeProfileRequestContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements NameStage, SubjectTokenTypeStage, ActionIdStage, TypeStage, _FinalStage {
+    public static final class Builder implements NameStage, SubjectTokenTypeStage, ActionIdStage, TypeStage, _FinalStage {
+
         private String name;
 
         private String subjectTokenType;
@@ -153,15 +149,12 @@ public final class CreateTokenExchangeProfileRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateTokenExchangeProfileRequestContent other) {
-            name(other.getName());
-            subjectTokenType(other.getSubjectTokenType());
-            actionId(other.getActionId());
-            type(other.getType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,8 +165,7 @@ public final class CreateTokenExchangeProfileRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public SubjectTokenTypeStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,8 +176,7 @@ public final class CreateTokenExchangeProfileRequestContent {
         @java.lang.Override
         @JsonSetter("subject_token_type")
         public ActionIdStage subjectTokenType(@NotNull String subjectTokenType) {
-            this.subjectTokenType = Objects.requireNonNull(subjectTokenType, "subjectTokenType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,33 +187,28 @@ public final class CreateTokenExchangeProfileRequestContent {
         @java.lang.Override
         @JsonSetter("action_id")
         public TypeStage actionId(@NotNull String actionId) {
-            this.actionId = Objects.requireNonNull(actionId, "actionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull TokenExchangeProfileTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateTokenExchangeProfileRequestContent build() {
-            return new CreateTokenExchangeProfileRequestContent(
-                    name, subjectTokenType, actionId, type, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

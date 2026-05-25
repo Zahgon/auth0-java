@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentLineStrategy {
-    public static final ConnectionResponseContentLineStrategy LINE =
-            new ConnectionResponseContentLineStrategy(Value.LINE, "line");
+
+    public static final ConnectionResponseContentLineStrategy LINE = new ConnectionResponseContentLineStrategy(Value.LINE, "line");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentLineStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentLineStrategy
-                        && this.string.equals(((ConnectionResponseContentLineStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LINE:
-                return visitor.visitLine();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentLineStrategy valueOf(String value) {
-        switch (value) {
-            case "line":
-                return LINE;
-            default:
-                return new ConnectionResponseContentLineStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LINE,
 
-        UNKNOWN
+        LINE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLine();
 
         T visitUnknown(String unknownType);

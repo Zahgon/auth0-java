@@ -26,6 +26,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsGoogleApps.Builder.class)
 public final class ConnectionOptionsGoogleApps implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> adminAccessToken;
@@ -76,39 +77,11 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
 
     private final Optional<String> tenantDomain;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsGoogleApps(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> adminAccessToken,
-            Optional<OffsetDateTime> adminAccessTokenExpiresin,
-            Optional<String> adminRefreshToken,
-            Optional<Boolean> allowSettingLoginScopes,
-            Optional<Boolean> apiEnableGroups,
-            Optional<Boolean> apiEnableUsers,
-            String clientId,
-            Optional<String> clientSecret,
-            Optional<String> domain,
-            Optional<List<String>> domainAliases,
-            Optional<Boolean> email,
-            Optional<Boolean> extAgreedTerms,
-            Optional<Boolean> extGroups,
-            Optional<Boolean> extGroupsExtended,
-            Optional<Boolean> extIsAdmin,
-            Optional<Boolean> extIsSuspended,
-            OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens,
-            Optional<Boolean> handleLoginFromSocial,
-            Optional<String> iconUrl,
-            Optional<Boolean> mapUserIdToId,
-            Optional<Boolean> profile,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> tenantDomain,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsGoogleApps(Optional<List<String>> nonPersistentAttrs, Optional<String> adminAccessToken, Optional<OffsetDateTime> adminAccessTokenExpiresin, Optional<String> adminRefreshToken, Optional<Boolean> allowSettingLoginScopes, Optional<Boolean> apiEnableGroups, Optional<Boolean> apiEnableUsers, String clientId, Optional<String> clientSecret, Optional<String> domain, Optional<List<String>> domainAliases, Optional<Boolean> email, Optional<Boolean> extAgreedTerms, Optional<Boolean> extGroups, Optional<Boolean> extGroupsExtended, Optional<Boolean> extIsAdmin, Optional<Boolean> extIsSuspended, OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens, Optional<Boolean> handleLoginFromSocial, Optional<String> iconUrl, Optional<Boolean> mapUserIdToId, Optional<Boolean> profile, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> tenantDomain, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.adminAccessToken = adminAccessToken;
         this.adminAccessTokenExpiresin = adminAccessTokenExpiresin;
@@ -141,22 +114,22 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("admin_access_token")
     public Optional<String> getAdminAccessToken() {
-        return adminAccessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("admin_access_token_expiresin")
     public Optional<OffsetDateTime> getAdminAccessTokenExpiresin() {
-        return adminAccessTokenExpiresin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("admin_refresh_token")
     public Optional<String> getAdminRefreshToken() {
-        return adminRefreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -164,37 +137,37 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
      */
     @JsonProperty("allow_setting_login_scopes")
     public Optional<Boolean> getAllowSettingLoginScopes() {
-        return allowSettingLoginScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_enable_groups")
     public Optional<Boolean> getApiEnableGroups() {
-        return apiEnableGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("api_enable_users")
     public Optional<Boolean> getApiEnableUsers() {
-        return apiEnableUsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain")
     public Optional<String> getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -202,17 +175,17 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_agreed_terms")
     public Optional<Boolean> getExtAgreedTerms() {
-        return extAgreedTerms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_groups")
     public Optional<Boolean> getExtGroups() {
-        return extGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -220,36 +193,33 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
      */
     @JsonProperty("ext_groups_extended")
     public Optional<Boolean> getExtGroupsExtended() {
-        return extGroupsExtended;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_is_admin")
     public Optional<Boolean> getExtIsAdmin() {
-        return extIsAdmin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_is_suspended")
     public Optional<Boolean> getExtIsSuspended() {
-        return extIsSuspended;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("federated_connections_access_tokens")
     public OptionalNullable<ConnectionFederatedConnectionsAccessTokens> getFederatedConnectionsAccessTokens() {
-        if (federatedConnectionsAccessTokens == null) {
-            return OptionalNullable.absent();
-        }
-        return federatedConnectionsAccessTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("handle_login_from_social")
     public Optional<Boolean> getHandleLoginFromSocial() {
-        return handleLoginFromSocial;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -257,7 +227,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
      */
     @JsonProperty("map_user_id_to_id")
     public Optional<Boolean> getMapUserIdToId() {
-        return mapUserIdToId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -265,31 +235,28 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
      */
     @JsonProperty("profile")
     public Optional<Boolean> getProfile() {
-        return profile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -300,98 +267,47 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsGoogleApps && equalTo((ConnectionOptionsGoogleApps) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsGoogleApps other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && adminAccessToken.equals(other.adminAccessToken)
-                && adminAccessTokenExpiresin.equals(other.adminAccessTokenExpiresin)
-                && adminRefreshToken.equals(other.adminRefreshToken)
-                && allowSettingLoginScopes.equals(other.allowSettingLoginScopes)
-                && apiEnableGroups.equals(other.apiEnableGroups)
-                && apiEnableUsers.equals(other.apiEnableUsers)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && domain.equals(other.domain)
-                && domainAliases.equals(other.domainAliases)
-                && email.equals(other.email)
-                && extAgreedTerms.equals(other.extAgreedTerms)
-                && extGroups.equals(other.extGroups)
-                && extGroupsExtended.equals(other.extGroupsExtended)
-                && extIsAdmin.equals(other.extIsAdmin)
-                && extIsSuspended.equals(other.extIsSuspended)
-                && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens)
-                && handleLoginFromSocial.equals(other.handleLoginFromSocial)
-                && iconUrl.equals(other.iconUrl)
-                && mapUserIdToId.equals(other.mapUserIdToId)
-                && profile.equals(other.profile)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && tenantDomain.equals(other.tenantDomain)
-                && upstreamParams.equals(other.upstreamParams);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && adminAccessToken.equals(other.adminAccessToken) && adminAccessTokenExpiresin.equals(other.adminAccessTokenExpiresin) && adminRefreshToken.equals(other.adminRefreshToken) && allowSettingLoginScopes.equals(other.allowSettingLoginScopes) && apiEnableGroups.equals(other.apiEnableGroups) && apiEnableUsers.equals(other.apiEnableUsers) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && domain.equals(other.domain) && domainAliases.equals(other.domainAliases) && email.equals(other.email) && extAgreedTerms.equals(other.extAgreedTerms) && extGroups.equals(other.extGroups) && extGroupsExtended.equals(other.extGroupsExtended) && extIsAdmin.equals(other.extIsAdmin) && extIsSuspended.equals(other.extIsSuspended) && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens) && handleLoginFromSocial.equals(other.handleLoginFromSocial) && iconUrl.equals(other.iconUrl) && mapUserIdToId.equals(other.mapUserIdToId) && profile.equals(other.profile) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && tenantDomain.equals(other.tenantDomain) && upstreamParams.equals(other.upstreamParams);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.adminAccessToken,
-                this.adminAccessTokenExpiresin,
-                this.adminRefreshToken,
-                this.allowSettingLoginScopes,
-                this.apiEnableGroups,
-                this.apiEnableUsers,
-                this.clientId,
-                this.clientSecret,
-                this.domain,
-                this.domainAliases,
-                this.email,
-                this.extAgreedTerms,
-                this.extGroups,
-                this.extGroupsExtended,
-                this.extIsAdmin,
-                this.extIsSuspended,
-                this.federatedConnectionsAccessTokens,
-                this.handleLoginFromSocial,
-                this.iconUrl,
-                this.mapUserIdToId,
-                this.profile,
-                this.scope,
-                this.setUserRootAttributes,
-                this.tenantDomain,
-                this.upstreamParams);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         _FinalStage clientId(@NotNull String clientId);
 
         Builder from(ConnectionOptionsGoogleApps other);
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsGoogleApps build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -471,19 +387,13 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
 
         _FinalStage extIsSuspended(Boolean extIsSuspended);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
         _FinalStage handleLoginFromSocial(Optional<Boolean> handleLoginFromSocial);
 
@@ -519,29 +429,21 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
 
         _FinalStage tenantDomain(String tenantDomain);
 
-        _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams);
+        _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
+        _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
+        _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams);
+        _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, _FinalStage {
+
         private String clientId;
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<String> tenantDomain = Optional.empty();
 
@@ -557,8 +459,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
 
         private Optional<Boolean> handleLoginFromSocial = Optional.empty();
 
-        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens = OptionalNullable.absent();
 
         private Optional<Boolean> extIsSuspended = Optional.empty();
 
@@ -595,126 +496,72 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsGoogleApps other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            adminAccessToken(other.getAdminAccessToken());
-            adminAccessTokenExpiresin(other.getAdminAccessTokenExpiresin());
-            adminRefreshToken(other.getAdminRefreshToken());
-            allowSettingLoginScopes(other.getAllowSettingLoginScopes());
-            apiEnableGroups(other.getApiEnableGroups());
-            apiEnableUsers(other.getApiEnableUsers());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            domain(other.getDomain());
-            domainAliases(other.getDomainAliases());
-            email(other.getEmail());
-            extAgreedTerms(other.getExtAgreedTerms());
-            extGroups(other.getExtGroups());
-            extGroupsExtended(other.getExtGroupsExtended());
-            extIsAdmin(other.getExtIsAdmin());
-            extIsSuspended(other.getExtIsSuspended());
-            federatedConnectionsAccessTokens(other.getFederatedConnectionsAccessTokens());
-            handleLoginFromSocial(other.getHandleLoginFromSocial());
-            iconUrl(other.getIconUrl());
-            mapUserIdToId(other.getMapUserIdToId());
-            profile(other.getProfile());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            tenantDomain(other.getTenantDomain());
-            upstreamParams(other.getUpstreamParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_id")
         public _FinalStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public _FinalStage tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public _FinalStage setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -723,8 +570,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
          */
         @java.lang.Override
         public _FinalStage profile(Boolean profile) {
-            this.profile = Optional.ofNullable(profile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -733,8 +579,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @java.lang.Override
         @JsonSetter(value = "profile", nulls = Nulls.SKIP)
         public _FinalStage profile(Optional<Boolean> profile) {
-            this.profile = profile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -743,8 +588,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
          */
         @java.lang.Override
         public _FinalStage mapUserIdToId(Boolean mapUserIdToId) {
-            this.mapUserIdToId = Optional.ofNullable(mapUserIdToId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -753,101 +597,72 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @java.lang.Override
         @JsonSetter(value = "map_user_id_to_id", nulls = Nulls.SKIP)
         public _FinalStage mapUserIdToId(Optional<Boolean> mapUserIdToId) {
-            this.mapUserIdToId = mapUserIdToId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public _FinalStage iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage handleLoginFromSocial(Boolean handleLoginFromSocial) {
-            this.handleLoginFromSocial = Optional.ofNullable(handleLoginFromSocial);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "handle_login_from_social", nulls = Nulls.SKIP)
         public _FinalStage handleLoginFromSocial(Optional<Boolean> handleLoginFromSocial) {
-            this.handleLoginFromSocial = handleLoginFromSocial;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isNull()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.ofNull();
-            } else if (federatedConnectionsAccessTokens.isEmpty()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isPresent()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens);
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "federated_connections_access_tokens", nulls = Nulls.SKIP)
-        public _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = federatedConnectionsAccessTokens;
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extIsSuspended(Boolean extIsSuspended) {
-            this.extIsSuspended = Optional.ofNullable(extIsSuspended);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_is_suspended", nulls = Nulls.SKIP)
         public _FinalStage extIsSuspended(Optional<Boolean> extIsSuspended) {
-            this.extIsSuspended = extIsSuspended;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extIsAdmin(Boolean extIsAdmin) {
-            this.extIsAdmin = Optional.ofNullable(extIsAdmin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_is_admin", nulls = Nulls.SKIP)
         public _FinalStage extIsAdmin(Optional<Boolean> extIsAdmin) {
-            this.extIsAdmin = extIsAdmin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -856,8 +671,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
          */
         @java.lang.Override
         public _FinalStage extGroupsExtended(Boolean extGroupsExtended) {
-            this.extGroupsExtended = Optional.ofNullable(extGroupsExtended);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -866,34 +680,29 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @java.lang.Override
         @JsonSetter(value = "ext_groups_extended", nulls = Nulls.SKIP)
         public _FinalStage extGroupsExtended(Optional<Boolean> extGroupsExtended) {
-            this.extGroupsExtended = extGroupsExtended;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extGroups(Boolean extGroups) {
-            this.extGroups = Optional.ofNullable(extGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_groups", nulls = Nulls.SKIP)
         public _FinalStage extGroups(Optional<Boolean> extGroups) {
-            this.extGroups = extGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extAgreedTerms(Boolean extAgreedTerms) {
-            this.extAgreedTerms = Optional.ofNullable(extAgreedTerms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_agreed_terms", nulls = Nulls.SKIP)
         public _FinalStage extAgreedTerms(Optional<Boolean> extAgreedTerms) {
-            this.extAgreedTerms = extAgreedTerms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -902,8 +711,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
          */
         @java.lang.Override
         public _FinalStage email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -912,73 +720,62 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @java.lang.Override
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public _FinalStage email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public _FinalStage domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domain(String domain) {
-            this.domain = Optional.ofNullable(domain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain", nulls = Nulls.SKIP)
         public _FinalStage domain(Optional<String> domain) {
-            this.domain = domain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public _FinalStage clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage apiEnableUsers(Boolean apiEnableUsers) {
-            this.apiEnableUsers = Optional.ofNullable(apiEnableUsers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "api_enable_users", nulls = Nulls.SKIP)
         public _FinalStage apiEnableUsers(Optional<Boolean> apiEnableUsers) {
-            this.apiEnableUsers = apiEnableUsers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage apiEnableGroups(Boolean apiEnableGroups) {
-            this.apiEnableGroups = Optional.ofNullable(apiEnableGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "api_enable_groups", nulls = Nulls.SKIP)
         public _FinalStage apiEnableGroups(Optional<Boolean> apiEnableGroups) {
-            this.apiEnableGroups = apiEnableGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -987,8 +784,7 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
          */
         @java.lang.Override
         public _FinalStage allowSettingLoginScopes(Boolean allowSettingLoginScopes) {
-            this.allowSettingLoginScopes = Optional.ofNullable(allowSettingLoginScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -997,104 +793,66 @@ public final class ConnectionOptionsGoogleApps implements IConnectionOptionsComm
         @java.lang.Override
         @JsonSetter(value = "allow_setting_login_scopes", nulls = Nulls.SKIP)
         public _FinalStage allowSettingLoginScopes(Optional<Boolean> allowSettingLoginScopes) {
-            this.allowSettingLoginScopes = allowSettingLoginScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage adminRefreshToken(String adminRefreshToken) {
-            this.adminRefreshToken = Optional.ofNullable(adminRefreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "admin_refresh_token", nulls = Nulls.SKIP)
         public _FinalStage adminRefreshToken(Optional<String> adminRefreshToken) {
-            this.adminRefreshToken = adminRefreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage adminAccessTokenExpiresin(OffsetDateTime adminAccessTokenExpiresin) {
-            this.adminAccessTokenExpiresin = Optional.ofNullable(adminAccessTokenExpiresin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "admin_access_token_expiresin", nulls = Nulls.SKIP)
         public _FinalStage adminAccessTokenExpiresin(Optional<OffsetDateTime> adminAccessTokenExpiresin) {
-            this.adminAccessTokenExpiresin = adminAccessTokenExpiresin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage adminAccessToken(String adminAccessToken) {
-            this.adminAccessToken = Optional.ofNullable(adminAccessToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "admin_access_token", nulls = Nulls.SKIP)
         public _FinalStage adminAccessToken(Optional<String> adminAccessToken) {
-            this.adminAccessToken = adminAccessToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsGoogleApps build() {
-            return new ConnectionOptionsGoogleApps(
-                    nonPersistentAttrs,
-                    adminAccessToken,
-                    adminAccessTokenExpiresin,
-                    adminRefreshToken,
-                    allowSettingLoginScopes,
-                    apiEnableGroups,
-                    apiEnableUsers,
-                    clientId,
-                    clientSecret,
-                    domain,
-                    domainAliases,
-                    email,
-                    extAgreedTerms,
-                    extGroups,
-                    extGroupsExtended,
-                    extIsAdmin,
-                    extIsSuspended,
-                    federatedConnectionsAccessTokens,
-                    handleLoginFromSocial,
-                    iconUrl,
-                    mapUserIdToId,
-                    profile,
-                    scope,
-                    setUserRootAttributes,
-                    tenantDomain,
-                    upstreamParams,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -6,7 +6,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TokenQuotaBucket {
+
     private TokenQuotaLimit perHour;
+
     private TokenQuotaLimit perDay;
 
     /**
@@ -21,13 +23,13 @@ public class TokenQuotaBucket {
      * @return the number of client credentials allowed per hour
      */
     public TokenQuotaLimit getPerHour() {
-        return perHour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return the number of client credentials allowed per hour
      */
     public TokenQuotaLimit getPerDay() {
-        return perDay;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

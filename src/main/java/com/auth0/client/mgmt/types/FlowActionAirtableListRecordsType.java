@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAirtableListRecordsType {
-    public static final FlowActionAirtableListRecordsType AIRTABLE =
-            new FlowActionAirtableListRecordsType(Value.AIRTABLE, "AIRTABLE");
+
+    public static final FlowActionAirtableListRecordsType AIRTABLE = new FlowActionAirtableListRecordsType(Value.AIRTABLE, "AIRTABLE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAirtableListRecordsType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAirtableListRecordsType
-                        && this.string.equals(((FlowActionAirtableListRecordsType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AIRTABLE:
-                return visitor.visitAirtable();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAirtableListRecordsType valueOf(String value) {
-        switch (value) {
-            case "AIRTABLE":
-                return AIRTABLE;
-            default:
-                return new FlowActionAirtableListRecordsType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AIRTABLE,
 
-        UNKNOWN
+        AIRTABLE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAirtable();
 
         T visitUnknown(String unknownType);

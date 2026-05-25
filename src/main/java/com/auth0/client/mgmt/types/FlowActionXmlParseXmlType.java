@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionXmlParseXmlType {
+
     public static final FlowActionXmlParseXmlType XML = new FlowActionXmlParseXmlType(Value.XML, "XML");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionXmlParseXmlType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionXmlParseXmlType
-                        && this.string.equals(((FlowActionXmlParseXmlType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case XML:
-                return visitor.visitXml();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionXmlParseXmlType valueOf(String value) {
-        switch (value) {
-            case "XML":
-                return XML;
-            default:
-                return new FlowActionXmlParseXmlType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        XML,
 
-        UNKNOWN
+        XML, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitXml();
 
         T visitUnknown(String unknownType);

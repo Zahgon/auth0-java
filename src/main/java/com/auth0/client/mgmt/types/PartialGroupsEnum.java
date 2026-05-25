@@ -7,25 +7,22 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PartialGroupsEnum {
+
     public static final PartialGroupsEnum SIGNUP_ID = new PartialGroupsEnum(Value.SIGNUP_ID, "signup-id");
 
     public static final PartialGroupsEnum LOGIN = new PartialGroupsEnum(Value.LOGIN, "login");
 
-    public static final PartialGroupsEnum SIGNUP_PASSWORD =
-            new PartialGroupsEnum(Value.SIGNUP_PASSWORD, "signup-password");
+    public static final PartialGroupsEnum SIGNUP_PASSWORD = new PartialGroupsEnum(Value.SIGNUP_PASSWORD, "signup-password");
 
     public static final PartialGroupsEnum LOGIN_ID = new PartialGroupsEnum(Value.LOGIN_ID, "login-id");
 
     public static final PartialGroupsEnum SIGNUP = new PartialGroupsEnum(Value.SIGNUP, "signup");
 
-    public static final PartialGroupsEnum CUSTOMIZED_CONSENT =
-            new PartialGroupsEnum(Value.CUSTOMIZED_CONSENT, "customized-consent");
+    public static final PartialGroupsEnum CUSTOMIZED_CONSENT = new PartialGroupsEnum(Value.CUSTOMIZED_CONSENT, "customized-consent");
 
-    public static final PartialGroupsEnum LOGIN_PASSWORD =
-            new PartialGroupsEnum(Value.LOGIN_PASSWORD, "login-password");
+    public static final PartialGroupsEnum LOGIN_PASSWORD = new PartialGroupsEnum(Value.LOGIN_PASSWORD, "login-password");
 
-    public static final PartialGroupsEnum LOGIN_PASSWORDLESS =
-            new PartialGroupsEnum(Value.LOGIN_PASSWORDLESS, "login-passwordless");
+    public static final PartialGroupsEnum LOGIN_PASSWORDLESS = new PartialGroupsEnum(Value.LOGIN_PASSWORDLESS, "login-passwordless");
 
     public static final PartialGroupsEnum PASSKEYS = new PartialGroupsEnum(Value.PASSKEYS, "passkeys");
 
@@ -39,101 +36,50 @@ public final class PartialGroupsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PartialGroupsEnum && this.string.equals(((PartialGroupsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SIGNUP_ID:
-                return visitor.visitSignupId();
-            case LOGIN:
-                return visitor.visitLogin();
-            case SIGNUP_PASSWORD:
-                return visitor.visitSignupPassword();
-            case LOGIN_ID:
-                return visitor.visitLoginId();
-            case SIGNUP:
-                return visitor.visitSignup();
-            case CUSTOMIZED_CONSENT:
-                return visitor.visitCustomizedConsent();
-            case LOGIN_PASSWORD:
-                return visitor.visitLoginPassword();
-            case LOGIN_PASSWORDLESS:
-                return visitor.visitLoginPasswordless();
-            case PASSKEYS:
-                return visitor.visitPasskeys();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PartialGroupsEnum valueOf(String value) {
-        switch (value) {
-            case "signup-id":
-                return SIGNUP_ID;
-            case "login":
-                return LOGIN;
-            case "signup-password":
-                return SIGNUP_PASSWORD;
-            case "login-id":
-                return LOGIN_ID;
-            case "signup":
-                return SIGNUP;
-            case "customized-consent":
-                return CUSTOMIZED_CONSENT;
-            case "login-password":
-                return LOGIN_PASSWORD;
-            case "login-passwordless":
-                return LOGIN_PASSWORDLESS;
-            case "passkeys":
-                return PASSKEYS;
-            default:
-                return new PartialGroupsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         LOGIN,
-
         LOGIN_ID,
-
         LOGIN_PASSWORD,
-
         LOGIN_PASSWORDLESS,
-
         SIGNUP,
-
         SIGNUP_ID,
-
         SIGNUP_PASSWORD,
-
         CUSTOMIZED_CONSENT,
-
         PASSKEYS,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLogin();
 
         T visitLoginId();

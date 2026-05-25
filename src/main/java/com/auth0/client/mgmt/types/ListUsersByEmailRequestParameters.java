@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUsersByEmailRequestParameters.Builder.class)
 public final class ListUsersByEmailRequestParameters {
+
     private final OptionalNullable<String> fields;
 
     private final OptionalNullable<Boolean> includeFields;
@@ -31,11 +32,7 @@ public final class ListUsersByEmailRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUsersByEmailRequestParameters(
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            String email,
-            Map<String, Object> additionalProperties) {
+    private ListUsersByEmailRequestParameters(OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, String email, Map<String, Object> additionalProperties) {
         this.fields = fields;
         this.includeFields = includeFields;
         this.email = email;
@@ -47,10 +44,7 @@ public final class ListUsersByEmailRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,10 +52,7 @@ public final class ListUsersByEmailRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,18 +60,17 @@ public final class ListUsersByEmailRequestParameters {
      */
     @JsonIgnore
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUsersByEmailRequestParameters && equalTo((ListUsersByEmailRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUsersByEmailRequestParameters other) {
@@ -89,19 +79,20 @@ public final class ListUsersByEmailRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.fields, this.includeFields, this.email);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EmailStage {
+
         /**
          * <p>Email address to search for (case-sensitive).</p>
          */
@@ -111,6 +102,7 @@ public final class ListUsersByEmailRequestParameters {
     }
 
     public interface _FinalStage {
+
         ListUsersByEmailRequestParameters build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -142,6 +134,7 @@ public final class ListUsersByEmailRequestParameters {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EmailStage, _FinalStage {
+
         private String email;
 
         private OptionalNullable<Boolean> includeFields = OptionalNullable.absent();
@@ -151,14 +144,12 @@ public final class ListUsersByEmailRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ListUsersByEmailRequestParameters other) {
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            email(other.getEmail());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -169,8 +160,7 @@ public final class ListUsersByEmailRequestParameters {
         @java.lang.Override
         @JsonSetter("email")
         public _FinalStage email(@NotNull String email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,14 +169,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,12 +178,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,8 +187,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -219,8 +196,7 @@ public final class ListUsersByEmailRequestParameters {
         @java.lang.Override
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public _FinalStage includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -229,14 +205,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -245,12 +214,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -259,8 +223,7 @@ public final class ListUsersByEmailRequestParameters {
          */
         @java.lang.Override
         public _FinalStage fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -269,25 +232,22 @@ public final class ListUsersByEmailRequestParameters {
         @java.lang.Override
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public _FinalStage fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ListUsersByEmailRequestParameters build() {
-            return new ListUsersByEmailRequestParameters(fields, includeFields, email, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

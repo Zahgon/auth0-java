@@ -18,6 +18,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemeFontButtonsText.Builder.class)
 public final class BrandingThemeFontButtonsText {
+
     private final boolean bold;
 
     private final double size;
@@ -35,7 +36,7 @@ public final class BrandingThemeFontButtonsText {
      */
     @JsonProperty("bold")
     public boolean getBold() {
-        return bold;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,18 +44,17 @@ public final class BrandingThemeFontButtonsText {
      */
     @JsonProperty("size")
     public double getSize() {
-        return size;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemeFontButtonsText && equalTo((BrandingThemeFontButtonsText) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemeFontButtonsText other) {
@@ -63,19 +63,20 @@ public final class BrandingThemeFontButtonsText {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.bold, this.size);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BoldStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BoldStage {
+
         /**
          * <p>Buttons text bold</p>
          */
@@ -85,6 +86,7 @@ public final class BrandingThemeFontButtonsText {
     }
 
     public interface SizeStage {
+
         /**
          * <p>Buttons text size</p>
          */
@@ -92,6 +94,7 @@ public final class BrandingThemeFontButtonsText {
     }
 
     public interface _FinalStage {
+
         BrandingThemeFontButtonsText build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -101,6 +104,7 @@ public final class BrandingThemeFontButtonsText {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements BoldStage, SizeStage, _FinalStage {
+
         private boolean bold;
 
         private double size;
@@ -108,13 +112,12 @@ public final class BrandingThemeFontButtonsText {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemeFontButtonsText other) {
-            bold(other.getBold());
-            size(other.getSize());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -125,8 +128,7 @@ public final class BrandingThemeFontButtonsText {
         @java.lang.Override
         @JsonSetter("bold")
         public SizeStage bold(boolean bold) {
-            this.bold = bold;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -137,25 +139,22 @@ public final class BrandingThemeFontButtonsText {
         @java.lang.Override
         @JsonSetter("size")
         public _FinalStage size(double size) {
-            this.size = size;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemeFontButtonsText build() {
-            return new BrandingThemeFontButtonsText(bold, size, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

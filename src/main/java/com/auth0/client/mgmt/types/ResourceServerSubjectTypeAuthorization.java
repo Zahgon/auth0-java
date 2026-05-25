@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ResourceServerSubjectTypeAuthorization.Builder.class)
 public final class ResourceServerSubjectTypeAuthorization {
+
     private final Optional<ResourceServerSubjectTypeAuthorizationUser> user;
 
     private final Optional<ResourceServerSubjectTypeAuthorizationClient> client;
 
     private final Map<String, Object> additionalProperties;
 
-    private ResourceServerSubjectTypeAuthorization(
-            Optional<ResourceServerSubjectTypeAuthorizationUser> user,
-            Optional<ResourceServerSubjectTypeAuthorizationClient> client,
-            Map<String, Object> additionalProperties) {
+    private ResourceServerSubjectTypeAuthorization(Optional<ResourceServerSubjectTypeAuthorizationUser> user, Optional<ResourceServerSubjectTypeAuthorizationClient> client, Map<String, Object> additionalProperties) {
         this.user = user;
         this.client = client;
         this.additionalProperties = additionalProperties;
@@ -37,24 +35,22 @@ public final class ResourceServerSubjectTypeAuthorization {
 
     @JsonProperty("user")
     public Optional<ResourceServerSubjectTypeAuthorizationUser> getUser() {
-        return user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client")
     public Optional<ResourceServerSubjectTypeAuthorizationClient> getClient() {
-        return client;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ResourceServerSubjectTypeAuthorization
-                && equalTo((ResourceServerSubjectTypeAuthorization) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ResourceServerSubjectTypeAuthorization other) {
@@ -63,20 +59,21 @@ public final class ResourceServerSubjectTypeAuthorization {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.user, this.client);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ResourceServerSubjectTypeAuthorizationUser> user = Optional.empty();
 
         private Optional<ResourceServerSubjectTypeAuthorizationClient> client = Optional.empty();
@@ -84,48 +81,41 @@ public final class ResourceServerSubjectTypeAuthorization {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ResourceServerSubjectTypeAuthorization other) {
-            user(other.getUser());
-            client(other.getClient());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user", nulls = Nulls.SKIP)
         public Builder user(Optional<ResourceServerSubjectTypeAuthorizationUser> user) {
-            this.user = user;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder user(ResourceServerSubjectTypeAuthorizationUser user) {
-            this.user = Optional.ofNullable(user);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client", nulls = Nulls.SKIP)
         public Builder client(Optional<ResourceServerSubjectTypeAuthorizationClient> client) {
-            this.client = client;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder client(ResourceServerSubjectTypeAuthorizationClient client) {
-            this.client = Optional.ofNullable(client);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ResourceServerSubjectTypeAuthorization build() {
-            return new ResourceServerSubjectTypeAuthorization(user, client, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

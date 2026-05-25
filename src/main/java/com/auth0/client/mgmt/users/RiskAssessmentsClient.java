@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import com.auth0.client.mgmt.users.types.ClearAssessorsRequestContent;
 
 public class RiskAssessmentsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRiskAssessmentsClient rawClient;
@@ -21,20 +22,20 @@ public class RiskAssessmentsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRiskAssessmentsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Clear risk assessment assessors for a specific user
      */
     public void clear(String id, ClearAssessorsRequestContent request) {
-        this.rawClient.clear(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Clear risk assessment assessors for a specific user
      */
     public void clear(String id, ClearAssessorsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.clear(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

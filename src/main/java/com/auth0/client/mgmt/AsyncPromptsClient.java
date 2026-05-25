@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncPromptsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawPromptsClient rawClient;
@@ -38,61 +39,60 @@ public class AsyncPromptsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawPromptsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
     public CompletableFuture<GetSettingsResponseContent> getSettings() {
-        return this.rawClient.getSettings().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
     public CompletableFuture<GetSettingsResponseContent> getSettings(RequestOptions requestOptions) {
-        return this.rawClient.getSettings(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
     public CompletableFuture<UpdateSettingsResponseContent> updateSettings() {
-        return this.rawClient.updateSettings().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
     public CompletableFuture<UpdateSettingsResponseContent> updateSettings(RequestOptions requestOptions) {
-        return this.rawClient.updateSettings(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
     public CompletableFuture<UpdateSettingsResponseContent> updateSettings(UpdateSettingsRequestContent request) {
-        return this.rawClient.updateSettings(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Universal Login configuration of your tenant. This includes the <a href="https://auth0.com/docs/authenticate/login/auth0-universal-login/identifier-first">Identifier First Authentication</a> and <a href="https://auth0.com/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa">WebAuthn with Device Biometrics for MFA</a> features.
      */
-    public CompletableFuture<UpdateSettingsResponseContent> updateSettings(
-            UpdateSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateSettings(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateSettingsResponseContent> updateSettings(UpdateSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRenderingClient rendering() {
-        return this.renderingClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncCustomTextClient customText() {
-        return this.customTextClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPartialsClient partials() {
-        return this.partialsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

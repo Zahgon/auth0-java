@@ -30,6 +30,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawDeliveriesClient {
+
     protected final ClientOptions clientOptions;
 
     public RawDeliveriesClient(ClientOptions clientOptions) {
@@ -37,159 +38,26 @@ public class RawDeliveriesClient {
     }
 
     public ManagementApiHttpResponse<List<EventStreamDelivery>> list(String id) {
-        return list(id, ListEventStreamDeliveriesRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ManagementApiHttpResponse<List<EventStreamDelivery>> list(String id, RequestOptions requestOptions) {
-        return list(id, ListEventStreamDeliveriesRequestParameters.builder().build(), requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<List<EventStreamDelivery>> list(
-            String id, ListEventStreamDeliveriesRequestParameters request) {
-        return list(id, request, null);
+    public ManagementApiHttpResponse<List<EventStreamDelivery>> list(String id, ListEventStreamDeliveriesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<List<EventStreamDelivery>> list(
-            String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("event-streams")
-                .addPathSegment(id)
-                .addPathSegments("deliveries");
-        if (!request.getStatuses().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "statuses", request.getStatuses().orElse(null), false);
-        }
-        if (!request.getEventTypes().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "event_types", request.getEventTypes().orElse(null), false);
-        }
-        if (!request.getDateFrom().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "date_from", request.getDateFrom().orElse(null), false);
-        }
-        if (!request.getDateTo().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "date_to", request.getDateTo().orElse(null), false);
-        }
-        if (!request.getFrom().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "from", request.getFrom().orElse(null), false);
-        }
-        QueryStringMapper.addQueryParameter(httpUrl, "take", request.getTake().orElse(50), false);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<List<EventStreamDelivery>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<List<EventStreamDelivery>> list(String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<GetEventStreamDeliveryHistoryResponseContent> getHistory(
-            String id, String eventId) {
-        return getHistory(id, eventId, null);
+    public ManagementApiHttpResponse<GetEventStreamDeliveryHistoryResponseContent> getHistory(String id, String eventId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ManagementApiHttpResponse<GetEventStreamDeliveryHistoryResponseContent> getHistory(
-            String id, String eventId, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("event-streams")
-                .addPathSegment(id)
-                .addPathSegments("deliveries")
-                .addPathSegment(eventId);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetEventStreamDeliveryHistoryResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 404:
-                        throw new NotFoundError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<GetEventStreamDeliveryHistoryResponseContent> getHistory(String id, String eventId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

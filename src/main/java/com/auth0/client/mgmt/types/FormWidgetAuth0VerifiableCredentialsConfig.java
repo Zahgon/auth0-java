@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormWidgetAuth0VerifiableCredentialsConfig.Builder.class)
 public final class FormWidgetAuth0VerifiableCredentialsConfig {
+
     private final String url;
 
     private final Optional<Double> size;
@@ -35,14 +36,7 @@ public final class FormWidgetAuth0VerifiableCredentialsConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormWidgetAuth0VerifiableCredentialsConfig(
-            String url,
-            Optional<Double> size,
-            String alternateText,
-            String accessToken,
-            String verificationId,
-            Optional<Double> maxWait,
-            Map<String, Object> additionalProperties) {
+    private FormWidgetAuth0VerifiableCredentialsConfig(String url, Optional<Double> size, String alternateText, String accessToken, String verificationId, Optional<Double> maxWait, Map<String, Object> additionalProperties) {
         this.url = url;
         this.size = size;
         this.alternateText = alternateText;
@@ -54,89 +48,86 @@ public final class FormWidgetAuth0VerifiableCredentialsConfig {
 
     @JsonProperty("url")
     public String getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("size")
     public Optional<Double> getSize() {
-        return size;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alternate_text")
     public String getAlternateText() {
-        return alternateText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("access_token")
     public String getAccessToken() {
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("verification_id")
     public String getVerificationId() {
-        return verificationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_wait")
     public Optional<Double> getMaxWait() {
-        return maxWait;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormWidgetAuth0VerifiableCredentialsConfig
-                && equalTo((FormWidgetAuth0VerifiableCredentialsConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormWidgetAuth0VerifiableCredentialsConfig other) {
-        return url.equals(other.url)
-                && size.equals(other.size)
-                && alternateText.equals(other.alternateText)
-                && accessToken.equals(other.accessToken)
-                && verificationId.equals(other.verificationId)
-                && maxWait.equals(other.maxWait);
+        return url.equals(other.url) && size.equals(other.size) && alternateText.equals(other.alternateText) && accessToken.equals(other.accessToken) && verificationId.equals(other.verificationId) && maxWait.equals(other.maxWait);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.url, this.size, this.alternateText, this.accessToken, this.verificationId, this.maxWait);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UrlStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UrlStage {
+
         AlternateTextStage url(@NotNull String url);
 
         Builder from(FormWidgetAuth0VerifiableCredentialsConfig other);
     }
 
     public interface AlternateTextStage {
+
         AccessTokenStage alternateText(@NotNull String alternateText);
     }
 
     public interface AccessTokenStage {
+
         VerificationIdStage accessToken(@NotNull String accessToken);
     }
 
     public interface VerificationIdStage {
+
         _FinalStage verificationId(@NotNull String verificationId);
     }
 
     public interface _FinalStage {
+
         FormWidgetAuth0VerifiableCredentialsConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -153,8 +144,8 @@ public final class FormWidgetAuth0VerifiableCredentialsConfig {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements UrlStage, AlternateTextStage, AccessTokenStage, VerificationIdStage, _FinalStage {
+    public static final class Builder implements UrlStage, AlternateTextStage, AccessTokenStage, VerificationIdStage, _FinalStage {
+
         private String url;
 
         private String alternateText;
@@ -170,89 +161,73 @@ public final class FormWidgetAuth0VerifiableCredentialsConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormWidgetAuth0VerifiableCredentialsConfig other) {
-            url(other.getUrl());
-            size(other.getSize());
-            alternateText(other.getAlternateText());
-            accessToken(other.getAccessToken());
-            verificationId(other.getVerificationId());
-            maxWait(other.getMaxWait());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("url")
         public AlternateTextStage url(@NotNull String url) {
-            this.url = Objects.requireNonNull(url, "url must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("alternate_text")
         public AccessTokenStage alternateText(@NotNull String alternateText) {
-            this.alternateText = Objects.requireNonNull(alternateText, "alternateText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("access_token")
         public VerificationIdStage accessToken(@NotNull String accessToken) {
-            this.accessToken = Objects.requireNonNull(accessToken, "accessToken must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("verification_id")
         public _FinalStage verificationId(@NotNull String verificationId) {
-            this.verificationId = Objects.requireNonNull(verificationId, "verificationId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage maxWait(Double maxWait) {
-            this.maxWait = Optional.ofNullable(maxWait);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "max_wait", nulls = Nulls.SKIP)
         public _FinalStage maxWait(Optional<Double> maxWait) {
-            this.maxWait = maxWait;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage size(Double size) {
-            this.size = Optional.ofNullable(size);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "size", nulls = Nulls.SKIP)
         public _FinalStage size(Optional<Double> size) {
-            this.size = size;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormWidgetAuth0VerifiableCredentialsConfig build() {
-            return new FormWidgetAuth0VerifiableCredentialsConfig(
-                    url, size, alternateText, accessToken, verificationId, maxWait, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

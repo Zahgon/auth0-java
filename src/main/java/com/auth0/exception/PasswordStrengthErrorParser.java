@@ -6,16 +6,25 @@ import java.util.Map;
 
 @SuppressWarnings("unchecked")
 class PasswordStrengthErrorParser {
+
     private static final String RULE_TYPE_LENGTH_AT_LEAST = "lengthAtLeast";
+
     private static final String RULE_TYPE_CONTAINS_AT_LEAST = "containsAtLeast";
+
     private static final String RULE_TYPE_SHOULD_CONTAIN = "shouldContain";
+
     private static final String RULE_TYPE_IDENTICAL_CHARS = "identicalChars";
 
     private static final String KEY_RULES = "rules";
+
     private static final String KEY_CODE = "code";
+
     private static final String KEY_VERIFIED = "verified";
+
     private static final String KEY_FORMAT = "format";
+
     private static final String KEY_ITEMS = "items";
+
     private static final String KEY_MESSAGE = "message";
 
     private String description;
@@ -26,7 +35,7 @@ class PasswordStrengthErrorParser {
     }
 
     public String getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void parseRules(List<Map<String, Object>> rules) {
@@ -37,7 +46,7 @@ class PasswordStrengthErrorParser {
                 continue;
             }
             String code = (String) rule.get(KEY_CODE);
-            switch (code) {
+            switch(code) {
                 case RULE_TYPE_LENGTH_AT_LEAST:
                     items.add(asLengthAtLeast(rule));
                     break;
@@ -50,7 +59,6 @@ class PasswordStrengthErrorParser {
                     break;
             }
         }
-
         this.description = joinStrings("; ", items);
     }
 
@@ -68,13 +76,10 @@ class PasswordStrengthErrorParser {
         }
         String requiredItems = joinStrings(", ", items);
         String message = (String) rule.get(KEY_MESSAGE);
-
         if (rule.containsKey(KEY_FORMAT)) {
             List<Number> quantity = (List<Number>) rule.get(KEY_FORMAT);
-            message = String.format(
-                    message, quantity.get(0).intValue(), quantity.get(1).intValue());
+            message = String.format(message, quantity.get(0).intValue(), quantity.get(1).intValue());
         }
-
         return String.format("%s %s", message, requiredItems);
     }
 

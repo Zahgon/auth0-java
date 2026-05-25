@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamPiiConfig.Builder.class)
 public final class LogStreamPiiConfig {
+
     private final List<LogStreamPiiLogFieldsEnum> logFields;
 
     private final Optional<LogStreamPiiMethodEnum> method;
@@ -30,11 +31,7 @@ public final class LogStreamPiiConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamPiiConfig(
-            List<LogStreamPiiLogFieldsEnum> logFields,
-            Optional<LogStreamPiiMethodEnum> method,
-            Optional<LogStreamPiiAlgorithmEnum> algorithm,
-            Map<String, Object> additionalProperties) {
+    private LogStreamPiiConfig(List<LogStreamPiiLogFieldsEnum> logFields, Optional<LogStreamPiiMethodEnum> method, Optional<LogStreamPiiAlgorithmEnum> algorithm, Map<String, Object> additionalProperties) {
         this.logFields = logFields;
         this.method = method;
         this.algorithm = algorithm;
@@ -43,28 +40,27 @@ public final class LogStreamPiiConfig {
 
     @JsonProperty("log_fields")
     public List<LogStreamPiiLogFieldsEnum> getLogFields() {
-        return logFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("method")
     public Optional<LogStreamPiiMethodEnum> getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("algorithm")
     public Optional<LogStreamPiiAlgorithmEnum> getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamPiiConfig && equalTo((LogStreamPiiConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamPiiConfig other) {
@@ -73,20 +69,21 @@ public final class LogStreamPiiConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.logFields, this.method, this.algorithm);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<LogStreamPiiLogFieldsEnum> logFields = new ArrayList<>();
 
         private Optional<LogStreamPiiMethodEnum> method = Optional.empty();
@@ -96,70 +93,54 @@ public final class LogStreamPiiConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LogStreamPiiConfig other) {
-            logFields(other.getLogFields());
-            method(other.getMethod());
-            algorithm(other.getAlgorithm());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "log_fields", nulls = Nulls.SKIP)
         public Builder logFields(List<LogStreamPiiLogFieldsEnum> logFields) {
-            this.logFields.clear();
-            if (logFields != null) {
-                this.logFields.addAll(logFields);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addLogFields(LogStreamPiiLogFieldsEnum logFields) {
-            this.logFields.add(logFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllLogFields(List<LogStreamPiiLogFieldsEnum> logFields) {
-            if (logFields != null) {
-                this.logFields.addAll(logFields);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "method", nulls = Nulls.SKIP)
         public Builder method(Optional<LogStreamPiiMethodEnum> method) {
-            this.method = method;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder method(LogStreamPiiMethodEnum method) {
-            this.method = Optional.ofNullable(method);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "algorithm", nulls = Nulls.SKIP)
         public Builder algorithm(Optional<LogStreamPiiAlgorithmEnum> algorithm) {
-            this.algorithm = algorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder algorithm(LogStreamPiiAlgorithmEnum algorithm) {
-            this.algorithm = Optional.ofNullable(algorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogStreamPiiConfig build() {
-            return new LogStreamPiiConfig(logFields, method, algorithm, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,13 +7,15 @@ import java.util.Objects;
 public class Auth0HttpRequest {
 
     private final String url;
+
     private final Map<String, String> headers;
+
     private final HttpRequestBody body;
 
     private final HttpMethod method;
 
     public static Builder newBuilder(String url, HttpMethod method) {
-        return new Builder(url, method);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Auth0HttpRequest(Builder builder) {
@@ -24,24 +26,27 @@ public class Auth0HttpRequest {
     }
 
     public String getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> getHeaders() {
-        return headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public HttpRequestBody getBody() {
-        return body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public HttpMethod getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Builder {
+
         private final String url;
+
         private Map<String, String> headers;
+
         private HttpRequestBody body;
 
         private final HttpMethod method;
@@ -52,17 +57,15 @@ public class Auth0HttpRequest {
         }
 
         public Builder withHeaders(Map<String, String> headers) {
-            this.headers = headers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder withBody(HttpRequestBody body) {
-            this.body = body;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Auth0HttpRequest build() {
-            return new Auth0HttpRequest(this);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

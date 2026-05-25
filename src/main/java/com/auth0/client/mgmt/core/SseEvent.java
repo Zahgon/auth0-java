@@ -18,9 +18,13 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public final class SseEvent<T> {
+
     private final String event;
+
     private final T data;
+
     private final String id;
+
     private final Long retry;
 
     private SseEvent(String event, T data, String id, Long retry) {
@@ -32,83 +36,74 @@ public final class SseEvent<T> {
 
     @JsonProperty("event")
     public Optional<String> getEvent() {
-        return Optional.ofNullable(event);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("data")
     public T getData() {
-        return data;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id")
     public Optional<String> getId() {
-        return Optional.ofNullable(id);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("retry")
     public Optional<Long> getRetry() {
-        return Optional.ofNullable(retry);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SseEvent<?> sseEvent = (SseEvent<?>) o;
-        return Objects.equals(event, sseEvent.event)
-                && Objects.equals(data, sseEvent.data)
-                && Objects.equals(id, sseEvent.id)
-                && Objects.equals(retry, sseEvent.retry);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(event, data, id, retry);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return "SseEvent{" + "event='"
-                + event + '\'' + ", data="
-                + data + ", id='"
-                + id + '\'' + ", retry="
-                + retry + '}';
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Builder<T> builder() {
-        return new Builder<>();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static final class Builder<T> {
+
         private String event;
+
         private T data;
+
         private String id;
+
         private Long retry;
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder<T> event(String event) {
-            this.event = event;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder<T> data(T data) {
-            this.data = data;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder<T> id(String id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder<T> retry(Long retry) {
-            this.retry = retry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SseEvent<T> build() {
-            return new SseEvent<>(event, data, id, retry);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

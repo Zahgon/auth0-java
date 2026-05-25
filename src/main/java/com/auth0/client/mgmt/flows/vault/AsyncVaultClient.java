@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AsyncVaultClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncConnectionsClient> connectionsClient;
@@ -18,6 +19,6 @@ public class AsyncVaultClient {
     }
 
     public AsyncConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

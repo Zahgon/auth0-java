@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum {
-    public static final EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum TENANT =
-            new EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum(Value.TENANT, "tenant");
+
+    public static final EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum TENANT = new EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum(Value.TENANT, "tenant");
 
     private final Value value;
 
@@ -20,55 +20,41 @@ public final class EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum
-                        && this.string.equals(
-                                ((EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TENANT:
-                return visitor.visitTenant();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum valueOf(String value) {
-        switch (value) {
-            case "tenant":
-                return TENANT;
-            default:
-                return new EventStreamCloudEventGroupRoleDeletedObjectGroup2TypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TENANT,
 
-        UNKNOWN
+        TENANT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTenant();
 
         T visitUnknown(String unknownType);

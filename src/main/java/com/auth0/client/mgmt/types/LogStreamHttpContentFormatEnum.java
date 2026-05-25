@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamHttpContentFormatEnum {
-    public static final LogStreamHttpContentFormatEnum JSONOBJECT =
-            new LogStreamHttpContentFormatEnum(Value.JSONOBJECT, "JSONOBJECT");
 
-    public static final LogStreamHttpContentFormatEnum JSONARRAY =
-            new LogStreamHttpContentFormatEnum(Value.JSONARRAY, "JSONARRAY");
+    public static final LogStreamHttpContentFormatEnum JSONOBJECT = new LogStreamHttpContentFormatEnum(Value.JSONOBJECT, "JSONOBJECT");
 
-    public static final LogStreamHttpContentFormatEnum JSONLINES =
-            new LogStreamHttpContentFormatEnum(Value.JSONLINES, "JSONLINES");
+    public static final LogStreamHttpContentFormatEnum JSONARRAY = new LogStreamHttpContentFormatEnum(Value.JSONARRAY, "JSONARRAY");
+
+    public static final LogStreamHttpContentFormatEnum JSONLINES = new LogStreamHttpContentFormatEnum(Value.JSONLINES, "JSONLINES");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class LogStreamHttpContentFormatEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamHttpContentFormatEnum
-                        && this.string.equals(((LogStreamHttpContentFormatEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case JSONOBJECT:
-                return visitor.visitJsonobject();
-            case JSONARRAY:
-                return visitor.visitJsonarray();
-            case JSONLINES:
-                return visitor.visitJsonlines();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamHttpContentFormatEnum valueOf(String value) {
-        switch (value) {
-            case "JSONOBJECT":
-                return JSONOBJECT;
-            case "JSONARRAY":
-                return JSONARRAY;
-            case "JSONLINES":
-                return JSONLINES;
-            default:
-                return new LogStreamHttpContentFormatEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        JSONARRAY,
 
-        JSONLINES,
-
-        JSONOBJECT,
-
-        UNKNOWN
+        JSONARRAY, JSONLINES, JSONOBJECT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitJsonarray();
 
         T visitJsonlines();

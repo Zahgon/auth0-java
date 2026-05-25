@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionSlackPostMessageParamsAttachmentField.Builder.class)
 public final class FlowActionSlackPostMessageParamsAttachmentField {
+
     private final String title;
 
     private final Optional<String> value;
@@ -29,8 +30,7 @@ public final class FlowActionSlackPostMessageParamsAttachmentField {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionSlackPostMessageParamsAttachmentField(
-            String title, Optional<String> value, Optional<Boolean> short_, Map<String, Object> additionalProperties) {
+    private FlowActionSlackPostMessageParamsAttachmentField(String title, Optional<String> value, Optional<Boolean> short_, Map<String, Object> additionalProperties) {
         this.title = title;
         this.value = value;
         this.short_ = short_;
@@ -39,29 +39,27 @@ public final class FlowActionSlackPostMessageParamsAttachmentField {
 
     @JsonProperty("title")
     public String getTitle() {
-        return title;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("value")
     public Optional<String> getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("short")
     public Optional<Boolean> getShort() {
-        return short_;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSlackPostMessageParamsAttachmentField
-                && equalTo((FlowActionSlackPostMessageParamsAttachmentField) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSlackPostMessageParamsAttachmentField other) {
@@ -70,25 +68,27 @@ public final class FlowActionSlackPostMessageParamsAttachmentField {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.title, this.value, this.short_);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TitleStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TitleStage {
+
         _FinalStage title(@NotNull String title);
 
         Builder from(FlowActionSlackPostMessageParamsAttachmentField other);
     }
 
     public interface _FinalStage {
+
         FlowActionSlackPostMessageParamsAttachmentField build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -106,6 +106,7 @@ public final class FlowActionSlackPostMessageParamsAttachmentField {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TitleStage, _FinalStage {
+
         private String title;
 
         private Optional<Boolean> short_ = Optional.empty();
@@ -115,64 +116,55 @@ public final class FlowActionSlackPostMessageParamsAttachmentField {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionSlackPostMessageParamsAttachmentField other) {
-            title(other.getTitle());
-            value(other.getValue());
-            short_(other.getShort());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("title")
         public _FinalStage title(@NotNull String title) {
-            this.title = Objects.requireNonNull(title, "title must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage short_(Boolean short_) {
-            this.short_ = Optional.ofNullable(short_);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "short", nulls = Nulls.SKIP)
         public _FinalStage short_(Optional<Boolean> short_) {
-            this.short_ = short_;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage value(String value) {
-            this.value = Optional.ofNullable(value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "value", nulls = Nulls.SKIP)
         public _FinalStage value(Optional<String> value) {
-            this.value = value;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionSlackPostMessageParamsAttachmentField build() {
-            return new FlowActionSlackPostMessageParamsAttachmentField(title, value, short_, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

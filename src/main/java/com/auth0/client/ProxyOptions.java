@@ -10,6 +10,7 @@ import okhttp3.Credentials;
 public class ProxyOptions {
 
     private final Proxy proxy;
+
     private String basicAuth;
 
     /**
@@ -30,9 +31,7 @@ public class ProxyOptions {
      * @param password the password to use.
      */
     public void setBasicAuthentication(String username, char[] password) {
-        Asserts.assertNotNull(proxy, "username");
-        Asserts.assertNotNull(proxy, "password");
-        this.basicAuth = Credentials.basic(username, new String(password));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -41,7 +40,7 @@ public class ProxyOptions {
      * @return the Proxy instance to set
      */
     public Proxy getProxy() {
-        return proxy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,6 +49,6 @@ public class ProxyOptions {
      * @return the authentication value to use for this Proxy, or null if unset.
      */
     public String getBasicAuthentication() {
-        return basicAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

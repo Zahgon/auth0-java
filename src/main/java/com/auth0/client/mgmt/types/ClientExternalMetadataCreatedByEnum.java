@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientExternalMetadataCreatedByEnum {
-    public static final ClientExternalMetadataCreatedByEnum ADMIN =
-            new ClientExternalMetadataCreatedByEnum(Value.ADMIN, "admin");
 
-    public static final ClientExternalMetadataCreatedByEnum CLIENT =
-            new ClientExternalMetadataCreatedByEnum(Value.CLIENT, "client");
+    public static final ClientExternalMetadataCreatedByEnum ADMIN = new ClientExternalMetadataCreatedByEnum(Value.ADMIN, "admin");
+
+    public static final ClientExternalMetadataCreatedByEnum CLIENT = new ClientExternalMetadataCreatedByEnum(Value.CLIENT, "client");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientExternalMetadataCreatedByEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientExternalMetadataCreatedByEnum
-                        && this.string.equals(((ClientExternalMetadataCreatedByEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADMIN:
-                return visitor.visitAdmin();
-            case CLIENT:
-                return visitor.visitClient();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientExternalMetadataCreatedByEnum valueOf(String value) {
-        switch (value) {
-            case "admin":
-                return ADMIN;
-            case "client":
-                return CLIENT;
-            default:
-                return new ClientExternalMetadataCreatedByEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADMIN,
 
-        CLIENT,
-
-        UNKNOWN
+        ADMIN, CLIENT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAdmin();
 
         T visitClient();

@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncIdentitiesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawIdentitiesClient rawClient;
@@ -26,7 +27,7 @@ public class AsyncIdentitiesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawIdentitiesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,7 +59,7 @@ public class AsyncIdentitiesClient {
      * </ul></p>
      */
     public CompletableFuture<List<UserIdentity>> link(String id) {
-        return this.rawClient.link(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,7 +91,7 @@ public class AsyncIdentitiesClient {
      * </ul></p>
      */
     public CompletableFuture<List<UserIdentity>> link(String id, RequestOptions requestOptions) {
-        return this.rawClient.link(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,7 +123,7 @@ public class AsyncIdentitiesClient {
      * </ul></p>
      */
     public CompletableFuture<List<UserIdentity>> link(String id, LinkUserIdentityRequestContent request) {
-        return this.rawClient.link(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,26 +154,23 @@ public class AsyncIdentitiesClient {
      *   </li>
      * </ul></p>
      */
-    public CompletableFuture<List<UserIdentity>> link(
-            String id, LinkUserIdentityRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.link(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<UserIdentity>> link(String id, LinkUserIdentityRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Unlink a specific secondary account from a target user. This action requires the ID of both the target user and the secondary account.
      * <p>Unlinking the secondary account removes it from the identities array of the target user and creates a new standalone profile for the secondary account. To learn more, review <a href="https://auth0.com/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts">Unlink User Accounts</a>.</p>
      */
-    public CompletableFuture<List<DeleteUserIdentityResponseContentItem>> delete(
-            String id, UserIdentityProviderEnum provider, String userId) {
-        return this.rawClient.delete(id, provider, userId).thenApply(response -> response.body());
+    public CompletableFuture<List<DeleteUserIdentityResponseContentItem>> delete(String id, UserIdentityProviderEnum provider, String userId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Unlink a specific secondary account from a target user. This action requires the ID of both the target user and the secondary account.
      * <p>Unlinking the secondary account removes it from the identities array of the target user and creates a new standalone profile for the secondary account. To learn more, review <a href="https://auth0.com/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts">Unlink User Accounts</a>.</p>
      */
-    public CompletableFuture<List<DeleteUserIdentityResponseContentItem>> delete(
-            String id, UserIdentityProviderEnum provider, String userId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, provider, userId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<DeleteUserIdentityResponseContentItem>> delete(String id, UserIdentityProviderEnum provider, String userId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

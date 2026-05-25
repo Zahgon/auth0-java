@@ -23,14 +23,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateGuardianFactorsProviderPushNotificationApnsResponseContent.Builder.class)
 public final class UpdateGuardianFactorsProviderPushNotificationApnsResponseContent {
+
     private final Optional<Boolean> sandbox;
 
     private final OptionalNullable<String> bundleId;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateGuardianFactorsProviderPushNotificationApnsResponseContent(
-            Optional<Boolean> sandbox, OptionalNullable<String> bundleId, Map<String, Object> additionalProperties) {
+    private UpdateGuardianFactorsProviderPushNotificationApnsResponseContent(Optional<Boolean> sandbox, OptionalNullable<String> bundleId, Map<String, Object> additionalProperties) {
         this.sandbox = sandbox;
         this.bundleId = bundleId;
         this.additionalProperties = additionalProperties;
@@ -38,16 +38,13 @@ public final class UpdateGuardianFactorsProviderPushNotificationApnsResponseCont
 
     @JsonProperty("sandbox")
     public Optional<Boolean> getSandbox() {
-        return sandbox;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("bundle_id")
     public OptionalNullable<String> getBundleId() {
-        if (bundleId == null) {
-            return OptionalNullable.absent();
-        }
-        return bundleId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -58,14 +55,12 @@ public final class UpdateGuardianFactorsProviderPushNotificationApnsResponseCont
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateGuardianFactorsProviderPushNotificationApnsResponseContent
-                && equalTo((UpdateGuardianFactorsProviderPushNotificationApnsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateGuardianFactorsProviderPushNotificationApnsResponseContent other) {
@@ -74,20 +69,21 @@ public final class UpdateGuardianFactorsProviderPushNotificationApnsResponseCont
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.sandbox, this.bundleId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> sandbox = Optional.empty();
 
         private OptionalNullable<String> bundleId = OptionalNullable.absent();
@@ -95,69 +91,49 @@ public final class UpdateGuardianFactorsProviderPushNotificationApnsResponseCont
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateGuardianFactorsProviderPushNotificationApnsResponseContent other) {
-            sandbox(other.getSandbox());
-            bundleId(other.getBundleId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sandbox", nulls = Nulls.SKIP)
         public Builder sandbox(Optional<Boolean> sandbox) {
-            this.sandbox = sandbox;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sandbox(Boolean sandbox) {
-            this.sandbox = Optional.ofNullable(sandbox);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "bundle_id", nulls = Nulls.SKIP)
         public Builder bundleId(@Nullable OptionalNullable<String> bundleId) {
-            this.bundleId = bundleId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = OptionalNullable.of(bundleId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder bundleId(Optional<String> bundleId) {
-            if (bundleId.isPresent()) {
-                this.bundleId = OptionalNullable.of(bundleId.get());
-            } else {
-                this.bundleId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder bundleId(com.auth0.client.mgmt.core.Nullable<String> bundleId) {
-            if (bundleId.isNull()) {
-                this.bundleId = OptionalNullable.ofNull();
-            } else if (bundleId.isEmpty()) {
-                this.bundleId = OptionalNullable.absent();
-            } else {
-                this.bundleId = OptionalNullable.of(bundleId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent build() {
-            return new UpdateGuardianFactorsProviderPushNotificationApnsResponseContent(
-                    sandbox, bundleId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

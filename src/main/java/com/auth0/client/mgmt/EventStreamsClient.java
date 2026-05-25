@@ -21,6 +21,7 @@ import com.auth0.client.mgmt.types.UpdateEventStreamResponseContent;
 import java.util.function.Supplier;
 
 public class EventStreamsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawEventStreamsClient rawClient;
@@ -40,81 +41,78 @@ public class EventStreamsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawEventStreamsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<EventStreamResponseContent> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<EventStreamResponseContent> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<EventStreamResponseContent> list(ListEventStreamsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<EventStreamResponseContent> list(
-            ListEventStreamsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<EventStreamResponseContent> list(ListEventStreamsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateEventStreamResponseContent create(EventStreamsCreateRequest request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateEventStreamResponseContent create(EventStreamsCreateRequest request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetEventStreamResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetEventStreamResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateEventStreamResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateEventStreamResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateEventStreamResponseContent update(String id, UpdateEventStreamRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateEventStreamResponseContent update(
-            String id, UpdateEventStreamRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateEventStreamResponseContent update(String id, UpdateEventStreamRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateEventStreamTestEventResponseContent test(String id, CreateEventStreamTestEventRequestContent request) {
-        return this.rawClient.test(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateEventStreamTestEventResponseContent test(
-            String id, CreateEventStreamTestEventRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.test(id, request, requestOptions).body();
+    public CreateEventStreamTestEventResponseContent test(String id, CreateEventStreamTestEventRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public DeliveriesClient deliveries() {
-        return this.deliveriesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RedeliveriesClient redeliveries() {
-        return this.redeliveriesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

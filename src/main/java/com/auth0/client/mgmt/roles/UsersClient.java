@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.roles.types.ListRoleUsersRequestParameters;
 import com.auth0.client.mgmt.types.RoleUser;
 
 public class UsersClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUsersClient rawClient;
@@ -24,7 +25,7 @@ public class UsersClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUsersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,7 +45,7 @@ public class UsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<RoleUser> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +65,7 @@ public class UsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<RoleUser> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,7 +85,7 @@ public class UsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public SyncPagingIterable<RoleUser> list(String id, ListRoleUsersRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,9 +104,8 @@ public class UsersClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public SyncPagingIterable<RoleUser> list(
-            String id, ListRoleUsersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<RoleUser> list(String id, ListRoleUsersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,7 +113,7 @@ public class UsersClient {
      * <p><b>Note</b>: New roles cannot be created through this action.</p>
      */
     public void assign(String id, AssignRoleUsersRequestContent request) {
-        this.rawClient.assign(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,6 +121,6 @@ public class UsersClient {
      * <p><b>Note</b>: New roles cannot be created through this action.</p>
      */
     public void assign(String id, AssignRoleUsersRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.assign(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

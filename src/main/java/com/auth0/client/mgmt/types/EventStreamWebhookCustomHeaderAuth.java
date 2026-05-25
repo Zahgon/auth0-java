@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamWebhookCustomHeaderAuth.Builder.class)
 public final class EventStreamWebhookCustomHeaderAuth {
+
     private final EventStreamWebhookCustomHeaderAuthMethodEnum method;
 
     private final String headerKey;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamWebhookCustomHeaderAuth(
-            EventStreamWebhookCustomHeaderAuthMethodEnum method,
-            String headerKey,
-            Map<String, Object> additionalProperties) {
+    private EventStreamWebhookCustomHeaderAuth(EventStreamWebhookCustomHeaderAuthMethodEnum method, String headerKey, Map<String, Object> additionalProperties) {
         this.method = method;
         this.headerKey = headerKey;
         this.additionalProperties = additionalProperties;
@@ -36,7 +34,7 @@ public final class EventStreamWebhookCustomHeaderAuth {
 
     @JsonProperty("method")
     public EventStreamWebhookCustomHeaderAuthMethodEnum getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,19 +42,17 @@ public final class EventStreamWebhookCustomHeaderAuth {
      */
     @JsonProperty("header_key")
     public String getHeaderKey() {
-        return headerKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamWebhookCustomHeaderAuth
-                && equalTo((EventStreamWebhookCustomHeaderAuth) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamWebhookCustomHeaderAuth other) {
@@ -65,25 +61,27 @@ public final class EventStreamWebhookCustomHeaderAuth {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.method, this.headerKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MethodStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MethodStage {
+
         HeaderKeyStage method(@NotNull EventStreamWebhookCustomHeaderAuthMethodEnum method);
 
         Builder from(EventStreamWebhookCustomHeaderAuth other);
     }
 
     public interface HeaderKeyStage {
+
         /**
          * <p>HTTP header name.</p>
          */
@@ -91,6 +89,7 @@ public final class EventStreamWebhookCustomHeaderAuth {
     }
 
     public interface _FinalStage {
+
         EventStreamWebhookCustomHeaderAuth build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -100,6 +99,7 @@ public final class EventStreamWebhookCustomHeaderAuth {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MethodStage, HeaderKeyStage, _FinalStage {
+
         private EventStreamWebhookCustomHeaderAuthMethodEnum method;
 
         private String headerKey;
@@ -107,20 +107,18 @@ public final class EventStreamWebhookCustomHeaderAuth {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamWebhookCustomHeaderAuth other) {
-            method(other.getMethod());
-            headerKey(other.getHeaderKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("method")
         public HeaderKeyStage method(@NotNull EventStreamWebhookCustomHeaderAuthMethodEnum method) {
-            this.method = Objects.requireNonNull(method, "method must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,25 +129,22 @@ public final class EventStreamWebhookCustomHeaderAuth {
         @java.lang.Override
         @JsonSetter("header_key")
         public _FinalStage headerKey(@NotNull String headerKey) {
-            this.headerKey = Objects.requireNonNull(headerKey, "headerKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamWebhookCustomHeaderAuth build() {
-            return new EventStreamWebhookCustomHeaderAuth(method, headerKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

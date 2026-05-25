@@ -15,6 +15,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EventStreamResponseContent.Deserializer.class)
 public final class EventStreamResponseContent {
+
     private final Object value;
 
     private final int type;
@@ -26,25 +27,17 @@ public final class EventStreamResponseContent {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EventStreamWebhookResponseContent) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EventStreamEventBridgeResponseContent) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((EventStreamActionResponseContent) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamResponseContent && equalTo((EventStreamResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamResponseContent other) {
@@ -53,27 +46,28 @@ public final class EventStreamResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamResponseContent of(EventStreamWebhookResponseContent value) {
-        return new EventStreamResponseContent(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamResponseContent of(EventStreamEventBridgeResponseContent value) {
-        return new EventStreamResponseContent(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamResponseContent of(EventStreamActionResponseContent value) {
-        return new EventStreamResponseContent(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EventStreamWebhookResponseContent value);
 
         T visit(EventStreamEventBridgeResponseContent value);
@@ -82,26 +76,14 @@ public final class EventStreamResponseContent {
     }
 
     static final class Deserializer extends StdDeserializer<EventStreamResponseContent> {
+
         Deserializer() {
             super(EventStreamResponseContent.class);
         }
 
         @java.lang.Override
         public EventStreamResponseContent deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamWebhookResponseContent.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamEventBridgeResponseContent.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamActionResponseContent.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

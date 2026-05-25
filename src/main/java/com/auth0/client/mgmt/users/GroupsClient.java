@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.UserGroupsResponseSchema;
 import com.auth0.client.mgmt.users.types.GetUserGroupsRequestParameters;
 
 public class GroupsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawGroupsClient rawClient;
@@ -23,35 +24,34 @@ public class GroupsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawGroupsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
     public SyncPagingIterable<UserGroupsResponseSchema> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
     public SyncPagingIterable<UserGroupsResponseSchema> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
     public SyncPagingIterable<UserGroupsResponseSchema> get(String id, GetUserGroupsRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public SyncPagingIterable<UserGroupsResponseSchema> get(
-            String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+    public SyncPagingIterable<UserGroupsResponseSchema> get(String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

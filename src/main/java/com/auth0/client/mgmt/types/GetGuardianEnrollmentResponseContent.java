@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetGuardianEnrollmentResponseContent.Builder.class)
 public final class GetGuardianEnrollmentResponseContent {
+
     private final String id;
 
     private final Optional<GuardianEnrollmentStatus> status;
@@ -37,15 +38,7 @@ public final class GetGuardianEnrollmentResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetGuardianEnrollmentResponseContent(
-            String id,
-            Optional<GuardianEnrollmentStatus> status,
-            Optional<String> name,
-            Optional<String> identifier,
-            Optional<String> phoneNumber,
-            Optional<String> enrolledAt,
-            Optional<String> lastAuth,
-            Map<String, Object> additionalProperties) {
+    private GetGuardianEnrollmentResponseContent(String id, Optional<GuardianEnrollmentStatus> status, Optional<String> name, Optional<String> identifier, Optional<String> phoneNumber, Optional<String> enrolledAt, Optional<String> lastAuth, Map<String, Object> additionalProperties) {
         this.id = id;
         this.status = status;
         this.name = name;
@@ -61,12 +54,12 @@ public final class GetGuardianEnrollmentResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<GuardianEnrollmentStatus> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +67,7 @@ public final class GetGuardianEnrollmentResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +75,7 @@ public final class GetGuardianEnrollmentResponseContent {
      */
     @JsonProperty("identifier")
     public Optional<String> getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,57 +83,49 @@ public final class GetGuardianEnrollmentResponseContent {
      */
     @JsonProperty("phone_number")
     public Optional<String> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("enrolled_at")
     public Optional<String> getEnrolledAt() {
-        return enrolledAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("last_auth")
     public Optional<String> getLastAuth() {
-        return lastAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetGuardianEnrollmentResponseContent
-                && equalTo((GetGuardianEnrollmentResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetGuardianEnrollmentResponseContent other) {
-        return id.equals(other.id)
-                && status.equals(other.status)
-                && name.equals(other.name)
-                && identifier.equals(other.identifier)
-                && phoneNumber.equals(other.phoneNumber)
-                && enrolledAt.equals(other.enrolledAt)
-                && lastAuth.equals(other.lastAuth);
+        return id.equals(other.id) && status.equals(other.status) && name.equals(other.name) && identifier.equals(other.identifier) && phoneNumber.equals(other.phoneNumber) && enrolledAt.equals(other.enrolledAt) && lastAuth.equals(other.lastAuth);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.status, this.name, this.identifier, this.phoneNumber, this.enrolledAt, this.lastAuth);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>ID for this enrollment.</p>
          */
@@ -150,6 +135,7 @@ public final class GetGuardianEnrollmentResponseContent {
     }
 
     public interface _FinalStage {
+
         GetGuardianEnrollmentResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -192,6 +178,7 @@ public final class GetGuardianEnrollmentResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, _FinalStage {
+
         private String id;
 
         private Optional<String> lastAuth = Optional.empty();
@@ -209,18 +196,12 @@ public final class GetGuardianEnrollmentResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetGuardianEnrollmentResponseContent other) {
-            id(other.getId());
-            status(other.getStatus());
-            name(other.getName());
-            identifier(other.getIdentifier());
-            phoneNumber(other.getPhoneNumber());
-            enrolledAt(other.getEnrolledAt());
-            lastAuth(other.getLastAuth());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -231,34 +212,29 @@ public final class GetGuardianEnrollmentResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public _FinalStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage lastAuth(String lastAuth) {
-            this.lastAuth = Optional.ofNullable(lastAuth);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "last_auth", nulls = Nulls.SKIP)
         public _FinalStage lastAuth(Optional<String> lastAuth) {
-            this.lastAuth = lastAuth;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage enrolledAt(String enrolledAt) {
-            this.enrolledAt = Optional.ofNullable(enrolledAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "enrolled_at", nulls = Nulls.SKIP)
         public _FinalStage enrolledAt(Optional<String> enrolledAt) {
-            this.enrolledAt = enrolledAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -267,8 +243,7 @@ public final class GetGuardianEnrollmentResponseContent {
          */
         @java.lang.Override
         public _FinalStage phoneNumber(String phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -277,8 +252,7 @@ public final class GetGuardianEnrollmentResponseContent {
         @java.lang.Override
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public _FinalStage phoneNumber(Optional<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -287,8 +261,7 @@ public final class GetGuardianEnrollmentResponseContent {
          */
         @java.lang.Override
         public _FinalStage identifier(String identifier) {
-            this.identifier = Optional.ofNullable(identifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -297,8 +270,7 @@ public final class GetGuardianEnrollmentResponseContent {
         @java.lang.Override
         @JsonSetter(value = "identifier", nulls = Nulls.SKIP)
         public _FinalStage identifier(Optional<String> identifier) {
-            this.identifier = identifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,8 +279,7 @@ public final class GetGuardianEnrollmentResponseContent {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -317,39 +288,33 @@ public final class GetGuardianEnrollmentResponseContent {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage status(GuardianEnrollmentStatus status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public _FinalStage status(Optional<GuardianEnrollmentStatus> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetGuardianEnrollmentResponseContent build() {
-            return new GetGuardianEnrollmentResponseContent(
-                    id, status, name, identifier, phoneNumber, enrolledAt, lastAuth, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

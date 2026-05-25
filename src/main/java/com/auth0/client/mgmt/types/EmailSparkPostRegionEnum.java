@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EmailSparkPostRegionEnum {
+
     public static final EmailSparkPostRegionEnum EU = new EmailSparkPostRegionEnum(Value.EU, "eu");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class EmailSparkPostRegionEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EmailSparkPostRegionEnum
-                        && this.string.equals(((EmailSparkPostRegionEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EU:
-                return visitor.visitEu();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EmailSparkPostRegionEnum valueOf(String value) {
-        switch (value) {
-            case "eu":
-                return EU;
-            default:
-                return new EmailSparkPostRegionEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EU,
 
-        UNKNOWN
+        EU, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEu();
 
         T visitUnknown(String unknownType);

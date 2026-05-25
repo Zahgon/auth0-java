@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentGitHubStrategy {
-    public static final CreateConnectionRequestContentGitHubStrategy GITHUB =
-            new CreateConnectionRequestContentGitHubStrategy(Value.GITHUB, "github");
+
+    public static final CreateConnectionRequestContentGitHubStrategy GITHUB = new CreateConnectionRequestContentGitHubStrategy(Value.GITHUB, "github");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentGitHubStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentGitHubStrategy
-                        && this.string.equals(((CreateConnectionRequestContentGitHubStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GITHUB:
-                return visitor.visitGithub();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentGitHubStrategy valueOf(String value) {
-        switch (value) {
-            case "github":
-                return GITHUB;
-            default:
-                return new CreateConnectionRequestContentGitHubStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GITHUB,
 
-        UNKNOWN
+        GITHUB, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGithub();
 
         T visitUnknown(String unknownType);

@@ -19,30 +19,29 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = MdlPresentationRequest.Builder.class)
 public final class MdlPresentationRequest {
+
     private final MdlPresentationRequestProperties orgIso1801351MDl;
 
     private final Map<String, Object> additionalProperties;
 
-    private MdlPresentationRequest(
-            MdlPresentationRequestProperties orgIso1801351MDl, Map<String, Object> additionalProperties) {
+    private MdlPresentationRequest(MdlPresentationRequestProperties orgIso1801351MDl, Map<String, Object> additionalProperties) {
         this.orgIso1801351MDl = orgIso1801351MDl;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("org.iso.18013.5.1.mDL")
     public MdlPresentationRequestProperties getOrgIso1801351MDl() {
-        return orgIso1801351MDl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof MdlPresentationRequest && equalTo((MdlPresentationRequest) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(MdlPresentationRequest other) {
@@ -51,25 +50,27 @@ public final class MdlPresentationRequest {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.orgIso1801351MDl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrgIso1801351MDlStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrgIso1801351MDlStage {
+
         _FinalStage orgIso1801351MDl(@NotNull MdlPresentationRequestProperties orgIso1801351MDl);
 
         Builder from(MdlPresentationRequest other);
     }
 
     public interface _FinalStage {
+
         MdlPresentationRequest build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class MdlPresentationRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrgIso1801351MDlStage, _FinalStage {
+
         private MdlPresentationRequestProperties orgIso1801351MDl;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(MdlPresentationRequest other) {
-            orgIso1801351MDl(other.getOrgIso1801351MDl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("org.iso.18013.5.1.mDL")
         public _FinalStage orgIso1801351MDl(@NotNull MdlPresentationRequestProperties orgIso1801351MDl) {
-            this.orgIso1801351MDl = Objects.requireNonNull(orgIso1801351MDl, "orgIso1801351MDl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public MdlPresentationRequest build() {
-            return new MdlPresentationRequest(orgIso1801351MDl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -22,14 +22,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListFlowExecutionsRequestParameters.Builder.class)
 public final class ListFlowExecutionsRequestParameters {
+
     private final OptionalNullable<String> from;
 
     private final OptionalNullable<Integer> take;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListFlowExecutionsRequestParameters(
-            OptionalNullable<String> from, OptionalNullable<Integer> take, Map<String, Object> additionalProperties) {
+    private ListFlowExecutionsRequestParameters(OptionalNullable<String> from, OptionalNullable<Integer> take, Map<String, Object> additionalProperties) {
         this.from = from;
         this.take = take;
         this.additionalProperties = additionalProperties;
@@ -40,10 +40,7 @@ public final class ListFlowExecutionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,22 +48,17 @@ public final class ListFlowExecutionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getTake() {
-        if (take == null) {
-            return OptionalNullable.absent();
-        }
-        return take;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListFlowExecutionsRequestParameters
-                && equalTo((ListFlowExecutionsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListFlowExecutionsRequestParameters other) {
@@ -75,20 +67,21 @@ public final class ListFlowExecutionsRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.from, this.take);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> from = OptionalNullable.absent();
 
         private OptionalNullable<Integer> take = OptionalNullable.absent();
@@ -96,12 +89,11 @@ public final class ListFlowExecutionsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListFlowExecutionsRequestParameters other) {
-            from(other.getFrom());
-            take(other.getTake());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -109,33 +101,19 @@ public final class ListFlowExecutionsRequestParameters {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,47 +121,31 @@ public final class ListFlowExecutionsRequestParameters {
          */
         @JsonSetter(value = "take", nulls = Nulls.SKIP)
         public Builder take(@Nullable OptionalNullable<Integer> take) {
-            this.take = take;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Integer take) {
-            this.take = OptionalNullable.of(take);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Optional<Integer> take) {
-            if (take.isPresent()) {
-                this.take = OptionalNullable.of(take.get());
-            } else {
-                this.take = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(com.auth0.client.mgmt.core.Nullable<Integer> take) {
-            if (take.isNull()) {
-                this.take = OptionalNullable.ofNull();
-            } else if (take.isEmpty()) {
-                this.take = OptionalNullable.absent();
-            } else {
-                this.take = OptionalNullable.of(take.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListFlowExecutionsRequestParameters build() {
-            return new ListFlowExecutionsRequestParameters(from, take, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

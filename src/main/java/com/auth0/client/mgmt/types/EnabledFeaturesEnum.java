@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EnabledFeaturesEnum {
+
     public static final EnabledFeaturesEnum SCIM = new EnabledFeaturesEnum(Value.SCIM, "scim");
 
-    public static final EnabledFeaturesEnum UNIVERSAL_LOGOUT =
-            new EnabledFeaturesEnum(Value.UNIVERSAL_LOGOUT, "universal_logout");
+    public static final EnabledFeaturesEnum UNIVERSAL_LOGOUT = new EnabledFeaturesEnum(Value.UNIVERSAL_LOGOUT, "universal_logout");
 
     private final Value value;
 
@@ -22,59 +22,41 @@ public final class EnabledFeaturesEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EnabledFeaturesEnum && this.string.equals(((EnabledFeaturesEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SCIM:
-                return visitor.visitScim();
-            case UNIVERSAL_LOGOUT:
-                return visitor.visitUniversalLogout();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EnabledFeaturesEnum valueOf(String value) {
-        switch (value) {
-            case "scim":
-                return SCIM;
-            case "universal_logout":
-                return UNIVERSAL_LOGOUT;
-            default:
-                return new EnabledFeaturesEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SCIM,
 
-        UNIVERSAL_LOGOUT,
-
-        UNKNOWN
+        SCIM, UNIVERSAL_LOGOUT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitScim();
 
         T visitUniversalLogout();

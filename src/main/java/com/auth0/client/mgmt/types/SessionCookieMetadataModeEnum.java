@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SessionCookieMetadataModeEnum {
-    public static final SessionCookieMetadataModeEnum NON_PERSISTENT =
-            new SessionCookieMetadataModeEnum(Value.NON_PERSISTENT, "non-persistent");
 
-    public static final SessionCookieMetadataModeEnum PERSISTENT =
-            new SessionCookieMetadataModeEnum(Value.PERSISTENT, "persistent");
+    public static final SessionCookieMetadataModeEnum NON_PERSISTENT = new SessionCookieMetadataModeEnum(Value.NON_PERSISTENT, "non-persistent");
+
+    public static final SessionCookieMetadataModeEnum PERSISTENT = new SessionCookieMetadataModeEnum(Value.PERSISTENT, "persistent");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class SessionCookieMetadataModeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SessionCookieMetadataModeEnum
-                        && this.string.equals(((SessionCookieMetadataModeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NON_PERSISTENT:
-                return visitor.visitNonPersistent();
-            case PERSISTENT:
-                return visitor.visitPersistent();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SessionCookieMetadataModeEnum valueOf(String value) {
-        switch (value) {
-            case "non-persistent":
-                return NON_PERSISTENT;
-            case "persistent":
-                return PERSISTENT;
-            default:
-                return new SessionCookieMetadataModeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NON_PERSISTENT,
 
-        PERSISTENT,
-
-        UNKNOWN
+        NON_PERSISTENT, PERSISTENT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNonPersistent();
 
         T visitPersistent();

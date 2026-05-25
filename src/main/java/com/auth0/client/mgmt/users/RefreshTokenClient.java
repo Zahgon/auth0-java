@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.RefreshTokenResponseContent;
 import com.auth0.client.mgmt.users.types.ListRefreshTokensRequestParameters;
 
 public class RefreshTokenClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRefreshTokenClient rawClient;
@@ -23,50 +24,48 @@ public class RefreshTokenClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRefreshTokenClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
     public SyncPagingIterable<RefreshTokenResponseContent> list(String userId) {
-        return this.rawClient.list(userId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
     public SyncPagingIterable<RefreshTokenResponseContent> list(String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
-    public SyncPagingIterable<RefreshTokenResponseContent> list(
-            String userId, ListRefreshTokensRequestParameters request) {
-        return this.rawClient.list(userId, request).body();
+    public SyncPagingIterable<RefreshTokenResponseContent> list(String userId, ListRefreshTokensRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
-    public SyncPagingIterable<RefreshTokenResponseContent> list(
-            String userId, ListRefreshTokensRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, request, requestOptions).body();
+    public SyncPagingIterable<RefreshTokenResponseContent> list(String userId, ListRefreshTokensRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all refresh tokens for a user.
      */
     public void delete(String userId) {
-        this.rawClient.delete(userId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all refresh tokens for a user.
      */
     public void delete(String userId, RequestOptions requestOptions) {
-        this.rawClient.delete(userId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

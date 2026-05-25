@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionSalesforceCreateLeadAction {
-    public static final FlowActionSalesforceCreateLeadAction CREATE_LEAD =
-            new FlowActionSalesforceCreateLeadAction(Value.CREATE_LEAD, "CREATE_LEAD");
+
+    public static final FlowActionSalesforceCreateLeadAction CREATE_LEAD = new FlowActionSalesforceCreateLeadAction(Value.CREATE_LEAD, "CREATE_LEAD");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionSalesforceCreateLeadAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionSalesforceCreateLeadAction
-                        && this.string.equals(((FlowActionSalesforceCreateLeadAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CREATE_LEAD:
-                return visitor.visitCreateLead();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionSalesforceCreateLeadAction valueOf(String value) {
-        switch (value) {
-            case "CREATE_LEAD":
-                return CREATE_LEAD;
-            default:
-                return new FlowActionSalesforceCreateLeadAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CREATE_LEAD,
 
-        UNKNOWN
+        CREATE_LEAD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCreateLead();
 
         T visitUnknown(String unknownType);

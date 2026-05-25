@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncDeliveriesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawDeliveriesClient rawClient;
@@ -25,33 +26,30 @@ public class AsyncDeliveriesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawDeliveriesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<List<EventStreamDelivery>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<List<EventStreamDelivery>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<List<EventStreamDelivery>> list(
-            String id, ListEventStreamDeliveriesRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<List<EventStreamDelivery>> list(String id, ListEventStreamDeliveriesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<List<EventStreamDelivery>> list(
-            String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<EventStreamDelivery>> list(String id, ListEventStreamDeliveriesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetEventStreamDeliveryHistoryResponseContent> getHistory(String id, String eventId) {
-        return this.rawClient.getHistory(id, eventId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetEventStreamDeliveryHistoryResponseContent> getHistory(
-            String id, String eventId, RequestOptions requestOptions) {
-        return this.rawClient.getHistory(id, eventId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetEventStreamDeliveryHistoryResponseContent> getHistory(String id, String eventId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListResourceServerOffsetPaginatedResponseContent.Builder.class)
 public final class ListResourceServerOffsetPaginatedResponseContent {
+
     private final Optional<Double> start;
 
     private final Optional<Double> limit;
@@ -31,12 +32,7 @@ public final class ListResourceServerOffsetPaginatedResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListResourceServerOffsetPaginatedResponseContent(
-            Optional<Double> start,
-            Optional<Double> limit,
-            Optional<Double> total,
-            Optional<List<ResourceServer>> resourceServers,
-            Map<String, Object> additionalProperties) {
+    private ListResourceServerOffsetPaginatedResponseContent(Optional<Double> start, Optional<Double> limit, Optional<Double> total, Optional<List<ResourceServer>> resourceServers, Map<String, Object> additionalProperties) {
         this.start = start;
         this.limit = limit;
         this.total = total;
@@ -46,59 +42,55 @@ public final class ListResourceServerOffsetPaginatedResponseContent {
 
     @JsonProperty("start")
     public Optional<Double> getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("limit")
     public Optional<Double> getLimit() {
-        return limit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("total")
     public Optional<Double> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("resource_servers")
     public Optional<List<ResourceServer>> getResourceServers() {
-        return resourceServers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListResourceServerOffsetPaginatedResponseContent
-                && equalTo((ListResourceServerOffsetPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListResourceServerOffsetPaginatedResponseContent other) {
-        return start.equals(other.start)
-                && limit.equals(other.limit)
-                && total.equals(other.total)
-                && resourceServers.equals(other.resourceServers);
+        return start.equals(other.start) && limit.equals(other.limit) && total.equals(other.total) && resourceServers.equals(other.resourceServers);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.start, this.limit, this.total, this.resourceServers);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> start = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
@@ -110,73 +102,59 @@ public final class ListResourceServerOffsetPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListResourceServerOffsetPaginatedResponseContent other) {
-            start(other.getStart());
-            limit(other.getLimit());
-            total(other.getTotal());
-            resourceServers(other.getResourceServers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "start", nulls = Nulls.SKIP)
         public Builder start(Optional<Double> start) {
-            this.start = start;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder start(Double start) {
-            this.start = Optional.ofNullable(start);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "limit", nulls = Nulls.SKIP)
         public Builder limit(Optional<Double> limit) {
-            this.limit = limit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder limit(Double limit) {
-            this.limit = Optional.ofNullable(limit);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Double> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Double total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "resource_servers", nulls = Nulls.SKIP)
         public Builder resourceServers(Optional<List<ResourceServer>> resourceServers) {
-            this.resourceServers = resourceServers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resourceServers(List<ResourceServer> resourceServers) {
-            this.resourceServers = Optional.ofNullable(resourceServers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListResourceServerOffsetPaginatedResponseContent build() {
-            return new ListResourceServerOffsetPaginatedResponseContent(
-                    start, limit, total, resourceServers, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

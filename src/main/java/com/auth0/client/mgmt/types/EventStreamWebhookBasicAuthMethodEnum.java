@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamWebhookBasicAuthMethodEnum {
-    public static final EventStreamWebhookBasicAuthMethodEnum BASIC =
-            new EventStreamWebhookBasicAuthMethodEnum(Value.BASIC, "basic");
+
+    public static final EventStreamWebhookBasicAuthMethodEnum BASIC = new EventStreamWebhookBasicAuthMethodEnum(Value.BASIC, "basic");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamWebhookBasicAuthMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamWebhookBasicAuthMethodEnum
-                        && this.string.equals(((EventStreamWebhookBasicAuthMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BASIC:
-                return visitor.visitBasic();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamWebhookBasicAuthMethodEnum valueOf(String value) {
-        switch (value) {
-            case "basic":
-                return BASIC;
-            default:
-                return new EventStreamWebhookBasicAuthMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BASIC,
 
-        UNKNOWN
+        BASIC, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBasic();
 
         T visitUnknown(String unknownType);

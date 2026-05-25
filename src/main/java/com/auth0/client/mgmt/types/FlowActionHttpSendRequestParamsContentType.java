@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionHttpSendRequestParamsContentType {
-    public static final FlowActionHttpSendRequestParamsContentType FORM =
-            new FlowActionHttpSendRequestParamsContentType(Value.FORM, "FORM");
 
-    public static final FlowActionHttpSendRequestParamsContentType JSON =
-            new FlowActionHttpSendRequestParamsContentType(Value.JSON, "JSON");
+    public static final FlowActionHttpSendRequestParamsContentType FORM = new FlowActionHttpSendRequestParamsContentType(Value.FORM, "FORM");
 
-    public static final FlowActionHttpSendRequestParamsContentType XML =
-            new FlowActionHttpSendRequestParamsContentType(Value.XML, "XML");
+    public static final FlowActionHttpSendRequestParamsContentType JSON = new FlowActionHttpSendRequestParamsContentType(Value.JSON, "JSON");
+
+    public static final FlowActionHttpSendRequestParamsContentType XML = new FlowActionHttpSendRequestParamsContentType(Value.XML, "XML");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class FlowActionHttpSendRequestParamsContentType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionHttpSendRequestParamsContentType
-                        && this.string.equals(((FlowActionHttpSendRequestParamsContentType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FORM:
-                return visitor.visitForm();
-            case JSON:
-                return visitor.visitJson();
-            case XML:
-                return visitor.visitXml();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionHttpSendRequestParamsContentType valueOf(String value) {
-        switch (value) {
-            case "FORM":
-                return FORM;
-            case "JSON":
-                return JSON;
-            case "XML":
-                return XML;
-            default:
-                return new FlowActionHttpSendRequestParamsContentType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        JSON,
 
-        FORM,
-
-        XML,
-
-        UNKNOWN
+        JSON, FORM, XML, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitJson();
 
         T visitForm();

@@ -20,31 +20,29 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetGuardianFactorsProviderSmsResponseContent.Builder.class)
 public final class SetGuardianFactorsProviderSmsResponseContent {
+
     private final Optional<GuardianFactorsProviderSmsProviderEnum> provider;
 
     private final Map<String, Object> additionalProperties;
 
-    private SetGuardianFactorsProviderSmsResponseContent(
-            Optional<GuardianFactorsProviderSmsProviderEnum> provider, Map<String, Object> additionalProperties) {
+    private SetGuardianFactorsProviderSmsResponseContent(Optional<GuardianFactorsProviderSmsProviderEnum> provider, Map<String, Object> additionalProperties) {
         this.provider = provider;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("provider")
     public Optional<GuardianFactorsProviderSmsProviderEnum> getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetGuardianFactorsProviderSmsResponseContent
-                && equalTo((SetGuardianFactorsProviderSmsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetGuardianFactorsProviderSmsResponseContent other) {
@@ -53,55 +51,52 @@ public final class SetGuardianFactorsProviderSmsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.provider);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<GuardianFactorsProviderSmsProviderEnum> provider = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SetGuardianFactorsProviderSmsResponseContent other) {
-            provider(other.getProvider());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "provider", nulls = Nulls.SKIP)
         public Builder provider(Optional<GuardianFactorsProviderSmsProviderEnum> provider) {
-            this.provider = provider;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder provider(GuardianFactorsProviderSmsProviderEnum provider) {
-            this.provider = Optional.ofNullable(provider);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SetGuardianFactorsProviderSmsResponseContent build() {
-            return new SetGuardianFactorsProviderSmsResponseContent(provider, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

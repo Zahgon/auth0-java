@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowDelayFlowAction {
-    public static final FlowActionFlowDelayFlowAction DELAY_FLOW =
-            new FlowActionFlowDelayFlowAction(Value.DELAY_FLOW, "DELAY_FLOW");
+
+    public static final FlowActionFlowDelayFlowAction DELAY_FLOW = new FlowActionFlowDelayFlowAction(Value.DELAY_FLOW, "DELAY_FLOW");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionFlowDelayFlowAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowDelayFlowAction
-                        && this.string.equals(((FlowActionFlowDelayFlowAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DELAY_FLOW:
-                return visitor.visitDelayFlow();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowDelayFlowAction valueOf(String value) {
-        switch (value) {
-            case "DELAY_FLOW":
-                return DELAY_FLOW;
-            default:
-                return new FlowActionFlowDelayFlowAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DELAY_FLOW,
 
-        UNKNOWN
+        DELAY_FLOW, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDelayFlow();
 
         T visitUnknown(String unknownType);

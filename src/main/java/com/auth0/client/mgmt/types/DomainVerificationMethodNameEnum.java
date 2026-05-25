@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class DomainVerificationMethodNameEnum {
-    public static final DomainVerificationMethodNameEnum CNAME =
-            new DomainVerificationMethodNameEnum(Value.CNAME, "cname");
+
+    public static final DomainVerificationMethodNameEnum CNAME = new DomainVerificationMethodNameEnum(Value.CNAME, "cname");
 
     public static final DomainVerificationMethodNameEnum TXT = new DomainVerificationMethodNameEnum(Value.TXT, "txt");
 
@@ -22,60 +22,41 @@ public final class DomainVerificationMethodNameEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof DomainVerificationMethodNameEnum
-                        && this.string.equals(((DomainVerificationMethodNameEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CNAME:
-                return visitor.visitCname();
-            case TXT:
-                return visitor.visitTxt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static DomainVerificationMethodNameEnum valueOf(String value) {
-        switch (value) {
-            case "cname":
-                return CNAME;
-            case "txt":
-                return TXT;
-            default:
-                return new DomainVerificationMethodNameEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CNAME,
 
-        TXT,
-
-        UNKNOWN
+        CNAME, TXT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCname();
 
         T visitTxt();

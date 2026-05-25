@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockDivider.Builder.class)
 public final class FormBlockDivider {
+
     private final String id;
 
     private final FormComponentCategoryBlockConst category;
@@ -31,12 +32,7 @@ public final class FormBlockDivider {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormBlockDivider(
-            String id,
-            FormComponentCategoryBlockConst category,
-            FormBlockTypeDividerConst type,
-            Optional<FormBlockDividerConfig> config,
-            Map<String, Object> additionalProperties) {
+    private FormBlockDivider(String id, FormComponentCategoryBlockConst category, FormBlockTypeDividerConst type, Optional<FormBlockDividerConfig> config, Map<String, Object> additionalProperties) {
         this.id = id;
         this.category = category;
         this.type = type;
@@ -46,71 +42,71 @@ public final class FormBlockDivider {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("category")
     public FormComponentCategoryBlockConst getCategory() {
-        return category;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FormBlockTypeDividerConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("config")
     public Optional<FormBlockDividerConfig> getConfig() {
-        return config;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockDivider && equalTo((FormBlockDivider) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockDivider other) {
-        return id.equals(other.id)
-                && category.equals(other.category)
-                && type.equals(other.type)
-                && config.equals(other.config);
+        return id.equals(other.id) && category.equals(other.category) && type.equals(other.type) && config.equals(other.config);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.category, this.type, this.config);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         CategoryStage id(@NotNull String id);
 
         Builder from(FormBlockDivider other);
     }
 
     public interface CategoryStage {
+
         TypeStage category(@NotNull FormComponentCategoryBlockConst category);
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull FormBlockTypeDividerConst type);
     }
 
     public interface _FinalStage {
+
         FormBlockDivider build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +120,7 @@ public final class FormBlockDivider {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, CategoryStage, TypeStage, _FinalStage {
+
         private String id;
 
         private FormComponentCategoryBlockConst category;
@@ -135,66 +132,56 @@ public final class FormBlockDivider {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockDivider other) {
-            id(other.getId());
-            category(other.getCategory());
-            type(other.getType());
-            config(other.getConfig());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public CategoryStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("category")
         public TypeStage category(@NotNull FormComponentCategoryBlockConst category) {
-            this.category = Objects.requireNonNull(category, "category must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull FormBlockTypeDividerConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage config(FormBlockDividerConfig config) {
-            this.config = Optional.ofNullable(config);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "config", nulls = Nulls.SKIP)
         public _FinalStage config(Optional<FormBlockDividerConfig> config) {
-            this.config = config;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockDivider build() {
-            return new FormBlockDivider(id, category, type, config, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

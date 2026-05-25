@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.Organization;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncOrganizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawOrganizationsClient rawClient;
@@ -24,24 +25,22 @@ public class AsyncOrganizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawOrganizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<Organization>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<Organization>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<Organization>> list(
-            String id, ListClientGrantOrganizationsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Organization>> list(String id, ListClientGrantOrganizationsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<Organization>> list(
-            String id, ListClientGrantOrganizationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Organization>> list(String id, ListClientGrantOrganizationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

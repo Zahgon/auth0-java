@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionConnectedAccountsPurpose.Builder.class)
 public final class ConnectionConnectedAccountsPurpose {
+
     private final boolean active;
 
     private final Optional<Boolean> crossAppAccess;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionConnectedAccountsPurpose(
-            boolean active, Optional<Boolean> crossAppAccess, Map<String, Object> additionalProperties) {
+    private ConnectionConnectedAccountsPurpose(boolean active, Optional<Boolean> crossAppAccess, Map<String, Object> additionalProperties) {
         this.active = active;
         this.crossAppAccess = crossAppAccess;
         this.additionalProperties = additionalProperties;
@@ -35,24 +35,22 @@ public final class ConnectionConnectedAccountsPurpose {
 
     @JsonProperty("active")
     public boolean getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("cross_app_access")
     public Optional<Boolean> getCrossAppAccess() {
-        return crossAppAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionConnectedAccountsPurpose
-                && equalTo((ConnectionConnectedAccountsPurpose) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionConnectedAccountsPurpose other) {
@@ -61,25 +59,27 @@ public final class ConnectionConnectedAccountsPurpose {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active, this.crossAppAccess);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ActiveStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ActiveStage {
+
         _FinalStage active(boolean active);
 
         Builder from(ConnectionConnectedAccountsPurpose other);
     }
 
     public interface _FinalStage {
+
         ConnectionConnectedAccountsPurpose build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class ConnectionConnectedAccountsPurpose {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ActiveStage, _FinalStage {
+
         private boolean active;
 
         private Optional<Boolean> crossAppAccess = Optional.empty();
@@ -100,50 +101,44 @@ public final class ConnectionConnectedAccountsPurpose {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionConnectedAccountsPurpose other) {
-            active(other.getActive());
-            crossAppAccess(other.getCrossAppAccess());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("active")
         public _FinalStage active(boolean active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage crossAppAccess(Boolean crossAppAccess) {
-            this.crossAppAccess = Optional.ofNullable(crossAppAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "cross_app_access", nulls = Nulls.SKIP)
         public _FinalStage crossAppAccess(Optional<Boolean> crossAppAccess) {
-            this.crossAppAccess = crossAppAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionConnectedAccountsPurpose build() {
-            return new ConnectionConnectedAccountsPurpose(active, crossAppAccess, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientMobileiOs.Builder.class)
 public final class ClientMobileiOs {
+
     private final Optional<String> teamId;
 
     private final Optional<String> appBundleIdentifier;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientMobileiOs(
-            Optional<String> teamId, Optional<String> appBundleIdentifier, Map<String, Object> additionalProperties) {
+    private ClientMobileiOs(Optional<String> teamId, Optional<String> appBundleIdentifier, Map<String, Object> additionalProperties) {
         this.teamId = teamId;
         this.appBundleIdentifier = appBundleIdentifier;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class ClientMobileiOs {
      */
     @JsonProperty("team_id")
     public Optional<String> getTeamId() {
-        return teamId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class ClientMobileiOs {
      */
     @JsonProperty("app_bundle_identifier")
     public Optional<String> getAppBundleIdentifier() {
-        return appBundleIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientMobileiOs && equalTo((ClientMobileiOs) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientMobileiOs other) {
@@ -66,20 +65,21 @@ public final class ClientMobileiOs {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.teamId, this.appBundleIdentifier);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> teamId = Optional.empty();
 
         private Optional<String> appBundleIdentifier = Optional.empty();
@@ -87,12 +87,11 @@ public final class ClientMobileiOs {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientMobileiOs other) {
-            teamId(other.getTeamId());
-            appBundleIdentifier(other.getAppBundleIdentifier());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class ClientMobileiOs {
          */
         @JsonSetter(value = "team_id", nulls = Nulls.SKIP)
         public Builder teamId(Optional<String> teamId) {
-            this.teamId = teamId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamId(String teamId) {
-            this.teamId = Optional.ofNullable(teamId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class ClientMobileiOs {
          */
         @JsonSetter(value = "app_bundle_identifier", nulls = Nulls.SKIP)
         public Builder appBundleIdentifier(Optional<String> appBundleIdentifier) {
-            this.appBundleIdentifier = appBundleIdentifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appBundleIdentifier(String appBundleIdentifier) {
-            this.appBundleIdentifier = Optional.ofNullable(appBundleIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientMobileiOs build() {
-            return new ClientMobileiOs(teamId, appBundleIdentifier, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

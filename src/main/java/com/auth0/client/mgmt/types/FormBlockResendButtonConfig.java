@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockResendButtonConfig.Builder.class)
 public final class FormBlockResendButtonConfig {
+
     private final String activeText;
 
     private final String buttonText;
@@ -37,15 +38,7 @@ public final class FormBlockResendButtonConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormBlockResendButtonConfig(
-            String activeText,
-            String buttonText,
-            String waitingText,
-            Optional<FormBlockResendButtonConfigTextAlignmentEnum> textAlignment,
-            String flowId,
-            Optional<Double> maxAttempts,
-            Optional<Double> waitingTime,
-            Map<String, Object> additionalProperties) {
+    private FormBlockResendButtonConfig(String activeText, String buttonText, String waitingText, Optional<FormBlockResendButtonConfigTextAlignmentEnum> textAlignment, String flowId, Optional<Double> maxAttempts, Optional<Double> waitingTime, Map<String, Object> additionalProperties) {
         this.activeText = activeText;
         this.buttonText = buttonText;
         this.waitingText = waitingText;
@@ -58,100 +51,91 @@ public final class FormBlockResendButtonConfig {
 
     @JsonProperty("active_text")
     public String getActiveText() {
-        return activeText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("button_text")
     public String getButtonText() {
-        return buttonText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("waiting_text")
     public String getWaitingText() {
-        return waitingText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("text_alignment")
     public Optional<FormBlockResendButtonConfigTextAlignmentEnum> getTextAlignment() {
-        return textAlignment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("flow_id")
     public String getFlowId() {
-        return flowId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_attempts")
     public Optional<Double> getMaxAttempts() {
-        return maxAttempts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("waiting_time")
     public Optional<Double> getWaitingTime() {
-        return waitingTime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockResendButtonConfig && equalTo((FormBlockResendButtonConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockResendButtonConfig other) {
-        return activeText.equals(other.activeText)
-                && buttonText.equals(other.buttonText)
-                && waitingText.equals(other.waitingText)
-                && textAlignment.equals(other.textAlignment)
-                && flowId.equals(other.flowId)
-                && maxAttempts.equals(other.maxAttempts)
-                && waitingTime.equals(other.waitingTime);
+        return activeText.equals(other.activeText) && buttonText.equals(other.buttonText) && waitingText.equals(other.waitingText) && textAlignment.equals(other.textAlignment) && flowId.equals(other.flowId) && maxAttempts.equals(other.maxAttempts) && waitingTime.equals(other.waitingTime);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.activeText,
-                this.buttonText,
-                this.waitingText,
-                this.textAlignment,
-                this.flowId,
-                this.maxAttempts,
-                this.waitingTime);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ActiveTextStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ActiveTextStage {
+
         ButtonTextStage activeText(@NotNull String activeText);
 
         Builder from(FormBlockResendButtonConfig other);
     }
 
     public interface ButtonTextStage {
+
         WaitingTextStage buttonText(@NotNull String buttonText);
     }
 
     public interface WaitingTextStage {
+
         FlowIdStage waitingText(@NotNull String waitingText);
     }
 
     public interface FlowIdStage {
+
         _FinalStage flowId(@NotNull String flowId);
     }
 
     public interface _FinalStage {
+
         FormBlockResendButtonConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -172,8 +156,8 @@ public final class FormBlockResendButtonConfig {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ActiveTextStage, ButtonTextStage, WaitingTextStage, FlowIdStage, _FinalStage {
+    public static final class Builder implements ActiveTextStage, ButtonTextStage, WaitingTextStage, FlowIdStage, _FinalStage {
+
         private String activeText;
 
         private String buttonText;
@@ -191,110 +175,84 @@ public final class FormBlockResendButtonConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockResendButtonConfig other) {
-            activeText(other.getActiveText());
-            buttonText(other.getButtonText());
-            waitingText(other.getWaitingText());
-            textAlignment(other.getTextAlignment());
-            flowId(other.getFlowId());
-            maxAttempts(other.getMaxAttempts());
-            waitingTime(other.getWaitingTime());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("active_text")
         public ButtonTextStage activeText(@NotNull String activeText) {
-            this.activeText = Objects.requireNonNull(activeText, "activeText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("button_text")
         public WaitingTextStage buttonText(@NotNull String buttonText) {
-            this.buttonText = Objects.requireNonNull(buttonText, "buttonText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("waiting_text")
         public FlowIdStage waitingText(@NotNull String waitingText) {
-            this.waitingText = Objects.requireNonNull(waitingText, "waitingText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("flow_id")
         public _FinalStage flowId(@NotNull String flowId) {
-            this.flowId = Objects.requireNonNull(flowId, "flowId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage waitingTime(Double waitingTime) {
-            this.waitingTime = Optional.ofNullable(waitingTime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "waiting_time", nulls = Nulls.SKIP)
         public _FinalStage waitingTime(Optional<Double> waitingTime) {
-            this.waitingTime = waitingTime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage maxAttempts(Double maxAttempts) {
-            this.maxAttempts = Optional.ofNullable(maxAttempts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "max_attempts", nulls = Nulls.SKIP)
         public _FinalStage maxAttempts(Optional<Double> maxAttempts) {
-            this.maxAttempts = maxAttempts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage textAlignment(FormBlockResendButtonConfigTextAlignmentEnum textAlignment) {
-            this.textAlignment = Optional.ofNullable(textAlignment);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "text_alignment", nulls = Nulls.SKIP)
         public _FinalStage textAlignment(Optional<FormBlockResendButtonConfigTextAlignmentEnum> textAlignment) {
-            this.textAlignment = textAlignment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockResendButtonConfig build() {
-            return new FormBlockResendButtonConfig(
-                    activeText,
-                    buttonText,
-                    waitingText,
-                    textAlignment,
-                    flowId,
-                    maxAttempts,
-                    waitingTime,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

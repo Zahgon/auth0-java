@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentExactStrategy {
-    public static final ConnectionResponseContentExactStrategy EXACT =
-            new ConnectionResponseContentExactStrategy(Value.EXACT, "exact");
+
+    public static final ConnectionResponseContentExactStrategy EXACT = new ConnectionResponseContentExactStrategy(Value.EXACT, "exact");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentExactStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentExactStrategy
-                        && this.string.equals(((ConnectionResponseContentExactStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EXACT:
-                return visitor.visitExact();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentExactStrategy valueOf(String value) {
-        switch (value) {
-            case "exact":
-                return EXACT;
-            default:
-                return new ConnectionResponseContentExactStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EXACT,
 
-        UNKNOWN
+        EXACT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitExact();
 
         T visitUnknown(String unknownType);

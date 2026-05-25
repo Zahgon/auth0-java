@@ -21,12 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetCustomSigningKeysResponseContent.Builder.class)
 public final class SetCustomSigningKeysResponseContent {
+
     private final Optional<List<CustomSigningKeyJwk>> keys;
 
     private final Map<String, Object> additionalProperties;
 
-    private SetCustomSigningKeysResponseContent(
-            Optional<List<CustomSigningKeyJwk>> keys, Map<String, Object> additionalProperties) {
+    private SetCustomSigningKeysResponseContent(Optional<List<CustomSigningKeyJwk>> keys, Map<String, Object> additionalProperties) {
         this.keys = keys;
         this.additionalProperties = additionalProperties;
     }
@@ -36,19 +36,17 @@ public final class SetCustomSigningKeysResponseContent {
      */
     @JsonProperty("keys")
     public Optional<List<CustomSigningKeyJwk>> getKeys() {
-        return keys;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetCustomSigningKeysResponseContent
-                && equalTo((SetCustomSigningKeysResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetCustomSigningKeysResponseContent other) {
@@ -57,30 +55,31 @@ public final class SetCustomSigningKeysResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.keys);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<CustomSigningKeyJwk>> keys = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SetCustomSigningKeysResponseContent other) {
-            keys(other.getKeys());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -88,27 +87,23 @@ public final class SetCustomSigningKeysResponseContent {
          */
         @JsonSetter(value = "keys", nulls = Nulls.SKIP)
         public Builder keys(Optional<List<CustomSigningKeyJwk>> keys) {
-            this.keys = keys;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder keys(List<CustomSigningKeyJwk> keys) {
-            this.keys = Optional.ofNullable(keys);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SetCustomSigningKeysResponseContent build() {
-            return new SetCustomSigningKeysResponseContent(keys, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FormNode.Deserializer.class)
 public final class FormNode {
+
     private final Object value;
 
     private final int type;
@@ -27,25 +28,17 @@ public final class FormNode {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FormFlow) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FormRouter) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FormStep) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormNode && equalTo((FormNode) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormNode other) {
@@ -54,27 +47,28 @@ public final class FormNode {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormNode of(FormFlow value) {
-        return new FormNode(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormNode of(FormRouter value) {
-        return new FormNode(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormNode of(FormStep value) {
-        return new FormNode(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FormFlow value);
 
         T visit(FormRouter value);
@@ -83,39 +77,14 @@ public final class FormNode {
     }
 
     static final class Deserializer extends StdDeserializer<FormNode> {
+
         Deserializer() {
             super(FormNode.class);
         }
 
         @java.lang.Override
         public FormNode deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFlow.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormRouter.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormStep.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

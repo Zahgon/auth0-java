@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonAws.Builder.class)
 public final class ClientAddonAws {
+
     private final Optional<String> principal;
 
     private final Optional<String> role;
@@ -28,11 +29,7 @@ public final class ClientAddonAws {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonAws(
-            Optional<String> principal,
-            Optional<String> role,
-            Optional<Integer> lifetimeInSeconds,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonAws(Optional<String> principal, Optional<String> role, Optional<Integer> lifetimeInSeconds, Map<String, Object> additionalProperties) {
         this.principal = principal;
         this.role = role;
         this.lifetimeInSeconds = lifetimeInSeconds;
@@ -44,7 +41,7 @@ public final class ClientAddonAws {
      */
     @JsonProperty("principal")
     public Optional<String> getPrincipal() {
-        return principal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class ClientAddonAws {
      */
     @JsonProperty("role")
     public Optional<String> getRole() {
-        return role;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,42 +57,40 @@ public final class ClientAddonAws {
      */
     @JsonProperty("lifetime_in_seconds")
     public Optional<Integer> getLifetimeInSeconds() {
-        return lifetimeInSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonAws && equalTo((ClientAddonAws) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonAws other) {
-        return principal.equals(other.principal)
-                && role.equals(other.role)
-                && lifetimeInSeconds.equals(other.lifetimeInSeconds);
+        return principal.equals(other.principal) && role.equals(other.role) && lifetimeInSeconds.equals(other.lifetimeInSeconds);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.principal, this.role, this.lifetimeInSeconds);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> principal = Optional.empty();
 
         private Optional<String> role = Optional.empty();
@@ -105,13 +100,11 @@ public final class ClientAddonAws {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonAws other) {
-            principal(other.getPrincipal());
-            role(other.getRole());
-            lifetimeInSeconds(other.getLifetimeInSeconds());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -119,13 +112,11 @@ public final class ClientAddonAws {
          */
         @JsonSetter(value = "principal", nulls = Nulls.SKIP)
         public Builder principal(Optional<String> principal) {
-            this.principal = principal;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder principal(String principal) {
-            this.principal = Optional.ofNullable(principal);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,13 +124,11 @@ public final class ClientAddonAws {
          */
         @JsonSetter(value = "role", nulls = Nulls.SKIP)
         public Builder role(Optional<String> role) {
-            this.role = role;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder role(String role) {
-            this.role = Optional.ofNullable(role);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -147,27 +136,23 @@ public final class ClientAddonAws {
          */
         @JsonSetter(value = "lifetime_in_seconds", nulls = Nulls.SKIP)
         public Builder lifetimeInSeconds(Optional<Integer> lifetimeInSeconds) {
-            this.lifetimeInSeconds = lifetimeInSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lifetimeInSeconds(Integer lifetimeInSeconds) {
-            this.lifetimeInSeconds = Optional.ofNullable(lifetimeInSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonAws build() {
-            return new ClientAddonAws(principal, role, lifetimeInSeconds, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

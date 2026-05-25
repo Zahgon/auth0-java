@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldFileConfigStorageTypeEnum {
-    public static final FormFieldFileConfigStorageTypeEnum CUSTOM =
-            new FormFieldFileConfigStorageTypeEnum(Value.CUSTOM, "CUSTOM");
 
-    public static final FormFieldFileConfigStorageTypeEnum MANAGED =
-            new FormFieldFileConfigStorageTypeEnum(Value.MANAGED, "MANAGED");
+    public static final FormFieldFileConfigStorageTypeEnum CUSTOM = new FormFieldFileConfigStorageTypeEnum(Value.CUSTOM, "CUSTOM");
+
+    public static final FormFieldFileConfigStorageTypeEnum MANAGED = new FormFieldFileConfigStorageTypeEnum(Value.MANAGED, "MANAGED");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class FormFieldFileConfigStorageTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldFileConfigStorageTypeEnum
-                        && this.string.equals(((FormFieldFileConfigStorageTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CUSTOM:
-                return visitor.visitCustom();
-            case MANAGED:
-                return visitor.visitManaged();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldFileConfigStorageTypeEnum valueOf(String value) {
-        switch (value) {
-            case "CUSTOM":
-                return CUSTOM;
-            case "MANAGED":
-                return MANAGED;
-            default:
-                return new FormFieldFileConfigStorageTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MANAGED,
 
-        CUSTOM,
-
-        UNKNOWN
+        MANAGED, CUSTOM, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitManaged();
 
         T visitCustom();

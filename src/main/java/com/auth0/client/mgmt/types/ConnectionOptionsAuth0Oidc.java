@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsAuth0Oidc.Builder.class)
 public final class ConnectionOptionsAuth0Oidc {
+
     private final Optional<String> clientId;
 
     private final Optional<String> clientSecret;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsAuth0Oidc(
-            Optional<String> clientId, Optional<String> clientSecret, Map<String, Object> additionalProperties) {
+    private ConnectionOptionsAuth0Oidc(Optional<String> clientId, Optional<String> clientSecret, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.additionalProperties = additionalProperties;
@@ -35,23 +35,22 @@ public final class ConnectionOptionsAuth0Oidc {
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsAuth0Oidc && equalTo((ConnectionOptionsAuth0Oidc) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsAuth0Oidc other) {
@@ -60,20 +59,21 @@ public final class ConnectionOptionsAuth0Oidc {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientId, this.clientSecret);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientId = Optional.empty();
 
         private Optional<String> clientSecret = Optional.empty();
@@ -81,48 +81,41 @@ public final class ConnectionOptionsAuth0Oidc {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsAuth0Oidc other) {
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsAuth0Oidc build() {
-            return new ConnectionOptionsAuth0Oidc(clientId, clientSecret, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetJobErrorResponseContent.Builder.class)
 public final class GetJobErrorResponseContent {
+
     private final Optional<Map<String, Object>> user;
 
     private final Optional<List<GetJobImportUserError>> errors;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetJobErrorResponseContent(
-            Optional<Map<String, Object>> user,
-            Optional<List<GetJobImportUserError>> errors,
-            Map<String, Object> additionalProperties) {
+    private GetJobErrorResponseContent(Optional<Map<String, Object>> user, Optional<List<GetJobImportUserError>> errors, Map<String, Object> additionalProperties) {
         this.user = user;
         this.errors = errors;
         this.additionalProperties = additionalProperties;
@@ -38,7 +36,7 @@ public final class GetJobErrorResponseContent {
 
     @JsonProperty("user")
     public Optional<Map<String, Object>> getUser() {
-        return user;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +44,17 @@ public final class GetJobErrorResponseContent {
      */
     @JsonProperty("errors")
     public Optional<List<GetJobImportUserError>> getErrors() {
-        return errors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetJobErrorResponseContent && equalTo((GetJobErrorResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetJobErrorResponseContent other) {
@@ -66,20 +63,21 @@ public final class GetJobErrorResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.user, this.errors);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Map<String, Object>> user = Optional.empty();
 
         private Optional<List<GetJobImportUserError>> errors = Optional.empty();
@@ -87,23 +85,20 @@ public final class GetJobErrorResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetJobErrorResponseContent other) {
-            user(other.getUser());
-            errors(other.getErrors());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user", nulls = Nulls.SKIP)
         public Builder user(Optional<Map<String, Object>> user) {
-            this.user = user;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder user(Map<String, Object> user) {
-            this.user = Optional.ofNullable(user);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -111,27 +106,23 @@ public final class GetJobErrorResponseContent {
          */
         @JsonSetter(value = "errors", nulls = Nulls.SKIP)
         public Builder errors(Optional<List<GetJobImportUserError>> errors) {
-            this.errors = errors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errors(List<GetJobImportUserError> errors) {
-            this.errors = Optional.ofNullable(errors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetJobErrorResponseContent build() {
-            return new GetJobErrorResponseContent(user, errors, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

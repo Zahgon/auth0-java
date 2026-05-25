@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetRoleResponseContent.Builder.class)
 public final class GetRoleResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -28,11 +29,7 @@ public final class GetRoleResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetRoleResponseContent(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<String> description,
-            Map<String, Object> additionalProperties) {
+    private GetRoleResponseContent(Optional<String> id, Optional<String> name, Optional<String> description, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -44,7 +41,7 @@ public final class GetRoleResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class GetRoleResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,18 +57,17 @@ public final class GetRoleResponseContent {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetRoleResponseContent && equalTo((GetRoleResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetRoleResponseContent other) {
@@ -80,20 +76,21 @@ public final class GetRoleResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.name, this.description);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -103,13 +100,11 @@ public final class GetRoleResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetRoleResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            description(other.getDescription());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -117,13 +112,11 @@ public final class GetRoleResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +124,11 @@ public final class GetRoleResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,27 +136,23 @@ public final class GetRoleResponseContent {
          */
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetRoleResponseContent build() {
-            return new GetRoleResponseContent(id, name, description, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

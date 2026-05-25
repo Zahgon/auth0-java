@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SessionDeviceMetadata.Builder.class)
 public final class SessionDeviceMetadata {
+
     private final Optional<String> initialUserAgent;
 
     private final OptionalNullable<String> initialIp;
@@ -37,14 +38,7 @@ public final class SessionDeviceMetadata {
 
     private final Map<String, Object> additionalProperties;
 
-    private SessionDeviceMetadata(
-            Optional<String> initialUserAgent,
-            OptionalNullable<String> initialIp,
-            Optional<String> initialAsn,
-            Optional<String> lastUserAgent,
-            OptionalNullable<String> lastIp,
-            Optional<String> lastAsn,
-            Map<String, Object> additionalProperties) {
+    private SessionDeviceMetadata(Optional<String> initialUserAgent, OptionalNullable<String> initialIp, Optional<String> initialAsn, Optional<String> lastUserAgent, OptionalNullable<String> lastIp, Optional<String> lastAsn, Map<String, Object> additionalProperties) {
         this.initialUserAgent = initialUserAgent;
         this.initialIp = initialIp;
         this.initialAsn = initialAsn;
@@ -59,16 +53,13 @@ public final class SessionDeviceMetadata {
      */
     @JsonProperty("initial_user_agent")
     public Optional<String> getInitialUserAgent() {
-        return initialUserAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("initial_ip")
     public OptionalNullable<String> getInitialIp() {
-        if (initialIp == null) {
-            return OptionalNullable.absent();
-        }
-        return initialIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +67,7 @@ public final class SessionDeviceMetadata {
      */
     @JsonProperty("initial_asn")
     public Optional<String> getInitialAsn() {
-        return initialAsn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,16 +75,13 @@ public final class SessionDeviceMetadata {
      */
     @JsonProperty("last_user_agent")
     public Optional<String> getLastUserAgent() {
-        return lastUserAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("last_ip")
     public OptionalNullable<String> getLastIp() {
-        if (lastIp == null) {
-            return OptionalNullable.absent();
-        }
-        return lastIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +89,7 @@ public final class SessionDeviceMetadata {
      */
     @JsonProperty("last_asn")
     public Optional<String> getLastAsn() {
-        return lastAsn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -118,41 +106,35 @@ public final class SessionDeviceMetadata {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SessionDeviceMetadata && equalTo((SessionDeviceMetadata) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SessionDeviceMetadata other) {
-        return initialUserAgent.equals(other.initialUserAgent)
-                && initialIp.equals(other.initialIp)
-                && initialAsn.equals(other.initialAsn)
-                && lastUserAgent.equals(other.lastUserAgent)
-                && lastIp.equals(other.lastIp)
-                && lastAsn.equals(other.lastAsn);
+        return initialUserAgent.equals(other.initialUserAgent) && initialIp.equals(other.initialIp) && initialAsn.equals(other.initialAsn) && lastUserAgent.equals(other.lastUserAgent) && lastIp.equals(other.lastIp) && lastAsn.equals(other.lastAsn);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.initialUserAgent, this.initialIp, this.initialAsn, this.lastUserAgent, this.lastIp, this.lastAsn);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> initialUserAgent = Optional.empty();
 
         private OptionalNullable<String> initialIp = OptionalNullable.absent();
@@ -168,16 +150,11 @@ public final class SessionDeviceMetadata {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SessionDeviceMetadata other) {
-            initialUserAgent(other.getInitialUserAgent());
-            initialIp(other.getInitialIp());
-            initialAsn(other.getInitialAsn());
-            lastUserAgent(other.getLastUserAgent());
-            lastIp(other.getLastIp());
-            lastAsn(other.getLastAsn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -185,44 +162,28 @@ public final class SessionDeviceMetadata {
          */
         @JsonSetter(value = "initial_user_agent", nulls = Nulls.SKIP)
         public Builder initialUserAgent(Optional<String> initialUserAgent) {
-            this.initialUserAgent = initialUserAgent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialUserAgent(String initialUserAgent) {
-            this.initialUserAgent = Optional.ofNullable(initialUserAgent);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "initial_ip", nulls = Nulls.SKIP)
         public Builder initialIp(@Nullable OptionalNullable<String> initialIp) {
-            this.initialIp = initialIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialIp(String initialIp) {
-            this.initialIp = OptionalNullable.of(initialIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialIp(Optional<String> initialIp) {
-            if (initialIp.isPresent()) {
-                this.initialIp = OptionalNullable.of(initialIp.get());
-            } else {
-                this.initialIp = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialIp(com.auth0.client.mgmt.core.Nullable<String> initialIp) {
-            if (initialIp.isNull()) {
-                this.initialIp = OptionalNullable.ofNull();
-            } else if (initialIp.isEmpty()) {
-                this.initialIp = OptionalNullable.absent();
-            } else {
-                this.initialIp = OptionalNullable.of(initialIp.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -230,13 +191,11 @@ public final class SessionDeviceMetadata {
          */
         @JsonSetter(value = "initial_asn", nulls = Nulls.SKIP)
         public Builder initialAsn(Optional<String> initialAsn) {
-            this.initialAsn = initialAsn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialAsn(String initialAsn) {
-            this.initialAsn = Optional.ofNullable(initialAsn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -244,44 +203,28 @@ public final class SessionDeviceMetadata {
          */
         @JsonSetter(value = "last_user_agent", nulls = Nulls.SKIP)
         public Builder lastUserAgent(Optional<String> lastUserAgent) {
-            this.lastUserAgent = lastUserAgent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUserAgent(String lastUserAgent) {
-            this.lastUserAgent = Optional.ofNullable(lastUserAgent);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "last_ip", nulls = Nulls.SKIP)
         public Builder lastIp(@Nullable OptionalNullable<String> lastIp) {
-            this.lastIp = lastIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastIp(String lastIp) {
-            this.lastIp = OptionalNullable.of(lastIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastIp(Optional<String> lastIp) {
-            if (lastIp.isPresent()) {
-                this.lastIp = OptionalNullable.of(lastIp.get());
-            } else {
-                this.lastIp = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastIp(com.auth0.client.mgmt.core.Nullable<String> lastIp) {
-            if (lastIp.isNull()) {
-                this.lastIp = OptionalNullable.ofNull();
-            } else if (lastIp.isEmpty()) {
-                this.lastIp = OptionalNullable.absent();
-            } else {
-                this.lastIp = OptionalNullable.of(lastIp.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -289,28 +232,23 @@ public final class SessionDeviceMetadata {
          */
         @JsonSetter(value = "last_asn", nulls = Nulls.SKIP)
         public Builder lastAsn(Optional<String> lastAsn) {
-            this.lastAsn = lastAsn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastAsn(String lastAsn) {
-            this.lastAsn = Optional.ofNullable(lastAsn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SessionDeviceMetadata build() {
-            return new SessionDeviceMetadata(
-                    initialUserAgent, initialIp, initialAsn, lastUserAgent, lastIp, lastAsn, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

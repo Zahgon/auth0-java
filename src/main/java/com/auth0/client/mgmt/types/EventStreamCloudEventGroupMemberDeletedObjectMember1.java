@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventGroupMemberDeletedObjectMember1.Builder.class)
 public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
+
     private final EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType;
 
     private final String id;
@@ -29,12 +30,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventGroupMemberDeletedObjectMember1(
-            EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType,
-            String id,
-            String type,
-            String connectionId,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventGroupMemberDeletedObjectMember1(EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType, String id, String type, String connectionId, Map<String, Object> additionalProperties) {
         this.memberType = memberType;
         this.id = id;
         this.type = type;
@@ -44,7 +40,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
 
     @JsonProperty("member_type")
     public EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum getMemberType() {
-        return memberType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +48,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +56,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
      */
     @JsonProperty("type")
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,49 +64,46 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventGroupMemberDeletedObjectMember1
-                && equalTo((EventStreamCloudEventGroupMemberDeletedObjectMember1) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventGroupMemberDeletedObjectMember1 other) {
-        return memberType.equals(other.memberType)
-                && id.equals(other.id)
-                && type.equals(other.type)
-                && connectionId.equals(other.connectionId);
+        return memberType.equals(other.memberType) && id.equals(other.id) && type.equals(other.type) && connectionId.equals(other.connectionId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.memberType, this.id, this.type, this.connectionId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MemberTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MemberTypeStage {
+
         IdStage memberType(@NotNull EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType);
 
         Builder from(EventStreamCloudEventGroupMemberDeletedObjectMember1 other);
     }
 
     public interface IdStage {
+
         /**
          * <p>The connection member's unique identifier</p>
          */
@@ -118,6 +111,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
     }
 
     public interface TypeStage {
+
         /**
          * <p>The type of the connection</p>
          */
@@ -125,6 +119,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>Connection ID associated with the member</p>
          */
@@ -132,6 +127,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventGroupMemberDeletedObjectMember1 build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -141,6 +137,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MemberTypeStage, IdStage, TypeStage, ConnectionIdStage, _FinalStage {
+
         private EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType;
 
         private String id;
@@ -152,23 +149,18 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventGroupMemberDeletedObjectMember1 other) {
-            memberType(other.getMemberType());
-            id(other.getId());
-            type(other.getType());
-            connectionId(other.getConnectionId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("member_type")
-        public IdStage memberType(
-                @NotNull EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType) {
-            this.memberType = Objects.requireNonNull(memberType, "memberType must not be null");
-            return this;
+        public IdStage memberType(@NotNull EventStreamCloudEventGroupMemberDeletedObjectMember1MemberTypeEnum memberType) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,8 +171,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
         @java.lang.Override
         @JsonSetter("id")
         public TypeStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -191,8 +182,7 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
         @java.lang.Override
         @JsonSetter("type")
         public ConnectionIdStage type(@NotNull String type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -203,26 +193,22 @@ public final class EventStreamCloudEventGroupMemberDeletedObjectMember1 {
         @java.lang.Override
         @JsonSetter("connection_id")
         public _FinalStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventGroupMemberDeletedObjectMember1 build() {
-            return new EventStreamCloudEventGroupMemberDeletedObjectMember1(
-                    memberType, id, type, connectionId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

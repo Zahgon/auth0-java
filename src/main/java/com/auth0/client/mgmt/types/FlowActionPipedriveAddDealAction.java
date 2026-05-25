@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionPipedriveAddDealAction {
-    public static final FlowActionPipedriveAddDealAction ADD_DEAL =
-            new FlowActionPipedriveAddDealAction(Value.ADD_DEAL, "ADD_DEAL");
+
+    public static final FlowActionPipedriveAddDealAction ADD_DEAL = new FlowActionPipedriveAddDealAction(Value.ADD_DEAL, "ADD_DEAL");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionPipedriveAddDealAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionPipedriveAddDealAction
-                        && this.string.equals(((FlowActionPipedriveAddDealAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADD_DEAL:
-                return visitor.visitAddDeal();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionPipedriveAddDealAction valueOf(String value) {
-        switch (value) {
-            case "ADD_DEAL":
-                return ADD_DEAL;
-            default:
-                return new FlowActionPipedriveAddDealAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADD_DEAL,
 
-        UNKNOWN
+        ADD_DEAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAddDeal();
 
         T visitUnknown(String unknownType);

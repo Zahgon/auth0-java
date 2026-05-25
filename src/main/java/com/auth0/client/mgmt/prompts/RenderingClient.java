@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.ScreenGroupNameEnum;
 import com.auth0.client.mgmt.types.UpdateAculResponseContent;
 
 public class RenderingClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRenderingClient rawClient;
@@ -30,99 +31,90 @@ public class RenderingClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRenderingClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
     public SyncPagingIterable<ListAculsResponseContentItem> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
     public SyncPagingIterable<ListAculsResponseContentItem> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
     public SyncPagingIterable<ListAculsResponseContentItem> list(ListAculsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render setting configurations for all screens.
      */
-    public SyncPagingIterable<ListAculsResponseContentItem> list(
-            ListAculsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<ListAculsResponseContentItem> list(ListAculsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
     public BulkUpdateAculResponseContent bulkUpdate(BulkUpdateAculRequestContent request) {
-        return this.rawClient.bulkUpdate(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public BulkUpdateAculResponseContent bulkUpdate(
-            BulkUpdateAculRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.bulkUpdate(request, requestOptions).body();
+    public BulkUpdateAculResponseContent bulkUpdate(BulkUpdateAculRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render settings for a screen.
      */
     public GetAculResponseContent get(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
-        return this.rawClient.get(prompt, screen).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get render settings for a screen.
      */
-    public GetAculResponseContent get(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
-        return this.rawClient.get(prompt, screen, requestOptions).body();
+    public GetAculResponseContent get(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
     public UpdateAculResponseContent update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen) {
-        return this.rawClient.update(prompt, screen).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public UpdateAculResponseContent update(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
-        return this.rawClient.update(prompt, screen, requestOptions).body();
+    public UpdateAculResponseContent update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public UpdateAculResponseContent update(
-            PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request) {
-        return this.rawClient.update(prompt, screen, request).body();
+    public UpdateAculResponseContent update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Learn more about <a href='https://auth0.com/docs/customize/login-pages/advanced-customizations/getting-started/configure-acul-screens'>configuring render settings</a> for advanced customization.
      */
-    public UpdateAculResponseContent update(
-            PromptGroupNameEnum prompt,
-            ScreenGroupNameEnum screen,
-            UpdateAculRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(prompt, screen, request, requestOptions).body();
+    public UpdateAculResponseContent update(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, UpdateAculRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

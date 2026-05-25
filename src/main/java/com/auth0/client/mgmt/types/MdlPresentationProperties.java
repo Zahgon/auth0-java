@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = MdlPresentationProperties.Builder.class)
 public final class MdlPresentationProperties {
+
     private final Optional<Boolean> familyName;
 
     private final Optional<Boolean> givenName;
@@ -64,29 +65,7 @@ public final class MdlPresentationProperties {
 
     private final Map<String, Object> additionalProperties;
 
-    private MdlPresentationProperties(
-            Optional<Boolean> familyName,
-            Optional<Boolean> givenName,
-            Optional<Boolean> birthDate,
-            Optional<Boolean> issueDate,
-            Optional<Boolean> expiryDate,
-            Optional<Boolean> issuingCountry,
-            Optional<Boolean> issuingAuthority,
-            Optional<Boolean> portrait,
-            Optional<Boolean> drivingPrivileges,
-            Optional<Boolean> residentAddress,
-            Optional<Boolean> portraitCaptureDate,
-            Optional<Boolean> ageInYears,
-            Optional<Boolean> ageBirthYear,
-            Optional<Boolean> issuingJurisdiction,
-            Optional<Boolean> nationality,
-            Optional<Boolean> residentCity,
-            Optional<Boolean> residentState,
-            Optional<Boolean> residentPostalCode,
-            Optional<Boolean> residentCountry,
-            Optional<Boolean> familyNameNationalCharacter,
-            Optional<Boolean> givenNameNationalCharacter,
-            Map<String, Object> additionalProperties) {
+    private MdlPresentationProperties(Optional<Boolean> familyName, Optional<Boolean> givenName, Optional<Boolean> birthDate, Optional<Boolean> issueDate, Optional<Boolean> expiryDate, Optional<Boolean> issuingCountry, Optional<Boolean> issuingAuthority, Optional<Boolean> portrait, Optional<Boolean> drivingPrivileges, Optional<Boolean> residentAddress, Optional<Boolean> portraitCaptureDate, Optional<Boolean> ageInYears, Optional<Boolean> ageBirthYear, Optional<Boolean> issuingJurisdiction, Optional<Boolean> nationality, Optional<Boolean> residentCity, Optional<Boolean> residentState, Optional<Boolean> residentPostalCode, Optional<Boolean> residentCountry, Optional<Boolean> familyNameNationalCharacter, Optional<Boolean> givenNameNationalCharacter, Map<String, Object> additionalProperties) {
         this.familyName = familyName;
         this.givenName = givenName;
         this.birthDate = birthDate;
@@ -116,7 +95,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("family_name")
     public Optional<Boolean> getFamilyName() {
-        return familyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,7 +103,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("given_name")
     public Optional<Boolean> getGivenName() {
-        return givenName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +111,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("birth_date")
     public Optional<Boolean> getBirthDate() {
-        return birthDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,7 +119,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("issue_date")
     public Optional<Boolean> getIssueDate() {
-        return issueDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +127,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("expiry_date")
     public Optional<Boolean> getExpiryDate() {
-        return expiryDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,7 +135,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("issuing_country")
     public Optional<Boolean> getIssuingCountry() {
-        return issuingCountry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -164,7 +143,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("issuing_authority")
     public Optional<Boolean> getIssuingAuthority() {
-        return issuingAuthority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,7 +151,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("portrait")
     public Optional<Boolean> getPortrait() {
-        return portrait;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -180,7 +159,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("driving_privileges")
     public Optional<Boolean> getDrivingPrivileges() {
-        return drivingPrivileges;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -188,7 +167,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("resident_address")
     public Optional<Boolean> getResidentAddress() {
-        return residentAddress;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -196,7 +175,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("portrait_capture_date")
     public Optional<Boolean> getPortraitCaptureDate() {
-        return portraitCaptureDate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -204,7 +183,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("age_in_years")
     public Optional<Boolean> getAgeInYears() {
-        return ageInYears;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -212,7 +191,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("age_birth_year")
     public Optional<Boolean> getAgeBirthYear() {
-        return ageBirthYear;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -220,7 +199,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("issuing_jurisdiction")
     public Optional<Boolean> getIssuingJurisdiction() {
-        return issuingJurisdiction;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -228,7 +207,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("nationality")
     public Optional<Boolean> getNationality() {
-        return nationality;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -236,7 +215,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("resident_city")
     public Optional<Boolean> getResidentCity() {
-        return residentCity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -244,7 +223,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("resident_state")
     public Optional<Boolean> getResidentState() {
-        return residentState;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -252,7 +231,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("resident_postal_code")
     public Optional<Boolean> getResidentPostalCode() {
-        return residentPostalCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -260,7 +239,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("resident_country")
     public Optional<Boolean> getResidentCountry() {
-        return residentCountry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -268,7 +247,7 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("family_name_national_character")
     public Optional<Boolean> getFamilyNameNationalCharacter() {
-        return familyNameNationalCharacter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -276,81 +255,40 @@ public final class MdlPresentationProperties {
      */
     @JsonProperty("given_name_national_character")
     public Optional<Boolean> getGivenNameNationalCharacter() {
-        return givenNameNationalCharacter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof MdlPresentationProperties && equalTo((MdlPresentationProperties) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(MdlPresentationProperties other) {
-        return familyName.equals(other.familyName)
-                && givenName.equals(other.givenName)
-                && birthDate.equals(other.birthDate)
-                && issueDate.equals(other.issueDate)
-                && expiryDate.equals(other.expiryDate)
-                && issuingCountry.equals(other.issuingCountry)
-                && issuingAuthority.equals(other.issuingAuthority)
-                && portrait.equals(other.portrait)
-                && drivingPrivileges.equals(other.drivingPrivileges)
-                && residentAddress.equals(other.residentAddress)
-                && portraitCaptureDate.equals(other.portraitCaptureDate)
-                && ageInYears.equals(other.ageInYears)
-                && ageBirthYear.equals(other.ageBirthYear)
-                && issuingJurisdiction.equals(other.issuingJurisdiction)
-                && nationality.equals(other.nationality)
-                && residentCity.equals(other.residentCity)
-                && residentState.equals(other.residentState)
-                && residentPostalCode.equals(other.residentPostalCode)
-                && residentCountry.equals(other.residentCountry)
-                && familyNameNationalCharacter.equals(other.familyNameNationalCharacter)
-                && givenNameNationalCharacter.equals(other.givenNameNationalCharacter);
+        return familyName.equals(other.familyName) && givenName.equals(other.givenName) && birthDate.equals(other.birthDate) && issueDate.equals(other.issueDate) && expiryDate.equals(other.expiryDate) && issuingCountry.equals(other.issuingCountry) && issuingAuthority.equals(other.issuingAuthority) && portrait.equals(other.portrait) && drivingPrivileges.equals(other.drivingPrivileges) && residentAddress.equals(other.residentAddress) && portraitCaptureDate.equals(other.portraitCaptureDate) && ageInYears.equals(other.ageInYears) && ageBirthYear.equals(other.ageBirthYear) && issuingJurisdiction.equals(other.issuingJurisdiction) && nationality.equals(other.nationality) && residentCity.equals(other.residentCity) && residentState.equals(other.residentState) && residentPostalCode.equals(other.residentPostalCode) && residentCountry.equals(other.residentCountry) && familyNameNationalCharacter.equals(other.familyNameNationalCharacter) && givenNameNationalCharacter.equals(other.givenNameNationalCharacter);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.familyName,
-                this.givenName,
-                this.birthDate,
-                this.issueDate,
-                this.expiryDate,
-                this.issuingCountry,
-                this.issuingAuthority,
-                this.portrait,
-                this.drivingPrivileges,
-                this.residentAddress,
-                this.portraitCaptureDate,
-                this.ageInYears,
-                this.ageBirthYear,
-                this.issuingJurisdiction,
-                this.nationality,
-                this.residentCity,
-                this.residentState,
-                this.residentPostalCode,
-                this.residentCountry,
-                this.familyNameNationalCharacter,
-                this.givenNameNationalCharacter);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> familyName = Optional.empty();
 
         private Optional<Boolean> givenName = Optional.empty();
@@ -396,31 +334,11 @@ public final class MdlPresentationProperties {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(MdlPresentationProperties other) {
-            familyName(other.getFamilyName());
-            givenName(other.getGivenName());
-            birthDate(other.getBirthDate());
-            issueDate(other.getIssueDate());
-            expiryDate(other.getExpiryDate());
-            issuingCountry(other.getIssuingCountry());
-            issuingAuthority(other.getIssuingAuthority());
-            portrait(other.getPortrait());
-            drivingPrivileges(other.getDrivingPrivileges());
-            residentAddress(other.getResidentAddress());
-            portraitCaptureDate(other.getPortraitCaptureDate());
-            ageInYears(other.getAgeInYears());
-            ageBirthYear(other.getAgeBirthYear());
-            issuingJurisdiction(other.getIssuingJurisdiction());
-            nationality(other.getNationality());
-            residentCity(other.getResidentCity());
-            residentState(other.getResidentState());
-            residentPostalCode(other.getResidentPostalCode());
-            residentCountry(other.getResidentCountry());
-            familyNameNationalCharacter(other.getFamilyNameNationalCharacter());
-            givenNameNationalCharacter(other.getGivenNameNationalCharacter());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -428,13 +346,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "family_name", nulls = Nulls.SKIP)
         public Builder familyName(Optional<Boolean> familyName) {
-            this.familyName = familyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyName(Boolean familyName) {
-            this.familyName = Optional.ofNullable(familyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -442,13 +358,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "given_name", nulls = Nulls.SKIP)
         public Builder givenName(Optional<Boolean> givenName) {
-            this.givenName = givenName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenName(Boolean givenName) {
-            this.givenName = Optional.ofNullable(givenName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -456,13 +370,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "birth_date", nulls = Nulls.SKIP)
         public Builder birthDate(Optional<Boolean> birthDate) {
-            this.birthDate = birthDate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder birthDate(Boolean birthDate) {
-            this.birthDate = Optional.ofNullable(birthDate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -470,13 +382,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "issue_date", nulls = Nulls.SKIP)
         public Builder issueDate(Optional<Boolean> issueDate) {
-            this.issueDate = issueDate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issueDate(Boolean issueDate) {
-            this.issueDate = Optional.ofNullable(issueDate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -484,13 +394,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "expiry_date", nulls = Nulls.SKIP)
         public Builder expiryDate(Optional<Boolean> expiryDate) {
-            this.expiryDate = expiryDate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiryDate(Boolean expiryDate) {
-            this.expiryDate = Optional.ofNullable(expiryDate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -498,13 +406,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "issuing_country", nulls = Nulls.SKIP)
         public Builder issuingCountry(Optional<Boolean> issuingCountry) {
-            this.issuingCountry = issuingCountry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issuingCountry(Boolean issuingCountry) {
-            this.issuingCountry = Optional.ofNullable(issuingCountry);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -512,13 +418,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "issuing_authority", nulls = Nulls.SKIP)
         public Builder issuingAuthority(Optional<Boolean> issuingAuthority) {
-            this.issuingAuthority = issuingAuthority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issuingAuthority(Boolean issuingAuthority) {
-            this.issuingAuthority = Optional.ofNullable(issuingAuthority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -526,13 +430,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "portrait", nulls = Nulls.SKIP)
         public Builder portrait(Optional<Boolean> portrait) {
-            this.portrait = portrait;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder portrait(Boolean portrait) {
-            this.portrait = Optional.ofNullable(portrait);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -540,13 +442,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "driving_privileges", nulls = Nulls.SKIP)
         public Builder drivingPrivileges(Optional<Boolean> drivingPrivileges) {
-            this.drivingPrivileges = drivingPrivileges;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder drivingPrivileges(Boolean drivingPrivileges) {
-            this.drivingPrivileges = Optional.ofNullable(drivingPrivileges);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -554,13 +454,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "resident_address", nulls = Nulls.SKIP)
         public Builder residentAddress(Optional<Boolean> residentAddress) {
-            this.residentAddress = residentAddress;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder residentAddress(Boolean residentAddress) {
-            this.residentAddress = Optional.ofNullable(residentAddress);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -568,13 +466,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "portrait_capture_date", nulls = Nulls.SKIP)
         public Builder portraitCaptureDate(Optional<Boolean> portraitCaptureDate) {
-            this.portraitCaptureDate = portraitCaptureDate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder portraitCaptureDate(Boolean portraitCaptureDate) {
-            this.portraitCaptureDate = Optional.ofNullable(portraitCaptureDate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -582,13 +478,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "age_in_years", nulls = Nulls.SKIP)
         public Builder ageInYears(Optional<Boolean> ageInYears) {
-            this.ageInYears = ageInYears;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ageInYears(Boolean ageInYears) {
-            this.ageInYears = Optional.ofNullable(ageInYears);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -596,13 +490,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "age_birth_year", nulls = Nulls.SKIP)
         public Builder ageBirthYear(Optional<Boolean> ageBirthYear) {
-            this.ageBirthYear = ageBirthYear;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ageBirthYear(Boolean ageBirthYear) {
-            this.ageBirthYear = Optional.ofNullable(ageBirthYear);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -610,13 +502,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "issuing_jurisdiction", nulls = Nulls.SKIP)
         public Builder issuingJurisdiction(Optional<Boolean> issuingJurisdiction) {
-            this.issuingJurisdiction = issuingJurisdiction;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issuingJurisdiction(Boolean issuingJurisdiction) {
-            this.issuingJurisdiction = Optional.ofNullable(issuingJurisdiction);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -624,13 +514,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "nationality", nulls = Nulls.SKIP)
         public Builder nationality(Optional<Boolean> nationality) {
-            this.nationality = nationality;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nationality(Boolean nationality) {
-            this.nationality = Optional.ofNullable(nationality);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -638,13 +526,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "resident_city", nulls = Nulls.SKIP)
         public Builder residentCity(Optional<Boolean> residentCity) {
-            this.residentCity = residentCity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder residentCity(Boolean residentCity) {
-            this.residentCity = Optional.ofNullable(residentCity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -652,13 +538,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "resident_state", nulls = Nulls.SKIP)
         public Builder residentState(Optional<Boolean> residentState) {
-            this.residentState = residentState;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder residentState(Boolean residentState) {
-            this.residentState = Optional.ofNullable(residentState);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -666,13 +550,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "resident_postal_code", nulls = Nulls.SKIP)
         public Builder residentPostalCode(Optional<Boolean> residentPostalCode) {
-            this.residentPostalCode = residentPostalCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder residentPostalCode(Boolean residentPostalCode) {
-            this.residentPostalCode = Optional.ofNullable(residentPostalCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -680,13 +562,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "resident_country", nulls = Nulls.SKIP)
         public Builder residentCountry(Optional<Boolean> residentCountry) {
-            this.residentCountry = residentCountry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder residentCountry(Boolean residentCountry) {
-            this.residentCountry = Optional.ofNullable(residentCountry);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -694,13 +574,11 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "family_name_national_character", nulls = Nulls.SKIP)
         public Builder familyNameNationalCharacter(Optional<Boolean> familyNameNationalCharacter) {
-            this.familyNameNationalCharacter = familyNameNationalCharacter;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyNameNationalCharacter(Boolean familyNameNationalCharacter) {
-            this.familyNameNationalCharacter = Optional.ofNullable(familyNameNationalCharacter);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -708,49 +586,23 @@ public final class MdlPresentationProperties {
          */
         @JsonSetter(value = "given_name_national_character", nulls = Nulls.SKIP)
         public Builder givenNameNationalCharacter(Optional<Boolean> givenNameNationalCharacter) {
-            this.givenNameNationalCharacter = givenNameNationalCharacter;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenNameNationalCharacter(Boolean givenNameNationalCharacter) {
-            this.givenNameNationalCharacter = Optional.ofNullable(givenNameNationalCharacter);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public MdlPresentationProperties build() {
-            return new MdlPresentationProperties(
-                    familyName,
-                    givenName,
-                    birthDate,
-                    issueDate,
-                    expiryDate,
-                    issuingCountry,
-                    issuingAuthority,
-                    portrait,
-                    drivingPrivileges,
-                    residentAddress,
-                    portraitCaptureDate,
-                    ageInYears,
-                    ageBirthYear,
-                    issuingJurisdiction,
-                    nationality,
-                    residentCity,
-                    residentState,
-                    residentPostalCode,
-                    residentCountry,
-                    familyNameNationalCharacter,
-                    givenNameNationalCharacter,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

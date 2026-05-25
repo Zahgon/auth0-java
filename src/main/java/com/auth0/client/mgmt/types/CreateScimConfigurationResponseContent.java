@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateScimConfigurationResponseContent.Builder.class)
 public final class CreateScimConfigurationResponseContent {
+
     private final String connectionId;
 
     private final String connectionName;
@@ -41,16 +42,7 @@ public final class CreateScimConfigurationResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateScimConfigurationResponseContent(
-            String connectionId,
-            String connectionName,
-            String strategy,
-            String tenantName,
-            String userIdAttribute,
-            List<ScimMappingItem> mapping,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedOn,
-            Map<String, Object> additionalProperties) {
+    private CreateScimConfigurationResponseContent(String connectionId, String connectionName, String strategy, String tenantName, String userIdAttribute, List<ScimMappingItem> mapping, OffsetDateTime createdAt, OffsetDateTime updatedOn, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.connectionName = connectionName;
         this.strategy = strategy;
@@ -67,7 +59,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +67,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("connection_name")
     public String getConnectionName() {
-        return connectionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +75,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("strategy")
     public String getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +83,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("tenant_name")
     public String getTenantName() {
-        return tenantName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,7 +91,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("user_id_attribute")
     public String getUserIdAttribute() {
-        return userIdAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,7 +99,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("mapping")
     public List<ScimMappingItem> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +107,7 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -123,55 +115,39 @@ public final class CreateScimConfigurationResponseContent {
      */
     @JsonProperty("updated_on")
     public OffsetDateTime getUpdatedOn() {
-        return updatedOn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateScimConfigurationResponseContent
-                && equalTo((CreateScimConfigurationResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateScimConfigurationResponseContent other) {
-        return connectionId.equals(other.connectionId)
-                && connectionName.equals(other.connectionName)
-                && strategy.equals(other.strategy)
-                && tenantName.equals(other.tenantName)
-                && userIdAttribute.equals(other.userIdAttribute)
-                && mapping.equals(other.mapping)
-                && createdAt.equals(other.createdAt)
-                && updatedOn.equals(other.updatedOn);
+        return connectionId.equals(other.connectionId) && connectionName.equals(other.connectionName) && strategy.equals(other.strategy) && tenantName.equals(other.tenantName) && userIdAttribute.equals(other.userIdAttribute) && mapping.equals(other.mapping) && createdAt.equals(other.createdAt) && updatedOn.equals(other.updatedOn);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId,
-                this.connectionName,
-                this.strategy,
-                this.tenantName,
-                this.userIdAttribute,
-                this.mapping,
-                this.createdAt,
-                this.updatedOn);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>The connection's identifier</p>
          */
@@ -181,6 +157,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface ConnectionNameStage {
+
         /**
          * <p>The connection's name</p>
          */
@@ -188,6 +165,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface StrategyStage {
+
         /**
          * <p>The connection's strategy</p>
          */
@@ -195,6 +173,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface TenantNameStage {
+
         /**
          * <p>The tenant's name</p>
          */
@@ -202,6 +181,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface UserIdAttributeStage {
+
         /**
          * <p>User ID attribute for generating unique user ids</p>
          */
@@ -209,6 +189,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>The ISO 8601 date and time the SCIM configuration was created at</p>
          */
@@ -216,6 +197,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface UpdatedOnStage {
+
         /**
          * <p>The ISO 8601 date and time the SCIM configuration was last updated on</p>
          */
@@ -223,6 +205,7 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     public interface _FinalStage {
+
         CreateScimConfigurationResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -240,15 +223,8 @@ public final class CreateScimConfigurationResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ConnectionIdStage,
-                    ConnectionNameStage,
-                    StrategyStage,
-                    TenantNameStage,
-                    UserIdAttributeStage,
-                    CreatedAtStage,
-                    UpdatedOnStage,
-                    _FinalStage {
+    public static final class Builder implements ConnectionIdStage, ConnectionNameStage, StrategyStage, TenantNameStage, UserIdAttributeStage, CreatedAtStage, UpdatedOnStage, _FinalStage {
+
         private String connectionId;
 
         private String connectionName;
@@ -268,19 +244,12 @@ public final class CreateScimConfigurationResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateScimConfigurationResponseContent other) {
-            connectionId(other.getConnectionId());
-            connectionName(other.getConnectionName());
-            strategy(other.getStrategy());
-            tenantName(other.getTenantName());
-            userIdAttribute(other.getUserIdAttribute());
-            mapping(other.getMapping());
-            createdAt(other.getCreatedAt());
-            updatedOn(other.getUpdatedOn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -291,8 +260,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("connection_id")
         public ConnectionNameStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -303,8 +271,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("connection_name")
         public StrategyStage connectionName(@NotNull String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName, "connectionName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,8 +282,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("strategy")
         public TenantNameStage strategy(@NotNull String strategy) {
-            this.strategy = Objects.requireNonNull(strategy, "strategy must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -327,8 +293,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("tenant_name")
         public UserIdAttributeStage tenantName(@NotNull String tenantName) {
-            this.tenantName = Objects.requireNonNull(tenantName, "tenantName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -339,8 +304,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("user_id_attribute")
         public CreatedAtStage userIdAttribute(@NotNull String userIdAttribute) {
-            this.userIdAttribute = Objects.requireNonNull(userIdAttribute, "userIdAttribute must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,8 +315,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedOnStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -363,8 +326,7 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter("updated_on")
         public _FinalStage updatedOn(@NotNull OffsetDateTime updatedOn) {
-            this.updatedOn = Objects.requireNonNull(updatedOn, "updatedOn must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -373,10 +335,7 @@ public final class CreateScimConfigurationResponseContent {
          */
         @java.lang.Override
         public _FinalStage addAllMapping(List<ScimMappingItem> mapping) {
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -385,8 +344,7 @@ public final class CreateScimConfigurationResponseContent {
          */
         @java.lang.Override
         public _FinalStage addMapping(ScimMappingItem mapping) {
-            this.mapping.add(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -395,37 +353,22 @@ public final class CreateScimConfigurationResponseContent {
         @java.lang.Override
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public _FinalStage mapping(List<ScimMappingItem> mapping) {
-            this.mapping.clear();
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateScimConfigurationResponseContent build() {
-            return new CreateScimConfigurationResponseContent(
-                    connectionId,
-                    connectionName,
-                    strategy,
-                    tenantName,
-                    userIdAttribute,
-                    mapping,
-                    createdAt,
-                    updatedOn,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

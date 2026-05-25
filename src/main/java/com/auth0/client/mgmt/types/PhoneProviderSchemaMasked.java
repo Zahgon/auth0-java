@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PhoneProviderSchemaMasked.Builder.class)
 public final class PhoneProviderSchemaMasked {
+
     private final Optional<String> id;
 
     private final Optional<String> tenant;
@@ -40,16 +41,7 @@ public final class PhoneProviderSchemaMasked {
 
     private final Map<String, Object> additionalProperties;
 
-    private PhoneProviderSchemaMasked(
-            Optional<String> id,
-            Optional<String> tenant,
-            PhoneProviderNameEnum name,
-            Optional<PhoneProviderChannelEnum> channel,
-            Optional<Boolean> disabled,
-            Optional<PhoneProviderConfiguration> configuration,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private PhoneProviderSchemaMasked(Optional<String> id, Optional<String> tenant, PhoneProviderNameEnum name, Optional<PhoneProviderChannelEnum> channel, Optional<Boolean> disabled, Optional<PhoneProviderConfiguration> configuration, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.tenant = tenant;
         this.name = name;
@@ -63,7 +55,7 @@ public final class PhoneProviderSchemaMasked {
 
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,17 +63,17 @@ public final class PhoneProviderSchemaMasked {
      */
     @JsonProperty("tenant")
     public Optional<String> getTenant() {
-        return tenant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public PhoneProviderNameEnum getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("channel")
     public Optional<PhoneProviderChannelEnum> getChannel() {
-        return channel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,12 +81,12 @@ public final class PhoneProviderSchemaMasked {
      */
     @JsonProperty("disabled")
     public Optional<Boolean> getDisabled() {
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("configuration")
     public Optional<PhoneProviderConfiguration> getConfiguration() {
-        return configuration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +94,7 @@ public final class PhoneProviderSchemaMasked {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,60 +102,46 @@ public final class PhoneProviderSchemaMasked {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PhoneProviderSchemaMasked && equalTo((PhoneProviderSchemaMasked) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PhoneProviderSchemaMasked other) {
-        return id.equals(other.id)
-                && tenant.equals(other.tenant)
-                && name.equals(other.name)
-                && channel.equals(other.channel)
-                && disabled.equals(other.disabled)
-                && configuration.equals(other.configuration)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && tenant.equals(other.tenant) && name.equals(other.name) && channel.equals(other.channel) && disabled.equals(other.disabled) && configuration.equals(other.configuration) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.tenant,
-                this.name,
-                this.channel,
-                this.disabled,
-                this.configuration,
-                this.createdAt,
-                this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         _FinalStage name(@NotNull PhoneProviderNameEnum name);
 
         Builder from(PhoneProviderSchemaMasked other);
     }
 
     public interface _FinalStage {
+
         PhoneProviderSchemaMasked build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -213,6 +191,7 @@ public final class PhoneProviderSchemaMasked {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private PhoneProviderNameEnum name;
 
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
@@ -232,26 +211,18 @@ public final class PhoneProviderSchemaMasked {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(PhoneProviderSchemaMasked other) {
-            id(other.getId());
-            tenant(other.getTenant());
-            name(other.getName());
-            channel(other.getChannel());
-            disabled(other.getDisabled());
-            configuration(other.getConfiguration());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull PhoneProviderNameEnum name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -260,8 +231,7 @@ public final class PhoneProviderSchemaMasked {
          */
         @java.lang.Override
         public _FinalStage updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -270,8 +240,7 @@ public final class PhoneProviderSchemaMasked {
         @java.lang.Override
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public _FinalStage updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -280,8 +249,7 @@ public final class PhoneProviderSchemaMasked {
          */
         @java.lang.Override
         public _FinalStage createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -290,21 +258,18 @@ public final class PhoneProviderSchemaMasked {
         @java.lang.Override
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public _FinalStage createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage configuration(PhoneProviderConfiguration configuration) {
-            this.configuration = Optional.ofNullable(configuration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "configuration", nulls = Nulls.SKIP)
         public _FinalStage configuration(Optional<PhoneProviderConfiguration> configuration) {
-            this.configuration = configuration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -313,8 +278,7 @@ public final class PhoneProviderSchemaMasked {
          */
         @java.lang.Override
         public _FinalStage disabled(Boolean disabled) {
-            this.disabled = Optional.ofNullable(disabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,21 +287,18 @@ public final class PhoneProviderSchemaMasked {
         @java.lang.Override
         @JsonSetter(value = "disabled", nulls = Nulls.SKIP)
         public _FinalStage disabled(Optional<Boolean> disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage channel(PhoneProviderChannelEnum channel) {
-            this.channel = Optional.ofNullable(channel);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "channel", nulls = Nulls.SKIP)
         public _FinalStage channel(Optional<PhoneProviderChannelEnum> channel) {
-            this.channel = channel;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -346,8 +307,7 @@ public final class PhoneProviderSchemaMasked {
          */
         @java.lang.Override
         public _FinalStage tenant(String tenant) {
-            this.tenant = Optional.ofNullable(tenant);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,39 +316,33 @@ public final class PhoneProviderSchemaMasked {
         @java.lang.Override
         @JsonSetter(value = "tenant", nulls = Nulls.SKIP)
         public _FinalStage tenant(Optional<String> tenant) {
-            this.tenant = tenant;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public _FinalStage id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public PhoneProviderSchemaMasked build() {
-            return new PhoneProviderSchemaMasked(
-                    id, tenant, name, channel, disabled, configuration, createdAt, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

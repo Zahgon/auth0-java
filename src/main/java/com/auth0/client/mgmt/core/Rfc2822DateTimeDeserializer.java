@@ -19,7 +19,6 @@ public class Rfc2822DateTimeDeserializer extends JsonDeserializer<OffsetDateTime
 
     @Override
     public OffsetDateTime deserialize(JsonParser parser, DeserializationContext context) throws IOException {
-        String raw = parser.getValueAsString();
-        return ZonedDateTime.parse(raw, DateTimeFormatter.RFC_1123_DATE_TIME).toOffsetDateTime();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

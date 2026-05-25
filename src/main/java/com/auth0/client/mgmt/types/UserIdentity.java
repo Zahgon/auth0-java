@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserIdentity.Builder.class)
 public final class UserIdentity {
+
     private final String connection;
 
     private final UserId userId;
@@ -39,16 +40,7 @@ public final class UserIdentity {
 
     private final Map<String, Object> additionalProperties;
 
-    private UserIdentity(
-            String connection,
-            UserId userId,
-            String provider,
-            Optional<UserProfileData> profileData,
-            Optional<Boolean> isSocial,
-            Optional<String> accessToken,
-            Optional<String> accessTokenSecret,
-            Optional<String> refreshToken,
-            Map<String, Object> additionalProperties) {
+    private UserIdentity(String connection, UserId userId, String provider, Optional<UserProfileData> profileData, Optional<Boolean> isSocial, Optional<String> accessToken, Optional<String> accessTokenSecret, Optional<String> refreshToken, Map<String, Object> additionalProperties) {
         this.connection = connection;
         this.userId = userId;
         this.provider = provider;
@@ -65,7 +57,7 @@ public final class UserIdentity {
      */
     @JsonProperty("connection")
     public String getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +65,7 @@ public final class UserIdentity {
      */
     @JsonProperty("user_id")
     public UserId getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,12 +73,12 @@ public final class UserIdentity {
      */
     @JsonProperty("provider")
     public String getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("profileData")
     public Optional<UserProfileData> getProfileData() {
-        return profileData;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +86,7 @@ public final class UserIdentity {
      */
     @JsonProperty("isSocial")
     public Optional<Boolean> getIsSocial() {
-        return isSocial;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +94,7 @@ public final class UserIdentity {
      */
     @JsonProperty("access_token")
     public Optional<String> getAccessToken() {
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,7 +102,7 @@ public final class UserIdentity {
      */
     @JsonProperty("access_token_secret")
     public Optional<String> getAccessTokenSecret() {
-        return accessTokenSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -118,54 +110,39 @@ public final class UserIdentity {
      */
     @JsonProperty("refresh_token")
     public Optional<String> getRefreshToken() {
-        return refreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserIdentity && equalTo((UserIdentity) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserIdentity other) {
-        return connection.equals(other.connection)
-                && userId.equals(other.userId)
-                && provider.equals(other.provider)
-                && profileData.equals(other.profileData)
-                && isSocial.equals(other.isSocial)
-                && accessToken.equals(other.accessToken)
-                && accessTokenSecret.equals(other.accessTokenSecret)
-                && refreshToken.equals(other.refreshToken);
+        return connection.equals(other.connection) && userId.equals(other.userId) && provider.equals(other.provider) && profileData.equals(other.profileData) && isSocial.equals(other.isSocial) && accessToken.equals(other.accessToken) && accessTokenSecret.equals(other.accessTokenSecret) && refreshToken.equals(other.refreshToken);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connection,
-                this.userId,
-                this.provider,
-                this.profileData,
-                this.isSocial,
-                this.accessToken,
-                this.accessTokenSecret,
-                this.refreshToken);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionStage {
+
         /**
          * <p>Connection name of this identity.</p>
          */
@@ -175,6 +152,7 @@ public final class UserIdentity {
     }
 
     public interface UserIdStage {
+
         /**
          * <p>user_id of this identity.</p>
          */
@@ -182,6 +160,7 @@ public final class UserIdentity {
     }
 
     public interface ProviderStage {
+
         /**
          * <p>Type of identity provider.</p>
          */
@@ -189,6 +168,7 @@ public final class UserIdentity {
     }
 
     public interface _FinalStage {
+
         UserIdentity build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -230,6 +210,7 @@ public final class UserIdentity {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionStage, UserIdStage, ProviderStage, _FinalStage {
+
         private String connection;
 
         private UserId userId;
@@ -249,19 +230,12 @@ public final class UserIdentity {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UserIdentity other) {
-            connection(other.getConnection());
-            userId(other.getUserId());
-            provider(other.getProvider());
-            profileData(other.getProfileData());
-            isSocial(other.getIsSocial());
-            accessToken(other.getAccessToken());
-            accessTokenSecret(other.getAccessTokenSecret());
-            refreshToken(other.getRefreshToken());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -272,8 +246,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter("connection")
         public UserIdStage connection(@NotNull String connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -284,8 +257,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter("user_id")
         public ProviderStage userId(@NotNull UserId userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -296,8 +268,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter("provider")
         public _FinalStage provider(@NotNull String provider) {
-            this.provider = Objects.requireNonNull(provider, "provider must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -306,8 +277,7 @@ public final class UserIdentity {
          */
         @java.lang.Override
         public _FinalStage refreshToken(String refreshToken) {
-            this.refreshToken = Optional.ofNullable(refreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -316,8 +286,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter(value = "refresh_token", nulls = Nulls.SKIP)
         public _FinalStage refreshToken(Optional<String> refreshToken) {
-            this.refreshToken = refreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -326,8 +295,7 @@ public final class UserIdentity {
          */
         @java.lang.Override
         public _FinalStage accessTokenSecret(String accessTokenSecret) {
-            this.accessTokenSecret = Optional.ofNullable(accessTokenSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -336,8 +304,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter(value = "access_token_secret", nulls = Nulls.SKIP)
         public _FinalStage accessTokenSecret(Optional<String> accessTokenSecret) {
-            this.accessTokenSecret = accessTokenSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -346,8 +313,7 @@ public final class UserIdentity {
          */
         @java.lang.Override
         public _FinalStage accessToken(String accessToken) {
-            this.accessToken = Optional.ofNullable(accessToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,8 +322,7 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter(value = "access_token", nulls = Nulls.SKIP)
         public _FinalStage accessToken(Optional<String> accessToken) {
-            this.accessToken = accessToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -366,8 +331,7 @@ public final class UserIdentity {
          */
         @java.lang.Override
         public _FinalStage isSocial(Boolean isSocial) {
-            this.isSocial = Optional.ofNullable(isSocial);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -376,47 +340,33 @@ public final class UserIdentity {
         @java.lang.Override
         @JsonSetter(value = "isSocial", nulls = Nulls.SKIP)
         public _FinalStage isSocial(Optional<Boolean> isSocial) {
-            this.isSocial = isSocial;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage profileData(UserProfileData profileData) {
-            this.profileData = Optional.ofNullable(profileData);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "profileData", nulls = Nulls.SKIP)
         public _FinalStage profileData(Optional<UserProfileData> profileData) {
-            this.profileData = profileData;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UserIdentity build() {
-            return new UserIdentity(
-                    connection,
-                    userId,
-                    provider,
-                    profileData,
-                    isSocial,
-                    accessToken,
-                    accessTokenSecret,
-                    refreshToken,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

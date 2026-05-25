@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentAuth0OidcStrategy {
-    public static final ConnectionResponseContentAuth0OidcStrategy AUTH0OIDC =
-            new ConnectionResponseContentAuth0OidcStrategy(Value.AUTH0OIDC, "auth0-oidc");
+
+    public static final ConnectionResponseContentAuth0OidcStrategy AUTH0OIDC = new ConnectionResponseContentAuth0OidcStrategy(Value.AUTH0OIDC, "auth0-oidc");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentAuth0OidcStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentAuth0OidcStrategy
-                        && this.string.equals(((ConnectionResponseContentAuth0OidcStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTH0OIDC:
-                return visitor.visitAuth0Oidc();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentAuth0OidcStrategy valueOf(String value) {
-        switch (value) {
-            case "auth0-oidc":
-                return AUTH0OIDC;
-            default:
-                return new ConnectionResponseContentAuth0OidcStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0OIDC,
 
-        UNKNOWN
+        AUTH0OIDC, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0Oidc();
 
         T visitUnknown(String unknownType);

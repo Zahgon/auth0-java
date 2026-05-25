@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamSegmentSinkWriteKey.Builder.class)
 public final class LogStreamSegmentSinkWriteKey {
+
     private final String segmentWriteKey;
 
     private final Map<String, Object> additionalProperties;
@@ -33,18 +34,17 @@ public final class LogStreamSegmentSinkWriteKey {
      */
     @JsonProperty("segmentWriteKey")
     public String getSegmentWriteKey() {
-        return segmentWriteKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamSegmentSinkWriteKey && equalTo((LogStreamSegmentSinkWriteKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamSegmentSinkWriteKey other) {
@@ -53,19 +53,20 @@ public final class LogStreamSegmentSinkWriteKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.segmentWriteKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SegmentWriteKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SegmentWriteKeyStage {
+
         /**
          * <p>Segment write key</p>
          */
@@ -75,6 +76,7 @@ public final class LogStreamSegmentSinkWriteKey {
     }
 
     public interface _FinalStage {
+
         LogStreamSegmentSinkWriteKey build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +86,18 @@ public final class LogStreamSegmentSinkWriteKey {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SegmentWriteKeyStage, _FinalStage {
+
         private String segmentWriteKey;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamSegmentSinkWriteKey other) {
-            segmentWriteKey(other.getSegmentWriteKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +108,22 @@ public final class LogStreamSegmentSinkWriteKey {
         @java.lang.Override
         @JsonSetter("segmentWriteKey")
         public _FinalStage segmentWriteKey(@NotNull String segmentWriteKey) {
-            this.segmentWriteKey = Objects.requireNonNull(segmentWriteKey, "segmentWriteKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamSegmentSinkWriteKey build() {
-            return new LogStreamSegmentSinkWriteKey(segmentWriteKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

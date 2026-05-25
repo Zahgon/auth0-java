@@ -22,14 +22,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetDailyStatsRequestParameters.Builder.class)
 public final class GetDailyStatsRequestParameters {
+
     private final OptionalNullable<String> from;
 
     private final OptionalNullable<String> to;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetDailyStatsRequestParameters(
-            OptionalNullable<String> from, OptionalNullable<String> to, Map<String, Object> additionalProperties) {
+    private GetDailyStatsRequestParameters(OptionalNullable<String> from, OptionalNullable<String> to, Map<String, Object> additionalProperties) {
         this.from = from;
         this.to = to;
         this.additionalProperties = additionalProperties;
@@ -40,10 +40,7 @@ public final class GetDailyStatsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,21 +48,17 @@ public final class GetDailyStatsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getTo() {
-        if (to == null) {
-            return OptionalNullable.absent();
-        }
-        return to;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetDailyStatsRequestParameters && equalTo((GetDailyStatsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetDailyStatsRequestParameters other) {
@@ -74,20 +67,21 @@ public final class GetDailyStatsRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.from, this.to);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> from = OptionalNullable.absent();
 
         private OptionalNullable<String> to = OptionalNullable.absent();
@@ -95,12 +89,11 @@ public final class GetDailyStatsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetDailyStatsRequestParameters other) {
-            from(other.getFrom());
-            to(other.getTo());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -108,33 +101,19 @@ public final class GetDailyStatsRequestParameters {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -142,47 +121,31 @@ public final class GetDailyStatsRequestParameters {
          */
         @JsonSetter(value = "to", nulls = Nulls.SKIP)
         public Builder to(@Nullable OptionalNullable<String> to) {
-            this.to = to;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder to(String to) {
-            this.to = OptionalNullable.of(to);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder to(Optional<String> to) {
-            if (to.isPresent()) {
-                this.to = OptionalNullable.of(to.get());
-            } else {
-                this.to = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder to(com.auth0.client.mgmt.core.Nullable<String> to) {
-            if (to.isNull()) {
-                this.to = OptionalNullable.ofNull();
-            } else if (to.isEmpty()) {
-                this.to = OptionalNullable.absent();
-            } else {
-                this.to = OptionalNullable.of(to.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetDailyStatsRequestParameters build() {
-            return new GetDailyStatsRequestParameters(from, to, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

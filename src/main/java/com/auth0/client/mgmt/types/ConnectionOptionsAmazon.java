@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsAmazon.Builder.class)
 public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> clientId;
@@ -40,22 +41,11 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
 
     private final Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsAmazon(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<Boolean> postalCode,
-            Optional<Boolean> profile,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsAmazon(Optional<List<String>> nonPersistentAttrs, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<Boolean> postalCode, Optional<Boolean> profile, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -71,22 +61,22 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +84,7 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
      */
     @JsonProperty("postal_code")
     public Optional<Boolean> getPostalCode() {
-        return postalCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,83 +92,62 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
      */
     @JsonProperty("profile")
     public Optional<Boolean> getProfile() {
-        return profile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsAmazon && equalTo((ConnectionOptionsAmazon) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsAmazon other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && postalCode.equals(other.postalCode)
-                && profile.equals(other.profile)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && upstreamParams.equals(other.upstreamParams);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && postalCode.equals(other.postalCode) && profile.equals(other.profile) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && upstreamParams.equals(other.upstreamParams);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.postalCode,
-                this.profile,
-                this.scope,
-                this.setUserRootAttributes,
-                this.upstreamParams);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -195,69 +164,52 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsAmazon other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            postalCode(other.getPostalCode());
-            profile(other.getProfile());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            upstreamParams(other.getUpstreamParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -265,13 +217,11 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "postal_code", nulls = Nulls.SKIP)
         public Builder postalCode(Optional<Boolean> postalCode) {
-            this.postalCode = postalCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder postalCode(Boolean postalCode) {
-            this.postalCode = Optional.ofNullable(postalCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -279,98 +229,58 @@ public final class ConnectionOptionsAmazon implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "profile", nulls = Nulls.SKIP)
         public Builder profile(Optional<Boolean> profile) {
-            this.profile = profile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profile(Boolean profile) {
-            this.profile = Optional.ofNullable(profile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsAmazon build() {
-            return new ConnectionOptionsAmazon(
-                    nonPersistentAttrs,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    postalCode,
-                    profile,
-                    scope,
-                    setUserRootAttributes,
-                    upstreamParams,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventUserUpdatedCloudEventTypeEnum {
-    public static final EventStreamCloudEventUserUpdatedCloudEventTypeEnum USER_UPDATED =
-            new EventStreamCloudEventUserUpdatedCloudEventTypeEnum(Value.USER_UPDATED, "user.updated");
+
+    public static final EventStreamCloudEventUserUpdatedCloudEventTypeEnum USER_UPDATED = new EventStreamCloudEventUserUpdatedCloudEventTypeEnum(Value.USER_UPDATED, "user.updated");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventUserUpdatedCloudEventTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventUserUpdatedCloudEventTypeEnum
-                        && this.string.equals(((EventStreamCloudEventUserUpdatedCloudEventTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case USER_UPDATED:
-                return visitor.visitUserUpdated();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventUserUpdatedCloudEventTypeEnum valueOf(String value) {
-        switch (value) {
-            case "user.updated":
-                return USER_UPDATED;
-            default:
-                return new EventStreamCloudEventUserUpdatedCloudEventTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        USER_UPDATED,
 
-        UNKNOWN
+        USER_UPDATED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUserUpdated();
 
         T visitUnknown(String unknownType);

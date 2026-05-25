@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreatePhoneTemplateRequestContent.Builder.class)
 public final class CreatePhoneTemplateRequestContent {
+
     private final Optional<PhoneTemplateNotificationTypeEnum> type;
 
     private final Optional<Boolean> disabled;
@@ -30,11 +31,7 @@ public final class CreatePhoneTemplateRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreatePhoneTemplateRequestContent(
-            Optional<PhoneTemplateNotificationTypeEnum> type,
-            Optional<Boolean> disabled,
-            Optional<PhoneTemplateContent> content,
-            Map<String, Object> additionalProperties) {
+    private CreatePhoneTemplateRequestContent(Optional<PhoneTemplateNotificationTypeEnum> type, Optional<Boolean> disabled, Optional<PhoneTemplateContent> content, Map<String, Object> additionalProperties) {
         this.type = type;
         this.disabled = disabled;
         this.content = content;
@@ -43,7 +40,7 @@ public final class CreatePhoneTemplateRequestContent {
 
     @JsonProperty("type")
     public Optional<PhoneTemplateNotificationTypeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,23 +48,22 @@ public final class CreatePhoneTemplateRequestContent {
      */
     @JsonProperty("disabled")
     public Optional<Boolean> getDisabled() {
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("content")
     public Optional<PhoneTemplateContent> getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreatePhoneTemplateRequestContent && equalTo((CreatePhoneTemplateRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreatePhoneTemplateRequestContent other) {
@@ -76,20 +72,21 @@ public final class CreatePhoneTemplateRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.disabled, this.content);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<PhoneTemplateNotificationTypeEnum> type = Optional.empty();
 
         private Optional<Boolean> disabled = Optional.empty();
@@ -99,24 +96,20 @@ public final class CreatePhoneTemplateRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreatePhoneTemplateRequestContent other) {
-            type(other.getType());
-            disabled(other.getDisabled());
-            content(other.getContent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<PhoneTemplateNotificationTypeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(PhoneTemplateNotificationTypeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -124,38 +117,32 @@ public final class CreatePhoneTemplateRequestContent {
          */
         @JsonSetter(value = "disabled", nulls = Nulls.SKIP)
         public Builder disabled(Optional<Boolean> disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Optional.ofNullable(disabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "content", nulls = Nulls.SKIP)
         public Builder content(Optional<PhoneTemplateContent> content) {
-            this.content = content;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder content(PhoneTemplateContent content) {
-            this.content = Optional.ofNullable(content);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreatePhoneTemplateRequestContent build() {
-            return new CreatePhoneTemplateRequestContent(type, disabled, content, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

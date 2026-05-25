@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionHubspotEnrollContactParams.Builder.class)
 public final class FlowActionHubspotEnrollContactParams {
+
     private final String connectionId;
 
     private final String email;
@@ -27,11 +28,7 @@ public final class FlowActionHubspotEnrollContactParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionHubspotEnrollContactParams(
-            String connectionId,
-            String email,
-            FlowActionHubspotEnrollContactParamsWorkflowId workflowId,
-            Map<String, Object> additionalProperties) {
+    private FlowActionHubspotEnrollContactParams(String connectionId, String email, FlowActionHubspotEnrollContactParamsWorkflowId workflowId, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.email = email;
         this.workflowId = workflowId;
@@ -40,66 +37,66 @@ public final class FlowActionHubspotEnrollContactParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email")
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("workflow_id")
     public FlowActionHubspotEnrollContactParamsWorkflowId getWorkflowId() {
-        return workflowId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionHubspotEnrollContactParams
-                && equalTo((FlowActionHubspotEnrollContactParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionHubspotEnrollContactParams other) {
-        return connectionId.equals(other.connectionId)
-                && email.equals(other.email)
-                && workflowId.equals(other.workflowId);
+        return connectionId.equals(other.connectionId) && email.equals(other.email) && workflowId.equals(other.workflowId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.email, this.workflowId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         EmailStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionHubspotEnrollContactParams other);
     }
 
     public interface EmailStage {
+
         WorkflowIdStage email(@NotNull String email);
     }
 
     public interface WorkflowIdStage {
+
         _FinalStage workflowId(@NotNull FlowActionHubspotEnrollContactParamsWorkflowId workflowId);
     }
 
     public interface _FinalStage {
+
         FlowActionHubspotEnrollContactParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -109,6 +106,7 @@ public final class FlowActionHubspotEnrollContactParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, EmailStage, WorkflowIdStage, _FinalStage {
+
         private String connectionId;
 
         private String email;
@@ -118,52 +116,45 @@ public final class FlowActionHubspotEnrollContactParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionHubspotEnrollContactParams other) {
-            connectionId(other.getConnectionId());
-            email(other.getEmail());
-            workflowId(other.getWorkflowId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public EmailStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("email")
         public WorkflowIdStage email(@NotNull String email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("workflow_id")
         public _FinalStage workflowId(@NotNull FlowActionHubspotEnrollContactParamsWorkflowId workflowId) {
-            this.workflowId = Objects.requireNonNull(workflowId, "workflowId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionHubspotEnrollContactParams build() {
-            return new FlowActionHubspotEnrollContactParams(connectionId, email, workflowId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

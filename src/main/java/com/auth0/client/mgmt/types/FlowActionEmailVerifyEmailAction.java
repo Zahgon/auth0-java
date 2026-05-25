@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionEmailVerifyEmailAction {
-    public static final FlowActionEmailVerifyEmailAction VERIFY_EMAIL =
-            new FlowActionEmailVerifyEmailAction(Value.VERIFY_EMAIL, "VERIFY_EMAIL");
+
+    public static final FlowActionEmailVerifyEmailAction VERIFY_EMAIL = new FlowActionEmailVerifyEmailAction(Value.VERIFY_EMAIL, "VERIFY_EMAIL");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionEmailVerifyEmailAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionEmailVerifyEmailAction
-                        && this.string.equals(((FlowActionEmailVerifyEmailAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VERIFY_EMAIL:
-                return visitor.visitVerifyEmail();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionEmailVerifyEmailAction valueOf(String value) {
-        switch (value) {
-            case "VERIFY_EMAIL":
-                return VERIFY_EMAIL;
-            default:
-                return new FlowActionEmailVerifyEmailAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        VERIFY_EMAIL,
 
-        UNKNOWN
+        VERIFY_EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitVerifyEmail();
 
         T visitUnknown(String unknownType);

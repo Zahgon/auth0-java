@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingPhoneFormattingEnum {
-    public static final BrandingPhoneFormattingEnum REGIONAL =
-            new BrandingPhoneFormattingEnum(Value.REGIONAL, "regional");
 
-    public static final BrandingPhoneFormattingEnum INTERNATIONAL =
-            new BrandingPhoneFormattingEnum(Value.INTERNATIONAL, "international");
+    public static final BrandingPhoneFormattingEnum REGIONAL = new BrandingPhoneFormattingEnum(Value.REGIONAL, "regional");
+
+    public static final BrandingPhoneFormattingEnum INTERNATIONAL = new BrandingPhoneFormattingEnum(Value.INTERNATIONAL, "international");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class BrandingPhoneFormattingEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingPhoneFormattingEnum
-                        && this.string.equals(((BrandingPhoneFormattingEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case REGIONAL:
-                return visitor.visitRegional();
-            case INTERNATIONAL:
-                return visitor.visitInternational();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingPhoneFormattingEnum valueOf(String value) {
-        switch (value) {
-            case "regional":
-                return REGIONAL;
-            case "international":
-                return INTERNATIONAL;
-            default:
-                return new BrandingPhoneFormattingEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        REGIONAL,
 
-        INTERNATIONAL,
-
-        UNKNOWN
+        REGIONAL, INTERNATIONAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRegional();
 
         T visitInternational();

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectioSetupTypeOauthAppEnum {
-    public static final FlowsVaultConnectioSetupTypeOauthAppEnum OAUTH_APP =
-            new FlowsVaultConnectioSetupTypeOauthAppEnum(Value.OAUTH_APP, "OAUTH_APP");
+
+    public static final FlowsVaultConnectioSetupTypeOauthAppEnum OAUTH_APP = new FlowsVaultConnectioSetupTypeOauthAppEnum(Value.OAUTH_APP, "OAUTH_APP");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectioSetupTypeOauthAppEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectioSetupTypeOauthAppEnum
-                        && this.string.equals(((FlowsVaultConnectioSetupTypeOauthAppEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OAUTH_APP:
-                return visitor.visitOauthApp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectioSetupTypeOauthAppEnum valueOf(String value) {
-        switch (value) {
-            case "OAUTH_APP":
-                return OAUTH_APP;
-            default:
-                return new FlowsVaultConnectioSetupTypeOauthAppEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OAUTH_APP,
 
-        UNKNOWN
+        OAUTH_APP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOauthApp();
 
         T visitUnknown(String unknownType);

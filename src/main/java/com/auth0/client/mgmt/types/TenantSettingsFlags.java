@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TenantSettingsFlags.Builder.class)
 public final class TenantSettingsFlags {
+
     private final Optional<Boolean> changePwdFlowV1;
 
     private final Optional<Boolean> enableApisSection;
@@ -80,37 +81,7 @@ public final class TenantSettingsFlags {
 
     private final Map<String, Object> additionalProperties;
 
-    private TenantSettingsFlags(
-            Optional<Boolean> changePwdFlowV1,
-            Optional<Boolean> enableApisSection,
-            Optional<Boolean> disableImpersonation,
-            Optional<Boolean> enableClientConnections,
-            Optional<Boolean> enablePipeline2,
-            Optional<Boolean> allowLegacyDelegationGrantTypes,
-            Optional<Boolean> allowLegacyRoGrantTypes,
-            Optional<Boolean> allowLegacyTokeninfoEndpoint,
-            Optional<Boolean> enableLegacyProfile,
-            Optional<Boolean> enableIdtokenApi2,
-            Optional<Boolean> enablePublicSignupUserExistsError,
-            Optional<Boolean> enableSso,
-            Optional<Boolean> allowChangingEnableSso,
-            Optional<Boolean> disableClickjackProtectionHeaders,
-            Optional<Boolean> noDiscloseEnterpriseConnections,
-            Optional<Boolean> enforceClientAuthenticationOnPasswordlessStart,
-            Optional<Boolean> enableAdfsWaadEmailVerification,
-            Optional<Boolean> revokeRefreshTokenGrant,
-            Optional<Boolean> dashboardLogStreamsNext,
-            Optional<Boolean> dashboardInsightsView,
-            Optional<Boolean> disableFieldsMapFix,
-            Optional<Boolean> mfaShowFactorListOnEnrollment,
-            Optional<Boolean> removeAlgFromJwks,
-            Optional<Boolean> improvedSignupBotDetectionInClassic,
-            Optional<Boolean> genaiTrial,
-            Optional<Boolean> enableDynamicClientRegistration,
-            Optional<Boolean> disableManagementApiSmsObfuscation,
-            Optional<Boolean> trustAzureAdfsEmailVerifiedConnectionProperty,
-            Optional<Boolean> customDomainsProvisioning,
-            Map<String, Object> additionalProperties) {
+    private TenantSettingsFlags(Optional<Boolean> changePwdFlowV1, Optional<Boolean> enableApisSection, Optional<Boolean> disableImpersonation, Optional<Boolean> enableClientConnections, Optional<Boolean> enablePipeline2, Optional<Boolean> allowLegacyDelegationGrantTypes, Optional<Boolean> allowLegacyRoGrantTypes, Optional<Boolean> allowLegacyTokeninfoEndpoint, Optional<Boolean> enableLegacyProfile, Optional<Boolean> enableIdtokenApi2, Optional<Boolean> enablePublicSignupUserExistsError, Optional<Boolean> enableSso, Optional<Boolean> allowChangingEnableSso, Optional<Boolean> disableClickjackProtectionHeaders, Optional<Boolean> noDiscloseEnterpriseConnections, Optional<Boolean> enforceClientAuthenticationOnPasswordlessStart, Optional<Boolean> enableAdfsWaadEmailVerification, Optional<Boolean> revokeRefreshTokenGrant, Optional<Boolean> dashboardLogStreamsNext, Optional<Boolean> dashboardInsightsView, Optional<Boolean> disableFieldsMapFix, Optional<Boolean> mfaShowFactorListOnEnrollment, Optional<Boolean> removeAlgFromJwks, Optional<Boolean> improvedSignupBotDetectionInClassic, Optional<Boolean> genaiTrial, Optional<Boolean> enableDynamicClientRegistration, Optional<Boolean> disableManagementApiSmsObfuscation, Optional<Boolean> trustAzureAdfsEmailVerifiedConnectionProperty, Optional<Boolean> customDomainsProvisioning, Map<String, Object> additionalProperties) {
         this.changePwdFlowV1 = changePwdFlowV1;
         this.enableApisSection = enableApisSection;
         this.disableImpersonation = disableImpersonation;
@@ -148,7 +119,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("change_pwd_flow_v1")
     public Optional<Boolean> getChangePwdFlowV1() {
-        return changePwdFlowV1;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,7 +127,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_apis_section")
     public Optional<Boolean> getEnableApisSection() {
-        return enableApisSection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -164,7 +135,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("disable_impersonation")
     public Optional<Boolean> getDisableImpersonation() {
-        return disableImpersonation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,7 +143,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_client_connections")
     public Optional<Boolean> getEnableClientConnections() {
-        return enableClientConnections;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -180,7 +151,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_pipeline2")
     public Optional<Boolean> getEnablePipeline2() {
-        return enablePipeline2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -188,7 +159,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("allow_legacy_delegation_grant_types")
     public Optional<Boolean> getAllowLegacyDelegationGrantTypes() {
-        return allowLegacyDelegationGrantTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -196,7 +167,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("allow_legacy_ro_grant_types")
     public Optional<Boolean> getAllowLegacyRoGrantTypes() {
-        return allowLegacyRoGrantTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -204,7 +175,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("allow_legacy_tokeninfo_endpoint")
     public Optional<Boolean> getAllowLegacyTokeninfoEndpoint() {
-        return allowLegacyTokeninfoEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -212,7 +183,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_legacy_profile")
     public Optional<Boolean> getEnableLegacyProfile() {
-        return enableLegacyProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -220,7 +191,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_idtoken_api2")
     public Optional<Boolean> getEnableIdtokenApi2() {
-        return enableIdtokenApi2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -228,7 +199,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_public_signup_user_exists_error")
     public Optional<Boolean> getEnablePublicSignupUserExistsError() {
-        return enablePublicSignupUserExistsError;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -236,7 +207,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_sso")
     public Optional<Boolean> getEnableSso() {
-        return enableSso;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -244,7 +215,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("allow_changing_enable_sso")
     public Optional<Boolean> getAllowChangingEnableSso() {
-        return allowChangingEnableSso;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -252,7 +223,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("disable_clickjack_protection_headers")
     public Optional<Boolean> getDisableClickjackProtectionHeaders() {
-        return disableClickjackProtectionHeaders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -260,7 +231,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("no_disclose_enterprise_connections")
     public Optional<Boolean> getNoDiscloseEnterpriseConnections() {
-        return noDiscloseEnterpriseConnections;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -268,7 +239,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enforce_client_authentication_on_passwordless_start")
     public Optional<Boolean> getEnforceClientAuthenticationOnPasswordlessStart() {
-        return enforceClientAuthenticationOnPasswordlessStart;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -276,7 +247,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_adfs_waad_email_verification")
     public Optional<Boolean> getEnableAdfsWaadEmailVerification() {
-        return enableAdfsWaadEmailVerification;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -284,7 +255,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("revoke_refresh_token_grant")
     public Optional<Boolean> getRevokeRefreshTokenGrant() {
-        return revokeRefreshTokenGrant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -292,7 +263,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("dashboard_log_streams_next")
     public Optional<Boolean> getDashboardLogStreamsNext() {
-        return dashboardLogStreamsNext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -300,7 +271,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("dashboard_insights_view")
     public Optional<Boolean> getDashboardInsightsView() {
-        return dashboardInsightsView;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -308,7 +279,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("disable_fields_map_fix")
     public Optional<Boolean> getDisableFieldsMapFix() {
-        return disableFieldsMapFix;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -316,7 +287,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("mfa_show_factor_list_on_enrollment")
     public Optional<Boolean> getMfaShowFactorListOnEnrollment() {
-        return mfaShowFactorListOnEnrollment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -324,7 +295,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("remove_alg_from_jwks")
     public Optional<Boolean> getRemoveAlgFromJwks() {
-        return removeAlgFromJwks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -332,7 +303,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("improved_signup_bot_detection_in_classic")
     public Optional<Boolean> getImprovedSignupBotDetectionInClassic() {
-        return improvedSignupBotDetectionInClassic;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -340,7 +311,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("genai_trial")
     public Optional<Boolean> getGenaiTrial() {
-        return genaiTrial;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -348,7 +319,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("enable_dynamic_client_registration")
     public Optional<Boolean> getEnableDynamicClientRegistration() {
-        return enableDynamicClientRegistration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -356,7 +327,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("disable_management_api_sms_obfuscation")
     public Optional<Boolean> getDisableManagementApiSmsObfuscation() {
-        return disableManagementApiSmsObfuscation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -364,7 +335,7 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("trust_azure_adfs_email_verified_connection_property")
     public Optional<Boolean> getTrustAzureAdfsEmailVerifiedConnectionProperty() {
-        return trustAzureAdfsEmailVerifiedConnectionProperty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -372,99 +343,40 @@ public final class TenantSettingsFlags {
      */
     @JsonProperty("custom_domains_provisioning")
     public Optional<Boolean> getCustomDomainsProvisioning() {
-        return customDomainsProvisioning;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TenantSettingsFlags && equalTo((TenantSettingsFlags) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TenantSettingsFlags other) {
-        return changePwdFlowV1.equals(other.changePwdFlowV1)
-                && enableApisSection.equals(other.enableApisSection)
-                && disableImpersonation.equals(other.disableImpersonation)
-                && enableClientConnections.equals(other.enableClientConnections)
-                && enablePipeline2.equals(other.enablePipeline2)
-                && allowLegacyDelegationGrantTypes.equals(other.allowLegacyDelegationGrantTypes)
-                && allowLegacyRoGrantTypes.equals(other.allowLegacyRoGrantTypes)
-                && allowLegacyTokeninfoEndpoint.equals(other.allowLegacyTokeninfoEndpoint)
-                && enableLegacyProfile.equals(other.enableLegacyProfile)
-                && enableIdtokenApi2.equals(other.enableIdtokenApi2)
-                && enablePublicSignupUserExistsError.equals(other.enablePublicSignupUserExistsError)
-                && enableSso.equals(other.enableSso)
-                && allowChangingEnableSso.equals(other.allowChangingEnableSso)
-                && disableClickjackProtectionHeaders.equals(other.disableClickjackProtectionHeaders)
-                && noDiscloseEnterpriseConnections.equals(other.noDiscloseEnterpriseConnections)
-                && enforceClientAuthenticationOnPasswordlessStart.equals(
-                        other.enforceClientAuthenticationOnPasswordlessStart)
-                && enableAdfsWaadEmailVerification.equals(other.enableAdfsWaadEmailVerification)
-                && revokeRefreshTokenGrant.equals(other.revokeRefreshTokenGrant)
-                && dashboardLogStreamsNext.equals(other.dashboardLogStreamsNext)
-                && dashboardInsightsView.equals(other.dashboardInsightsView)
-                && disableFieldsMapFix.equals(other.disableFieldsMapFix)
-                && mfaShowFactorListOnEnrollment.equals(other.mfaShowFactorListOnEnrollment)
-                && removeAlgFromJwks.equals(other.removeAlgFromJwks)
-                && improvedSignupBotDetectionInClassic.equals(other.improvedSignupBotDetectionInClassic)
-                && genaiTrial.equals(other.genaiTrial)
-                && enableDynamicClientRegistration.equals(other.enableDynamicClientRegistration)
-                && disableManagementApiSmsObfuscation.equals(other.disableManagementApiSmsObfuscation)
-                && trustAzureAdfsEmailVerifiedConnectionProperty.equals(
-                        other.trustAzureAdfsEmailVerifiedConnectionProperty)
-                && customDomainsProvisioning.equals(other.customDomainsProvisioning);
+        return changePwdFlowV1.equals(other.changePwdFlowV1) && enableApisSection.equals(other.enableApisSection) && disableImpersonation.equals(other.disableImpersonation) && enableClientConnections.equals(other.enableClientConnections) && enablePipeline2.equals(other.enablePipeline2) && allowLegacyDelegationGrantTypes.equals(other.allowLegacyDelegationGrantTypes) && allowLegacyRoGrantTypes.equals(other.allowLegacyRoGrantTypes) && allowLegacyTokeninfoEndpoint.equals(other.allowLegacyTokeninfoEndpoint) && enableLegacyProfile.equals(other.enableLegacyProfile) && enableIdtokenApi2.equals(other.enableIdtokenApi2) && enablePublicSignupUserExistsError.equals(other.enablePublicSignupUserExistsError) && enableSso.equals(other.enableSso) && allowChangingEnableSso.equals(other.allowChangingEnableSso) && disableClickjackProtectionHeaders.equals(other.disableClickjackProtectionHeaders) && noDiscloseEnterpriseConnections.equals(other.noDiscloseEnterpriseConnections) && enforceClientAuthenticationOnPasswordlessStart.equals(other.enforceClientAuthenticationOnPasswordlessStart) && enableAdfsWaadEmailVerification.equals(other.enableAdfsWaadEmailVerification) && revokeRefreshTokenGrant.equals(other.revokeRefreshTokenGrant) && dashboardLogStreamsNext.equals(other.dashboardLogStreamsNext) && dashboardInsightsView.equals(other.dashboardInsightsView) && disableFieldsMapFix.equals(other.disableFieldsMapFix) && mfaShowFactorListOnEnrollment.equals(other.mfaShowFactorListOnEnrollment) && removeAlgFromJwks.equals(other.removeAlgFromJwks) && improvedSignupBotDetectionInClassic.equals(other.improvedSignupBotDetectionInClassic) && genaiTrial.equals(other.genaiTrial) && enableDynamicClientRegistration.equals(other.enableDynamicClientRegistration) && disableManagementApiSmsObfuscation.equals(other.disableManagementApiSmsObfuscation) && trustAzureAdfsEmailVerifiedConnectionProperty.equals(other.trustAzureAdfsEmailVerifiedConnectionProperty) && customDomainsProvisioning.equals(other.customDomainsProvisioning);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.changePwdFlowV1,
-                this.enableApisSection,
-                this.disableImpersonation,
-                this.enableClientConnections,
-                this.enablePipeline2,
-                this.allowLegacyDelegationGrantTypes,
-                this.allowLegacyRoGrantTypes,
-                this.allowLegacyTokeninfoEndpoint,
-                this.enableLegacyProfile,
-                this.enableIdtokenApi2,
-                this.enablePublicSignupUserExistsError,
-                this.enableSso,
-                this.allowChangingEnableSso,
-                this.disableClickjackProtectionHeaders,
-                this.noDiscloseEnterpriseConnections,
-                this.enforceClientAuthenticationOnPasswordlessStart,
-                this.enableAdfsWaadEmailVerification,
-                this.revokeRefreshTokenGrant,
-                this.dashboardLogStreamsNext,
-                this.dashboardInsightsView,
-                this.disableFieldsMapFix,
-                this.mfaShowFactorListOnEnrollment,
-                this.removeAlgFromJwks,
-                this.improvedSignupBotDetectionInClassic,
-                this.genaiTrial,
-                this.enableDynamicClientRegistration,
-                this.disableManagementApiSmsObfuscation,
-                this.trustAzureAdfsEmailVerifiedConnectionProperty,
-                this.customDomainsProvisioning);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> changePwdFlowV1 = Optional.empty();
 
         private Optional<Boolean> enableApisSection = Optional.empty();
@@ -526,39 +438,11 @@ public final class TenantSettingsFlags {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TenantSettingsFlags other) {
-            changePwdFlowV1(other.getChangePwdFlowV1());
-            enableApisSection(other.getEnableApisSection());
-            disableImpersonation(other.getDisableImpersonation());
-            enableClientConnections(other.getEnableClientConnections());
-            enablePipeline2(other.getEnablePipeline2());
-            allowLegacyDelegationGrantTypes(other.getAllowLegacyDelegationGrantTypes());
-            allowLegacyRoGrantTypes(other.getAllowLegacyRoGrantTypes());
-            allowLegacyTokeninfoEndpoint(other.getAllowLegacyTokeninfoEndpoint());
-            enableLegacyProfile(other.getEnableLegacyProfile());
-            enableIdtokenApi2(other.getEnableIdtokenApi2());
-            enablePublicSignupUserExistsError(other.getEnablePublicSignupUserExistsError());
-            enableSso(other.getEnableSso());
-            allowChangingEnableSso(other.getAllowChangingEnableSso());
-            disableClickjackProtectionHeaders(other.getDisableClickjackProtectionHeaders());
-            noDiscloseEnterpriseConnections(other.getNoDiscloseEnterpriseConnections());
-            enforceClientAuthenticationOnPasswordlessStart(other.getEnforceClientAuthenticationOnPasswordlessStart());
-            enableAdfsWaadEmailVerification(other.getEnableAdfsWaadEmailVerification());
-            revokeRefreshTokenGrant(other.getRevokeRefreshTokenGrant());
-            dashboardLogStreamsNext(other.getDashboardLogStreamsNext());
-            dashboardInsightsView(other.getDashboardInsightsView());
-            disableFieldsMapFix(other.getDisableFieldsMapFix());
-            mfaShowFactorListOnEnrollment(other.getMfaShowFactorListOnEnrollment());
-            removeAlgFromJwks(other.getRemoveAlgFromJwks());
-            improvedSignupBotDetectionInClassic(other.getImprovedSignupBotDetectionInClassic());
-            genaiTrial(other.getGenaiTrial());
-            enableDynamicClientRegistration(other.getEnableDynamicClientRegistration());
-            disableManagementApiSmsObfuscation(other.getDisableManagementApiSmsObfuscation());
-            trustAzureAdfsEmailVerifiedConnectionProperty(other.getTrustAzureAdfsEmailVerifiedConnectionProperty());
-            customDomainsProvisioning(other.getCustomDomainsProvisioning());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -566,13 +450,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "change_pwd_flow_v1", nulls = Nulls.SKIP)
         public Builder changePwdFlowV1(Optional<Boolean> changePwdFlowV1) {
-            this.changePwdFlowV1 = changePwdFlowV1;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePwdFlowV1(Boolean changePwdFlowV1) {
-            this.changePwdFlowV1 = Optional.ofNullable(changePwdFlowV1);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -580,13 +462,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_apis_section", nulls = Nulls.SKIP)
         public Builder enableApisSection(Optional<Boolean> enableApisSection) {
-            this.enableApisSection = enableApisSection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableApisSection(Boolean enableApisSection) {
-            this.enableApisSection = Optional.ofNullable(enableApisSection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -594,13 +474,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "disable_impersonation", nulls = Nulls.SKIP)
         public Builder disableImpersonation(Optional<Boolean> disableImpersonation) {
-            this.disableImpersonation = disableImpersonation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableImpersonation(Boolean disableImpersonation) {
-            this.disableImpersonation = Optional.ofNullable(disableImpersonation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -608,13 +486,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_client_connections", nulls = Nulls.SKIP)
         public Builder enableClientConnections(Optional<Boolean> enableClientConnections) {
-            this.enableClientConnections = enableClientConnections;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableClientConnections(Boolean enableClientConnections) {
-            this.enableClientConnections = Optional.ofNullable(enableClientConnections);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -622,13 +498,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_pipeline2", nulls = Nulls.SKIP)
         public Builder enablePipeline2(Optional<Boolean> enablePipeline2) {
-            this.enablePipeline2 = enablePipeline2;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enablePipeline2(Boolean enablePipeline2) {
-            this.enablePipeline2 = Optional.ofNullable(enablePipeline2);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -636,13 +510,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "allow_legacy_delegation_grant_types", nulls = Nulls.SKIP)
         public Builder allowLegacyDelegationGrantTypes(Optional<Boolean> allowLegacyDelegationGrantTypes) {
-            this.allowLegacyDelegationGrantTypes = allowLegacyDelegationGrantTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowLegacyDelegationGrantTypes(Boolean allowLegacyDelegationGrantTypes) {
-            this.allowLegacyDelegationGrantTypes = Optional.ofNullable(allowLegacyDelegationGrantTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -650,13 +522,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "allow_legacy_ro_grant_types", nulls = Nulls.SKIP)
         public Builder allowLegacyRoGrantTypes(Optional<Boolean> allowLegacyRoGrantTypes) {
-            this.allowLegacyRoGrantTypes = allowLegacyRoGrantTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowLegacyRoGrantTypes(Boolean allowLegacyRoGrantTypes) {
-            this.allowLegacyRoGrantTypes = Optional.ofNullable(allowLegacyRoGrantTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -664,13 +534,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "allow_legacy_tokeninfo_endpoint", nulls = Nulls.SKIP)
         public Builder allowLegacyTokeninfoEndpoint(Optional<Boolean> allowLegacyTokeninfoEndpoint) {
-            this.allowLegacyTokeninfoEndpoint = allowLegacyTokeninfoEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowLegacyTokeninfoEndpoint(Boolean allowLegacyTokeninfoEndpoint) {
-            this.allowLegacyTokeninfoEndpoint = Optional.ofNullable(allowLegacyTokeninfoEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -678,13 +546,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_legacy_profile", nulls = Nulls.SKIP)
         public Builder enableLegacyProfile(Optional<Boolean> enableLegacyProfile) {
-            this.enableLegacyProfile = enableLegacyProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableLegacyProfile(Boolean enableLegacyProfile) {
-            this.enableLegacyProfile = Optional.ofNullable(enableLegacyProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -692,13 +558,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_idtoken_api2", nulls = Nulls.SKIP)
         public Builder enableIdtokenApi2(Optional<Boolean> enableIdtokenApi2) {
-            this.enableIdtokenApi2 = enableIdtokenApi2;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableIdtokenApi2(Boolean enableIdtokenApi2) {
-            this.enableIdtokenApi2 = Optional.ofNullable(enableIdtokenApi2);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -706,13 +570,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_public_signup_user_exists_error", nulls = Nulls.SKIP)
         public Builder enablePublicSignupUserExistsError(Optional<Boolean> enablePublicSignupUserExistsError) {
-            this.enablePublicSignupUserExistsError = enablePublicSignupUserExistsError;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enablePublicSignupUserExistsError(Boolean enablePublicSignupUserExistsError) {
-            this.enablePublicSignupUserExistsError = Optional.ofNullable(enablePublicSignupUserExistsError);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -720,13 +582,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_sso", nulls = Nulls.SKIP)
         public Builder enableSso(Optional<Boolean> enableSso) {
-            this.enableSso = enableSso;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableSso(Boolean enableSso) {
-            this.enableSso = Optional.ofNullable(enableSso);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -734,13 +594,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "allow_changing_enable_sso", nulls = Nulls.SKIP)
         public Builder allowChangingEnableSso(Optional<Boolean> allowChangingEnableSso) {
-            this.allowChangingEnableSso = allowChangingEnableSso;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowChangingEnableSso(Boolean allowChangingEnableSso) {
-            this.allowChangingEnableSso = Optional.ofNullable(allowChangingEnableSso);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -748,13 +606,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "disable_clickjack_protection_headers", nulls = Nulls.SKIP)
         public Builder disableClickjackProtectionHeaders(Optional<Boolean> disableClickjackProtectionHeaders) {
-            this.disableClickjackProtectionHeaders = disableClickjackProtectionHeaders;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableClickjackProtectionHeaders(Boolean disableClickjackProtectionHeaders) {
-            this.disableClickjackProtectionHeaders = Optional.ofNullable(disableClickjackProtectionHeaders);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -762,30 +618,23 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "no_disclose_enterprise_connections", nulls = Nulls.SKIP)
         public Builder noDiscloseEnterpriseConnections(Optional<Boolean> noDiscloseEnterpriseConnections) {
-            this.noDiscloseEnterpriseConnections = noDiscloseEnterpriseConnections;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder noDiscloseEnterpriseConnections(Boolean noDiscloseEnterpriseConnections) {
-            this.noDiscloseEnterpriseConnections = Optional.ofNullable(noDiscloseEnterpriseConnections);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Enforce client authentication for passwordless start.</p>
          */
         @JsonSetter(value = "enforce_client_authentication_on_passwordless_start", nulls = Nulls.SKIP)
-        public Builder enforceClientAuthenticationOnPasswordlessStart(
-                Optional<Boolean> enforceClientAuthenticationOnPasswordlessStart) {
-            this.enforceClientAuthenticationOnPasswordlessStart = enforceClientAuthenticationOnPasswordlessStart;
-            return this;
+        public Builder enforceClientAuthenticationOnPasswordlessStart(Optional<Boolean> enforceClientAuthenticationOnPasswordlessStart) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder enforceClientAuthenticationOnPasswordlessStart(
-                Boolean enforceClientAuthenticationOnPasswordlessStart) {
-            this.enforceClientAuthenticationOnPasswordlessStart =
-                    Optional.ofNullable(enforceClientAuthenticationOnPasswordlessStart);
-            return this;
+        public Builder enforceClientAuthenticationOnPasswordlessStart(Boolean enforceClientAuthenticationOnPasswordlessStart) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -793,13 +642,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_adfs_waad_email_verification", nulls = Nulls.SKIP)
         public Builder enableAdfsWaadEmailVerification(Optional<Boolean> enableAdfsWaadEmailVerification) {
-            this.enableAdfsWaadEmailVerification = enableAdfsWaadEmailVerification;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableAdfsWaadEmailVerification(Boolean enableAdfsWaadEmailVerification) {
-            this.enableAdfsWaadEmailVerification = Optional.ofNullable(enableAdfsWaadEmailVerification);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -807,13 +654,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "revoke_refresh_token_grant", nulls = Nulls.SKIP)
         public Builder revokeRefreshTokenGrant(Optional<Boolean> revokeRefreshTokenGrant) {
-            this.revokeRefreshTokenGrant = revokeRefreshTokenGrant;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder revokeRefreshTokenGrant(Boolean revokeRefreshTokenGrant) {
-            this.revokeRefreshTokenGrant = Optional.ofNullable(revokeRefreshTokenGrant);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -821,13 +666,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "dashboard_log_streams_next", nulls = Nulls.SKIP)
         public Builder dashboardLogStreamsNext(Optional<Boolean> dashboardLogStreamsNext) {
-            this.dashboardLogStreamsNext = dashboardLogStreamsNext;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dashboardLogStreamsNext(Boolean dashboardLogStreamsNext) {
-            this.dashboardLogStreamsNext = Optional.ofNullable(dashboardLogStreamsNext);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -835,13 +678,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "dashboard_insights_view", nulls = Nulls.SKIP)
         public Builder dashboardInsightsView(Optional<Boolean> dashboardInsightsView) {
-            this.dashboardInsightsView = dashboardInsightsView;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dashboardInsightsView(Boolean dashboardInsightsView) {
-            this.dashboardInsightsView = Optional.ofNullable(dashboardInsightsView);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -849,13 +690,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "disable_fields_map_fix", nulls = Nulls.SKIP)
         public Builder disableFieldsMapFix(Optional<Boolean> disableFieldsMapFix) {
-            this.disableFieldsMapFix = disableFieldsMapFix;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableFieldsMapFix(Boolean disableFieldsMapFix) {
-            this.disableFieldsMapFix = Optional.ofNullable(disableFieldsMapFix);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -863,13 +702,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "mfa_show_factor_list_on_enrollment", nulls = Nulls.SKIP)
         public Builder mfaShowFactorListOnEnrollment(Optional<Boolean> mfaShowFactorListOnEnrollment) {
-            this.mfaShowFactorListOnEnrollment = mfaShowFactorListOnEnrollment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mfaShowFactorListOnEnrollment(Boolean mfaShowFactorListOnEnrollment) {
-            this.mfaShowFactorListOnEnrollment = Optional.ofNullable(mfaShowFactorListOnEnrollment);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -877,13 +714,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "remove_alg_from_jwks", nulls = Nulls.SKIP)
         public Builder removeAlgFromJwks(Optional<Boolean> removeAlgFromJwks) {
-            this.removeAlgFromJwks = removeAlgFromJwks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder removeAlgFromJwks(Boolean removeAlgFromJwks) {
-            this.removeAlgFromJwks = Optional.ofNullable(removeAlgFromJwks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -891,13 +726,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "improved_signup_bot_detection_in_classic", nulls = Nulls.SKIP)
         public Builder improvedSignupBotDetectionInClassic(Optional<Boolean> improvedSignupBotDetectionInClassic) {
-            this.improvedSignupBotDetectionInClassic = improvedSignupBotDetectionInClassic;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder improvedSignupBotDetectionInClassic(Boolean improvedSignupBotDetectionInClassic) {
-            this.improvedSignupBotDetectionInClassic = Optional.ofNullable(improvedSignupBotDetectionInClassic);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -905,13 +738,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "genai_trial", nulls = Nulls.SKIP)
         public Builder genaiTrial(Optional<Boolean> genaiTrial) {
-            this.genaiTrial = genaiTrial;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder genaiTrial(Boolean genaiTrial) {
-            this.genaiTrial = Optional.ofNullable(genaiTrial);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -919,13 +750,11 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "enable_dynamic_client_registration", nulls = Nulls.SKIP)
         public Builder enableDynamicClientRegistration(Optional<Boolean> enableDynamicClientRegistration) {
-            this.enableDynamicClientRegistration = enableDynamicClientRegistration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableDynamicClientRegistration(Boolean enableDynamicClientRegistration) {
-            this.enableDynamicClientRegistration = Optional.ofNullable(enableDynamicClientRegistration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -933,30 +762,23 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "disable_management_api_sms_obfuscation", nulls = Nulls.SKIP)
         public Builder disableManagementApiSmsObfuscation(Optional<Boolean> disableManagementApiSmsObfuscation) {
-            this.disableManagementApiSmsObfuscation = disableManagementApiSmsObfuscation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableManagementApiSmsObfuscation(Boolean disableManagementApiSmsObfuscation) {
-            this.disableManagementApiSmsObfuscation = Optional.ofNullable(disableManagementApiSmsObfuscation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Changes email_verified behavior for Azure AD/ADFS connections when enabled. Sets email_verified to false otherwise.</p>
          */
         @JsonSetter(value = "trust_azure_adfs_email_verified_connection_property", nulls = Nulls.SKIP)
-        public Builder trustAzureAdfsEmailVerifiedConnectionProperty(
-                Optional<Boolean> trustAzureAdfsEmailVerifiedConnectionProperty) {
-            this.trustAzureAdfsEmailVerifiedConnectionProperty = trustAzureAdfsEmailVerifiedConnectionProperty;
-            return this;
+        public Builder trustAzureAdfsEmailVerifiedConnectionProperty(Optional<Boolean> trustAzureAdfsEmailVerifiedConnectionProperty) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder trustAzureAdfsEmailVerifiedConnectionProperty(
-                Boolean trustAzureAdfsEmailVerifiedConnectionProperty) {
-            this.trustAzureAdfsEmailVerifiedConnectionProperty =
-                    Optional.ofNullable(trustAzureAdfsEmailVerifiedConnectionProperty);
-            return this;
+        public Builder trustAzureAdfsEmailVerifiedConnectionProperty(Boolean trustAzureAdfsEmailVerifiedConnectionProperty) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -964,57 +786,23 @@ public final class TenantSettingsFlags {
          */
         @JsonSetter(value = "custom_domains_provisioning", nulls = Nulls.SKIP)
         public Builder customDomainsProvisioning(Optional<Boolean> customDomainsProvisioning) {
-            this.customDomainsProvisioning = customDomainsProvisioning;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customDomainsProvisioning(Boolean customDomainsProvisioning) {
-            this.customDomainsProvisioning = Optional.ofNullable(customDomainsProvisioning);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TenantSettingsFlags build() {
-            return new TenantSettingsFlags(
-                    changePwdFlowV1,
-                    enableApisSection,
-                    disableImpersonation,
-                    enableClientConnections,
-                    enablePipeline2,
-                    allowLegacyDelegationGrantTypes,
-                    allowLegacyRoGrantTypes,
-                    allowLegacyTokeninfoEndpoint,
-                    enableLegacyProfile,
-                    enableIdtokenApi2,
-                    enablePublicSignupUserExistsError,
-                    enableSso,
-                    allowChangingEnableSso,
-                    disableClickjackProtectionHeaders,
-                    noDiscloseEnterpriseConnections,
-                    enforceClientAuthenticationOnPasswordlessStart,
-                    enableAdfsWaadEmailVerification,
-                    revokeRefreshTokenGrant,
-                    dashboardLogStreamsNext,
-                    dashboardInsightsView,
-                    disableFieldsMapFix,
-                    mfaShowFactorListOnEnrollment,
-                    removeAlgFromJwks,
-                    improvedSignupBotDetectionInClassic,
-                    genaiTrial,
-                    enableDynamicClientRegistration,
-                    disableManagementApiSmsObfuscation,
-                    trustAzureAdfsEmailVerifiedConnectionProperty,
-                    customDomainsProvisioning,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

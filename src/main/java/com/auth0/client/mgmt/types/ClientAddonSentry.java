@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSentry.Builder.class)
 public final class ClientAddonSentry {
+
     private final Optional<String> orgSlug;
 
     private final Optional<String> baseUrl;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonSentry(
-            Optional<String> orgSlug, Optional<String> baseUrl, Map<String, Object> additionalProperties) {
+    private ClientAddonSentry(Optional<String> orgSlug, Optional<String> baseUrl, Map<String, Object> additionalProperties) {
         this.orgSlug = orgSlug;
         this.baseUrl = baseUrl;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class ClientAddonSentry {
      */
     @JsonProperty("org_slug")
     public Optional<String> getOrgSlug() {
-        return orgSlug;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class ClientAddonSentry {
      */
     @JsonProperty("base_url")
     public Optional<String> getBaseUrl() {
-        return baseUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSentry && equalTo((ClientAddonSentry) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSentry other) {
@@ -66,20 +65,21 @@ public final class ClientAddonSentry {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.orgSlug, this.baseUrl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> orgSlug = Optional.empty();
 
         private Optional<String> baseUrl = Optional.empty();
@@ -87,12 +87,11 @@ public final class ClientAddonSentry {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSentry other) {
-            orgSlug(other.getOrgSlug());
-            baseUrl(other.getBaseUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class ClientAddonSentry {
          */
         @JsonSetter(value = "org_slug", nulls = Nulls.SKIP)
         public Builder orgSlug(Optional<String> orgSlug) {
-            this.orgSlug = orgSlug;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder orgSlug(String orgSlug) {
-            this.orgSlug = Optional.ofNullable(orgSlug);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class ClientAddonSentry {
          */
         @JsonSetter(value = "base_url", nulls = Nulls.SKIP)
         public Builder baseUrl(Optional<String> baseUrl) {
-            this.baseUrl = baseUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Optional.ofNullable(baseUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSentry build() {
-            return new ClientAddonSentry(orgSlug, baseUrl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

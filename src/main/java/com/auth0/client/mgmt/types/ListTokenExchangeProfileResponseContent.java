@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListTokenExchangeProfileResponseContent.Builder.class)
 public final class ListTokenExchangeProfileResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListTokenExchangeProfileResponseContent(
-            Optional<String> next,
-            Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles,
-            Map<String, Object> additionalProperties) {
+    private ListTokenExchangeProfileResponseContent(Optional<String> next, Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles, Map<String, Object> additionalProperties) {
         this.next = next;
         this.tokenExchangeProfiles = tokenExchangeProfiles;
         this.additionalProperties = additionalProperties;
@@ -41,24 +39,22 @@ public final class ListTokenExchangeProfileResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_exchange_profiles")
     public Optional<List<TokenExchangeProfileResponseContent>> getTokenExchangeProfiles() {
-        return tokenExchangeProfiles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListTokenExchangeProfileResponseContent
-                && equalTo((ListTokenExchangeProfileResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListTokenExchangeProfileResponseContent other) {
@@ -67,20 +63,21 @@ public final class ListTokenExchangeProfileResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.tokenExchangeProfiles);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles = Optional.empty();
@@ -88,12 +85,11 @@ public final class ListTokenExchangeProfileResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListTokenExchangeProfileResponseContent other) {
-            next(other.getNext());
-            tokenExchangeProfiles(other.getTokenExchangeProfiles());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,39 +97,32 @@ public final class ListTokenExchangeProfileResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_exchange_profiles", nulls = Nulls.SKIP)
-        public Builder tokenExchangeProfiles(
-                Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles) {
-            this.tokenExchangeProfiles = tokenExchangeProfiles;
-            return this;
+        public Builder tokenExchangeProfiles(Optional<List<TokenExchangeProfileResponseContent>> tokenExchangeProfiles) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenExchangeProfiles(List<TokenExchangeProfileResponseContent> tokenExchangeProfiles) {
-            this.tokenExchangeProfiles = Optional.ofNullable(tokenExchangeProfiles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListTokenExchangeProfileResponseContent build() {
-            return new ListTokenExchangeProfileResponseContent(next, tokenExchangeProfiles, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

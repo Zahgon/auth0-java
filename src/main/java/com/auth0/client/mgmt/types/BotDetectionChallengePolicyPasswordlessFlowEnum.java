@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BotDetectionChallengePolicyPasswordlessFlowEnum {
-    public static final BotDetectionChallengePolicyPasswordlessFlowEnum NEVER =
-            new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.NEVER, "never");
 
-    public static final BotDetectionChallengePolicyPasswordlessFlowEnum WHEN_RISKY =
-            new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.WHEN_RISKY, "when_risky");
+    public static final BotDetectionChallengePolicyPasswordlessFlowEnum NEVER = new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.NEVER, "never");
 
-    public static final BotDetectionChallengePolicyPasswordlessFlowEnum ALWAYS =
-            new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.ALWAYS, "always");
+    public static final BotDetectionChallengePolicyPasswordlessFlowEnum WHEN_RISKY = new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.WHEN_RISKY, "when_risky");
+
+    public static final BotDetectionChallengePolicyPasswordlessFlowEnum ALWAYS = new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.ALWAYS, "always");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class BotDetectionChallengePolicyPasswordlessFlowEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BotDetectionChallengePolicyPasswordlessFlowEnum
-                        && this.string.equals(((BotDetectionChallengePolicyPasswordlessFlowEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NEVER:
-                return visitor.visitNever();
-            case WHEN_RISKY:
-                return visitor.visitWhenRisky();
-            case ALWAYS:
-                return visitor.visitAlways();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BotDetectionChallengePolicyPasswordlessFlowEnum valueOf(String value) {
-        switch (value) {
-            case "never":
-                return NEVER;
-            case "when_risky":
-                return WHEN_RISKY;
-            case "always":
-                return ALWAYS;
-            default:
-                return new BotDetectionChallengePolicyPasswordlessFlowEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NEVER,
 
-        WHEN_RISKY,
-
-        ALWAYS,
-
-        UNKNOWN
+        NEVER, WHEN_RISKY, ALWAYS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNever();
 
         T visitWhenRisky();

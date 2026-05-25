@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.ListUserGrantsRequestParameters;
 import com.auth0.client.mgmt.types.UserGrant;
 
 public class UserGrantsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUserGrantsClient rawClient;
@@ -24,62 +25,62 @@ public class UserGrantsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUserGrantsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public SyncPagingIterable<UserGrant> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public SyncPagingIterable<UserGrant> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public SyncPagingIterable<UserGrant> list(ListUserGrantsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public SyncPagingIterable<UserGrant> list(ListUserGrantsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public void deleteByUserId(DeleteUserGrantByUserIdRequestParameters request) {
-        this.rawClient.deleteByUserId(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public void deleteByUserId(DeleteUserGrantByUserIdRequestParameters request, RequestOptions requestOptions) {
-        this.rawClient.deleteByUserId(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

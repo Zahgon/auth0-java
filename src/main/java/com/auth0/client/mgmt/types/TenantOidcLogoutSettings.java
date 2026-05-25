@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TenantOidcLogoutSettings.Builder.class)
 public final class TenantOidcLogoutSettings {
+
     private final Optional<Boolean> rpLogoutEndSessionEndpointDiscovery;
 
     private final Map<String, Object> additionalProperties;
 
-    private TenantOidcLogoutSettings(
-            Optional<Boolean> rpLogoutEndSessionEndpointDiscovery, Map<String, Object> additionalProperties) {
+    private TenantOidcLogoutSettings(Optional<Boolean> rpLogoutEndSessionEndpointDiscovery, Map<String, Object> additionalProperties) {
         this.rpLogoutEndSessionEndpointDiscovery = rpLogoutEndSessionEndpointDiscovery;
         this.additionalProperties = additionalProperties;
     }
@@ -35,18 +35,17 @@ public final class TenantOidcLogoutSettings {
      */
     @JsonProperty("rp_logout_end_session_endpoint_discovery")
     public Optional<Boolean> getRpLogoutEndSessionEndpointDiscovery() {
-        return rpLogoutEndSessionEndpointDiscovery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TenantOidcLogoutSettings && equalTo((TenantOidcLogoutSettings) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TenantOidcLogoutSettings other) {
@@ -55,30 +54,31 @@ public final class TenantOidcLogoutSettings {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.rpLogoutEndSessionEndpointDiscovery);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> rpLogoutEndSessionEndpointDiscovery = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TenantOidcLogoutSettings other) {
-            rpLogoutEndSessionEndpointDiscovery(other.getRpLogoutEndSessionEndpointDiscovery());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -86,27 +86,23 @@ public final class TenantOidcLogoutSettings {
          */
         @JsonSetter(value = "rp_logout_end_session_endpoint_discovery", nulls = Nulls.SKIP)
         public Builder rpLogoutEndSessionEndpointDiscovery(Optional<Boolean> rpLogoutEndSessionEndpointDiscovery) {
-            this.rpLogoutEndSessionEndpointDiscovery = rpLogoutEndSessionEndpointDiscovery;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rpLogoutEndSessionEndpointDiscovery(Boolean rpLogoutEndSessionEndpointDiscovery) {
-            this.rpLogoutEndSessionEndpointDiscovery = Optional.ofNullable(rpLogoutEndSessionEndpointDiscovery);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TenantOidcLogoutSettings build() {
-            return new TenantOidcLogoutSettings(rpLogoutEndSessionEndpointDiscovery, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.UpdateUniversalLoginTemplateRequestContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTemplatesClient rawClient;
@@ -23,16 +24,15 @@ public class AsyncTemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetUniversalLoginTemplateResponseContent> getUniversalLogin() {
-        return this.rawClient.getUniversalLogin().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetUniversalLoginTemplateResponseContent> getUniversalLogin(
-            RequestOptions requestOptions) {
-        return this.rawClient.getUniversalLogin(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetUniversalLoginTemplateResponseContent> getUniversalLogin(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +60,7 @@ public class AsyncTemplatesClient {
      * </pre></p>
      */
     public CompletableFuture<Void> updateUniversalLogin(UpdateUniversalLoginTemplateRequestContent request) {
-        return this.rawClient.updateUniversalLogin(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,16 +87,15 @@ public class AsyncTemplatesClient {
      * &amp;lt;/html&amp;gt;
      * </pre></p>
      */
-    public CompletableFuture<Void> updateUniversalLogin(
-            UpdateUniversalLoginTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateUniversalLogin(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> updateUniversalLogin(UpdateUniversalLoginTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> deleteUniversalLogin() {
-        return this.rawClient.deleteUniversalLogin().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> deleteUniversalLogin(RequestOptions requestOptions) {
-        return this.rawClient.deleteUniversalLogin(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

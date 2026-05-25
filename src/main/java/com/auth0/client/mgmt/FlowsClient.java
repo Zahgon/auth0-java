@@ -20,6 +20,7 @@ import com.auth0.client.mgmt.types.UpdateFlowResponseContent;
 import java.util.function.Supplier;
 
 public class FlowsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawFlowsClient rawClient;
@@ -39,79 +40,78 @@ public class FlowsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawFlowsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowSummary> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowSummary> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowSummary> list(ListFlowsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowSummary> list(ListFlowsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateFlowResponseContent create(CreateFlowRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateFlowResponseContent create(CreateFlowRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowResponseContent get(String id, GetFlowRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowResponseContent get(String id, GetFlowRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFlowResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFlowResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFlowResponseContent update(String id, UpdateFlowRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateFlowResponseContent update(
-            String id, UpdateFlowRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateFlowResponseContent update(String id, UpdateFlowRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ExecutionsClient executions() {
-        return this.executionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public VaultClient vault() {
-        return this.vaultClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldDateConfig.Builder.class)
 public final class FormFieldDateConfig {
+
     private final Optional<FormFieldDateConfigFormatEnum> format;
 
     private final Optional<String> defaultValue;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldDateConfig(
-            Optional<FormFieldDateConfigFormatEnum> format,
-            Optional<String> defaultValue,
-            Map<String, Object> additionalProperties) {
+    private FormFieldDateConfig(Optional<FormFieldDateConfigFormatEnum> format, Optional<String> defaultValue, Map<String, Object> additionalProperties) {
         this.format = format;
         this.defaultValue = defaultValue;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class FormFieldDateConfig {
 
     @JsonProperty("format")
     public Optional<FormFieldDateConfigFormatEnum> getFormat() {
-        return format;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default_value")
     public Optional<String> getDefaultValue() {
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldDateConfig && equalTo((FormFieldDateConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldDateConfig other) {
@@ -62,20 +59,21 @@ public final class FormFieldDateConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.format, this.defaultValue);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FormFieldDateConfigFormatEnum> format = Optional.empty();
 
         private Optional<String> defaultValue = Optional.empty();
@@ -83,48 +81,41 @@ public final class FormFieldDateConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldDateConfig other) {
-            format(other.getFormat());
-            defaultValue(other.getDefaultValue());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "format", nulls = Nulls.SKIP)
         public Builder format(Optional<FormFieldDateConfigFormatEnum> format) {
-            this.format = format;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder format(FormFieldDateConfigFormatEnum format) {
-            this.format = Optional.ofNullable(format);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_value", nulls = Nulls.SKIP)
         public Builder defaultValue(Optional<String> defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldDateConfig build() {
-            return new FormFieldDateConfig(format, defaultValue, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

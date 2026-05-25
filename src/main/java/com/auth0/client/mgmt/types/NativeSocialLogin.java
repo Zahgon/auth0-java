@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = NativeSocialLogin.Builder.class)
 public final class NativeSocialLogin {
+
     private final Optional<NativeSocialLoginApple> apple;
 
     private final Optional<NativeSocialLoginFacebook> facebook;
@@ -28,11 +29,7 @@ public final class NativeSocialLogin {
 
     private final Map<String, Object> additionalProperties;
 
-    private NativeSocialLogin(
-            Optional<NativeSocialLoginApple> apple,
-            Optional<NativeSocialLoginFacebook> facebook,
-            Optional<NativeSocialLoginGoogle> google,
-            Map<String, Object> additionalProperties) {
+    private NativeSocialLogin(Optional<NativeSocialLoginApple> apple, Optional<NativeSocialLoginFacebook> facebook, Optional<NativeSocialLoginGoogle> google, Map<String, Object> additionalProperties) {
         this.apple = apple;
         this.facebook = facebook;
         this.google = google;
@@ -41,28 +38,27 @@ public final class NativeSocialLogin {
 
     @JsonProperty("apple")
     public Optional<NativeSocialLoginApple> getApple() {
-        return apple;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("facebook")
     public Optional<NativeSocialLoginFacebook> getFacebook() {
-        return facebook;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("google")
     public Optional<NativeSocialLoginGoogle> getGoogle() {
-        return google;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof NativeSocialLogin && equalTo((NativeSocialLogin) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(NativeSocialLogin other) {
@@ -71,20 +67,21 @@ public final class NativeSocialLogin {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.apple, this.facebook, this.google);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<NativeSocialLoginApple> apple = Optional.empty();
 
         private Optional<NativeSocialLoginFacebook> facebook = Optional.empty();
@@ -94,60 +91,50 @@ public final class NativeSocialLogin {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(NativeSocialLogin other) {
-            apple(other.getApple());
-            facebook(other.getFacebook());
-            google(other.getGoogle());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "apple", nulls = Nulls.SKIP)
         public Builder apple(Optional<NativeSocialLoginApple> apple) {
-            this.apple = apple;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apple(NativeSocialLoginApple apple) {
-            this.apple = Optional.ofNullable(apple);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "facebook", nulls = Nulls.SKIP)
         public Builder facebook(Optional<NativeSocialLoginFacebook> facebook) {
-            this.facebook = facebook;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder facebook(NativeSocialLoginFacebook facebook) {
-            this.facebook = Optional.ofNullable(facebook);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "google", nulls = Nulls.SKIP)
         public Builder google(Optional<NativeSocialLoginGoogle> google) {
-            this.google = google;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder google(NativeSocialLoginGoogle google) {
-            this.google = Optional.ofNullable(google);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public NativeSocialLogin build() {
-            return new NativeSocialLogin(apple, facebook, google, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

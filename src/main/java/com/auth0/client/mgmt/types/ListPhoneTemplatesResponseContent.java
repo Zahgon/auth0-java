@@ -21,30 +21,29 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListPhoneTemplatesResponseContent.Builder.class)
 public final class ListPhoneTemplatesResponseContent {
+
     private final Optional<List<PhoneTemplate>> templates;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListPhoneTemplatesResponseContent(
-            Optional<List<PhoneTemplate>> templates, Map<String, Object> additionalProperties) {
+    private ListPhoneTemplatesResponseContent(Optional<List<PhoneTemplate>> templates, Map<String, Object> additionalProperties) {
         this.templates = templates;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("templates")
     public Optional<List<PhoneTemplate>> getTemplates() {
-        return templates;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListPhoneTemplatesResponseContent && equalTo((ListPhoneTemplatesResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListPhoneTemplatesResponseContent other) {
@@ -53,55 +52,52 @@ public final class ListPhoneTemplatesResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.templates);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<PhoneTemplate>> templates = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListPhoneTemplatesResponseContent other) {
-            templates(other.getTemplates());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "templates", nulls = Nulls.SKIP)
         public Builder templates(Optional<List<PhoneTemplate>> templates) {
-            this.templates = templates;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder templates(List<PhoneTemplate> templates) {
-            this.templates = Optional.ofNullable(templates);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListPhoneTemplatesResponseContent build() {
-            return new ListPhoneTemplatesResponseContent(templates, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

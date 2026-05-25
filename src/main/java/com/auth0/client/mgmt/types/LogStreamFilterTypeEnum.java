@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamFilterTypeEnum {
+
     public static final LogStreamFilterTypeEnum CATEGORY = new LogStreamFilterTypeEnum(Value.CATEGORY, "category");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class LogStreamFilterTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamFilterTypeEnum
-                        && this.string.equals(((LogStreamFilterTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CATEGORY:
-                return visitor.visitCategory();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamFilterTypeEnum valueOf(String value) {
-        switch (value) {
-            case "category":
-                return CATEGORY;
-            default:
-                return new LogStreamFilterTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CATEGORY,
 
-        UNKNOWN
+        CATEGORY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCategory();
 
         T visitUnknown(String unknownType);

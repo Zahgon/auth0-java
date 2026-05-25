@@ -25,6 +25,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncOrganizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawOrganizationsClient rawClient;
@@ -56,7 +57,7 @@ public class AsyncOrganizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawOrganizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +77,7 @@ public class AsyncOrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<Organization>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +97,7 @@ public class AsyncOrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<Organization>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,7 +117,7 @@ public class AsyncOrganizationsClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<Organization>> list(ListOrganizationsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -135,53 +136,50 @@ public class AsyncOrganizationsClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Organization>> list(
-            ListOrganizationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Organization>> list(ListOrganizationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Organization within your tenant.  To learn more about Organization settings, behavior, and configuration options, review <a href="https://auth0.com/docs/manage-users/organizations/create-first-organization">Create Your First Organization</a>.
      */
     public CompletableFuture<CreateOrganizationResponseContent> create(CreateOrganizationRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Organization within your tenant.  To learn more about Organization settings, behavior, and configuration options, review <a href="https://auth0.com/docs/manage-users/organizations/create-first-organization">Create Your First Organization</a>.
      */
-    public CompletableFuture<CreateOrganizationResponseContent> create(
-            CreateOrganizationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateOrganizationResponseContent> create(CreateOrganizationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by name.
      */
     public CompletableFuture<GetOrganizationByNameResponseContent> getByName(String name) {
-        return this.rawClient.getByName(name).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by name.
      */
-    public CompletableFuture<GetOrganizationByNameResponseContent> getByName(
-            String name, RequestOptions requestOptions) {
-        return this.rawClient.getByName(name, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationByNameResponseContent> getByName(String name, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by ID.
      */
     public CompletableFuture<GetOrganizationResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Organization specified by ID.
      */
     public CompletableFuture<GetOrganizationResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -189,7 +187,7 @@ public class AsyncOrganizationsClient {
      * <p><b>Note</b>: Members are automatically disassociated from an Organization when it is deleted. However, this action does <b>not</b> delete these users from your tenant.</p>
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -197,60 +195,58 @@ public class AsyncOrganizationsClient {
      * <p><b>Note</b>: Members are automatically disassociated from an Organization when it is deleted. However, this action does <b>not</b> delete these users from your tenant.</p>
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
     public CompletableFuture<UpdateOrganizationResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
     public CompletableFuture<UpdateOrganizationResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
-    public CompletableFuture<UpdateOrganizationResponseContent> update(
-            String id, UpdateOrganizationRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationResponseContent> update(String id, UpdateOrganizationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/create-organizations">Organization</a>, such as name and display name, branding options, and metadata.
      */
-    public CompletableFuture<UpdateOrganizationResponseContent> update(
-            String id, UpdateOrganizationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationResponseContent> update(String id, UpdateOrganizationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncClientGrantsClient clientGrants() {
-        return this.clientGrantsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncDiscoveryDomainsClient discoveryDomains() {
-        return this.discoveryDomainsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncEnabledConnectionsClient enabledConnections() {
-        return this.enabledConnectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncInvitationsClient invitations() {
-        return this.invitationsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncMembersClient members() {
-        return this.membersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

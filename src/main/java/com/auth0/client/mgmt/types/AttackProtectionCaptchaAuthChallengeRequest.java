@@ -18,6 +18,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AttackProtectionCaptchaAuthChallengeRequest.Builder.class)
 public final class AttackProtectionCaptchaAuthChallengeRequest {
+
     private final boolean failOpen;
 
     private final Map<String, Object> additionalProperties;
@@ -32,19 +33,17 @@ public final class AttackProtectionCaptchaAuthChallengeRequest {
      */
     @JsonProperty("fail_open")
     public boolean getFailOpen() {
-        return failOpen;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AttackProtectionCaptchaAuthChallengeRequest
-                && equalTo((AttackProtectionCaptchaAuthChallengeRequest) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AttackProtectionCaptchaAuthChallengeRequest other) {
@@ -53,19 +52,20 @@ public final class AttackProtectionCaptchaAuthChallengeRequest {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.failOpen);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FailOpenStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface FailOpenStage {
+
         /**
          * <p>Whether the auth challenge should fail open.</p>
          */
@@ -75,6 +75,7 @@ public final class AttackProtectionCaptchaAuthChallengeRequest {
     }
 
     public interface _FinalStage {
+
         AttackProtectionCaptchaAuthChallengeRequest build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +85,18 @@ public final class AttackProtectionCaptchaAuthChallengeRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements FailOpenStage, _FinalStage {
+
         private boolean failOpen;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(AttackProtectionCaptchaAuthChallengeRequest other) {
-            failOpen(other.getFailOpen());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +107,22 @@ public final class AttackProtectionCaptchaAuthChallengeRequest {
         @java.lang.Override
         @JsonSetter("fail_open")
         public _FinalStage failOpen(boolean failOpen) {
-            this.failOpen = failOpen;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public AttackProtectionCaptchaAuthChallengeRequest build() {
-            return new AttackProtectionCaptchaAuthChallengeRequest(failOpen, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

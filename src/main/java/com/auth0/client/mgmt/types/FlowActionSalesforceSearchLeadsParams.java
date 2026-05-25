@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionSalesforceSearchLeadsParams.Builder.class)
 public final class FlowActionSalesforceSearchLeadsParams {
+
     private final String connectionId;
 
     private final FlowActionSalesforceSearchLeadsParamsSearchField searchField;
@@ -32,12 +33,7 @@ public final class FlowActionSalesforceSearchLeadsParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionSalesforceSearchLeadsParams(
-            String connectionId,
-            FlowActionSalesforceSearchLeadsParamsSearchField searchField,
-            String searchValue,
-            List<String> leadFields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionSalesforceSearchLeadsParams(String connectionId, FlowActionSalesforceSearchLeadsParamsSearchField searchField, String searchValue, List<String> leadFields, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.searchField = searchField;
         this.searchValue = searchValue;
@@ -47,72 +43,71 @@ public final class FlowActionSalesforceSearchLeadsParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("search_field")
     public FlowActionSalesforceSearchLeadsParamsSearchField getSearchField() {
-        return searchField;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("search_value")
     public String getSearchValue() {
-        return searchValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("lead_fields")
     public List<String> getLeadFields() {
-        return leadFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSalesforceSearchLeadsParams
-                && equalTo((FlowActionSalesforceSearchLeadsParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSalesforceSearchLeadsParams other) {
-        return connectionId.equals(other.connectionId)
-                && searchField.equals(other.searchField)
-                && searchValue.equals(other.searchValue)
-                && leadFields.equals(other.leadFields);
+        return connectionId.equals(other.connectionId) && searchField.equals(other.searchField) && searchValue.equals(other.searchValue) && leadFields.equals(other.leadFields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.searchField, this.searchValue, this.leadFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         SearchFieldStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionSalesforceSearchLeadsParams other);
     }
 
     public interface SearchFieldStage {
+
         SearchValueStage searchField(@NotNull FlowActionSalesforceSearchLeadsParamsSearchField searchField);
     }
 
     public interface SearchValueStage {
+
         _FinalStage searchValue(@NotNull String searchValue);
     }
 
     public interface _FinalStage {
+
         FlowActionSalesforceSearchLeadsParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -128,6 +123,7 @@ public final class FlowActionSalesforceSearchLeadsParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, SearchFieldStage, SearchValueStage, _FinalStage {
+
         private String connectionId;
 
         private FlowActionSalesforceSearchLeadsParamsSearchField searchField;
@@ -139,78 +135,61 @@ public final class FlowActionSalesforceSearchLeadsParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionSalesforceSearchLeadsParams other) {
-            connectionId(other.getConnectionId());
-            searchField(other.getSearchField());
-            searchValue(other.getSearchValue());
-            leadFields(other.getLeadFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public SearchFieldStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("search_field")
         public SearchValueStage searchField(@NotNull FlowActionSalesforceSearchLeadsParamsSearchField searchField) {
-            this.searchField = Objects.requireNonNull(searchField, "searchField must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("search_value")
         public _FinalStage searchValue(@NotNull String searchValue) {
-            this.searchValue = Objects.requireNonNull(searchValue, "searchValue must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllLeadFields(List<String> leadFields) {
-            if (leadFields != null) {
-                this.leadFields.addAll(leadFields);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addLeadFields(String leadFields) {
-            this.leadFields.add(leadFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "lead_fields", nulls = Nulls.SKIP)
         public _FinalStage leadFields(List<String> leadFields) {
-            this.leadFields.clear();
-            if (leadFields != null) {
-                this.leadFields.addAll(leadFields);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionSalesforceSearchLeadsParams build() {
-            return new FlowActionSalesforceSearchLeadsParams(
-                    connectionId, searchField, searchValue, leadFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

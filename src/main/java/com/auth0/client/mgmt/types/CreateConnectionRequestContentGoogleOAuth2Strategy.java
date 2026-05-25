@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentGoogleOAuth2Strategy {
-    public static final CreateConnectionRequestContentGoogleOAuth2Strategy GOOGLE_OAUTH2 =
-            new CreateConnectionRequestContentGoogleOAuth2Strategy(Value.GOOGLE_OAUTH2, "google-oauth2");
+
+    public static final CreateConnectionRequestContentGoogleOAuth2Strategy GOOGLE_OAUTH2 = new CreateConnectionRequestContentGoogleOAuth2Strategy(Value.GOOGLE_OAUTH2, "google-oauth2");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentGoogleOAuth2Strategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentGoogleOAuth2Strategy
-                        && this.string.equals(((CreateConnectionRequestContentGoogleOAuth2Strategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GOOGLE_OAUTH2:
-                return visitor.visitGoogleOauth2();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentGoogleOAuth2Strategy valueOf(String value) {
-        switch (value) {
-            case "google-oauth2":
-                return GOOGLE_OAUTH2;
-            default:
-                return new CreateConnectionRequestContentGoogleOAuth2Strategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GOOGLE_OAUTH2,
 
-        UNKNOWN
+        GOOGLE_OAUTH2, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGoogleOauth2();
 
         T visitUnknown(String unknownType);

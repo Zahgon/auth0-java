@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsIdpinitiatedSaml.Builder.class)
 public final class ConnectionOptionsIdpinitiatedSaml {
+
     private final Optional<String> clientAuthorizequery;
 
     private final Optional<String> clientId;
@@ -30,12 +31,7 @@ public final class ConnectionOptionsIdpinitiatedSaml {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsIdpinitiatedSaml(
-            Optional<String> clientAuthorizequery,
-            Optional<String> clientId,
-            Optional<ConnectionOptionsIdpInitiatedClientProtocolEnumSaml> clientProtocol,
-            Optional<Boolean> enabled,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsIdpinitiatedSaml(Optional<String> clientAuthorizequery, Optional<String> clientId, Optional<ConnectionOptionsIdpInitiatedClientProtocolEnumSaml> clientProtocol, Optional<Boolean> enabled, Map<String, Object> additionalProperties) {
         this.clientAuthorizequery = clientAuthorizequery;
         this.clientId = clientId;
         this.clientProtocol = clientProtocol;
@@ -48,7 +44,7 @@ public final class ConnectionOptionsIdpinitiatedSaml {
      */
     @JsonProperty("client_authorizequery")
     public Optional<String> getClientAuthorizequery() {
-        return clientAuthorizequery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,12 +52,12 @@ public final class ConnectionOptionsIdpinitiatedSaml {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_protocol")
     public Optional<ConnectionOptionsIdpInitiatedClientProtocolEnumSaml> getClientProtocol() {
-        return clientProtocol;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,43 +65,40 @@ public final class ConnectionOptionsIdpinitiatedSaml {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsIdpinitiatedSaml && equalTo((ConnectionOptionsIdpinitiatedSaml) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsIdpinitiatedSaml other) {
-        return clientAuthorizequery.equals(other.clientAuthorizequery)
-                && clientId.equals(other.clientId)
-                && clientProtocol.equals(other.clientProtocol)
-                && enabled.equals(other.enabled);
+        return clientAuthorizequery.equals(other.clientAuthorizequery) && clientId.equals(other.clientId) && clientProtocol.equals(other.clientProtocol) && enabled.equals(other.enabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientAuthorizequery, this.clientId, this.clientProtocol, this.enabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientAuthorizequery = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -117,14 +110,11 @@ public final class ConnectionOptionsIdpinitiatedSaml {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsIdpinitiatedSaml other) {
-            clientAuthorizequery(other.getClientAuthorizequery());
-            clientId(other.getClientId());
-            clientProtocol(other.getClientProtocol());
-            enabled(other.getEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -132,13 +122,11 @@ public final class ConnectionOptionsIdpinitiatedSaml {
          */
         @JsonSetter(value = "client_authorizequery", nulls = Nulls.SKIP)
         public Builder clientAuthorizequery(Optional<String> clientAuthorizequery) {
-            this.clientAuthorizequery = clientAuthorizequery;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAuthorizequery(String clientAuthorizequery) {
-            this.clientAuthorizequery = Optional.ofNullable(clientAuthorizequery);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -146,24 +134,20 @@ public final class ConnectionOptionsIdpinitiatedSaml {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_protocol", nulls = Nulls.SKIP)
         public Builder clientProtocol(Optional<ConnectionOptionsIdpInitiatedClientProtocolEnumSaml> clientProtocol) {
-            this.clientProtocol = clientProtocol;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientProtocol(ConnectionOptionsIdpInitiatedClientProtocolEnumSaml clientProtocol) {
-            this.clientProtocol = Optional.ofNullable(clientProtocol);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -171,28 +155,23 @@ public final class ConnectionOptionsIdpinitiatedSaml {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsIdpinitiatedSaml build() {
-            return new ConnectionOptionsIdpinitiatedSaml(
-                    clientAuthorizequery, clientId, clientProtocol, enabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,32 +7,24 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionWhatsappSendMessageParamsType {
-    public static final FlowActionWhatsappSendMessageParamsType DOCUMENT =
-            new FlowActionWhatsappSendMessageParamsType(Value.DOCUMENT, "DOCUMENT");
 
-    public static final FlowActionWhatsappSendMessageParamsType TEMPLATE =
-            new FlowActionWhatsappSendMessageParamsType(Value.TEMPLATE, "TEMPLATE");
+    public static final FlowActionWhatsappSendMessageParamsType DOCUMENT = new FlowActionWhatsappSendMessageParamsType(Value.DOCUMENT, "DOCUMENT");
 
-    public static final FlowActionWhatsappSendMessageParamsType TEXT =
-            new FlowActionWhatsappSendMessageParamsType(Value.TEXT, "TEXT");
+    public static final FlowActionWhatsappSendMessageParamsType TEMPLATE = new FlowActionWhatsappSendMessageParamsType(Value.TEMPLATE, "TEMPLATE");
 
-    public static final FlowActionWhatsappSendMessageParamsType INTERACTIVE =
-            new FlowActionWhatsappSendMessageParamsType(Value.INTERACTIVE, "INTERACTIVE");
+    public static final FlowActionWhatsappSendMessageParamsType TEXT = new FlowActionWhatsappSendMessageParamsType(Value.TEXT, "TEXT");
 
-    public static final FlowActionWhatsappSendMessageParamsType AUDIO =
-            new FlowActionWhatsappSendMessageParamsType(Value.AUDIO, "AUDIO");
+    public static final FlowActionWhatsappSendMessageParamsType INTERACTIVE = new FlowActionWhatsappSendMessageParamsType(Value.INTERACTIVE, "INTERACTIVE");
 
-    public static final FlowActionWhatsappSendMessageParamsType CONTACTS =
-            new FlowActionWhatsappSendMessageParamsType(Value.CONTACTS, "CONTACTS");
+    public static final FlowActionWhatsappSendMessageParamsType AUDIO = new FlowActionWhatsappSendMessageParamsType(Value.AUDIO, "AUDIO");
 
-    public static final FlowActionWhatsappSendMessageParamsType IMAGE =
-            new FlowActionWhatsappSendMessageParamsType(Value.IMAGE, "IMAGE");
+    public static final FlowActionWhatsappSendMessageParamsType CONTACTS = new FlowActionWhatsappSendMessageParamsType(Value.CONTACTS, "CONTACTS");
 
-    public static final FlowActionWhatsappSendMessageParamsType LOCATION =
-            new FlowActionWhatsappSendMessageParamsType(Value.LOCATION, "LOCATION");
+    public static final FlowActionWhatsappSendMessageParamsType IMAGE = new FlowActionWhatsappSendMessageParamsType(Value.IMAGE, "IMAGE");
 
-    public static final FlowActionWhatsappSendMessageParamsType STICKER =
-            new FlowActionWhatsappSendMessageParamsType(Value.STICKER, "STICKER");
+    public static final FlowActionWhatsappSendMessageParamsType LOCATION = new FlowActionWhatsappSendMessageParamsType(Value.LOCATION, "LOCATION");
+
+    public static final FlowActionWhatsappSendMessageParamsType STICKER = new FlowActionWhatsappSendMessageParamsType(Value.STICKER, "STICKER");
 
     private final Value value;
 
@@ -44,102 +36,50 @@ public final class FlowActionWhatsappSendMessageParamsType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionWhatsappSendMessageParamsType
-                        && this.string.equals(((FlowActionWhatsappSendMessageParamsType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DOCUMENT:
-                return visitor.visitDocument();
-            case TEMPLATE:
-                return visitor.visitTemplate();
-            case TEXT:
-                return visitor.visitText();
-            case INTERACTIVE:
-                return visitor.visitInteractive();
-            case AUDIO:
-                return visitor.visitAudio();
-            case CONTACTS:
-                return visitor.visitContacts();
-            case IMAGE:
-                return visitor.visitImage();
-            case LOCATION:
-                return visitor.visitLocation();
-            case STICKER:
-                return visitor.visitSticker();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionWhatsappSendMessageParamsType valueOf(String value) {
-        switch (value) {
-            case "DOCUMENT":
-                return DOCUMENT;
-            case "TEMPLATE":
-                return TEMPLATE;
-            case "TEXT":
-                return TEXT;
-            case "INTERACTIVE":
-                return INTERACTIVE;
-            case "AUDIO":
-                return AUDIO;
-            case "CONTACTS":
-                return CONTACTS;
-            case "IMAGE":
-                return IMAGE;
-            case "LOCATION":
-                return LOCATION;
-            case "STICKER":
-                return STICKER;
-            default:
-                return new FlowActionWhatsappSendMessageParamsType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         AUDIO,
-
         CONTACTS,
-
         DOCUMENT,
-
         IMAGE,
-
         INTERACTIVE,
-
         LOCATION,
-
         STICKER,
-
         TEMPLATE,
-
         TEXT,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAudio();
 
         T visitContacts();

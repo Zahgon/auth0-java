@@ -18,6 +18,7 @@ import com.auth0.client.mgmt.types.UserAttributeProfile;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncUserAttributeProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUserAttributeProfilesClient rawClient;
@@ -31,141 +32,132 @@ public class AsyncUserAttributeProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUserAttributeProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
     public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
     public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
-    public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list(
-            ListUserAttributeProfileRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list(ListUserAttributeProfileRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
-    public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list(
-            ListUserAttributeProfileRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserAttributeProfile>> list(ListUserAttributeProfileRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a User Attribute Profile
      */
-    public CompletableFuture<CreateUserAttributeProfileResponseContent> create(
-            CreateUserAttributeProfileRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateUserAttributeProfileResponseContent> create(CreateUserAttributeProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a User Attribute Profile
      */
-    public CompletableFuture<CreateUserAttributeProfileResponseContent> create(
-            CreateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateUserAttributeProfileResponseContent> create(CreateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profile Templates.
      */
     public CompletableFuture<ListUserAttributeProfileTemplateResponseContent> listTemplates() {
-        return this.rawClient.listTemplates().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profile Templates.
      */
-    public CompletableFuture<ListUserAttributeProfileTemplateResponseContent> listTemplates(
-            RequestOptions requestOptions) {
-        return this.rawClient.listTemplates(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ListUserAttributeProfileTemplateResponseContent> listTemplates(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a User Attribute Profile Template.
      */
     public CompletableFuture<GetUserAttributeProfileTemplateResponseContent> getTemplate(String id) {
-        return this.rawClient.getTemplate(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a User Attribute Profile Template.
      */
-    public CompletableFuture<GetUserAttributeProfileTemplateResponseContent> getTemplate(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.getTemplate(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetUserAttributeProfileTemplateResponseContent> getTemplate(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single User Attribute Profile specified by ID.
      */
     public CompletableFuture<GetUserAttributeProfileResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single User Attribute Profile specified by ID.
      */
     public CompletableFuture<GetUserAttributeProfileResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single User Attribute Profile specified by ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single User Attribute Profile specified by ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
     public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
-    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
-    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(
-            String id, UpdateUserAttributeProfileRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(String id, UpdateUserAttributeProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
-    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(
-            String id, UpdateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAttributeProfileResponseContent> update(String id, UpdateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

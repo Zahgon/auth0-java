@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOrgConnectionUpdatedObject.Builder.class)
 public final class EventStreamCloudEventOrgConnectionUpdatedObject {
+
     private final EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization;
 
     private final EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection;
@@ -33,13 +34,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventOrgConnectionUpdatedObject(
-            EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization,
-            EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection,
-            Optional<Boolean> assignMembershipOnLogin,
-            Optional<Boolean> showAsButton,
-            Optional<Boolean> isSignupEnabled,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventOrgConnectionUpdatedObject(EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization, EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection, Optional<Boolean> assignMembershipOnLogin, Optional<Boolean> showAsButton, Optional<Boolean> isSignupEnabled, Map<String, Object> additionalProperties) {
         this.organization = organization;
         this.connection = connection;
         this.assignMembershipOnLogin = assignMembershipOnLogin;
@@ -50,12 +45,12 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
 
     @JsonProperty("organization")
     public EventStreamCloudEventOrgConnectionUpdatedObjectOrganization getOrganization() {
-        return organization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection")
     public EventStreamCloudEventOrgConnectionUpdatedObjectConnection getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +60,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
      */
     @JsonProperty("assign_membership_on_login")
     public Optional<Boolean> getAssignMembershipOnLogin() {
-        return assignMembershipOnLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +69,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
      */
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,59 +78,51 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
      */
     @JsonProperty("is_signup_enabled")
     public Optional<Boolean> getIsSignupEnabled() {
-        return isSignupEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgConnectionUpdatedObject
-                && equalTo((EventStreamCloudEventOrgConnectionUpdatedObject) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgConnectionUpdatedObject other) {
-        return organization.equals(other.organization)
-                && connection.equals(other.connection)
-                && assignMembershipOnLogin.equals(other.assignMembershipOnLogin)
-                && showAsButton.equals(other.showAsButton)
-                && isSignupEnabled.equals(other.isSignupEnabled);
+        return organization.equals(other.organization) && connection.equals(other.connection) && assignMembershipOnLogin.equals(other.assignMembershipOnLogin) && showAsButton.equals(other.showAsButton) && isSignupEnabled.equals(other.isSignupEnabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.organization,
-                this.connection,
-                this.assignMembershipOnLogin,
-                this.showAsButton,
-                this.isSignupEnabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrganizationStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrganizationStage {
+
         ConnectionStage organization(@NotNull EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization);
 
         Builder from(EventStreamCloudEventOrgConnectionUpdatedObject other);
     }
 
     public interface ConnectionStage {
+
         _FinalStage connection(@NotNull EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection);
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventOrgConnectionUpdatedObject build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -170,6 +157,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrganizationStage, ConnectionStage, _FinalStage {
+
         private EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization;
 
         private EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection;
@@ -183,31 +171,24 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventOrgConnectionUpdatedObject other) {
-            organization(other.getOrganization());
-            connection(other.getConnection());
-            assignMembershipOnLogin(other.getAssignMembershipOnLogin());
-            showAsButton(other.getShowAsButton());
-            isSignupEnabled(other.getIsSignupEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("organization")
-        public ConnectionStage organization(
-                @NotNull EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization) {
-            this.organization = Objects.requireNonNull(organization, "organization must not be null");
-            return this;
+        public ConnectionStage organization(@NotNull EventStreamCloudEventOrgConnectionUpdatedObjectOrganization organization) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection")
         public _FinalStage connection(@NotNull EventStreamCloudEventOrgConnectionUpdatedObjectConnection connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -217,8 +198,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
          */
         @java.lang.Override
         public _FinalStage isSignupEnabled(Boolean isSignupEnabled) {
-            this.isSignupEnabled = Optional.ofNullable(isSignupEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -228,8 +208,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
         @java.lang.Override
         @JsonSetter(value = "is_signup_enabled", nulls = Nulls.SKIP)
         public _FinalStage isSignupEnabled(Optional<Boolean> isSignupEnabled) {
-            this.isSignupEnabled = isSignupEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,8 +218,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
          */
         @java.lang.Override
         public _FinalStage showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -250,8 +228,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
         @java.lang.Override
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public _FinalStage showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -262,8 +239,7 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
          */
         @java.lang.Override
         public _FinalStage assignMembershipOnLogin(Boolean assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = Optional.ofNullable(assignMembershipOnLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -274,31 +250,22 @@ public final class EventStreamCloudEventOrgConnectionUpdatedObject {
         @java.lang.Override
         @JsonSetter(value = "assign_membership_on_login", nulls = Nulls.SKIP)
         public _FinalStage assignMembershipOnLogin(Optional<Boolean> assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = assignMembershipOnLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventOrgConnectionUpdatedObject build() {
-            return new EventStreamCloudEventOrgConnectionUpdatedObject(
-                    organization,
-                    connection,
-                    assignMembershipOnLogin,
-                    showAsButton,
-                    isSignupEnabled,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

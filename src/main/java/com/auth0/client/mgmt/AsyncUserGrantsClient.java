@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.UserGrant;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncUserGrantsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUserGrantsClient rawClient;
@@ -25,64 +26,62 @@ public class AsyncUserGrantsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUserGrantsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public CompletableFuture<SyncPagingIterable<UserGrant>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public CompletableFuture<SyncPagingIterable<UserGrant>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
     public CompletableFuture<SyncPagingIterable<UserGrant>> list(ListUserGrantsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the <a href="https://auth0.com/docs/api-auth/which-oauth-flow-to-use">grants</a> associated with your account.
      */
-    public CompletableFuture<SyncPagingIterable<UserGrant>> list(
-            ListUserGrantsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserGrant>> list(ListUserGrantsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public CompletableFuture<Void> deleteByUserId(DeleteUserGrantByUserIdRequestParameters request) {
-        return this.rawClient.deleteByUserId(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
-    public CompletableFuture<Void> deleteByUserId(
-            DeleteUserGrantByUserIdRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.deleteByUserId(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> deleteByUserId(DeleteUserGrantByUserIdRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a grant associated with your account.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

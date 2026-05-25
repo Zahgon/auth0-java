@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsGoogleOAuth2.Builder.class)
 public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<List<String>> allowedAudiences;
@@ -40,8 +41,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
 
     private final Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> adsenseManagement;
 
@@ -175,82 +175,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsGoogleOAuth2(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<List<String>> allowedAudiences,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<String> iconUrl,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> adsenseManagement,
-            Optional<Boolean> analytics,
-            Optional<Boolean> blogger,
-            Optional<Boolean> calendar,
-            Optional<Boolean> calendarAddonsExecute,
-            Optional<Boolean> calendarEvents,
-            Optional<Boolean> calendarEventsReadonly,
-            Optional<Boolean> calendarSettingsReadonly,
-            Optional<Boolean> chromeWebStore,
-            Optional<Boolean> contacts,
-            Optional<Boolean> contactsNew,
-            Optional<Boolean> contactsOtherReadonly,
-            Optional<Boolean> contactsReadonly,
-            Optional<Boolean> contentApiForShopping,
-            Optional<Boolean> coordinate,
-            Optional<Boolean> coordinateReadonly,
-            Optional<Boolean> directoryReadonly,
-            Optional<Boolean> documentList,
-            Optional<Boolean> drive,
-            Optional<Boolean> driveActivity,
-            Optional<Boolean> driveActivityReadonly,
-            Optional<Boolean> driveAppdata,
-            Optional<Boolean> driveAppsReadonly,
-            Optional<Boolean> driveFile,
-            Optional<Boolean> driveMetadata,
-            Optional<Boolean> driveMetadataReadonly,
-            Optional<Boolean> drivePhotosReadonly,
-            Optional<Boolean> driveReadonly,
-            Optional<Boolean> driveScripts,
-            Optional<Boolean> email,
-            Optional<Boolean> gmail,
-            Optional<Boolean> gmailCompose,
-            Optional<Boolean> gmailInsert,
-            Optional<Boolean> gmailLabels,
-            Optional<Boolean> gmailMetadata,
-            Optional<Boolean> gmailModify,
-            Optional<Boolean> gmailNew,
-            Optional<Boolean> gmailReadonly,
-            Optional<Boolean> gmailSend,
-            Optional<Boolean> gmailSettingsBasic,
-            Optional<Boolean> gmailSettingsSharing,
-            Optional<Boolean> googleAffiliateNetwork,
-            Optional<Boolean> googleBooks,
-            Optional<Boolean> googleCloudStorage,
-            Optional<Boolean> googleDrive,
-            Optional<Boolean> googleDriveFiles,
-            Optional<Boolean> googlePlus,
-            Optional<Boolean> latitudeBest,
-            Optional<Boolean> latitudeCity,
-            Optional<Boolean> moderator,
-            Optional<Boolean> offlineAccess,
-            Optional<Boolean> orkut,
-            Optional<Boolean> picasaWeb,
-            Optional<Boolean> profile,
-            Optional<Boolean> sites,
-            Optional<Boolean> tasks,
-            Optional<Boolean> tasksReadonly,
-            Optional<Boolean> urlShortener,
-            Optional<Boolean> webmasterTools,
-            Optional<Boolean> youtube,
-            Optional<Boolean> youtubeChannelmembershipsCreator,
-            Optional<Boolean> youtubeNew,
-            Optional<Boolean> youtubeReadonly,
-            Optional<Boolean> youtubeUpload,
-            Optional<Boolean> youtubepartner,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsGoogleOAuth2(Optional<List<String>> nonPersistentAttrs, Optional<List<String>> allowedAudiences, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<String> iconUrl, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> adsenseManagement, Optional<Boolean> analytics, Optional<Boolean> blogger, Optional<Boolean> calendar, Optional<Boolean> calendarAddonsExecute, Optional<Boolean> calendarEvents, Optional<Boolean> calendarEventsReadonly, Optional<Boolean> calendarSettingsReadonly, Optional<Boolean> chromeWebStore, Optional<Boolean> contacts, Optional<Boolean> contactsNew, Optional<Boolean> contactsOtherReadonly, Optional<Boolean> contactsReadonly, Optional<Boolean> contentApiForShopping, Optional<Boolean> coordinate, Optional<Boolean> coordinateReadonly, Optional<Boolean> directoryReadonly, Optional<Boolean> documentList, Optional<Boolean> drive, Optional<Boolean> driveActivity, Optional<Boolean> driveActivityReadonly, Optional<Boolean> driveAppdata, Optional<Boolean> driveAppsReadonly, Optional<Boolean> driveFile, Optional<Boolean> driveMetadata, Optional<Boolean> driveMetadataReadonly, Optional<Boolean> drivePhotosReadonly, Optional<Boolean> driveReadonly, Optional<Boolean> driveScripts, Optional<Boolean> email, Optional<Boolean> gmail, Optional<Boolean> gmailCompose, Optional<Boolean> gmailInsert, Optional<Boolean> gmailLabels, Optional<Boolean> gmailMetadata, Optional<Boolean> gmailModify, Optional<Boolean> gmailNew, Optional<Boolean> gmailReadonly, Optional<Boolean> gmailSend, Optional<Boolean> gmailSettingsBasic, Optional<Boolean> gmailSettingsSharing, Optional<Boolean> googleAffiliateNetwork, Optional<Boolean> googleBooks, Optional<Boolean> googleCloudStorage, Optional<Boolean> googleDrive, Optional<Boolean> googleDriveFiles, Optional<Boolean> googlePlus, Optional<Boolean> latitudeBest, Optional<Boolean> latitudeCity, Optional<Boolean> moderator, Optional<Boolean> offlineAccess, Optional<Boolean> orkut, Optional<Boolean> picasaWeb, Optional<Boolean> profile, Optional<Boolean> sites, Optional<Boolean> tasks, Optional<Boolean> tasksReadonly, Optional<Boolean> urlShortener, Optional<Boolean> webmasterTools, Optional<Boolean> youtube, Optional<Boolean> youtubeChannelmembershipsCreator, Optional<Boolean> youtubeNew, Optional<Boolean> youtubeReadonly, Optional<Boolean> youtubeUpload, Optional<Boolean> youtubepartner, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.allowedAudiences = allowedAudiences;
         this.clientId = clientId;
@@ -331,51 +256,48 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allowed_audiences")
     public Optional<List<String>> getAllowedAudiences() {
-        return allowedAudiences;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -383,7 +305,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("adsense_management")
     public Optional<Boolean> getAdsenseManagement() {
-        return adsenseManagement;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -391,7 +313,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("analytics")
     public Optional<Boolean> getAnalytics() {
-        return analytics;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -399,7 +321,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("blogger")
     public Optional<Boolean> getBlogger() {
-        return blogger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -407,7 +329,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("calendar")
     public Optional<Boolean> getCalendar() {
-        return calendar;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -415,7 +337,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("calendar_addons_execute")
     public Optional<Boolean> getCalendarAddonsExecute() {
-        return calendarAddonsExecute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -423,7 +345,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("calendar_events")
     public Optional<Boolean> getCalendarEvents() {
-        return calendarEvents;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -431,7 +353,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("calendar_events_readonly")
     public Optional<Boolean> getCalendarEventsReadonly() {
-        return calendarEventsReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -439,7 +361,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("calendar_settings_readonly")
     public Optional<Boolean> getCalendarSettingsReadonly() {
-        return calendarSettingsReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -447,7 +369,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("chrome_web_store")
     public Optional<Boolean> getChromeWebStore() {
-        return chromeWebStore;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -455,7 +377,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("contacts")
     public Optional<Boolean> getContacts() {
-        return contacts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -463,7 +385,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("contacts_new")
     public Optional<Boolean> getContactsNew() {
-        return contactsNew;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -471,7 +393,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("contacts_other_readonly")
     public Optional<Boolean> getContactsOtherReadonly() {
-        return contactsOtherReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -479,7 +401,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("contacts_readonly")
     public Optional<Boolean> getContactsReadonly() {
-        return contactsReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -487,7 +409,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("content_api_for_shopping")
     public Optional<Boolean> getContentApiForShopping() {
-        return contentApiForShopping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -495,7 +417,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("coordinate")
     public Optional<Boolean> getCoordinate() {
-        return coordinate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -503,7 +425,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("coordinate_readonly")
     public Optional<Boolean> getCoordinateReadonly() {
-        return coordinateReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -511,7 +433,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("directory_readonly")
     public Optional<Boolean> getDirectoryReadonly() {
-        return directoryReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -519,7 +441,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("document_list")
     public Optional<Boolean> getDocumentList() {
-        return documentList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -527,7 +449,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive")
     public Optional<Boolean> getDrive() {
-        return drive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -535,7 +457,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_activity")
     public Optional<Boolean> getDriveActivity() {
-        return driveActivity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -543,7 +465,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_activity_readonly")
     public Optional<Boolean> getDriveActivityReadonly() {
-        return driveActivityReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -551,7 +473,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_appdata")
     public Optional<Boolean> getDriveAppdata() {
-        return driveAppdata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -559,7 +481,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_apps_readonly")
     public Optional<Boolean> getDriveAppsReadonly() {
-        return driveAppsReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -567,7 +489,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_file")
     public Optional<Boolean> getDriveFile() {
-        return driveFile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -575,7 +497,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_metadata")
     public Optional<Boolean> getDriveMetadata() {
-        return driveMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -583,7 +505,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_metadata_readonly")
     public Optional<Boolean> getDriveMetadataReadonly() {
-        return driveMetadataReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -591,7 +513,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_photos_readonly")
     public Optional<Boolean> getDrivePhotosReadonly() {
-        return drivePhotosReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -599,7 +521,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_readonly")
     public Optional<Boolean> getDriveReadonly() {
-        return driveReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -607,7 +529,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("drive_scripts")
     public Optional<Boolean> getDriveScripts() {
-        return driveScripts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -615,7 +537,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -623,7 +545,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail")
     public Optional<Boolean> getGmail() {
-        return gmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -631,7 +553,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_compose")
     public Optional<Boolean> getGmailCompose() {
-        return gmailCompose;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -639,7 +561,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_insert")
     public Optional<Boolean> getGmailInsert() {
-        return gmailInsert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -647,7 +569,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_labels")
     public Optional<Boolean> getGmailLabels() {
-        return gmailLabels;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -655,7 +577,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_metadata")
     public Optional<Boolean> getGmailMetadata() {
-        return gmailMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -663,7 +585,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_modify")
     public Optional<Boolean> getGmailModify() {
-        return gmailModify;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -671,7 +593,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_new")
     public Optional<Boolean> getGmailNew() {
-        return gmailNew;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -679,7 +601,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_readonly")
     public Optional<Boolean> getGmailReadonly() {
-        return gmailReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -687,7 +609,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_send")
     public Optional<Boolean> getGmailSend() {
-        return gmailSend;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -695,7 +617,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_settings_basic")
     public Optional<Boolean> getGmailSettingsBasic() {
-        return gmailSettingsBasic;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -703,7 +625,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("gmail_settings_sharing")
     public Optional<Boolean> getGmailSettingsSharing() {
-        return gmailSettingsSharing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -711,7 +633,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_affiliate_network")
     public Optional<Boolean> getGoogleAffiliateNetwork() {
-        return googleAffiliateNetwork;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -719,7 +641,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_books")
     public Optional<Boolean> getGoogleBooks() {
-        return googleBooks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -727,7 +649,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_cloud_storage")
     public Optional<Boolean> getGoogleCloudStorage() {
-        return googleCloudStorage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -735,7 +657,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_drive")
     public Optional<Boolean> getGoogleDrive() {
-        return googleDrive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -743,7 +665,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_drive_files")
     public Optional<Boolean> getGoogleDriveFiles() {
-        return googleDriveFiles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -751,7 +673,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("google_plus")
     public Optional<Boolean> getGooglePlus() {
-        return googlePlus;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -759,7 +681,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("latitude_best")
     public Optional<Boolean> getLatitudeBest() {
-        return latitudeBest;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -767,7 +689,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("latitude_city")
     public Optional<Boolean> getLatitudeCity() {
-        return latitudeCity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -775,7 +697,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("moderator")
     public Optional<Boolean> getModerator() {
-        return moderator;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -783,7 +705,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("offline_access")
     public Optional<Boolean> getOfflineAccess() {
-        return offlineAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -791,7 +713,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("orkut")
     public Optional<Boolean> getOrkut() {
-        return orkut;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -799,7 +721,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("picasa_web")
     public Optional<Boolean> getPicasaWeb() {
-        return picasaWeb;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -807,7 +729,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("profile")
     public Optional<Boolean> getProfile() {
-        return profile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -815,7 +737,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("sites")
     public Optional<Boolean> getSites() {
-        return sites;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -823,7 +745,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("tasks")
     public Optional<Boolean> getTasks() {
-        return tasks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -831,7 +753,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("tasks_readonly")
     public Optional<Boolean> getTasksReadonly() {
-        return tasksReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -839,7 +761,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("url_shortener")
     public Optional<Boolean> getUrlShortener() {
-        return urlShortener;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -847,7 +769,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("webmaster_tools")
     public Optional<Boolean> getWebmasterTools() {
-        return webmasterTools;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -855,7 +777,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtube")
     public Optional<Boolean> getYoutube() {
-        return youtube;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -863,7 +785,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtube_channelmemberships_creator")
     public Optional<Boolean> getYoutubeChannelmembershipsCreator() {
-        return youtubeChannelmembershipsCreator;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -871,7 +793,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtube_new")
     public Optional<Boolean> getYoutubeNew() {
-        return youtubeNew;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -879,7 +801,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtube_readonly")
     public Optional<Boolean> getYoutubeReadonly() {
-        return youtubeReadonly;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -887,7 +809,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtube_upload")
     public Optional<Boolean> getYoutubeUpload() {
-        return youtubeUpload;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -895,194 +817,46 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
      */
     @JsonProperty("youtubepartner")
     public Optional<Boolean> getYoutubepartner() {
-        return youtubepartner;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsGoogleOAuth2 && equalTo((ConnectionOptionsGoogleOAuth2) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsGoogleOAuth2 other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && allowedAudiences.equals(other.allowedAudiences)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && iconUrl.equals(other.iconUrl)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && upstreamParams.equals(other.upstreamParams)
-                && adsenseManagement.equals(other.adsenseManagement)
-                && analytics.equals(other.analytics)
-                && blogger.equals(other.blogger)
-                && calendar.equals(other.calendar)
-                && calendarAddonsExecute.equals(other.calendarAddonsExecute)
-                && calendarEvents.equals(other.calendarEvents)
-                && calendarEventsReadonly.equals(other.calendarEventsReadonly)
-                && calendarSettingsReadonly.equals(other.calendarSettingsReadonly)
-                && chromeWebStore.equals(other.chromeWebStore)
-                && contacts.equals(other.contacts)
-                && contactsNew.equals(other.contactsNew)
-                && contactsOtherReadonly.equals(other.contactsOtherReadonly)
-                && contactsReadonly.equals(other.contactsReadonly)
-                && contentApiForShopping.equals(other.contentApiForShopping)
-                && coordinate.equals(other.coordinate)
-                && coordinateReadonly.equals(other.coordinateReadonly)
-                && directoryReadonly.equals(other.directoryReadonly)
-                && documentList.equals(other.documentList)
-                && drive.equals(other.drive)
-                && driveActivity.equals(other.driveActivity)
-                && driveActivityReadonly.equals(other.driveActivityReadonly)
-                && driveAppdata.equals(other.driveAppdata)
-                && driveAppsReadonly.equals(other.driveAppsReadonly)
-                && driveFile.equals(other.driveFile)
-                && driveMetadata.equals(other.driveMetadata)
-                && driveMetadataReadonly.equals(other.driveMetadataReadonly)
-                && drivePhotosReadonly.equals(other.drivePhotosReadonly)
-                && driveReadonly.equals(other.driveReadonly)
-                && driveScripts.equals(other.driveScripts)
-                && email.equals(other.email)
-                && gmail.equals(other.gmail)
-                && gmailCompose.equals(other.gmailCompose)
-                && gmailInsert.equals(other.gmailInsert)
-                && gmailLabels.equals(other.gmailLabels)
-                && gmailMetadata.equals(other.gmailMetadata)
-                && gmailModify.equals(other.gmailModify)
-                && gmailNew.equals(other.gmailNew)
-                && gmailReadonly.equals(other.gmailReadonly)
-                && gmailSend.equals(other.gmailSend)
-                && gmailSettingsBasic.equals(other.gmailSettingsBasic)
-                && gmailSettingsSharing.equals(other.gmailSettingsSharing)
-                && googleAffiliateNetwork.equals(other.googleAffiliateNetwork)
-                && googleBooks.equals(other.googleBooks)
-                && googleCloudStorage.equals(other.googleCloudStorage)
-                && googleDrive.equals(other.googleDrive)
-                && googleDriveFiles.equals(other.googleDriveFiles)
-                && googlePlus.equals(other.googlePlus)
-                && latitudeBest.equals(other.latitudeBest)
-                && latitudeCity.equals(other.latitudeCity)
-                && moderator.equals(other.moderator)
-                && offlineAccess.equals(other.offlineAccess)
-                && orkut.equals(other.orkut)
-                && picasaWeb.equals(other.picasaWeb)
-                && profile.equals(other.profile)
-                && sites.equals(other.sites)
-                && tasks.equals(other.tasks)
-                && tasksReadonly.equals(other.tasksReadonly)
-                && urlShortener.equals(other.urlShortener)
-                && webmasterTools.equals(other.webmasterTools)
-                && youtube.equals(other.youtube)
-                && youtubeChannelmembershipsCreator.equals(other.youtubeChannelmembershipsCreator)
-                && youtubeNew.equals(other.youtubeNew)
-                && youtubeReadonly.equals(other.youtubeReadonly)
-                && youtubeUpload.equals(other.youtubeUpload)
-                && youtubepartner.equals(other.youtubepartner);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && allowedAudiences.equals(other.allowedAudiences) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && iconUrl.equals(other.iconUrl) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && upstreamParams.equals(other.upstreamParams) && adsenseManagement.equals(other.adsenseManagement) && analytics.equals(other.analytics) && blogger.equals(other.blogger) && calendar.equals(other.calendar) && calendarAddonsExecute.equals(other.calendarAddonsExecute) && calendarEvents.equals(other.calendarEvents) && calendarEventsReadonly.equals(other.calendarEventsReadonly) && calendarSettingsReadonly.equals(other.calendarSettingsReadonly) && chromeWebStore.equals(other.chromeWebStore) && contacts.equals(other.contacts) && contactsNew.equals(other.contactsNew) && contactsOtherReadonly.equals(other.contactsOtherReadonly) && contactsReadonly.equals(other.contactsReadonly) && contentApiForShopping.equals(other.contentApiForShopping) && coordinate.equals(other.coordinate) && coordinateReadonly.equals(other.coordinateReadonly) && directoryReadonly.equals(other.directoryReadonly) && documentList.equals(other.documentList) && drive.equals(other.drive) && driveActivity.equals(other.driveActivity) && driveActivityReadonly.equals(other.driveActivityReadonly) && driveAppdata.equals(other.driveAppdata) && driveAppsReadonly.equals(other.driveAppsReadonly) && driveFile.equals(other.driveFile) && driveMetadata.equals(other.driveMetadata) && driveMetadataReadonly.equals(other.driveMetadataReadonly) && drivePhotosReadonly.equals(other.drivePhotosReadonly) && driveReadonly.equals(other.driveReadonly) && driveScripts.equals(other.driveScripts) && email.equals(other.email) && gmail.equals(other.gmail) && gmailCompose.equals(other.gmailCompose) && gmailInsert.equals(other.gmailInsert) && gmailLabels.equals(other.gmailLabels) && gmailMetadata.equals(other.gmailMetadata) && gmailModify.equals(other.gmailModify) && gmailNew.equals(other.gmailNew) && gmailReadonly.equals(other.gmailReadonly) && gmailSend.equals(other.gmailSend) && gmailSettingsBasic.equals(other.gmailSettingsBasic) && gmailSettingsSharing.equals(other.gmailSettingsSharing) && googleAffiliateNetwork.equals(other.googleAffiliateNetwork) && googleBooks.equals(other.googleBooks) && googleCloudStorage.equals(other.googleCloudStorage) && googleDrive.equals(other.googleDrive) && googleDriveFiles.equals(other.googleDriveFiles) && googlePlus.equals(other.googlePlus) && latitudeBest.equals(other.latitudeBest) && latitudeCity.equals(other.latitudeCity) && moderator.equals(other.moderator) && offlineAccess.equals(other.offlineAccess) && orkut.equals(other.orkut) && picasaWeb.equals(other.picasaWeb) && profile.equals(other.profile) && sites.equals(other.sites) && tasks.equals(other.tasks) && tasksReadonly.equals(other.tasksReadonly) && urlShortener.equals(other.urlShortener) && webmasterTools.equals(other.webmasterTools) && youtube.equals(other.youtube) && youtubeChannelmembershipsCreator.equals(other.youtubeChannelmembershipsCreator) && youtubeNew.equals(other.youtubeNew) && youtubeReadonly.equals(other.youtubeReadonly) && youtubeUpload.equals(other.youtubeUpload) && youtubepartner.equals(other.youtubepartner);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.allowedAudiences,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.iconUrl,
-                this.scope,
-                this.setUserRootAttributes,
-                this.upstreamParams,
-                this.adsenseManagement,
-                this.analytics,
-                this.blogger,
-                this.calendar,
-                this.calendarAddonsExecute,
-                this.calendarEvents,
-                this.calendarEventsReadonly,
-                this.calendarSettingsReadonly,
-                this.chromeWebStore,
-                this.contacts,
-                this.contactsNew,
-                this.contactsOtherReadonly,
-                this.contactsReadonly,
-                this.contentApiForShopping,
-                this.coordinate,
-                this.coordinateReadonly,
-                this.directoryReadonly,
-                this.documentList,
-                this.drive,
-                this.driveActivity,
-                this.driveActivityReadonly,
-                this.driveAppdata,
-                this.driveAppsReadonly,
-                this.driveFile,
-                this.driveMetadata,
-                this.driveMetadataReadonly,
-                this.drivePhotosReadonly,
-                this.driveReadonly,
-                this.driveScripts,
-                this.email,
-                this.gmail,
-                this.gmailCompose,
-                this.gmailInsert,
-                this.gmailLabels,
-                this.gmailMetadata,
-                this.gmailModify,
-                this.gmailNew,
-                this.gmailReadonly,
-                this.gmailSend,
-                this.gmailSettingsBasic,
-                this.gmailSettingsSharing,
-                this.googleAffiliateNetwork,
-                this.googleBooks,
-                this.googleCloudStorage,
-                this.googleDrive,
-                this.googleDriveFiles,
-                this.googlePlus,
-                this.latitudeBest,
-                this.latitudeCity,
-                this.moderator,
-                this.offlineAccess,
-                this.orkut,
-                this.picasaWeb,
-                this.profile,
-                this.sites,
-                this.tasks,
-                this.tasksReadonly,
-                this.urlShortener,
-                this.webmasterTools,
-                this.youtube,
-                this.youtubeChannelmembershipsCreator,
-                this.youtubeNew,
-                this.youtubeReadonly,
-                this.youtubeUpload,
-                this.youtubepartner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<List<String>> allowedAudiences = Optional.empty();
@@ -1099,8 +873,7 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<Boolean> adsenseManagement = Optional.empty();
 
@@ -1235,211 +1008,100 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsGoogleOAuth2 other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            allowedAudiences(other.getAllowedAudiences());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            iconUrl(other.getIconUrl());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            upstreamParams(other.getUpstreamParams());
-            adsenseManagement(other.getAdsenseManagement());
-            analytics(other.getAnalytics());
-            blogger(other.getBlogger());
-            calendar(other.getCalendar());
-            calendarAddonsExecute(other.getCalendarAddonsExecute());
-            calendarEvents(other.getCalendarEvents());
-            calendarEventsReadonly(other.getCalendarEventsReadonly());
-            calendarSettingsReadonly(other.getCalendarSettingsReadonly());
-            chromeWebStore(other.getChromeWebStore());
-            contacts(other.getContacts());
-            contactsNew(other.getContactsNew());
-            contactsOtherReadonly(other.getContactsOtherReadonly());
-            contactsReadonly(other.getContactsReadonly());
-            contentApiForShopping(other.getContentApiForShopping());
-            coordinate(other.getCoordinate());
-            coordinateReadonly(other.getCoordinateReadonly());
-            directoryReadonly(other.getDirectoryReadonly());
-            documentList(other.getDocumentList());
-            drive(other.getDrive());
-            driveActivity(other.getDriveActivity());
-            driveActivityReadonly(other.getDriveActivityReadonly());
-            driveAppdata(other.getDriveAppdata());
-            driveAppsReadonly(other.getDriveAppsReadonly());
-            driveFile(other.getDriveFile());
-            driveMetadata(other.getDriveMetadata());
-            driveMetadataReadonly(other.getDriveMetadataReadonly());
-            drivePhotosReadonly(other.getDrivePhotosReadonly());
-            driveReadonly(other.getDriveReadonly());
-            driveScripts(other.getDriveScripts());
-            email(other.getEmail());
-            gmail(other.getGmail());
-            gmailCompose(other.getGmailCompose());
-            gmailInsert(other.getGmailInsert());
-            gmailLabels(other.getGmailLabels());
-            gmailMetadata(other.getGmailMetadata());
-            gmailModify(other.getGmailModify());
-            gmailNew(other.getGmailNew());
-            gmailReadonly(other.getGmailReadonly());
-            gmailSend(other.getGmailSend());
-            gmailSettingsBasic(other.getGmailSettingsBasic());
-            gmailSettingsSharing(other.getGmailSettingsSharing());
-            googleAffiliateNetwork(other.getGoogleAffiliateNetwork());
-            googleBooks(other.getGoogleBooks());
-            googleCloudStorage(other.getGoogleCloudStorage());
-            googleDrive(other.getGoogleDrive());
-            googleDriveFiles(other.getGoogleDriveFiles());
-            googlePlus(other.getGooglePlus());
-            latitudeBest(other.getLatitudeBest());
-            latitudeCity(other.getLatitudeCity());
-            moderator(other.getModerator());
-            offlineAccess(other.getOfflineAccess());
-            orkut(other.getOrkut());
-            picasaWeb(other.getPicasaWeb());
-            profile(other.getProfile());
-            sites(other.getSites());
-            tasks(other.getTasks());
-            tasksReadonly(other.getTasksReadonly());
-            urlShortener(other.getUrlShortener());
-            webmasterTools(other.getWebmasterTools());
-            youtube(other.getYoutube());
-            youtubeChannelmembershipsCreator(other.getYoutubeChannelmembershipsCreator());
-            youtubeNew(other.getYoutubeNew());
-            youtubeReadonly(other.getYoutubeReadonly());
-            youtubeUpload(other.getYoutubeUpload());
-            youtubepartner(other.getYoutubepartner());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "allowed_audiences", nulls = Nulls.SKIP)
         public Builder allowedAudiences(Optional<List<String>> allowedAudiences) {
-            this.allowedAudiences = allowedAudiences;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Optional.ofNullable(allowedAudiences);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public Builder iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1447,13 +1109,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "adsense_management", nulls = Nulls.SKIP)
         public Builder adsenseManagement(Optional<Boolean> adsenseManagement) {
-            this.adsenseManagement = adsenseManagement;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adsenseManagement(Boolean adsenseManagement) {
-            this.adsenseManagement = Optional.ofNullable(adsenseManagement);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1461,13 +1121,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "analytics", nulls = Nulls.SKIP)
         public Builder analytics(Optional<Boolean> analytics) {
-            this.analytics = analytics;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder analytics(Boolean analytics) {
-            this.analytics = Optional.ofNullable(analytics);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1475,13 +1133,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "blogger", nulls = Nulls.SKIP)
         public Builder blogger(Optional<Boolean> blogger) {
-            this.blogger = blogger;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blogger(Boolean blogger) {
-            this.blogger = Optional.ofNullable(blogger);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1489,13 +1145,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "calendar", nulls = Nulls.SKIP)
         public Builder calendar(Optional<Boolean> calendar) {
-            this.calendar = calendar;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendar(Boolean calendar) {
-            this.calendar = Optional.ofNullable(calendar);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1503,13 +1157,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "calendar_addons_execute", nulls = Nulls.SKIP)
         public Builder calendarAddonsExecute(Optional<Boolean> calendarAddonsExecute) {
-            this.calendarAddonsExecute = calendarAddonsExecute;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendarAddonsExecute(Boolean calendarAddonsExecute) {
-            this.calendarAddonsExecute = Optional.ofNullable(calendarAddonsExecute);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1517,13 +1169,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "calendar_events", nulls = Nulls.SKIP)
         public Builder calendarEvents(Optional<Boolean> calendarEvents) {
-            this.calendarEvents = calendarEvents;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendarEvents(Boolean calendarEvents) {
-            this.calendarEvents = Optional.ofNullable(calendarEvents);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1531,13 +1181,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "calendar_events_readonly", nulls = Nulls.SKIP)
         public Builder calendarEventsReadonly(Optional<Boolean> calendarEventsReadonly) {
-            this.calendarEventsReadonly = calendarEventsReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendarEventsReadonly(Boolean calendarEventsReadonly) {
-            this.calendarEventsReadonly = Optional.ofNullable(calendarEventsReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1545,13 +1193,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "calendar_settings_readonly", nulls = Nulls.SKIP)
         public Builder calendarSettingsReadonly(Optional<Boolean> calendarSettingsReadonly) {
-            this.calendarSettingsReadonly = calendarSettingsReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendarSettingsReadonly(Boolean calendarSettingsReadonly) {
-            this.calendarSettingsReadonly = Optional.ofNullable(calendarSettingsReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1559,13 +1205,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "chrome_web_store", nulls = Nulls.SKIP)
         public Builder chromeWebStore(Optional<Boolean> chromeWebStore) {
-            this.chromeWebStore = chromeWebStore;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder chromeWebStore(Boolean chromeWebStore) {
-            this.chromeWebStore = Optional.ofNullable(chromeWebStore);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1573,13 +1217,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "contacts", nulls = Nulls.SKIP)
         public Builder contacts(Optional<Boolean> contacts) {
-            this.contacts = contacts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contacts(Boolean contacts) {
-            this.contacts = Optional.ofNullable(contacts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1587,13 +1229,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "contacts_new", nulls = Nulls.SKIP)
         public Builder contactsNew(Optional<Boolean> contactsNew) {
-            this.contactsNew = contactsNew;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsNew(Boolean contactsNew) {
-            this.contactsNew = Optional.ofNullable(contactsNew);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1601,13 +1241,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "contacts_other_readonly", nulls = Nulls.SKIP)
         public Builder contactsOtherReadonly(Optional<Boolean> contactsOtherReadonly) {
-            this.contactsOtherReadonly = contactsOtherReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsOtherReadonly(Boolean contactsOtherReadonly) {
-            this.contactsOtherReadonly = Optional.ofNullable(contactsOtherReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1615,13 +1253,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "contacts_readonly", nulls = Nulls.SKIP)
         public Builder contactsReadonly(Optional<Boolean> contactsReadonly) {
-            this.contactsReadonly = contactsReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsReadonly(Boolean contactsReadonly) {
-            this.contactsReadonly = Optional.ofNullable(contactsReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1629,13 +1265,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "content_api_for_shopping", nulls = Nulls.SKIP)
         public Builder contentApiForShopping(Optional<Boolean> contentApiForShopping) {
-            this.contentApiForShopping = contentApiForShopping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contentApiForShopping(Boolean contentApiForShopping) {
-            this.contentApiForShopping = Optional.ofNullable(contentApiForShopping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1643,13 +1277,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "coordinate", nulls = Nulls.SKIP)
         public Builder coordinate(Optional<Boolean> coordinate) {
-            this.coordinate = coordinate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder coordinate(Boolean coordinate) {
-            this.coordinate = Optional.ofNullable(coordinate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1657,13 +1289,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "coordinate_readonly", nulls = Nulls.SKIP)
         public Builder coordinateReadonly(Optional<Boolean> coordinateReadonly) {
-            this.coordinateReadonly = coordinateReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder coordinateReadonly(Boolean coordinateReadonly) {
-            this.coordinateReadonly = Optional.ofNullable(coordinateReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1671,13 +1301,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "directory_readonly", nulls = Nulls.SKIP)
         public Builder directoryReadonly(Optional<Boolean> directoryReadonly) {
-            this.directoryReadonly = directoryReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder directoryReadonly(Boolean directoryReadonly) {
-            this.directoryReadonly = Optional.ofNullable(directoryReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1685,13 +1313,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "document_list", nulls = Nulls.SKIP)
         public Builder documentList(Optional<Boolean> documentList) {
-            this.documentList = documentList;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder documentList(Boolean documentList) {
-            this.documentList = Optional.ofNullable(documentList);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1699,13 +1325,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive", nulls = Nulls.SKIP)
         public Builder drive(Optional<Boolean> drive) {
-            this.drive = drive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder drive(Boolean drive) {
-            this.drive = Optional.ofNullable(drive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1713,13 +1337,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_activity", nulls = Nulls.SKIP)
         public Builder driveActivity(Optional<Boolean> driveActivity) {
-            this.driveActivity = driveActivity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveActivity(Boolean driveActivity) {
-            this.driveActivity = Optional.ofNullable(driveActivity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1727,13 +1349,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_activity_readonly", nulls = Nulls.SKIP)
         public Builder driveActivityReadonly(Optional<Boolean> driveActivityReadonly) {
-            this.driveActivityReadonly = driveActivityReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveActivityReadonly(Boolean driveActivityReadonly) {
-            this.driveActivityReadonly = Optional.ofNullable(driveActivityReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1741,13 +1361,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_appdata", nulls = Nulls.SKIP)
         public Builder driveAppdata(Optional<Boolean> driveAppdata) {
-            this.driveAppdata = driveAppdata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveAppdata(Boolean driveAppdata) {
-            this.driveAppdata = Optional.ofNullable(driveAppdata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1755,13 +1373,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_apps_readonly", nulls = Nulls.SKIP)
         public Builder driveAppsReadonly(Optional<Boolean> driveAppsReadonly) {
-            this.driveAppsReadonly = driveAppsReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveAppsReadonly(Boolean driveAppsReadonly) {
-            this.driveAppsReadonly = Optional.ofNullable(driveAppsReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1769,13 +1385,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_file", nulls = Nulls.SKIP)
         public Builder driveFile(Optional<Boolean> driveFile) {
-            this.driveFile = driveFile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveFile(Boolean driveFile) {
-            this.driveFile = Optional.ofNullable(driveFile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1783,13 +1397,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_metadata", nulls = Nulls.SKIP)
         public Builder driveMetadata(Optional<Boolean> driveMetadata) {
-            this.driveMetadata = driveMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveMetadata(Boolean driveMetadata) {
-            this.driveMetadata = Optional.ofNullable(driveMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1797,13 +1409,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_metadata_readonly", nulls = Nulls.SKIP)
         public Builder driveMetadataReadonly(Optional<Boolean> driveMetadataReadonly) {
-            this.driveMetadataReadonly = driveMetadataReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveMetadataReadonly(Boolean driveMetadataReadonly) {
-            this.driveMetadataReadonly = Optional.ofNullable(driveMetadataReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1811,13 +1421,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_photos_readonly", nulls = Nulls.SKIP)
         public Builder drivePhotosReadonly(Optional<Boolean> drivePhotosReadonly) {
-            this.drivePhotosReadonly = drivePhotosReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder drivePhotosReadonly(Boolean drivePhotosReadonly) {
-            this.drivePhotosReadonly = Optional.ofNullable(drivePhotosReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1825,13 +1433,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_readonly", nulls = Nulls.SKIP)
         public Builder driveReadonly(Optional<Boolean> driveReadonly) {
-            this.driveReadonly = driveReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveReadonly(Boolean driveReadonly) {
-            this.driveReadonly = Optional.ofNullable(driveReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1839,13 +1445,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "drive_scripts", nulls = Nulls.SKIP)
         public Builder driveScripts(Optional<Boolean> driveScripts) {
-            this.driveScripts = driveScripts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder driveScripts(Boolean driveScripts) {
-            this.driveScripts = Optional.ofNullable(driveScripts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1853,13 +1457,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1867,13 +1469,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail", nulls = Nulls.SKIP)
         public Builder gmail(Optional<Boolean> gmail) {
-            this.gmail = gmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmail(Boolean gmail) {
-            this.gmail = Optional.ofNullable(gmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1881,13 +1481,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_compose", nulls = Nulls.SKIP)
         public Builder gmailCompose(Optional<Boolean> gmailCompose) {
-            this.gmailCompose = gmailCompose;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailCompose(Boolean gmailCompose) {
-            this.gmailCompose = Optional.ofNullable(gmailCompose);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1895,13 +1493,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_insert", nulls = Nulls.SKIP)
         public Builder gmailInsert(Optional<Boolean> gmailInsert) {
-            this.gmailInsert = gmailInsert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailInsert(Boolean gmailInsert) {
-            this.gmailInsert = Optional.ofNullable(gmailInsert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1909,13 +1505,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_labels", nulls = Nulls.SKIP)
         public Builder gmailLabels(Optional<Boolean> gmailLabels) {
-            this.gmailLabels = gmailLabels;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailLabels(Boolean gmailLabels) {
-            this.gmailLabels = Optional.ofNullable(gmailLabels);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1923,13 +1517,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_metadata", nulls = Nulls.SKIP)
         public Builder gmailMetadata(Optional<Boolean> gmailMetadata) {
-            this.gmailMetadata = gmailMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailMetadata(Boolean gmailMetadata) {
-            this.gmailMetadata = Optional.ofNullable(gmailMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1937,13 +1529,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_modify", nulls = Nulls.SKIP)
         public Builder gmailModify(Optional<Boolean> gmailModify) {
-            this.gmailModify = gmailModify;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailModify(Boolean gmailModify) {
-            this.gmailModify = Optional.ofNullable(gmailModify);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1951,13 +1541,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_new", nulls = Nulls.SKIP)
         public Builder gmailNew(Optional<Boolean> gmailNew) {
-            this.gmailNew = gmailNew;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailNew(Boolean gmailNew) {
-            this.gmailNew = Optional.ofNullable(gmailNew);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1965,13 +1553,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_readonly", nulls = Nulls.SKIP)
         public Builder gmailReadonly(Optional<Boolean> gmailReadonly) {
-            this.gmailReadonly = gmailReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailReadonly(Boolean gmailReadonly) {
-            this.gmailReadonly = Optional.ofNullable(gmailReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1979,13 +1565,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_send", nulls = Nulls.SKIP)
         public Builder gmailSend(Optional<Boolean> gmailSend) {
-            this.gmailSend = gmailSend;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailSend(Boolean gmailSend) {
-            this.gmailSend = Optional.ofNullable(gmailSend);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1993,13 +1577,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_settings_basic", nulls = Nulls.SKIP)
         public Builder gmailSettingsBasic(Optional<Boolean> gmailSettingsBasic) {
-            this.gmailSettingsBasic = gmailSettingsBasic;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailSettingsBasic(Boolean gmailSettingsBasic) {
-            this.gmailSettingsBasic = Optional.ofNullable(gmailSettingsBasic);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2007,13 +1589,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "gmail_settings_sharing", nulls = Nulls.SKIP)
         public Builder gmailSettingsSharing(Optional<Boolean> gmailSettingsSharing) {
-            this.gmailSettingsSharing = gmailSettingsSharing;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gmailSettingsSharing(Boolean gmailSettingsSharing) {
-            this.gmailSettingsSharing = Optional.ofNullable(gmailSettingsSharing);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2021,13 +1601,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_affiliate_network", nulls = Nulls.SKIP)
         public Builder googleAffiliateNetwork(Optional<Boolean> googleAffiliateNetwork) {
-            this.googleAffiliateNetwork = googleAffiliateNetwork;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleAffiliateNetwork(Boolean googleAffiliateNetwork) {
-            this.googleAffiliateNetwork = Optional.ofNullable(googleAffiliateNetwork);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2035,13 +1613,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_books", nulls = Nulls.SKIP)
         public Builder googleBooks(Optional<Boolean> googleBooks) {
-            this.googleBooks = googleBooks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleBooks(Boolean googleBooks) {
-            this.googleBooks = Optional.ofNullable(googleBooks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2049,13 +1625,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_cloud_storage", nulls = Nulls.SKIP)
         public Builder googleCloudStorage(Optional<Boolean> googleCloudStorage) {
-            this.googleCloudStorage = googleCloudStorage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleCloudStorage(Boolean googleCloudStorage) {
-            this.googleCloudStorage = Optional.ofNullable(googleCloudStorage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2063,13 +1637,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_drive", nulls = Nulls.SKIP)
         public Builder googleDrive(Optional<Boolean> googleDrive) {
-            this.googleDrive = googleDrive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleDrive(Boolean googleDrive) {
-            this.googleDrive = Optional.ofNullable(googleDrive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2077,13 +1649,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_drive_files", nulls = Nulls.SKIP)
         public Builder googleDriveFiles(Optional<Boolean> googleDriveFiles) {
-            this.googleDriveFiles = googleDriveFiles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleDriveFiles(Boolean googleDriveFiles) {
-            this.googleDriveFiles = Optional.ofNullable(googleDriveFiles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2091,13 +1661,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "google_plus", nulls = Nulls.SKIP)
         public Builder googlePlus(Optional<Boolean> googlePlus) {
-            this.googlePlus = googlePlus;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googlePlus(Boolean googlePlus) {
-            this.googlePlus = Optional.ofNullable(googlePlus);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2105,13 +1673,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "latitude_best", nulls = Nulls.SKIP)
         public Builder latitudeBest(Optional<Boolean> latitudeBest) {
-            this.latitudeBest = latitudeBest;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder latitudeBest(Boolean latitudeBest) {
-            this.latitudeBest = Optional.ofNullable(latitudeBest);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2119,13 +1685,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "latitude_city", nulls = Nulls.SKIP)
         public Builder latitudeCity(Optional<Boolean> latitudeCity) {
-            this.latitudeCity = latitudeCity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder latitudeCity(Boolean latitudeCity) {
-            this.latitudeCity = Optional.ofNullable(latitudeCity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2133,13 +1697,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "moderator", nulls = Nulls.SKIP)
         public Builder moderator(Optional<Boolean> moderator) {
-            this.moderator = moderator;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder moderator(Boolean moderator) {
-            this.moderator = Optional.ofNullable(moderator);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2147,13 +1709,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "offline_access", nulls = Nulls.SKIP)
         public Builder offlineAccess(Optional<Boolean> offlineAccess) {
-            this.offlineAccess = offlineAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder offlineAccess(Boolean offlineAccess) {
-            this.offlineAccess = Optional.ofNullable(offlineAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2161,13 +1721,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "orkut", nulls = Nulls.SKIP)
         public Builder orkut(Optional<Boolean> orkut) {
-            this.orkut = orkut;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder orkut(Boolean orkut) {
-            this.orkut = Optional.ofNullable(orkut);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2175,13 +1733,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "picasa_web", nulls = Nulls.SKIP)
         public Builder picasaWeb(Optional<Boolean> picasaWeb) {
-            this.picasaWeb = picasaWeb;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picasaWeb(Boolean picasaWeb) {
-            this.picasaWeb = Optional.ofNullable(picasaWeb);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2189,13 +1745,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "profile", nulls = Nulls.SKIP)
         public Builder profile(Optional<Boolean> profile) {
-            this.profile = profile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profile(Boolean profile) {
-            this.profile = Optional.ofNullable(profile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2203,13 +1757,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "sites", nulls = Nulls.SKIP)
         public Builder sites(Optional<Boolean> sites) {
-            this.sites = sites;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sites(Boolean sites) {
-            this.sites = Optional.ofNullable(sites);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2217,13 +1769,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "tasks", nulls = Nulls.SKIP)
         public Builder tasks(Optional<Boolean> tasks) {
-            this.tasks = tasks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tasks(Boolean tasks) {
-            this.tasks = Optional.ofNullable(tasks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2231,13 +1781,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "tasks_readonly", nulls = Nulls.SKIP)
         public Builder tasksReadonly(Optional<Boolean> tasksReadonly) {
-            this.tasksReadonly = tasksReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tasksReadonly(Boolean tasksReadonly) {
-            this.tasksReadonly = Optional.ofNullable(tasksReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2245,13 +1793,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "url_shortener", nulls = Nulls.SKIP)
         public Builder urlShortener(Optional<Boolean> urlShortener) {
-            this.urlShortener = urlShortener;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder urlShortener(Boolean urlShortener) {
-            this.urlShortener = Optional.ofNullable(urlShortener);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2259,13 +1805,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "webmaster_tools", nulls = Nulls.SKIP)
         public Builder webmasterTools(Optional<Boolean> webmasterTools) {
-            this.webmasterTools = webmasterTools;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder webmasterTools(Boolean webmasterTools) {
-            this.webmasterTools = Optional.ofNullable(webmasterTools);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2273,13 +1817,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtube", nulls = Nulls.SKIP)
         public Builder youtube(Optional<Boolean> youtube) {
-            this.youtube = youtube;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtube(Boolean youtube) {
-            this.youtube = Optional.ofNullable(youtube);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2287,13 +1829,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtube_channelmemberships_creator", nulls = Nulls.SKIP)
         public Builder youtubeChannelmembershipsCreator(Optional<Boolean> youtubeChannelmembershipsCreator) {
-            this.youtubeChannelmembershipsCreator = youtubeChannelmembershipsCreator;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtubeChannelmembershipsCreator(Boolean youtubeChannelmembershipsCreator) {
-            this.youtubeChannelmembershipsCreator = Optional.ofNullable(youtubeChannelmembershipsCreator);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2301,13 +1841,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtube_new", nulls = Nulls.SKIP)
         public Builder youtubeNew(Optional<Boolean> youtubeNew) {
-            this.youtubeNew = youtubeNew;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtubeNew(Boolean youtubeNew) {
-            this.youtubeNew = Optional.ofNullable(youtubeNew);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2315,13 +1853,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtube_readonly", nulls = Nulls.SKIP)
         public Builder youtubeReadonly(Optional<Boolean> youtubeReadonly) {
-            this.youtubeReadonly = youtubeReadonly;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtubeReadonly(Boolean youtubeReadonly) {
-            this.youtubeReadonly = Optional.ofNullable(youtubeReadonly);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2329,13 +1865,11 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtube_upload", nulls = Nulls.SKIP)
         public Builder youtubeUpload(Optional<Boolean> youtubeUpload) {
-            this.youtubeUpload = youtubeUpload;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtubeUpload(Boolean youtubeUpload) {
-            this.youtubeUpload = Optional.ofNullable(youtubeUpload);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2343,102 +1877,23 @@ public final class ConnectionOptionsGoogleOAuth2 implements IConnectionOptionsCo
          */
         @JsonSetter(value = "youtubepartner", nulls = Nulls.SKIP)
         public Builder youtubepartner(Optional<Boolean> youtubepartner) {
-            this.youtubepartner = youtubepartner;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder youtubepartner(Boolean youtubepartner) {
-            this.youtubepartner = Optional.ofNullable(youtubepartner);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsGoogleOAuth2 build() {
-            return new ConnectionOptionsGoogleOAuth2(
-                    nonPersistentAttrs,
-                    allowedAudiences,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    iconUrl,
-                    scope,
-                    setUserRootAttributes,
-                    upstreamParams,
-                    adsenseManagement,
-                    analytics,
-                    blogger,
-                    calendar,
-                    calendarAddonsExecute,
-                    calendarEvents,
-                    calendarEventsReadonly,
-                    calendarSettingsReadonly,
-                    chromeWebStore,
-                    contacts,
-                    contactsNew,
-                    contactsOtherReadonly,
-                    contactsReadonly,
-                    contentApiForShopping,
-                    coordinate,
-                    coordinateReadonly,
-                    directoryReadonly,
-                    documentList,
-                    drive,
-                    driveActivity,
-                    driveActivityReadonly,
-                    driveAppdata,
-                    driveAppsReadonly,
-                    driveFile,
-                    driveMetadata,
-                    driveMetadataReadonly,
-                    drivePhotosReadonly,
-                    driveReadonly,
-                    driveScripts,
-                    email,
-                    gmail,
-                    gmailCompose,
-                    gmailInsert,
-                    gmailLabels,
-                    gmailMetadata,
-                    gmailModify,
-                    gmailNew,
-                    gmailReadonly,
-                    gmailSend,
-                    gmailSettingsBasic,
-                    gmailSettingsSharing,
-                    googleAffiliateNetwork,
-                    googleBooks,
-                    googleCloudStorage,
-                    googleDrive,
-                    googleDriveFiles,
-                    googlePlus,
-                    latitudeBest,
-                    latitudeCity,
-                    moderator,
-                    offlineAccess,
-                    orkut,
-                    picasaWeb,
-                    profile,
-                    sites,
-                    tasks,
-                    tasksReadonly,
-                    urlShortener,
-                    webmasterTools,
-                    youtube,
-                    youtubeChannelmembershipsCreator,
-                    youtubeNew,
-                    youtubeReadonly,
-                    youtubeUpload,
-                    youtubepartner,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

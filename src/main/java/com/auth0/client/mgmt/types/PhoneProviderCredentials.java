@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = PhoneProviderCredentials.Deserializer.class)
 public final class PhoneProviderCredentials {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class PhoneProviderCredentials {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((TwilioProviderCredentials) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CustomProviderCredentials) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PhoneProviderCredentials && equalTo((PhoneProviderCredentials) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PhoneProviderCredentials other) {
@@ -52,47 +47,38 @@ public final class PhoneProviderCredentials {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PhoneProviderCredentials of(TwilioProviderCredentials value) {
-        return new PhoneProviderCredentials(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PhoneProviderCredentials of(CustomProviderCredentials value) {
-        return new PhoneProviderCredentials(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(TwilioProviderCredentials value);
 
         T visit(CustomProviderCredentials value);
     }
 
     static final class Deserializer extends StdDeserializer<PhoneProviderCredentials> {
+
         Deserializer() {
             super(PhoneProviderCredentials.class);
         }
 
         @java.lang.Override
         public PhoneProviderCredentials deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("auth_token")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, TwilioProviderCredentials.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CustomProviderCredentials.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

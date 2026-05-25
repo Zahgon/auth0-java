@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerProofOfPossessionRequiredForEnum {
-    public static final ResourceServerProofOfPossessionRequiredForEnum ALL_CLIENTS =
-            new ResourceServerProofOfPossessionRequiredForEnum(Value.ALL_CLIENTS, "all_clients");
 
-    public static final ResourceServerProofOfPossessionRequiredForEnum PUBLIC_CLIENTS =
-            new ResourceServerProofOfPossessionRequiredForEnum(Value.PUBLIC_CLIENTS, "public_clients");
+    public static final ResourceServerProofOfPossessionRequiredForEnum ALL_CLIENTS = new ResourceServerProofOfPossessionRequiredForEnum(Value.ALL_CLIENTS, "all_clients");
+
+    public static final ResourceServerProofOfPossessionRequiredForEnum PUBLIC_CLIENTS = new ResourceServerProofOfPossessionRequiredForEnum(Value.PUBLIC_CLIENTS, "public_clients");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ResourceServerProofOfPossessionRequiredForEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerProofOfPossessionRequiredForEnum
-                        && this.string.equals(((ResourceServerProofOfPossessionRequiredForEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALL_CLIENTS:
-                return visitor.visitAllClients();
-            case PUBLIC_CLIENTS:
-                return visitor.visitPublicClients();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerProofOfPossessionRequiredForEnum valueOf(String value) {
-        switch (value) {
-            case "all_clients":
-                return ALL_CLIENTS;
-            case "public_clients":
-                return PUBLIC_CLIENTS;
-            default:
-                return new ResourceServerProofOfPossessionRequiredForEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PUBLIC_CLIENTS,
 
-        ALL_CLIENTS,
-
-        UNKNOWN
+        PUBLIC_CLIENTS, ALL_CLIENTS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPublicClients();
 
         T visitAllClients();

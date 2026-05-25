@@ -22,18 +22,18 @@ public class CreatedOtpResponse {
     private List<String> recoveryCodes;
 
     public String getSecret() {
-        return secret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getBarcodeUri() {
-        return barcodeUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getAuthenticatorType() {
-        return authenticatorType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<String> getRecoveryCodes() {
-        return recoveryCodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

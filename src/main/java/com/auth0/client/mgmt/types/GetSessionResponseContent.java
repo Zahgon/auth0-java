@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetSessionResponseContent.Builder.class)
 public final class GetSessionResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> userId;
@@ -52,21 +53,7 @@ public final class GetSessionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetSessionResponseContent(
-            Optional<String> id,
-            Optional<String> userId,
-            Optional<SessionDate> createdAt,
-            Optional<SessionDate> updatedAt,
-            Optional<SessionDate> authenticatedAt,
-            Optional<SessionDate> idleExpiresAt,
-            Optional<SessionDate> expiresAt,
-            Optional<SessionDate> lastInteractedAt,
-            Optional<SessionDeviceMetadata> device,
-            Optional<List<SessionClientMetadata>> clients,
-            Optional<SessionAuthenticationSignals> authentication,
-            Optional<SessionCookieMetadata> cookie,
-            OptionalNullable<Map<String, Object>> sessionMetadata,
-            Map<String, Object> additionalProperties) {
+    private GetSessionResponseContent(Optional<String> id, Optional<String> userId, Optional<SessionDate> createdAt, Optional<SessionDate> updatedAt, Optional<SessionDate> authenticatedAt, Optional<SessionDate> idleExpiresAt, Optional<SessionDate> expiresAt, Optional<SessionDate> lastInteractedAt, Optional<SessionDeviceMetadata> device, Optional<List<SessionClientMetadata>> clients, Optional<SessionAuthenticationSignals> authentication, Optional<SessionCookieMetadata> cookie, OptionalNullable<Map<String, Object>> sessionMetadata, Map<String, Object> additionalProperties) {
         this.id = id;
         this.userId = userId;
         this.createdAt = createdAt;
@@ -88,7 +75,7 @@ public final class GetSessionResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,42 +83,42 @@ public final class GetSessionResponseContent {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("created_at")
     public Optional<SessionDate> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("updated_at")
     public Optional<SessionDate> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authenticated_at")
     public Optional<SessionDate> getAuthenticatedAt() {
-        return authenticatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("idle_expires_at")
     public Optional<SessionDate> getIdleExpiresAt() {
-        return idleExpiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("expires_at")
     public Optional<SessionDate> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("last_interacted_at")
     public Optional<SessionDate> getLastInteractedAt() {
-        return lastInteractedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("device")
     public Optional<SessionDeviceMetadata> getDevice() {
-        return device;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,26 +126,23 @@ public final class GetSessionResponseContent {
      */
     @JsonProperty("clients")
     public Optional<List<SessionClientMetadata>> getClients() {
-        return clients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authentication")
     public Optional<SessionAuthenticationSignals> getAuthentication() {
-        return authentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("cookie")
     public Optional<SessionCookieMetadata> getCookie() {
-        return cookie;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("session_metadata")
     public OptionalNullable<Map<String, Object>> getSessionMetadata() {
-        if (sessionMetadata == null) {
-            return OptionalNullable.absent();
-        }
-        return sessionMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -169,60 +153,35 @@ public final class GetSessionResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetSessionResponseContent && equalTo((GetSessionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetSessionResponseContent other) {
-        return id.equals(other.id)
-                && userId.equals(other.userId)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && authenticatedAt.equals(other.authenticatedAt)
-                && idleExpiresAt.equals(other.idleExpiresAt)
-                && expiresAt.equals(other.expiresAt)
-                && lastInteractedAt.equals(other.lastInteractedAt)
-                && device.equals(other.device)
-                && clients.equals(other.clients)
-                && authentication.equals(other.authentication)
-                && cookie.equals(other.cookie)
-                && sessionMetadata.equals(other.sessionMetadata);
+        return id.equals(other.id) && userId.equals(other.userId) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && authenticatedAt.equals(other.authenticatedAt) && idleExpiresAt.equals(other.idleExpiresAt) && expiresAt.equals(other.expiresAt) && lastInteractedAt.equals(other.lastInteractedAt) && device.equals(other.device) && clients.equals(other.clients) && authentication.equals(other.authentication) && cookie.equals(other.cookie) && sessionMetadata.equals(other.sessionMetadata);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.userId,
-                this.createdAt,
-                this.updatedAt,
-                this.authenticatedAt,
-                this.idleExpiresAt,
-                this.expiresAt,
-                this.lastInteractedAt,
-                this.device,
-                this.clients,
-                this.authentication,
-                this.cookie,
-                this.sessionMetadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> userId = Optional.empty();
@@ -252,23 +211,11 @@ public final class GetSessionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetSessionResponseContent other) {
-            id(other.getId());
-            userId(other.getUserId());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            authenticatedAt(other.getAuthenticatedAt());
-            idleExpiresAt(other.getIdleExpiresAt());
-            expiresAt(other.getExpiresAt());
-            lastInteractedAt(other.getLastInteractedAt());
-            device(other.getDevice());
-            clients(other.getClients());
-            authentication(other.getAuthentication());
-            cookie(other.getCookie());
-            sessionMetadata(other.getSessionMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -276,13 +223,11 @@ public final class GetSessionResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -290,90 +235,74 @@ public final class GetSessionResponseContent {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<SessionDate> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(SessionDate createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<SessionDate> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(SessionDate updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authenticated_at", nulls = Nulls.SKIP)
         public Builder authenticatedAt(Optional<SessionDate> authenticatedAt) {
-            this.authenticatedAt = authenticatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authenticatedAt(SessionDate authenticatedAt) {
-            this.authenticatedAt = Optional.ofNullable(authenticatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "idle_expires_at", nulls = Nulls.SKIP)
         public Builder idleExpiresAt(Optional<SessionDate> idleExpiresAt) {
-            this.idleExpiresAt = idleExpiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idleExpiresAt(SessionDate idleExpiresAt) {
-            this.idleExpiresAt = Optional.ofNullable(idleExpiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(Optional<SessionDate> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(SessionDate expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "last_interacted_at", nulls = Nulls.SKIP)
         public Builder lastInteractedAt(Optional<SessionDate> lastInteractedAt) {
-            this.lastInteractedAt = lastInteractedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastInteractedAt(SessionDate lastInteractedAt) {
-            this.lastInteractedAt = Optional.ofNullable(lastInteractedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "device", nulls = Nulls.SKIP)
         public Builder device(Optional<SessionDeviceMetadata> device) {
-            this.device = device;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder device(SessionDeviceMetadata device) {
-            this.device = Optional.ofNullable(device);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -381,94 +310,58 @@ public final class GetSessionResponseContent {
          */
         @JsonSetter(value = "clients", nulls = Nulls.SKIP)
         public Builder clients(Optional<List<SessionClientMetadata>> clients) {
-            this.clients = clients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clients(List<SessionClientMetadata> clients) {
-            this.clients = Optional.ofNullable(clients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authentication", nulls = Nulls.SKIP)
         public Builder authentication(Optional<SessionAuthenticationSignals> authentication) {
-            this.authentication = authentication;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authentication(SessionAuthenticationSignals authentication) {
-            this.authentication = Optional.ofNullable(authentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "cookie", nulls = Nulls.SKIP)
         public Builder cookie(Optional<SessionCookieMetadata> cookie) {
-            this.cookie = cookie;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cookie(SessionCookieMetadata cookie) {
-            this.cookie = Optional.ofNullable(cookie);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "session_metadata", nulls = Nulls.SKIP)
         public Builder sessionMetadata(@Nullable OptionalNullable<Map<String, Object>> sessionMetadata) {
-            this.sessionMetadata = sessionMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(Map<String, Object> sessionMetadata) {
-            this.sessionMetadata = OptionalNullable.of(sessionMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(Optional<Map<String, Object>> sessionMetadata) {
-            if (sessionMetadata.isPresent()) {
-                this.sessionMetadata = OptionalNullable.of(sessionMetadata.get());
-            } else {
-                this.sessionMetadata = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionMetadata(com.auth0.client.mgmt.core.Nullable<Map<String, Object>> sessionMetadata) {
-            if (sessionMetadata.isNull()) {
-                this.sessionMetadata = OptionalNullable.ofNull();
-            } else if (sessionMetadata.isEmpty()) {
-                this.sessionMetadata = OptionalNullable.absent();
-            } else {
-                this.sessionMetadata = OptionalNullable.of(sessionMetadata.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetSessionResponseContent build() {
-            return new GetSessionResponseContent(
-                    id,
-                    userId,
-                    createdAt,
-                    updatedAt,
-                    authenticatedAt,
-                    idleExpiresAt,
-                    expiresAt,
-                    lastInteractedAt,
-                    device,
-                    clients,
-                    authentication,
-                    cookie,
-                    sessionMetadata,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

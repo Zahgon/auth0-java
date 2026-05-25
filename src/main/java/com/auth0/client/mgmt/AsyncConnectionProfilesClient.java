@@ -18,6 +18,7 @@ import com.auth0.client.mgmt.types.UpdateConnectionProfileResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncConnectionProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawConnectionProfilesClient rawClient;
@@ -31,140 +32,132 @@ public class AsyncConnectionProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawConnectionProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
     public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
     public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list(
-            ListConnectionProfileRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list(ListConnectionProfileRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list(
-            ListConnectionProfileRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionProfile>> list(ListConnectionProfileRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a Connection Profile.
      */
-    public CompletableFuture<CreateConnectionProfileResponseContent> create(
-            CreateConnectionProfileRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateConnectionProfileResponseContent> create(CreateConnectionProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a Connection Profile.
      */
-    public CompletableFuture<CreateConnectionProfileResponseContent> create(
-            CreateConnectionProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateConnectionProfileResponseContent> create(CreateConnectionProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profile Templates.
      */
     public CompletableFuture<ListConnectionProfileTemplateResponseContent> listTemplates() {
-        return this.rawClient.listTemplates().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profile Templates.
      */
-    public CompletableFuture<ListConnectionProfileTemplateResponseContent> listTemplates(
-            RequestOptions requestOptions) {
-        return this.rawClient.listTemplates(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ListConnectionProfileTemplateResponseContent> listTemplates(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a Connection Profile Template.
      */
     public CompletableFuture<GetConnectionProfileTemplateResponseContent> getTemplate(String id) {
-        return this.rawClient.getTemplate(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a Connection Profile Template.
      */
-    public CompletableFuture<GetConnectionProfileTemplateResponseContent> getTemplate(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.getTemplate(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetConnectionProfileTemplateResponseContent> getTemplate(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Connection Profile specified by ID.
      */
     public CompletableFuture<GetConnectionProfileResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Connection Profile specified by ID.
      */
     public CompletableFuture<GetConnectionProfileResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single Connection Profile specified by ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single Connection Profile specified by ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
     public CompletableFuture<UpdateConnectionProfileResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
     public CompletableFuture<UpdateConnectionProfileResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
-    public CompletableFuture<UpdateConnectionProfileResponseContent> update(
-            String id, UpdateConnectionProfileRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateConnectionProfileResponseContent> update(String id, UpdateConnectionProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
-    public CompletableFuture<UpdateConnectionProfileResponseContent> update(
-            String id, UpdateConnectionProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateConnectionProfileResponseContent> update(String id, UpdateConnectionProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

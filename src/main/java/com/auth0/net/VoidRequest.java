@@ -20,14 +20,12 @@ import java.util.HashMap;
 public class VoidRequest extends BaseRequest<Void> {
 
     public VoidRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method) {
-        super(client, tokenProvider, url, method, new TypeReference<Void>() {});
+        super(client, tokenProvider, url, method, new TypeReference<Void>() {
+        });
     }
 
     @Override
     protected Void parseResponseBody(Auth0HttpResponse response) throws Auth0Exception {
-        if (!response.isSuccessful()) {
-            throw super.createResponseException(response);
-        }
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.organizations.members.types.ListOrganizationMemberR
 import com.auth0.client.mgmt.types.Role;
 
 public class RolesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRolesClient rawClient;
@@ -25,7 +26,7 @@ public class RolesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRolesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -33,7 +34,7 @@ public class RolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
     public SyncPagingIterable<Role> list(String id, String userId) {
-        return this.rawClient.list(id, userId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -41,28 +42,23 @@ public class RolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
     public SyncPagingIterable<Role> list(String id, String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(id, userId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of roles assigned to a given user within the context of a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
-    public SyncPagingIterable<Role> list(
-            String id, String userId, ListOrganizationMemberRolesRequestParameters request) {
-        return this.rawClient.list(id, userId, request).body();
+    public SyncPagingIterable<Role> list(String id, String userId, ListOrganizationMemberRolesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of roles assigned to a given user within the context of a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
-    public SyncPagingIterable<Role> list(
-            String id,
-            String userId,
-            ListOrganizationMemberRolesRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.list(id, userId, request, requestOptions).body();
+    public SyncPagingIterable<Role> list(String id, String userId, ListOrganizationMemberRolesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,19 +66,15 @@ public class RolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action assigns roles to a user only for the specified Organization. Roles cannot be assigned to a user across multiple Organizations in the same call.</p>
      */
     public void assign(String id, String userId, AssignOrganizationMemberRolesRequestContent request) {
-        this.rawClient.assign(id, userId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign one or more <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> to a user to determine their access for a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action assigns roles to a user only for the specified Organization. Roles cannot be assigned to a user across multiple Organizations in the same call.</p>
      */
-    public void assign(
-            String id,
-            String userId,
-            AssignOrganizationMemberRolesRequestContent request,
-            RequestOptions requestOptions) {
-        this.rawClient.assign(id, userId, request, requestOptions).body();
+    public void assign(String id, String userId, AssignOrganizationMemberRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,18 +82,14 @@ public class RolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action removes roles from a user in relation to the specified Organization. Roles assigned to the user within a different Organization cannot be managed in the same call.</p>
      */
     public void delete(String id, String userId, DeleteOrganizationMemberRolesRequestContent request) {
-        this.rawClient.delete(id, userId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more Organization-specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> from a given user.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action removes roles from a user in relation to the specified Organization. Roles assigned to the user within a different Organization cannot be managed in the same call.</p>
      */
-    public void delete(
-            String id,
-            String userId,
-            DeleteOrganizationMemberRolesRequestContent request,
-            RequestOptions requestOptions) {
-        this.rawClient.delete(id, userId, request, requestOptions).body();
+    public void delete(String id, String userId, DeleteOrganizationMemberRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

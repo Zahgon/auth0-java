@@ -18,9 +18,10 @@ public final class ConsoleLogger implements ILogger {
         if (logger.getHandlers().length == 0) {
             java.util.logging.ConsoleHandler handler = new java.util.logging.ConsoleHandler();
             handler.setFormatter(new java.util.logging.SimpleFormatter() {
+
                 @Override
                 public String format(java.util.logging.LogRecord record) {
-                    return record.getLevel() + " - " + record.getMessage() + System.lineSeparator();
+                    throw new UnsupportedOperationException("STUB: not implemented");
                 }
             });
             logger.addHandler(handler);
@@ -31,21 +32,21 @@ public final class ConsoleLogger implements ILogger {
 
     @Override
     public void debug(String message) {
-        logger.log(Level.FINE, message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void info(String message) {
-        logger.log(Level.INFO, message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void warn(String message) {
-        logger.log(Level.WARNING, message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void error(String message) {
-        logger.log(Level.SEVERE, message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

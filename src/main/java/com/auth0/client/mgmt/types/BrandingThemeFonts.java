@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemeFonts.Builder.class)
 public final class BrandingThemeFonts {
+
     private final BrandingThemeFontBodyText bodyText;
 
     private final BrandingThemeFontButtonsText buttonsText;
@@ -39,17 +40,7 @@ public final class BrandingThemeFonts {
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingThemeFonts(
-            BrandingThemeFontBodyText bodyText,
-            BrandingThemeFontButtonsText buttonsText,
-            String fontUrl,
-            BrandingThemeFontInputLabels inputLabels,
-            BrandingThemeFontLinks links,
-            BrandingThemeFontLinksStyleEnum linksStyle,
-            double referenceTextSize,
-            BrandingThemeFontSubtitle subtitle,
-            BrandingThemeFontTitle title,
-            Map<String, Object> additionalProperties) {
+    private BrandingThemeFonts(BrandingThemeFontBodyText bodyText, BrandingThemeFontButtonsText buttonsText, String fontUrl, BrandingThemeFontInputLabels inputLabels, BrandingThemeFontLinks links, BrandingThemeFontLinksStyleEnum linksStyle, double referenceTextSize, BrandingThemeFontSubtitle subtitle, BrandingThemeFontTitle title, Map<String, Object> additionalProperties) {
         this.bodyText = bodyText;
         this.buttonsText = buttonsText;
         this.fontUrl = fontUrl;
@@ -64,12 +55,12 @@ public final class BrandingThemeFonts {
 
     @JsonProperty("body_text")
     public BrandingThemeFontBodyText getBodyText() {
-        return bodyText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("buttons_text")
     public BrandingThemeFontButtonsText getButtonsText() {
-        return buttonsText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,22 +68,22 @@ public final class BrandingThemeFonts {
      */
     @JsonProperty("font_url")
     public String getFontUrl() {
-        return fontUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("input_labels")
     public BrandingThemeFontInputLabels getInputLabels() {
-        return inputLabels;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("links")
     public BrandingThemeFontLinks getLinks() {
-        return links;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("links_style")
     public BrandingThemeFontLinksStyleEnum getLinksStyle() {
-        return linksStyle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,76 +91,61 @@ public final class BrandingThemeFonts {
      */
     @JsonProperty("reference_text_size")
     public double getReferenceTextSize() {
-        return referenceTextSize;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subtitle")
     public BrandingThemeFontSubtitle getSubtitle() {
-        return subtitle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("title")
     public BrandingThemeFontTitle getTitle() {
-        return title;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemeFonts && equalTo((BrandingThemeFonts) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemeFonts other) {
-        return bodyText.equals(other.bodyText)
-                && buttonsText.equals(other.buttonsText)
-                && fontUrl.equals(other.fontUrl)
-                && inputLabels.equals(other.inputLabels)
-                && links.equals(other.links)
-                && linksStyle.equals(other.linksStyle)
-                && referenceTextSize == other.referenceTextSize
-                && subtitle.equals(other.subtitle)
-                && title.equals(other.title);
+        return bodyText.equals(other.bodyText) && buttonsText.equals(other.buttonsText) && fontUrl.equals(other.fontUrl) && inputLabels.equals(other.inputLabels) && links.equals(other.links) && linksStyle.equals(other.linksStyle) && referenceTextSize == other.referenceTextSize && subtitle.equals(other.subtitle) && title.equals(other.title);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.bodyText,
-                this.buttonsText,
-                this.fontUrl,
-                this.inputLabels,
-                this.links,
-                this.linksStyle,
-                this.referenceTextSize,
-                this.subtitle,
-                this.title);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BodyTextStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BodyTextStage {
+
         ButtonsTextStage bodyText(@NotNull BrandingThemeFontBodyText bodyText);
 
         Builder from(BrandingThemeFonts other);
     }
 
     public interface ButtonsTextStage {
+
         FontUrlStage buttonsText(@NotNull BrandingThemeFontButtonsText buttonsText);
     }
 
     public interface FontUrlStage {
+
         /**
          * <p>Font URL</p>
          */
@@ -177,18 +153,22 @@ public final class BrandingThemeFonts {
     }
 
     public interface InputLabelsStage {
+
         LinksStage inputLabels(@NotNull BrandingThemeFontInputLabels inputLabels);
     }
 
     public interface LinksStage {
+
         LinksStyleStage links(@NotNull BrandingThemeFontLinks links);
     }
 
     public interface LinksStyleStage {
+
         ReferenceTextSizeStage linksStyle(@NotNull BrandingThemeFontLinksStyleEnum linksStyle);
     }
 
     public interface ReferenceTextSizeStage {
+
         /**
          * <p>Reference text size</p>
          */
@@ -196,14 +176,17 @@ public final class BrandingThemeFonts {
     }
 
     public interface SubtitleStage {
+
         TitleStage subtitle(@NotNull BrandingThemeFontSubtitle subtitle);
     }
 
     public interface TitleStage {
+
         _FinalStage title(@NotNull BrandingThemeFontTitle title);
     }
 
     public interface _FinalStage {
+
         BrandingThemeFonts build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -212,17 +195,8 @@ public final class BrandingThemeFonts {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements BodyTextStage,
-                    ButtonsTextStage,
-                    FontUrlStage,
-                    InputLabelsStage,
-                    LinksStage,
-                    LinksStyleStage,
-                    ReferenceTextSizeStage,
-                    SubtitleStage,
-                    TitleStage,
-                    _FinalStage {
+    public static final class Builder implements BodyTextStage, ButtonsTextStage, FontUrlStage, InputLabelsStage, LinksStage, LinksStyleStage, ReferenceTextSizeStage, SubtitleStage, TitleStage, _FinalStage {
+
         private BrandingThemeFontBodyText bodyText;
 
         private BrandingThemeFontButtonsText buttonsText;
@@ -244,34 +218,24 @@ public final class BrandingThemeFonts {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemeFonts other) {
-            bodyText(other.getBodyText());
-            buttonsText(other.getButtonsText());
-            fontUrl(other.getFontUrl());
-            inputLabels(other.getInputLabels());
-            links(other.getLinks());
-            linksStyle(other.getLinksStyle());
-            referenceTextSize(other.getReferenceTextSize());
-            subtitle(other.getSubtitle());
-            title(other.getTitle());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("body_text")
         public ButtonsTextStage bodyText(@NotNull BrandingThemeFontBodyText bodyText) {
-            this.bodyText = Objects.requireNonNull(bodyText, "bodyText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("buttons_text")
         public FontUrlStage buttonsText(@NotNull BrandingThemeFontButtonsText buttonsText) {
-            this.buttonsText = Objects.requireNonNull(buttonsText, "buttonsText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -282,29 +246,25 @@ public final class BrandingThemeFonts {
         @java.lang.Override
         @JsonSetter("font_url")
         public InputLabelsStage fontUrl(@NotNull String fontUrl) {
-            this.fontUrl = Objects.requireNonNull(fontUrl, "fontUrl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("input_labels")
         public LinksStage inputLabels(@NotNull BrandingThemeFontInputLabels inputLabels) {
-            this.inputLabels = Objects.requireNonNull(inputLabels, "inputLabels must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("links")
         public LinksStyleStage links(@NotNull BrandingThemeFontLinks links) {
-            this.links = Objects.requireNonNull(links, "links must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("links_style")
         public ReferenceTextSizeStage linksStyle(@NotNull BrandingThemeFontLinksStyleEnum linksStyle) {
-            this.linksStyle = Objects.requireNonNull(linksStyle, "linksStyle must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,49 +275,34 @@ public final class BrandingThemeFonts {
         @java.lang.Override
         @JsonSetter("reference_text_size")
         public SubtitleStage referenceTextSize(double referenceTextSize) {
-            this.referenceTextSize = referenceTextSize;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("subtitle")
         public TitleStage subtitle(@NotNull BrandingThemeFontSubtitle subtitle) {
-            this.subtitle = Objects.requireNonNull(subtitle, "subtitle must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("title")
         public _FinalStage title(@NotNull BrandingThemeFontTitle title) {
-            this.title = Objects.requireNonNull(title, "title must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemeFonts build() {
-            return new BrandingThemeFonts(
-                    bodyText,
-                    buttonsText,
-                    fontUrl,
-                    inputLabels,
-                    links,
-                    linksStyle,
-                    referenceTextSize,
-                    subtitle,
-                    title,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

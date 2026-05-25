@@ -7,19 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientComplianceLevelEnum {
-    public static final ClientComplianceLevelEnum FAPI2SP_PKJ_MTLS =
-            new ClientComplianceLevelEnum(Value.FAPI2SP_PKJ_MTLS, "fapi2_sp_pkj_mtls");
 
-    public static final ClientComplianceLevelEnum FAPI1ADV_MTLS_PAR =
-            new ClientComplianceLevelEnum(Value.FAPI1ADV_MTLS_PAR, "fapi1_adv_mtls_par");
+    public static final ClientComplianceLevelEnum FAPI2SP_PKJ_MTLS = new ClientComplianceLevelEnum(Value.FAPI2SP_PKJ_MTLS, "fapi2_sp_pkj_mtls");
 
-    public static final ClientComplianceLevelEnum FAPI2SP_MTLS_MTLS =
-            new ClientComplianceLevelEnum(Value.FAPI2SP_MTLS_MTLS, "fapi2_sp_mtls_mtls");
+    public static final ClientComplianceLevelEnum FAPI1ADV_MTLS_PAR = new ClientComplianceLevelEnum(Value.FAPI1ADV_MTLS_PAR, "fapi1_adv_mtls_par");
+
+    public static final ClientComplianceLevelEnum FAPI2SP_MTLS_MTLS = new ClientComplianceLevelEnum(Value.FAPI2SP_MTLS_MTLS, "fapi2_sp_mtls_mtls");
 
     public static final ClientComplianceLevelEnum NONE = new ClientComplianceLevelEnum(Value.NONE, "none");
 
-    public static final ClientComplianceLevelEnum FAPI1ADV_PKJ_PAR =
-            new ClientComplianceLevelEnum(Value.FAPI1ADV_PKJ_PAR, "fapi1_adv_pkj_par");
+    public static final ClientComplianceLevelEnum FAPI1ADV_PKJ_PAR = new ClientComplianceLevelEnum(Value.FAPI1ADV_PKJ_PAR, "fapi1_adv_pkj_par");
 
     private final Value value;
 
@@ -31,78 +28,46 @@ public final class ClientComplianceLevelEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientComplianceLevelEnum
-                        && this.string.equals(((ClientComplianceLevelEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FAPI2SP_PKJ_MTLS:
-                return visitor.visitFapi2SpPkjMtls();
-            case FAPI1ADV_MTLS_PAR:
-                return visitor.visitFapi1AdvMtlsPar();
-            case FAPI2SP_MTLS_MTLS:
-                return visitor.visitFapi2SpMtlsMtls();
-            case NONE:
-                return visitor.visitNone();
-            case FAPI1ADV_PKJ_PAR:
-                return visitor.visitFapi1AdvPkjPar();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientComplianceLevelEnum valueOf(String value) {
-        switch (value) {
-            case "fapi2_sp_pkj_mtls":
-                return FAPI2SP_PKJ_MTLS;
-            case "fapi1_adv_mtls_par":
-                return FAPI1ADV_MTLS_PAR;
-            case "fapi2_sp_mtls_mtls":
-                return FAPI2SP_MTLS_MTLS;
-            case "none":
-                return NONE;
-            case "fapi1_adv_pkj_par":
-                return FAPI1ADV_PKJ_PAR;
-            default:
-                return new ClientComplianceLevelEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         NONE,
-
         FAPI1ADV_PKJ_PAR,
-
         FAPI1ADV_MTLS_PAR,
-
         FAPI2SP_PKJ_MTLS,
-
         FAPI2SP_MTLS_MTLS,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitFapi1AdvPkjPar();

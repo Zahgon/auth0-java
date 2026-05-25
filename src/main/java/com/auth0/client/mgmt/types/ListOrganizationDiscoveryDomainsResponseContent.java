@@ -22,16 +22,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListOrganizationDiscoveryDomainsResponseContent.Builder.class)
 public final class ListOrganizationDiscoveryDomainsResponseContent {
+
     private final Optional<String> next;
 
     private final List<OrganizationDiscoveryDomain> domains;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListOrganizationDiscoveryDomainsResponseContent(
-            Optional<String> next,
-            List<OrganizationDiscoveryDomain> domains,
-            Map<String, Object> additionalProperties) {
+    private ListOrganizationDiscoveryDomainsResponseContent(Optional<String> next, List<OrganizationDiscoveryDomain> domains, Map<String, Object> additionalProperties) {
         this.next = next;
         this.domains = domains;
         this.additionalProperties = additionalProperties;
@@ -39,24 +37,22 @@ public final class ListOrganizationDiscoveryDomainsResponseContent {
 
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domains")
     public List<OrganizationDiscoveryDomain> getDomains() {
-        return domains;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListOrganizationDiscoveryDomainsResponseContent
-                && equalTo((ListOrganizationDiscoveryDomainsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListOrganizationDiscoveryDomainsResponseContent other) {
@@ -65,20 +61,21 @@ public final class ListOrganizationDiscoveryDomainsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.domains);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private List<OrganizationDiscoveryDomain> domains = new ArrayList<>();
@@ -86,58 +83,45 @@ public final class ListOrganizationDiscoveryDomainsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListOrganizationDiscoveryDomainsResponseContent other) {
-            next(other.getNext());
-            domains(other.getDomains());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "domains", nulls = Nulls.SKIP)
         public Builder domains(List<OrganizationDiscoveryDomain> domains) {
-            this.domains.clear();
-            if (domains != null) {
-                this.domains.addAll(domains);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addDomains(OrganizationDiscoveryDomain domains) {
-            this.domains.add(domains);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllDomains(List<OrganizationDiscoveryDomain> domains) {
-            if (domains != null) {
-                this.domains.addAll(domains);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListOrganizationDiscoveryDomainsResponseContent build() {
-            return new ListOrganizationDiscoveryDomainsResponseContent(next, domains, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

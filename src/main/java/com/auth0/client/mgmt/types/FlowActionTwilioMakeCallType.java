@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionTwilioMakeCallType {
+
     public static final FlowActionTwilioMakeCallType TWILIO = new FlowActionTwilioMakeCallType(Value.TWILIO, "TWILIO");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionTwilioMakeCallType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionTwilioMakeCallType
-                        && this.string.equals(((FlowActionTwilioMakeCallType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TWILIO:
-                return visitor.visitTwilio();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionTwilioMakeCallType valueOf(String value) {
-        switch (value) {
-            case "TWILIO":
-                return TWILIO;
-            default:
-                return new FlowActionTwilioMakeCallType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TWILIO,
 
-        UNKNOWN
+        TWILIO, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTwilio();
 
         T visitUnknown(String unknownType);

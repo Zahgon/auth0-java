@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionMappingModeEnumOidc {
-    public static final ConnectionMappingModeEnumOidc BIND_ALL =
-            new ConnectionMappingModeEnumOidc(Value.BIND_ALL, "bind_all");
 
-    public static final ConnectionMappingModeEnumOidc USE_MAP =
-            new ConnectionMappingModeEnumOidc(Value.USE_MAP, "use_map");
+    public static final ConnectionMappingModeEnumOidc BIND_ALL = new ConnectionMappingModeEnumOidc(Value.BIND_ALL, "bind_all");
+
+    public static final ConnectionMappingModeEnumOidc USE_MAP = new ConnectionMappingModeEnumOidc(Value.USE_MAP, "use_map");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionMappingModeEnumOidc {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionMappingModeEnumOidc
-                        && this.string.equals(((ConnectionMappingModeEnumOidc) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BIND_ALL:
-                return visitor.visitBindAll();
-            case USE_MAP:
-                return visitor.visitUseMap();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionMappingModeEnumOidc valueOf(String value) {
-        switch (value) {
-            case "bind_all":
-                return BIND_ALL;
-            case "use_map":
-                return USE_MAP;
-            default:
-                return new ConnectionMappingModeEnumOidc(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BIND_ALL,
 
-        USE_MAP,
-
-        UNKNOWN
+        BIND_ALL, USE_MAP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBindAll();
 
         T visitUseMap();

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUserAuthenticationMethodsOffsetPaginatedResponseContent.Builder.class)
 public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
+
     private final Optional<Double> start;
 
     private final Optional<Double> limit;
@@ -31,12 +32,7 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUserAuthenticationMethodsOffsetPaginatedResponseContent(
-            Optional<Double> start,
-            Optional<Double> limit,
-            Optional<Double> total,
-            Optional<List<UserAuthenticationMethod>> authenticators,
-            Map<String, Object> additionalProperties) {
+    private ListUserAuthenticationMethodsOffsetPaginatedResponseContent(Optional<Double> start, Optional<Double> limit, Optional<Double> total, Optional<List<UserAuthenticationMethod>> authenticators, Map<String, Object> additionalProperties) {
         this.start = start;
         this.limit = limit;
         this.total = total;
@@ -49,7 +45,7 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
      */
     @JsonProperty("start")
     public Optional<Double> getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
      */
     @JsonProperty("limit")
     public Optional<Double> getLimit() {
-        return limit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +61,7 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
      */
     @JsonProperty("total")
     public Optional<Double> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,44 +69,40 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
      */
     @JsonProperty("authenticators")
     public Optional<List<UserAuthenticationMethod>> getAuthenticators() {
-        return authenticators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUserAuthenticationMethodsOffsetPaginatedResponseContent
-                && equalTo((ListUserAuthenticationMethodsOffsetPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUserAuthenticationMethodsOffsetPaginatedResponseContent other) {
-        return start.equals(other.start)
-                && limit.equals(other.limit)
-                && total.equals(other.total)
-                && authenticators.equals(other.authenticators);
+        return start.equals(other.start) && limit.equals(other.limit) && total.equals(other.total) && authenticators.equals(other.authenticators);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.start, this.limit, this.total, this.authenticators);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> start = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
@@ -122,14 +114,11 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListUserAuthenticationMethodsOffsetPaginatedResponseContent other) {
-            start(other.getStart());
-            limit(other.getLimit());
-            total(other.getTotal());
-            authenticators(other.getAuthenticators());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -137,13 +126,11 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "start", nulls = Nulls.SKIP)
         public Builder start(Optional<Double> start) {
-            this.start = start;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder start(Double start) {
-            this.start = Optional.ofNullable(start);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,13 +138,11 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "limit", nulls = Nulls.SKIP)
         public Builder limit(Optional<Double> limit) {
-            this.limit = limit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder limit(Double limit) {
-            this.limit = Optional.ofNullable(limit);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +150,11 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Double> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Double total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,28 +162,23 @@ public final class ListUserAuthenticationMethodsOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "authenticators", nulls = Nulls.SKIP)
         public Builder authenticators(Optional<List<UserAuthenticationMethod>> authenticators) {
-            this.authenticators = authenticators;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authenticators(List<UserAuthenticationMethod> authenticators) {
-            this.authenticators = Optional.ofNullable(authenticators);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListUserAuthenticationMethodsOffsetPaginatedResponseContent build() {
-            return new ListUserAuthenticationMethodsOffsetPaginatedResponseContent(
-                    start, limit, total, authenticators, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

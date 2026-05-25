@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeUrlConst {
+
     public static final FormFieldTypeUrlConst URL = new FormFieldTypeUrlConst(Value.URL, "URL");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeUrlConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeUrlConst
-                        && this.string.equals(((FormFieldTypeUrlConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case URL:
-                return visitor.visitUrl();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeUrlConst valueOf(String value) {
-        switch (value) {
-            case "URL":
-                return URL;
-            default:
-                return new FormFieldTypeUrlConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        URL,
 
-        UNKNOWN
+        URL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUrl();
 
         T visitUnknown(String unknownType);

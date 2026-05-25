@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PreviewCimdMetadataResponseContent.Builder.class)
 public final class PreviewCimdMetadataResponseContent {
+
     private final Optional<String> clientId;
 
     private final Optional<List<String>> errors;
@@ -31,12 +32,7 @@ public final class PreviewCimdMetadataResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private PreviewCimdMetadataResponseContent(
-            Optional<String> clientId,
-            Optional<List<String>> errors,
-            Optional<CimdValidationResult> validation,
-            Optional<CimdMappedClientFields> mappedFields,
-            Map<String, Object> additionalProperties) {
+    private PreviewCimdMetadataResponseContent(Optional<String> clientId, Optional<List<String>> errors, Optional<CimdValidationResult> validation, Optional<CimdMappedClientFields> mappedFields, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.errors = errors;
         this.validation = validation;
@@ -49,7 +45,7 @@ public final class PreviewCimdMetadataResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,54 +53,50 @@ public final class PreviewCimdMetadataResponseContent {
      */
     @JsonProperty("errors")
     public Optional<List<String>> getErrors() {
-        return errors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("validation")
     public Optional<CimdValidationResult> getValidation() {
-        return validation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mapped_fields")
     public Optional<CimdMappedClientFields> getMappedFields() {
-        return mappedFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PreviewCimdMetadataResponseContent
-                && equalTo((PreviewCimdMetadataResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PreviewCimdMetadataResponseContent other) {
-        return clientId.equals(other.clientId)
-                && errors.equals(other.errors)
-                && validation.equals(other.validation)
-                && mappedFields.equals(other.mappedFields);
+        return clientId.equals(other.clientId) && errors.equals(other.errors) && validation.equals(other.validation) && mappedFields.equals(other.mappedFields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientId, this.errors, this.validation, this.mappedFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientId = Optional.empty();
 
         private Optional<List<String>> errors = Optional.empty();
@@ -116,14 +108,11 @@ public final class PreviewCimdMetadataResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(PreviewCimdMetadataResponseContent other) {
-            clientId(other.getClientId());
-            errors(other.getErrors());
-            validation(other.getValidation());
-            mappedFields(other.getMappedFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +120,11 @@ public final class PreviewCimdMetadataResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,50 +132,41 @@ public final class PreviewCimdMetadataResponseContent {
          */
         @JsonSetter(value = "errors", nulls = Nulls.SKIP)
         public Builder errors(Optional<List<String>> errors) {
-            this.errors = errors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errors(List<String> errors) {
-            this.errors = Optional.ofNullable(errors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "validation", nulls = Nulls.SKIP)
         public Builder validation(Optional<CimdValidationResult> validation) {
-            this.validation = validation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder validation(CimdValidationResult validation) {
-            this.validation = Optional.ofNullable(validation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mapped_fields", nulls = Nulls.SKIP)
         public Builder mappedFields(Optional<CimdMappedClientFields> mappedFields) {
-            this.mappedFields = mappedFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mappedFields(CimdMappedClientFields mappedFields) {
-            this.mappedFields = Optional.ofNullable(mappedFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public PreviewCimdMetadataResponseContent build() {
-            return new PreviewCimdMetadataResponseContent(
-                    clientId, errors, validation, mappedFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

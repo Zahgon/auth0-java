@@ -21,12 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUserBlocksResponseContent.Builder.class)
 public final class ListUserBlocksResponseContent {
+
     private final Optional<List<UserBlockIdentifier>> blockedFor;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUserBlocksResponseContent(
-            Optional<List<UserBlockIdentifier>> blockedFor, Map<String, Object> additionalProperties) {
+    private ListUserBlocksResponseContent(Optional<List<UserBlockIdentifier>> blockedFor, Map<String, Object> additionalProperties) {
         this.blockedFor = blockedFor;
         this.additionalProperties = additionalProperties;
     }
@@ -36,18 +36,17 @@ public final class ListUserBlocksResponseContent {
      */
     @JsonProperty("blocked_for")
     public Optional<List<UserBlockIdentifier>> getBlockedFor() {
-        return blockedFor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUserBlocksResponseContent && equalTo((ListUserBlocksResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUserBlocksResponseContent other) {
@@ -56,30 +55,31 @@ public final class ListUserBlocksResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.blockedFor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<UserBlockIdentifier>> blockedFor = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListUserBlocksResponseContent other) {
-            blockedFor(other.getBlockedFor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +87,23 @@ public final class ListUserBlocksResponseContent {
          */
         @JsonSetter(value = "blocked_for", nulls = Nulls.SKIP)
         public Builder blockedFor(Optional<List<UserBlockIdentifier>> blockedFor) {
-            this.blockedFor = blockedFor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blockedFor(List<UserBlockIdentifier> blockedFor) {
-            this.blockedFor = Optional.ofNullable(blockedFor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListUserBlocksResponseContent build() {
-            return new ListUserBlocksResponseContent(blockedFor, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsApple.Builder.class)
 public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final OptionalNullable<String> appSecret;
@@ -44,24 +45,11 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
 
     private final OptionalNullable<String> teamId;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsApple(
-            Optional<List<String>> nonPersistentAttrs,
-            OptionalNullable<String> appSecret,
-            OptionalNullable<String> clientId,
-            Optional<Boolean> email,
-            Optional<List<String>> freeformScopes,
-            OptionalNullable<String> kid,
-            Optional<Boolean> name,
-            Optional<String> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<String> teamId,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsApple(Optional<List<String>> nonPersistentAttrs, OptionalNullable<String> appSecret, OptionalNullable<String> clientId, Optional<Boolean> email, Optional<List<String>> freeformScopes, OptionalNullable<String> kid, Optional<Boolean> name, Optional<String> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<String> teamId, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.appSecret = appSecret;
         this.clientId = clientId;
@@ -79,7 +67,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,10 +76,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("app_secret")
     public OptionalNullable<String> getAppSecret() {
-        if (appSecret == null) {
-            return OptionalNullable.absent();
-        }
-        return appSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,10 +85,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("client_id")
     public OptionalNullable<String> getClientId() {
-        if (clientId == null) {
-            return OptionalNullable.absent();
-        }
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,7 +93,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,7 +101,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
      */
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -128,10 +110,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("kid")
     public OptionalNullable<String> getKid() {
-        if (kid == null) {
-            return OptionalNullable.absent();
-        }
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,7 +118,7 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
      */
     @JsonProperty("name")
     public Optional<Boolean> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -147,12 +126,12 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
      */
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -161,19 +140,13 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("team_id")
     public OptionalNullable<String> getTeamId() {
-        if (teamId == null) {
-            return OptionalNullable.absent();
-        }
-        return teamId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -202,63 +175,41 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsApple && equalTo((ConnectionOptionsApple) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsApple other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && appSecret.equals(other.appSecret)
-                && clientId.equals(other.clientId)
-                && email.equals(other.email)
-                && freeformScopes.equals(other.freeformScopes)
-                && kid.equals(other.kid)
-                && name.equals(other.name)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && teamId.equals(other.teamId)
-                && upstreamParams.equals(other.upstreamParams);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && appSecret.equals(other.appSecret) && clientId.equals(other.clientId) && email.equals(other.email) && freeformScopes.equals(other.freeformScopes) && kid.equals(other.kid) && name.equals(other.name) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && teamId.equals(other.teamId) && upstreamParams.equals(other.upstreamParams);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.appSecret,
-                this.clientId,
-                this.email,
-                this.freeformScopes,
-                this.kid,
-                this.name,
-                this.scope,
-                this.setUserRootAttributes,
-                this.teamId,
-                this.upstreamParams);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private OptionalNullable<String> appSecret = OptionalNullable.absent();
@@ -279,38 +230,25 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
 
         private OptionalNullable<String> teamId = OptionalNullable.absent();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsApple other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            appSecret(other.getAppSecret());
-            clientId(other.getClientId());
-            email(other.getEmail());
-            freeformScopes(other.getFreeformScopes());
-            kid(other.getKid());
-            name(other.getName());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            teamId(other.getTeamId());
-            upstreamParams(other.getUpstreamParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -318,33 +256,19 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "app_secret", nulls = Nulls.SKIP)
         public Builder appSecret(@Nullable OptionalNullable<String> appSecret) {
-            this.appSecret = appSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appSecret(String appSecret) {
-            this.appSecret = OptionalNullable.of(appSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appSecret(Optional<String> appSecret) {
-            if (appSecret.isPresent()) {
-                this.appSecret = OptionalNullable.of(appSecret.get());
-            } else {
-                this.appSecret = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appSecret(com.auth0.client.mgmt.core.Nullable<String> appSecret) {
-            if (appSecret.isNull()) {
-                this.appSecret = OptionalNullable.ofNull();
-            } else if (appSecret.isEmpty()) {
-                this.appSecret = OptionalNullable.absent();
-            } else {
-                this.appSecret = OptionalNullable.of(appSecret.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -352,33 +276,19 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(@Nullable OptionalNullable<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = OptionalNullable.of(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(Optional<String> clientId) {
-            if (clientId.isPresent()) {
-                this.clientId = OptionalNullable.of(clientId.get());
-            } else {
-                this.clientId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(com.auth0.client.mgmt.core.Nullable<String> clientId) {
-            if (clientId.isNull()) {
-                this.clientId = OptionalNullable.ofNull();
-            } else if (clientId.isEmpty()) {
-                this.clientId = OptionalNullable.absent();
-            } else {
-                this.clientId = OptionalNullable.of(clientId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -386,13 +296,11 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -400,13 +308,11 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -414,33 +320,19 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "kid", nulls = Nulls.SKIP)
         public Builder kid(@Nullable OptionalNullable<String> kid) {
-            this.kid = kid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder kid(String kid) {
-            this.kid = OptionalNullable.of(kid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder kid(Optional<String> kid) {
-            if (kid.isPresent()) {
-                this.kid = OptionalNullable.of(kid.get());
-            } else {
-                this.kid = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder kid(com.auth0.client.mgmt.core.Nullable<String> kid) {
-            if (kid.isNull()) {
-                this.kid = OptionalNullable.ofNull();
-            } else if (kid.isEmpty()) {
-                this.kid = OptionalNullable.absent();
-            } else {
-                this.kid = OptionalNullable.of(kid.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -448,13 +340,11 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<Boolean> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(Boolean name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -462,24 +352,20 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -487,98 +373,48 @@ public final class ConnectionOptionsApple implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "team_id", nulls = Nulls.SKIP)
         public Builder teamId(@Nullable OptionalNullable<String> teamId) {
-            this.teamId = teamId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamId(String teamId) {
-            this.teamId = OptionalNullable.of(teamId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamId(Optional<String> teamId) {
-            if (teamId.isPresent()) {
-                this.teamId = OptionalNullable.of(teamId.get());
-            } else {
-                this.teamId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamId(com.auth0.client.mgmt.core.Nullable<String> teamId) {
-            if (teamId.isNull()) {
-                this.teamId = OptionalNullable.ofNull();
-            } else if (teamId.isEmpty()) {
-                this.teamId = OptionalNullable.absent();
-            } else {
-                this.teamId = OptionalNullable.of(teamId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsApple build() {
-            return new ConnectionOptionsApple(
-                    nonPersistentAttrs,
-                    appSecret,
-                    clientId,
-                    email,
-                    freeformScopes,
-                    kid,
-                    name,
-                    scope,
-                    setUserRootAttributes,
-                    teamId,
-                    upstreamParams,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

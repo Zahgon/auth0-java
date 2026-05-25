@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientSessionTransferDelegationConfiguration.Builder.class)
 public final class ClientSessionTransferDelegationConfiguration {
+
     private final Optional<Boolean> allowDelegatedAccess;
 
     private final Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientSessionTransferDelegationConfiguration(
-            Optional<Boolean> allowDelegatedAccess,
-            Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding,
-            Map<String, Object> additionalProperties) {
+    private ClientSessionTransferDelegationConfiguration(Optional<Boolean> allowDelegatedAccess, Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding, Map<String, Object> additionalProperties) {
         this.allowDelegatedAccess = allowDelegatedAccess;
         this.enforceDeviceBinding = enforceDeviceBinding;
         this.additionalProperties = additionalProperties;
@@ -40,47 +38,45 @@ public final class ClientSessionTransferDelegationConfiguration {
      */
     @JsonProperty("allow_delegated_access")
     public Optional<Boolean> getAllowDelegatedAccess() {
-        return allowDelegatedAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("enforce_device_binding")
     public Optional<ClientSessionTransferDelegationDeviceBindingEnum> getEnforceDeviceBinding() {
-        return enforceDeviceBinding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientSessionTransferDelegationConfiguration
-                && equalTo((ClientSessionTransferDelegationConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientSessionTransferDelegationConfiguration other) {
-        return allowDelegatedAccess.equals(other.allowDelegatedAccess)
-                && enforceDeviceBinding.equals(other.enforceDeviceBinding);
+        return allowDelegatedAccess.equals(other.allowDelegatedAccess) && enforceDeviceBinding.equals(other.enforceDeviceBinding);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.allowDelegatedAccess, this.enforceDeviceBinding);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> allowDelegatedAccess = Optional.empty();
 
         private Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding = Optional.empty();
@@ -88,12 +84,11 @@ public final class ClientSessionTransferDelegationConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientSessionTransferDelegationConfiguration other) {
-            allowDelegatedAccess(other.getAllowDelegatedAccess());
-            enforceDeviceBinding(other.getEnforceDeviceBinding());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,40 +96,32 @@ public final class ClientSessionTransferDelegationConfiguration {
          */
         @JsonSetter(value = "allow_delegated_access", nulls = Nulls.SKIP)
         public Builder allowDelegatedAccess(Optional<Boolean> allowDelegatedAccess) {
-            this.allowDelegatedAccess = allowDelegatedAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowDelegatedAccess(Boolean allowDelegatedAccess) {
-            this.allowDelegatedAccess = Optional.ofNullable(allowDelegatedAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enforce_device_binding", nulls = Nulls.SKIP)
-        public Builder enforceDeviceBinding(
-                Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding) {
-            this.enforceDeviceBinding = enforceDeviceBinding;
-            return this;
+        public Builder enforceDeviceBinding(Optional<ClientSessionTransferDelegationDeviceBindingEnum> enforceDeviceBinding) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforceDeviceBinding(ClientSessionTransferDelegationDeviceBindingEnum enforceDeviceBinding) {
-            this.enforceDeviceBinding = Optional.ofNullable(enforceDeviceBinding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientSessionTransferDelegationConfiguration build() {
-            return new ClientSessionTransferDelegationConfiguration(
-                    allowDelegatedAccess, enforceDeviceBinding, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

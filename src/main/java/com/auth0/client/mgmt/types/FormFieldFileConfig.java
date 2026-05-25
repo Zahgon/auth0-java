@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldFileConfig.Builder.class)
 public final class FormFieldFileConfig {
+
     private final Optional<Boolean> multiple;
 
     private final Optional<FormFieldFileConfigStorage> storage;
@@ -35,14 +36,7 @@ public final class FormFieldFileConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldFileConfig(
-            Optional<Boolean> multiple,
-            Optional<FormFieldFileConfigStorage> storage,
-            Optional<List<FormFieldFileConfigCategoryEnum>> categories,
-            Optional<List<String>> extensions,
-            Optional<Integer> maxSize,
-            Optional<Integer> maxFiles,
-            Map<String, Object> additionalProperties) {
+    private FormFieldFileConfig(Optional<Boolean> multiple, Optional<FormFieldFileConfigStorage> storage, Optional<List<FormFieldFileConfigCategoryEnum>> categories, Optional<List<String>> extensions, Optional<Integer> maxSize, Optional<Integer> maxFiles, Map<String, Object> additionalProperties) {
         this.multiple = multiple;
         this.storage = storage;
         this.categories = categories;
@@ -54,70 +48,65 @@ public final class FormFieldFileConfig {
 
     @JsonProperty("multiple")
     public Optional<Boolean> getMultiple() {
-        return multiple;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("storage")
     public Optional<FormFieldFileConfigStorage> getStorage() {
-        return storage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("categories")
     public Optional<List<FormFieldFileConfigCategoryEnum>> getCategories() {
-        return categories;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("extensions")
     public Optional<List<String>> getExtensions() {
-        return extensions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("maxSize")
     public Optional<Integer> getMaxSize() {
-        return maxSize;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("maxFiles")
     public Optional<Integer> getMaxFiles() {
-        return maxFiles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldFileConfig && equalTo((FormFieldFileConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldFileConfig other) {
-        return multiple.equals(other.multiple)
-                && storage.equals(other.storage)
-                && categories.equals(other.categories)
-                && extensions.equals(other.extensions)
-                && maxSize.equals(other.maxSize)
-                && maxFiles.equals(other.maxFiles);
+        return multiple.equals(other.multiple) && storage.equals(other.storage) && categories.equals(other.categories) && extensions.equals(other.extensions) && maxSize.equals(other.maxSize) && maxFiles.equals(other.maxFiles);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.multiple, this.storage, this.categories, this.extensions, this.maxSize, this.maxFiles);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> multiple = Optional.empty();
 
         private Optional<FormFieldFileConfigStorage> storage = Optional.empty();
@@ -133,97 +122,77 @@ public final class FormFieldFileConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldFileConfig other) {
-            multiple(other.getMultiple());
-            storage(other.getStorage());
-            categories(other.getCategories());
-            extensions(other.getExtensions());
-            maxSize(other.getMaxSize());
-            maxFiles(other.getMaxFiles());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "multiple", nulls = Nulls.SKIP)
         public Builder multiple(Optional<Boolean> multiple) {
-            this.multiple = multiple;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder multiple(Boolean multiple) {
-            this.multiple = Optional.ofNullable(multiple);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "storage", nulls = Nulls.SKIP)
         public Builder storage(Optional<FormFieldFileConfigStorage> storage) {
-            this.storage = storage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder storage(FormFieldFileConfigStorage storage) {
-            this.storage = Optional.ofNullable(storage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "categories", nulls = Nulls.SKIP)
         public Builder categories(Optional<List<FormFieldFileConfigCategoryEnum>> categories) {
-            this.categories = categories;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder categories(List<FormFieldFileConfigCategoryEnum> categories) {
-            this.categories = Optional.ofNullable(categories);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "extensions", nulls = Nulls.SKIP)
         public Builder extensions(Optional<List<String>> extensions) {
-            this.extensions = extensions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder extensions(List<String> extensions) {
-            this.extensions = Optional.ofNullable(extensions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "maxSize", nulls = Nulls.SKIP)
         public Builder maxSize(Optional<Integer> maxSize) {
-            this.maxSize = maxSize;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Optional.ofNullable(maxSize);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "maxFiles", nulls = Nulls.SKIP)
         public Builder maxFiles(Optional<Integer> maxFiles) {
-            this.maxFiles = maxFiles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxFiles(Integer maxFiles) {
-            this.maxFiles = Optional.ofNullable(maxFiles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldFileConfig build() {
-            return new FormFieldFileConfig(
-                    multiple, storage, categories, extensions, maxSize, maxFiles, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

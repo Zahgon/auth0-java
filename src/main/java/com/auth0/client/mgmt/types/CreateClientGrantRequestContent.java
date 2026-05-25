@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateClientGrantRequestContent.Builder.class)
 public final class CreateClientGrantRequestContent {
+
     private final Optional<String> clientId;
 
     private final String audience;
@@ -42,17 +43,7 @@ public final class CreateClientGrantRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateClientGrantRequestContent(
-            Optional<String> clientId,
-            String audience,
-            Optional<ClientGrantDefaultForEnum> defaultFor,
-            Optional<ClientGrantOrganizationUsageEnum> organizationUsage,
-            Optional<Boolean> allowAnyOrganization,
-            Optional<List<String>> scope,
-            Optional<ClientGrantSubjectTypeEnum> subjectType,
-            Optional<List<String>> authorizationDetailsTypes,
-            Optional<Boolean> allowAllScopes,
-            Map<String, Object> additionalProperties) {
+    private CreateClientGrantRequestContent(Optional<String> clientId, String audience, Optional<ClientGrantDefaultForEnum> defaultFor, Optional<ClientGrantOrganizationUsageEnum> organizationUsage, Optional<Boolean> allowAnyOrganization, Optional<List<String>> scope, Optional<ClientGrantSubjectTypeEnum> subjectType, Optional<List<String>> authorizationDetailsTypes, Optional<Boolean> allowAllScopes, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.audience = audience;
         this.defaultFor = defaultFor;
@@ -70,7 +61,7 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,17 +69,17 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("audience")
     public String getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default_for")
     public Optional<ClientGrantDefaultForEnum> getDefaultFor() {
-        return defaultFor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organization_usage")
     public Optional<ClientGrantOrganizationUsageEnum> getOrganizationUsage() {
-        return organizationUsage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +87,7 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("allow_any_organization")
     public Optional<Boolean> getAllowAnyOrganization() {
-        return allowAnyOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,12 +95,12 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject_type")
     public Optional<ClientGrantSubjectTypeEnum> getSubjectType() {
-        return subjectType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,7 +108,7 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("authorization_details_types")
     public Optional<List<String>> getAuthorizationDetailsTypes() {
-        return authorizationDetailsTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,56 +116,39 @@ public final class CreateClientGrantRequestContent {
      */
     @JsonProperty("allow_all_scopes")
     public Optional<Boolean> getAllowAllScopes() {
-        return allowAllScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateClientGrantRequestContent && equalTo((CreateClientGrantRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateClientGrantRequestContent other) {
-        return clientId.equals(other.clientId)
-                && audience.equals(other.audience)
-                && defaultFor.equals(other.defaultFor)
-                && organizationUsage.equals(other.organizationUsage)
-                && allowAnyOrganization.equals(other.allowAnyOrganization)
-                && scope.equals(other.scope)
-                && subjectType.equals(other.subjectType)
-                && authorizationDetailsTypes.equals(other.authorizationDetailsTypes)
-                && allowAllScopes.equals(other.allowAllScopes);
+        return clientId.equals(other.clientId) && audience.equals(other.audience) && defaultFor.equals(other.defaultFor) && organizationUsage.equals(other.organizationUsage) && allowAnyOrganization.equals(other.allowAnyOrganization) && scope.equals(other.scope) && subjectType.equals(other.subjectType) && authorizationDetailsTypes.equals(other.authorizationDetailsTypes) && allowAllScopes.equals(other.allowAllScopes);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.clientId,
-                this.audience,
-                this.defaultFor,
-                this.organizationUsage,
-                this.allowAnyOrganization,
-                this.scope,
-                this.subjectType,
-                this.authorizationDetailsTypes,
-                this.allowAllScopes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AudienceStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AudienceStage {
+
         /**
          * <p>The audience (API identifier) of this client grant</p>
          */
@@ -184,6 +158,7 @@ public final class CreateClientGrantRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateClientGrantRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -240,6 +215,7 @@ public final class CreateClientGrantRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AudienceStage, _FinalStage {
+
         private String audience;
 
         private Optional<Boolean> allowAllScopes = Optional.empty();
@@ -261,20 +237,12 @@ public final class CreateClientGrantRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateClientGrantRequestContent other) {
-            clientId(other.getClientId());
-            audience(other.getAudience());
-            defaultFor(other.getDefaultFor());
-            organizationUsage(other.getOrganizationUsage());
-            allowAnyOrganization(other.getAllowAnyOrganization());
-            scope(other.getScope());
-            subjectType(other.getSubjectType());
-            authorizationDetailsTypes(other.getAuthorizationDetailsTypes());
-            allowAllScopes(other.getAllowAllScopes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -285,8 +253,7 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter("audience")
         public _FinalStage audience(@NotNull String audience) {
-            this.audience = Objects.requireNonNull(audience, "audience must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,8 +262,7 @@ public final class CreateClientGrantRequestContent {
          */
         @java.lang.Override
         public _FinalStage allowAllScopes(Boolean allowAllScopes) {
-            this.allowAllScopes = Optional.ofNullable(allowAllScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -305,8 +271,7 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter(value = "allow_all_scopes", nulls = Nulls.SKIP)
         public _FinalStage allowAllScopes(Optional<Boolean> allowAllScopes) {
-            this.allowAllScopes = allowAllScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,8 +280,7 @@ public final class CreateClientGrantRequestContent {
          */
         @java.lang.Override
         public _FinalStage authorizationDetailsTypes(List<String> authorizationDetailsTypes) {
-            this.authorizationDetailsTypes = Optional.ofNullable(authorizationDetailsTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -325,21 +289,18 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter(value = "authorization_details_types", nulls = Nulls.SKIP)
         public _FinalStage authorizationDetailsTypes(Optional<List<String>> authorizationDetailsTypes) {
-            this.authorizationDetailsTypes = authorizationDetailsTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subjectType(ClientGrantSubjectTypeEnum subjectType) {
-            this.subjectType = Optional.ofNullable(subjectType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subject_type", nulls = Nulls.SKIP)
         public _FinalStage subjectType(Optional<ClientGrantSubjectTypeEnum> subjectType) {
-            this.subjectType = subjectType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,8 +309,7 @@ public final class CreateClientGrantRequestContent {
          */
         @java.lang.Override
         public _FinalStage scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -358,8 +318,7 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -368,8 +327,7 @@ public final class CreateClientGrantRequestContent {
          */
         @java.lang.Override
         public _FinalStage allowAnyOrganization(Boolean allowAnyOrganization) {
-            this.allowAnyOrganization = Optional.ofNullable(allowAnyOrganization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -378,34 +336,29 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter(value = "allow_any_organization", nulls = Nulls.SKIP)
         public _FinalStage allowAnyOrganization(Optional<Boolean> allowAnyOrganization) {
-            this.allowAnyOrganization = allowAnyOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage organizationUsage(ClientGrantOrganizationUsageEnum organizationUsage) {
-            this.organizationUsage = Optional.ofNullable(organizationUsage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "organization_usage", nulls = Nulls.SKIP)
         public _FinalStage organizationUsage(Optional<ClientGrantOrganizationUsageEnum> organizationUsage) {
-            this.organizationUsage = organizationUsage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage defaultFor(ClientGrantDefaultForEnum defaultFor) {
-            this.defaultFor = Optional.ofNullable(defaultFor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "default_for", nulls = Nulls.SKIP)
         public _FinalStage defaultFor(Optional<ClientGrantDefaultForEnum> defaultFor) {
-            this.defaultFor = defaultFor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -414,8 +367,7 @@ public final class CreateClientGrantRequestContent {
          */
         @java.lang.Override
         public _FinalStage clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -424,35 +376,22 @@ public final class CreateClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public _FinalStage clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateClientGrantRequestContent build() {
-            return new CreateClientGrantRequestContent(
-                    clientId,
-                    audience,
-                    defaultFor,
-                    organizationUsage,
-                    allowAnyOrganization,
-                    scope,
-                    subjectType,
-                    authorizationDetailsTypes,
-                    allowAllScopes,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

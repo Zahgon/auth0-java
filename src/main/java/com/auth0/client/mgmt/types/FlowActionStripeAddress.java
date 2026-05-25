@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionStripeAddress.Builder.class)
 public final class FlowActionStripeAddress {
+
     private final Optional<String> line1;
 
     private final Optional<String> line2;
@@ -34,14 +35,7 @@ public final class FlowActionStripeAddress {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionStripeAddress(
-            Optional<String> line1,
-            Optional<String> line2,
-            Optional<String> postalCode,
-            Optional<String> city,
-            Optional<String> state,
-            Optional<String> country,
-            Map<String, Object> additionalProperties) {
+    private FlowActionStripeAddress(Optional<String> line1, Optional<String> line2, Optional<String> postalCode, Optional<String> city, Optional<String> state, Optional<String> country, Map<String, Object> additionalProperties) {
         this.line1 = line1;
         this.line2 = line2;
         this.postalCode = postalCode;
@@ -53,70 +47,65 @@ public final class FlowActionStripeAddress {
 
     @JsonProperty("line1")
     public Optional<String> getLine1() {
-        return line1;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("line2")
     public Optional<String> getLine2() {
-        return line2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("postalCode")
     public Optional<String> getPostalCode() {
-        return postalCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("city")
     public Optional<String> getCity() {
-        return city;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("state")
     public Optional<String> getState() {
-        return state;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("country")
     public Optional<String> getCountry() {
-        return country;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionStripeAddress && equalTo((FlowActionStripeAddress) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionStripeAddress other) {
-        return line1.equals(other.line1)
-                && line2.equals(other.line2)
-                && postalCode.equals(other.postalCode)
-                && city.equals(other.city)
-                && state.equals(other.state)
-                && country.equals(other.country);
+        return line1.equals(other.line1) && line2.equals(other.line2) && postalCode.equals(other.postalCode) && city.equals(other.city) && state.equals(other.state) && country.equals(other.country);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.line1, this.line2, this.postalCode, this.city, this.state, this.country);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> line1 = Optional.empty();
 
         private Optional<String> line2 = Optional.empty();
@@ -132,96 +121,77 @@ public final class FlowActionStripeAddress {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionStripeAddress other) {
-            line1(other.getLine1());
-            line2(other.getLine2());
-            postalCode(other.getPostalCode());
-            city(other.getCity());
-            state(other.getState());
-            country(other.getCountry());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "line1", nulls = Nulls.SKIP)
         public Builder line1(Optional<String> line1) {
-            this.line1 = line1;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder line1(String line1) {
-            this.line1 = Optional.ofNullable(line1);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "line2", nulls = Nulls.SKIP)
         public Builder line2(Optional<String> line2) {
-            this.line2 = line2;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder line2(String line2) {
-            this.line2 = Optional.ofNullable(line2);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "postalCode", nulls = Nulls.SKIP)
         public Builder postalCode(Optional<String> postalCode) {
-            this.postalCode = postalCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder postalCode(String postalCode) {
-            this.postalCode = Optional.ofNullable(postalCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "city", nulls = Nulls.SKIP)
         public Builder city(Optional<String> city) {
-            this.city = city;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder city(String city) {
-            this.city = Optional.ofNullable(city);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "state", nulls = Nulls.SKIP)
         public Builder state(Optional<String> state) {
-            this.state = state;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder state(String state) {
-            this.state = Optional.ofNullable(state);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "country", nulls = Nulls.SKIP)
         public Builder country(Optional<String> country) {
-            this.country = country;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder country(String country) {
-            this.country = Optional.ofNullable(country);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionStripeAddress build() {
-            return new FlowActionStripeAddress(line1, line2, postalCode, city, state, country, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

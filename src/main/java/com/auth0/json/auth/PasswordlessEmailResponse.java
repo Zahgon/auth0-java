@@ -27,7 +27,7 @@ public class PasswordlessEmailResponse {
      */
     @JsonProperty("_id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -37,7 +37,7 @@ public class PasswordlessEmailResponse {
      */
     @JsonProperty("email")
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,6 +47,6 @@ public class PasswordlessEmailResponse {
      */
     @JsonProperty("email_verified")
     public Boolean isEmailVerified() {
-        return emailVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

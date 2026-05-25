@@ -13,9 +13,7 @@ public abstract class Asserts {
      * @throws IllegalArgumentException if the value is null
      */
     public static void assertNotNull(Object value, String name) {
-        if (value == null) {
-            throw new IllegalArgumentException(String.format("'%s' cannot be null!", name));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -26,15 +24,7 @@ public abstract class Asserts {
      * @throws IllegalArgumentException if the value is null or is not a valid URL.
      */
     public static void assertValidUrl(String value, String name) {
-        if (value == null) {
-            throw new IllegalArgumentException(String.format("'%s' must be a valid URL!", name));
-        }
-        boolean isValidUrl = HttpUrl.parse(value) != null;
-        boolean isValidCustomSchemeUrl = value.contains(":")
-                && HttpUrl.parse(value.replaceFirst(value.substring(0, value.indexOf(":")), "https")) != null;
-        if (!isValidUrl && !isValidCustomSchemeUrl) {
-            throw new IllegalArgumentException(String.format("'%s' must be a valid URL!", name));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,11 +35,6 @@ public abstract class Asserts {
      * @throws IllegalArgumentException if the value is null or has length of zero.
      */
     public static void assertNotEmpty(Collection<?> value, String name) {
-        if (value == null) {
-            throw new IllegalArgumentException(String.format("'%s' cannot be null!", name));
-        }
-        if (value.size() == 0) {
-            throw new IllegalArgumentException(String.format("'%s' cannot be empty!", name));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

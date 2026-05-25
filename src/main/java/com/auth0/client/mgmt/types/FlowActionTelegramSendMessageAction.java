@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionTelegramSendMessageAction {
-    public static final FlowActionTelegramSendMessageAction SEND_MESSAGE =
-            new FlowActionTelegramSendMessageAction(Value.SEND_MESSAGE, "SEND_MESSAGE");
+
+    public static final FlowActionTelegramSendMessageAction SEND_MESSAGE = new FlowActionTelegramSendMessageAction(Value.SEND_MESSAGE, "SEND_MESSAGE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionTelegramSendMessageAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionTelegramSendMessageAction
-                        && this.string.equals(((FlowActionTelegramSendMessageAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEND_MESSAGE:
-                return visitor.visitSendMessage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionTelegramSendMessageAction valueOf(String value) {
-        switch (value) {
-            case "SEND_MESSAGE":
-                return SEND_MESSAGE;
-            default:
-                return new FlowActionTelegramSendMessageAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEND_MESSAGE,
 
-        UNKNOWN
+        SEND_MESSAGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendMessage();
 
         T visitUnknown(String unknownType);

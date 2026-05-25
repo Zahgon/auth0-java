@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EmailProviderCredentialsSchema.Deserializer.class)
 public final class EmailProviderCredentialsSchema {
+
     private final Object value;
 
     private final int type;
@@ -27,35 +28,17 @@ public final class EmailProviderCredentialsSchema {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EmailProviderCredentialsSchemaZero) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EmailProviderCredentialsSchemaAccessKeyId) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((EmailProviderCredentialsSchemaSmtpHost) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((EmailProviderCredentialsSchemaThree) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((EmailProviderCredentialsSchemaApiKey) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((EmailProviderCredentialsSchemaConnectionString) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((EmailProviderCredentialsSchemaClientId) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((ExtensibilityEmailProviderCredentials) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchema && equalTo((EmailProviderCredentialsSchema) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchema other) {
@@ -64,47 +47,48 @@ public final class EmailProviderCredentialsSchema {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaZero value) {
-        return new EmailProviderCredentialsSchema(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaAccessKeyId value) {
-        return new EmailProviderCredentialsSchema(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaSmtpHost value) {
-        return new EmailProviderCredentialsSchema(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaThree value) {
-        return new EmailProviderCredentialsSchema(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaApiKey value) {
-        return new EmailProviderCredentialsSchema(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaConnectionString value) {
-        return new EmailProviderCredentialsSchema(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(EmailProviderCredentialsSchemaClientId value) {
-        return new EmailProviderCredentialsSchema(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailProviderCredentialsSchema of(ExtensibilityEmailProviderCredentials value) {
-        return new EmailProviderCredentialsSchema(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EmailProviderCredentialsSchemaZero value);
 
         T visit(EmailProviderCredentialsSchemaAccessKeyId value);
@@ -123,51 +107,14 @@ public final class EmailProviderCredentialsSchema {
     }
 
     static final class Deserializer extends StdDeserializer<EmailProviderCredentialsSchema> {
+
         Deserializer() {
             super(EmailProviderCredentialsSchema.class);
         }
 
         @java.lang.Override
-        public EmailProviderCredentialsSchema deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("api_key")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaZero.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(
-                        ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaAccessKeyId.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaSmtpHost.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaThree.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaApiKey.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(
-                        value, EmailProviderCredentialsSchemaConnectionString.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, EmailProviderCredentialsSchemaClientId.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, ExtensibilityEmailProviderCredentials.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public EmailProviderCredentialsSchema deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

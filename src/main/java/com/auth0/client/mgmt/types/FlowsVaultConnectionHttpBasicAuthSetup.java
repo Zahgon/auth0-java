@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectionHttpBasicAuthSetup.Builder.class)
 public final class FlowsVaultConnectionHttpBasicAuthSetup {
+
     private final FlowsVaultConnectionSetupTypeBasicAuthEnum type;
 
     private final String username;
@@ -29,11 +30,7 @@ public final class FlowsVaultConnectionHttpBasicAuthSetup {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectionHttpBasicAuthSetup(
-            FlowsVaultConnectionSetupTypeBasicAuthEnum type,
-            String username,
-            Optional<String> password,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectionHttpBasicAuthSetup(FlowsVaultConnectionSetupTypeBasicAuthEnum type, String username, Optional<String> password, Map<String, Object> additionalProperties) {
         this.type = type;
         this.username = username;
         this.password = password;
@@ -42,29 +39,27 @@ public final class FlowsVaultConnectionHttpBasicAuthSetup {
 
     @JsonProperty("type")
     public FlowsVaultConnectionSetupTypeBasicAuthEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("username")
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("password")
     public Optional<String> getPassword() {
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectionHttpBasicAuthSetup
-                && equalTo((FlowsVaultConnectionHttpBasicAuthSetup) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectionHttpBasicAuthSetup other) {
@@ -73,29 +68,32 @@ public final class FlowsVaultConnectionHttpBasicAuthSetup {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.username, this.password);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         UsernameStage type(@NotNull FlowsVaultConnectionSetupTypeBasicAuthEnum type);
 
         Builder from(FlowsVaultConnectionHttpBasicAuthSetup other);
     }
 
     public interface UsernameStage {
+
         _FinalStage username(@NotNull String username);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectionHttpBasicAuthSetup build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -109,6 +107,7 @@ public final class FlowsVaultConnectionHttpBasicAuthSetup {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, UsernameStage, _FinalStage {
+
         private FlowsVaultConnectionSetupTypeBasicAuthEnum type;
 
         private String username;
@@ -118,58 +117,50 @@ public final class FlowsVaultConnectionHttpBasicAuthSetup {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectionHttpBasicAuthSetup other) {
-            type(other.getType());
-            username(other.getUsername());
-            password(other.getPassword());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public UsernameStage type(@NotNull FlowsVaultConnectionSetupTypeBasicAuthEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("username")
         public _FinalStage username(@NotNull String username) {
-            this.username = Objects.requireNonNull(username, "username must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage password(String password) {
-            this.password = Optional.ofNullable(password);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "password", nulls = Nulls.SKIP)
         public _FinalStage password(Optional<String> password) {
-            this.password = password;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectionHttpBasicAuthSetup build() {
-            return new FlowsVaultConnectionHttpBasicAuthSetup(type, username, password, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -23,6 +23,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateUserAttributeProfileRequestContent.Builder.class)
 public final class UpdateUserAttributeProfileRequestContent {
+
     private final Optional<String> name;
 
     private final OptionalNullable<UserAttributeProfileUserId> userId;
@@ -31,11 +32,7 @@ public final class UpdateUserAttributeProfileRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateUserAttributeProfileRequestContent(
-            Optional<String> name,
-            OptionalNullable<UserAttributeProfileUserId> userId,
-            Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes,
-            Map<String, Object> additionalProperties) {
+    private UpdateUserAttributeProfileRequestContent(Optional<String> name, OptionalNullable<UserAttributeProfileUserId> userId, Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes, Map<String, Object> additionalProperties) {
         this.name = name;
         this.userId = userId;
         this.userAttributes = userAttributes;
@@ -44,30 +41,28 @@ public final class UpdateUserAttributeProfileRequestContent {
 
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("user_id")
     public OptionalNullable<UserAttributeProfileUserId> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_attributes")
     public Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> getUserAttributes() {
-        return userAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateUserAttributeProfileRequestContent
-                && equalTo((UpdateUserAttributeProfileRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateUserAttributeProfileRequestContent other) {
@@ -76,106 +71,82 @@ public final class UpdateUserAttributeProfileRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.userId, this.userAttributes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private OptionalNullable<UserAttributeProfileUserId> userId = OptionalNullable.absent();
 
-        private Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes =
-                Optional.empty();
+        private Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateUserAttributeProfileRequestContent other) {
-            name(other.getName());
-            userId(other.getUserId());
-            userAttributes(other.getUserAttributes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(OptionalNullable<UserAttributeProfileUserId> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(UserAttributeProfileUserId userId) {
-            this.userId = OptionalNullable.of(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(Optional<UserAttributeProfileUserId> userId) {
-            if (userId.isPresent()) {
-                this.userId = OptionalNullable.of(userId.get());
-            } else {
-                this.userId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(Nullable<UserAttributeProfileUserId> userId) {
-            if (userId.isNull()) {
-                this.userId = OptionalNullable.ofNull();
-            } else if (userId.isEmpty()) {
-                this.userId = OptionalNullable.absent();
-            } else {
-                this.userId = OptionalNullable.of(userId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_attributes", nulls = Nulls.SKIP)
-        public Builder userAttributes(
-                Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes) {
-            this.userAttributes = userAttributes;
-            return this;
+        public Builder userAttributes(Optional<Map<String, UserAttributeProfileUserAttributeAdditionalProperties>> userAttributes) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder userAttributes(
-                Map<String, UserAttributeProfileUserAttributeAdditionalProperties> userAttributes) {
-            this.userAttributes = Optional.ofNullable(userAttributes);
-            return this;
+        public Builder userAttributes(Map<String, UserAttributeProfileUserAttributeAdditionalProperties> userAttributes) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateUserAttributeProfileRequestContent build() {
-            return new UpdateUserAttributeProfileRequestContent(name, userId, userAttributes, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

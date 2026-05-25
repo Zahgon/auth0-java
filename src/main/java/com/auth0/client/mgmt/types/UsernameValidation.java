@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UsernameValidation.Builder.class)
 public final class UsernameValidation {
+
     private final Optional<Double> minLength;
 
     private final Optional<Double> maxLength;
@@ -28,11 +29,7 @@ public final class UsernameValidation {
 
     private final Map<String, Object> additionalProperties;
 
-    private UsernameValidation(
-            Optional<Double> minLength,
-            Optional<Double> maxLength,
-            Optional<UsernameAllowedTypes> allowedTypes,
-            Map<String, Object> additionalProperties) {
+    private UsernameValidation(Optional<Double> minLength, Optional<Double> maxLength, Optional<UsernameAllowedTypes> allowedTypes, Map<String, Object> additionalProperties) {
         this.minLength = minLength;
         this.maxLength = maxLength;
         this.allowedTypes = allowedTypes;
@@ -44,7 +41,7 @@ public final class UsernameValidation {
      */
     @JsonProperty("min_length")
     public Optional<Double> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,47 +49,45 @@ public final class UsernameValidation {
      */
     @JsonProperty("max_length")
     public Optional<Double> getMaxLength() {
-        return maxLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allowed_types")
     public Optional<UsernameAllowedTypes> getAllowedTypes() {
-        return allowedTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UsernameValidation && equalTo((UsernameValidation) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UsernameValidation other) {
-        return minLength.equals(other.minLength)
-                && maxLength.equals(other.maxLength)
-                && allowedTypes.equals(other.allowedTypes);
+        return minLength.equals(other.minLength) && maxLength.equals(other.maxLength) && allowedTypes.equals(other.allowedTypes);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.minLength, this.maxLength, this.allowedTypes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> minLength = Optional.empty();
 
         private Optional<Double> maxLength = Optional.empty();
@@ -102,13 +97,11 @@ public final class UsernameValidation {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UsernameValidation other) {
-            minLength(other.getMinLength());
-            maxLength(other.getMaxLength());
-            allowedTypes(other.getAllowedTypes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,13 +109,11 @@ public final class UsernameValidation {
          */
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Double> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Double minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -130,38 +121,32 @@ public final class UsernameValidation {
          */
         @JsonSetter(value = "max_length", nulls = Nulls.SKIP)
         public Builder maxLength(Optional<Double> maxLength) {
-            this.maxLength = maxLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxLength(Double maxLength) {
-            this.maxLength = Optional.ofNullable(maxLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "allowed_types", nulls = Nulls.SKIP)
         public Builder allowedTypes(Optional<UsernameAllowedTypes> allowedTypes) {
-            this.allowedTypes = allowedTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedTypes(UsernameAllowedTypes allowedTypes) {
-            this.allowedTypes = Optional.ofNullable(allowedTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UsernameValidation build() {
-            return new UsernameValidation(minLength, maxLength, allowedTypes, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJsonSerializeJsonType {
+
     public static final FlowActionJsonSerializeJsonType JSON = new FlowActionJsonSerializeJsonType(Value.JSON, "JSON");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionJsonSerializeJsonType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJsonSerializeJsonType
-                        && this.string.equals(((FlowActionJsonSerializeJsonType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case JSON:
-                return visitor.visitJson();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJsonSerializeJsonType valueOf(String value) {
-        switch (value) {
-            case "JSON":
-                return JSON;
-            default:
-                return new FlowActionJsonSerializeJsonType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        JSON,
 
-        UNKNOWN
+        JSON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitJson();
 
         T visitUnknown(String unknownType);

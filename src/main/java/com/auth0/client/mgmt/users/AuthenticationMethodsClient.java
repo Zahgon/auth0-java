@@ -18,6 +18,7 @@ import com.auth0.client.mgmt.users.types.UpdateUserAuthenticationMethodRequestCo
 import java.util.List;
 
 public class AuthenticationMethodsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawAuthenticationMethodsClient rawClient;
@@ -31,53 +32,49 @@ public class AuthenticationMethodsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawAuthenticationMethodsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
     public SyncPagingIterable<UserAuthenticationMethod> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
     public SyncPagingIterable<UserAuthenticationMethod> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
-    public SyncPagingIterable<UserAuthenticationMethod> list(
-            String id, ListUserAuthenticationMethodsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<UserAuthenticationMethod> list(String id, ListUserAuthenticationMethodsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
-    public SyncPagingIterable<UserAuthenticationMethod> list(
-            String id, ListUserAuthenticationMethodsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<UserAuthenticationMethod> list(String id, ListUserAuthenticationMethodsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an authentication method. Authentication methods created via this endpoint will be auto confirmed and should already have verification completed.
      */
-    public CreateUserAuthenticationMethodResponseContent create(
-            String id, CreateUserAuthenticationMethodRequestContent request) {
-        return this.rawClient.create(id, request).body();
+    public CreateUserAuthenticationMethodResponseContent create(String id, CreateUserAuthenticationMethodRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an authentication method. Authentication methods created via this endpoint will be auto confirmed and should already have verification completed.
      */
-    public CreateUserAuthenticationMethodResponseContent create(
-            String id, CreateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateUserAuthenticationMethodResponseContent create(String id, CreateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +83,7 @@ public class AuthenticationMethodsClient {
      * </code></pre>
      */
     public List<SetUserAuthenticationMethodResponseContent> set(String id, List<SetUserAuthenticationMethods> request) {
-        return this.rawClient.set(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,81 +91,71 @@ public class AuthenticationMethodsClient {
      * <pre><code><b>Note</b>: Authentication methods supplied through this action do not iterate on existing methods. Instead, any methods passed will overwrite the user&amp;#8217s existing settings.
      * </code></pre>
      */
-    public List<SetUserAuthenticationMethodResponseContent> set(
-            String id, List<SetUserAuthenticationMethods> request, RequestOptions requestOptions) {
-        return this.rawClient.set(id, request, requestOptions).body();
+    public List<SetUserAuthenticationMethodResponseContent> set(String id, List<SetUserAuthenticationMethods> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authentication methods (i.e., enrolled MFA factors) from the specified user account. This action cannot be undone.
      */
     public void deleteAll(String id) {
-        this.rawClient.deleteAll(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authentication methods (i.e., enrolled MFA factors) from the specified user account. This action cannot be undone.
      */
     public void deleteAll(String id, RequestOptions requestOptions) {
-        this.rawClient.deleteAll(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetUserAuthenticationMethodResponseContent get(String id, String authenticationMethodId) {
-        return this.rawClient.get(id, authenticationMethodId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public GetUserAuthenticationMethodResponseContent get(
-            String id, String authenticationMethodId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, authenticationMethodId, requestOptions).body();
+    public GetUserAuthenticationMethodResponseContent get(String id, String authenticationMethodId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public void delete(String id, String authenticationMethodId) {
-        this.rawClient.delete(id, authenticationMethodId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public void delete(String id, String authenticationMethodId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, authenticationMethodId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public UpdateUserAuthenticationMethodResponseContent update(String id, String authenticationMethodId) {
-        return this.rawClient.update(id, authenticationMethodId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public UpdateUserAuthenticationMethodResponseContent update(
-            String id, String authenticationMethodId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, authenticationMethodId, requestOptions).body();
+    public UpdateUserAuthenticationMethodResponseContent update(String id, String authenticationMethodId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public UpdateUserAuthenticationMethodResponseContent update(
-            String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request) {
-        return this.rawClient.update(id, authenticationMethodId, request).body();
+    public UpdateUserAuthenticationMethodResponseContent update(String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public UpdateUserAuthenticationMethodResponseContent update(
-            String id,
-            String authenticationMethodId,
-            UpdateUserAuthenticationMethodRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient
-                .update(id, authenticationMethodId, request, requestOptions)
-                .body();
+    public UpdateUserAuthenticationMethodResponseContent update(String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

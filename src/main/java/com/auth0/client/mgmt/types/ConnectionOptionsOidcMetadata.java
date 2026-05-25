@@ -26,6 +26,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsOidcMetadata.Builder.class)
 public final class ConnectionOptionsOidcMetadata {
+
     private final Optional<List<String>> acrValuesSupported;
 
     private final String authorizationEndpoint;
@@ -102,45 +103,7 @@ public final class ConnectionOptionsOidcMetadata {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsOidcMetadata(
-            Optional<List<String>> acrValuesSupported,
-            String authorizationEndpoint,
-            Optional<List<String>> claimTypesSupported,
-            Optional<List<String>> claimsLocalesSupported,
-            Optional<Boolean> claimsParameterSupported,
-            Optional<List<String>> claimsSupported,
-            Optional<List<String>> displayValuesSupported,
-            Optional<List<String>> dpopSigningAlgValuesSupported,
-            Optional<String> endSessionEndpoint,
-            Optional<List<String>> grantTypesSupported,
-            Optional<List<String>> idTokenEncryptionAlgValuesSupported,
-            Optional<List<String>> idTokenEncryptionEncValuesSupported,
-            List<String> idTokenSigningAlgValuesSupported,
-            String issuer,
-            String jwksUri,
-            Optional<String> opPolicyUri,
-            Optional<String> opTosUri,
-            Optional<String> registrationEndpoint,
-            Optional<List<String>> requestObjectEncryptionAlgValuesSupported,
-            Optional<List<String>> requestObjectEncryptionEncValuesSupported,
-            Optional<List<String>> requestObjectSigningAlgValuesSupported,
-            Optional<Boolean> requestParameterSupported,
-            Optional<Boolean> requestUriParameterSupported,
-            Optional<Boolean> requireRequestUriRegistration,
-            Optional<List<String>> responseModesSupported,
-            Optional<List<String>> responseTypesSupported,
-            OptionalNullable<List<String>> scopesSupported,
-            Optional<String> serviceDocumentation,
-            Optional<List<String>> subjectTypesSupported,
-            Optional<String> tokenEndpoint,
-            Optional<List<String>> tokenEndpointAuthMethodsSupported,
-            Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported,
-            Optional<List<String>> uiLocalesSupported,
-            Optional<List<String>> userinfoEncryptionAlgValuesSupported,
-            Optional<List<String>> userinfoEncryptionEncValuesSupported,
-            Optional<String> userinfoEndpoint,
-            Optional<List<String>> userinfoSigningAlgValuesSupported,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsOidcMetadata(Optional<List<String>> acrValuesSupported, String authorizationEndpoint, Optional<List<String>> claimTypesSupported, Optional<List<String>> claimsLocalesSupported, Optional<Boolean> claimsParameterSupported, Optional<List<String>> claimsSupported, Optional<List<String>> displayValuesSupported, Optional<List<String>> dpopSigningAlgValuesSupported, Optional<String> endSessionEndpoint, Optional<List<String>> grantTypesSupported, Optional<List<String>> idTokenEncryptionAlgValuesSupported, Optional<List<String>> idTokenEncryptionEncValuesSupported, List<String> idTokenSigningAlgValuesSupported, String issuer, String jwksUri, Optional<String> opPolicyUri, Optional<String> opTosUri, Optional<String> registrationEndpoint, Optional<List<String>> requestObjectEncryptionAlgValuesSupported, Optional<List<String>> requestObjectEncryptionEncValuesSupported, Optional<List<String>> requestObjectSigningAlgValuesSupported, Optional<Boolean> requestParameterSupported, Optional<Boolean> requestUriParameterSupported, Optional<Boolean> requireRequestUriRegistration, Optional<List<String>> responseModesSupported, Optional<List<String>> responseTypesSupported, OptionalNullable<List<String>> scopesSupported, Optional<String> serviceDocumentation, Optional<List<String>> subjectTypesSupported, Optional<String> tokenEndpoint, Optional<List<String>> tokenEndpointAuthMethodsSupported, Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported, Optional<List<String>> uiLocalesSupported, Optional<List<String>> userinfoEncryptionAlgValuesSupported, Optional<List<String>> userinfoEncryptionEncValuesSupported, Optional<String> userinfoEndpoint, Optional<List<String>> userinfoSigningAlgValuesSupported, Map<String, Object> additionalProperties) {
         this.acrValuesSupported = acrValuesSupported;
         this.authorizationEndpoint = authorizationEndpoint;
         this.claimTypesSupported = claimTypesSupported;
@@ -183,191 +146,188 @@ public final class ConnectionOptionsOidcMetadata {
 
     @JsonProperty("acr_values_supported")
     public Optional<List<String>> getAcrValuesSupported() {
-        return acrValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authorization_endpoint")
     public String getAuthorizationEndpoint() {
-        return authorizationEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("claim_types_supported")
     public Optional<List<String>> getClaimTypesSupported() {
-        return claimTypesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("claims_locales_supported")
     public Optional<List<String>> getClaimsLocalesSupported() {
-        return claimsLocalesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("claims_parameter_supported")
     public Optional<Boolean> getClaimsParameterSupported() {
-        return claimsParameterSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("claims_supported")
     public Optional<List<String>> getClaimsSupported() {
-        return claimsSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("display_values_supported")
     public Optional<List<String>> getDisplayValuesSupported() {
-        return displayValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dpop_signing_alg_values_supported")
     public Optional<List<String>> getDpopSigningAlgValuesSupported() {
-        return dpopSigningAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("end_session_endpoint")
     public Optional<String> getEndSessionEndpoint() {
-        return endSessionEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("grant_types_supported")
     public Optional<List<String>> getGrantTypesSupported() {
-        return grantTypesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id_token_encryption_alg_values_supported")
     public Optional<List<String>> getIdTokenEncryptionAlgValuesSupported() {
-        return idTokenEncryptionAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id_token_encryption_enc_values_supported")
     public Optional<List<String>> getIdTokenEncryptionEncValuesSupported() {
-        return idTokenEncryptionEncValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id_token_signing_alg_values_supported")
     public List<String> getIdTokenSigningAlgValuesSupported() {
-        return idTokenSigningAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("issuer")
     public String getIssuer() {
-        return issuer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("jwks_uri")
     public String getJwksUri() {
-        return jwksUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("op_policy_uri")
     public Optional<String> getOpPolicyUri() {
-        return opPolicyUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("op_tos_uri")
     public Optional<String> getOpTosUri() {
-        return opTosUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("registration_endpoint")
     public Optional<String> getRegistrationEndpoint() {
-        return registrationEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request_object_encryption_alg_values_supported")
     public Optional<List<String>> getRequestObjectEncryptionAlgValuesSupported() {
-        return requestObjectEncryptionAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request_object_encryption_enc_values_supported")
     public Optional<List<String>> getRequestObjectEncryptionEncValuesSupported() {
-        return requestObjectEncryptionEncValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request_object_signing_alg_values_supported")
     public Optional<List<String>> getRequestObjectSigningAlgValuesSupported() {
-        return requestObjectSigningAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request_parameter_supported")
     public Optional<Boolean> getRequestParameterSupported() {
-        return requestParameterSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request_uri_parameter_supported")
     public Optional<Boolean> getRequestUriParameterSupported() {
-        return requestUriParameterSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("require_request_uri_registration")
     public Optional<Boolean> getRequireRequestUriRegistration() {
-        return requireRequestUriRegistration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("response_modes_supported")
     public Optional<List<String>> getResponseModesSupported() {
-        return responseModesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("response_types_supported")
     public Optional<List<String>> getResponseTypesSupported() {
-        return responseTypesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("scopes_supported")
     public OptionalNullable<List<String>> getScopesSupported() {
-        if (scopesSupported == null) {
-            return OptionalNullable.absent();
-        }
-        return scopesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("service_documentation")
     public Optional<String> getServiceDocumentation() {
-        return serviceDocumentation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject_types_supported")
     public Optional<List<String>> getSubjectTypesSupported() {
-        return subjectTypesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint")
     public Optional<String> getTokenEndpoint() {
-        return tokenEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint_auth_methods_supported")
     public Optional<List<String>> getTokenEndpointAuthMethodsSupported() {
-        return tokenEndpointAuthMethodsSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint_auth_signing_alg_values_supported")
     public Optional<List<String>> getTokenEndpointAuthSigningAlgValuesSupported() {
-        return tokenEndpointAuthSigningAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ui_locales_supported")
     public Optional<List<String>> getUiLocalesSupported() {
-        return uiLocalesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_encryption_alg_values_supported")
     public Optional<List<String>> getUserinfoEncryptionAlgValuesSupported() {
-        return userinfoEncryptionAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_encryption_enc_values_supported")
     public Optional<List<String>> getUserinfoEncryptionEncValuesSupported() {
-        return userinfoEncryptionEncValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_endpoint")
     public Optional<String> getUserinfoEndpoint() {
-        return userinfoEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_signing_alg_values_supported")
     public Optional<List<String>> getUserinfoSigningAlgValuesSupported() {
-        return userinfoSigningAlgValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -378,121 +338,51 @@ public final class ConnectionOptionsOidcMetadata {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsOidcMetadata && equalTo((ConnectionOptionsOidcMetadata) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsOidcMetadata other) {
-        return acrValuesSupported.equals(other.acrValuesSupported)
-                && authorizationEndpoint.equals(other.authorizationEndpoint)
-                && claimTypesSupported.equals(other.claimTypesSupported)
-                && claimsLocalesSupported.equals(other.claimsLocalesSupported)
-                && claimsParameterSupported.equals(other.claimsParameterSupported)
-                && claimsSupported.equals(other.claimsSupported)
-                && displayValuesSupported.equals(other.displayValuesSupported)
-                && dpopSigningAlgValuesSupported.equals(other.dpopSigningAlgValuesSupported)
-                && endSessionEndpoint.equals(other.endSessionEndpoint)
-                && grantTypesSupported.equals(other.grantTypesSupported)
-                && idTokenEncryptionAlgValuesSupported.equals(other.idTokenEncryptionAlgValuesSupported)
-                && idTokenEncryptionEncValuesSupported.equals(other.idTokenEncryptionEncValuesSupported)
-                && idTokenSigningAlgValuesSupported.equals(other.idTokenSigningAlgValuesSupported)
-                && issuer.equals(other.issuer)
-                && jwksUri.equals(other.jwksUri)
-                && opPolicyUri.equals(other.opPolicyUri)
-                && opTosUri.equals(other.opTosUri)
-                && registrationEndpoint.equals(other.registrationEndpoint)
-                && requestObjectEncryptionAlgValuesSupported.equals(other.requestObjectEncryptionAlgValuesSupported)
-                && requestObjectEncryptionEncValuesSupported.equals(other.requestObjectEncryptionEncValuesSupported)
-                && requestObjectSigningAlgValuesSupported.equals(other.requestObjectSigningAlgValuesSupported)
-                && requestParameterSupported.equals(other.requestParameterSupported)
-                && requestUriParameterSupported.equals(other.requestUriParameterSupported)
-                && requireRequestUriRegistration.equals(other.requireRequestUriRegistration)
-                && responseModesSupported.equals(other.responseModesSupported)
-                && responseTypesSupported.equals(other.responseTypesSupported)
-                && scopesSupported.equals(other.scopesSupported)
-                && serviceDocumentation.equals(other.serviceDocumentation)
-                && subjectTypesSupported.equals(other.subjectTypesSupported)
-                && tokenEndpoint.equals(other.tokenEndpoint)
-                && tokenEndpointAuthMethodsSupported.equals(other.tokenEndpointAuthMethodsSupported)
-                && tokenEndpointAuthSigningAlgValuesSupported.equals(other.tokenEndpointAuthSigningAlgValuesSupported)
-                && uiLocalesSupported.equals(other.uiLocalesSupported)
-                && userinfoEncryptionAlgValuesSupported.equals(other.userinfoEncryptionAlgValuesSupported)
-                && userinfoEncryptionEncValuesSupported.equals(other.userinfoEncryptionEncValuesSupported)
-                && userinfoEndpoint.equals(other.userinfoEndpoint)
-                && userinfoSigningAlgValuesSupported.equals(other.userinfoSigningAlgValuesSupported);
+        return acrValuesSupported.equals(other.acrValuesSupported) && authorizationEndpoint.equals(other.authorizationEndpoint) && claimTypesSupported.equals(other.claimTypesSupported) && claimsLocalesSupported.equals(other.claimsLocalesSupported) && claimsParameterSupported.equals(other.claimsParameterSupported) && claimsSupported.equals(other.claimsSupported) && displayValuesSupported.equals(other.displayValuesSupported) && dpopSigningAlgValuesSupported.equals(other.dpopSigningAlgValuesSupported) && endSessionEndpoint.equals(other.endSessionEndpoint) && grantTypesSupported.equals(other.grantTypesSupported) && idTokenEncryptionAlgValuesSupported.equals(other.idTokenEncryptionAlgValuesSupported) && idTokenEncryptionEncValuesSupported.equals(other.idTokenEncryptionEncValuesSupported) && idTokenSigningAlgValuesSupported.equals(other.idTokenSigningAlgValuesSupported) && issuer.equals(other.issuer) && jwksUri.equals(other.jwksUri) && opPolicyUri.equals(other.opPolicyUri) && opTosUri.equals(other.opTosUri) && registrationEndpoint.equals(other.registrationEndpoint) && requestObjectEncryptionAlgValuesSupported.equals(other.requestObjectEncryptionAlgValuesSupported) && requestObjectEncryptionEncValuesSupported.equals(other.requestObjectEncryptionEncValuesSupported) && requestObjectSigningAlgValuesSupported.equals(other.requestObjectSigningAlgValuesSupported) && requestParameterSupported.equals(other.requestParameterSupported) && requestUriParameterSupported.equals(other.requestUriParameterSupported) && requireRequestUriRegistration.equals(other.requireRequestUriRegistration) && responseModesSupported.equals(other.responseModesSupported) && responseTypesSupported.equals(other.responseTypesSupported) && scopesSupported.equals(other.scopesSupported) && serviceDocumentation.equals(other.serviceDocumentation) && subjectTypesSupported.equals(other.subjectTypesSupported) && tokenEndpoint.equals(other.tokenEndpoint) && tokenEndpointAuthMethodsSupported.equals(other.tokenEndpointAuthMethodsSupported) && tokenEndpointAuthSigningAlgValuesSupported.equals(other.tokenEndpointAuthSigningAlgValuesSupported) && uiLocalesSupported.equals(other.uiLocalesSupported) && userinfoEncryptionAlgValuesSupported.equals(other.userinfoEncryptionAlgValuesSupported) && userinfoEncryptionEncValuesSupported.equals(other.userinfoEncryptionEncValuesSupported) && userinfoEndpoint.equals(other.userinfoEndpoint) && userinfoSigningAlgValuesSupported.equals(other.userinfoSigningAlgValuesSupported);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.acrValuesSupported,
-                this.authorizationEndpoint,
-                this.claimTypesSupported,
-                this.claimsLocalesSupported,
-                this.claimsParameterSupported,
-                this.claimsSupported,
-                this.displayValuesSupported,
-                this.dpopSigningAlgValuesSupported,
-                this.endSessionEndpoint,
-                this.grantTypesSupported,
-                this.idTokenEncryptionAlgValuesSupported,
-                this.idTokenEncryptionEncValuesSupported,
-                this.idTokenSigningAlgValuesSupported,
-                this.issuer,
-                this.jwksUri,
-                this.opPolicyUri,
-                this.opTosUri,
-                this.registrationEndpoint,
-                this.requestObjectEncryptionAlgValuesSupported,
-                this.requestObjectEncryptionEncValuesSupported,
-                this.requestObjectSigningAlgValuesSupported,
-                this.requestParameterSupported,
-                this.requestUriParameterSupported,
-                this.requireRequestUriRegistration,
-                this.responseModesSupported,
-                this.responseTypesSupported,
-                this.scopesSupported,
-                this.serviceDocumentation,
-                this.subjectTypesSupported,
-                this.tokenEndpoint,
-                this.tokenEndpointAuthMethodsSupported,
-                this.tokenEndpointAuthSigningAlgValuesSupported,
-                this.uiLocalesSupported,
-                this.userinfoEncryptionAlgValuesSupported,
-                this.userinfoEncryptionEncValuesSupported,
-                this.userinfoEndpoint,
-                this.userinfoSigningAlgValuesSupported);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AuthorizationEndpointStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AuthorizationEndpointStage {
+
         IssuerStage authorizationEndpoint(@NotNull String authorizationEndpoint);
 
         Builder from(ConnectionOptionsOidcMetadata other);
     }
 
     public interface IssuerStage {
+
         JwksUriStage issuer(@NotNull String issuer);
     }
 
     public interface JwksUriStage {
+
         _FinalStage jwksUri(@NotNull String jwksUri);
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsOidcMetadata build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -561,18 +451,15 @@ public final class ConnectionOptionsOidcMetadata {
 
         _FinalStage registrationEndpoint(String registrationEndpoint);
 
-        _FinalStage requestObjectEncryptionAlgValuesSupported(
-                Optional<List<String>> requestObjectEncryptionAlgValuesSupported);
+        _FinalStage requestObjectEncryptionAlgValuesSupported(Optional<List<String>> requestObjectEncryptionAlgValuesSupported);
 
         _FinalStage requestObjectEncryptionAlgValuesSupported(List<String> requestObjectEncryptionAlgValuesSupported);
 
-        _FinalStage requestObjectEncryptionEncValuesSupported(
-                Optional<List<String>> requestObjectEncryptionEncValuesSupported);
+        _FinalStage requestObjectEncryptionEncValuesSupported(Optional<List<String>> requestObjectEncryptionEncValuesSupported);
 
         _FinalStage requestObjectEncryptionEncValuesSupported(List<String> requestObjectEncryptionEncValuesSupported);
 
-        _FinalStage requestObjectSigningAlgValuesSupported(
-                Optional<List<String>> requestObjectSigningAlgValuesSupported);
+        _FinalStage requestObjectSigningAlgValuesSupported(Optional<List<String>> requestObjectSigningAlgValuesSupported);
 
         _FinalStage requestObjectSigningAlgValuesSupported(List<String> requestObjectSigningAlgValuesSupported);
 
@@ -620,8 +507,7 @@ public final class ConnectionOptionsOidcMetadata {
 
         _FinalStage tokenEndpointAuthMethodsSupported(List<String> tokenEndpointAuthMethodsSupported);
 
-        _FinalStage tokenEndpointAuthSigningAlgValuesSupported(
-                Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported);
+        _FinalStage tokenEndpointAuthSigningAlgValuesSupported(Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported);
 
         _FinalStage tokenEndpointAuthSigningAlgValuesSupported(List<String> tokenEndpointAuthSigningAlgValuesSupported);
 
@@ -648,6 +534,7 @@ public final class ConnectionOptionsOidcMetadata {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AuthorizationEndpointStage, IssuerStage, JwksUriStage, _FinalStage {
+
         private String authorizationEndpoint;
 
         private String issuer;
@@ -725,614 +612,434 @@ public final class ConnectionOptionsOidcMetadata {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsOidcMetadata other) {
-            acrValuesSupported(other.getAcrValuesSupported());
-            authorizationEndpoint(other.getAuthorizationEndpoint());
-            claimTypesSupported(other.getClaimTypesSupported());
-            claimsLocalesSupported(other.getClaimsLocalesSupported());
-            claimsParameterSupported(other.getClaimsParameterSupported());
-            claimsSupported(other.getClaimsSupported());
-            displayValuesSupported(other.getDisplayValuesSupported());
-            dpopSigningAlgValuesSupported(other.getDpopSigningAlgValuesSupported());
-            endSessionEndpoint(other.getEndSessionEndpoint());
-            grantTypesSupported(other.getGrantTypesSupported());
-            idTokenEncryptionAlgValuesSupported(other.getIdTokenEncryptionAlgValuesSupported());
-            idTokenEncryptionEncValuesSupported(other.getIdTokenEncryptionEncValuesSupported());
-            idTokenSigningAlgValuesSupported(other.getIdTokenSigningAlgValuesSupported());
-            issuer(other.getIssuer());
-            jwksUri(other.getJwksUri());
-            opPolicyUri(other.getOpPolicyUri());
-            opTosUri(other.getOpTosUri());
-            registrationEndpoint(other.getRegistrationEndpoint());
-            requestObjectEncryptionAlgValuesSupported(other.getRequestObjectEncryptionAlgValuesSupported());
-            requestObjectEncryptionEncValuesSupported(other.getRequestObjectEncryptionEncValuesSupported());
-            requestObjectSigningAlgValuesSupported(other.getRequestObjectSigningAlgValuesSupported());
-            requestParameterSupported(other.getRequestParameterSupported());
-            requestUriParameterSupported(other.getRequestUriParameterSupported());
-            requireRequestUriRegistration(other.getRequireRequestUriRegistration());
-            responseModesSupported(other.getResponseModesSupported());
-            responseTypesSupported(other.getResponseTypesSupported());
-            scopesSupported(other.getScopesSupported());
-            serviceDocumentation(other.getServiceDocumentation());
-            subjectTypesSupported(other.getSubjectTypesSupported());
-            tokenEndpoint(other.getTokenEndpoint());
-            tokenEndpointAuthMethodsSupported(other.getTokenEndpointAuthMethodsSupported());
-            tokenEndpointAuthSigningAlgValuesSupported(other.getTokenEndpointAuthSigningAlgValuesSupported());
-            uiLocalesSupported(other.getUiLocalesSupported());
-            userinfoEncryptionAlgValuesSupported(other.getUserinfoEncryptionAlgValuesSupported());
-            userinfoEncryptionEncValuesSupported(other.getUserinfoEncryptionEncValuesSupported());
-            userinfoEndpoint(other.getUserinfoEndpoint());
-            userinfoSigningAlgValuesSupported(other.getUserinfoSigningAlgValuesSupported());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("authorization_endpoint")
         public IssuerStage authorizationEndpoint(@NotNull String authorizationEndpoint) {
-            this.authorizationEndpoint =
-                    Objects.requireNonNull(authorizationEndpoint, "authorizationEndpoint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("issuer")
         public JwksUriStage issuer(@NotNull String issuer) {
-            this.issuer = Objects.requireNonNull(issuer, "issuer must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("jwks_uri")
         public _FinalStage jwksUri(@NotNull String jwksUri) {
-            this.jwksUri = Objects.requireNonNull(jwksUri, "jwksUri must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userinfoSigningAlgValuesSupported(List<String> userinfoSigningAlgValuesSupported) {
-            this.userinfoSigningAlgValuesSupported = Optional.ofNullable(userinfoSigningAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userinfo_signing_alg_values_supported", nulls = Nulls.SKIP)
         public _FinalStage userinfoSigningAlgValuesSupported(Optional<List<String>> userinfoSigningAlgValuesSupported) {
-            this.userinfoSigningAlgValuesSupported = userinfoSigningAlgValuesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userinfoEndpoint(String userinfoEndpoint) {
-            this.userinfoEndpoint = Optional.ofNullable(userinfoEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userinfo_endpoint", nulls = Nulls.SKIP)
         public _FinalStage userinfoEndpoint(Optional<String> userinfoEndpoint) {
-            this.userinfoEndpoint = userinfoEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userinfoEncryptionEncValuesSupported(List<String> userinfoEncryptionEncValuesSupported) {
-            this.userinfoEncryptionEncValuesSupported = Optional.ofNullable(userinfoEncryptionEncValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userinfo_encryption_enc_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage userinfoEncryptionEncValuesSupported(
-                Optional<List<String>> userinfoEncryptionEncValuesSupported) {
-            this.userinfoEncryptionEncValuesSupported = userinfoEncryptionEncValuesSupported;
-            return this;
+        public _FinalStage userinfoEncryptionEncValuesSupported(Optional<List<String>> userinfoEncryptionEncValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userinfoEncryptionAlgValuesSupported(List<String> userinfoEncryptionAlgValuesSupported) {
-            this.userinfoEncryptionAlgValuesSupported = Optional.ofNullable(userinfoEncryptionAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userinfo_encryption_alg_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage userinfoEncryptionAlgValuesSupported(
-                Optional<List<String>> userinfoEncryptionAlgValuesSupported) {
-            this.userinfoEncryptionAlgValuesSupported = userinfoEncryptionAlgValuesSupported;
-            return this;
+        public _FinalStage userinfoEncryptionAlgValuesSupported(Optional<List<String>> userinfoEncryptionAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage uiLocalesSupported(List<String> uiLocalesSupported) {
-            this.uiLocalesSupported = Optional.ofNullable(uiLocalesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ui_locales_supported", nulls = Nulls.SKIP)
         public _FinalStage uiLocalesSupported(Optional<List<String>> uiLocalesSupported) {
-            this.uiLocalesSupported = uiLocalesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthSigningAlgValuesSupported(
-                List<String> tokenEndpointAuthSigningAlgValuesSupported) {
-            this.tokenEndpointAuthSigningAlgValuesSupported =
-                    Optional.ofNullable(tokenEndpointAuthSigningAlgValuesSupported);
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlgValuesSupported(List<String> tokenEndpointAuthSigningAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint_auth_signing_alg_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage tokenEndpointAuthSigningAlgValuesSupported(
-                Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported) {
-            this.tokenEndpointAuthSigningAlgValuesSupported = tokenEndpointAuthSigningAlgValuesSupported;
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlgValuesSupported(Optional<List<String>> tokenEndpointAuthSigningAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tokenEndpointAuthMethodsSupported(List<String> tokenEndpointAuthMethodsSupported) {
-            this.tokenEndpointAuthMethodsSupported = Optional.ofNullable(tokenEndpointAuthMethodsSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint_auth_methods_supported", nulls = Nulls.SKIP)
         public _FinalStage tokenEndpointAuthMethodsSupported(Optional<List<String>> tokenEndpointAuthMethodsSupported) {
-            this.tokenEndpointAuthMethodsSupported = tokenEndpointAuthMethodsSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Optional.ofNullable(tokenEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint", nulls = Nulls.SKIP)
         public _FinalStage tokenEndpoint(Optional<String> tokenEndpoint) {
-            this.tokenEndpoint = tokenEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subjectTypesSupported(List<String> subjectTypesSupported) {
-            this.subjectTypesSupported = Optional.ofNullable(subjectTypesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subject_types_supported", nulls = Nulls.SKIP)
         public _FinalStage subjectTypesSupported(Optional<List<String>> subjectTypesSupported) {
-            this.subjectTypesSupported = subjectTypesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage serviceDocumentation(String serviceDocumentation) {
-            this.serviceDocumentation = Optional.ofNullable(serviceDocumentation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "service_documentation", nulls = Nulls.SKIP)
         public _FinalStage serviceDocumentation(Optional<String> serviceDocumentation) {
-            this.serviceDocumentation = serviceDocumentation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scopesSupported(com.auth0.client.mgmt.core.Nullable<List<String>> scopesSupported) {
-            if (scopesSupported.isNull()) {
-                this.scopesSupported = OptionalNullable.ofNull();
-            } else if (scopesSupported.isEmpty()) {
-                this.scopesSupported = OptionalNullable.absent();
-            } else {
-                this.scopesSupported = OptionalNullable.of(scopesSupported.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scopesSupported(Optional<List<String>> scopesSupported) {
-            if (scopesSupported.isPresent()) {
-                this.scopesSupported = OptionalNullable.of(scopesSupported.get());
-            } else {
-                this.scopesSupported = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scopesSupported(List<String> scopesSupported) {
-            this.scopesSupported = OptionalNullable.of(scopesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "scopes_supported", nulls = Nulls.SKIP)
         public _FinalStage scopesSupported(@Nullable OptionalNullable<List<String>> scopesSupported) {
-            this.scopesSupported = scopesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage responseTypesSupported(List<String> responseTypesSupported) {
-            this.responseTypesSupported = Optional.ofNullable(responseTypesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "response_types_supported", nulls = Nulls.SKIP)
         public _FinalStage responseTypesSupported(Optional<List<String>> responseTypesSupported) {
-            this.responseTypesSupported = responseTypesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage responseModesSupported(List<String> responseModesSupported) {
-            this.responseModesSupported = Optional.ofNullable(responseModesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "response_modes_supported", nulls = Nulls.SKIP)
         public _FinalStage responseModesSupported(Optional<List<String>> responseModesSupported) {
-            this.responseModesSupported = responseModesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage requireRequestUriRegistration(Boolean requireRequestUriRegistration) {
-            this.requireRequestUriRegistration = Optional.ofNullable(requireRequestUriRegistration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "require_request_uri_registration", nulls = Nulls.SKIP)
         public _FinalStage requireRequestUriRegistration(Optional<Boolean> requireRequestUriRegistration) {
-            this.requireRequestUriRegistration = requireRequestUriRegistration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage requestUriParameterSupported(Boolean requestUriParameterSupported) {
-            this.requestUriParameterSupported = Optional.ofNullable(requestUriParameterSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request_uri_parameter_supported", nulls = Nulls.SKIP)
         public _FinalStage requestUriParameterSupported(Optional<Boolean> requestUriParameterSupported) {
-            this.requestUriParameterSupported = requestUriParameterSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage requestParameterSupported(Boolean requestParameterSupported) {
-            this.requestParameterSupported = Optional.ofNullable(requestParameterSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request_parameter_supported", nulls = Nulls.SKIP)
         public _FinalStage requestParameterSupported(Optional<Boolean> requestParameterSupported) {
-            this.requestParameterSupported = requestParameterSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage requestObjectSigningAlgValuesSupported(List<String> requestObjectSigningAlgValuesSupported) {
-            this.requestObjectSigningAlgValuesSupported = Optional.ofNullable(requestObjectSigningAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request_object_signing_alg_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage requestObjectSigningAlgValuesSupported(
-                Optional<List<String>> requestObjectSigningAlgValuesSupported) {
-            this.requestObjectSigningAlgValuesSupported = requestObjectSigningAlgValuesSupported;
-            return this;
+        public _FinalStage requestObjectSigningAlgValuesSupported(Optional<List<String>> requestObjectSigningAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage requestObjectEncryptionEncValuesSupported(
-                List<String> requestObjectEncryptionEncValuesSupported) {
-            this.requestObjectEncryptionEncValuesSupported =
-                    Optional.ofNullable(requestObjectEncryptionEncValuesSupported);
-            return this;
+        public _FinalStage requestObjectEncryptionEncValuesSupported(List<String> requestObjectEncryptionEncValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request_object_encryption_enc_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage requestObjectEncryptionEncValuesSupported(
-                Optional<List<String>> requestObjectEncryptionEncValuesSupported) {
-            this.requestObjectEncryptionEncValuesSupported = requestObjectEncryptionEncValuesSupported;
-            return this;
+        public _FinalStage requestObjectEncryptionEncValuesSupported(Optional<List<String>> requestObjectEncryptionEncValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage requestObjectEncryptionAlgValuesSupported(
-                List<String> requestObjectEncryptionAlgValuesSupported) {
-            this.requestObjectEncryptionAlgValuesSupported =
-                    Optional.ofNullable(requestObjectEncryptionAlgValuesSupported);
-            return this;
+        public _FinalStage requestObjectEncryptionAlgValuesSupported(List<String> requestObjectEncryptionAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request_object_encryption_alg_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage requestObjectEncryptionAlgValuesSupported(
-                Optional<List<String>> requestObjectEncryptionAlgValuesSupported) {
-            this.requestObjectEncryptionAlgValuesSupported = requestObjectEncryptionAlgValuesSupported;
-            return this;
+        public _FinalStage requestObjectEncryptionAlgValuesSupported(Optional<List<String>> requestObjectEncryptionAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage registrationEndpoint(String registrationEndpoint) {
-            this.registrationEndpoint = Optional.ofNullable(registrationEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "registration_endpoint", nulls = Nulls.SKIP)
         public _FinalStage registrationEndpoint(Optional<String> registrationEndpoint) {
-            this.registrationEndpoint = registrationEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage opTosUri(String opTosUri) {
-            this.opTosUri = Optional.ofNullable(opTosUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "op_tos_uri", nulls = Nulls.SKIP)
         public _FinalStage opTosUri(Optional<String> opTosUri) {
-            this.opTosUri = opTosUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage opPolicyUri(String opPolicyUri) {
-            this.opPolicyUri = Optional.ofNullable(opPolicyUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "op_policy_uri", nulls = Nulls.SKIP)
         public _FinalStage opPolicyUri(Optional<String> opPolicyUri) {
-            this.opPolicyUri = opPolicyUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllIdTokenSigningAlgValuesSupported(List<String> idTokenSigningAlgValuesSupported) {
-            if (idTokenSigningAlgValuesSupported != null) {
-                this.idTokenSigningAlgValuesSupported.addAll(idTokenSigningAlgValuesSupported);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addIdTokenSigningAlgValuesSupported(String idTokenSigningAlgValuesSupported) {
-            this.idTokenSigningAlgValuesSupported.add(idTokenSigningAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "id_token_signing_alg_values_supported", nulls = Nulls.SKIP)
         public _FinalStage idTokenSigningAlgValuesSupported(List<String> idTokenSigningAlgValuesSupported) {
-            this.idTokenSigningAlgValuesSupported.clear();
-            if (idTokenSigningAlgValuesSupported != null) {
-                this.idTokenSigningAlgValuesSupported.addAll(idTokenSigningAlgValuesSupported);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage idTokenEncryptionEncValuesSupported(List<String> idTokenEncryptionEncValuesSupported) {
-            this.idTokenEncryptionEncValuesSupported = Optional.ofNullable(idTokenEncryptionEncValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "id_token_encryption_enc_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage idTokenEncryptionEncValuesSupported(
-                Optional<List<String>> idTokenEncryptionEncValuesSupported) {
-            this.idTokenEncryptionEncValuesSupported = idTokenEncryptionEncValuesSupported;
-            return this;
+        public _FinalStage idTokenEncryptionEncValuesSupported(Optional<List<String>> idTokenEncryptionEncValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage idTokenEncryptionAlgValuesSupported(List<String> idTokenEncryptionAlgValuesSupported) {
-            this.idTokenEncryptionAlgValuesSupported = Optional.ofNullable(idTokenEncryptionAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "id_token_encryption_alg_values_supported", nulls = Nulls.SKIP)
-        public _FinalStage idTokenEncryptionAlgValuesSupported(
-                Optional<List<String>> idTokenEncryptionAlgValuesSupported) {
-            this.idTokenEncryptionAlgValuesSupported = idTokenEncryptionAlgValuesSupported;
-            return this;
+        public _FinalStage idTokenEncryptionAlgValuesSupported(Optional<List<String>> idTokenEncryptionAlgValuesSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage grantTypesSupported(List<String> grantTypesSupported) {
-            this.grantTypesSupported = Optional.ofNullable(grantTypesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "grant_types_supported", nulls = Nulls.SKIP)
         public _FinalStage grantTypesSupported(Optional<List<String>> grantTypesSupported) {
-            this.grantTypesSupported = grantTypesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage endSessionEndpoint(String endSessionEndpoint) {
-            this.endSessionEndpoint = Optional.ofNullable(endSessionEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "end_session_endpoint", nulls = Nulls.SKIP)
         public _FinalStage endSessionEndpoint(Optional<String> endSessionEndpoint) {
-            this.endSessionEndpoint = endSessionEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage dpopSigningAlgValuesSupported(List<String> dpopSigningAlgValuesSupported) {
-            this.dpopSigningAlgValuesSupported = Optional.ofNullable(dpopSigningAlgValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "dpop_signing_alg_values_supported", nulls = Nulls.SKIP)
         public _FinalStage dpopSigningAlgValuesSupported(Optional<List<String>> dpopSigningAlgValuesSupported) {
-            this.dpopSigningAlgValuesSupported = dpopSigningAlgValuesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage displayValuesSupported(List<String> displayValuesSupported) {
-            this.displayValuesSupported = Optional.ofNullable(displayValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "display_values_supported", nulls = Nulls.SKIP)
         public _FinalStage displayValuesSupported(Optional<List<String>> displayValuesSupported) {
-            this.displayValuesSupported = displayValuesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage claimsSupported(List<String> claimsSupported) {
-            this.claimsSupported = Optional.ofNullable(claimsSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "claims_supported", nulls = Nulls.SKIP)
         public _FinalStage claimsSupported(Optional<List<String>> claimsSupported) {
-            this.claimsSupported = claimsSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage claimsParameterSupported(Boolean claimsParameterSupported) {
-            this.claimsParameterSupported = Optional.ofNullable(claimsParameterSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "claims_parameter_supported", nulls = Nulls.SKIP)
         public _FinalStage claimsParameterSupported(Optional<Boolean> claimsParameterSupported) {
-            this.claimsParameterSupported = claimsParameterSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage claimsLocalesSupported(List<String> claimsLocalesSupported) {
-            this.claimsLocalesSupported = Optional.ofNullable(claimsLocalesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "claims_locales_supported", nulls = Nulls.SKIP)
         public _FinalStage claimsLocalesSupported(Optional<List<String>> claimsLocalesSupported) {
-            this.claimsLocalesSupported = claimsLocalesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage claimTypesSupported(List<String> claimTypesSupported) {
-            this.claimTypesSupported = Optional.ofNullable(claimTypesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "claim_types_supported", nulls = Nulls.SKIP)
         public _FinalStage claimTypesSupported(Optional<List<String>> claimTypesSupported) {
-            this.claimTypesSupported = claimTypesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage acrValuesSupported(List<String> acrValuesSupported) {
-            this.acrValuesSupported = Optional.ofNullable(acrValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "acr_values_supported", nulls = Nulls.SKIP)
         public _FinalStage acrValuesSupported(Optional<List<String>> acrValuesSupported) {
-            this.acrValuesSupported = acrValuesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsOidcMetadata build() {
-            return new ConnectionOptionsOidcMetadata(
-                    acrValuesSupported,
-                    authorizationEndpoint,
-                    claimTypesSupported,
-                    claimsLocalesSupported,
-                    claimsParameterSupported,
-                    claimsSupported,
-                    displayValuesSupported,
-                    dpopSigningAlgValuesSupported,
-                    endSessionEndpoint,
-                    grantTypesSupported,
-                    idTokenEncryptionAlgValuesSupported,
-                    idTokenEncryptionEncValuesSupported,
-                    idTokenSigningAlgValuesSupported,
-                    issuer,
-                    jwksUri,
-                    opPolicyUri,
-                    opTosUri,
-                    registrationEndpoint,
-                    requestObjectEncryptionAlgValuesSupported,
-                    requestObjectEncryptionEncValuesSupported,
-                    requestObjectSigningAlgValuesSupported,
-                    requestParameterSupported,
-                    requestUriParameterSupported,
-                    requireRequestUriRegistration,
-                    responseModesSupported,
-                    responseTypesSupported,
-                    scopesSupported,
-                    serviceDocumentation,
-                    subjectTypesSupported,
-                    tokenEndpoint,
-                    tokenEndpointAuthMethodsSupported,
-                    tokenEndpointAuthSigningAlgValuesSupported,
-                    uiLocalesSupported,
-                    userinfoEncryptionAlgValuesSupported,
-                    userinfoEncryptionEncValuesSupported,
-                    userinfoEndpoint,
-                    userinfoSigningAlgValuesSupported,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

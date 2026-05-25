@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeDropdownConst {
-    public static final FormFieldTypeDropdownConst DROPDOWN =
-            new FormFieldTypeDropdownConst(Value.DROPDOWN, "DROPDOWN");
+
+    public static final FormFieldTypeDropdownConst DROPDOWN = new FormFieldTypeDropdownConst(Value.DROPDOWN, "DROPDOWN");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormFieldTypeDropdownConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeDropdownConst
-                        && this.string.equals(((FormFieldTypeDropdownConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DROPDOWN:
-                return visitor.visitDropdown();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeDropdownConst valueOf(String value) {
-        switch (value) {
-            case "DROPDOWN":
-                return DROPDOWN;
-            default:
-                return new FormFieldTypeDropdownConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DROPDOWN,
 
-        UNKNOWN
+        DROPDOWN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDropdown();
 
         T visitUnknown(String unknownType);

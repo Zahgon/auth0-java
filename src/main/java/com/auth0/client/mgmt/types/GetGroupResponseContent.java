@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetGroupResponseContent.Builder.class)
 public final class GetGroupResponseContent {
+
     private final String id;
 
     private final String name;
@@ -38,15 +39,7 @@ public final class GetGroupResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetGroupResponseContent(
-            String id,
-            String name,
-            Optional<String> externalId,
-            Optional<String> connectionId,
-            String tenantName,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            Map<String, Object> additionalProperties) {
+    private GetGroupResponseContent(String id, String name, Optional<String> externalId, Optional<String> connectionId, String tenantName, OffsetDateTime createdAt, OffsetDateTime updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.externalId = externalId;
@@ -62,7 +55,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +63,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +71,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("external_id")
     public Optional<String> getExternalId() {
-        return externalId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +79,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +87,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("tenant_name")
     public String getTenantName() {
-        return tenantName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +95,7 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,52 +103,39 @@ public final class GetGroupResponseContent {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetGroupResponseContent && equalTo((GetGroupResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetGroupResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && externalId.equals(other.externalId)
-                && connectionId.equals(other.connectionId)
-                && tenantName.equals(other.tenantName)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && name.equals(other.name) && externalId.equals(other.externalId) && connectionId.equals(other.connectionId) && tenantName.equals(other.tenantName) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.name,
-                this.externalId,
-                this.connectionId,
-                this.tenantName,
-                this.createdAt,
-                this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>Unique identifier for the group (service-generated).</p>
          */
@@ -165,6 +145,7 @@ public final class GetGroupResponseContent {
     }
 
     public interface NameStage {
+
         /**
          * <p>Name of the group. Must be unique within its connection. Must contain between 1 and 128 printable ASCII characters.</p>
          */
@@ -172,6 +153,7 @@ public final class GetGroupResponseContent {
     }
 
     public interface TenantNameStage {
+
         /**
          * <p>Identifier for the tenant this group belongs to.</p>
          */
@@ -179,6 +161,7 @@ public final class GetGroupResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>Timestamp of when the group was created.</p>
          */
@@ -186,6 +169,7 @@ public final class GetGroupResponseContent {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>Timestamp of when the group was last updated.</p>
          */
@@ -193,6 +177,7 @@ public final class GetGroupResponseContent {
     }
 
     public interface _FinalStage {
+
         GetGroupResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -215,8 +200,8 @@ public final class GetGroupResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements IdStage, NameStage, TenantNameStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+    public static final class Builder implements IdStage, NameStage, TenantNameStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -234,18 +219,12 @@ public final class GetGroupResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetGroupResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            externalId(other.getExternalId());
-            connectionId(other.getConnectionId());
-            tenantName(other.getTenantName());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -256,8 +235,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -268,8 +246,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter("name")
         public TenantNameStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -280,8 +257,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter("tenant_name")
         public CreatedAtStage tenantName(@NotNull String tenantName) {
-            this.tenantName = Objects.requireNonNull(tenantName, "tenantName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -292,8 +268,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -304,8 +279,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -314,8 +288,7 @@ public final class GetGroupResponseContent {
          */
         @java.lang.Override
         public _FinalStage connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -324,8 +297,7 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public _FinalStage connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -334,8 +306,7 @@ public final class GetGroupResponseContent {
          */
         @java.lang.Override
         public _FinalStage externalId(String externalId) {
-            this.externalId = Optional.ofNullable(externalId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -344,26 +315,22 @@ public final class GetGroupResponseContent {
         @java.lang.Override
         @JsonSetter(value = "external_id", nulls = Nulls.SKIP)
         public _FinalStage externalId(Optional<String> externalId) {
-            this.externalId = externalId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetGroupResponseContent build() {
-            return new GetGroupResponseContent(
-                    id, name, externalId, connectionId, tenantName, createdAt, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

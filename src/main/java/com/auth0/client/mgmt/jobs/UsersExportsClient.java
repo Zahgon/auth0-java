@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.jobs.types.CreateExportUsersRequestContent;
 import com.auth0.client.mgmt.types.CreateExportUsersResponseContent;
 
 public class UsersExportsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUsersExportsClient rawClient;
@@ -22,35 +23,34 @@ public class UsersExportsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUsersExportsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CreateExportUsersResponseContent create() {
-        return this.rawClient.create().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CreateExportUsersResponseContent create(RequestOptions requestOptions) {
-        return this.rawClient.create(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CreateExportUsersResponseContent create(CreateExportUsersRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
-    public CreateExportUsersResponseContent create(
-            CreateExportUsersRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateExportUsersResponseContent create(CreateExportUsersRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

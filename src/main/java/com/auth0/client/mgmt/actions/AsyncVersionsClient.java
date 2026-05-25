@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.GetActionVersionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncVersionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawVersionsClient rawClient;
@@ -28,85 +29,76 @@ public class AsyncVersionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawVersionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public CompletableFuture<SyncPagingIterable<ActionVersion>> list(String actionId) {
-        return this.rawClient.list(actionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public CompletableFuture<SyncPagingIterable<ActionVersion>> list(String actionId, RequestOptions requestOptions) {
-        return this.rawClient.list(actionId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
-    public CompletableFuture<SyncPagingIterable<ActionVersion>> list(
-            String actionId, ListActionVersionsRequestParameters request) {
-        return this.rawClient.list(actionId, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionVersion>> list(String actionId, ListActionVersionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
-    public CompletableFuture<SyncPagingIterable<ActionVersion>> list(
-            String actionId, ListActionVersionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(actionId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionVersion>> list(String actionId, ListActionVersionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a specific version of an action. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public CompletableFuture<GetActionVersionResponseContent> get(String actionId, String id) {
-        return this.rawClient.get(actionId, id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a specific version of an action. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
-    public CompletableFuture<GetActionVersionResponseContent> get(
-            String actionId, String id, RequestOptions requestOptions) {
-        return this.rawClient.get(actionId, id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetActionVersionResponseContent> get(String actionId, String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
     public CompletableFuture<DeployActionVersionResponseContent> deploy(String actionId, String id) {
-        return this.rawClient.deploy(actionId, id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
-    public CompletableFuture<DeployActionVersionResponseContent> deploy(
-            String actionId, String id, RequestOptions requestOptions) {
-        return this.rawClient.deploy(actionId, id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<DeployActionVersionResponseContent> deploy(String actionId, String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
-    public CompletableFuture<DeployActionVersionResponseContent> deploy(
-            String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request) {
-        return this.rawClient.deploy(actionId, id, request).thenApply(response -> response.body());
+    public CompletableFuture<DeployActionVersionResponseContent> deploy(String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
-    public CompletableFuture<DeployActionVersionResponseContent> deploy(
-            String actionId,
-            String id,
-            OptionalNullable<DeployActionVersionRequestContent> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.deploy(actionId, id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<DeployActionVersionResponseContent> deploy(String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

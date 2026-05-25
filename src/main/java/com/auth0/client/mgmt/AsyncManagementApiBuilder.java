@@ -12,6 +12,7 @@ import java.util.Optional;
 import okhttp3.OkHttpClient;
 
 public class AsyncManagementApiBuilder {
+
     private Optional<Integer> timeout = Optional.empty();
 
     private Optional<Integer> maxRetries = Optional.empty();
@@ -32,50 +33,43 @@ public class AsyncManagementApiBuilder {
      * Sets token
      */
     public AsyncManagementApiBuilder token(String token) {
-        this.token = token;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncManagementApiBuilder environment(Environment environment) {
-        this.environment = environment;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncManagementApiBuilder url(String url) {
-        this.environment = Environment.custom(url);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the timeout (in seconds) for the client. Defaults to 60 seconds.
      */
     public AsyncManagementApiBuilder timeout(int timeout) {
-        this.timeout = Optional.of(timeout);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the maximum number of retries for the client. Defaults to 2 retries.
      */
     public AsyncManagementApiBuilder maxRetries(int maxRetries) {
-        this.maxRetries = Optional.of(maxRetries);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the underlying OkHttp client
      */
     public AsyncManagementApiBuilder httpClient(OkHttpClient httpClient) {
-        this.httpClient = httpClient;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure logging for the SDK. Silent by default — no log output unless explicitly configured.
      */
     public AsyncManagementApiBuilder logging(LogConfig logging) {
-        this.logging = Optional.of(logging);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,28 +81,15 @@ public class AsyncManagementApiBuilder {
      * @return This builder for method chaining
      */
     public AsyncManagementApiBuilder addHeader(String name, String value) {
-        this.customHeaders.put(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncManagementApiBuilder tenantDomain(String tenantDomain) {
-        this.tenantDomain = tenantDomain;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected ClientOptions buildClientOptions() {
-        ClientOptions.Builder builder = ClientOptions.builder();
-        setEnvironment(builder);
-        setAuthentication(builder);
-        setHttpClient(builder);
-        setTimeouts(builder);
-        setRetries(builder);
-        setLogging(builder);
-        for (Map.Entry<String, String> header : this.customHeaders.entrySet()) {
-            builder.addHeader(header.getKey(), header.getValue());
-        }
-        setAdditional(builder);
-        return builder.build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -118,12 +99,7 @@ public class AsyncManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setEnvironment(ClientOptions.Builder builder) {
-        if (this.tenantDomain != null) {
-            String _tenantDomain = this.tenantDomain != null ? this.tenantDomain : "{TENANT}.auth0.com";
-            this.environment =
-                    Environment.custom("https://{tenantDomain}/api/v2".replace("{tenantDomain}", _tenantDomain));
-        }
-        builder.environment(this.environment);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -142,9 +118,7 @@ public class AsyncManagementApiBuilder {
      * }</pre>
      */
     protected void setAuthentication(ClientOptions.Builder builder) {
-        if (this.token != null) {
-            builder.addHeader("Authorization", "Bearer " + this.token);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -154,9 +128,7 @@ public class AsyncManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setTimeouts(ClientOptions.Builder builder) {
-        if (this.timeout.isPresent()) {
-            builder.timeout(this.timeout.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -166,9 +138,7 @@ public class AsyncManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setRetries(ClientOptions.Builder builder) {
-        if (this.maxRetries.isPresent()) {
-            builder.maxRetries(this.maxRetries.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -178,9 +148,7 @@ public class AsyncManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setHttpClient(ClientOptions.Builder builder) {
-        if (this.httpClient != null) {
-            builder.httpClient(this.httpClient);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -190,9 +158,7 @@ public class AsyncManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setLogging(ClientOptions.Builder builder) {
-        if (this.logging.isPresent()) {
-            builder.logging(this.logging.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -211,7 +177,9 @@ public class AsyncManagementApiBuilder {
      * }
      * }</pre>
      */
-    protected void setAdditional(ClientOptions.Builder builder) {}
+    protected void setAdditional(ClientOptions.Builder builder) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     /**
      * Override this method to add custom validation logic before the client is built.
@@ -229,13 +197,11 @@ public class AsyncManagementApiBuilder {
      * }
      * }</pre>
      */
-    protected void validateConfiguration() {}
+    protected void validateConfiguration() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     public AsyncManagementApi build() {
-        if (token == null) {
-            throw new RuntimeException("Please provide token");
-        }
-        validateConfiguration();
-        return new AsyncManagementApi(buildClientOptions());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

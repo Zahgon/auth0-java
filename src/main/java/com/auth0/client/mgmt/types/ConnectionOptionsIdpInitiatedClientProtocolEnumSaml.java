@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionOptionsIdpInitiatedClientProtocolEnumSaml {
-    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml WSFED =
-            new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.WSFED, "wsfed");
 
-    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml SAMLP =
-            new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.SAMLP, "samlp");
+    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml WSFED = new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.WSFED, "wsfed");
 
-    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml OIDC =
-            new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.OIDC, "oidc");
+    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml SAMLP = new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.SAMLP, "samlp");
+
+    public static final ConnectionOptionsIdpInitiatedClientProtocolEnumSaml OIDC = new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.OIDC, "oidc");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ConnectionOptionsIdpInitiatedClientProtocolEnumSaml {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionOptionsIdpInitiatedClientProtocolEnumSaml
-                        && this.string.equals(((ConnectionOptionsIdpInitiatedClientProtocolEnumSaml) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WSFED:
-                return visitor.visitWsfed();
-            case SAMLP:
-                return visitor.visitSamlp();
-            case OIDC:
-                return visitor.visitOidc();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionOptionsIdpInitiatedClientProtocolEnumSaml valueOf(String value) {
-        switch (value) {
-            case "wsfed":
-                return WSFED;
-            case "samlp":
-                return SAMLP;
-            case "oidc":
-                return OIDC;
-            default:
-                return new ConnectionOptionsIdpInitiatedClientProtocolEnumSaml(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OIDC,
 
-        SAMLP,
-
-        WSFED,
-
-        UNKNOWN
+        OIDC, SAMLP, WSFED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOidc();
 
         T visitSamlp();

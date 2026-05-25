@@ -7,8 +7,11 @@ import java.util.List;
 import java.util.Optional;
 
 public abstract class BasePage<T> {
+
     private final boolean hasNext;
+
     private final List<T> items;
+
     private final Object response;
 
     public BasePage(boolean hasNext, List<T> items, Object response) {
@@ -18,11 +21,11 @@ public abstract class BasePage<T> {
     }
 
     public boolean hasNext() {
-        return !items.isEmpty() && hasNext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<T> getItems() {
-        return items;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -31,8 +34,6 @@ public abstract class BasePage<T> {
      * @return Optional containing the response, or empty if unavailable
      */
     public <R> Optional<R> getResponse() {
-        @SuppressWarnings("unchecked")
-        R typedResponse = (R) response;
-        return Optional.ofNullable(typedResponse);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

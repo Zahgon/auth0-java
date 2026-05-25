@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = NetworkAclMatch.Builder.class)
 public final class NetworkAclMatch {
+
     private final Optional<List<Integer>> asns;
 
     private final Optional<List<String>> geoCountryCodes;
@@ -45,19 +46,7 @@ public final class NetworkAclMatch {
 
     private final Map<String, Object> additionalProperties;
 
-    private NetworkAclMatch(
-            Optional<List<Integer>> asns,
-            Optional<List<String>> geoCountryCodes,
-            Optional<List<String>> geoSubdivisionCodes,
-            Optional<List<String>> ipv4Cidrs,
-            Optional<List<String>> ipv6Cidrs,
-            Optional<List<String>> ja3Fingerprints,
-            Optional<List<String>> ja4Fingerprints,
-            Optional<List<String>> userAgents,
-            Optional<List<String>> hostnames,
-            Optional<List<String>> connectingIpv4Cidrs,
-            Optional<List<String>> connectingIpv6Cidrs,
-            Map<String, Object> additionalProperties) {
+    private NetworkAclMatch(Optional<List<Integer>> asns, Optional<List<String>> geoCountryCodes, Optional<List<String>> geoSubdivisionCodes, Optional<List<String>> ipv4Cidrs, Optional<List<String>> ipv6Cidrs, Optional<List<String>> ja3Fingerprints, Optional<List<String>> ja4Fingerprints, Optional<List<String>> userAgents, Optional<List<String>> hostnames, Optional<List<String>> connectingIpv4Cidrs, Optional<List<String>> connectingIpv6Cidrs, Map<String, Object> additionalProperties) {
         this.asns = asns;
         this.geoCountryCodes = geoCountryCodes;
         this.geoSubdivisionCodes = geoSubdivisionCodes;
@@ -74,111 +63,90 @@ public final class NetworkAclMatch {
 
     @JsonProperty("asns")
     public Optional<List<Integer>> getAsns() {
-        return asns;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("geo_country_codes")
     public Optional<List<String>> getGeoCountryCodes() {
-        return geoCountryCodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("geo_subdivision_codes")
     public Optional<List<String>> getGeoSubdivisionCodes() {
-        return geoSubdivisionCodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ipv4_cidrs")
     public Optional<List<String>> getIpv4Cidrs() {
-        return ipv4Cidrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ipv6_cidrs")
     public Optional<List<String>> getIpv6Cidrs() {
-        return ipv6Cidrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ja3_fingerprints")
     public Optional<List<String>> getJa3Fingerprints() {
-        return ja3Fingerprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ja4_fingerprints")
     public Optional<List<String>> getJa4Fingerprints() {
-        return ja4Fingerprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_agents")
     public Optional<List<String>> getUserAgents() {
-        return userAgents;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("hostnames")
     public Optional<List<String>> getHostnames() {
-        return hostnames;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connecting_ipv4_cidrs")
     public Optional<List<String>> getConnectingIpv4Cidrs() {
-        return connectingIpv4Cidrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connecting_ipv6_cidrs")
     public Optional<List<String>> getConnectingIpv6Cidrs() {
-        return connectingIpv6Cidrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof NetworkAclMatch && equalTo((NetworkAclMatch) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(NetworkAclMatch other) {
-        return asns.equals(other.asns)
-                && geoCountryCodes.equals(other.geoCountryCodes)
-                && geoSubdivisionCodes.equals(other.geoSubdivisionCodes)
-                && ipv4Cidrs.equals(other.ipv4Cidrs)
-                && ipv6Cidrs.equals(other.ipv6Cidrs)
-                && ja3Fingerprints.equals(other.ja3Fingerprints)
-                && ja4Fingerprints.equals(other.ja4Fingerprints)
-                && userAgents.equals(other.userAgents)
-                && hostnames.equals(other.hostnames)
-                && connectingIpv4Cidrs.equals(other.connectingIpv4Cidrs)
-                && connectingIpv6Cidrs.equals(other.connectingIpv6Cidrs);
+        return asns.equals(other.asns) && geoCountryCodes.equals(other.geoCountryCodes) && geoSubdivisionCodes.equals(other.geoSubdivisionCodes) && ipv4Cidrs.equals(other.ipv4Cidrs) && ipv6Cidrs.equals(other.ipv6Cidrs) && ja3Fingerprints.equals(other.ja3Fingerprints) && ja4Fingerprints.equals(other.ja4Fingerprints) && userAgents.equals(other.userAgents) && hostnames.equals(other.hostnames) && connectingIpv4Cidrs.equals(other.connectingIpv4Cidrs) && connectingIpv6Cidrs.equals(other.connectingIpv6Cidrs);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.asns,
-                this.geoCountryCodes,
-                this.geoSubdivisionCodes,
-                this.ipv4Cidrs,
-                this.ipv6Cidrs,
-                this.ja3Fingerprints,
-                this.ja4Fingerprints,
-                this.userAgents,
-                this.hostnames,
-                this.connectingIpv4Cidrs,
-                this.connectingIpv6Cidrs);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<Integer>> asns = Optional.empty();
 
         private Optional<List<String>> geoCountryCodes = Optional.empty();
@@ -204,168 +172,122 @@ public final class NetworkAclMatch {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(NetworkAclMatch other) {
-            asns(other.getAsns());
-            geoCountryCodes(other.getGeoCountryCodes());
-            geoSubdivisionCodes(other.getGeoSubdivisionCodes());
-            ipv4Cidrs(other.getIpv4Cidrs());
-            ipv6Cidrs(other.getIpv6Cidrs());
-            ja3Fingerprints(other.getJa3Fingerprints());
-            ja4Fingerprints(other.getJa4Fingerprints());
-            userAgents(other.getUserAgents());
-            hostnames(other.getHostnames());
-            connectingIpv4Cidrs(other.getConnectingIpv4Cidrs());
-            connectingIpv6Cidrs(other.getConnectingIpv6Cidrs());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "asns", nulls = Nulls.SKIP)
         public Builder asns(Optional<List<Integer>> asns) {
-            this.asns = asns;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder asns(List<Integer> asns) {
-            this.asns = Optional.ofNullable(asns);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "geo_country_codes", nulls = Nulls.SKIP)
         public Builder geoCountryCodes(Optional<List<String>> geoCountryCodes) {
-            this.geoCountryCodes = geoCountryCodes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder geoCountryCodes(List<String> geoCountryCodes) {
-            this.geoCountryCodes = Optional.ofNullable(geoCountryCodes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "geo_subdivision_codes", nulls = Nulls.SKIP)
         public Builder geoSubdivisionCodes(Optional<List<String>> geoSubdivisionCodes) {
-            this.geoSubdivisionCodes = geoSubdivisionCodes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder geoSubdivisionCodes(List<String> geoSubdivisionCodes) {
-            this.geoSubdivisionCodes = Optional.ofNullable(geoSubdivisionCodes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ipv4_cidrs", nulls = Nulls.SKIP)
         public Builder ipv4Cidrs(Optional<List<String>> ipv4Cidrs) {
-            this.ipv4Cidrs = ipv4Cidrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ipv4Cidrs(List<String> ipv4Cidrs) {
-            this.ipv4Cidrs = Optional.ofNullable(ipv4Cidrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ipv6_cidrs", nulls = Nulls.SKIP)
         public Builder ipv6Cidrs(Optional<List<String>> ipv6Cidrs) {
-            this.ipv6Cidrs = ipv6Cidrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ipv6Cidrs(List<String> ipv6Cidrs) {
-            this.ipv6Cidrs = Optional.ofNullable(ipv6Cidrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ja3_fingerprints", nulls = Nulls.SKIP)
         public Builder ja3Fingerprints(Optional<List<String>> ja3Fingerprints) {
-            this.ja3Fingerprints = ja3Fingerprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ja3Fingerprints(List<String> ja3Fingerprints) {
-            this.ja3Fingerprints = Optional.ofNullable(ja3Fingerprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ja4_fingerprints", nulls = Nulls.SKIP)
         public Builder ja4Fingerprints(Optional<List<String>> ja4Fingerprints) {
-            this.ja4Fingerprints = ja4Fingerprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ja4Fingerprints(List<String> ja4Fingerprints) {
-            this.ja4Fingerprints = Optional.ofNullable(ja4Fingerprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_agents", nulls = Nulls.SKIP)
         public Builder userAgents(Optional<List<String>> userAgents) {
-            this.userAgents = userAgents;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAgents(List<String> userAgents) {
-            this.userAgents = Optional.ofNullable(userAgents);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "hostnames", nulls = Nulls.SKIP)
         public Builder hostnames(Optional<List<String>> hostnames) {
-            this.hostnames = hostnames;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hostnames(List<String> hostnames) {
-            this.hostnames = Optional.ofNullable(hostnames);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connecting_ipv4_cidrs", nulls = Nulls.SKIP)
         public Builder connectingIpv4Cidrs(Optional<List<String>> connectingIpv4Cidrs) {
-            this.connectingIpv4Cidrs = connectingIpv4Cidrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectingIpv4Cidrs(List<String> connectingIpv4Cidrs) {
-            this.connectingIpv4Cidrs = Optional.ofNullable(connectingIpv4Cidrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connecting_ipv6_cidrs", nulls = Nulls.SKIP)
         public Builder connectingIpv6Cidrs(Optional<List<String>> connectingIpv6Cidrs) {
-            this.connectingIpv6Cidrs = connectingIpv6Cidrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectingIpv6Cidrs(List<String> connectingIpv6Cidrs) {
-            this.connectingIpv6Cidrs = Optional.ofNullable(connectingIpv6Cidrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public NetworkAclMatch build() {
-            return new NetworkAclMatch(
-                    asns,
-                    geoCountryCodes,
-                    geoSubdivisionCodes,
-                    ipv4Cidrs,
-                    ipv6Cidrs,
-                    ja3Fingerprints,
-                    ja4Fingerprints,
-                    userAgents,
-                    hostnames,
-                    connectingIpv4Cidrs,
-                    connectingIpv6Cidrs,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

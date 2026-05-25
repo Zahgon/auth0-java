@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldCardsConfig.Builder.class)
 public final class FormFieldCardsConfig {
+
     private final Optional<Boolean> hideLabels;
 
     private final Optional<Boolean> multiple;
@@ -29,11 +30,7 @@ public final class FormFieldCardsConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldCardsConfig(
-            Optional<Boolean> hideLabels,
-            Optional<Boolean> multiple,
-            Optional<List<FormFieldCardsConfigOption>> options,
-            Map<String, Object> additionalProperties) {
+    private FormFieldCardsConfig(Optional<Boolean> hideLabels, Optional<Boolean> multiple, Optional<List<FormFieldCardsConfigOption>> options, Map<String, Object> additionalProperties) {
         this.hideLabels = hideLabels;
         this.multiple = multiple;
         this.options = options;
@@ -42,28 +39,27 @@ public final class FormFieldCardsConfig {
 
     @JsonProperty("hide_labels")
     public Optional<Boolean> getHideLabels() {
-        return hideLabels;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("multiple")
     public Optional<Boolean> getMultiple() {
-        return multiple;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<List<FormFieldCardsConfigOption>> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldCardsConfig && equalTo((FormFieldCardsConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldCardsConfig other) {
@@ -72,20 +68,21 @@ public final class FormFieldCardsConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.hideLabels, this.multiple, this.options);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> hideLabels = Optional.empty();
 
         private Optional<Boolean> multiple = Optional.empty();
@@ -95,60 +92,50 @@ public final class FormFieldCardsConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldCardsConfig other) {
-            hideLabels(other.getHideLabels());
-            multiple(other.getMultiple());
-            options(other.getOptions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "hide_labels", nulls = Nulls.SKIP)
         public Builder hideLabels(Optional<Boolean> hideLabels) {
-            this.hideLabels = hideLabels;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hideLabels(Boolean hideLabels) {
-            this.hideLabels = Optional.ofNullable(hideLabels);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "multiple", nulls = Nulls.SKIP)
         public Builder multiple(Optional<Boolean> multiple) {
-            this.multiple = multiple;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder multiple(Boolean multiple) {
-            this.multiple = Optional.ofNullable(multiple);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public Builder options(Optional<List<FormFieldCardsConfigOption>> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder options(List<FormFieldCardsConfigOption> options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldCardsConfig build() {
-            return new FormFieldCardsConfig(hideLabels, multiple, options, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

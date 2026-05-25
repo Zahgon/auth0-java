@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class VerificationClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<TemplatesClient> templatesClient;
@@ -18,6 +19,6 @@ public class VerificationClient {
     }
 
     public TemplatesClient templates() {
-        return this.templatesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

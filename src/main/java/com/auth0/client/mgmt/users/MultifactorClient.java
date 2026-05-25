@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import com.auth0.client.mgmt.types.UserMultifactorProviderEnum;
 
 public class MultifactorClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawMultifactorClient rawClient;
@@ -21,34 +22,34 @@ public class MultifactorClient {
      * Get responses with HTTP metadata like headers
      */
     public RawMultifactorClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Invalidate all remembered browsers across all <a href="https://auth0.com/docs/multifactor-authentication">authentication factors</a> for a user.
      */
     public void invalidateRememberBrowser(String id) {
-        this.rawClient.invalidateRememberBrowser(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Invalidate all remembered browsers across all <a href="https://auth0.com/docs/multifactor-authentication">authentication factors</a> for a user.
      */
     public void invalidateRememberBrowser(String id, RequestOptions requestOptions) {
-        this.rawClient.invalidateRememberBrowser(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a <a href="https://auth0.com/docs/multifactor-authentication">multifactor</a> authentication configuration from a user's account. This forces the user to manually reconfigure the multi-factor provider.
      */
     public void deleteProvider(String id, UserMultifactorProviderEnum provider) {
-        this.rawClient.deleteProvider(id, provider).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a <a href="https://auth0.com/docs/multifactor-authentication">multifactor</a> authentication configuration from a user's account. This forces the user to manually reconfigure the multi-factor provider.
      */
     public void deleteProvider(String id, UserMultifactorProviderEnum provider, RequestOptions requestOptions) {
-        this.rawClient.deleteProvider(id, provider, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

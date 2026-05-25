@@ -49,29 +49,8 @@ public final class SseEventParser {
      * @param <T>                  The target type
      * @return The deserialized object
      */
-    public static <T> T parseEventLevelUnion(
-            String eventType, String data, String id, Long retry, Class<T> unionClass, String discriminatorProperty) {
-        try {
-            // Determine if data should be parsed as JSON based on the variant's expected type
-            Object parsedData = parseDataForVariant(eventType, data, unionClass, discriminatorProperty);
-
-            // Construct the SSE envelope object
-            Map<String, Object> envelope = new HashMap<>();
-            envelope.put(discriminatorProperty, eventType);
-            envelope.put("data", parsedData);
-            if (id != null) {
-                envelope.put("id", id);
-            }
-            if (retry != null) {
-                envelope.put("retry", retry);
-            }
-
-            // Serialize to JSON and deserialize to target type
-            String envelopeJson = ObjectMappers.JSON_MAPPER.writeValueAsString(envelope);
-            return ObjectMappers.JSON_MAPPER.readValue(envelopeJson, unionClass);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to parse SSE event with event-level discrimination", e);
-        }
+    public static <T> T parseEventLevelUnion(String eventType, String data, String id, Long retry, Class<T> unionClass, String discriminatorProperty) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,11 +65,7 @@ public final class SseEventParser {
      * @return The deserialized object
      */
     public static <T> T parseDataLevelUnion(String data, Class<T> valueType) {
-        try {
-            return ObjectMappers.JSON_MAPPER.readValue(data, valueType);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to parse SSE data with data-level discrimination", e);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +76,7 @@ public final class SseEventParser {
      * @return true if event-level discrimination, false otherwise
      */
     public static boolean isEventLevelDiscrimination(String discriminatorProperty) {
-        return SSE_ENVELOPE_FIELDS.contains(discriminatorProperty);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,24 +86,7 @@ public final class SseEventParser {
      * @return The discriminator property name, or empty if not found
      */
     public static Optional<String> findDiscriminatorProperty(Class<?> unionClass) {
-        try {
-            // Look for JsonTypeInfo on the class itself
-            JsonTypeInfo typeInfo = unionClass.getAnnotation(JsonTypeInfo.class);
-            if (typeInfo != null && !typeInfo.property().isEmpty()) {
-                return Optional.of(typeInfo.property());
-            }
-
-            // Look for inner Value interface with JsonTypeInfo
-            for (Class<?> innerClass : unionClass.getDeclaredClasses()) {
-                typeInfo = innerClass.getAnnotation(JsonTypeInfo.class);
-                if (typeInfo != null && !typeInfo.property().isEmpty()) {
-                    return Optional.of(typeInfo.property());
-                }
-            }
-        } catch (Exception e) {
-            // Ignore reflection errors
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -136,12 +94,10 @@ public final class SseEventParser {
      * If the variant expects a String for its data field, returns the raw string.
      * Otherwise, parses the data as JSON.
      */
-    private static Object parseDataForVariant(
-            String eventType, String data, Class<?> unionClass, String discriminatorProperty) {
+    private static Object parseDataForVariant(String eventType, String data, Class<?> unionClass, String discriminatorProperty) {
         if (data == null || data.isEmpty()) {
             return data;
         }
-
         try {
             // Try to find the variant class that matches this event type
             Class<?> variantClass = findVariantClass(unionClass, eventType, discriminatorProperty);
@@ -153,9 +109,9 @@ public final class SseEventParser {
                     return data;
                 }
             }
-
             // Try to parse as JSON
-            return ObjectMappers.JSON_MAPPER.readValue(data, new TypeReference<Map<String, Object>>() {});
+            return ObjectMappers.JSON_MAPPER.readValue(data, new TypeReference<Map<String, Object>>() {
+            });
         } catch (Exception e) {
             // If JSON parsing fails, return as string
             return data;
@@ -165,15 +121,13 @@ public final class SseEventParser {
     /**
      * Find the variant class that matches the given discriminator value.
      */
-    private static Class<?> findVariantClass(
-            Class<?> unionClass, String discriminatorValue, String discriminatorProperty) {
+    private static Class<?> findVariantClass(Class<?> unionClass, String discriminatorValue, String discriminatorProperty) {
         try {
             // Look for JsonSubTypes annotation
             JsonSubTypes subTypes = findJsonSubTypes(unionClass);
             if (subTypes == null) {
                 return null;
             }
-
             for (JsonSubTypes.Type subType : subTypes.value()) {
                 JsonTypeName typeName = subType.value().getAnnotation(JsonTypeName.class);
                 if (typeName != null && typeName.value().equals(discriminatorValue)) {
@@ -199,7 +153,6 @@ public final class SseEventParser {
         if (subTypes != null) {
             return subTypes;
         }
-
         // Check inner classes (for Fern-style unions with inner Value interface)
         for (Class<?> innerClass : unionClass.getDeclaredClasses()) {
             subTypes = innerClass.getAnnotation(JsonSubTypes.class);

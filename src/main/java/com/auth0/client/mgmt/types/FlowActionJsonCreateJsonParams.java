@@ -20,6 +20,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionJsonCreateJsonParams.Builder.class)
 public final class FlowActionJsonCreateJsonParams {
+
     private final Map<String, Object> object;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class FlowActionJsonCreateJsonParams {
 
     @JsonProperty("object")
     public Map<String, Object> getObject() {
-        return object;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionJsonCreateJsonParams && equalTo((FlowActionJsonCreateJsonParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionJsonCreateJsonParams other) {
@@ -51,65 +51,56 @@ public final class FlowActionJsonCreateJsonParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.object);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Map<String, Object> object = new LinkedHashMap<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionJsonCreateJsonParams other) {
-            object(other.getObject());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "object", nulls = Nulls.SKIP)
         public Builder object(Map<String, Object> object) {
-            this.object.clear();
-            if (object != null) {
-                this.object.putAll(object);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder putAllObject(Map<String, Object> object) {
-            if (object != null) {
-                this.object.putAll(object);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder object(String key, Object value) {
-            this.object.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionJsonCreateJsonParams build() {
-            return new FlowActionJsonCreateJsonParams(object, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

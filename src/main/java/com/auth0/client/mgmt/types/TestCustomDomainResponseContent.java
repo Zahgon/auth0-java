@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TestCustomDomainResponseContent.Builder.class)
 public final class TestCustomDomainResponseContent {
+
     private final boolean success;
 
     private final Optional<String> message;
 
     private final Map<String, Object> additionalProperties;
 
-    private TestCustomDomainResponseContent(
-            boolean success, Optional<String> message, Map<String, Object> additionalProperties) {
+    private TestCustomDomainResponseContent(boolean success, Optional<String> message, Map<String, Object> additionalProperties) {
         this.success = success;
         this.message = message;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class TestCustomDomainResponseContent {
      */
     @JsonProperty("success")
     public boolean getSuccess() {
-        return success;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class TestCustomDomainResponseContent {
      */
     @JsonProperty("message")
     public Optional<String> getMessage() {
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TestCustomDomainResponseContent && equalTo((TestCustomDomainResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TestCustomDomainResponseContent other) {
@@ -66,19 +65,20 @@ public final class TestCustomDomainResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.success, this.message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SuccessStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SuccessStage {
+
         /**
          * <p>Result of the operation.</p>
          */
@@ -88,6 +88,7 @@ public final class TestCustomDomainResponseContent {
     }
 
     public interface _FinalStage {
+
         TestCustomDomainResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +105,7 @@ public final class TestCustomDomainResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SuccessStage, _FinalStage {
+
         private boolean success;
 
         private Optional<String> message = Optional.empty();
@@ -111,13 +113,12 @@ public final class TestCustomDomainResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(TestCustomDomainResponseContent other) {
-            success(other.getSuccess());
-            message(other.getMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,8 +129,7 @@ public final class TestCustomDomainResponseContent {
         @java.lang.Override
         @JsonSetter("success")
         public _FinalStage success(boolean success) {
-            this.success = success;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,8 +138,7 @@ public final class TestCustomDomainResponseContent {
          */
         @java.lang.Override
         public _FinalStage message(String message) {
-            this.message = Optional.ofNullable(message);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,25 +147,22 @@ public final class TestCustomDomainResponseContent {
         @java.lang.Override
         @JsonSetter(value = "message", nulls = Nulls.SKIP)
         public _FinalStage message(Optional<String> message) {
-            this.message = message;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public TestCustomDomainResponseContent build() {
-            return new TestCustomDomainResponseContent(success, message, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

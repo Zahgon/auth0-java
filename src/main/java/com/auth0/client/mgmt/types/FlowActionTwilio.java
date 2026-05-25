@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionTwilio.Deserializer.class)
 public final class FlowActionTwilio {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class FlowActionTwilio {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionTwilioMakeCall) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionTwilioSendSms) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionTwilio && equalTo((FlowActionTwilio) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionTwilio other) {
@@ -52,57 +47,38 @@ public final class FlowActionTwilio {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionTwilio of(FlowActionTwilioMakeCall value) {
-        return new FlowActionTwilio(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionTwilio of(FlowActionTwilioSendSms value) {
-        return new FlowActionTwilio(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionTwilioMakeCall value);
 
         T visit(FlowActionTwilioSendSms value);
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionTwilio> {
+
         Deserializer() {
             super(FlowActionTwilio.class);
         }
 
         @java.lang.Override
         public FlowActionTwilio deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionTwilioMakeCall.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionTwilioSendSms.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

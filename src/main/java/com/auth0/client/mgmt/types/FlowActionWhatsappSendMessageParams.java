@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionWhatsappSendMessageParams.Builder.class)
 public final class FlowActionWhatsappSendMessageParams {
+
     private final String connectionId;
 
     private final String senderId;
@@ -31,13 +32,7 @@ public final class FlowActionWhatsappSendMessageParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionWhatsappSendMessageParams(
-            String connectionId,
-            String senderId,
-            String recipientNumber,
-            FlowActionWhatsappSendMessageParamsType type,
-            FlowActionWhatsappSendMessageParamsPayload payload,
-            Map<String, Object> additionalProperties) {
+    private FlowActionWhatsappSendMessageParams(String connectionId, String senderId, String recipientNumber, FlowActionWhatsappSendMessageParamsType type, FlowActionWhatsappSendMessageParamsPayload payload, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.senderId = senderId;
         this.recipientNumber = recipientNumber;
@@ -48,86 +43,86 @@ public final class FlowActionWhatsappSendMessageParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sender_id")
     public String getSenderId() {
-        return senderId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("recipient_number")
     public String getRecipientNumber() {
-        return recipientNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FlowActionWhatsappSendMessageParamsType getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("payload")
     public FlowActionWhatsappSendMessageParamsPayload getPayload() {
-        return payload;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionWhatsappSendMessageParams
-                && equalTo((FlowActionWhatsappSendMessageParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionWhatsappSendMessageParams other) {
-        return connectionId.equals(other.connectionId)
-                && senderId.equals(other.senderId)
-                && recipientNumber.equals(other.recipientNumber)
-                && type.equals(other.type)
-                && payload.equals(other.payload);
+        return connectionId.equals(other.connectionId) && senderId.equals(other.senderId) && recipientNumber.equals(other.recipientNumber) && type.equals(other.type) && payload.equals(other.payload);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.senderId, this.recipientNumber, this.type, this.payload);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         SenderIdStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionWhatsappSendMessageParams other);
     }
 
     public interface SenderIdStage {
+
         RecipientNumberStage senderId(@NotNull String senderId);
     }
 
     public interface RecipientNumberStage {
+
         TypeStage recipientNumber(@NotNull String recipientNumber);
     }
 
     public interface TypeStage {
+
         PayloadStage type(@NotNull FlowActionWhatsappSendMessageParamsType type);
     }
 
     public interface PayloadStage {
+
         _FinalStage payload(@NotNull FlowActionWhatsappSendMessageParamsPayload payload);
     }
 
     public interface _FinalStage {
+
         FlowActionWhatsappSendMessageParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -136,8 +131,8 @@ public final class FlowActionWhatsappSendMessageParams {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ConnectionIdStage, SenderIdStage, RecipientNumberStage, TypeStage, PayloadStage, _FinalStage {
+    public static final class Builder implements ConnectionIdStage, SenderIdStage, RecipientNumberStage, TypeStage, PayloadStage, _FinalStage {
+
         private String connectionId;
 
         private String senderId;
@@ -151,69 +146,57 @@ public final class FlowActionWhatsappSendMessageParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionWhatsappSendMessageParams other) {
-            connectionId(other.getConnectionId());
-            senderId(other.getSenderId());
-            recipientNumber(other.getRecipientNumber());
-            type(other.getType());
-            payload(other.getPayload());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public SenderIdStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("sender_id")
         public RecipientNumberStage senderId(@NotNull String senderId) {
-            this.senderId = Objects.requireNonNull(senderId, "senderId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("recipient_number")
         public TypeStage recipientNumber(@NotNull String recipientNumber) {
-            this.recipientNumber = Objects.requireNonNull(recipientNumber, "recipientNumber must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public PayloadStage type(@NotNull FlowActionWhatsappSendMessageParamsType type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("payload")
         public _FinalStage payload(@NotNull FlowActionWhatsappSendMessageParamsPayload payload) {
-            this.payload = Objects.requireNonNull(payload, "payload must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionWhatsappSendMessageParams build() {
-            return new FlowActionWhatsappSendMessageParams(
-                    connectionId, senderId, recipientNumber, type, payload, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

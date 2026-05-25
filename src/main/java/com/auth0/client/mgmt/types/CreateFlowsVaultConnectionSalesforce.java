@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionSalesforce.Deserializer.class)
 public final class CreateFlowsVaultConnectionSalesforce {
+
     private final Object value;
 
     private final int type;
@@ -27,24 +28,17 @@ public final class CreateFlowsVaultConnectionSalesforce {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionSalesforceOauthCode) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionSalesforceUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionSalesforce
-                && equalTo((CreateFlowsVaultConnectionSalesforce) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionSalesforce other) {
@@ -53,57 +47,38 @@ public final class CreateFlowsVaultConnectionSalesforce {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionSalesforce of(CreateFlowsVaultConnectionSalesforceOauthCode value) {
-        return new CreateFlowsVaultConnectionSalesforce(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionSalesforce of(CreateFlowsVaultConnectionSalesforceUninitialized value) {
-        return new CreateFlowsVaultConnectionSalesforce(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionSalesforceOauthCode value);
 
         T visit(CreateFlowsVaultConnectionSalesforceUninitialized value);
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionSalesforce> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionSalesforce.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionSalesforce deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionSalesforceOauthCode.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionSalesforceUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionSalesforce deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

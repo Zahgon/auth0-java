@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.RoleUser;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncUsersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUsersClient rawClient;
@@ -25,7 +26,7 @@ public class AsyncUsersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUsersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,7 +46,7 @@ public class AsyncUsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<RoleUser>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +66,7 @@ public class AsyncUsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<RoleUser>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +86,7 @@ public class AsyncUsersClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<RoleUser>> list(String id, ListRoleUsersRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,9 +105,8 @@ public class AsyncUsersClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<RoleUser>> list(
-            String id, ListRoleUsersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RoleUser>> list(String id, ListRoleUsersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -114,15 +114,14 @@ public class AsyncUsersClient {
      * <p><b>Note</b>: New roles cannot be created through this action.</p>
      */
     public CompletableFuture<Void> assign(String id, AssignRoleUsersRequestContent request) {
-        return this.rawClient.assign(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign one or more users to an existing user role. To learn more, review <a href="https://auth0.com/docs/manage-users/access-control/rbac">Role-Based Access Control</a>.
      * <p><b>Note</b>: New roles cannot be created through this action.</p>
      */
-    public CompletableFuture<Void> assign(
-            String id, AssignRoleUsersRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.assign(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> assign(String id, AssignRoleUsersRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

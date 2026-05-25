@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateFlowsVaultConnectionResponseContent.Builder.class)
 public final class UpdateFlowsVaultConnectionResponseContent {
+
     private final String id;
 
     private final String appId;
@@ -44,18 +45,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateFlowsVaultConnectionResponseContent(
-            String id,
-            String appId,
-            Optional<String> environment,
-            String name,
-            Optional<String> accountName,
-            boolean ready,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            Optional<OffsetDateTime> refreshedAt,
-            String fingerprint,
-            Map<String, Object> additionalProperties) {
+    private UpdateFlowsVaultConnectionResponseContent(String id, String appId, Optional<String> environment, String name, Optional<String> accountName, boolean ready, OffsetDateTime createdAt, OffsetDateTime updatedAt, Optional<OffsetDateTime> refreshedAt, String fingerprint, Map<String, Object> additionalProperties) {
         this.id = id;
         this.appId = appId;
         this.environment = environment;
@@ -74,7 +64,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +72,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("app_id")
     public String getAppId() {
-        return appId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,7 +80,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("environment")
     public Optional<String> getEnvironment() {
-        return environment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,7 +88,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -106,7 +96,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("account_name")
     public Optional<String> getAccountName() {
-        return accountName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -114,7 +104,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("ready")
     public boolean getReady() {
-        return ready;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,7 +112,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -130,7 +120,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -138,64 +128,44 @@ public final class UpdateFlowsVaultConnectionResponseContent {
      */
     @JsonProperty("refreshed_at")
     public Optional<OffsetDateTime> getRefreshedAt() {
-        return refreshedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fingerprint")
     public String getFingerprint() {
-        return fingerprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateFlowsVaultConnectionResponseContent
-                && equalTo((UpdateFlowsVaultConnectionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateFlowsVaultConnectionResponseContent other) {
-        return id.equals(other.id)
-                && appId.equals(other.appId)
-                && environment.equals(other.environment)
-                && name.equals(other.name)
-                && accountName.equals(other.accountName)
-                && ready == other.ready
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && refreshedAt.equals(other.refreshedAt)
-                && fingerprint.equals(other.fingerprint);
+        return id.equals(other.id) && appId.equals(other.appId) && environment.equals(other.environment) && name.equals(other.name) && accountName.equals(other.accountName) && ready == other.ready && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && refreshedAt.equals(other.refreshedAt) && fingerprint.equals(other.fingerprint);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.appId,
-                this.environment,
-                this.name,
-                this.accountName,
-                this.ready,
-                this.createdAt,
-                this.updatedAt,
-                this.refreshedAt,
-                this.fingerprint);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>Flows Vault Connection identifier.</p>
          */
@@ -205,6 +175,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface AppIdStage {
+
         /**
          * <p>Flows Vault Connection app identifier.</p>
          */
@@ -212,6 +183,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface NameStage {
+
         /**
          * <p>Flows Vault Connection name.</p>
          */
@@ -219,6 +191,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface ReadyStage {
+
         /**
          * <p>Whether the Flows Vault Connection is configured.</p>
          */
@@ -226,6 +199,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>The ISO 8601 formatted date when this Flows Vault Connection was created.</p>
          */
@@ -233,6 +207,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>The ISO 8601 formatted date when this Flows Vault Connection was updated.</p>
          */
@@ -240,10 +215,12 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     public interface FingerprintStage {
+
         _FinalStage fingerprint(@NotNull String fingerprint);
     }
 
     public interface _FinalStage {
+
         UpdateFlowsVaultConnectionResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -273,15 +250,8 @@ public final class UpdateFlowsVaultConnectionResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements IdStage,
-                    AppIdStage,
-                    NameStage,
-                    ReadyStage,
-                    CreatedAtStage,
-                    UpdatedAtStage,
-                    FingerprintStage,
-                    _FinalStage {
+    public static final class Builder implements IdStage, AppIdStage, NameStage, ReadyStage, CreatedAtStage, UpdatedAtStage, FingerprintStage, _FinalStage {
+
         private String id;
 
         private String appId;
@@ -305,21 +275,12 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateFlowsVaultConnectionResponseContent other) {
-            id(other.getId());
-            appId(other.getAppId());
-            environment(other.getEnvironment());
-            name(other.getName());
-            accountName(other.getAccountName());
-            ready(other.getReady());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            refreshedAt(other.getRefreshedAt());
-            fingerprint(other.getFingerprint());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -330,8 +291,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public AppIdStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -342,8 +302,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("app_id")
         public NameStage appId(@NotNull String appId) {
-            this.appId = Objects.requireNonNull(appId, "appId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -354,8 +313,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("name")
         public ReadyStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -366,8 +324,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("ready")
         public CreatedAtStage ready(boolean ready) {
-            this.ready = ready;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -378,8 +335,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -390,15 +346,13 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter("updated_at")
         public FingerprintStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("fingerprint")
         public _FinalStage fingerprint(@NotNull String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint, "fingerprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -407,8 +361,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
          */
         @java.lang.Override
         public _FinalStage refreshedAt(OffsetDateTime refreshedAt) {
-            this.refreshedAt = Optional.ofNullable(refreshedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -417,8 +370,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "refreshed_at", nulls = Nulls.SKIP)
         public _FinalStage refreshedAt(Optional<OffsetDateTime> refreshedAt) {
-            this.refreshedAt = refreshedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -427,8 +379,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
          */
         @java.lang.Override
         public _FinalStage accountName(String accountName) {
-            this.accountName = Optional.ofNullable(accountName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -437,8 +388,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "account_name", nulls = Nulls.SKIP)
         public _FinalStage accountName(Optional<String> accountName) {
-            this.accountName = accountName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -447,8 +397,7 @@ public final class UpdateFlowsVaultConnectionResponseContent {
          */
         @java.lang.Override
         public _FinalStage environment(String environment) {
-            this.environment = Optional.ofNullable(environment);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -457,36 +406,22 @@ public final class UpdateFlowsVaultConnectionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "environment", nulls = Nulls.SKIP)
         public _FinalStage environment(Optional<String> environment) {
-            this.environment = environment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateFlowsVaultConnectionResponseContent build() {
-            return new UpdateFlowsVaultConnectionResponseContent(
-                    id,
-                    appId,
-                    environment,
-                    name,
-                    accountName,
-                    ready,
-                    createdAt,
-                    updatedAt,
-                    refreshedAt,
-                    fingerprint,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

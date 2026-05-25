@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum {
-    public static final EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum CUSTOM =
-            new EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum(Value.CUSTOM, "custom");
+
+    public static final EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum CUSTOM = new EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum(Value.CUSTOM, "custom");
 
     private final Value value;
 
@@ -20,56 +20,41 @@ public final class EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomPro
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum
-                        && this.string.equals(
-                                ((EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum) other)
-                                        .string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CUSTOM:
-                return visitor.visitCustom();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum valueOf(String value) {
-        switch (value) {
-            case "custom":
-                return CUSTOM;
-            default:
-                return new EventStreamCloudEventUserDeletedObjectIdentitiesItemCustomProviderEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CUSTOM,
 
-        UNKNOWN
+        CUSTOM, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCustom();
 
         T visitUnknown(String unknownType);

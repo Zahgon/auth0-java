@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CimdMappedPrivateKeyJwtCredential.Builder.class)
 public final class CimdMappedPrivateKeyJwtCredential {
+
     private final String credentialType;
 
     private final String kid;
@@ -27,8 +28,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
 
     private final Map<String, Object> additionalProperties;
 
-    private CimdMappedPrivateKeyJwtCredential(
-            String credentialType, String kid, String alg, Map<String, Object> additionalProperties) {
+    private CimdMappedPrivateKeyJwtCredential(String credentialType, String kid, String alg, Map<String, Object> additionalProperties) {
         this.credentialType = credentialType;
         this.kid = kid;
         this.alg = alg;
@@ -40,7 +40,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
      */
     @JsonProperty("credential_type")
     public String getCredentialType() {
-        return credentialType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,18 +56,17 @@ public final class CimdMappedPrivateKeyJwtCredential {
      */
     @JsonProperty("alg")
     public String getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CimdMappedPrivateKeyJwtCredential && equalTo((CimdMappedPrivateKeyJwtCredential) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CimdMappedPrivateKeyJwtCredential other) {
@@ -76,19 +75,20 @@ public final class CimdMappedPrivateKeyJwtCredential {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.credentialType, this.kid, this.alg);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CredentialTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface CredentialTypeStage {
+
         /**
          * <p>Type of credential (e.g., public_key)</p>
          */
@@ -98,6 +98,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
     }
 
     public interface KidStage {
+
         /**
          * <p>Key identifier from JWKS or calculated thumbprint</p>
          */
@@ -105,6 +106,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
     }
 
     public interface AlgStage {
+
         /**
          * <p>Algorithm (e.g., RS256, RS384, PS256)</p>
          */
@@ -112,6 +114,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
     }
 
     public interface _FinalStage {
+
         CimdMappedPrivateKeyJwtCredential build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -121,6 +124,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements CredentialTypeStage, KidStage, AlgStage, _FinalStage {
+
         private String credentialType;
 
         private String kid;
@@ -130,14 +134,12 @@ public final class CimdMappedPrivateKeyJwtCredential {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CimdMappedPrivateKeyJwtCredential other) {
-            credentialType(other.getCredentialType());
-            kid(other.getKid());
-            alg(other.getAlg());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,8 +150,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
         @java.lang.Override
         @JsonSetter("credential_type")
         public KidStage credentialType(@NotNull String credentialType) {
-            this.credentialType = Objects.requireNonNull(credentialType, "credentialType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -160,8 +161,7 @@ public final class CimdMappedPrivateKeyJwtCredential {
         @java.lang.Override
         @JsonSetter("kid")
         public AlgStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,25 +172,22 @@ public final class CimdMappedPrivateKeyJwtCredential {
         @java.lang.Override
         @JsonSetter("alg")
         public _FinalStage alg(@NotNull String alg) {
-            this.alg = Objects.requireNonNull(alg, "alg must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CimdMappedPrivateKeyJwtCredential build() {
-            return new CimdMappedPrivateKeyJwtCredential(credentialType, kid, alg, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UpdateBrandingLoginDisplayEnum {
-    public static final UpdateBrandingLoginDisplayEnum SEPARATE =
-            new UpdateBrandingLoginDisplayEnum(Value.SEPARATE, "separate");
 
-    public static final UpdateBrandingLoginDisplayEnum UNIFIED =
-            new UpdateBrandingLoginDisplayEnum(Value.UNIFIED, "unified");
+    public static final UpdateBrandingLoginDisplayEnum SEPARATE = new UpdateBrandingLoginDisplayEnum(Value.SEPARATE, "separate");
+
+    public static final UpdateBrandingLoginDisplayEnum UNIFIED = new UpdateBrandingLoginDisplayEnum(Value.UNIFIED, "unified");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class UpdateBrandingLoginDisplayEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UpdateBrandingLoginDisplayEnum
-                        && this.string.equals(((UpdateBrandingLoginDisplayEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEPARATE:
-                return visitor.visitSeparate();
-            case UNIFIED:
-                return visitor.visitUnified();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UpdateBrandingLoginDisplayEnum valueOf(String value) {
-        switch (value) {
-            case "separate":
-                return SEPARATE;
-            case "unified":
-                return UNIFIED;
-            default:
-                return new UpdateBrandingLoginDisplayEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UNIFIED,
 
-        SEPARATE,
-
-        UNKNOWN
+        UNIFIED, SEPARATE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUnified();
 
         T visitSeparate();

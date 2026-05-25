@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomDomainStatusFilterEnum {
+
     public static final CustomDomainStatusFilterEnum FAILED = new CustomDomainStatusFilterEnum(Value.FAILED, "failed");
 
-    public static final CustomDomainStatusFilterEnum PENDING_VERIFICATION =
-            new CustomDomainStatusFilterEnum(Value.PENDING_VERIFICATION, "pending_verification");
+    public static final CustomDomainStatusFilterEnum PENDING_VERIFICATION = new CustomDomainStatusFilterEnum(Value.PENDING_VERIFICATION, "pending_verification");
 
     public static final CustomDomainStatusFilterEnum READY = new CustomDomainStatusFilterEnum(Value.READY, "ready");
 
@@ -24,66 +24,41 @@ public final class CustomDomainStatusFilterEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomDomainStatusFilterEnum
-                        && this.string.equals(((CustomDomainStatusFilterEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FAILED:
-                return visitor.visitFailed();
-            case PENDING_VERIFICATION:
-                return visitor.visitPendingVerification();
-            case READY:
-                return visitor.visitReady();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomDomainStatusFilterEnum valueOf(String value) {
-        switch (value) {
-            case "failed":
-                return FAILED;
-            case "pending_verification":
-                return PENDING_VERIFICATION;
-            case "ready":
-                return READY;
-            default:
-                return new CustomDomainStatusFilterEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PENDING_VERIFICATION,
 
-        READY,
-
-        FAILED,
-
-        UNKNOWN
+        PENDING_VERIFICATION, READY, FAILED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPendingVerification();
 
         T visitReady();

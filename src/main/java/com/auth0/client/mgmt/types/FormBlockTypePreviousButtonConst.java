@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypePreviousButtonConst {
-    public static final FormBlockTypePreviousButtonConst PREVIOUS_BUTTON =
-            new FormBlockTypePreviousButtonConst(Value.PREVIOUS_BUTTON, "PREVIOUS_BUTTON");
+
+    public static final FormBlockTypePreviousButtonConst PREVIOUS_BUTTON = new FormBlockTypePreviousButtonConst(Value.PREVIOUS_BUTTON, "PREVIOUS_BUTTON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormBlockTypePreviousButtonConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypePreviousButtonConst
-                        && this.string.equals(((FormBlockTypePreviousButtonConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PREVIOUS_BUTTON:
-                return visitor.visitPreviousButton();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypePreviousButtonConst valueOf(String value) {
-        switch (value) {
-            case "PREVIOUS_BUTTON":
-                return PREVIOUS_BUTTON;
-            default:
-                return new FormBlockTypePreviousButtonConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PREVIOUS_BUTTON,
 
-        UNKNOWN
+        PREVIOUS_BUTTON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPreviousButton();
 
         T visitUnknown(String unknownType);

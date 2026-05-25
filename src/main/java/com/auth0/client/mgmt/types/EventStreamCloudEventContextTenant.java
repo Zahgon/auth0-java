@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventContextTenant.Builder.class)
 public final class EventStreamCloudEventContextTenant {
+
     private final String tenantId;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class EventStreamCloudEventContextTenant {
      */
     @JsonProperty("tenant_id")
     public String getTenantId() {
-        return tenantId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventContextTenant
-                && equalTo((EventStreamCloudEventContextTenant) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventContextTenant other) {
@@ -54,19 +53,20 @@ public final class EventStreamCloudEventContextTenant {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.tenantId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TenantIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TenantIdStage {
+
         /**
          * <p>Machine-generated unique tenant identifier.</p>
          */
@@ -76,6 +76,7 @@ public final class EventStreamCloudEventContextTenant {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventContextTenant build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class EventStreamCloudEventContextTenant {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TenantIdStage, _FinalStage {
+
         private String tenantId;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventContextTenant other) {
-            tenantId(other.getTenantId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class EventStreamCloudEventContextTenant {
         @java.lang.Override
         @JsonSetter("tenant_id")
         public _FinalStage tenantId(@NotNull String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId, "tenantId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventContextTenant build() {
-            return new EventStreamCloudEventContextTenant(tenantId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

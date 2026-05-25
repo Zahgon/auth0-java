@@ -24,10 +24,13 @@ import org.jetbrains.annotations.NotNull;
 public class RateLimitInterceptor implements Interceptor {
 
     private final int maxRetries;
+
     private final CheckedConsumer<? extends ExecutionAttemptedEvent<Response>> retryListener;
 
     static final Long INITIAL_INTERVAL = 100L;
+
     static final Long MAX_INTERVAL = 1000L;
+
     static final Double JITTER = 0.2D;
 
     /**
@@ -52,40 +55,12 @@ public class RateLimitInterceptor implements Interceptor {
      * @return the configured number of maximum retries.
      */
     public int getMaxRetries() {
-        return maxRetries;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @NotNull
     @Override
     public Response intercept(@NotNull Chain chain) throws IOException {
-        if (maxRetries == 0) {
-            return chain.proceed(chain.request());
-        }
-
-        RetryPolicy<Response> retryPolicy = new RetryPolicy<Response>()
-                .withMaxRetries(maxRetries)
-                .withBackoff(INITIAL_INTERVAL, MAX_INTERVAL, ChronoUnit.MILLIS)
-                .withJitter(JITTER)
-                .handleResultIf(response -> response.code() == 429);
-
-        // For testing purposes only, allow test to hook into retry listener to enable verification of retry backoff
-        if (retryListener != null) {
-            retryPolicy.onRetry(retryListener);
-        }
-
-        try {
-            return Failsafe.with(retryPolicy).get((context) -> {
-                // ensure response of last recorded response prior to retry is closed
-                if (context.getLastResult() != null) {
-                    context.getLastResult().close();
-                    ;
-                }
-                return chain.proceed(chain.request());
-            });
-        } catch (FailsafeException fe) {
-            // throw Auth0Exception instead of FailSafe exception on error
-            // see https://github.com/auth0/auth0-java/issues/483
-            throw new Auth0Exception("Failed to execute request", fe.getCause());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

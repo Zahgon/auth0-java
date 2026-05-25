@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionAuth0.Deserializer.class)
 public final class FlowActionAuth0 {
+
     private final Object value;
 
     private final int type;
@@ -27,33 +28,17 @@ public final class FlowActionAuth0 {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionAuth0CreateUser) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionAuth0GetUser) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowActionAuth0UpdateUser) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowActionAuth0SendRequest) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FlowActionAuth0SendEmail) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FlowActionAuth0SendSms) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FlowActionAuth0MakeCall) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionAuth0 && equalTo((FlowActionAuth0) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionAuth0 other) {
@@ -62,43 +47,44 @@ public final class FlowActionAuth0 {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0CreateUser value) {
-        return new FlowActionAuth0(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0GetUser value) {
-        return new FlowActionAuth0(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0UpdateUser value) {
-        return new FlowActionAuth0(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0SendRequest value) {
-        return new FlowActionAuth0(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0SendEmail value) {
-        return new FlowActionAuth0(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0SendSms value) {
-        return new FlowActionAuth0(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionAuth0 of(FlowActionAuth0MakeCall value) {
-        return new FlowActionAuth0(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionAuth0CreateUser value);
 
         T visit(FlowActionAuth0GetUser value);
@@ -115,84 +101,14 @@ public final class FlowActionAuth0 {
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionAuth0> {
+
         Deserializer() {
             super(FlowActionAuth0.class);
         }
 
         @java.lang.Override
         public FlowActionAuth0 deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0CreateUser.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0GetUser.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0UpdateUser.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0SendRequest.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0SendEmail.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0SendSms.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0MakeCall.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

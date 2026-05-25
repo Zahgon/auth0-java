@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormLanguages.Builder.class)
 public final class FormLanguages {
+
     private final Optional<String> primary;
 
     private final Optional<String> default_;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormLanguages(
-            Optional<String> primary, Optional<String> default_, Map<String, Object> additionalProperties) {
+    private FormLanguages(Optional<String> primary, Optional<String> default_, Map<String, Object> additionalProperties) {
         this.primary = primary;
         this.default_ = default_;
         this.additionalProperties = additionalProperties;
@@ -35,23 +35,22 @@ public final class FormLanguages {
 
     @JsonProperty("primary")
     public Optional<String> getPrimary() {
-        return primary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default")
     public Optional<String> getDefault() {
-        return default_;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormLanguages && equalTo((FormLanguages) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormLanguages other) {
@@ -60,20 +59,21 @@ public final class FormLanguages {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.primary, this.default_);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> primary = Optional.empty();
 
         private Optional<String> default_ = Optional.empty();
@@ -81,48 +81,41 @@ public final class FormLanguages {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormLanguages other) {
-            primary(other.getPrimary());
-            default_(other.getDefault());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "primary", nulls = Nulls.SKIP)
         public Builder primary(Optional<String> primary) {
-            this.primary = primary;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder primary(String primary) {
-            this.primary = Optional.ofNullable(primary);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default", nulls = Nulls.SKIP)
         public Builder default_(Optional<String> default_) {
-            this.default_ = default_;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder default_(String default_) {
-            this.default_ = Optional.ofNullable(default_);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormLanguages build() {
-            return new FormLanguages(primary, default_, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

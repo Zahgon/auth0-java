@@ -22,16 +22,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListDirectoryProvisioningsResponseContent.Builder.class)
 public final class ListDirectoryProvisioningsResponseContent {
+
     private final List<DirectoryProvisioning> directoryProvisionings;
 
     private final Optional<String> next;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListDirectoryProvisioningsResponseContent(
-            List<DirectoryProvisioning> directoryProvisionings,
-            Optional<String> next,
-            Map<String, Object> additionalProperties) {
+    private ListDirectoryProvisioningsResponseContent(List<DirectoryProvisioning> directoryProvisionings, Optional<String> next, Map<String, Object> additionalProperties) {
         this.directoryProvisionings = directoryProvisionings;
         this.next = next;
         this.additionalProperties = additionalProperties;
@@ -42,7 +40,7 @@ public final class ListDirectoryProvisioningsResponseContent {
      */
     @JsonProperty("directory_provisionings")
     public List<DirectoryProvisioning> getDirectoryProvisionings() {
-        return directoryProvisionings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,19 +48,17 @@ public final class ListDirectoryProvisioningsResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListDirectoryProvisioningsResponseContent
-                && equalTo((ListDirectoryProvisioningsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListDirectoryProvisioningsResponseContent other) {
@@ -71,20 +67,21 @@ public final class ListDirectoryProvisioningsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.directoryProvisionings, this.next);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<DirectoryProvisioning> directoryProvisionings = new ArrayList<>();
 
         private Optional<String> next = Optional.empty();
@@ -92,12 +89,11 @@ public final class ListDirectoryProvisioningsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListDirectoryProvisioningsResponseContent other) {
-            directoryProvisionings(other.getDirectoryProvisionings());
-            next(other.getNext());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,23 +101,15 @@ public final class ListDirectoryProvisioningsResponseContent {
          */
         @JsonSetter(value = "directory_provisionings", nulls = Nulls.SKIP)
         public Builder directoryProvisionings(List<DirectoryProvisioning> directoryProvisionings) {
-            this.directoryProvisionings.clear();
-            if (directoryProvisionings != null) {
-                this.directoryProvisionings.addAll(directoryProvisionings);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addDirectoryProvisionings(DirectoryProvisioning directoryProvisionings) {
-            this.directoryProvisionings.add(directoryProvisionings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllDirectoryProvisionings(List<DirectoryProvisioning> directoryProvisionings) {
-            if (directoryProvisionings != null) {
-                this.directoryProvisionings.addAll(directoryProvisionings);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,27 +117,23 @@ public final class ListDirectoryProvisioningsResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListDirectoryProvisioningsResponseContent build() {
-            return new ListDirectoryProvisioningsResponseContent(directoryProvisionings, next, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

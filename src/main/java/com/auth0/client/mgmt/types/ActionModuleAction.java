@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionModuleAction.Builder.class)
 public final class ActionModuleAction {
+
     private final Optional<String> actionId;
 
     private final Optional<String> actionName;
@@ -33,13 +34,7 @@ public final class ActionModuleAction {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionModuleAction(
-            Optional<String> actionId,
-            Optional<String> actionName,
-            Optional<String> moduleVersionId,
-            Optional<Integer> moduleVersionNumber,
-            Optional<List<ActionTrigger>> supportedTriggers,
-            Map<String, Object> additionalProperties) {
+    private ActionModuleAction(Optional<String> actionId, Optional<String> actionName, Optional<String> moduleVersionId, Optional<Integer> moduleVersionNumber, Optional<List<ActionTrigger>> supportedTriggers, Map<String, Object> additionalProperties) {
         this.actionId = actionId;
         this.actionName = actionName;
         this.moduleVersionId = moduleVersionId;
@@ -53,7 +48,7 @@ public final class ActionModuleAction {
      */
     @JsonProperty("action_id")
     public Optional<String> getActionId() {
-        return actionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,7 +56,7 @@ public final class ActionModuleAction {
      */
     @JsonProperty("action_name")
     public Optional<String> getActionName() {
-        return actionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +64,7 @@ public final class ActionModuleAction {
      */
     @JsonProperty("module_version_id")
     public Optional<String> getModuleVersionId() {
-        return moduleVersionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,7 +72,7 @@ public final class ActionModuleAction {
      */
     @JsonProperty("module_version_number")
     public Optional<Integer> getModuleVersionNumber() {
-        return moduleVersionNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,45 +80,40 @@ public final class ActionModuleAction {
      */
     @JsonProperty("supported_triggers")
     public Optional<List<ActionTrigger>> getSupportedTriggers() {
-        return supportedTriggers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionModuleAction && equalTo((ActionModuleAction) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionModuleAction other) {
-        return actionId.equals(other.actionId)
-                && actionName.equals(other.actionName)
-                && moduleVersionId.equals(other.moduleVersionId)
-                && moduleVersionNumber.equals(other.moduleVersionNumber)
-                && supportedTriggers.equals(other.supportedTriggers);
+        return actionId.equals(other.actionId) && actionName.equals(other.actionName) && moduleVersionId.equals(other.moduleVersionId) && moduleVersionNumber.equals(other.moduleVersionNumber) && supportedTriggers.equals(other.supportedTriggers);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.actionId, this.actionName, this.moduleVersionId, this.moduleVersionNumber, this.supportedTriggers);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> actionId = Optional.empty();
 
         private Optional<String> actionName = Optional.empty();
@@ -137,15 +127,11 @@ public final class ActionModuleAction {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ActionModuleAction other) {
-            actionId(other.getActionId());
-            actionName(other.getActionName());
-            moduleVersionId(other.getModuleVersionId());
-            moduleVersionNumber(other.getModuleVersionNumber());
-            supportedTriggers(other.getSupportedTriggers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,13 +139,11 @@ public final class ActionModuleAction {
          */
         @JsonSetter(value = "action_id", nulls = Nulls.SKIP)
         public Builder actionId(Optional<String> actionId) {
-            this.actionId = actionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionId(String actionId) {
-            this.actionId = Optional.ofNullable(actionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,13 +151,11 @@ public final class ActionModuleAction {
          */
         @JsonSetter(value = "action_name", nulls = Nulls.SKIP)
         public Builder actionName(Optional<String> actionName) {
-            this.actionName = actionName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Optional.ofNullable(actionName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -181,13 +163,11 @@ public final class ActionModuleAction {
          */
         @JsonSetter(value = "module_version_id", nulls = Nulls.SKIP)
         public Builder moduleVersionId(Optional<String> moduleVersionId) {
-            this.moduleVersionId = moduleVersionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder moduleVersionId(String moduleVersionId) {
-            this.moduleVersionId = Optional.ofNullable(moduleVersionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,13 +175,11 @@ public final class ActionModuleAction {
          */
         @JsonSetter(value = "module_version_number", nulls = Nulls.SKIP)
         public Builder moduleVersionNumber(Optional<Integer> moduleVersionNumber) {
-            this.moduleVersionNumber = moduleVersionNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder moduleVersionNumber(Integer moduleVersionNumber) {
-            this.moduleVersionNumber = Optional.ofNullable(moduleVersionNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,33 +187,23 @@ public final class ActionModuleAction {
          */
         @JsonSetter(value = "supported_triggers", nulls = Nulls.SKIP)
         public Builder supportedTriggers(Optional<List<ActionTrigger>> supportedTriggers) {
-            this.supportedTriggers = supportedTriggers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder supportedTriggers(List<ActionTrigger> supportedTriggers) {
-            this.supportedTriggers = Optional.ofNullable(supportedTriggers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ActionModuleAction build() {
-            return new ActionModuleAction(
-                    actionId,
-                    actionName,
-                    moduleVersionId,
-                    moduleVersionNumber,
-                    supportedTriggers,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

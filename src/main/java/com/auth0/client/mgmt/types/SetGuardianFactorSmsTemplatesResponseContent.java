@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetGuardianFactorSmsTemplatesResponseContent.Builder.class)
 public final class SetGuardianFactorSmsTemplatesResponseContent {
+
     private final String enrollmentMessage;
 
     private final String verificationMessage;
 
     private final Map<String, Object> additionalProperties;
 
-    private SetGuardianFactorSmsTemplatesResponseContent(
-            String enrollmentMessage, String verificationMessage, Map<String, Object> additionalProperties) {
+    private SetGuardianFactorSmsTemplatesResponseContent(String enrollmentMessage, String verificationMessage, Map<String, Object> additionalProperties) {
         this.enrollmentMessage = enrollmentMessage;
         this.verificationMessage = verificationMessage;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
      */
     @JsonProperty("enrollment_message")
     public String getEnrollmentMessage() {
-        return enrollmentMessage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,41 +45,39 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
      */
     @JsonProperty("verification_message")
     public String getVerificationMessage() {
-        return verificationMessage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetGuardianFactorSmsTemplatesResponseContent
-                && equalTo((SetGuardianFactorSmsTemplatesResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetGuardianFactorSmsTemplatesResponseContent other) {
-        return enrollmentMessage.equals(other.enrollmentMessage)
-                && verificationMessage.equals(other.verificationMessage);
+        return enrollmentMessage.equals(other.enrollmentMessage) && verificationMessage.equals(other.verificationMessage);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enrollmentMessage, this.verificationMessage);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EnrollmentMessageStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EnrollmentMessageStage {
+
         /**
          * <p>Message sent to the user when they are invited to enroll with a phone number.</p>
          */
@@ -89,6 +87,7 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
     }
 
     public interface VerificationMessageStage {
+
         /**
          * <p>Message sent to the user when they are prompted to verify their account.</p>
          */
@@ -96,6 +95,7 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
     }
 
     public interface _FinalStage {
+
         SetGuardianFactorSmsTemplatesResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -105,6 +105,7 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EnrollmentMessageStage, VerificationMessageStage, _FinalStage {
+
         private String enrollmentMessage;
 
         private String verificationMessage;
@@ -112,13 +113,12 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SetGuardianFactorSmsTemplatesResponseContent other) {
-            enrollmentMessage(other.getEnrollmentMessage());
-            verificationMessage(other.getVerificationMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,8 +129,7 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
         @java.lang.Override
         @JsonSetter("enrollment_message")
         public VerificationMessageStage enrollmentMessage(@NotNull String enrollmentMessage) {
-            this.enrollmentMessage = Objects.requireNonNull(enrollmentMessage, "enrollmentMessage must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -141,27 +140,22 @@ public final class SetGuardianFactorSmsTemplatesResponseContent {
         @java.lang.Override
         @JsonSetter("verification_message")
         public _FinalStage verificationMessage(@NotNull String verificationMessage) {
-            this.verificationMessage =
-                    Objects.requireNonNull(verificationMessage, "verificationMessage must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SetGuardianFactorSmsTemplatesResponseContent build() {
-            return new SetGuardianFactorSmsTemplatesResponseContent(
-                    enrollmentMessage, verificationMessage, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

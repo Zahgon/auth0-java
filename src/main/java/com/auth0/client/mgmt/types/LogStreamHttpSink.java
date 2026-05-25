@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamHttpSink.Builder.class)
 public final class LogStreamHttpSink {
+
     private final Optional<String> httpAuthorization;
 
     private final Optional<LogStreamHttpContentFormatEnum> httpContentFormat;
@@ -34,13 +35,7 @@ public final class LogStreamHttpSink {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamHttpSink(
-            Optional<String> httpAuthorization,
-            Optional<LogStreamHttpContentFormatEnum> httpContentFormat,
-            Optional<String> httpContentType,
-            String httpEndpoint,
-            Optional<List<HttpCustomHeader>> httpCustomHeaders,
-            Map<String, Object> additionalProperties) {
+    private LogStreamHttpSink(Optional<String> httpAuthorization, Optional<LogStreamHttpContentFormatEnum> httpContentFormat, Optional<String> httpContentType, String httpEndpoint, Optional<List<HttpCustomHeader>> httpCustomHeaders, Map<String, Object> additionalProperties) {
         this.httpAuthorization = httpAuthorization;
         this.httpContentFormat = httpContentFormat;
         this.httpContentType = httpContentType;
@@ -54,12 +49,12 @@ public final class LogStreamHttpSink {
      */
     @JsonProperty("httpAuthorization")
     public Optional<String> getHttpAuthorization() {
-        return httpAuthorization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("httpContentFormat")
     public Optional<LogStreamHttpContentFormatEnum> getHttpContentFormat() {
-        return httpContentFormat;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,7 +62,7 @@ public final class LogStreamHttpSink {
      */
     @JsonProperty("httpContentType")
     public Optional<String> getHttpContentType() {
-        return httpContentType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +70,7 @@ public final class LogStreamHttpSink {
      */
     @JsonProperty("httpEndpoint")
     public String getHttpEndpoint() {
-        return httpEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,48 +78,39 @@ public final class LogStreamHttpSink {
      */
     @JsonProperty("httpCustomHeaders")
     public Optional<List<HttpCustomHeader>> getHttpCustomHeaders() {
-        return httpCustomHeaders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamHttpSink && equalTo((LogStreamHttpSink) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamHttpSink other) {
-        return httpAuthorization.equals(other.httpAuthorization)
-                && httpContentFormat.equals(other.httpContentFormat)
-                && httpContentType.equals(other.httpContentType)
-                && httpEndpoint.equals(other.httpEndpoint)
-                && httpCustomHeaders.equals(other.httpCustomHeaders);
+        return httpAuthorization.equals(other.httpAuthorization) && httpContentFormat.equals(other.httpContentFormat) && httpContentType.equals(other.httpContentType) && httpEndpoint.equals(other.httpEndpoint) && httpCustomHeaders.equals(other.httpCustomHeaders);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.httpAuthorization,
-                this.httpContentFormat,
-                this.httpContentType,
-                this.httpEndpoint,
-                this.httpCustomHeaders);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static HttpEndpointStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface HttpEndpointStage {
+
         /**
          * <p>HTTP endpoint</p>
          */
@@ -134,6 +120,7 @@ public final class LogStreamHttpSink {
     }
 
     public interface _FinalStage {
+
         LogStreamHttpSink build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -168,6 +155,7 @@ public final class LogStreamHttpSink {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements HttpEndpointStage, _FinalStage {
+
         private String httpEndpoint;
 
         private Optional<List<HttpCustomHeader>> httpCustomHeaders = Optional.empty();
@@ -181,16 +169,12 @@ public final class LogStreamHttpSink {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamHttpSink other) {
-            httpAuthorization(other.getHttpAuthorization());
-            httpContentFormat(other.getHttpContentFormat());
-            httpContentType(other.getHttpContentType());
-            httpEndpoint(other.getHttpEndpoint());
-            httpCustomHeaders(other.getHttpCustomHeaders());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -201,8 +185,7 @@ public final class LogStreamHttpSink {
         @java.lang.Override
         @JsonSetter("httpEndpoint")
         public _FinalStage httpEndpoint(@NotNull String httpEndpoint) {
-            this.httpEndpoint = Objects.requireNonNull(httpEndpoint, "httpEndpoint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -211,8 +194,7 @@ public final class LogStreamHttpSink {
          */
         @java.lang.Override
         public _FinalStage httpCustomHeaders(List<HttpCustomHeader> httpCustomHeaders) {
-            this.httpCustomHeaders = Optional.ofNullable(httpCustomHeaders);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,8 +203,7 @@ public final class LogStreamHttpSink {
         @java.lang.Override
         @JsonSetter(value = "httpCustomHeaders", nulls = Nulls.SKIP)
         public _FinalStage httpCustomHeaders(Optional<List<HttpCustomHeader>> httpCustomHeaders) {
-            this.httpCustomHeaders = httpCustomHeaders;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -231,8 +212,7 @@ public final class LogStreamHttpSink {
          */
         @java.lang.Override
         public _FinalStage httpContentType(String httpContentType) {
-            this.httpContentType = Optional.ofNullable(httpContentType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -241,21 +221,18 @@ public final class LogStreamHttpSink {
         @java.lang.Override
         @JsonSetter(value = "httpContentType", nulls = Nulls.SKIP)
         public _FinalStage httpContentType(Optional<String> httpContentType) {
-            this.httpContentType = httpContentType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage httpContentFormat(LogStreamHttpContentFormatEnum httpContentFormat) {
-            this.httpContentFormat = Optional.ofNullable(httpContentFormat);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "httpContentFormat", nulls = Nulls.SKIP)
         public _FinalStage httpContentFormat(Optional<LogStreamHttpContentFormatEnum> httpContentFormat) {
-            this.httpContentFormat = httpContentFormat;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -264,8 +241,7 @@ public final class LogStreamHttpSink {
          */
         @java.lang.Override
         public _FinalStage httpAuthorization(String httpAuthorization) {
-            this.httpAuthorization = Optional.ofNullable(httpAuthorization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -274,31 +250,22 @@ public final class LogStreamHttpSink {
         @java.lang.Override
         @JsonSetter(value = "httpAuthorization", nulls = Nulls.SKIP)
         public _FinalStage httpAuthorization(Optional<String> httpAuthorization) {
-            this.httpAuthorization = httpAuthorization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamHttpSink build() {
-            return new LogStreamHttpSink(
-                    httpAuthorization,
-                    httpContentFormat,
-                    httpContentType,
-                    httpEndpoint,
-                    httpCustomHeaders,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamEventBridgeDestinationTypeEnum {
-    public static final EventStreamEventBridgeDestinationTypeEnum EVENTBRIDGE =
-            new EventStreamEventBridgeDestinationTypeEnum(Value.EVENTBRIDGE, "eventbridge");
+
+    public static final EventStreamEventBridgeDestinationTypeEnum EVENTBRIDGE = new EventStreamEventBridgeDestinationTypeEnum(Value.EVENTBRIDGE, "eventbridge");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamEventBridgeDestinationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamEventBridgeDestinationTypeEnum
-                        && this.string.equals(((EventStreamEventBridgeDestinationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EVENTBRIDGE:
-                return visitor.visitEventbridge();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamEventBridgeDestinationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "eventbridge":
-                return EVENTBRIDGE;
-            default:
-                return new EventStreamEventBridgeDestinationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EVENTBRIDGE,
 
-        UNKNOWN
+        EVENTBRIDGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEventbridge();
 
         T visitUnknown(String unknownType);

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentSharepointStrategy {
-    public static final CreateConnectionRequestContentSharepointStrategy SHAREPOINT =
-            new CreateConnectionRequestContentSharepointStrategy(Value.SHAREPOINT, "sharepoint");
+
+    public static final CreateConnectionRequestContentSharepointStrategy SHAREPOINT = new CreateConnectionRequestContentSharepointStrategy(Value.SHAREPOINT, "sharepoint");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentSharepointStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentSharepointStrategy
-                        && this.string.equals(((CreateConnectionRequestContentSharepointStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SHAREPOINT:
-                return visitor.visitSharepoint();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentSharepointStrategy valueOf(String value) {
-        switch (value) {
-            case "sharepoint":
-                return SHAREPOINT;
-            default:
-                return new CreateConnectionRequestContentSharepointStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SHAREPOINT,
 
-        UNKNOWN
+        SHAREPOINT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSharepoint();
 
         T visitUnknown(String unknownType);

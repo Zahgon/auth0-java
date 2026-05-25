@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.GetJobResponseContent;
 import java.util.function.Supplier;
 
 public class JobsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawJobsClient rawClient;
@@ -39,36 +40,36 @@ public class JobsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawJobsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a job. Useful to check its status.
      */
     public GetJobResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a job. Useful to check its status.
      */
     public GetJobResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UsersExportsClient usersExports() {
-        return this.usersExportsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UsersImportsClient usersImports() {
-        return this.usersImportsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public VerificationEmailClient verificationEmail() {
-        return this.verificationEmailClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ErrorsClient errors() {
-        return this.errorsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

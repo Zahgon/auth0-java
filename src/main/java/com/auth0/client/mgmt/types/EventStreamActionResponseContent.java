@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamActionResponseContent.Builder.class)
 public final class EventStreamActionResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -38,15 +39,7 @@ public final class EventStreamActionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamActionResponseContent(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<List<EventStreamSubscription>> subscriptions,
-            Optional<EventStreamActionDestination> destination,
-            Optional<EventStreamStatusEnum> status,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private EventStreamActionResponseContent(Optional<String> id, Optional<String> name, Optional<List<EventStreamSubscription>> subscriptions, Optional<EventStreamActionDestination> destination, Optional<EventStreamStatusEnum> status, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.subscriptions = subscriptions;
@@ -62,7 +55,7 @@ public final class EventStreamActionResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +63,7 @@ public final class EventStreamActionResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,17 +71,17 @@ public final class EventStreamActionResponseContent {
      */
     @JsonProperty("subscriptions")
     public Optional<List<EventStreamSubscription>> getSubscriptions() {
-        return subscriptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("destination")
     public Optional<EventStreamActionDestination> getDestination() {
-        return destination;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<EventStreamStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +89,7 @@ public final class EventStreamActionResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,47 +97,40 @@ public final class EventStreamActionResponseContent {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamActionResponseContent && equalTo((EventStreamActionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamActionResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && subscriptions.equals(other.subscriptions)
-                && destination.equals(other.destination)
-                && status.equals(other.status)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && name.equals(other.name) && subscriptions.equals(other.subscriptions) && destination.equals(other.destination) && status.equals(other.status) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.name, this.subscriptions, this.destination, this.status, this.createdAt, this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -162,17 +148,11 @@ public final class EventStreamActionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EventStreamActionResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            subscriptions(other.getSubscriptions());
-            destination(other.getDestination());
-            status(other.getStatus());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -180,13 +160,11 @@ public final class EventStreamActionResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -194,13 +172,11 @@ public final class EventStreamActionResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -208,35 +184,29 @@ public final class EventStreamActionResponseContent {
          */
         @JsonSetter(value = "subscriptions", nulls = Nulls.SKIP)
         public Builder subscriptions(Optional<List<EventStreamSubscription>> subscriptions) {
-            this.subscriptions = subscriptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subscriptions(List<EventStreamSubscription> subscriptions) {
-            this.subscriptions = Optional.ofNullable(subscriptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "destination", nulls = Nulls.SKIP)
         public Builder destination(Optional<EventStreamActionDestination> destination) {
-            this.destination = destination;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder destination(EventStreamActionDestination destination) {
-            this.destination = Optional.ofNullable(destination);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<EventStreamStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(EventStreamStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -244,13 +214,11 @@ public final class EventStreamActionResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -258,28 +226,23 @@ public final class EventStreamActionResponseContent {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EventStreamActionResponseContent build() {
-            return new EventStreamActionResponseContent(
-                    id, name, subscriptions, destination, status, createdAt, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

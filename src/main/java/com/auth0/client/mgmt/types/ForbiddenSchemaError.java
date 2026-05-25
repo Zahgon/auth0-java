@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ForbiddenSchemaError {
+
     public static final ForbiddenSchemaError FORBIDDEN = new ForbiddenSchemaError(Value.FORBIDDEN, "Forbidden");
 
     private final Value value;
@@ -19,53 +20,41 @@ public final class ForbiddenSchemaError {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ForbiddenSchemaError && this.string.equals(((ForbiddenSchemaError) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FORBIDDEN:
-                return visitor.visitForbidden();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ForbiddenSchemaError valueOf(String value) {
-        switch (value) {
-            case "Forbidden":
-                return FORBIDDEN;
-            default:
-                return new ForbiddenSchemaError(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FORBIDDEN,
 
-        UNKNOWN
+        FORBIDDEN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitForbidden();
 
         T visitUnknown(String unknownType);

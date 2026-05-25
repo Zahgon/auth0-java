@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TokenQuotaClientCredentials.Builder.class)
 public final class TokenQuotaClientCredentials {
+
     private final Optional<Boolean> enforce;
 
     private final Optional<Integer> perDay;
@@ -28,11 +29,7 @@ public final class TokenQuotaClientCredentials {
 
     private final Map<String, Object> additionalProperties;
 
-    private TokenQuotaClientCredentials(
-            Optional<Boolean> enforce,
-            Optional<Integer> perDay,
-            Optional<Integer> perHour,
-            Map<String, Object> additionalProperties) {
+    private TokenQuotaClientCredentials(Optional<Boolean> enforce, Optional<Integer> perDay, Optional<Integer> perHour, Map<String, Object> additionalProperties) {
         this.enforce = enforce;
         this.perDay = perDay;
         this.perHour = perHour;
@@ -44,7 +41,7 @@ public final class TokenQuotaClientCredentials {
      */
     @JsonProperty("enforce")
     public Optional<Boolean> getEnforce() {
-        return enforce;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class TokenQuotaClientCredentials {
      */
     @JsonProperty("per_day")
     public Optional<Integer> getPerDay() {
-        return perDay;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,18 +57,17 @@ public final class TokenQuotaClientCredentials {
      */
     @JsonProperty("per_hour")
     public Optional<Integer> getPerHour() {
-        return perHour;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TokenQuotaClientCredentials && equalTo((TokenQuotaClientCredentials) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TokenQuotaClientCredentials other) {
@@ -80,20 +76,21 @@ public final class TokenQuotaClientCredentials {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enforce, this.perDay, this.perHour);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enforce = Optional.empty();
 
         private Optional<Integer> perDay = Optional.empty();
@@ -103,13 +100,11 @@ public final class TokenQuotaClientCredentials {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TokenQuotaClientCredentials other) {
-            enforce(other.getEnforce());
-            perDay(other.getPerDay());
-            perHour(other.getPerHour());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -117,13 +112,11 @@ public final class TokenQuotaClientCredentials {
          */
         @JsonSetter(value = "enforce", nulls = Nulls.SKIP)
         public Builder enforce(Optional<Boolean> enforce) {
-            this.enforce = enforce;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforce(Boolean enforce) {
-            this.enforce = Optional.ofNullable(enforce);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +124,11 @@ public final class TokenQuotaClientCredentials {
          */
         @JsonSetter(value = "per_day", nulls = Nulls.SKIP)
         public Builder perDay(Optional<Integer> perDay) {
-            this.perDay = perDay;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perDay(Integer perDay) {
-            this.perDay = Optional.ofNullable(perDay);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,27 +136,23 @@ public final class TokenQuotaClientCredentials {
          */
         @JsonSetter(value = "per_hour", nulls = Nulls.SKIP)
         public Builder perHour(Optional<Integer> perHour) {
-            this.perHour = perHour;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perHour(Integer perHour) {
-            this.perHour = Optional.ofNullable(perHour);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TokenQuotaClientCredentials build() {
-            return new TokenQuotaClientCredentials(enforce, perDay, perHour, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

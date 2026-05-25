@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamPiiMethodEnum {
+
     public static final LogStreamPiiMethodEnum MASK = new LogStreamPiiMethodEnum(Value.MASK, "mask");
 
     public static final LogStreamPiiMethodEnum HASH = new LogStreamPiiMethodEnum(Value.HASH, "hash");
@@ -21,60 +22,41 @@ public final class LogStreamPiiMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamPiiMethodEnum
-                        && this.string.equals(((LogStreamPiiMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MASK:
-                return visitor.visitMask();
-            case HASH:
-                return visitor.visitHash();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamPiiMethodEnum valueOf(String value) {
-        switch (value) {
-            case "mask":
-                return MASK;
-            case "hash":
-                return HASH;
-            default:
-                return new LogStreamPiiMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MASK,
 
-        HASH,
-
-        UNKNOWN
+        MASK, HASH, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMask();
 
         T visitHash();

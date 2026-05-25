@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormWidgetRecaptchaConfig.Builder.class)
 public final class FormWidgetRecaptchaConfig {
+
     private final String siteKey;
 
     private final String secretKey;
@@ -33,23 +34,22 @@ public final class FormWidgetRecaptchaConfig {
 
     @JsonProperty("site_key")
     public String getSiteKey() {
-        return siteKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("secret_key")
     public String getSecretKey() {
-        return secretKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormWidgetRecaptchaConfig && equalTo((FormWidgetRecaptchaConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormWidgetRecaptchaConfig other) {
@@ -58,29 +58,32 @@ public final class FormWidgetRecaptchaConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.siteKey, this.secretKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SiteKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SiteKeyStage {
+
         SecretKeyStage siteKey(@NotNull String siteKey);
 
         Builder from(FormWidgetRecaptchaConfig other);
     }
 
     public interface SecretKeyStage {
+
         _FinalStage secretKey(@NotNull String secretKey);
     }
 
     public interface _FinalStage {
+
         FormWidgetRecaptchaConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -90,6 +93,7 @@ public final class FormWidgetRecaptchaConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SiteKeyStage, SecretKeyStage, _FinalStage {
+
         private String siteKey;
 
         private String secretKey;
@@ -97,44 +101,39 @@ public final class FormWidgetRecaptchaConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormWidgetRecaptchaConfig other) {
-            siteKey(other.getSiteKey());
-            secretKey(other.getSecretKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("site_key")
         public SecretKeyStage siteKey(@NotNull String siteKey) {
-            this.siteKey = Objects.requireNonNull(siteKey, "siteKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("secret_key")
         public _FinalStage secretKey(@NotNull String secretKey) {
-            this.secretKey = Objects.requireNonNull(secretKey, "secretKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormWidgetRecaptchaConfig build() {
-            return new FormWidgetRecaptchaConfig(siteKey, secretKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

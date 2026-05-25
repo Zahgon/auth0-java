@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class KeysClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<CustomSigningClient> customSigningClient;
@@ -24,14 +25,14 @@ public class KeysClient {
     }
 
     public CustomSigningClient customSigning() {
-        return this.customSigningClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EncryptionClient encryption() {
-        return this.encryptionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SigningClient signing() {
-        return this.signingClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

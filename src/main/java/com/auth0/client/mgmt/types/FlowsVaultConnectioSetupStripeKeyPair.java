@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupStripeKeyPair.Builder.class)
 public final class FlowsVaultConnectioSetupStripeKeyPair {
+
     private final FlowsVaultConnectioSetupTypeKeyPairEnum type;
 
     private final String privateKey;
@@ -27,11 +28,7 @@ public final class FlowsVaultConnectioSetupStripeKeyPair {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupStripeKeyPair(
-            FlowsVaultConnectioSetupTypeKeyPairEnum type,
-            String privateKey,
-            String publicKey,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupStripeKeyPair(FlowsVaultConnectioSetupTypeKeyPairEnum type, String privateKey, String publicKey, Map<String, Object> additionalProperties) {
         this.type = type;
         this.privateKey = privateKey;
         this.publicKey = publicKey;
@@ -40,29 +37,27 @@ public final class FlowsVaultConnectioSetupStripeKeyPair {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeKeyPairEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("private_key")
     public String getPrivateKey() {
-        return privateKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("public_key")
     public String getPublicKey() {
-        return publicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupStripeKeyPair
-                && equalTo((FlowsVaultConnectioSetupStripeKeyPair) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupStripeKeyPair other) {
@@ -71,33 +66,37 @@ public final class FlowsVaultConnectioSetupStripeKeyPair {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.privateKey, this.publicKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         PrivateKeyStage type(@NotNull FlowsVaultConnectioSetupTypeKeyPairEnum type);
 
         Builder from(FlowsVaultConnectioSetupStripeKeyPair other);
     }
 
     public interface PrivateKeyStage {
+
         PublicKeyStage privateKey(@NotNull String privateKey);
     }
 
     public interface PublicKeyStage {
+
         _FinalStage publicKey(@NotNull String publicKey);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupStripeKeyPair build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -107,6 +106,7 @@ public final class FlowsVaultConnectioSetupStripeKeyPair {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, PrivateKeyStage, PublicKeyStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeKeyPairEnum type;
 
         private String privateKey;
@@ -116,52 +116,45 @@ public final class FlowsVaultConnectioSetupStripeKeyPair {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupStripeKeyPair other) {
-            type(other.getType());
-            privateKey(other.getPrivateKey());
-            publicKey(other.getPublicKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public PrivateKeyStage type(@NotNull FlowsVaultConnectioSetupTypeKeyPairEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("private_key")
         public PublicKeyStage privateKey(@NotNull String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey, "privateKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("public_key")
         public _FinalStage publicKey(@NotNull String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey, "publicKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupStripeKeyPair build() {
-            return new FlowsVaultConnectioSetupStripeKeyPair(type, privateKey, publicKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

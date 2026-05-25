@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientGrantOrganizationNullableUsageEnum {
-    public static final ClientGrantOrganizationNullableUsageEnum ALLOW =
-            new ClientGrantOrganizationNullableUsageEnum(Value.ALLOW, "allow");
 
-    public static final ClientGrantOrganizationNullableUsageEnum REQUIRE =
-            new ClientGrantOrganizationNullableUsageEnum(Value.REQUIRE, "require");
+    public static final ClientGrantOrganizationNullableUsageEnum ALLOW = new ClientGrantOrganizationNullableUsageEnum(Value.ALLOW, "allow");
 
-    public static final ClientGrantOrganizationNullableUsageEnum DENY =
-            new ClientGrantOrganizationNullableUsageEnum(Value.DENY, "deny");
+    public static final ClientGrantOrganizationNullableUsageEnum REQUIRE = new ClientGrantOrganizationNullableUsageEnum(Value.REQUIRE, "require");
+
+    public static final ClientGrantOrganizationNullableUsageEnum DENY = new ClientGrantOrganizationNullableUsageEnum(Value.DENY, "deny");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ClientGrantOrganizationNullableUsageEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientGrantOrganizationNullableUsageEnum
-                        && this.string.equals(((ClientGrantOrganizationNullableUsageEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALLOW:
-                return visitor.visitAllow();
-            case REQUIRE:
-                return visitor.visitRequire();
-            case DENY:
-                return visitor.visitDeny();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientGrantOrganizationNullableUsageEnum valueOf(String value) {
-        switch (value) {
-            case "allow":
-                return ALLOW;
-            case "require":
-                return REQUIRE;
-            case "deny":
-                return DENY;
-            default:
-                return new ClientGrantOrganizationNullableUsageEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DENY,
 
-        ALLOW,
-
-        REQUIRE,
-
-        UNKNOWN
+        DENY, ALLOW, REQUIRE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDeny();
 
         T visitAllow();

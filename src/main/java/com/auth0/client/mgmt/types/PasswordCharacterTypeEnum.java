@@ -7,13 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordCharacterTypeEnum {
+
     public static final PasswordCharacterTypeEnum NUMBER = new PasswordCharacterTypeEnum(Value.NUMBER, "number");
 
-    public static final PasswordCharacterTypeEnum LOWERCASE =
-            new PasswordCharacterTypeEnum(Value.LOWERCASE, "lowercase");
+    public static final PasswordCharacterTypeEnum LOWERCASE = new PasswordCharacterTypeEnum(Value.LOWERCASE, "lowercase");
 
-    public static final PasswordCharacterTypeEnum UPPERCASE =
-            new PasswordCharacterTypeEnum(Value.UPPERCASE, "uppercase");
+    public static final PasswordCharacterTypeEnum UPPERCASE = new PasswordCharacterTypeEnum(Value.UPPERCASE, "uppercase");
 
     public static final PasswordCharacterTypeEnum SPECIAL = new PasswordCharacterTypeEnum(Value.SPECIAL, "special");
 
@@ -27,72 +26,41 @@ public final class PasswordCharacterTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordCharacterTypeEnum
-                        && this.string.equals(((PasswordCharacterTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NUMBER:
-                return visitor.visitNumber();
-            case LOWERCASE:
-                return visitor.visitLowercase();
-            case UPPERCASE:
-                return visitor.visitUppercase();
-            case SPECIAL:
-                return visitor.visitSpecial();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordCharacterTypeEnum valueOf(String value) {
-        switch (value) {
-            case "number":
-                return NUMBER;
-            case "lowercase":
-                return LOWERCASE;
-            case "uppercase":
-                return UPPERCASE;
-            case "special":
-                return SPECIAL;
-            default:
-                return new PasswordCharacterTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UPPERCASE,
 
-        LOWERCASE,
-
-        NUMBER,
-
-        SPECIAL,
-
-        UNKNOWN
+        UPPERCASE, LOWERCASE, NUMBER, SPECIAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUppercase();
 
         T visitLowercase();

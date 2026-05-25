@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsSaml.Builder.class)
 public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml, IConnectionOptionsCommon {
+
     private final Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings;
 
     private final Optional<String> cert;
@@ -54,8 +55,7 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
 
     private final Optional<List<String>> thumbprints;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<List<String>> nonPersistentAttrs;
 
@@ -91,40 +91,7 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsSaml(
-            Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings,
-            Optional<String> cert,
-            Optional<ConnectionDecryptionKeySaml> decryptionKey,
-            Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm,
-            Optional<List<String>> domainAliases,
-            Optional<String> entityId,
-            Optional<String> iconUrl,
-            Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated,
-            Optional<ConnectionProtocolBindingEnumSaml> protocolBinding,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> signInEndpoint,
-            Optional<Boolean> signSamlRequest,
-            Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm,
-            Optional<String> tenantDomain,
-            Optional<List<String>> thumbprints,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<Boolean> debug,
-            Optional<Boolean> deflate,
-            Optional<String> destinationUrl,
-            Optional<Boolean> disableSignout,
-            Optional<Map<String, ConnectionFieldsMapSamlValue>> fieldsMap,
-            Optional<String> globalTokenRevocationJwtIss,
-            Optional<String> globalTokenRevocationJwtSub,
-            Optional<String> metadataUrl,
-            Optional<String> metadataXml,
-            Optional<String> recipientUrl,
-            Optional<String> requestTemplate,
-            Optional<String> signingCert,
-            Optional<ConnectionSigningKeySaml> signingKey,
-            Optional<String> signOutEndpoint,
-            Optional<String> userIdAttribute,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsSaml(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings, Optional<String> cert, Optional<ConnectionDecryptionKeySaml> decryptionKey, Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm, Optional<List<String>> domainAliases, Optional<String> entityId, Optional<String> iconUrl, Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated, Optional<ConnectionProtocolBindingEnumSaml> protocolBinding, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> signInEndpoint, Optional<Boolean> signSamlRequest, Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm, Optional<String> tenantDomain, Optional<List<String>> thumbprints, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<List<String>> nonPersistentAttrs, Optional<Boolean> debug, Optional<Boolean> deflate, Optional<String> destinationUrl, Optional<Boolean> disableSignout, Optional<Map<String, ConnectionFieldsMapSamlValue>> fieldsMap, Optional<String> globalTokenRevocationJwtIss, Optional<String> globalTokenRevocationJwtSub, Optional<String> metadataUrl, Optional<String> metadataXml, Optional<String> recipientUrl, Optional<String> requestTemplate, Optional<String> signingCert, Optional<ConnectionSigningKeySaml> signingKey, Optional<String> signOutEndpoint, Optional<String> userIdAttribute, Map<String, Object> additionalProperties) {
         this.assertionDecryptionSettings = assertionDecryptionSettings;
         this.cert = cert;
         this.decryptionKey = decryptionKey;
@@ -163,122 +130,119 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
     @JsonProperty("assertion_decryption_settings")
     @java.lang.Override
     public Optional<ConnectionAssertionDecryptionSettings> getAssertionDecryptionSettings() {
-        return assertionDecryptionSettings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("cert")
     @java.lang.Override
     public Optional<String> getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("decryptionKey")
     @java.lang.Override
     public Optional<ConnectionDecryptionKeySaml> getDecryptionKey() {
-        return decryptionKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("digestAlgorithm")
     @java.lang.Override
     public Optional<ConnectionDigestAlgorithmEnumSaml> getDigestAlgorithm() {
-        return digestAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     @java.lang.Override
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("entityId")
     @java.lang.Override
     public Optional<String> getEntityId() {
-        return entityId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     @java.lang.Override
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("idpinitiated")
     @java.lang.Override
     public Optional<ConnectionOptionsIdpinitiatedSaml> getIdpinitiated() {
-        return idpinitiated;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("protocolBinding")
     @java.lang.Override
     public Optional<ConnectionProtocolBindingEnumSaml> getProtocolBinding() {
-        return protocolBinding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     @java.lang.Override
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signInEndpoint")
     @java.lang.Override
     public Optional<String> getSignInEndpoint() {
-        return signInEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signSAMLRequest")
     @java.lang.Override
     public Optional<Boolean> getSignSamlRequest() {
-        return signSamlRequest;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signatureAlgorithm")
     @java.lang.Override
     public Optional<ConnectionSignatureAlgorithmEnumSaml> getSignatureAlgorithm() {
-        return signatureAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     @java.lang.Override
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("thumbprints")
     @java.lang.Override
     public Optional<List<String>> getThumbprints() {
-        return thumbprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     @java.lang.Override
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("debug")
     public Optional<Boolean> getDebug() {
-        return debug;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("deflate")
     public Optional<Boolean> getDeflate() {
-        return deflate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("destinationUrl")
     public Optional<String> getDestinationUrl() {
-        return destinationUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -286,165 +250,101 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
      */
     @JsonProperty("disableSignout")
     public Optional<Boolean> getDisableSignout() {
-        return disableSignout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fieldsMap")
     public Optional<Map<String, ConnectionFieldsMapSamlValue>> getFieldsMap() {
-        return fieldsMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("global_token_revocation_jwt_iss")
     public Optional<String> getGlobalTokenRevocationJwtIss() {
-        return globalTokenRevocationJwtIss;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("global_token_revocation_jwt_sub")
     public Optional<String> getGlobalTokenRevocationJwtSub() {
-        return globalTokenRevocationJwtSub;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadataUrl")
     public Optional<String> getMetadataUrl() {
-        return metadataUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadataXml")
     public Optional<String> getMetadataXml() {
-        return metadataXml;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("recipientUrl")
     public Optional<String> getRecipientUrl() {
-        return recipientUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("requestTemplate")
     public Optional<String> getRequestTemplate() {
-        return requestTemplate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signingCert")
     public Optional<String> getSigningCert() {
-        return signingCert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signing_key")
     public Optional<ConnectionSigningKeySaml> getSigningKey() {
-        return signingKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signOutEndpoint")
     public Optional<String> getSignOutEndpoint() {
-        return signOutEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_id_attribute")
     public Optional<String> getUserIdAttribute() {
-        return userIdAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsSaml && equalTo((ConnectionOptionsSaml) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsSaml other) {
-        return assertionDecryptionSettings.equals(other.assertionDecryptionSettings)
-                && cert.equals(other.cert)
-                && decryptionKey.equals(other.decryptionKey)
-                && digestAlgorithm.equals(other.digestAlgorithm)
-                && domainAliases.equals(other.domainAliases)
-                && entityId.equals(other.entityId)
-                && iconUrl.equals(other.iconUrl)
-                && idpinitiated.equals(other.idpinitiated)
-                && protocolBinding.equals(other.protocolBinding)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && signInEndpoint.equals(other.signInEndpoint)
-                && signSamlRequest.equals(other.signSamlRequest)
-                && signatureAlgorithm.equals(other.signatureAlgorithm)
-                && tenantDomain.equals(other.tenantDomain)
-                && thumbprints.equals(other.thumbprints)
-                && upstreamParams.equals(other.upstreamParams)
-                && nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && debug.equals(other.debug)
-                && deflate.equals(other.deflate)
-                && destinationUrl.equals(other.destinationUrl)
-                && disableSignout.equals(other.disableSignout)
-                && fieldsMap.equals(other.fieldsMap)
-                && globalTokenRevocationJwtIss.equals(other.globalTokenRevocationJwtIss)
-                && globalTokenRevocationJwtSub.equals(other.globalTokenRevocationJwtSub)
-                && metadataUrl.equals(other.metadataUrl)
-                && metadataXml.equals(other.metadataXml)
-                && recipientUrl.equals(other.recipientUrl)
-                && requestTemplate.equals(other.requestTemplate)
-                && signingCert.equals(other.signingCert)
-                && signingKey.equals(other.signingKey)
-                && signOutEndpoint.equals(other.signOutEndpoint)
-                && userIdAttribute.equals(other.userIdAttribute);
+        return assertionDecryptionSettings.equals(other.assertionDecryptionSettings) && cert.equals(other.cert) && decryptionKey.equals(other.decryptionKey) && digestAlgorithm.equals(other.digestAlgorithm) && domainAliases.equals(other.domainAliases) && entityId.equals(other.entityId) && iconUrl.equals(other.iconUrl) && idpinitiated.equals(other.idpinitiated) && protocolBinding.equals(other.protocolBinding) && setUserRootAttributes.equals(other.setUserRootAttributes) && signInEndpoint.equals(other.signInEndpoint) && signSamlRequest.equals(other.signSamlRequest) && signatureAlgorithm.equals(other.signatureAlgorithm) && tenantDomain.equals(other.tenantDomain) && thumbprints.equals(other.thumbprints) && upstreamParams.equals(other.upstreamParams) && nonPersistentAttrs.equals(other.nonPersistentAttrs) && debug.equals(other.debug) && deflate.equals(other.deflate) && destinationUrl.equals(other.destinationUrl) && disableSignout.equals(other.disableSignout) && fieldsMap.equals(other.fieldsMap) && globalTokenRevocationJwtIss.equals(other.globalTokenRevocationJwtIss) && globalTokenRevocationJwtSub.equals(other.globalTokenRevocationJwtSub) && metadataUrl.equals(other.metadataUrl) && metadataXml.equals(other.metadataXml) && recipientUrl.equals(other.recipientUrl) && requestTemplate.equals(other.requestTemplate) && signingCert.equals(other.signingCert) && signingKey.equals(other.signingKey) && signOutEndpoint.equals(other.signOutEndpoint) && userIdAttribute.equals(other.userIdAttribute);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.assertionDecryptionSettings,
-                this.cert,
-                this.decryptionKey,
-                this.digestAlgorithm,
-                this.domainAliases,
-                this.entityId,
-                this.iconUrl,
-                this.idpinitiated,
-                this.protocolBinding,
-                this.setUserRootAttributes,
-                this.signInEndpoint,
-                this.signSamlRequest,
-                this.signatureAlgorithm,
-                this.tenantDomain,
-                this.thumbprints,
-                this.upstreamParams,
-                this.nonPersistentAttrs,
-                this.debug,
-                this.deflate,
-                this.destinationUrl,
-                this.disableSignout,
-                this.fieldsMap,
-                this.globalTokenRevocationJwtIss,
-                this.globalTokenRevocationJwtSub,
-                this.metadataUrl,
-                this.metadataXml,
-                this.recipientUrl,
-                this.requestTemplate,
-                this.signingCert,
-                this.signingKey,
-                this.signOutEndpoint,
-                this.userIdAttribute);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings = Optional.empty();
 
         private Optional<String> cert = Optional.empty();
@@ -475,8 +375,7 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
 
         private Optional<List<String>> thumbprints = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
@@ -513,291 +412,199 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsSaml other) {
-            assertionDecryptionSettings(other.getAssertionDecryptionSettings());
-            cert(other.getCert());
-            decryptionKey(other.getDecryptionKey());
-            digestAlgorithm(other.getDigestAlgorithm());
-            domainAliases(other.getDomainAliases());
-            entityId(other.getEntityId());
-            iconUrl(other.getIconUrl());
-            idpinitiated(other.getIdpinitiated());
-            protocolBinding(other.getProtocolBinding());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            signInEndpoint(other.getSignInEndpoint());
-            signSamlRequest(other.getSignSamlRequest());
-            signatureAlgorithm(other.getSignatureAlgorithm());
-            tenantDomain(other.getTenantDomain());
-            thumbprints(other.getThumbprints());
-            upstreamParams(other.getUpstreamParams());
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            debug(other.getDebug());
-            deflate(other.getDeflate());
-            destinationUrl(other.getDestinationUrl());
-            disableSignout(other.getDisableSignout());
-            fieldsMap(other.getFieldsMap());
-            globalTokenRevocationJwtIss(other.getGlobalTokenRevocationJwtIss());
-            globalTokenRevocationJwtSub(other.getGlobalTokenRevocationJwtSub());
-            metadataUrl(other.getMetadataUrl());
-            metadataXml(other.getMetadataXml());
-            recipientUrl(other.getRecipientUrl());
-            requestTemplate(other.getRequestTemplate());
-            signingCert(other.getSigningCert());
-            signingKey(other.getSigningKey());
-            signOutEndpoint(other.getSignOutEndpoint());
-            userIdAttribute(other.getUserIdAttribute());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "assertion_decryption_settings", nulls = Nulls.SKIP)
-        public Builder assertionDecryptionSettings(
-                Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = assertionDecryptionSettings;
-            return this;
+        public Builder assertionDecryptionSettings(Optional<ConnectionAssertionDecryptionSettings> assertionDecryptionSettings) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder assertionDecryptionSettings(ConnectionAssertionDecryptionSettings assertionDecryptionSettings) {
-            this.assertionDecryptionSettings = Optional.ofNullable(assertionDecryptionSettings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "cert", nulls = Nulls.SKIP)
         public Builder cert(Optional<String> cert) {
-            this.cert = cert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cert(String cert) {
-            this.cert = Optional.ofNullable(cert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "decryptionKey", nulls = Nulls.SKIP)
         public Builder decryptionKey(Optional<ConnectionDecryptionKeySaml> decryptionKey) {
-            this.decryptionKey = decryptionKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder decryptionKey(ConnectionDecryptionKeySaml decryptionKey) {
-            this.decryptionKey = Optional.ofNullable(decryptionKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "digestAlgorithm", nulls = Nulls.SKIP)
         public Builder digestAlgorithm(Optional<ConnectionDigestAlgorithmEnumSaml> digestAlgorithm) {
-            this.digestAlgorithm = digestAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder digestAlgorithm(ConnectionDigestAlgorithmEnumSaml digestAlgorithm) {
-            this.digestAlgorithm = Optional.ofNullable(digestAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public Builder domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "entityId", nulls = Nulls.SKIP)
         public Builder entityId(Optional<String> entityId) {
-            this.entityId = entityId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder entityId(String entityId) {
-            this.entityId = Optional.ofNullable(entityId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public Builder iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "idpinitiated", nulls = Nulls.SKIP)
         public Builder idpinitiated(Optional<ConnectionOptionsIdpinitiatedSaml> idpinitiated) {
-            this.idpinitiated = idpinitiated;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idpinitiated(ConnectionOptionsIdpinitiatedSaml idpinitiated) {
-            this.idpinitiated = Optional.ofNullable(idpinitiated);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "protocolBinding", nulls = Nulls.SKIP)
         public Builder protocolBinding(Optional<ConnectionProtocolBindingEnumSaml> protocolBinding) {
-            this.protocolBinding = protocolBinding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder protocolBinding(ConnectionProtocolBindingEnumSaml protocolBinding) {
-            this.protocolBinding = Optional.ofNullable(protocolBinding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signInEndpoint", nulls = Nulls.SKIP)
         public Builder signInEndpoint(Optional<String> signInEndpoint) {
-            this.signInEndpoint = signInEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signInEndpoint(String signInEndpoint) {
-            this.signInEndpoint = Optional.ofNullable(signInEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signSAMLRequest", nulls = Nulls.SKIP)
         public Builder signSamlRequest(Optional<Boolean> signSamlRequest) {
-            this.signSamlRequest = signSamlRequest;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signSamlRequest(Boolean signSamlRequest) {
-            this.signSamlRequest = Optional.ofNullable(signSamlRequest);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signatureAlgorithm", nulls = Nulls.SKIP)
         public Builder signatureAlgorithm(Optional<ConnectionSignatureAlgorithmEnumSaml> signatureAlgorithm) {
-            this.signatureAlgorithm = signatureAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signatureAlgorithm(ConnectionSignatureAlgorithmEnumSaml signatureAlgorithm) {
-            this.signatureAlgorithm = Optional.ofNullable(signatureAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public Builder tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "thumbprints", nulls = Nulls.SKIP)
         public Builder thumbprints(Optional<List<String>> thumbprints) {
-            this.thumbprints = thumbprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder thumbprints(List<String> thumbprints) {
-            this.thumbprints = Optional.ofNullable(thumbprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "debug", nulls = Nulls.SKIP)
         public Builder debug(Optional<Boolean> debug) {
-            this.debug = debug;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder debug(Boolean debug) {
-            this.debug = Optional.ofNullable(debug);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "deflate", nulls = Nulls.SKIP)
         public Builder deflate(Optional<Boolean> deflate) {
-            this.deflate = deflate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deflate(Boolean deflate) {
-            this.deflate = Optional.ofNullable(deflate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "destinationUrl", nulls = Nulls.SKIP)
         public Builder destinationUrl(Optional<String> destinationUrl) {
-            this.destinationUrl = destinationUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder destinationUrl(String destinationUrl) {
-            this.destinationUrl = Optional.ofNullable(destinationUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -805,181 +612,122 @@ public final class ConnectionOptionsSaml implements IConnectionOptionsCommonSaml
          */
         @JsonSetter(value = "disableSignout", nulls = Nulls.SKIP)
         public Builder disableSignout(Optional<Boolean> disableSignout) {
-            this.disableSignout = disableSignout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableSignout(Boolean disableSignout) {
-            this.disableSignout = Optional.ofNullable(disableSignout);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "fieldsMap", nulls = Nulls.SKIP)
         public Builder fieldsMap(Optional<Map<String, ConnectionFieldsMapSamlValue>> fieldsMap) {
-            this.fieldsMap = fieldsMap;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fieldsMap(Map<String, ConnectionFieldsMapSamlValue> fieldsMap) {
-            this.fieldsMap = Optional.ofNullable(fieldsMap);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "global_token_revocation_jwt_iss", nulls = Nulls.SKIP)
         public Builder globalTokenRevocationJwtIss(Optional<String> globalTokenRevocationJwtIss) {
-            this.globalTokenRevocationJwtIss = globalTokenRevocationJwtIss;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder globalTokenRevocationJwtIss(String globalTokenRevocationJwtIss) {
-            this.globalTokenRevocationJwtIss = Optional.ofNullable(globalTokenRevocationJwtIss);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "global_token_revocation_jwt_sub", nulls = Nulls.SKIP)
         public Builder globalTokenRevocationJwtSub(Optional<String> globalTokenRevocationJwtSub) {
-            this.globalTokenRevocationJwtSub = globalTokenRevocationJwtSub;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder globalTokenRevocationJwtSub(String globalTokenRevocationJwtSub) {
-            this.globalTokenRevocationJwtSub = Optional.ofNullable(globalTokenRevocationJwtSub);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "metadataUrl", nulls = Nulls.SKIP)
         public Builder metadataUrl(Optional<String> metadataUrl) {
-            this.metadataUrl = metadataUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder metadataUrl(String metadataUrl) {
-            this.metadataUrl = Optional.ofNullable(metadataUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "metadataXml", nulls = Nulls.SKIP)
         public Builder metadataXml(Optional<String> metadataXml) {
-            this.metadataXml = metadataXml;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder metadataXml(String metadataXml) {
-            this.metadataXml = Optional.ofNullable(metadataXml);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "recipientUrl", nulls = Nulls.SKIP)
         public Builder recipientUrl(Optional<String> recipientUrl) {
-            this.recipientUrl = recipientUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder recipientUrl(String recipientUrl) {
-            this.recipientUrl = Optional.ofNullable(recipientUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "requestTemplate", nulls = Nulls.SKIP)
         public Builder requestTemplate(Optional<String> requestTemplate) {
-            this.requestTemplate = requestTemplate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requestTemplate(String requestTemplate) {
-            this.requestTemplate = Optional.ofNullable(requestTemplate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signingCert", nulls = Nulls.SKIP)
         public Builder signingCert(Optional<String> signingCert) {
-            this.signingCert = signingCert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingCert(String signingCert) {
-            this.signingCert = Optional.ofNullable(signingCert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signing_key", nulls = Nulls.SKIP)
         public Builder signingKey(Optional<ConnectionSigningKeySaml> signingKey) {
-            this.signingKey = signingKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingKey(ConnectionSigningKeySaml signingKey) {
-            this.signingKey = Optional.ofNullable(signingKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signOutEndpoint", nulls = Nulls.SKIP)
         public Builder signOutEndpoint(Optional<String> signOutEndpoint) {
-            this.signOutEndpoint = signOutEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signOutEndpoint(String signOutEndpoint) {
-            this.signOutEndpoint = Optional.ofNullable(signOutEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_id_attribute", nulls = Nulls.SKIP)
         public Builder userIdAttribute(Optional<String> userIdAttribute) {
-            this.userIdAttribute = userIdAttribute;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userIdAttribute(String userIdAttribute) {
-            this.userIdAttribute = Optional.ofNullable(userIdAttribute);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsSaml build() {
-            return new ConnectionOptionsSaml(
-                    assertionDecryptionSettings,
-                    cert,
-                    decryptionKey,
-                    digestAlgorithm,
-                    domainAliases,
-                    entityId,
-                    iconUrl,
-                    idpinitiated,
-                    protocolBinding,
-                    setUserRootAttributes,
-                    signInEndpoint,
-                    signSamlRequest,
-                    signatureAlgorithm,
-                    tenantDomain,
-                    thumbprints,
-                    upstreamParams,
-                    nonPersistentAttrs,
-                    debug,
-                    deflate,
-                    destinationUrl,
-                    disableSignout,
-                    fieldsMap,
-                    globalTokenRevocationJwtIss,
-                    globalTokenRevocationJwtSub,
-                    metadataUrl,
-                    metadataXml,
-                    recipientUrl,
-                    requestTemplate,
-                    signingCert,
-                    signingKey,
-                    signOutEndpoint,
-                    userIdAttribute,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

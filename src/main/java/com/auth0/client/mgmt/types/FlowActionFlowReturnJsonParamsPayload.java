@@ -17,6 +17,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionFlowReturnJsonParamsPayload.Deserializer.class)
 public final class FlowActionFlowReturnJsonParamsPayload {
+
     private final Object value;
 
     private final int type;
@@ -28,24 +29,17 @@ public final class FlowActionFlowReturnJsonParamsPayload {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((Map<String, Object>) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((String) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionFlowReturnJsonParamsPayload
-                && equalTo((FlowActionFlowReturnJsonParamsPayload) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionFlowReturnJsonParamsPayload other) {
@@ -54,46 +48,38 @@ public final class FlowActionFlowReturnJsonParamsPayload {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlowReturnJsonParamsPayload of(Map<String, Object> value) {
-        return new FlowActionFlowReturnJsonParamsPayload(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlowReturnJsonParamsPayload of(String value) {
-        return new FlowActionFlowReturnJsonParamsPayload(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(Map<String, Object> value);
 
         T visit(String value);
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionFlowReturnJsonParamsPayload> {
+
         Deserializer() {
             super(FlowActionFlowReturnJsonParamsPayload.class);
         }
 
         @java.lang.Override
-        public FlowActionFlowReturnJsonParamsPayload deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, new TypeReference<Map<String, Object>>() {}));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, String.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public FlowActionFlowReturnJsonParamsPayload deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

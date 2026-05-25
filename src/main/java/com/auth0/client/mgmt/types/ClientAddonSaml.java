@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSaml.Builder.class)
 public final class ClientAddonSaml {
+
     private final Optional<Map<String, Object>> mappings;
 
     private final Optional<String> audience;
@@ -55,24 +56,7 @@ public final class ClientAddonSaml {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonSaml(
-            Optional<Map<String, Object>> mappings,
-            Optional<String> audience,
-            Optional<String> recipient,
-            Optional<Boolean> createUpnClaim,
-            Optional<Boolean> mapUnknownClaimsAsIs,
-            Optional<Boolean> passthroughClaimsWithNoMapping,
-            Optional<Boolean> mapIdentities,
-            Optional<String> signatureAlgorithm,
-            Optional<String> digestAlgorithm,
-            Optional<String> issuer,
-            Optional<String> destination,
-            Optional<Integer> lifetimeInSeconds,
-            Optional<Boolean> signResponse,
-            Optional<String> nameIdentifierFormat,
-            Optional<List<String>> nameIdentifierProbes,
-            Optional<String> authnContextClassRef,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonSaml(Optional<Map<String, Object>> mappings, Optional<String> audience, Optional<String> recipient, Optional<Boolean> createUpnClaim, Optional<Boolean> mapUnknownClaimsAsIs, Optional<Boolean> passthroughClaimsWithNoMapping, Optional<Boolean> mapIdentities, Optional<String> signatureAlgorithm, Optional<String> digestAlgorithm, Optional<String> issuer, Optional<String> destination, Optional<Integer> lifetimeInSeconds, Optional<Boolean> signResponse, Optional<String> nameIdentifierFormat, Optional<List<String>> nameIdentifierProbes, Optional<String> authnContextClassRef, Map<String, Object> additionalProperties) {
         this.mappings = mappings;
         this.audience = audience;
         this.recipient = recipient;
@@ -94,146 +78,115 @@ public final class ClientAddonSaml {
 
     @JsonProperty("mappings")
     public Optional<Map<String, Object>> getMappings() {
-        return mappings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("recipient")
     public Optional<String> getRecipient() {
-        return recipient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("createUpnClaim")
     public Optional<Boolean> getCreateUpnClaim() {
-        return createUpnClaim;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mapUnknownClaimsAsIs")
     public Optional<Boolean> getMapUnknownClaimsAsIs() {
-        return mapUnknownClaimsAsIs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("passthroughClaimsWithNoMapping")
     public Optional<Boolean> getPassthroughClaimsWithNoMapping() {
-        return passthroughClaimsWithNoMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mapIdentities")
     public Optional<Boolean> getMapIdentities() {
-        return mapIdentities;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signatureAlgorithm")
     public Optional<String> getSignatureAlgorithm() {
-        return signatureAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("digestAlgorithm")
     public Optional<String> getDigestAlgorithm() {
-        return digestAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("issuer")
     public Optional<String> getIssuer() {
-        return issuer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("destination")
     public Optional<String> getDestination() {
-        return destination;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("lifetimeInSeconds")
     public Optional<Integer> getLifetimeInSeconds() {
-        return lifetimeInSeconds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signResponse")
     public Optional<Boolean> getSignResponse() {
-        return signResponse;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("nameIdentifierFormat")
     public Optional<String> getNameIdentifierFormat() {
-        return nameIdentifierFormat;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("nameIdentifierProbes")
     public Optional<List<String>> getNameIdentifierProbes() {
-        return nameIdentifierProbes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authnContextClassRef")
     public Optional<String> getAuthnContextClassRef() {
-        return authnContextClassRef;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSaml && equalTo((ClientAddonSaml) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSaml other) {
-        return mappings.equals(other.mappings)
-                && audience.equals(other.audience)
-                && recipient.equals(other.recipient)
-                && createUpnClaim.equals(other.createUpnClaim)
-                && mapUnknownClaimsAsIs.equals(other.mapUnknownClaimsAsIs)
-                && passthroughClaimsWithNoMapping.equals(other.passthroughClaimsWithNoMapping)
-                && mapIdentities.equals(other.mapIdentities)
-                && signatureAlgorithm.equals(other.signatureAlgorithm)
-                && digestAlgorithm.equals(other.digestAlgorithm)
-                && issuer.equals(other.issuer)
-                && destination.equals(other.destination)
-                && lifetimeInSeconds.equals(other.lifetimeInSeconds)
-                && signResponse.equals(other.signResponse)
-                && nameIdentifierFormat.equals(other.nameIdentifierFormat)
-                && nameIdentifierProbes.equals(other.nameIdentifierProbes)
-                && authnContextClassRef.equals(other.authnContextClassRef);
+        return mappings.equals(other.mappings) && audience.equals(other.audience) && recipient.equals(other.recipient) && createUpnClaim.equals(other.createUpnClaim) && mapUnknownClaimsAsIs.equals(other.mapUnknownClaimsAsIs) && passthroughClaimsWithNoMapping.equals(other.passthroughClaimsWithNoMapping) && mapIdentities.equals(other.mapIdentities) && signatureAlgorithm.equals(other.signatureAlgorithm) && digestAlgorithm.equals(other.digestAlgorithm) && issuer.equals(other.issuer) && destination.equals(other.destination) && lifetimeInSeconds.equals(other.lifetimeInSeconds) && signResponse.equals(other.signResponse) && nameIdentifierFormat.equals(other.nameIdentifierFormat) && nameIdentifierProbes.equals(other.nameIdentifierProbes) && authnContextClassRef.equals(other.authnContextClassRef);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.mappings,
-                this.audience,
-                this.recipient,
-                this.createUpnClaim,
-                this.mapUnknownClaimsAsIs,
-                this.passthroughClaimsWithNoMapping,
-                this.mapIdentities,
-                this.signatureAlgorithm,
-                this.digestAlgorithm,
-                this.issuer,
-                this.destination,
-                this.lifetimeInSeconds,
-                this.signResponse,
-                this.nameIdentifierFormat,
-                this.nameIdentifierProbes,
-                this.authnContextClassRef);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Map<String, Object>> mappings = Optional.empty();
 
         private Optional<String> audience = Optional.empty();
@@ -269,233 +222,167 @@ public final class ClientAddonSaml {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSaml other) {
-            mappings(other.getMappings());
-            audience(other.getAudience());
-            recipient(other.getRecipient());
-            createUpnClaim(other.getCreateUpnClaim());
-            mapUnknownClaimsAsIs(other.getMapUnknownClaimsAsIs());
-            passthroughClaimsWithNoMapping(other.getPassthroughClaimsWithNoMapping());
-            mapIdentities(other.getMapIdentities());
-            signatureAlgorithm(other.getSignatureAlgorithm());
-            digestAlgorithm(other.getDigestAlgorithm());
-            issuer(other.getIssuer());
-            destination(other.getDestination());
-            lifetimeInSeconds(other.getLifetimeInSeconds());
-            signResponse(other.getSignResponse());
-            nameIdentifierFormat(other.getNameIdentifierFormat());
-            nameIdentifierProbes(other.getNameIdentifierProbes());
-            authnContextClassRef(other.getAuthnContextClassRef());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mappings", nulls = Nulls.SKIP)
         public Builder mappings(Optional<Map<String, Object>> mappings) {
-            this.mappings = mappings;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mappings(Map<String, Object> mappings) {
-            this.mappings = Optional.ofNullable(mappings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "recipient", nulls = Nulls.SKIP)
         public Builder recipient(Optional<String> recipient) {
-            this.recipient = recipient;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder recipient(String recipient) {
-            this.recipient = Optional.ofNullable(recipient);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "createUpnClaim", nulls = Nulls.SKIP)
         public Builder createUpnClaim(Optional<Boolean> createUpnClaim) {
-            this.createUpnClaim = createUpnClaim;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createUpnClaim(Boolean createUpnClaim) {
-            this.createUpnClaim = Optional.ofNullable(createUpnClaim);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mapUnknownClaimsAsIs", nulls = Nulls.SKIP)
         public Builder mapUnknownClaimsAsIs(Optional<Boolean> mapUnknownClaimsAsIs) {
-            this.mapUnknownClaimsAsIs = mapUnknownClaimsAsIs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mapUnknownClaimsAsIs(Boolean mapUnknownClaimsAsIs) {
-            this.mapUnknownClaimsAsIs = Optional.ofNullable(mapUnknownClaimsAsIs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "passthroughClaimsWithNoMapping", nulls = Nulls.SKIP)
         public Builder passthroughClaimsWithNoMapping(Optional<Boolean> passthroughClaimsWithNoMapping) {
-            this.passthroughClaimsWithNoMapping = passthroughClaimsWithNoMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passthroughClaimsWithNoMapping(Boolean passthroughClaimsWithNoMapping) {
-            this.passthroughClaimsWithNoMapping = Optional.ofNullable(passthroughClaimsWithNoMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mapIdentities", nulls = Nulls.SKIP)
         public Builder mapIdentities(Optional<Boolean> mapIdentities) {
-            this.mapIdentities = mapIdentities;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mapIdentities(Boolean mapIdentities) {
-            this.mapIdentities = Optional.ofNullable(mapIdentities);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signatureAlgorithm", nulls = Nulls.SKIP)
         public Builder signatureAlgorithm(Optional<String> signatureAlgorithm) {
-            this.signatureAlgorithm = signatureAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Optional.ofNullable(signatureAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "digestAlgorithm", nulls = Nulls.SKIP)
         public Builder digestAlgorithm(Optional<String> digestAlgorithm) {
-            this.digestAlgorithm = digestAlgorithm;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder digestAlgorithm(String digestAlgorithm) {
-            this.digestAlgorithm = Optional.ofNullable(digestAlgorithm);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "issuer", nulls = Nulls.SKIP)
         public Builder issuer(Optional<String> issuer) {
-            this.issuer = issuer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Optional.ofNullable(issuer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "destination", nulls = Nulls.SKIP)
         public Builder destination(Optional<String> destination) {
-            this.destination = destination;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder destination(String destination) {
-            this.destination = Optional.ofNullable(destination);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "lifetimeInSeconds", nulls = Nulls.SKIP)
         public Builder lifetimeInSeconds(Optional<Integer> lifetimeInSeconds) {
-            this.lifetimeInSeconds = lifetimeInSeconds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lifetimeInSeconds(Integer lifetimeInSeconds) {
-            this.lifetimeInSeconds = Optional.ofNullable(lifetimeInSeconds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signResponse", nulls = Nulls.SKIP)
         public Builder signResponse(Optional<Boolean> signResponse) {
-            this.signResponse = signResponse;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signResponse(Boolean signResponse) {
-            this.signResponse = Optional.ofNullable(signResponse);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "nameIdentifierFormat", nulls = Nulls.SKIP)
         public Builder nameIdentifierFormat(Optional<String> nameIdentifierFormat) {
-            this.nameIdentifierFormat = nameIdentifierFormat;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nameIdentifierFormat(String nameIdentifierFormat) {
-            this.nameIdentifierFormat = Optional.ofNullable(nameIdentifierFormat);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "nameIdentifierProbes", nulls = Nulls.SKIP)
         public Builder nameIdentifierProbes(Optional<List<String>> nameIdentifierProbes) {
-            this.nameIdentifierProbes = nameIdentifierProbes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nameIdentifierProbes(List<String> nameIdentifierProbes) {
-            this.nameIdentifierProbes = Optional.ofNullable(nameIdentifierProbes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authnContextClassRef", nulls = Nulls.SKIP)
         public Builder authnContextClassRef(Optional<String> authnContextClassRef) {
-            this.authnContextClassRef = authnContextClassRef;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authnContextClassRef(String authnContextClassRef) {
-            this.authnContextClassRef = Optional.ofNullable(authnContextClassRef);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSaml build() {
-            return new ClientAddonSaml(
-                    mappings,
-                    audience,
-                    recipient,
-                    createUpnClaim,
-                    mapUnknownClaimsAsIs,
-                    passthroughClaimsWithNoMapping,
-                    mapIdentities,
-                    signatureAlgorithm,
-                    digestAlgorithm,
-                    issuer,
-                    destination,
-                    lifetimeInSeconds,
-                    signResponse,
-                    nameIdentifierFormat,
-                    nameIdentifierProbes,
-                    authnContextClassRef,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

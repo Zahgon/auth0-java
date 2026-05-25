@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentialsSchemaClientId.Builder.class)
 public final class EmailProviderCredentialsSchemaClientId {
+
     private final Optional<String> tenantId;
 
     private final Optional<String> clientId;
@@ -28,11 +29,7 @@ public final class EmailProviderCredentialsSchemaClientId {
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailProviderCredentialsSchemaClientId(
-            Optional<String> tenantId,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Map<String, Object> additionalProperties) {
+    private EmailProviderCredentialsSchemaClientId(Optional<String> tenantId, Optional<String> clientId, Optional<String> clientSecret, Map<String, Object> additionalProperties) {
         this.tenantId = tenantId;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -44,7 +41,7 @@ public final class EmailProviderCredentialsSchemaClientId {
      */
     @JsonProperty("tenantId")
     public Optional<String> getTenantId() {
-        return tenantId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class EmailProviderCredentialsSchemaClientId {
      */
     @JsonProperty("clientId")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,43 +57,40 @@ public final class EmailProviderCredentialsSchemaClientId {
      */
     @JsonProperty("clientSecret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchemaClientId
-                && equalTo((EmailProviderCredentialsSchemaClientId) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchemaClientId other) {
-        return tenantId.equals(other.tenantId)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret);
+        return tenantId.equals(other.tenantId) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.tenantId, this.clientId, this.clientSecret);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> tenantId = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -106,13 +100,11 @@ public final class EmailProviderCredentialsSchemaClientId {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailProviderCredentialsSchemaClientId other) {
-            tenantId(other.getTenantId());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -120,13 +112,11 @@ public final class EmailProviderCredentialsSchemaClientId {
          */
         @JsonSetter(value = "tenantId", nulls = Nulls.SKIP)
         public Builder tenantId(Optional<String> tenantId) {
-            this.tenantId = tenantId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Optional.ofNullable(tenantId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,13 +124,11 @@ public final class EmailProviderCredentialsSchemaClientId {
          */
         @JsonSetter(value = "clientId", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,27 +136,23 @@ public final class EmailProviderCredentialsSchemaClientId {
          */
         @JsonSetter(value = "clientSecret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailProviderCredentialsSchemaClientId build() {
-            return new EmailProviderCredentialsSchemaClientId(tenantId, clientId, clientSecret, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamSegmentEnum {
+
     public static final LogStreamSegmentEnum SEGMENT = new LogStreamSegmentEnum(Value.SEGMENT, "segment");
 
     private final Value value;
@@ -19,53 +20,41 @@ public final class LogStreamSegmentEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamSegmentEnum && this.string.equals(((LogStreamSegmentEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEGMENT:
-                return visitor.visitSegment();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamSegmentEnum valueOf(String value) {
-        switch (value) {
-            case "segment":
-                return SEGMENT;
-            default:
-                return new LogStreamSegmentEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEGMENT,
 
-        UNKNOWN
+        SEGMENT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSegment();
 
         T visitUnknown(String unknownType);

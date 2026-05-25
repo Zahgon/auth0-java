@@ -14,11 +14,15 @@ import java.util.Map;
 public class RateLimitException extends APIException {
 
     private final long limit;
+
     private final long remaining;
+
     private final long reset;
 
     private TokenQuotaBucket clientQuotaLimit;
+
     private TokenQuotaBucket organizationQuotaLimit;
+
     private long retryAfter;
 
     private static final int STATUS_CODE_TOO_MANY_REQUEST = 429;
@@ -42,7 +46,7 @@ public class RateLimitException extends APIException {
      * @return The maximum number of requests or -1 if missing.
      */
     public long getLimit() {
-        return limit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,7 +54,7 @@ public class RateLimitException extends APIException {
      * @return Number of remaining requests or -1 if missing.
      */
     public long getRemaining() {
-        return remaining;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,7 +62,7 @@ public class RateLimitException extends APIException {
      * @return The UNIX timestamp or -1 if missing.
      */
     public long getReset() {
-        return reset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,7 +70,7 @@ public class RateLimitException extends APIException {
      * @return The client quota limit or null if missing.
      */
     public TokenQuotaBucket getClientQuotaLimit() {
-        return clientQuotaLimit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +78,7 @@ public class RateLimitException extends APIException {
      * @return The organization quota limit or null if missing.
      */
     public TokenQuotaBucket getOrganizationQuotaLimit() {
-        return organizationQuotaLimit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,19 +86,26 @@ public class RateLimitException extends APIException {
      * @return The retry after time in seconds or -1 if missing.
      */
     public long getRetryAfter() {
-        return retryAfter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Builder class for creating instances of RateLimitException.
      */
     public static class Builder {
+
         private long limit;
+
         private long remaining;
+
         private long reset;
+
         private TokenQuotaBucket clientQuotaLimit;
+
         private TokenQuotaBucket organizationQuotaLimit;
+
         private long retryAfter;
+
         private Map<String, Object> values;
 
         /**
@@ -129,8 +140,7 @@ public class RateLimitException extends APIException {
          * @return The Builder instance.
          */
         public Builder clientQuotaLimit(TokenQuotaBucket clientQuotaLimit) {
-            this.clientQuotaLimit = clientQuotaLimit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -139,8 +149,7 @@ public class RateLimitException extends APIException {
          * @return The Builder instance.
          */
         public Builder organizationQuotaLimit(TokenQuotaBucket organizationQuotaLimit) {
-            this.organizationQuotaLimit = organizationQuotaLimit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,8 +158,7 @@ public class RateLimitException extends APIException {
          * @return The Builder instance.
          */
         public Builder retryAfter(long retryAfter) {
-            this.retryAfter = retryAfter;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -159,20 +167,11 @@ public class RateLimitException extends APIException {
          * @return The Builder instance.
          */
         public Builder values(Map<String, Object> values) {
-            this.values = values;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RateLimitException build() {
-            RateLimitException exception = (this.values != null)
-                    ? new RateLimitException(this.limit, this.remaining, this.reset, this.values)
-                    : new RateLimitException(this.limit, this.remaining, this.reset);
-
-            exception.clientQuotaLimit = this.clientQuotaLimit;
-            exception.organizationQuotaLimit = this.organizationQuotaLimit;
-            exception.retryAfter = this.retryAfter;
-
-            return exception;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

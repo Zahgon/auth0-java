@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateOrganizationAllConnectionResponseConten
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawConnectionsClient rawClient;
@@ -29,74 +30,62 @@ public class AsyncConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(
-            String id, ListOrganizationAllConnectionsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(String id, ListOrganizationAllConnectionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(
-            String id, ListOrganizationAllConnectionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationAllConnectionPost>> list(String id, ListOrganizationAllConnectionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateOrganizationAllConnectionResponseContent> create(
-            String id, CreateOrganizationAllConnectionRequestParameters request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateOrganizationAllConnectionResponseContent> create(String id, CreateOrganizationAllConnectionRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateOrganizationAllConnectionResponseContent> create(
-            String id, CreateOrganizationAllConnectionRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateOrganizationAllConnectionResponseContent> create(String id, CreateOrganizationAllConnectionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetOrganizationAllConnectionResponseContent> get(String id, String connectionId) {
-        return this.rawClient.get(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetOrganizationAllConnectionResponseContent> get(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, connectionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationAllConnectionResponseContent> get(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String connectionId) {
-        return this.rawClient.delete(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, connectionId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(String id, String connectionId) {
-        return this.rawClient.update(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(
-            String id, String connectionId, UpdateOrganizationConnectionRequestParameters request) {
-        return this.rawClient.update(id, connectionId, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(String id, String connectionId, UpdateOrganizationConnectionRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(
-            String id,
-            String connectionId,
-            UpdateOrganizationConnectionRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationAllConnectionResponseContent> update(String id, String connectionId, UpdateOrganizationConnectionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

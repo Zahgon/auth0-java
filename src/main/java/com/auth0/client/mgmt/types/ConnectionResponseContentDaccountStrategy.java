@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentDaccountStrategy {
-    public static final ConnectionResponseContentDaccountStrategy DACCOUNT =
-            new ConnectionResponseContentDaccountStrategy(Value.DACCOUNT, "daccount");
+
+    public static final ConnectionResponseContentDaccountStrategy DACCOUNT = new ConnectionResponseContentDaccountStrategy(Value.DACCOUNT, "daccount");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentDaccountStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentDaccountStrategy
-                        && this.string.equals(((ConnectionResponseContentDaccountStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DACCOUNT:
-                return visitor.visitDaccount();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentDaccountStrategy valueOf(String value) {
-        switch (value) {
-            case "daccount":
-                return DACCOUNT;
-            default:
-                return new ConnectionResponseContentDaccountStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DACCOUNT,
 
-        UNKNOWN
+        DACCOUNT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDaccount();
 
         T visitUnknown(String unknownType);

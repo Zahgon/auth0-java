@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigChargeOneOff.Builder.class)
 public final class FormFieldPaymentConfigChargeOneOff {
+
     private final FormFieldPaymentConfigChargeTypeOneOffConst type;
 
     private final FormFieldPaymentConfigChargeOneOffOneOff oneOff;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigChargeOneOff(
-            FormFieldPaymentConfigChargeTypeOneOffConst type,
-            FormFieldPaymentConfigChargeOneOffOneOff oneOff,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigChargeOneOff(FormFieldPaymentConfigChargeTypeOneOffConst type, FormFieldPaymentConfigChargeOneOffOneOff oneOff, Map<String, Object> additionalProperties) {
         this.type = type;
         this.oneOff = oneOff;
         this.additionalProperties = additionalProperties;
@@ -36,24 +34,22 @@ public final class FormFieldPaymentConfigChargeOneOff {
 
     @JsonProperty("type")
     public FormFieldPaymentConfigChargeTypeOneOffConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("one_off")
     public FormFieldPaymentConfigChargeOneOffOneOff getOneOff() {
-        return oneOff;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigChargeOneOff
-                && equalTo((FormFieldPaymentConfigChargeOneOff) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigChargeOneOff other) {
@@ -62,29 +58,32 @@ public final class FormFieldPaymentConfigChargeOneOff {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.oneOff);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         OneOffStage type(@NotNull FormFieldPaymentConfigChargeTypeOneOffConst type);
 
         Builder from(FormFieldPaymentConfigChargeOneOff other);
     }
 
     public interface OneOffStage {
+
         _FinalStage oneOff(@NotNull FormFieldPaymentConfigChargeOneOffOneOff oneOff);
     }
 
     public interface _FinalStage {
+
         FormFieldPaymentConfigChargeOneOff build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -94,6 +93,7 @@ public final class FormFieldPaymentConfigChargeOneOff {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, OneOffStage, _FinalStage {
+
         private FormFieldPaymentConfigChargeTypeOneOffConst type;
 
         private FormFieldPaymentConfigChargeOneOffOneOff oneOff;
@@ -101,44 +101,39 @@ public final class FormFieldPaymentConfigChargeOneOff {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldPaymentConfigChargeOneOff other) {
-            type(other.getType());
-            oneOff(other.getOneOff());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public OneOffStage type(@NotNull FormFieldPaymentConfigChargeTypeOneOffConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("one_off")
         public _FinalStage oneOff(@NotNull FormFieldPaymentConfigChargeOneOffOneOff oneOff) {
-            this.oneOff = Objects.requireNonNull(oneOff, "oneOff must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldPaymentConfigChargeOneOff build() {
-            return new FormFieldPaymentConfigChargeOneOff(type, oneOff, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

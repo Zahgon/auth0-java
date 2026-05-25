@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AsyncAttackProtectionClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncBotDetectionClient> botDetectionClient;
@@ -23,31 +24,29 @@ public class AsyncAttackProtectionClient {
     public AsyncAttackProtectionClient(ClientOptions clientOptions) {
         this.clientOptions = clientOptions;
         this.botDetectionClient = Suppliers.memoize(() -> new AsyncBotDetectionClient(clientOptions));
-        this.breachedPasswordDetectionClient =
-                Suppliers.memoize(() -> new AsyncBreachedPasswordDetectionClient(clientOptions));
+        this.breachedPasswordDetectionClient = Suppliers.memoize(() -> new AsyncBreachedPasswordDetectionClient(clientOptions));
         this.bruteForceProtectionClient = Suppliers.memoize(() -> new AsyncBruteForceProtectionClient(clientOptions));
         this.captchaClient = Suppliers.memoize(() -> new AsyncCaptchaClient(clientOptions));
-        this.suspiciousIpThrottlingClient =
-                Suppliers.memoize(() -> new AsyncSuspiciousIpThrottlingClient(clientOptions));
+        this.suspiciousIpThrottlingClient = Suppliers.memoize(() -> new AsyncSuspiciousIpThrottlingClient(clientOptions));
     }
 
     public AsyncBotDetectionClient botDetection() {
-        return this.botDetectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncBreachedPasswordDetectionClient breachedPasswordDetection() {
-        return this.breachedPasswordDetectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncBruteForceProtectionClient bruteForceProtection() {
-        return this.bruteForceProtectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncCaptchaClient captcha() {
-        return this.captchaClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSuspiciousIpThrottlingClient suspiciousIpThrottling() {
-        return this.suspiciousIpThrottlingClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionScriptsOAuth1.Builder.class)
 public final class ConnectionScriptsOAuth1 {
+
     private final Optional<String> fetchUserProfile;
 
     private final Map<String, Object> additionalProperties;
@@ -34,18 +35,17 @@ public final class ConnectionScriptsOAuth1 {
      */
     @JsonProperty("fetchUserProfile")
     public Optional<String> getFetchUserProfile() {
-        return fetchUserProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionScriptsOAuth1 && equalTo((ConnectionScriptsOAuth1) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionScriptsOAuth1 other) {
@@ -54,30 +54,31 @@ public final class ConnectionScriptsOAuth1 {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.fetchUserProfile);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> fetchUserProfile = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionScriptsOAuth1 other) {
-            fetchUserProfile(other.getFetchUserProfile());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -85,27 +86,23 @@ public final class ConnectionScriptsOAuth1 {
          */
         @JsonSetter(value = "fetchUserProfile", nulls = Nulls.SKIP)
         public Builder fetchUserProfile(Optional<String> fetchUserProfile) {
-            this.fetchUserProfile = fetchUserProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fetchUserProfile(String fetchUserProfile) {
-            this.fetchUserProfile = Optional.ofNullable(fetchUserProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionScriptsOAuth1 build() {
-            return new ConnectionScriptsOAuth1(fetchUserProfile, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = Integration.Builder.class)
 public final class Integration {
+
     private final Optional<String> id;
 
     private final Optional<String> catalogId;
@@ -53,23 +54,7 @@ public final class Integration {
 
     private final Map<String, Object> additionalProperties;
 
-    private Integration(
-            Optional<String> id,
-            Optional<String> catalogId,
-            Optional<String> urlSlug,
-            Optional<String> partnerId,
-            Optional<String> name,
-            Optional<String> description,
-            Optional<String> shortDescription,
-            Optional<String> logo,
-            Optional<IntegrationFeatureTypeEnum> featureType,
-            Optional<String> termsOfUseUrl,
-            Optional<String> privacyPolicyUrl,
-            Optional<String> publicSupportLink,
-            Optional<IntegrationRelease> currentRelease,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private Integration(Optional<String> id, Optional<String> catalogId, Optional<String> urlSlug, Optional<String> partnerId, Optional<String> name, Optional<String> description, Optional<String> shortDescription, Optional<String> logo, Optional<IntegrationFeatureTypeEnum> featureType, Optional<String> termsOfUseUrl, Optional<String> privacyPolicyUrl, Optional<String> publicSupportLink, Optional<IntegrationRelease> currentRelease, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.catalogId = catalogId;
         this.urlSlug = urlSlug;
@@ -94,7 +79,7 @@ public final class Integration {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +87,7 @@ public final class Integration {
      */
     @JsonProperty("catalog_id")
     public Optional<String> getCatalogId() {
-        return catalogId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,7 +95,7 @@ public final class Integration {
      */
     @JsonProperty("url_slug")
     public Optional<String> getUrlSlug() {
-        return urlSlug;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,7 +104,7 @@ public final class Integration {
      */
     @JsonProperty("partner_id")
     public Optional<String> getPartnerId() {
-        return partnerId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -130,7 +115,7 @@ public final class Integration {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,7 +124,7 @@ public final class Integration {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -147,109 +132,80 @@ public final class Integration {
      */
     @JsonProperty("short_description")
     public Optional<String> getShortDescription() {
-        return shortDescription;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("logo")
     public Optional<String> getLogo() {
-        return logo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("feature_type")
     public Optional<IntegrationFeatureTypeEnum> getFeatureType() {
-        return featureType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("terms_of_use_url")
     public Optional<String> getTermsOfUseUrl() {
-        return termsOfUseUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("privacy_policy_url")
     public Optional<String> getPrivacyPolicyUrl() {
-        return privacyPolicyUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("public_support_link")
     public Optional<String> getPublicSupportLink() {
-        return publicSupportLink;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("current_release")
     public Optional<IntegrationRelease> getCurrentRelease() {
-        return currentRelease;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof Integration && equalTo((Integration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(Integration other) {
-        return id.equals(other.id)
-                && catalogId.equals(other.catalogId)
-                && urlSlug.equals(other.urlSlug)
-                && partnerId.equals(other.partnerId)
-                && name.equals(other.name)
-                && description.equals(other.description)
-                && shortDescription.equals(other.shortDescription)
-                && logo.equals(other.logo)
-                && featureType.equals(other.featureType)
-                && termsOfUseUrl.equals(other.termsOfUseUrl)
-                && privacyPolicyUrl.equals(other.privacyPolicyUrl)
-                && publicSupportLink.equals(other.publicSupportLink)
-                && currentRelease.equals(other.currentRelease)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && catalogId.equals(other.catalogId) && urlSlug.equals(other.urlSlug) && partnerId.equals(other.partnerId) && name.equals(other.name) && description.equals(other.description) && shortDescription.equals(other.shortDescription) && logo.equals(other.logo) && featureType.equals(other.featureType) && termsOfUseUrl.equals(other.termsOfUseUrl) && privacyPolicyUrl.equals(other.privacyPolicyUrl) && publicSupportLink.equals(other.publicSupportLink) && currentRelease.equals(other.currentRelease) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.catalogId,
-                this.urlSlug,
-                this.partnerId,
-                this.name,
-                this.description,
-                this.shortDescription,
-                this.logo,
-                this.featureType,
-                this.termsOfUseUrl,
-                this.privacyPolicyUrl,
-                this.publicSupportLink,
-                this.currentRelease,
-                this.createdAt,
-                this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> catalogId = Optional.empty();
@@ -283,25 +239,11 @@ public final class Integration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(Integration other) {
-            id(other.getId());
-            catalogId(other.getCatalogId());
-            urlSlug(other.getUrlSlug());
-            partnerId(other.getPartnerId());
-            name(other.getName());
-            description(other.getDescription());
-            shortDescription(other.getShortDescription());
-            logo(other.getLogo());
-            featureType(other.getFeatureType());
-            termsOfUseUrl(other.getTermsOfUseUrl());
-            privacyPolicyUrl(other.getPrivacyPolicyUrl());
-            publicSupportLink(other.getPublicSupportLink());
-            currentRelease(other.getCurrentRelease());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -310,13 +252,11 @@ public final class Integration {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -324,13 +264,11 @@ public final class Integration {
          */
         @JsonSetter(value = "catalog_id", nulls = Nulls.SKIP)
         public Builder catalogId(Optional<String> catalogId) {
-            this.catalogId = catalogId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Optional.ofNullable(catalogId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -338,13 +276,11 @@ public final class Integration {
          */
         @JsonSetter(value = "url_slug", nulls = Nulls.SKIP)
         public Builder urlSlug(Optional<String> urlSlug) {
-            this.urlSlug = urlSlug;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder urlSlug(String urlSlug) {
-            this.urlSlug = Optional.ofNullable(urlSlug);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -353,13 +289,11 @@ public final class Integration {
          */
         @JsonSetter(value = "partner_id", nulls = Nulls.SKIP)
         public Builder partnerId(Optional<String> partnerId) {
-            this.partnerId = partnerId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder partnerId(String partnerId) {
-            this.partnerId = Optional.ofNullable(partnerId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -370,13 +304,11 @@ public final class Integration {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -385,13 +317,11 @@ public final class Integration {
          */
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -399,131 +329,95 @@ public final class Integration {
          */
         @JsonSetter(value = "short_description", nulls = Nulls.SKIP)
         public Builder shortDescription(Optional<String> shortDescription) {
-            this.shortDescription = shortDescription;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder shortDescription(String shortDescription) {
-            this.shortDescription = Optional.ofNullable(shortDescription);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "logo", nulls = Nulls.SKIP)
         public Builder logo(Optional<String> logo) {
-            this.logo = logo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logo(String logo) {
-            this.logo = Optional.ofNullable(logo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "feature_type", nulls = Nulls.SKIP)
         public Builder featureType(Optional<IntegrationFeatureTypeEnum> featureType) {
-            this.featureType = featureType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder featureType(IntegrationFeatureTypeEnum featureType) {
-            this.featureType = Optional.ofNullable(featureType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "terms_of_use_url", nulls = Nulls.SKIP)
         public Builder termsOfUseUrl(Optional<String> termsOfUseUrl) {
-            this.termsOfUseUrl = termsOfUseUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder termsOfUseUrl(String termsOfUseUrl) {
-            this.termsOfUseUrl = Optional.ofNullable(termsOfUseUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "privacy_policy_url", nulls = Nulls.SKIP)
         public Builder privacyPolicyUrl(Optional<String> privacyPolicyUrl) {
-            this.privacyPolicyUrl = privacyPolicyUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder privacyPolicyUrl(String privacyPolicyUrl) {
-            this.privacyPolicyUrl = Optional.ofNullable(privacyPolicyUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "public_support_link", nulls = Nulls.SKIP)
         public Builder publicSupportLink(Optional<String> publicSupportLink) {
-            this.publicSupportLink = publicSupportLink;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publicSupportLink(String publicSupportLink) {
-            this.publicSupportLink = Optional.ofNullable(publicSupportLink);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "current_release", nulls = Nulls.SKIP)
         public Builder currentRelease(Optional<IntegrationRelease> currentRelease) {
-            this.currentRelease = currentRelease;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder currentRelease(IntegrationRelease currentRelease) {
-            this.currentRelease = Optional.ofNullable(currentRelease);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Integration build() {
-            return new Integration(
-                    id,
-                    catalogId,
-                    urlSlug,
-                    partnerId,
-                    name,
-                    description,
-                    shortDescription,
-                    logo,
-                    featureType,
-                    termsOfUseUrl,
-                    privacyPolicyUrl,
-                    publicSupportLink,
-                    currentRelease,
-                    createdAt,
-                    updatedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

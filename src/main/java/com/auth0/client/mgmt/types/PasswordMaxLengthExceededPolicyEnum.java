@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordMaxLengthExceededPolicyEnum {
-    public static final PasswordMaxLengthExceededPolicyEnum TRUNCATE =
-            new PasswordMaxLengthExceededPolicyEnum(Value.TRUNCATE, "truncate");
 
-    public static final PasswordMaxLengthExceededPolicyEnum ERROR =
-            new PasswordMaxLengthExceededPolicyEnum(Value.ERROR, "error");
+    public static final PasswordMaxLengthExceededPolicyEnum TRUNCATE = new PasswordMaxLengthExceededPolicyEnum(Value.TRUNCATE, "truncate");
+
+    public static final PasswordMaxLengthExceededPolicyEnum ERROR = new PasswordMaxLengthExceededPolicyEnum(Value.ERROR, "error");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class PasswordMaxLengthExceededPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordMaxLengthExceededPolicyEnum
-                        && this.string.equals(((PasswordMaxLengthExceededPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TRUNCATE:
-                return visitor.visitTruncate();
-            case ERROR:
-                return visitor.visitError();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordMaxLengthExceededPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "truncate":
-                return TRUNCATE;
-            case "error":
-                return ERROR;
-            default:
-                return new PasswordMaxLengthExceededPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TRUNCATE,
 
-        ERROR,
-
-        UNKNOWN
+        TRUNCATE, ERROR, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTruncate();
 
         T visitError();

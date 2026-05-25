@@ -7,17 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldPasswordConfigHashEnum {
+
     public static final FormFieldPasswordConfigHashEnum SHA1 = new FormFieldPasswordConfigHashEnum(Value.SHA1, "SHA1");
 
     public static final FormFieldPasswordConfigHashEnum NONE = new FormFieldPasswordConfigHashEnum(Value.NONE, "NONE");
 
-    public static final FormFieldPasswordConfigHashEnum SHA256 =
-            new FormFieldPasswordConfigHashEnum(Value.SHA256, "SHA256");
+    public static final FormFieldPasswordConfigHashEnum SHA256 = new FormFieldPasswordConfigHashEnum(Value.SHA256, "SHA256");
 
     public static final FormFieldPasswordConfigHashEnum MD5 = new FormFieldPasswordConfigHashEnum(Value.MD5, "MD5");
 
-    public static final FormFieldPasswordConfigHashEnum SHA512 =
-            new FormFieldPasswordConfigHashEnum(Value.SHA512, "SHA512");
+    public static final FormFieldPasswordConfigHashEnum SHA512 = new FormFieldPasswordConfigHashEnum(Value.SHA512, "SHA512");
 
     private final Value value;
 
@@ -29,78 +28,46 @@ public final class FormFieldPasswordConfigHashEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldPasswordConfigHashEnum
-                        && this.string.equals(((FormFieldPasswordConfigHashEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SHA1:
-                return visitor.visitSha1();
-            case NONE:
-                return visitor.visitNone();
-            case SHA256:
-                return visitor.visitSha256();
-            case MD5:
-                return visitor.visitMd5();
-            case SHA512:
-                return visitor.visitSha512();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldPasswordConfigHashEnum valueOf(String value) {
-        switch (value) {
-            case "SHA1":
-                return SHA1;
-            case "NONE":
-                return NONE;
-            case "SHA256":
-                return SHA256;
-            case "MD5":
-                return MD5;
-            case "SHA512":
-                return SHA512;
-            default:
-                return new FormFieldPasswordConfigHashEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         NONE,
-
         MD5,
-
         SHA1,
-
         SHA256,
-
         SHA512,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitMd5();

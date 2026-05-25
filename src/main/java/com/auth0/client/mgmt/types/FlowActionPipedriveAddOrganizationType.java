@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionPipedriveAddOrganizationType {
-    public static final FlowActionPipedriveAddOrganizationType PIPEDRIVE =
-            new FlowActionPipedriveAddOrganizationType(Value.PIPEDRIVE, "PIPEDRIVE");
+
+    public static final FlowActionPipedriveAddOrganizationType PIPEDRIVE = new FlowActionPipedriveAddOrganizationType(Value.PIPEDRIVE, "PIPEDRIVE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionPipedriveAddOrganizationType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionPipedriveAddOrganizationType
-                        && this.string.equals(((FlowActionPipedriveAddOrganizationType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PIPEDRIVE:
-                return visitor.visitPipedrive();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionPipedriveAddOrganizationType valueOf(String value) {
-        switch (value) {
-            case "PIPEDRIVE":
-                return PIPEDRIVE;
-            default:
-                return new FlowActionPipedriveAddOrganizationType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PIPEDRIVE,
 
-        UNKNOWN
+        PIPEDRIVE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPipedrive();
 
         T visitUnknown(String unknownType);

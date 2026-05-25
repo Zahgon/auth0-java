@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionProfileStrategyOverrides.Builder.class)
 public final class ConnectionProfileStrategyOverrides {
+
     private final Optional<ConnectionProfileStrategyOverride> pingfederate;
 
     private final Optional<ConnectionProfileStrategyOverride> ad;
@@ -38,16 +39,7 @@ public final class ConnectionProfileStrategyOverrides {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionProfileStrategyOverrides(
-            Optional<ConnectionProfileStrategyOverride> pingfederate,
-            Optional<ConnectionProfileStrategyOverride> ad,
-            Optional<ConnectionProfileStrategyOverride> adfs,
-            Optional<ConnectionProfileStrategyOverride> waad,
-            Optional<ConnectionProfileStrategyOverride> googleApps,
-            Optional<ConnectionProfileStrategyOverride> okta,
-            Optional<ConnectionProfileStrategyOverride> oidc,
-            Optional<ConnectionProfileStrategyOverride> samlp,
-            Map<String, Object> additionalProperties) {
+    private ConnectionProfileStrategyOverrides(Optional<ConnectionProfileStrategyOverride> pingfederate, Optional<ConnectionProfileStrategyOverride> ad, Optional<ConnectionProfileStrategyOverride> adfs, Optional<ConnectionProfileStrategyOverride> waad, Optional<ConnectionProfileStrategyOverride> googleApps, Optional<ConnectionProfileStrategyOverride> okta, Optional<ConnectionProfileStrategyOverride> oidc, Optional<ConnectionProfileStrategyOverride> samlp, Map<String, Object> additionalProperties) {
         this.pingfederate = pingfederate;
         this.ad = ad;
         this.adfs = adfs;
@@ -61,84 +53,75 @@ public final class ConnectionProfileStrategyOverrides {
 
     @JsonProperty("pingfederate")
     public Optional<ConnectionProfileStrategyOverride> getPingfederate() {
-        return pingfederate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ad")
     public Optional<ConnectionProfileStrategyOverride> getAd() {
-        return ad;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("adfs")
     public Optional<ConnectionProfileStrategyOverride> getAdfs() {
-        return adfs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("waad")
     public Optional<ConnectionProfileStrategyOverride> getWaad() {
-        return waad;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("google-apps")
     public Optional<ConnectionProfileStrategyOverride> getGoogleApps() {
-        return googleApps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("okta")
     public Optional<ConnectionProfileStrategyOverride> getOkta() {
-        return okta;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc")
     public Optional<ConnectionProfileStrategyOverride> getOidc() {
-        return oidc;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("samlp")
     public Optional<ConnectionProfileStrategyOverride> getSamlp() {
-        return samlp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionProfileStrategyOverrides
-                && equalTo((ConnectionProfileStrategyOverrides) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionProfileStrategyOverrides other) {
-        return pingfederate.equals(other.pingfederate)
-                && ad.equals(other.ad)
-                && adfs.equals(other.adfs)
-                && waad.equals(other.waad)
-                && googleApps.equals(other.googleApps)
-                && okta.equals(other.okta)
-                && oidc.equals(other.oidc)
-                && samlp.equals(other.samlp);
+        return pingfederate.equals(other.pingfederate) && ad.equals(other.ad) && adfs.equals(other.adfs) && waad.equals(other.waad) && googleApps.equals(other.googleApps) && okta.equals(other.okta) && oidc.equals(other.oidc) && samlp.equals(other.samlp);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.pingfederate, this.ad, this.adfs, this.waad, this.googleApps, this.okta, this.oidc, this.samlp);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionProfileStrategyOverride> pingfederate = Optional.empty();
 
         private Optional<ConnectionProfileStrategyOverride> ad = Optional.empty();
@@ -158,121 +141,95 @@ public final class ConnectionProfileStrategyOverrides {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionProfileStrategyOverrides other) {
-            pingfederate(other.getPingfederate());
-            ad(other.getAd());
-            adfs(other.getAdfs());
-            waad(other.getWaad());
-            googleApps(other.getGoogleApps());
-            okta(other.getOkta());
-            oidc(other.getOidc());
-            samlp(other.getSamlp());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pingfederate", nulls = Nulls.SKIP)
         public Builder pingfederate(Optional<ConnectionProfileStrategyOverride> pingfederate) {
-            this.pingfederate = pingfederate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pingfederate(ConnectionProfileStrategyOverride pingfederate) {
-            this.pingfederate = Optional.ofNullable(pingfederate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ad", nulls = Nulls.SKIP)
         public Builder ad(Optional<ConnectionProfileStrategyOverride> ad) {
-            this.ad = ad;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ad(ConnectionProfileStrategyOverride ad) {
-            this.ad = Optional.ofNullable(ad);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "adfs", nulls = Nulls.SKIP)
         public Builder adfs(Optional<ConnectionProfileStrategyOverride> adfs) {
-            this.adfs = adfs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adfs(ConnectionProfileStrategyOverride adfs) {
-            this.adfs = Optional.ofNullable(adfs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "waad", nulls = Nulls.SKIP)
         public Builder waad(Optional<ConnectionProfileStrategyOverride> waad) {
-            this.waad = waad;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder waad(ConnectionProfileStrategyOverride waad) {
-            this.waad = Optional.ofNullable(waad);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "google-apps", nulls = Nulls.SKIP)
         public Builder googleApps(Optional<ConnectionProfileStrategyOverride> googleApps) {
-            this.googleApps = googleApps;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleApps(ConnectionProfileStrategyOverride googleApps) {
-            this.googleApps = Optional.ofNullable(googleApps);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "okta", nulls = Nulls.SKIP)
         public Builder okta(Optional<ConnectionProfileStrategyOverride> okta) {
-            this.okta = okta;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder okta(ConnectionProfileStrategyOverride okta) {
-            this.okta = Optional.ofNullable(okta);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oidc", nulls = Nulls.SKIP)
         public Builder oidc(Optional<ConnectionProfileStrategyOverride> oidc) {
-            this.oidc = oidc;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidc(ConnectionProfileStrategyOverride oidc) {
-            this.oidc = Optional.ofNullable(oidc);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "samlp", nulls = Nulls.SKIP)
         public Builder samlp(Optional<ConnectionProfileStrategyOverride> samlp) {
-            this.samlp = samlp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder samlp(ConnectionProfileStrategyOverride samlp) {
-            this.samlp = Optional.ofNullable(samlp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionProfileStrategyOverrides build() {
-            return new ConnectionProfileStrategyOverrides(
-                    pingfederate, ad, adfs, waad, googleApps, okta, oidc, samlp, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

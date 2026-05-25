@@ -21,13 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BreachedPasswordDetectionPreUserRegistrationStage.Builder.class)
 public final class BreachedPasswordDetectionPreUserRegistrationStage {
+
     private final Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> shields;
 
     private final Map<String, Object> additionalProperties;
 
-    private BreachedPasswordDetectionPreUserRegistrationStage(
-            Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> shields,
-            Map<String, Object> additionalProperties) {
+    private BreachedPasswordDetectionPreUserRegistrationStage(Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> shields, Map<String, Object> additionalProperties) {
         this.shields = shields;
         this.additionalProperties = additionalProperties;
     }
@@ -38,19 +37,17 @@ public final class BreachedPasswordDetectionPreUserRegistrationStage {
      */
     @JsonProperty("shields")
     public Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> getShields() {
-        return shields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BreachedPasswordDetectionPreUserRegistrationStage
-                && equalTo((BreachedPasswordDetectionPreUserRegistrationStage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BreachedPasswordDetectionPreUserRegistrationStage other) {
@@ -59,30 +56,31 @@ public final class BreachedPasswordDetectionPreUserRegistrationStage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.shields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> shields = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(BreachedPasswordDetectionPreUserRegistrationStage other) {
-            shields(other.getShields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -91,27 +89,23 @@ public final class BreachedPasswordDetectionPreUserRegistrationStage {
          */
         @JsonSetter(value = "shields", nulls = Nulls.SKIP)
         public Builder shields(Optional<List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum>> shields) {
-            this.shields = shields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder shields(List<BreachedPasswordDetectionPreUserRegistrationShieldsEnum> shields) {
-            this.shields = Optional.ofNullable(shields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public BreachedPasswordDetectionPreUserRegistrationStage build() {
-            return new BreachedPasswordDetectionPreUserRegistrationStage(shields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

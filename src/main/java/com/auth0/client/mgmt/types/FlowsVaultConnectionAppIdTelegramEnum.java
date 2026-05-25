@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdTelegramEnum {
-    public static final FlowsVaultConnectionAppIdTelegramEnum TELEGRAM =
-            new FlowsVaultConnectionAppIdTelegramEnum(Value.TELEGRAM, "TELEGRAM");
+
+    public static final FlowsVaultConnectionAppIdTelegramEnum TELEGRAM = new FlowsVaultConnectionAppIdTelegramEnum(Value.TELEGRAM, "TELEGRAM");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdTelegramEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdTelegramEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdTelegramEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TELEGRAM:
-                return visitor.visitTelegram();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdTelegramEnum valueOf(String value) {
-        switch (value) {
-            case "TELEGRAM":
-                return TELEGRAM;
-            default:
-                return new FlowsVaultConnectionAppIdTelegramEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TELEGRAM,
 
-        UNKNOWN
+        TELEGRAM, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTelegram();
 
         T visitUnknown(String unknownType);

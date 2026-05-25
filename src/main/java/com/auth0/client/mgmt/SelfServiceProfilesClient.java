@@ -19,6 +19,7 @@ import com.auth0.client.mgmt.types.UpdateSelfServiceProfileResponseContent;
 import java.util.function.Supplier;
 
 public class SelfServiceProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSelfServiceProfilesClient rawClient;
@@ -38,115 +39,112 @@ public class SelfServiceProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSelfServiceProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
     public SyncPagingIterable<SelfServiceProfile> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
     public SyncPagingIterable<SelfServiceProfile> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
     public SyncPagingIterable<SelfServiceProfile> list(ListSelfServiceProfilesRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
-    public SyncPagingIterable<SelfServiceProfile> list(
-            ListSelfServiceProfilesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<SelfServiceProfile> list(ListSelfServiceProfilesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a self-service profile.
      */
     public CreateSelfServiceProfileResponseContent create(CreateSelfServiceProfileRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a self-service profile.
      */
-    public CreateSelfServiceProfileResponseContent create(
-            CreateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateSelfServiceProfileResponseContent create(CreateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a self-service profile by Id.
      */
     public GetSelfServiceProfileResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a self-service profile by Id.
      */
     public GetSelfServiceProfileResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a self-service profile by Id.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a self-service profile by Id.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
     public UpdateSelfServiceProfileResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
     public UpdateSelfServiceProfileResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
     public UpdateSelfServiceProfileResponseContent update(String id, UpdateSelfServiceProfileRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
-    public UpdateSelfServiceProfileResponseContent update(
-            String id, UpdateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateSelfServiceProfileResponseContent update(String id, UpdateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CustomTextClient customText() {
-        return this.customTextClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SsoTicketClient ssoTicket() {
-        return this.ssoTicketClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

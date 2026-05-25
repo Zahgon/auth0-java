@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentPingFederateStrategy {
-    public static final ConnectionResponseContentPingFederateStrategy PINGFEDERATE =
-            new ConnectionResponseContentPingFederateStrategy(Value.PINGFEDERATE, "pingfederate");
+
+    public static final ConnectionResponseContentPingFederateStrategy PINGFEDERATE = new ConnectionResponseContentPingFederateStrategy(Value.PINGFEDERATE, "pingfederate");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentPingFederateStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentPingFederateStrategy
-                        && this.string.equals(((ConnectionResponseContentPingFederateStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PINGFEDERATE:
-                return visitor.visitPingfederate();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentPingFederateStrategy valueOf(String value) {
-        switch (value) {
-            case "pingfederate":
-                return PINGFEDERATE;
-            default:
-                return new ConnectionResponseContentPingFederateStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PINGFEDERATE,
 
-        UNKNOWN
+        PINGFEDERATE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPingfederate();
 
         T visitUnknown(String unknownType);

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0MakeCallType {
+
     public static final FlowActionAuth0MakeCallType AUTH0 = new FlowActionAuth0MakeCallType(Value.AUTH0, "AUTH0");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionAuth0MakeCallType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0MakeCallType
-                        && this.string.equals(((FlowActionAuth0MakeCallType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTH0:
-                return visitor.visitAuth0();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0MakeCallType valueOf(String value) {
-        switch (value) {
-            case "AUTH0":
-                return AUTH0;
-            default:
-                return new FlowActionAuth0MakeCallType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0,
 
-        UNKNOWN
+        AUTH0, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0();
 
         T visitUnknown(String unknownType);

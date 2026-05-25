@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRulesConfigsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRulesConfigsClient rawClient;
@@ -25,7 +26,7 @@ public class AsyncRulesConfigsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRulesConfigsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,7 +35,7 @@ public class AsyncRulesConfigsClient {
      * </code></pre>
      */
     public CompletableFuture<List<RulesConfig>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,35 +44,34 @@ public class AsyncRulesConfigsClient {
      * </code></pre>
      */
     public CompletableFuture<List<RulesConfig>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets a rules config variable.
      */
     public CompletableFuture<SetRulesConfigResponseContent> set(String key, SetRulesConfigRequestContent request) {
-        return this.rawClient.set(key, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets a rules config variable.
      */
-    public CompletableFuture<SetRulesConfigResponseContent> set(
-            String key, SetRulesConfigRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(key, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetRulesConfigResponseContent> set(String key, SetRulesConfigRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a rules config variable identified by its key.
      */
     public CompletableFuture<Void> delete(String key) {
-        return this.rawClient.delete(key).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a rules config variable identified by its key.
      */
     public CompletableFuture<Void> delete(String key, RequestOptions requestOptions) {
-        return this.rawClient.delete(key, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

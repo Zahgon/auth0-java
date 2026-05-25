@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetFlowResponseContent.Builder.class)
 public final class GetFlowResponseContent {
+
     private final String id;
 
     private final String name;
@@ -37,14 +38,7 @@ public final class GetFlowResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetFlowResponseContent(
-            String id,
-            String name,
-            Optional<List<FlowAction>> actions,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            Optional<String> executedAt,
-            Map<String, Object> additionalProperties) {
+    private GetFlowResponseContent(String id, String name, Optional<List<FlowAction>> actions, OffsetDateTime createdAt, OffsetDateTime updatedAt, Optional<String> executedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.actions = actions;
@@ -56,87 +50,86 @@ public final class GetFlowResponseContent {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("actions")
     public Optional<List<FlowAction>> getActions() {
-        return actions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("executed_at")
     public Optional<String> getExecutedAt() {
-        return executedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetFlowResponseContent && equalTo((GetFlowResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetFlowResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && actions.equals(other.actions)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && executedAt.equals(other.executedAt);
+        return id.equals(other.id) && name.equals(other.name) && actions.equals(other.actions) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && executedAt.equals(other.executedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.name, this.actions, this.createdAt, this.updatedAt, this.executedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         NameStage id(@NotNull String id);
 
         Builder from(GetFlowResponseContent other);
     }
 
     public interface NameStage {
+
         CreatedAtStage name(@NotNull String name);
     }
 
     public interface CreatedAtStage {
+
         UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt);
     }
 
     public interface UpdatedAtStage {
+
         _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt);
     }
 
     public interface _FinalStage {
+
         GetFlowResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -154,6 +147,7 @@ public final class GetFlowResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, NameStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -169,89 +163,73 @@ public final class GetFlowResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetFlowResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            actions(other.getActions());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            executedAt(other.getExecutedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public CreatedAtStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage executedAt(String executedAt) {
-            this.executedAt = Optional.ofNullable(executedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "executed_at", nulls = Nulls.SKIP)
         public _FinalStage executedAt(Optional<String> executedAt) {
-            this.executedAt = executedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage actions(List<FlowAction> actions) {
-            this.actions = Optional.ofNullable(actions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "actions", nulls = Nulls.SKIP)
         public _FinalStage actions(Optional<List<FlowAction>> actions) {
-            this.actions = actions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetFlowResponseContent build() {
-            return new GetFlowResponseContent(
-                    id, name, actions, createdAt, updatedAt, executedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

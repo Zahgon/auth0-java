@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentBitbucketStrategy {
-    public static final ConnectionResponseContentBitbucketStrategy BITBUCKET =
-            new ConnectionResponseContentBitbucketStrategy(Value.BITBUCKET, "bitbucket");
+
+    public static final ConnectionResponseContentBitbucketStrategy BITBUCKET = new ConnectionResponseContentBitbucketStrategy(Value.BITBUCKET, "bitbucket");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentBitbucketStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentBitbucketStrategy
-                        && this.string.equals(((ConnectionResponseContentBitbucketStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BITBUCKET:
-                return visitor.visitBitbucket();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentBitbucketStrategy valueOf(String value) {
-        switch (value) {
-            case "bitbucket":
-                return BITBUCKET;
-            default:
-                return new ConnectionResponseContentBitbucketStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BITBUCKET,
 
-        UNKNOWN
+        BITBUCKET, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBitbucket();
 
         T visitUnknown(String unknownType);

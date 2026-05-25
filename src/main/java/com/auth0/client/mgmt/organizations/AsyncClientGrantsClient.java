@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.OrganizationClientGrant;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncClientGrantsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawClientGrantsClient rawClient;
@@ -26,43 +27,38 @@ public class AsyncClientGrantsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawClientGrantsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, ListOrganizationClientGrantsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(String id, ListOrganizationClientGrantsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(
-            String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationClientGrant>> list(String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<AssociateOrganizationClientGrantResponseContent> create(
-            String id, AssociateOrganizationClientGrantRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<AssociateOrganizationClientGrantResponseContent> create(String id, AssociateOrganizationClientGrantRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<AssociateOrganizationClientGrantResponseContent> create(
-            String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<AssociateOrganizationClientGrantResponseContent> create(String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String grantId) {
-        return this.rawClient.delete(id, grantId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String grantId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, grantId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

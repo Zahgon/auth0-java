@@ -23,6 +23,7 @@ import com.auth0.client.mgmt.types.UpdateDirectoryProvisioningResponseContent;
 import java.util.function.Supplier;
 
 public class DirectoryProvisioningClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawDirectoryProvisioningClient rawClient;
@@ -39,193 +40,178 @@ public class DirectoryProvisioningClient {
      * Get responses with HTTP metadata like headers
      */
     public RawDirectoryProvisioningClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of directory provisioning configurations of a tenant.
      */
     public SyncPagingIterable<DirectoryProvisioning> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of directory provisioning configurations of a tenant.
      */
     public SyncPagingIterable<DirectoryProvisioning> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of directory provisioning configurations of a tenant.
      */
     public SyncPagingIterable<DirectoryProvisioning> list(ListDirectoryProvisioningsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of directory provisioning configurations of a tenant.
      */
-    public SyncPagingIterable<DirectoryProvisioning> list(
-            ListDirectoryProvisioningsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<DirectoryProvisioning> list(ListDirectoryProvisioningsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the directory provisioning configuration of a connection.
      */
     public GetDirectoryProvisioningResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the directory provisioning configuration of a connection.
      */
     public GetDirectoryProvisioningResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a directory provisioning configuration for a connection.
      */
     public CreateDirectoryProvisioningResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a directory provisioning configuration for a connection.
      */
     public CreateDirectoryProvisioningResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a directory provisioning configuration for a connection.
      */
-    public CreateDirectoryProvisioningResponseContent create(
-            String id, OptionalNullable<CreateDirectoryProvisioningRequestContent> request) {
-        return this.rawClient.create(id, request).body();
+    public CreateDirectoryProvisioningResponseContent create(String id, OptionalNullable<CreateDirectoryProvisioningRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a directory provisioning configuration for a connection.
      */
-    public CreateDirectoryProvisioningResponseContent create(
-            String id,
-            OptionalNullable<CreateDirectoryProvisioningRequestContent> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateDirectoryProvisioningResponseContent create(String id, OptionalNullable<CreateDirectoryProvisioningRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the directory provisioning configuration of a connection.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the directory provisioning configuration of a connection.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the directory provisioning configuration of a connection.
      */
     public UpdateDirectoryProvisioningResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the directory provisioning configuration of a connection.
      */
     public UpdateDirectoryProvisioningResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the directory provisioning configuration of a connection.
      */
-    public UpdateDirectoryProvisioningResponseContent update(
-            String id, OptionalNullable<UpdateDirectoryProvisioningRequestContent> request) {
-        return this.rawClient.update(id, request).body();
+    public UpdateDirectoryProvisioningResponseContent update(String id, OptionalNullable<UpdateDirectoryProvisioningRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the directory provisioning configuration of a connection.
      */
-    public UpdateDirectoryProvisioningResponseContent update(
-            String id,
-            OptionalNullable<UpdateDirectoryProvisioningRequestContent> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateDirectoryProvisioningResponseContent update(String id, OptionalNullable<UpdateDirectoryProvisioningRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the directory provisioning default attribute mapping of a connection.
      */
     public GetDirectoryProvisioningDefaultMappingResponseContent getDefaultMapping(String id) {
-        return this.rawClient.getDefaultMapping(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the directory provisioning default attribute mapping of a connection.
      */
-    public GetDirectoryProvisioningDefaultMappingResponseContent getDefaultMapping(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.getDefaultMapping(id, requestOptions).body();
+    public GetDirectoryProvisioningDefaultMappingResponseContent getDefaultMapping(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the configured synchronized groups for a connection directory provisioning configuration.
      */
     public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(String id) {
-        return this.rawClient.listSynchronizedGroups(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the configured synchronized groups for a connection directory provisioning configuration.
      */
-    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.listSynchronizedGroups(id, requestOptions).body();
+    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the configured synchronized groups for a connection directory provisioning configuration.
      */
-    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(
-            String id, ListSynchronizedGroupsRequestParameters request) {
-        return this.rawClient.listSynchronizedGroups(id, request).body();
+    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(String id, ListSynchronizedGroupsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the configured synchronized groups for a connection directory provisioning configuration.
      */
-    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(
-            String id, ListSynchronizedGroupsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient
-                .listSynchronizedGroups(id, request, requestOptions)
-                .body();
+    public SyncPagingIterable<SynchronizedGroupPayload> listSynchronizedGroups(String id, ListSynchronizedGroupsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace the selected groups for a connection directory provisioning configuration.
      */
     public void set(String id, ReplaceSynchronizedGroupsRequestContent request) {
-        this.rawClient.set(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace the selected groups for a connection directory provisioning configuration.
      */
     public void set(String id, ReplaceSynchronizedGroupsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.set(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SynchronizationsClient synchronizations() {
-        return this.synchronizationsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.users.types.ClearAssessorsRequestContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRiskAssessmentsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRiskAssessmentsClient rawClient;
@@ -22,21 +23,20 @@ public class AsyncRiskAssessmentsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRiskAssessmentsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Clear risk assessment assessors for a specific user
      */
     public CompletableFuture<Void> clear(String id, ClearAssessorsRequestContent request) {
-        return this.rawClient.clear(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Clear risk assessment assessors for a specific user
      */
-    public CompletableFuture<Void> clear(
-            String id, ClearAssessorsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.clear(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> clear(String id, ClearAssessorsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

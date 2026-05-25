@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionTrigger.Builder.class)
 public final class ActionTrigger {
+
     private final ActionTriggerTypeEnum id;
 
     private final Optional<String> version;
@@ -38,15 +39,7 @@ public final class ActionTrigger {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionTrigger(
-            ActionTriggerTypeEnum id,
-            Optional<String> version,
-            Optional<String> status,
-            Optional<List<String>> runtimes,
-            Optional<String> defaultRuntime,
-            Optional<List<ActionTriggerCompatibleTrigger>> compatibleTriggers,
-            Optional<ActionBindingTypeEnum> bindingPolicy,
-            Map<String, Object> additionalProperties) {
+    private ActionTrigger(ActionTriggerTypeEnum id, Optional<String> version, Optional<String> status, Optional<List<String>> runtimes, Optional<String> defaultRuntime, Optional<List<ActionTriggerCompatibleTrigger>> compatibleTriggers, Optional<ActionBindingTypeEnum> bindingPolicy, Map<String, Object> additionalProperties) {
         this.id = id;
         this.version = version;
         this.status = status;
@@ -59,7 +52,7 @@ public final class ActionTrigger {
 
     @JsonProperty("id")
     public ActionTriggerTypeEnum getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,7 +60,7 @@ public final class ActionTrigger {
      */
     @JsonProperty("version")
     public Optional<String> getVersion() {
-        return version;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +68,7 @@ public final class ActionTrigger {
      */
     @JsonProperty("status")
     public Optional<String> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +76,7 @@ public final class ActionTrigger {
      */
     @JsonProperty("runtimes")
     public Optional<List<String>> getRuntimes() {
-        return runtimes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +84,7 @@ public final class ActionTrigger {
      */
     @JsonProperty("default_runtime")
     public Optional<String> getDefaultRuntime() {
-        return defaultRuntime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,63 +92,51 @@ public final class ActionTrigger {
      */
     @JsonProperty("compatible_triggers")
     public Optional<List<ActionTriggerCompatibleTrigger>> getCompatibleTriggers() {
-        return compatibleTriggers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("binding_policy")
     public Optional<ActionBindingTypeEnum> getBindingPolicy() {
-        return bindingPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionTrigger && equalTo((ActionTrigger) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionTrigger other) {
-        return id.equals(other.id)
-                && version.equals(other.version)
-                && status.equals(other.status)
-                && runtimes.equals(other.runtimes)
-                && defaultRuntime.equals(other.defaultRuntime)
-                && compatibleTriggers.equals(other.compatibleTriggers)
-                && bindingPolicy.equals(other.bindingPolicy);
+        return id.equals(other.id) && version.equals(other.version) && status.equals(other.status) && runtimes.equals(other.runtimes) && defaultRuntime.equals(other.defaultRuntime) && compatibleTriggers.equals(other.compatibleTriggers) && bindingPolicy.equals(other.bindingPolicy);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.version,
-                this.status,
-                this.runtimes,
-                this.defaultRuntime,
-                this.compatibleTriggers,
-                this.bindingPolicy);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         _FinalStage id(@NotNull ActionTriggerTypeEnum id);
 
         Builder from(ActionTrigger other);
     }
 
     public interface _FinalStage {
+
         ActionTrigger build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -204,6 +185,7 @@ public final class ActionTrigger {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, _FinalStage {
+
         private ActionTriggerTypeEnum id;
 
         private Optional<ActionBindingTypeEnum> bindingPolicy = Optional.empty();
@@ -221,38 +203,29 @@ public final class ActionTrigger {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ActionTrigger other) {
-            id(other.getId());
-            version(other.getVersion());
-            status(other.getStatus());
-            runtimes(other.getRuntimes());
-            defaultRuntime(other.getDefaultRuntime());
-            compatibleTriggers(other.getCompatibleTriggers());
-            bindingPolicy(other.getBindingPolicy());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public _FinalStage id(@NotNull ActionTriggerTypeEnum id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage bindingPolicy(ActionBindingTypeEnum bindingPolicy) {
-            this.bindingPolicy = Optional.ofNullable(bindingPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "binding_policy", nulls = Nulls.SKIP)
         public _FinalStage bindingPolicy(Optional<ActionBindingTypeEnum> bindingPolicy) {
-            this.bindingPolicy = bindingPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -261,8 +234,7 @@ public final class ActionTrigger {
          */
         @java.lang.Override
         public _FinalStage compatibleTriggers(List<ActionTriggerCompatibleTrigger> compatibleTriggers) {
-            this.compatibleTriggers = Optional.ofNullable(compatibleTriggers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -271,8 +243,7 @@ public final class ActionTrigger {
         @java.lang.Override
         @JsonSetter(value = "compatible_triggers", nulls = Nulls.SKIP)
         public _FinalStage compatibleTriggers(Optional<List<ActionTriggerCompatibleTrigger>> compatibleTriggers) {
-            this.compatibleTriggers = compatibleTriggers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,8 +252,7 @@ public final class ActionTrigger {
          */
         @java.lang.Override
         public _FinalStage defaultRuntime(String defaultRuntime) {
-            this.defaultRuntime = Optional.ofNullable(defaultRuntime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -291,8 +261,7 @@ public final class ActionTrigger {
         @java.lang.Override
         @JsonSetter(value = "default_runtime", nulls = Nulls.SKIP)
         public _FinalStage defaultRuntime(Optional<String> defaultRuntime) {
-            this.defaultRuntime = defaultRuntime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -301,8 +270,7 @@ public final class ActionTrigger {
          */
         @java.lang.Override
         public _FinalStage runtimes(List<String> runtimes) {
-            this.runtimes = Optional.ofNullable(runtimes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -311,8 +279,7 @@ public final class ActionTrigger {
         @java.lang.Override
         @JsonSetter(value = "runtimes", nulls = Nulls.SKIP)
         public _FinalStage runtimes(Optional<List<String>> runtimes) {
-            this.runtimes = runtimes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -321,8 +288,7 @@ public final class ActionTrigger {
          */
         @java.lang.Override
         public _FinalStage status(String status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -331,8 +297,7 @@ public final class ActionTrigger {
         @java.lang.Override
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public _FinalStage status(Optional<String> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -341,8 +306,7 @@ public final class ActionTrigger {
          */
         @java.lang.Override
         public _FinalStage version(String version) {
-            this.version = Optional.ofNullable(version);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,33 +315,22 @@ public final class ActionTrigger {
         @java.lang.Override
         @JsonSetter(value = "version", nulls = Nulls.SKIP)
         public _FinalStage version(Optional<String> version) {
-            this.version = version;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ActionTrigger build() {
-            return new ActionTrigger(
-                    id,
-                    version,
-                    status,
-                    runtimes,
-                    defaultRuntime,
-                    compatibleTriggers,
-                    bindingPolicy,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

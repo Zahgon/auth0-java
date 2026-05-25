@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SigningAlgorithmEnum {
+
     public static final SigningAlgorithmEnum RS512 = new SigningAlgorithmEnum(Value.RS512, "RS512");
 
     public static final SigningAlgorithmEnum PS256 = new SigningAlgorithmEnum(Value.PS256, "PS256");
@@ -25,71 +26,41 @@ public final class SigningAlgorithmEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SigningAlgorithmEnum && this.string.equals(((SigningAlgorithmEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RS512:
-                return visitor.visitRs512();
-            case PS256:
-                return visitor.visitPs256();
-            case HS256:
-                return visitor.visitHs256();
-            case RS256:
-                return visitor.visitRs256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SigningAlgorithmEnum valueOf(String value) {
-        switch (value) {
-            case "RS512":
-                return RS512;
-            case "PS256":
-                return PS256;
-            case "HS256":
-                return HS256;
-            case "RS256":
-                return RS256;
-            default:
-                return new SigningAlgorithmEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        HS256,
 
-        RS256,
-
-        RS512,
-
-        PS256,
-
-        UNKNOWN
+        HS256, RS256, RS512, PS256, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitHs256();
 
         T visitRs256();

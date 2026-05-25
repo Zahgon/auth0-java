@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.OrganizationDiscoveryDomain;
 import com.auth0.client.mgmt.types.UpdateOrganizationDiscoveryDomainResponseContent;
 
 public class DiscoveryDomainsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawDiscoveryDomainsClient rawClient;
@@ -29,7 +30,7 @@ public class DiscoveryDomainsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawDiscoveryDomainsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -37,7 +38,7 @@ public class DiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public SyncPagingIterable<OrganizationDiscoveryDomain> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,41 +46,37 @@ public class DiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public SyncPagingIterable<OrganizationDiscoveryDomain> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of all organization discovery domains associated with the specified organization.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public SyncPagingIterable<OrganizationDiscoveryDomain> list(
-            String id, ListOrganizationDiscoveryDomainsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<OrganizationDiscoveryDomain> list(String id, ListOrganizationDiscoveryDomainsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of all organization discovery domains associated with the specified organization.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public SyncPagingIterable<OrganizationDiscoveryDomain> list(
-            String id, ListOrganizationDiscoveryDomainsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<OrganizationDiscoveryDomain> list(String id, ListOrganizationDiscoveryDomainsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new discovery domain for an organization.
      */
-    public CreateOrganizationDiscoveryDomainResponseContent create(
-            String id, CreateOrganizationDiscoveryDomainRequestContent request) {
-        return this.rawClient.create(id, request).body();
+    public CreateOrganizationDiscoveryDomainResponseContent create(String id, CreateOrganizationDiscoveryDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new discovery domain for an organization.
      */
-    public CreateOrganizationDiscoveryDomainResponseContent create(
-            String id, CreateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateOrganizationDiscoveryDomainResponseContent create(String id, CreateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,16 +84,15 @@ public class DiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public GetOrganizationDiscoveryDomainByNameResponseContent getByName(String id, String discoveryDomain) {
-        return this.rawClient.getByName(id, discoveryDomain).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single organization discovery domain specified by domain name.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public GetOrganizationDiscoveryDomainByNameResponseContent getByName(
-            String id, String discoveryDomain, RequestOptions requestOptions) {
-        return this.rawClient.getByName(id, discoveryDomain, requestOptions).body();
+    public GetOrganizationDiscoveryDomainByNameResponseContent getByName(String id, String discoveryDomain, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,65 +100,56 @@ public class DiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public GetOrganizationDiscoveryDomainResponseContent get(String id, String discoveryDomainId) {
-        return this.rawClient.get(id, discoveryDomainId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single organization discovery domain specified by ID.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public GetOrganizationDiscoveryDomainResponseContent get(
-            String id, String discoveryDomainId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, discoveryDomainId, requestOptions).body();
+    public GetOrganizationDiscoveryDomainResponseContent get(String id, String discoveryDomainId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a discovery domain from an organization. This action cannot be undone.
      */
     public void delete(String id, String discoveryDomainId) {
-        this.rawClient.delete(id, discoveryDomainId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a discovery domain from an organization. This action cannot be undone.
      */
     public void delete(String id, String discoveryDomainId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, discoveryDomainId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
     public UpdateOrganizationDiscoveryDomainResponseContent update(String id, String discoveryDomainId) {
-        return this.rawClient.update(id, discoveryDomainId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public UpdateOrganizationDiscoveryDomainResponseContent update(
-            String id, String discoveryDomainId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, discoveryDomainId, requestOptions).body();
+    public UpdateOrganizationDiscoveryDomainResponseContent update(String id, String discoveryDomainId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public UpdateOrganizationDiscoveryDomainResponseContent update(
-            String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request) {
-        return this.rawClient.update(id, discoveryDomainId, request).body();
+    public UpdateOrganizationDiscoveryDomainResponseContent update(String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public UpdateOrganizationDiscoveryDomainResponseContent update(
-            String id,
-            String discoveryDomainId,
-            UpdateOrganizationDiscoveryDomainRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient
-                .update(id, discoveryDomainId, request, requestOptions)
-                .body();
+    public UpdateOrganizationDiscoveryDomainResponseContent update(String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

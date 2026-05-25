@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateFlowsVaultConnectionZapierUninitialized.Builder.class)
 public final class CreateFlowsVaultConnectionZapierUninitialized {
+
     private final String name;
 
     private final FlowsVaultConnectionAppIdZapierEnum appId;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateFlowsVaultConnectionZapierUninitialized(
-            String name, FlowsVaultConnectionAppIdZapierEnum appId, Map<String, Object> additionalProperties) {
+    private CreateFlowsVaultConnectionZapierUninitialized(String name, FlowsVaultConnectionAppIdZapierEnum appId, Map<String, Object> additionalProperties) {
         this.name = name;
         this.appId = appId;
         this.additionalProperties = additionalProperties;
@@ -37,24 +37,22 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_id")
     public FlowsVaultConnectionAppIdZapierEnum getAppId() {
-        return appId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionZapierUninitialized
-                && equalTo((CreateFlowsVaultConnectionZapierUninitialized) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionZapierUninitialized other) {
@@ -63,19 +61,20 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.appId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Flows Vault Connection name.</p>
          */
@@ -85,10 +84,12 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
     }
 
     public interface AppIdStage {
+
         _FinalStage appId(@NotNull FlowsVaultConnectionAppIdZapierEnum appId);
     }
 
     public interface _FinalStage {
+
         CreateFlowsVaultConnectionZapierUninitialized build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -98,6 +99,7 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, AppIdStage, _FinalStage {
+
         private String name;
 
         private FlowsVaultConnectionAppIdZapierEnum appId;
@@ -105,13 +107,12 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateFlowsVaultConnectionZapierUninitialized other) {
-            name(other.getName());
-            appId(other.getAppId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -122,32 +123,28 @@ public final class CreateFlowsVaultConnectionZapierUninitialized {
         @java.lang.Override
         @JsonSetter("name")
         public AppIdStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("app_id")
         public _FinalStage appId(@NotNull FlowsVaultConnectionAppIdZapierEnum appId) {
-            this.appId = Objects.requireNonNull(appId, "appId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateFlowsVaultConnectionZapierUninitialized build() {
-            return new CreateFlowsVaultConnectionZapierUninitialized(name, appId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

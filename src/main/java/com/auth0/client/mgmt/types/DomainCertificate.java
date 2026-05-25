@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DomainCertificate.Builder.class)
 public final class DomainCertificate {
+
     private final Optional<DomainCertificateStatusEnum> status;
 
     private final Optional<String> errorMsg;
@@ -30,12 +31,7 @@ public final class DomainCertificate {
 
     private final Map<String, Object> additionalProperties;
 
-    private DomainCertificate(
-            Optional<DomainCertificateStatusEnum> status,
-            Optional<String> errorMsg,
-            Optional<DomainCertificateAuthorityEnum> certificateAuthority,
-            Optional<String> renewsBefore,
-            Map<String, Object> additionalProperties) {
+    private DomainCertificate(Optional<DomainCertificateStatusEnum> status, Optional<String> errorMsg, Optional<DomainCertificateAuthorityEnum> certificateAuthority, Optional<String> renewsBefore, Map<String, Object> additionalProperties) {
         this.status = status;
         this.errorMsg = errorMsg;
         this.certificateAuthority = certificateAuthority;
@@ -45,7 +41,7 @@ public final class DomainCertificate {
 
     @JsonProperty("status")
     public Optional<DomainCertificateStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,12 +49,12 @@ public final class DomainCertificate {
      */
     @JsonProperty("error_msg")
     public Optional<String> getErrorMsg() {
-        return errorMsg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("certificate_authority")
     public Optional<DomainCertificateAuthorityEnum> getCertificateAuthority() {
-        return certificateAuthority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,43 +62,40 @@ public final class DomainCertificate {
      */
     @JsonProperty("renews_before")
     public Optional<String> getRenewsBefore() {
-        return renewsBefore;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DomainCertificate && equalTo((DomainCertificate) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DomainCertificate other) {
-        return status.equals(other.status)
-                && errorMsg.equals(other.errorMsg)
-                && certificateAuthority.equals(other.certificateAuthority)
-                && renewsBefore.equals(other.renewsBefore);
+        return status.equals(other.status) && errorMsg.equals(other.errorMsg) && certificateAuthority.equals(other.certificateAuthority) && renewsBefore.equals(other.renewsBefore);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.status, this.errorMsg, this.certificateAuthority, this.renewsBefore);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<DomainCertificateStatusEnum> status = Optional.empty();
 
         private Optional<String> errorMsg = Optional.empty();
@@ -114,25 +107,20 @@ public final class DomainCertificate {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(DomainCertificate other) {
-            status(other.getStatus());
-            errorMsg(other.getErrorMsg());
-            certificateAuthority(other.getCertificateAuthority());
-            renewsBefore(other.getRenewsBefore());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<DomainCertificateStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(DomainCertificateStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -140,24 +128,20 @@ public final class DomainCertificate {
          */
         @JsonSetter(value = "error_msg", nulls = Nulls.SKIP)
         public Builder errorMsg(Optional<String> errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errorMsg(String errorMsg) {
-            this.errorMsg = Optional.ofNullable(errorMsg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "certificate_authority", nulls = Nulls.SKIP)
         public Builder certificateAuthority(Optional<DomainCertificateAuthorityEnum> certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder certificateAuthority(DomainCertificateAuthorityEnum certificateAuthority) {
-            this.certificateAuthority = Optional.ofNullable(certificateAuthority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,27 +149,23 @@ public final class DomainCertificate {
          */
         @JsonSetter(value = "renews_before", nulls = Nulls.SKIP)
         public Builder renewsBefore(Optional<String> renewsBefore) {
-            this.renewsBefore = renewsBefore;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder renewsBefore(String renewsBefore) {
-            this.renewsBefore = Optional.ofNullable(renewsBefore);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public DomainCertificate build() {
-            return new DomainCertificate(status, errorMsg, certificateAuthority, renewsBefore, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

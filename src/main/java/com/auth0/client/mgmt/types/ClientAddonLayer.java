@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonLayer.Builder.class)
 public final class ClientAddonLayer {
+
     private final String providerId;
 
     private final String keyId;
@@ -33,13 +34,7 @@ public final class ClientAddonLayer {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonLayer(
-            String providerId,
-            String keyId,
-            String privateKey,
-            Optional<String> principal,
-            Optional<Integer> expiration,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonLayer(String providerId, String keyId, String privateKey, Optional<String> principal, Optional<Integer> expiration, Map<String, Object> additionalProperties) {
         this.providerId = providerId;
         this.keyId = keyId;
         this.privateKey = privateKey;
@@ -53,7 +48,7 @@ public final class ClientAddonLayer {
      */
     @JsonProperty("providerId")
     public String getProviderId() {
-        return providerId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,7 +56,7 @@ public final class ClientAddonLayer {
      */
     @JsonProperty("keyId")
     public String getKeyId() {
-        return keyId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +64,7 @@ public final class ClientAddonLayer {
      */
     @JsonProperty("privateKey")
     public String getPrivateKey() {
-        return privateKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,7 +72,7 @@ public final class ClientAddonLayer {
      */
     @JsonProperty("principal")
     public Optional<String> getPrincipal() {
-        return principal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,43 +80,39 @@ public final class ClientAddonLayer {
      */
     @JsonProperty("expiration")
     public Optional<Integer> getExpiration() {
-        return expiration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonLayer && equalTo((ClientAddonLayer) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonLayer other) {
-        return providerId.equals(other.providerId)
-                && keyId.equals(other.keyId)
-                && privateKey.equals(other.privateKey)
-                && principal.equals(other.principal)
-                && expiration.equals(other.expiration);
+        return providerId.equals(other.providerId) && keyId.equals(other.keyId) && privateKey.equals(other.privateKey) && principal.equals(other.principal) && expiration.equals(other.expiration);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.providerId, this.keyId, this.privateKey, this.principal, this.expiration);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ProviderIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ProviderIdStage {
+
         /**
          * <p>Provider ID of your Layer account</p>
          */
@@ -131,6 +122,7 @@ public final class ClientAddonLayer {
     }
 
     public interface KeyIdStage {
+
         /**
          * <p>Authentication Key identifier used to sign the Layer token.</p>
          */
@@ -138,6 +130,7 @@ public final class ClientAddonLayer {
     }
 
     public interface PrivateKeyStage {
+
         /**
          * <p>Private key for signing the Layer token.</p>
          */
@@ -145,6 +138,7 @@ public final class ClientAddonLayer {
     }
 
     public interface _FinalStage {
+
         ClientAddonLayer build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -168,6 +162,7 @@ public final class ClientAddonLayer {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ProviderIdStage, KeyIdStage, PrivateKeyStage, _FinalStage {
+
         private String providerId;
 
         private String keyId;
@@ -181,16 +176,12 @@ public final class ClientAddonLayer {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientAddonLayer other) {
-            providerId(other.getProviderId());
-            keyId(other.getKeyId());
-            privateKey(other.getPrivateKey());
-            principal(other.getPrincipal());
-            expiration(other.getExpiration());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -201,8 +192,7 @@ public final class ClientAddonLayer {
         @java.lang.Override
         @JsonSetter("providerId")
         public KeyIdStage providerId(@NotNull String providerId) {
-            this.providerId = Objects.requireNonNull(providerId, "providerId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,8 +203,7 @@ public final class ClientAddonLayer {
         @java.lang.Override
         @JsonSetter("keyId")
         public PrivateKeyStage keyId(@NotNull String keyId) {
-            this.keyId = Objects.requireNonNull(keyId, "keyId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -225,8 +214,7 @@ public final class ClientAddonLayer {
         @java.lang.Override
         @JsonSetter("privateKey")
         public _FinalStage privateKey(@NotNull String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey, "privateKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -235,8 +223,7 @@ public final class ClientAddonLayer {
          */
         @java.lang.Override
         public _FinalStage expiration(Integer expiration) {
-            this.expiration = Optional.ofNullable(expiration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -245,8 +232,7 @@ public final class ClientAddonLayer {
         @java.lang.Override
         @JsonSetter(value = "expiration", nulls = Nulls.SKIP)
         public _FinalStage expiration(Optional<Integer> expiration) {
-            this.expiration = expiration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -255,8 +241,7 @@ public final class ClientAddonLayer {
          */
         @java.lang.Override
         public _FinalStage principal(String principal) {
-            this.principal = Optional.ofNullable(principal);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -265,25 +250,22 @@ public final class ClientAddonLayer {
         @java.lang.Override
         @JsonSetter(value = "principal", nulls = Nulls.SKIP)
         public _FinalStage principal(Optional<String> principal) {
-            this.principal = principal;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientAddonLayer build() {
-            return new ClientAddonLayer(providerId, keyId, privateKey, principal, expiration, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

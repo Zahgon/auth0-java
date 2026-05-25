@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordIdenticalCharactersPolicyEnum {
-    public static final PasswordIdenticalCharactersPolicyEnum ALLOW =
-            new PasswordIdenticalCharactersPolicyEnum(Value.ALLOW, "allow");
 
-    public static final PasswordIdenticalCharactersPolicyEnum BLOCK =
-            new PasswordIdenticalCharactersPolicyEnum(Value.BLOCK, "block");
+    public static final PasswordIdenticalCharactersPolicyEnum ALLOW = new PasswordIdenticalCharactersPolicyEnum(Value.ALLOW, "allow");
+
+    public static final PasswordIdenticalCharactersPolicyEnum BLOCK = new PasswordIdenticalCharactersPolicyEnum(Value.BLOCK, "block");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class PasswordIdenticalCharactersPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordIdenticalCharactersPolicyEnum
-                        && this.string.equals(((PasswordIdenticalCharactersPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALLOW:
-                return visitor.visitAllow();
-            case BLOCK:
-                return visitor.visitBlock();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordIdenticalCharactersPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "allow":
-                return ALLOW;
-            case "block":
-                return BLOCK;
-            default:
-                return new PasswordIdenticalCharactersPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALLOW,
 
-        BLOCK,
-
-        UNKNOWN
+        ALLOW, BLOCK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAllow();
 
         T visitBlock();

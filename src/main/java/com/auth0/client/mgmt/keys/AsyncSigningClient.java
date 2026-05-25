@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSigningClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSigningClient rawClient;
@@ -26,62 +27,62 @@ public class AsyncSigningClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSigningClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the application signing keys associated with your tenant.
      */
     public CompletableFuture<List<SigningKeys>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the application signing keys associated with your tenant.
      */
     public CompletableFuture<List<SigningKeys>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotate the application signing key of your tenant.
      */
     public CompletableFuture<RotateSigningKeysResponseContent> rotate() {
-        return this.rawClient.rotate().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotate the application signing key of your tenant.
      */
     public CompletableFuture<RotateSigningKeysResponseContent> rotate(RequestOptions requestOptions) {
-        return this.rawClient.rotate(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the application signing key with the given ID.
      */
     public CompletableFuture<GetSigningKeysResponseContent> get(String kid) {
-        return this.rawClient.get(kid).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the application signing key with the given ID.
      */
     public CompletableFuture<GetSigningKeysResponseContent> get(String kid, RequestOptions requestOptions) {
-        return this.rawClient.get(kid, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke the application signing key with the given ID.
      */
     public CompletableFuture<RevokedSigningKeysResponseContent> revoke(String kid) {
-        return this.rawClient.revoke(kid).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke the application signing key with the given ID.
      */
     public CompletableFuture<RevokedSigningKeysResponseContent> revoke(String kid, RequestOptions requestOptions) {
-        return this.rawClient.revoke(kid, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

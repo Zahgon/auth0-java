@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemeColors.Builder.class)
 public final class BrandingThemeColors {
+
     private final Optional<String> baseFocusColor;
 
     private final Optional<String> baseHoverColor;
@@ -63,28 +64,7 @@ public final class BrandingThemeColors {
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingThemeColors(
-            Optional<String> baseFocusColor,
-            Optional<String> baseHoverColor,
-            String bodyText,
-            Optional<BrandingThemeColorsCaptchaWidgetThemeEnum> captchaWidgetTheme,
-            String error,
-            String header,
-            String icons,
-            String inputBackground,
-            String inputBorder,
-            String inputFilledText,
-            String inputLabelsPlaceholders,
-            String linksFocusedComponents,
-            String primaryButton,
-            String primaryButtonLabel,
-            Optional<String> readOnlyBackground,
-            String secondaryButtonBorder,
-            String secondaryButtonLabel,
-            String success,
-            String widgetBackground,
-            String widgetBorder,
-            Map<String, Object> additionalProperties) {
+    private BrandingThemeColors(Optional<String> baseFocusColor, Optional<String> baseHoverColor, String bodyText, Optional<BrandingThemeColorsCaptchaWidgetThemeEnum> captchaWidgetTheme, String error, String header, String icons, String inputBackground, String inputBorder, String inputFilledText, String inputLabelsPlaceholders, String linksFocusedComponents, String primaryButton, String primaryButtonLabel, Optional<String> readOnlyBackground, String secondaryButtonBorder, String secondaryButtonLabel, String success, String widgetBackground, String widgetBorder, Map<String, Object> additionalProperties) {
         this.baseFocusColor = baseFocusColor;
         this.baseHoverColor = baseHoverColor;
         this.bodyText = bodyText;
@@ -113,7 +93,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("base_focus_color")
     public Optional<String> getBaseFocusColor() {
-        return baseFocusColor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +101,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("base_hover_color")
     public Optional<String> getBaseHoverColor() {
-        return baseHoverColor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -129,12 +109,12 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("body_text")
     public String getBodyText() {
-        return bodyText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("captcha_widget_theme")
     public Optional<BrandingThemeColorsCaptchaWidgetThemeEnum> getCaptchaWidgetTheme() {
-        return captchaWidgetTheme;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -142,7 +122,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("error")
     public String getError() {
-        return error;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -150,7 +130,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("header")
     public String getHeader() {
-        return header;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -158,7 +138,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("icons")
     public String getIcons() {
-        return icons;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -166,7 +146,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("input_background")
     public String getInputBackground() {
-        return inputBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -174,7 +154,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("input_border")
     public String getInputBorder() {
-        return inputBorder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -182,7 +162,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("input_filled_text")
     public String getInputFilledText() {
-        return inputFilledText;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -190,7 +170,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("input_labels_placeholders")
     public String getInputLabelsPlaceholders() {
-        return inputLabelsPlaceholders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -198,7 +178,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("links_focused_components")
     public String getLinksFocusedComponents() {
-        return linksFocusedComponents;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -206,7 +186,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("primary_button")
     public String getPrimaryButton() {
-        return primaryButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -214,7 +194,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("primary_button_label")
     public String getPrimaryButtonLabel() {
-        return primaryButtonLabel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -222,7 +202,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("read_only_background")
     public Optional<String> getReadOnlyBackground() {
-        return readOnlyBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -230,7 +210,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("secondary_button_border")
     public String getSecondaryButtonBorder() {
-        return secondaryButtonBorder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -238,7 +218,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("secondary_button_label")
     public String getSecondaryButtonLabel() {
-        return secondaryButtonLabel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -246,7 +226,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("success")
     public String getSuccess() {
-        return success;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -254,7 +234,7 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("widget_background")
     public String getWidgetBackground() {
-        return widgetBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -262,78 +242,39 @@ public final class BrandingThemeColors {
      */
     @JsonProperty("widget_border")
     public String getWidgetBorder() {
-        return widgetBorder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemeColors && equalTo((BrandingThemeColors) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemeColors other) {
-        return baseFocusColor.equals(other.baseFocusColor)
-                && baseHoverColor.equals(other.baseHoverColor)
-                && bodyText.equals(other.bodyText)
-                && captchaWidgetTheme.equals(other.captchaWidgetTheme)
-                && error.equals(other.error)
-                && header.equals(other.header)
-                && icons.equals(other.icons)
-                && inputBackground.equals(other.inputBackground)
-                && inputBorder.equals(other.inputBorder)
-                && inputFilledText.equals(other.inputFilledText)
-                && inputLabelsPlaceholders.equals(other.inputLabelsPlaceholders)
-                && linksFocusedComponents.equals(other.linksFocusedComponents)
-                && primaryButton.equals(other.primaryButton)
-                && primaryButtonLabel.equals(other.primaryButtonLabel)
-                && readOnlyBackground.equals(other.readOnlyBackground)
-                && secondaryButtonBorder.equals(other.secondaryButtonBorder)
-                && secondaryButtonLabel.equals(other.secondaryButtonLabel)
-                && success.equals(other.success)
-                && widgetBackground.equals(other.widgetBackground)
-                && widgetBorder.equals(other.widgetBorder);
+        return baseFocusColor.equals(other.baseFocusColor) && baseHoverColor.equals(other.baseHoverColor) && bodyText.equals(other.bodyText) && captchaWidgetTheme.equals(other.captchaWidgetTheme) && error.equals(other.error) && header.equals(other.header) && icons.equals(other.icons) && inputBackground.equals(other.inputBackground) && inputBorder.equals(other.inputBorder) && inputFilledText.equals(other.inputFilledText) && inputLabelsPlaceholders.equals(other.inputLabelsPlaceholders) && linksFocusedComponents.equals(other.linksFocusedComponents) && primaryButton.equals(other.primaryButton) && primaryButtonLabel.equals(other.primaryButtonLabel) && readOnlyBackground.equals(other.readOnlyBackground) && secondaryButtonBorder.equals(other.secondaryButtonBorder) && secondaryButtonLabel.equals(other.secondaryButtonLabel) && success.equals(other.success) && widgetBackground.equals(other.widgetBackground) && widgetBorder.equals(other.widgetBorder);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.baseFocusColor,
-                this.baseHoverColor,
-                this.bodyText,
-                this.captchaWidgetTheme,
-                this.error,
-                this.header,
-                this.icons,
-                this.inputBackground,
-                this.inputBorder,
-                this.inputFilledText,
-                this.inputLabelsPlaceholders,
-                this.linksFocusedComponents,
-                this.primaryButton,
-                this.primaryButtonLabel,
-                this.readOnlyBackground,
-                this.secondaryButtonBorder,
-                this.secondaryButtonLabel,
-                this.success,
-                this.widgetBackground,
-                this.widgetBorder);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BodyTextStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BodyTextStage {
+
         /**
          * <p>Body text</p>
          */
@@ -343,6 +284,7 @@ public final class BrandingThemeColors {
     }
 
     public interface ErrorStage {
+
         /**
          * <p>Error</p>
          */
@@ -350,6 +292,7 @@ public final class BrandingThemeColors {
     }
 
     public interface HeaderStage {
+
         /**
          * <p>Header</p>
          */
@@ -357,6 +300,7 @@ public final class BrandingThemeColors {
     }
 
     public interface IconsStage {
+
         /**
          * <p>Icons</p>
          */
@@ -364,6 +308,7 @@ public final class BrandingThemeColors {
     }
 
     public interface InputBackgroundStage {
+
         /**
          * <p>Input background</p>
          */
@@ -371,6 +316,7 @@ public final class BrandingThemeColors {
     }
 
     public interface InputBorderStage {
+
         /**
          * <p>Input border</p>
          */
@@ -378,6 +324,7 @@ public final class BrandingThemeColors {
     }
 
     public interface InputFilledTextStage {
+
         /**
          * <p>Input filled text</p>
          */
@@ -385,6 +332,7 @@ public final class BrandingThemeColors {
     }
 
     public interface InputLabelsPlaceholdersStage {
+
         /**
          * <p>Input labels &amp; placeholders</p>
          */
@@ -392,6 +340,7 @@ public final class BrandingThemeColors {
     }
 
     public interface LinksFocusedComponentsStage {
+
         /**
          * <p>Links &amp; focused components</p>
          */
@@ -399,6 +348,7 @@ public final class BrandingThemeColors {
     }
 
     public interface PrimaryButtonStage {
+
         /**
          * <p>Primary button</p>
          */
@@ -406,6 +356,7 @@ public final class BrandingThemeColors {
     }
 
     public interface PrimaryButtonLabelStage {
+
         /**
          * <p>Primary button label</p>
          */
@@ -413,6 +364,7 @@ public final class BrandingThemeColors {
     }
 
     public interface SecondaryButtonBorderStage {
+
         /**
          * <p>Secondary button border</p>
          */
@@ -420,6 +372,7 @@ public final class BrandingThemeColors {
     }
 
     public interface SecondaryButtonLabelStage {
+
         /**
          * <p>Secondary button label</p>
          */
@@ -427,6 +380,7 @@ public final class BrandingThemeColors {
     }
 
     public interface SuccessStage {
+
         /**
          * <p>Success</p>
          */
@@ -434,6 +388,7 @@ public final class BrandingThemeColors {
     }
 
     public interface WidgetBackgroundStage {
+
         /**
          * <p>Widget background</p>
          */
@@ -441,6 +396,7 @@ public final class BrandingThemeColors {
     }
 
     public interface WidgetBorderStage {
+
         /**
          * <p>Widget border</p>
          */
@@ -448,6 +404,7 @@ public final class BrandingThemeColors {
     }
 
     public interface _FinalStage {
+
         BrandingThemeColors build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -481,24 +438,8 @@ public final class BrandingThemeColors {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements BodyTextStage,
-                    ErrorStage,
-                    HeaderStage,
-                    IconsStage,
-                    InputBackgroundStage,
-                    InputBorderStage,
-                    InputFilledTextStage,
-                    InputLabelsPlaceholdersStage,
-                    LinksFocusedComponentsStage,
-                    PrimaryButtonStage,
-                    PrimaryButtonLabelStage,
-                    SecondaryButtonBorderStage,
-                    SecondaryButtonLabelStage,
-                    SuccessStage,
-                    WidgetBackgroundStage,
-                    WidgetBorderStage,
-                    _FinalStage {
+    public static final class Builder implements BodyTextStage, ErrorStage, HeaderStage, IconsStage, InputBackgroundStage, InputBorderStage, InputFilledTextStage, InputLabelsPlaceholdersStage, LinksFocusedComponentsStage, PrimaryButtonStage, PrimaryButtonLabelStage, SecondaryButtonBorderStage, SecondaryButtonLabelStage, SuccessStage, WidgetBackgroundStage, WidgetBorderStage, _FinalStage {
+
         private String bodyText;
 
         private String error;
@@ -542,31 +483,12 @@ public final class BrandingThemeColors {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemeColors other) {
-            baseFocusColor(other.getBaseFocusColor());
-            baseHoverColor(other.getBaseHoverColor());
-            bodyText(other.getBodyText());
-            captchaWidgetTheme(other.getCaptchaWidgetTheme());
-            error(other.getError());
-            header(other.getHeader());
-            icons(other.getIcons());
-            inputBackground(other.getInputBackground());
-            inputBorder(other.getInputBorder());
-            inputFilledText(other.getInputFilledText());
-            inputLabelsPlaceholders(other.getInputLabelsPlaceholders());
-            linksFocusedComponents(other.getLinksFocusedComponents());
-            primaryButton(other.getPrimaryButton());
-            primaryButtonLabel(other.getPrimaryButtonLabel());
-            readOnlyBackground(other.getReadOnlyBackground());
-            secondaryButtonBorder(other.getSecondaryButtonBorder());
-            secondaryButtonLabel(other.getSecondaryButtonLabel());
-            success(other.getSuccess());
-            widgetBackground(other.getWidgetBackground());
-            widgetBorder(other.getWidgetBorder());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -577,8 +499,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("body_text")
         public ErrorStage bodyText(@NotNull String bodyText) {
-            this.bodyText = Objects.requireNonNull(bodyText, "bodyText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -589,8 +510,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("error")
         public HeaderStage error(@NotNull String error) {
-            this.error = Objects.requireNonNull(error, "error must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -601,8 +521,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("header")
         public IconsStage header(@NotNull String header) {
-            this.header = Objects.requireNonNull(header, "header must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -613,8 +532,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("icons")
         public InputBackgroundStage icons(@NotNull String icons) {
-            this.icons = Objects.requireNonNull(icons, "icons must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -625,8 +543,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("input_background")
         public InputBorderStage inputBackground(@NotNull String inputBackground) {
-            this.inputBackground = Objects.requireNonNull(inputBackground, "inputBackground must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -637,8 +554,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("input_border")
         public InputFilledTextStage inputBorder(@NotNull String inputBorder) {
-            this.inputBorder = Objects.requireNonNull(inputBorder, "inputBorder must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -649,8 +565,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("input_filled_text")
         public InputLabelsPlaceholdersStage inputFilledText(@NotNull String inputFilledText) {
-            this.inputFilledText = Objects.requireNonNull(inputFilledText, "inputFilledText must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -661,9 +576,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("input_labels_placeholders")
         public LinksFocusedComponentsStage inputLabelsPlaceholders(@NotNull String inputLabelsPlaceholders) {
-            this.inputLabelsPlaceholders =
-                    Objects.requireNonNull(inputLabelsPlaceholders, "inputLabelsPlaceholders must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -674,9 +587,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("links_focused_components")
         public PrimaryButtonStage linksFocusedComponents(@NotNull String linksFocusedComponents) {
-            this.linksFocusedComponents =
-                    Objects.requireNonNull(linksFocusedComponents, "linksFocusedComponents must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -687,8 +598,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("primary_button")
         public PrimaryButtonLabelStage primaryButton(@NotNull String primaryButton) {
-            this.primaryButton = Objects.requireNonNull(primaryButton, "primaryButton must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -699,8 +609,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("primary_button_label")
         public SecondaryButtonBorderStage primaryButtonLabel(@NotNull String primaryButtonLabel) {
-            this.primaryButtonLabel = Objects.requireNonNull(primaryButtonLabel, "primaryButtonLabel must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -711,9 +620,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("secondary_button_border")
         public SecondaryButtonLabelStage secondaryButtonBorder(@NotNull String secondaryButtonBorder) {
-            this.secondaryButtonBorder =
-                    Objects.requireNonNull(secondaryButtonBorder, "secondaryButtonBorder must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -724,9 +631,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("secondary_button_label")
         public SuccessStage secondaryButtonLabel(@NotNull String secondaryButtonLabel) {
-            this.secondaryButtonLabel =
-                    Objects.requireNonNull(secondaryButtonLabel, "secondaryButtonLabel must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -737,8 +642,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("success")
         public WidgetBackgroundStage success(@NotNull String success) {
-            this.success = Objects.requireNonNull(success, "success must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -749,8 +653,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("widget_background")
         public WidgetBorderStage widgetBackground(@NotNull String widgetBackground) {
-            this.widgetBackground = Objects.requireNonNull(widgetBackground, "widgetBackground must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -761,8 +664,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter("widget_border")
         public _FinalStage widgetBorder(@NotNull String widgetBorder) {
-            this.widgetBorder = Objects.requireNonNull(widgetBorder, "widgetBorder must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -771,8 +673,7 @@ public final class BrandingThemeColors {
          */
         @java.lang.Override
         public _FinalStage readOnlyBackground(String readOnlyBackground) {
-            this.readOnlyBackground = Optional.ofNullable(readOnlyBackground);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -781,21 +682,18 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter(value = "read_only_background", nulls = Nulls.SKIP)
         public _FinalStage readOnlyBackground(Optional<String> readOnlyBackground) {
-            this.readOnlyBackground = readOnlyBackground;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage captchaWidgetTheme(BrandingThemeColorsCaptchaWidgetThemeEnum captchaWidgetTheme) {
-            this.captchaWidgetTheme = Optional.ofNullable(captchaWidgetTheme);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "captcha_widget_theme", nulls = Nulls.SKIP)
         public _FinalStage captchaWidgetTheme(Optional<BrandingThemeColorsCaptchaWidgetThemeEnum> captchaWidgetTheme) {
-            this.captchaWidgetTheme = captchaWidgetTheme;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -804,8 +702,7 @@ public final class BrandingThemeColors {
          */
         @java.lang.Override
         public _FinalStage baseHoverColor(String baseHoverColor) {
-            this.baseHoverColor = Optional.ofNullable(baseHoverColor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -814,8 +711,7 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter(value = "base_hover_color", nulls = Nulls.SKIP)
         public _FinalStage baseHoverColor(Optional<String> baseHoverColor) {
-            this.baseHoverColor = baseHoverColor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -824,8 +720,7 @@ public final class BrandingThemeColors {
          */
         @java.lang.Override
         public _FinalStage baseFocusColor(String baseFocusColor) {
-            this.baseFocusColor = Optional.ofNullable(baseFocusColor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -834,46 +729,22 @@ public final class BrandingThemeColors {
         @java.lang.Override
         @JsonSetter(value = "base_focus_color", nulls = Nulls.SKIP)
         public _FinalStage baseFocusColor(Optional<String> baseFocusColor) {
-            this.baseFocusColor = baseFocusColor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemeColors build() {
-            return new BrandingThemeColors(
-                    baseFocusColor,
-                    baseHoverColor,
-                    bodyText,
-                    captchaWidgetTheme,
-                    error,
-                    header,
-                    icons,
-                    inputBackground,
-                    inputBorder,
-                    inputFilledText,
-                    inputLabelsPlaceholders,
-                    linksFocusedComponents,
-                    primaryButton,
-                    primaryButtonLabel,
-                    readOnlyBackground,
-                    secondaryButtonBorder,
-                    secondaryButtonLabel,
-                    success,
-                    widgetBackground,
-                    widgetBorder,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -11,25 +11,25 @@ import java.util.Date;
 public class TokenHolder {
 
     private String accessToken;
+
     private String idToken;
+
     private String refreshToken;
+
     private String tokenType;
+
     private long expiresIn;
+
     private String scope;
+
     private Date expiresAt;
 
     // We need to maintain a default constructor for backwards-compatibility
     @SuppressWarnings("unused")
-    public TokenHolder() {}
+    public TokenHolder() {
+    }
 
-    public TokenHolder(
-            String accessToken,
-            String idToken,
-            String refreshToken,
-            String tokenType,
-            long expiresIn,
-            String scope,
-            Date expiresAt) {
+    public TokenHolder(String accessToken, String idToken, String refreshToken, String tokenType, long expiresIn, String scope, Date expiresAt) {
         this.accessToken = accessToken;
         this.idToken = idToken;
         this.refreshToken = refreshToken;
@@ -45,7 +45,7 @@ public class TokenHolder {
      * @return the access token or null if missing.
      */
     public String getAccessToken() {
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +54,7 @@ public class TokenHolder {
      * @return the id token or null if missing.
      */
     public String getIdToken() {
-        return idToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,7 +63,7 @@ public class TokenHolder {
      * @return the refresh token or null if missing.
      */
     public String getRefreshToken() {
-        return refreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +72,7 @@ public class TokenHolder {
      * @return the token type or null if missing.
      */
     public String getTokenType() {
-        return tokenType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +82,7 @@ public class TokenHolder {
      * @return the number of seconds in which the Access Token token will expire, from the time it was issued.
      */
     public long getExpiresIn() {
-        return expiresIn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,7 +92,7 @@ public class TokenHolder {
      * @return the date of the Access Token's expiration. If no Access Token was present on the response, returns {@code null}
      */
     public Date getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,6 +101,6 @@ public class TokenHolder {
      * @return a space-delimited string of the granted scopes of this token.
      */
     public String getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

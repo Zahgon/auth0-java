@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionFlow.Deserializer.class)
 public final class FlowActionFlow {
+
     private final Object value;
 
     private final int type;
@@ -27,33 +28,17 @@ public final class FlowActionFlow {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionFlowBooleanCondition) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionFlowDelayFlow) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowActionFlowDoNothing) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowActionFlowErrorMessage) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FlowActionFlowMapValue) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FlowActionFlowReturnJson) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FlowActionFlowStoreVars) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionFlow && equalTo((FlowActionFlow) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionFlow other) {
@@ -62,43 +47,44 @@ public final class FlowActionFlow {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowBooleanCondition value) {
-        return new FlowActionFlow(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowDelayFlow value) {
-        return new FlowActionFlow(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowDoNothing value) {
-        return new FlowActionFlow(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowErrorMessage value) {
-        return new FlowActionFlow(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowMapValue value) {
-        return new FlowActionFlow(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowReturnJson value) {
-        return new FlowActionFlow(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionFlow of(FlowActionFlowStoreVars value) {
-        return new FlowActionFlow(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionFlowBooleanCondition value);
 
         T visit(FlowActionFlowDelayFlow value);
@@ -115,83 +101,14 @@ public final class FlowActionFlow {
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionFlow> {
+
         Deserializer() {
             super(FlowActionFlow.class);
         }
 
         @java.lang.Override
         public FlowActionFlow deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowBooleanCondition.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowDelayFlow.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowDoNothing.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowErrorMessage.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowMapValue.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowReturnJson.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlowStoreVars.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

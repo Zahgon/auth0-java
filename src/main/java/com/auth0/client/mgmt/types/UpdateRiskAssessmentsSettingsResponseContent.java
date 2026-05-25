@@ -18,6 +18,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateRiskAssessmentsSettingsResponseContent.Builder.class)
 public final class UpdateRiskAssessmentsSettingsResponseContent {
+
     private final boolean enabled;
 
     private final Map<String, Object> additionalProperties;
@@ -32,19 +33,17 @@ public final class UpdateRiskAssessmentsSettingsResponseContent {
      */
     @JsonProperty("enabled")
     public boolean getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateRiskAssessmentsSettingsResponseContent
-                && equalTo((UpdateRiskAssessmentsSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateRiskAssessmentsSettingsResponseContent other) {
@@ -53,19 +52,20 @@ public final class UpdateRiskAssessmentsSettingsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EnabledStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EnabledStage {
+
         /**
          * <p>Whether or not risk assessment is enabled.</p>
          */
@@ -75,6 +75,7 @@ public final class UpdateRiskAssessmentsSettingsResponseContent {
     }
 
     public interface _FinalStage {
+
         UpdateRiskAssessmentsSettingsResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +85,18 @@ public final class UpdateRiskAssessmentsSettingsResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EnabledStage, _FinalStage {
+
         private boolean enabled;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateRiskAssessmentsSettingsResponseContent other) {
-            enabled(other.getEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +107,22 @@ public final class UpdateRiskAssessmentsSettingsResponseContent {
         @java.lang.Override
         @JsonSetter("enabled")
         public _FinalStage enabled(boolean enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateRiskAssessmentsSettingsResponseContent build() {
-            return new UpdateRiskAssessmentsSettingsResponseContent(enabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

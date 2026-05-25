@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionAttributeIdentifier.Builder.class)
 public final class ConnectionAttributeIdentifier {
+
     private final Optional<Boolean> active;
 
     private final Optional<DefaultMethodEmailIdentifierEnum> defaultMethod;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionAttributeIdentifier(
-            Optional<Boolean> active,
-            Optional<DefaultMethodEmailIdentifierEnum> defaultMethod,
-            Map<String, Object> additionalProperties) {
+    private ConnectionAttributeIdentifier(Optional<Boolean> active, Optional<DefaultMethodEmailIdentifierEnum> defaultMethod, Map<String, Object> additionalProperties) {
         this.active = active;
         this.defaultMethod = defaultMethod;
         this.additionalProperties = additionalProperties;
@@ -40,23 +38,22 @@ public final class ConnectionAttributeIdentifier {
      */
     @JsonProperty("active")
     public Optional<Boolean> getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default_method")
     public Optional<DefaultMethodEmailIdentifierEnum> getDefaultMethod() {
-        return defaultMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionAttributeIdentifier && equalTo((ConnectionAttributeIdentifier) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionAttributeIdentifier other) {
@@ -65,20 +62,21 @@ public final class ConnectionAttributeIdentifier {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active, this.defaultMethod);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> active = Optional.empty();
 
         private Optional<DefaultMethodEmailIdentifierEnum> defaultMethod = Optional.empty();
@@ -86,12 +84,11 @@ public final class ConnectionAttributeIdentifier {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionAttributeIdentifier other) {
-            active(other.getActive());
-            defaultMethod(other.getDefaultMethod());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,38 +96,32 @@ public final class ConnectionAttributeIdentifier {
          */
         @JsonSetter(value = "active", nulls = Nulls.SKIP)
         public Builder active(Optional<Boolean> active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder active(Boolean active) {
-            this.active = Optional.ofNullable(active);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_method", nulls = Nulls.SKIP)
         public Builder defaultMethod(Optional<DefaultMethodEmailIdentifierEnum> defaultMethod) {
-            this.defaultMethod = defaultMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultMethod(DefaultMethodEmailIdentifierEnum defaultMethod) {
-            this.defaultMethod = Optional.ofNullable(defaultMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionAttributeIdentifier build() {
-            return new ConnectionAttributeIdentifier(active, defaultMethod, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

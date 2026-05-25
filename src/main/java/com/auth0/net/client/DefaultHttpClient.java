@@ -33,7 +33,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
     private final okhttp3.OkHttpClient client;
 
     public static Builder newBuilder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,7 +49,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
      * @return the OkHttpClient
      */
     OkHttpClient getOkClient() {
-        return this.client;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private DefaultHttpClient(Builder builder) {
@@ -60,7 +60,6 @@ public class DefaultHttpClient implements Auth0HttpClient {
         clientBuilder.addInterceptor(getTelemetryInterceptor(builder.telemetryEnabled));
         clientBuilder.addInterceptor(getRateLimitInterceptor(builder.maxRetries));
         clientBuilder.dispatcher(getDispatcher(builder.maxRequests, builder.maxRequestsPerHost));
-
         configureProxy(clientBuilder, builder.proxyOptions);
         this.client = clientBuilder.build();
     }
@@ -76,48 +75,20 @@ public class DefaultHttpClient implements Auth0HttpClient {
 
     @Override
     public Auth0HttpResponse sendRequest(Auth0HttpRequest request) throws IOException {
-        Request okRequest = buildRequest(request);
-        try (Response response = client.newCall(okRequest).execute()) {
-            return buildResponse(response);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public CompletableFuture<Auth0HttpResponse> sendRequestAsync(Auth0HttpRequest request) {
-        final CompletableFuture<Auth0HttpResponse> future = new CompletableFuture<>();
-        Request okRequest = buildRequest(request);
-
-        client.newCall(okRequest).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                future.completeExceptionally(e);
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) {
-                try {
-                    future.complete(buildResponse(response));
-                } catch (IOException e) {
-                    future.completeExceptionally(e);
-                } finally {
-                    response.close();
-                }
-            }
-        });
-
-        return future;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Request buildRequest(Auth0HttpRequest a0Request) {
         RequestBody okBody = addBody(a0Request);
-
-        okhttp3.Request.Builder builder = new okhttp3.Request.Builder()
-                .url(a0Request.getUrl())
-                .method(a0Request.getMethod().toString(), okBody);
+        okhttp3.Request.Builder builder = new okhttp3.Request.Builder().url(a0Request.getUrl()).method(a0Request.getMethod().toString(), okBody);
         for (Map.Entry<String, String> e : a0Request.getHeaders().entrySet()) {
             builder.addHeader(e.getKey(), e.getValue());
         }
-
         return builder.build();
     }
 
@@ -131,22 +102,15 @@ public class DefaultHttpClient implements Auth0HttpClient {
     private Auth0HttpResponse buildResponse(Response okResponse) throws IOException {
         Headers okHeaders = okResponse.headers();
         Map<String, String> headers = new HashMap<>();
-
         for (int i = 0; i < okHeaders.size(); i++) {
             headers.put(okHeaders.name(i), okHeaders.value(i));
         }
-
         ResponseBody responseBody = okResponse.body();
         String content = null;
-
         if (Objects.nonNull(responseBody)) {
             content = responseBody.string();
         }
-        return Auth0HttpResponse.newBuilder()
-                .withStatusCode(okResponse.code())
-                .withBody(content)
-                .withHeaders(headers)
-                .build();
+        return Auth0HttpResponse.newBuilder().withStatusCode(okResponse.code()).withBody(content).withHeaders(headers).build();
     }
 
     @SuppressWarnings("deprecation")
@@ -155,10 +119,8 @@ public class DefaultHttpClient implements Auth0HttpClient {
         if (Objects.isNull(request.getBody()) || HttpMethod.GET.equals(request.getMethod())) {
             return null;
         }
-
         HttpRequestBody body = request.getBody();
         RequestBody okBody;
-
         if (Objects.nonNull(body.getFormRequestBody())) {
             Auth0FormRequestBody formData = body.getFormRequestBody();
             FormBody.Builder builder = new FormBody.Builder();
@@ -171,22 +133,13 @@ public class DefaultHttpClient implements Auth0HttpClient {
             Auth0MultipartRequestBody multipartRequestBody = body.getMultipartRequestBody();
             MultipartBody.Builder bodyBuilder = new MultipartBody.Builder().setType(MultipartBody.FORM);
             if (Objects.nonNull(multipartRequestBody.getFilePart())) {
-                bodyBuilder.addFormDataPart(
-                        multipartRequestBody.getFilePart().getPartName(),
-                        multipartRequestBody.getFilePart().getFile().getName(),
-                        RequestBody.create(
-                                MediaType.parse(
-                                        multipartRequestBody.getFilePart().getMediaType()),
-                                multipartRequestBody.getFilePart().getFile()));
+                bodyBuilder.addFormDataPart(multipartRequestBody.getFilePart().getPartName(), multipartRequestBody.getFilePart().getFile().getName(), RequestBody.create(MediaType.parse(multipartRequestBody.getFilePart().getMediaType()), multipartRequestBody.getFilePart().getFile()));
             }
             multipartRequestBody.getParts().forEach(bodyBuilder::addFormDataPart);
             okBody = bodyBuilder.build();
         } else {
-            okBody = RequestBody.create(
-                    MediaType.parse(request.getBody().getContentType()),
-                    request.getBody().getContent());
+            okBody = RequestBody.create(MediaType.parse(request.getBody().getContentType()), request.getBody().getContent());
         }
-
         return okBody;
     }
 
@@ -196,8 +149,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
             return loggingInterceptor;
         }
-
-        switch (loggingOptions.getLogLevel()) {
+        switch(loggingOptions.getLogLevel()) {
             case BASIC:
                 loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
                 break;
@@ -230,13 +182,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
 
                     @Override
                     public okhttp3.Request authenticate(Route route, @NotNull Response response) {
-                        if (Objects.nonNull(response.request().header(PROXY_AUTHORIZATION_HEADER))) {
-                            return null;
-                        }
-                        return response.request()
-                                .newBuilder()
-                                .header(PROXY_AUTHORIZATION_HEADER, proxyAuth)
-                                .build();
+                        throw new UnsupportedOperationException("STUB: not implemented");
                     }
                 });
             }
@@ -263,7 +209,6 @@ public class DefaultHttpClient implements Auth0HttpClient {
         if (maxRequestsPerHost < 1) {
             throw new IllegalArgumentException("maxRequestsPerHost must be one or greater.");
         }
-
         Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
@@ -274,13 +219,21 @@ public class DefaultHttpClient implements Auth0HttpClient {
      * Builder for {@link DefaultHttpClient} instances.
      */
     public static class Builder {
+
         private int readTimeout = 10;
+
         private int connectTimeout = 10;
+
         private ProxyOptions proxyOptions;
+
         private LoggingOptions loggingOptions;
+
         private boolean telemetryEnabled = true;
+
         private int maxRetries = 3;
+
         private int maxRequests = 64;
+
         private int maxRequestsPerHost = 5;
 
         /**
@@ -291,8 +244,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withReadTimeout(int readTimeout) {
-            this.readTimeout = readTimeout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -302,8 +254,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withConnectTimeout(int connectTimeout) {
-            this.connectTimeout = connectTimeout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -312,8 +263,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withLogging(LoggingOptions loggingOptions) {
-            this.loggingOptions = loggingOptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,8 +273,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withProxy(ProxyOptions proxyOptions) {
-            this.proxyOptions = proxyOptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -333,8 +282,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder telemetryEnabled(boolean telemetryEnabled) {
-            this.telemetryEnabled = telemetryEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,8 +296,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withMaxRetries(int maxRetries) {
-            this.maxRetries = maxRetries;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -359,8 +306,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withMaxRequests(int maxRequests) {
-            this.maxRequests = maxRequests;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -370,8 +316,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return this builder instance.
          */
         public Builder withMaxRequestsPerHost(int maxRequestsPerHost) {
-            this.maxRequestsPerHost = maxRequestsPerHost;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -379,7 +324,7 @@ public class DefaultHttpClient implements Auth0HttpClient {
          * @return the created {@code DefaultHttpClient}.
          */
         public DefaultHttpClient build() {
-            return new DefaultHttpClient(this);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

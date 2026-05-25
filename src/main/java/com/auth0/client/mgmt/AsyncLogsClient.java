@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.Log;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncLogsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawLogsClient rawClient;
@@ -25,7 +26,7 @@ public class AsyncLogsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawLogsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +53,7 @@ public class AsyncLogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,7 +80,7 @@ public class AsyncLogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -106,7 +107,7 @@ public class AsyncLogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public CompletableFuture<SyncPagingIterable<Log>> list(ListLogsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,22 +133,21 @@ public class AsyncLogsClient {
      * </ul></p>
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Log>> list(
-            ListLogsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Log>> list(ListLogsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an individual log event.
      */
     public CompletableFuture<GetLogResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an individual log event.
      */
     public CompletableFuture<GetLogResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

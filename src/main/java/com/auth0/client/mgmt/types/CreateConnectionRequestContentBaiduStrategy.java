@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentBaiduStrategy {
-    public static final CreateConnectionRequestContentBaiduStrategy BAIDU =
-            new CreateConnectionRequestContentBaiduStrategy(Value.BAIDU, "baidu");
+
+    public static final CreateConnectionRequestContentBaiduStrategy BAIDU = new CreateConnectionRequestContentBaiduStrategy(Value.BAIDU, "baidu");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentBaiduStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentBaiduStrategy
-                        && this.string.equals(((CreateConnectionRequestContentBaiduStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BAIDU:
-                return visitor.visitBaidu();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentBaiduStrategy valueOf(String value) {
-        switch (value) {
-            case "baidu":
-                return BAIDU;
-            default:
-                return new CreateConnectionRequestContentBaiduStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BAIDU,
 
-        UNKNOWN
+        BAIDU, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBaidu();
 
         T visitUnknown(String unknownType);

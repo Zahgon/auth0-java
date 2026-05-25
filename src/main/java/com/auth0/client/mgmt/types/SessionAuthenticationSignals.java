@@ -21,12 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SessionAuthenticationSignals.Builder.class)
 public final class SessionAuthenticationSignals {
+
     private final Optional<List<SessionAuthenticationSignal>> methods;
 
     private final Map<String, Object> additionalProperties;
 
-    private SessionAuthenticationSignals(
-            Optional<List<SessionAuthenticationSignal>> methods, Map<String, Object> additionalProperties) {
+    private SessionAuthenticationSignals(Optional<List<SessionAuthenticationSignal>> methods, Map<String, Object> additionalProperties) {
         this.methods = methods;
         this.additionalProperties = additionalProperties;
     }
@@ -36,18 +36,17 @@ public final class SessionAuthenticationSignals {
      */
     @JsonProperty("methods")
     public Optional<List<SessionAuthenticationSignal>> getMethods() {
-        return methods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SessionAuthenticationSignals && equalTo((SessionAuthenticationSignals) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SessionAuthenticationSignals other) {
@@ -56,30 +55,31 @@ public final class SessionAuthenticationSignals {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.methods);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<SessionAuthenticationSignal>> methods = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SessionAuthenticationSignals other) {
-            methods(other.getMethods());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +87,23 @@ public final class SessionAuthenticationSignals {
          */
         @JsonSetter(value = "methods", nulls = Nulls.SKIP)
         public Builder methods(Optional<List<SessionAuthenticationSignal>> methods) {
-            this.methods = methods;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder methods(List<SessionAuthenticationSignal> methods) {
-            this.methods = Optional.ofNullable(methods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SessionAuthenticationSignals build() {
-            return new SessionAuthenticationSignals(methods, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

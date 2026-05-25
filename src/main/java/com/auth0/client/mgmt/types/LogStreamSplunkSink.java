@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamSplunkSink.Builder.class)
 public final class LogStreamSplunkSink {
+
     private final String splunkDomain;
 
     private final String splunkPort;
@@ -29,12 +30,7 @@ public final class LogStreamSplunkSink {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamSplunkSink(
-            String splunkDomain,
-            String splunkPort,
-            String splunkToken,
-            boolean splunkSecure,
-            Map<String, Object> additionalProperties) {
+    private LogStreamSplunkSink(String splunkDomain, String splunkPort, String splunkToken, boolean splunkSecure, Map<String, Object> additionalProperties) {
         this.splunkDomain = splunkDomain;
         this.splunkPort = splunkPort;
         this.splunkToken = splunkToken;
@@ -47,7 +43,7 @@ public final class LogStreamSplunkSink {
      */
     @JsonProperty("splunkDomain")
     public String getSplunkDomain() {
-        return splunkDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +51,7 @@ public final class LogStreamSplunkSink {
      */
     @JsonProperty("splunkPort")
     public String getSplunkPort() {
-        return splunkPort;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,7 +59,7 @@ public final class LogStreamSplunkSink {
      */
     @JsonProperty("splunkToken")
     public String getSplunkToken() {
-        return splunkToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,42 +67,39 @@ public final class LogStreamSplunkSink {
      */
     @JsonProperty("splunkSecure")
     public boolean getSplunkSecure() {
-        return splunkSecure;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamSplunkSink && equalTo((LogStreamSplunkSink) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamSplunkSink other) {
-        return splunkDomain.equals(other.splunkDomain)
-                && splunkPort.equals(other.splunkPort)
-                && splunkToken.equals(other.splunkToken)
-                && splunkSecure == other.splunkSecure;
+        return splunkDomain.equals(other.splunkDomain) && splunkPort.equals(other.splunkPort) && splunkToken.equals(other.splunkToken) && splunkSecure == other.splunkSecure;
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.splunkDomain, this.splunkPort, this.splunkToken, this.splunkSecure);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SplunkDomainStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SplunkDomainStage {
+
         /**
          * <p>Splunk URL Endpoint</p>
          */
@@ -116,6 +109,7 @@ public final class LogStreamSplunkSink {
     }
 
     public interface SplunkPortStage {
+
         /**
          * <p>Port</p>
          */
@@ -123,6 +117,7 @@ public final class LogStreamSplunkSink {
     }
 
     public interface SplunkTokenStage {
+
         /**
          * <p>Splunk token</p>
          */
@@ -130,6 +125,7 @@ public final class LogStreamSplunkSink {
     }
 
     public interface SplunkSecureStage {
+
         /**
          * <p>Verify TLS certificate</p>
          */
@@ -137,6 +133,7 @@ public final class LogStreamSplunkSink {
     }
 
     public interface _FinalStage {
+
         LogStreamSplunkSink build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -145,8 +142,8 @@ public final class LogStreamSplunkSink {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements SplunkDomainStage, SplunkPortStage, SplunkTokenStage, SplunkSecureStage, _FinalStage {
+    public static final class Builder implements SplunkDomainStage, SplunkPortStage, SplunkTokenStage, SplunkSecureStage, _FinalStage {
+
         private String splunkDomain;
 
         private String splunkPort;
@@ -158,15 +155,12 @@ public final class LogStreamSplunkSink {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamSplunkSink other) {
-            splunkDomain(other.getSplunkDomain());
-            splunkPort(other.getSplunkPort());
-            splunkToken(other.getSplunkToken());
-            splunkSecure(other.getSplunkSecure());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,8 +171,7 @@ public final class LogStreamSplunkSink {
         @java.lang.Override
         @JsonSetter("splunkDomain")
         public SplunkPortStage splunkDomain(@NotNull String splunkDomain) {
-            this.splunkDomain = Objects.requireNonNull(splunkDomain, "splunkDomain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -189,8 +182,7 @@ public final class LogStreamSplunkSink {
         @java.lang.Override
         @JsonSetter("splunkPort")
         public SplunkTokenStage splunkPort(@NotNull String splunkPort) {
-            this.splunkPort = Objects.requireNonNull(splunkPort, "splunkPort must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -201,8 +193,7 @@ public final class LogStreamSplunkSink {
         @java.lang.Override
         @JsonSetter("splunkToken")
         public SplunkSecureStage splunkToken(@NotNull String splunkToken) {
-            this.splunkToken = Objects.requireNonNull(splunkToken, "splunkToken must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,25 +204,22 @@ public final class LogStreamSplunkSink {
         @java.lang.Override
         @JsonSetter("splunkSecure")
         public _FinalStage splunkSecure(boolean splunkSecure) {
-            this.splunkSecure = splunkSecure;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamSplunkSink build() {
-            return new LogStreamSplunkSink(splunkDomain, splunkPort, splunkToken, splunkSecure, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

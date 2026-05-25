@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEncryptionKeyPublicWrappingResponseContent.Builder.class)
 public final class CreateEncryptionKeyPublicWrappingResponseContent {
+
     private final String publicKey;
 
     private final EncryptionKeyPublicWrappingAlgorithm algorithm;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateEncryptionKeyPublicWrappingResponseContent(
-            String publicKey,
-            EncryptionKeyPublicWrappingAlgorithm algorithm,
-            Map<String, Object> additionalProperties) {
+    private CreateEncryptionKeyPublicWrappingResponseContent(String publicKey, EncryptionKeyPublicWrappingAlgorithm algorithm, Map<String, Object> additionalProperties) {
         this.publicKey = publicKey;
         this.algorithm = algorithm;
         this.additionalProperties = additionalProperties;
@@ -39,24 +37,22 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
      */
     @JsonProperty("public_key")
     public String getPublicKey() {
-        return publicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("algorithm")
     public EncryptionKeyPublicWrappingAlgorithm getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEncryptionKeyPublicWrappingResponseContent
-                && equalTo((CreateEncryptionKeyPublicWrappingResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEncryptionKeyPublicWrappingResponseContent other) {
@@ -65,19 +61,20 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.publicKey, this.algorithm);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PublicKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PublicKeyStage {
+
         /**
          * <p>Public wrapping key in PEM format</p>
          */
@@ -87,10 +84,12 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
     }
 
     public interface AlgorithmStage {
+
         _FinalStage algorithm(@NotNull EncryptionKeyPublicWrappingAlgorithm algorithm);
     }
 
     public interface _FinalStage {
+
         CreateEncryptionKeyPublicWrappingResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -100,6 +99,7 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PublicKeyStage, AlgorithmStage, _FinalStage {
+
         private String publicKey;
 
         private EncryptionKeyPublicWrappingAlgorithm algorithm;
@@ -107,13 +107,12 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateEncryptionKeyPublicWrappingResponseContent other) {
-            publicKey(other.getPublicKey());
-            algorithm(other.getAlgorithm());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -124,32 +123,28 @@ public final class CreateEncryptionKeyPublicWrappingResponseContent {
         @java.lang.Override
         @JsonSetter("public_key")
         public AlgorithmStage publicKey(@NotNull String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey, "publicKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("algorithm")
         public _FinalStage algorithm(@NotNull EncryptionKeyPublicWrappingAlgorithm algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm, "algorithm must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateEncryptionKeyPublicWrappingResponseContent build() {
-            return new CreateEncryptionKeyPublicWrappingResponseContent(publicKey, algorithm, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentFitbitStrategy {
-    public static final CreateConnectionRequestContentFitbitStrategy FITBIT =
-            new CreateConnectionRequestContentFitbitStrategy(Value.FITBIT, "fitbit");
+
+    public static final CreateConnectionRequestContentFitbitStrategy FITBIT = new CreateConnectionRequestContentFitbitStrategy(Value.FITBIT, "fitbit");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentFitbitStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentFitbitStrategy
-                        && this.string.equals(((CreateConnectionRequestContentFitbitStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FITBIT:
-                return visitor.visitFitbit();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentFitbitStrategy valueOf(String value) {
-        switch (value) {
-            case "fitbit":
-                return FITBIT;
-            default:
-                return new CreateConnectionRequestContentFitbitStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FITBIT,
 
-        UNKNOWN
+        FITBIT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFitbit();
 
         T visitUnknown(String unknownType);

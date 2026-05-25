@@ -24,6 +24,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEventStreamRedeliveryRequestContent.Builder.class)
 public final class CreateEventStreamRedeliveryRequestContent {
+
     private final Optional<OffsetDateTime> dateFrom;
 
     private final Optional<OffsetDateTime> dateTo;
@@ -34,12 +35,7 @@ public final class CreateEventStreamRedeliveryRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateEventStreamRedeliveryRequestContent(
-            Optional<OffsetDateTime> dateFrom,
-            Optional<OffsetDateTime> dateTo,
-            Optional<List<EventStreamDeliveryStatusEnum>> statuses,
-            Optional<List<EventStreamEventTypeEnum>> eventTypes,
-            Map<String, Object> additionalProperties) {
+    private CreateEventStreamRedeliveryRequestContent(Optional<OffsetDateTime> dateFrom, Optional<OffsetDateTime> dateTo, Optional<List<EventStreamDeliveryStatusEnum>> statuses, Optional<List<EventStreamEventTypeEnum>> eventTypes, Map<String, Object> additionalProperties) {
         this.dateFrom = dateFrom;
         this.dateTo = dateTo;
         this.statuses = statuses;
@@ -52,7 +48,7 @@ public final class CreateEventStreamRedeliveryRequestContent {
      */
     @JsonProperty("date_from")
     public Optional<OffsetDateTime> getDateFrom() {
-        return dateFrom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +56,7 @@ public final class CreateEventStreamRedeliveryRequestContent {
      */
     @JsonProperty("date_to")
     public Optional<OffsetDateTime> getDateTo() {
-        return dateTo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +64,7 @@ public final class CreateEventStreamRedeliveryRequestContent {
      */
     @JsonProperty("statuses")
     public Optional<List<EventStreamDeliveryStatusEnum>> getStatuses() {
-        return statuses;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,44 +72,40 @@ public final class CreateEventStreamRedeliveryRequestContent {
      */
     @JsonProperty("event_types")
     public Optional<List<EventStreamEventTypeEnum>> getEventTypes() {
-        return eventTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEventStreamRedeliveryRequestContent
-                && equalTo((CreateEventStreamRedeliveryRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEventStreamRedeliveryRequestContent other) {
-        return dateFrom.equals(other.dateFrom)
-                && dateTo.equals(other.dateTo)
-                && statuses.equals(other.statuses)
-                && eventTypes.equals(other.eventTypes);
+        return dateFrom.equals(other.dateFrom) && dateTo.equals(other.dateTo) && statuses.equals(other.statuses) && eventTypes.equals(other.eventTypes);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.dateFrom, this.dateTo, this.statuses, this.eventTypes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<OffsetDateTime> dateFrom = Optional.empty();
 
         private Optional<OffsetDateTime> dateTo = Optional.empty();
@@ -125,14 +117,11 @@ public final class CreateEventStreamRedeliveryRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateEventStreamRedeliveryRequestContent other) {
-            dateFrom(other.getDateFrom());
-            dateTo(other.getDateTo());
-            statuses(other.getStatuses());
-            eventTypes(other.getEventTypes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -140,13 +129,11 @@ public final class CreateEventStreamRedeliveryRequestContent {
          */
         @JsonSetter(value = "date_from", nulls = Nulls.SKIP)
         public Builder dateFrom(Optional<OffsetDateTime> dateFrom) {
-            this.dateFrom = dateFrom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateFrom(OffsetDateTime dateFrom) {
-            this.dateFrom = Optional.ofNullable(dateFrom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -154,13 +141,11 @@ public final class CreateEventStreamRedeliveryRequestContent {
          */
         @JsonSetter(value = "date_to", nulls = Nulls.SKIP)
         public Builder dateTo(Optional<OffsetDateTime> dateTo) {
-            this.dateTo = dateTo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateTo(OffsetDateTime dateTo) {
-            this.dateTo = Optional.ofNullable(dateTo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -168,13 +153,11 @@ public final class CreateEventStreamRedeliveryRequestContent {
          */
         @JsonSetter(value = "statuses", nulls = Nulls.SKIP)
         public Builder statuses(Optional<List<EventStreamDeliveryStatusEnum>> statuses) {
-            this.statuses = statuses;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder statuses(List<EventStreamDeliveryStatusEnum> statuses) {
-            this.statuses = Optional.ofNullable(statuses);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,28 +165,23 @@ public final class CreateEventStreamRedeliveryRequestContent {
          */
         @JsonSetter(value = "event_types", nulls = Nulls.SKIP)
         public Builder eventTypes(Optional<List<EventStreamEventTypeEnum>> eventTypes) {
-            this.eventTypes = eventTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder eventTypes(List<EventStreamEventTypeEnum> eventTypes) {
-            this.eventTypes = Optional.ofNullable(eventTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateEventStreamRedeliveryRequestContent build() {
-            return new CreateEventStreamRedeliveryRequestContent(
-                    dateFrom, dateTo, statuses, eventTypes, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

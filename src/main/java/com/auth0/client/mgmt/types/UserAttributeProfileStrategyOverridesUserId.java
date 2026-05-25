@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserAttributeProfileStrategyOverridesUserId.Builder.class)
 public final class UserAttributeProfileStrategyOverridesUserId {
+
     private final Optional<UserAttributeProfileStrategyOverridesUserIdMapping> pingfederate;
 
     private final Optional<UserAttributeProfileStrategyOverridesUserIdMapping> ad;
@@ -38,16 +39,7 @@ public final class UserAttributeProfileStrategyOverridesUserId {
 
     private final Map<String, Object> additionalProperties;
 
-    private UserAttributeProfileStrategyOverridesUserId(
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> pingfederate,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> ad,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> adfs,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> waad,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> googleApps,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> okta,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> oidc,
-            Optional<UserAttributeProfileStrategyOverridesUserIdMapping> samlp,
-            Map<String, Object> additionalProperties) {
+    private UserAttributeProfileStrategyOverridesUserId(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> pingfederate, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> ad, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> adfs, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> waad, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> googleApps, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> okta, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> oidc, Optional<UserAttributeProfileStrategyOverridesUserIdMapping> samlp, Map<String, Object> additionalProperties) {
         this.pingfederate = pingfederate;
         this.ad = ad;
         this.adfs = adfs;
@@ -61,84 +53,75 @@ public final class UserAttributeProfileStrategyOverridesUserId {
 
     @JsonProperty("pingfederate")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getPingfederate() {
-        return pingfederate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ad")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getAd() {
-        return ad;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("adfs")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getAdfs() {
-        return adfs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("waad")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getWaad() {
-        return waad;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("google-apps")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getGoogleApps() {
-        return googleApps;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("okta")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getOkta() {
-        return okta;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getOidc() {
-        return oidc;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("samlp")
     public Optional<UserAttributeProfileStrategyOverridesUserIdMapping> getSamlp() {
-        return samlp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserAttributeProfileStrategyOverridesUserId
-                && equalTo((UserAttributeProfileStrategyOverridesUserId) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserAttributeProfileStrategyOverridesUserId other) {
-        return pingfederate.equals(other.pingfederate)
-                && ad.equals(other.ad)
-                && adfs.equals(other.adfs)
-                && waad.equals(other.waad)
-                && googleApps.equals(other.googleApps)
-                && okta.equals(other.okta)
-                && oidc.equals(other.oidc)
-                && samlp.equals(other.samlp);
+        return pingfederate.equals(other.pingfederate) && ad.equals(other.ad) && adfs.equals(other.adfs) && waad.equals(other.waad) && googleApps.equals(other.googleApps) && okta.equals(other.okta) && oidc.equals(other.oidc) && samlp.equals(other.samlp);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.pingfederate, this.ad, this.adfs, this.waad, this.googleApps, this.okta, this.oidc, this.samlp);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UserAttributeProfileStrategyOverridesUserIdMapping> pingfederate = Optional.empty();
 
         private Optional<UserAttributeProfileStrategyOverridesUserIdMapping> ad = Optional.empty();
@@ -158,121 +141,95 @@ public final class UserAttributeProfileStrategyOverridesUserId {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UserAttributeProfileStrategyOverridesUserId other) {
-            pingfederate(other.getPingfederate());
-            ad(other.getAd());
-            adfs(other.getAdfs());
-            waad(other.getWaad());
-            googleApps(other.getGoogleApps());
-            okta(other.getOkta());
-            oidc(other.getOidc());
-            samlp(other.getSamlp());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pingfederate", nulls = Nulls.SKIP)
         public Builder pingfederate(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> pingfederate) {
-            this.pingfederate = pingfederate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pingfederate(UserAttributeProfileStrategyOverridesUserIdMapping pingfederate) {
-            this.pingfederate = Optional.ofNullable(pingfederate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ad", nulls = Nulls.SKIP)
         public Builder ad(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> ad) {
-            this.ad = ad;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ad(UserAttributeProfileStrategyOverridesUserIdMapping ad) {
-            this.ad = Optional.ofNullable(ad);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "adfs", nulls = Nulls.SKIP)
         public Builder adfs(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> adfs) {
-            this.adfs = adfs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adfs(UserAttributeProfileStrategyOverridesUserIdMapping adfs) {
-            this.adfs = Optional.ofNullable(adfs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "waad", nulls = Nulls.SKIP)
         public Builder waad(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> waad) {
-            this.waad = waad;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder waad(UserAttributeProfileStrategyOverridesUserIdMapping waad) {
-            this.waad = Optional.ofNullable(waad);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "google-apps", nulls = Nulls.SKIP)
         public Builder googleApps(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> googleApps) {
-            this.googleApps = googleApps;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleApps(UserAttributeProfileStrategyOverridesUserIdMapping googleApps) {
-            this.googleApps = Optional.ofNullable(googleApps);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "okta", nulls = Nulls.SKIP)
         public Builder okta(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> okta) {
-            this.okta = okta;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder okta(UserAttributeProfileStrategyOverridesUserIdMapping okta) {
-            this.okta = Optional.ofNullable(okta);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oidc", nulls = Nulls.SKIP)
         public Builder oidc(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> oidc) {
-            this.oidc = oidc;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidc(UserAttributeProfileStrategyOverridesUserIdMapping oidc) {
-            this.oidc = Optional.ofNullable(oidc);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "samlp", nulls = Nulls.SKIP)
         public Builder samlp(Optional<UserAttributeProfileStrategyOverridesUserIdMapping> samlp) {
-            this.samlp = samlp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder samlp(UserAttributeProfileStrategyOverridesUserIdMapping samlp) {
-            this.samlp = Optional.ofNullable(samlp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UserAttributeProfileStrategyOverridesUserId build() {
-            return new UserAttributeProfileStrategyOverridesUserId(
-                    pingfederate, ad, adfs, waad, googleApps, okta, oidc, samlp, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

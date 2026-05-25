@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PasswordCharacterTypeRulePolicyEnum {
-    public static final PasswordCharacterTypeRulePolicyEnum ALL =
-            new PasswordCharacterTypeRulePolicyEnum(Value.ALL, "all");
 
-    public static final PasswordCharacterTypeRulePolicyEnum THREE_OF_FOUR =
-            new PasswordCharacterTypeRulePolicyEnum(Value.THREE_OF_FOUR, "three_of_four");
+    public static final PasswordCharacterTypeRulePolicyEnum ALL = new PasswordCharacterTypeRulePolicyEnum(Value.ALL, "all");
+
+    public static final PasswordCharacterTypeRulePolicyEnum THREE_OF_FOUR = new PasswordCharacterTypeRulePolicyEnum(Value.THREE_OF_FOUR, "three_of_four");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class PasswordCharacterTypeRulePolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PasswordCharacterTypeRulePolicyEnum
-                        && this.string.equals(((PasswordCharacterTypeRulePolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALL:
-                return visitor.visitAll();
-            case THREE_OF_FOUR:
-                return visitor.visitThreeOfFour();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PasswordCharacterTypeRulePolicyEnum valueOf(String value) {
-        switch (value) {
-            case "all":
-                return ALL;
-            case "three_of_four":
-                return THREE_OF_FOUR;
-            default:
-                return new PasswordCharacterTypeRulePolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALL,
 
-        THREE_OF_FOUR,
-
-        UNKNOWN
+        ALL, THREE_OF_FOUR, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAll();
 
         T visitThreeOfFour();

@@ -23,16 +23,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBrandingColors.Builder.class)
 public final class UpdateBrandingColors {
+
     private final OptionalNullable<String> primary;
 
     private final Optional<UpdateBrandingPageBackground> pageBackground;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBrandingColors(
-            OptionalNullable<String> primary,
-            Optional<UpdateBrandingPageBackground> pageBackground,
-            Map<String, Object> additionalProperties) {
+    private UpdateBrandingColors(OptionalNullable<String> primary, Optional<UpdateBrandingPageBackground> pageBackground, Map<String, Object> additionalProperties) {
         this.primary = primary;
         this.pageBackground = pageBackground;
         this.additionalProperties = additionalProperties;
@@ -44,15 +42,12 @@ public final class UpdateBrandingColors {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("primary")
     public OptionalNullable<String> getPrimary() {
-        if (primary == null) {
-            return OptionalNullable.absent();
-        }
-        return primary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("page_background")
     public Optional<UpdateBrandingPageBackground> getPageBackground() {
-        return pageBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -63,13 +58,12 @@ public final class UpdateBrandingColors {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBrandingColors && equalTo((UpdateBrandingColors) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBrandingColors other) {
@@ -78,20 +72,21 @@ public final class UpdateBrandingColors {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.primary, this.pageBackground);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> primary = OptionalNullable.absent();
 
         private Optional<UpdateBrandingPageBackground> pageBackground = Optional.empty();
@@ -99,12 +94,11 @@ public final class UpdateBrandingColors {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBrandingColors other) {
-            primary(other.getPrimary());
-            pageBackground(other.getPageBackground());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -112,58 +106,40 @@ public final class UpdateBrandingColors {
          */
         @JsonSetter(value = "primary", nulls = Nulls.SKIP)
         public Builder primary(@Nullable OptionalNullable<String> primary) {
-            this.primary = primary;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder primary(String primary) {
-            this.primary = OptionalNullable.of(primary);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder primary(Optional<String> primary) {
-            if (primary.isPresent()) {
-                this.primary = OptionalNullable.of(primary.get());
-            } else {
-                this.primary = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder primary(com.auth0.client.mgmt.core.Nullable<String> primary) {
-            if (primary.isNull()) {
-                this.primary = OptionalNullable.ofNull();
-            } else if (primary.isEmpty()) {
-                this.primary = OptionalNullable.absent();
-            } else {
-                this.primary = OptionalNullable.of(primary.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "page_background", nulls = Nulls.SKIP)
         public Builder pageBackground(Optional<UpdateBrandingPageBackground> pageBackground) {
-            this.pageBackground = pageBackground;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pageBackground(UpdateBrandingPageBackground pageBackground) {
-            this.pageBackground = Optional.ofNullable(pageBackground);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBrandingColors build() {
-            return new UpdateBrandingColors(primary, pageBackground, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

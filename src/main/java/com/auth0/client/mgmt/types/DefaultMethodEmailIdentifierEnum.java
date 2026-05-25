@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class DefaultMethodEmailIdentifierEnum {
-    public static final DefaultMethodEmailIdentifierEnum PASSWORD =
-            new DefaultMethodEmailIdentifierEnum(Value.PASSWORD, "password");
 
-    public static final DefaultMethodEmailIdentifierEnum EMAIL_OTP =
-            new DefaultMethodEmailIdentifierEnum(Value.EMAIL_OTP, "email_otp");
+    public static final DefaultMethodEmailIdentifierEnum PASSWORD = new DefaultMethodEmailIdentifierEnum(Value.PASSWORD, "password");
+
+    public static final DefaultMethodEmailIdentifierEnum EMAIL_OTP = new DefaultMethodEmailIdentifierEnum(Value.EMAIL_OTP, "email_otp");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class DefaultMethodEmailIdentifierEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof DefaultMethodEmailIdentifierEnum
-                        && this.string.equals(((DefaultMethodEmailIdentifierEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PASSWORD:
-                return visitor.visitPassword();
-            case EMAIL_OTP:
-                return visitor.visitEmailOtp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static DefaultMethodEmailIdentifierEnum valueOf(String value) {
-        switch (value) {
-            case "password":
-                return PASSWORD;
-            case "email_otp":
-                return EMAIL_OTP;
-            default:
-                return new DefaultMethodEmailIdentifierEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PASSWORD,
 
-        EMAIL_OTP,
-
-        UNKNOWN
+        PASSWORD, EMAIL_OTP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPassword();
 
         T visitEmailOtp();

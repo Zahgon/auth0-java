@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormMessages.Builder.class)
 public final class FormMessages {
+
     private final Optional<Map<String, String>> errors;
 
     private final Optional<Map<String, String>> custom;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormMessages(
-            Optional<Map<String, String>> errors,
-            Optional<Map<String, String>> custom,
-            Map<String, Object> additionalProperties) {
+    private FormMessages(Optional<Map<String, String>> errors, Optional<Map<String, String>> custom, Map<String, Object> additionalProperties) {
         this.errors = errors;
         this.custom = custom;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class FormMessages {
 
     @JsonProperty("errors")
     public Optional<Map<String, String>> getErrors() {
-        return errors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("custom")
     public Optional<Map<String, String>> getCustom() {
-        return custom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormMessages && equalTo((FormMessages) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormMessages other) {
@@ -62,20 +59,21 @@ public final class FormMessages {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.errors, this.custom);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Map<String, String>> errors = Optional.empty();
 
         private Optional<Map<String, String>> custom = Optional.empty();
@@ -83,48 +81,41 @@ public final class FormMessages {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormMessages other) {
-            errors(other.getErrors());
-            custom(other.getCustom());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "errors", nulls = Nulls.SKIP)
         public Builder errors(Optional<Map<String, String>> errors) {
-            this.errors = errors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errors(Map<String, String> errors) {
-            this.errors = Optional.ofNullable(errors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "custom", nulls = Nulls.SKIP)
         public Builder custom(Optional<Map<String, String>> custom) {
-            this.custom = custom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder custom(Map<String, String> custom) {
-            this.custom = Optional.ofNullable(custom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormMessages build() {
-            return new FormMessages(errors, custom, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentFacebookStrategy {
-    public static final ConnectionResponseContentFacebookStrategy FACEBOOK =
-            new ConnectionResponseContentFacebookStrategy(Value.FACEBOOK, "facebook");
+
+    public static final ConnectionResponseContentFacebookStrategy FACEBOOK = new ConnectionResponseContentFacebookStrategy(Value.FACEBOOK, "facebook");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentFacebookStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentFacebookStrategy
-                        && this.string.equals(((ConnectionResponseContentFacebookStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FACEBOOK:
-                return visitor.visitFacebook();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentFacebookStrategy valueOf(String value) {
-        switch (value) {
-            case "facebook":
-                return FACEBOOK;
-            default:
-                return new ConnectionResponseContentFacebookStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FACEBOOK,
 
-        UNKNOWN
+        FACEBOOK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFacebook();
 
         T visitUnknown(String unknownType);

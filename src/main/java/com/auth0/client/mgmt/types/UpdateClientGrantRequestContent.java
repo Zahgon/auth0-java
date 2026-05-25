@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateClientGrantRequestContent.Builder.class)
 public final class UpdateClientGrantRequestContent {
+
     private final OptionalNullable<List<String>> scope;
 
     private final OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage;
@@ -36,13 +37,7 @@ public final class UpdateClientGrantRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateClientGrantRequestContent(
-            OptionalNullable<List<String>> scope,
-            OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage,
-            OptionalNullable<Boolean> allowAnyOrganization,
-            Optional<List<String>> authorizationDetailsTypes,
-            OptionalNullable<Boolean> allowAllScopes,
-            Map<String, Object> additionalProperties) {
+    private UpdateClientGrantRequestContent(OptionalNullable<List<String>> scope, OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage, OptionalNullable<Boolean> allowAnyOrganization, Optional<List<String>> authorizationDetailsTypes, OptionalNullable<Boolean> allowAllScopes, Map<String, Object> additionalProperties) {
         this.scope = scope;
         this.organizationUsage = organizationUsage;
         this.allowAnyOrganization = allowAnyOrganization;
@@ -57,19 +52,13 @@ public final class UpdateClientGrantRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("scope")
     public OptionalNullable<List<String>> getScope() {
-        if (scope == null) {
-            return OptionalNullable.absent();
-        }
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("organization_usage")
     public OptionalNullable<ClientGrantOrganizationNullableUsageEnum> getOrganizationUsage() {
-        if (organizationUsage == null) {
-            return OptionalNullable.absent();
-        }
-        return organizationUsage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,10 +67,7 @@ public final class UpdateClientGrantRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("allow_any_organization")
     public OptionalNullable<Boolean> getAllowAnyOrganization() {
-        if (allowAnyOrganization == null) {
-            return OptionalNullable.absent();
-        }
-        return allowAnyOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +75,7 @@ public final class UpdateClientGrantRequestContent {
      */
     @JsonProperty("authorization_details_types")
     public Optional<List<String>> getAuthorizationDetailsTypes() {
-        return authorizationDetailsTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,10 +84,7 @@ public final class UpdateClientGrantRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("allow_all_scopes")
     public OptionalNullable<Boolean> getAllowAllScopes() {
-        if (allowAllScopes == null) {
-            return OptionalNullable.absent();
-        }
-        return allowAllScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -130,48 +113,38 @@ public final class UpdateClientGrantRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateClientGrantRequestContent && equalTo((UpdateClientGrantRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateClientGrantRequestContent other) {
-        return scope.equals(other.scope)
-                && organizationUsage.equals(other.organizationUsage)
-                && allowAnyOrganization.equals(other.allowAnyOrganization)
-                && authorizationDetailsTypes.equals(other.authorizationDetailsTypes)
-                && allowAllScopes.equals(other.allowAllScopes);
+        return scope.equals(other.scope) && organizationUsage.equals(other.organizationUsage) && allowAnyOrganization.equals(other.allowAnyOrganization) && authorizationDetailsTypes.equals(other.authorizationDetailsTypes) && allowAllScopes.equals(other.allowAllScopes);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.scope,
-                this.organizationUsage,
-                this.allowAnyOrganization,
-                this.authorizationDetailsTypes,
-                this.allowAllScopes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<List<String>> scope = OptionalNullable.absent();
 
-        private OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage =
-                OptionalNullable.absent();
+        private OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage = OptionalNullable.absent();
 
         private OptionalNullable<Boolean> allowAnyOrganization = OptionalNullable.absent();
 
@@ -182,15 +155,11 @@ public final class UpdateClientGrantRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateClientGrantRequestContent other) {
-            scope(other.getScope());
-            organizationUsage(other.getOrganizationUsage());
-            allowAnyOrganization(other.getAllowAnyOrganization());
-            authorizationDetailsTypes(other.getAuthorizationDetailsTypes());
-            allowAllScopes(other.getAllowAllScopes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -198,66 +167,36 @@ public final class UpdateClientGrantRequestContent {
          */
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(@Nullable OptionalNullable<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = OptionalNullable.of(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(Optional<List<String>> scope) {
-            if (scope.isPresent()) {
-                this.scope = OptionalNullable.of(scope.get());
-            } else {
-                this.scope = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(com.auth0.client.mgmt.core.Nullable<List<String>> scope) {
-            if (scope.isNull()) {
-                this.scope = OptionalNullable.ofNull();
-            } else if (scope.isEmpty()) {
-                this.scope = OptionalNullable.absent();
-            } else {
-                this.scope = OptionalNullable.of(scope.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organization_usage", nulls = Nulls.SKIP)
-        public Builder organizationUsage(
-                @Nullable OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage) {
-            this.organizationUsage = organizationUsage;
-            return this;
+        public Builder organizationUsage(@Nullable OptionalNullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationUsage(ClientGrantOrganizationNullableUsageEnum organizationUsage) {
-            this.organizationUsage = OptionalNullable.of(organizationUsage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationUsage(Optional<ClientGrantOrganizationNullableUsageEnum> organizationUsage) {
-            if (organizationUsage.isPresent()) {
-                this.organizationUsage = OptionalNullable.of(organizationUsage.get());
-            } else {
-                this.organizationUsage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder organizationUsage(
-                com.auth0.client.mgmt.core.Nullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage) {
-            if (organizationUsage.isNull()) {
-                this.organizationUsage = OptionalNullable.ofNull();
-            } else if (organizationUsage.isEmpty()) {
-                this.organizationUsage = OptionalNullable.absent();
-            } else {
-                this.organizationUsage = OptionalNullable.of(organizationUsage.get());
-            }
-            return this;
+        public Builder organizationUsage(com.auth0.client.mgmt.core.Nullable<ClientGrantOrganizationNullableUsageEnum> organizationUsage) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -265,33 +204,19 @@ public final class UpdateClientGrantRequestContent {
          */
         @JsonSetter(value = "allow_any_organization", nulls = Nulls.SKIP)
         public Builder allowAnyOrganization(@Nullable OptionalNullable<Boolean> allowAnyOrganization) {
-            this.allowAnyOrganization = allowAnyOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(Boolean allowAnyOrganization) {
-            this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(Optional<Boolean> allowAnyOrganization) {
-            if (allowAnyOrganization.isPresent()) {
-                this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization.get());
-            } else {
-                this.allowAnyOrganization = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(com.auth0.client.mgmt.core.Nullable<Boolean> allowAnyOrganization) {
-            if (allowAnyOrganization.isNull()) {
-                this.allowAnyOrganization = OptionalNullable.ofNull();
-            } else if (allowAnyOrganization.isEmpty()) {
-                this.allowAnyOrganization = OptionalNullable.absent();
-            } else {
-                this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -299,13 +224,11 @@ public final class UpdateClientGrantRequestContent {
          */
         @JsonSetter(value = "authorization_details_types", nulls = Nulls.SKIP)
         public Builder authorizationDetailsTypes(Optional<List<String>> authorizationDetailsTypes) {
-            this.authorizationDetailsTypes = authorizationDetailsTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationDetailsTypes(List<String> authorizationDetailsTypes) {
-            this.authorizationDetailsTypes = Optional.ofNullable(authorizationDetailsTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -313,53 +236,31 @@ public final class UpdateClientGrantRequestContent {
          */
         @JsonSetter(value = "allow_all_scopes", nulls = Nulls.SKIP)
         public Builder allowAllScopes(@Nullable OptionalNullable<Boolean> allowAllScopes) {
-            this.allowAllScopes = allowAllScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAllScopes(Boolean allowAllScopes) {
-            this.allowAllScopes = OptionalNullable.of(allowAllScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAllScopes(Optional<Boolean> allowAllScopes) {
-            if (allowAllScopes.isPresent()) {
-                this.allowAllScopes = OptionalNullable.of(allowAllScopes.get());
-            } else {
-                this.allowAllScopes = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAllScopes(com.auth0.client.mgmt.core.Nullable<Boolean> allowAllScopes) {
-            if (allowAllScopes.isNull()) {
-                this.allowAllScopes = OptionalNullable.ofNull();
-            } else if (allowAllScopes.isEmpty()) {
-                this.allowAllScopes = OptionalNullable.absent();
-            } else {
-                this.allowAllScopes = OptionalNullable.of(allowAllScopes.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateClientGrantRequestContent build() {
-            return new UpdateClientGrantRequestContent(
-                    scope,
-                    organizationUsage,
-                    allowAnyOrganization,
-                    authorizationDetailsTypes,
-                    allowAllScopes,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

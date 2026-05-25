@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionGoogleSheetsAddRowParams.Builder.class)
 public final class FlowActionGoogleSheetsAddRowParams {
+
     private final String connectionId;
 
     private final String spreadsheetId;
@@ -33,12 +34,7 @@ public final class FlowActionGoogleSheetsAddRowParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionGoogleSheetsAddRowParams(
-            String connectionId,
-            String spreadsheetId,
-            Optional<FlowActionGoogleSheetsAddRowParamsSheetId> sheetId,
-            Optional<List<OptionalNullable<String>>> values,
-            Map<String, Object> additionalProperties) {
+    private FlowActionGoogleSheetsAddRowParams(String connectionId, String spreadsheetId, Optional<FlowActionGoogleSheetsAddRowParamsSheetId> sheetId, Optional<List<OptionalNullable<String>>> values, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.spreadsheetId = spreadsheetId;
         this.sheetId = sheetId;
@@ -48,68 +44,66 @@ public final class FlowActionGoogleSheetsAddRowParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("spreadsheet_id")
     public String getSpreadsheetId() {
-        return spreadsheetId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sheet_id")
     public Optional<FlowActionGoogleSheetsAddRowParamsSheetId> getSheetId() {
-        return sheetId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("values")
     public Optional<List<OptionalNullable<String>>> getValues() {
-        return values;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionGoogleSheetsAddRowParams
-                && equalTo((FlowActionGoogleSheetsAddRowParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionGoogleSheetsAddRowParams other) {
-        return connectionId.equals(other.connectionId)
-                && spreadsheetId.equals(other.spreadsheetId)
-                && sheetId.equals(other.sheetId)
-                && values.equals(other.values);
+        return connectionId.equals(other.connectionId) && spreadsheetId.equals(other.spreadsheetId) && sheetId.equals(other.sheetId) && values.equals(other.values);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.spreadsheetId, this.sheetId, this.values);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         SpreadsheetIdStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionGoogleSheetsAddRowParams other);
     }
 
     public interface SpreadsheetIdStage {
+
         _FinalStage spreadsheetId(@NotNull String spreadsheetId);
     }
 
     public interface _FinalStage {
+
         FlowActionGoogleSheetsAddRowParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -127,6 +121,7 @@ public final class FlowActionGoogleSheetsAddRowParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, SpreadsheetIdStage, _FinalStage {
+
         private String connectionId;
 
         private String spreadsheetId;
@@ -138,73 +133,61 @@ public final class FlowActionGoogleSheetsAddRowParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionGoogleSheetsAddRowParams other) {
-            connectionId(other.getConnectionId());
-            spreadsheetId(other.getSpreadsheetId());
-            sheetId(other.getSheetId());
-            values(other.getValues());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public SpreadsheetIdStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("spreadsheet_id")
         public _FinalStage spreadsheetId(@NotNull String spreadsheetId) {
-            this.spreadsheetId = Objects.requireNonNull(spreadsheetId, "spreadsheetId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage values(List<OptionalNullable<String>> values) {
-            this.values = Optional.ofNullable(values);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "values", nulls = Nulls.SKIP)
         public _FinalStage values(Optional<List<OptionalNullable<String>>> values) {
-            this.values = values;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage sheetId(FlowActionGoogleSheetsAddRowParamsSheetId sheetId) {
-            this.sheetId = Optional.ofNullable(sheetId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "sheet_id", nulls = Nulls.SKIP)
         public _FinalStage sheetId(Optional<FlowActionGoogleSheetsAddRowParamsSheetId> sheetId) {
-            this.sheetId = sheetId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionGoogleSheetsAddRowParams build() {
-            return new FlowActionGoogleSheetsAddRowParams(
-                    connectionId, spreadsheetId, sheetId, values, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

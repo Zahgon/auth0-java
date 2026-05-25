@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionSlack.Deserializer.class)
 public final class CreateFlowsVaultConnectionSlack {
+
     private final Object value;
 
     private final int type;
@@ -27,25 +28,17 @@ public final class CreateFlowsVaultConnectionSlack {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionSlackWebhook) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionSlackOauthCode) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((CreateFlowsVaultConnectionSlackUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionSlack && equalTo((CreateFlowsVaultConnectionSlack) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionSlack other) {
@@ -54,27 +47,28 @@ public final class CreateFlowsVaultConnectionSlack {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionSlack of(CreateFlowsVaultConnectionSlackWebhook value) {
-        return new CreateFlowsVaultConnectionSlack(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionSlack of(CreateFlowsVaultConnectionSlackOauthCode value) {
-        return new CreateFlowsVaultConnectionSlack(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionSlack of(CreateFlowsVaultConnectionSlackUninitialized value) {
-        return new CreateFlowsVaultConnectionSlack(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionSlackWebhook value);
 
         T visit(CreateFlowsVaultConnectionSlackOauthCode value);
@@ -83,44 +77,14 @@ public final class CreateFlowsVaultConnectionSlack {
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionSlack> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionSlack.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionSlack deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionSlackWebhook.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionSlackOauthCode.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionSlackUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionSlack deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

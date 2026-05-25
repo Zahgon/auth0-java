@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class EmailsClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<ProviderClient> providerClient;
@@ -18,6 +19,6 @@ public class EmailsClient {
     }
 
     public ProviderClient provider() {
-        return this.providerClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

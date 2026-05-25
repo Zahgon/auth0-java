@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormWidgetTypeGMapsAddressConst {
-    public static final FormWidgetTypeGMapsAddressConst GMAPS_ADDRESS =
-            new FormWidgetTypeGMapsAddressConst(Value.GMAPS_ADDRESS, "GMAPS_ADDRESS");
+
+    public static final FormWidgetTypeGMapsAddressConst GMAPS_ADDRESS = new FormWidgetTypeGMapsAddressConst(Value.GMAPS_ADDRESS, "GMAPS_ADDRESS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormWidgetTypeGMapsAddressConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormWidgetTypeGMapsAddressConst
-                        && this.string.equals(((FormWidgetTypeGMapsAddressConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GMAPS_ADDRESS:
-                return visitor.visitGmapsAddress();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormWidgetTypeGMapsAddressConst valueOf(String value) {
-        switch (value) {
-            case "GMAPS_ADDRESS":
-                return GMAPS_ADDRESS;
-            default:
-                return new FormWidgetTypeGMapsAddressConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GMAPS_ADDRESS,
 
-        UNKNOWN
+        GMAPS_ADDRESS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGmapsAddress();
 
         T visitUnknown(String unknownType);

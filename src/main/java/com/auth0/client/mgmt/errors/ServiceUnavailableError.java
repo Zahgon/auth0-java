@@ -7,6 +7,7 @@ import com.auth0.client.mgmt.core.ManagementApiException;
 import okhttp3.Response;
 
 public final class ServiceUnavailableError extends ManagementApiException {
+
     /**
      * The body of the response that triggered the exception.
      */
@@ -27,6 +28,6 @@ public final class ServiceUnavailableError extends ManagementApiException {
      */
     @java.lang.Override
     public Object body() {
-        return this.body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionStripeUpdateCustomerType {
-    public static final FlowActionStripeUpdateCustomerType STRIPE =
-            new FlowActionStripeUpdateCustomerType(Value.STRIPE, "STRIPE");
+
+    public static final FlowActionStripeUpdateCustomerType STRIPE = new FlowActionStripeUpdateCustomerType(Value.STRIPE, "STRIPE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionStripeUpdateCustomerType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionStripeUpdateCustomerType
-                        && this.string.equals(((FlowActionStripeUpdateCustomerType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case STRIPE:
-                return visitor.visitStripe();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionStripeUpdateCustomerType valueOf(String value) {
-        switch (value) {
-            case "STRIPE":
-                return STRIPE;
-            default:
-                return new FlowActionStripeUpdateCustomerType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STRIPE,
 
-        UNKNOWN
+        STRIPE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStripe();
 
         T visitUnknown(String unknownType);

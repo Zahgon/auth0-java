@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeEmailConst {
+
     public static final FormFieldTypeEmailConst EMAIL = new FormFieldTypeEmailConst(Value.EMAIL, "EMAIL");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeEmailConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeEmailConst
-                        && this.string.equals(((FormFieldTypeEmailConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeEmailConst valueOf(String value) {
-        switch (value) {
-            case "EMAIL":
-                return EMAIL;
-            default:
-                return new FormFieldTypeEmailConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EMAIL,
 
-        UNKNOWN
+        EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEmail();
 
         T visitUnknown(String unknownType);

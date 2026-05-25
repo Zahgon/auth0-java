@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamDatadogRegionEnum {
+
     public static final LogStreamDatadogRegionEnum US3 = new LogStreamDatadogRegionEnum(Value.US3, "us3");
 
     public static final LogStreamDatadogRegionEnum US = new LogStreamDatadogRegionEnum(Value.US, "us");
@@ -25,72 +26,41 @@ public final class LogStreamDatadogRegionEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamDatadogRegionEnum
-                        && this.string.equals(((LogStreamDatadogRegionEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case US3:
-                return visitor.visitUs3();
-            case US:
-                return visitor.visitUs();
-            case EU:
-                return visitor.visitEu();
-            case US5:
-                return visitor.visitUs5();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamDatadogRegionEnum valueOf(String value) {
-        switch (value) {
-            case "us3":
-                return US3;
-            case "us":
-                return US;
-            case "eu":
-                return EU;
-            case "us5":
-                return US5;
-            default:
-                return new LogStreamDatadogRegionEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        US,
 
-        EU,
-
-        US3,
-
-        US5,
-
-        UNKNOWN
+        US, EU, US3, US5, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUs();
 
         T visitEu();

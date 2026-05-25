@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamWebhookDestinationTypeEnum {
-    public static final EventStreamWebhookDestinationTypeEnum WEBHOOK =
-            new EventStreamWebhookDestinationTypeEnum(Value.WEBHOOK, "webhook");
+
+    public static final EventStreamWebhookDestinationTypeEnum WEBHOOK = new EventStreamWebhookDestinationTypeEnum(Value.WEBHOOK, "webhook");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamWebhookDestinationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamWebhookDestinationTypeEnum
-                        && this.string.equals(((EventStreamWebhookDestinationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WEBHOOK:
-                return visitor.visitWebhook();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamWebhookDestinationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "webhook":
-                return WEBHOOK;
-            default:
-                return new EventStreamWebhookDestinationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WEBHOOK,
 
-        UNKNOWN
+        WEBHOOK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWebhook();
 
         T visitUnknown(String unknownType);

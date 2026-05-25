@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BreachedPasswordDetectionMethodEnum {
-    public static final BreachedPasswordDetectionMethodEnum STANDARD =
-            new BreachedPasswordDetectionMethodEnum(Value.STANDARD, "standard");
 
-    public static final BreachedPasswordDetectionMethodEnum ENHANCED =
-            new BreachedPasswordDetectionMethodEnum(Value.ENHANCED, "enhanced");
+    public static final BreachedPasswordDetectionMethodEnum STANDARD = new BreachedPasswordDetectionMethodEnum(Value.STANDARD, "standard");
+
+    public static final BreachedPasswordDetectionMethodEnum ENHANCED = new BreachedPasswordDetectionMethodEnum(Value.ENHANCED, "enhanced");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class BreachedPasswordDetectionMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BreachedPasswordDetectionMethodEnum
-                        && this.string.equals(((BreachedPasswordDetectionMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case STANDARD:
-                return visitor.visitStandard();
-            case ENHANCED:
-                return visitor.visitEnhanced();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BreachedPasswordDetectionMethodEnum valueOf(String value) {
-        switch (value) {
-            case "standard":
-                return STANDARD;
-            case "enhanced":
-                return ENHANCED;
-            default:
-                return new BreachedPasswordDetectionMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STANDARD,
 
-        ENHANCED,
-
-        UNKNOWN
+        STANDARD, ENHANCED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStandard();
 
         T visitEnhanced();

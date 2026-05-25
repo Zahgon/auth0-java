@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SelfServiceProfileCustomTextPageEnum {
-    public static final SelfServiceProfileCustomTextPageEnum GET_STARTED =
-            new SelfServiceProfileCustomTextPageEnum(Value.GET_STARTED, "get-started");
+
+    public static final SelfServiceProfileCustomTextPageEnum GET_STARTED = new SelfServiceProfileCustomTextPageEnum(Value.GET_STARTED, "get-started");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class SelfServiceProfileCustomTextPageEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SelfServiceProfileCustomTextPageEnum
-                        && this.string.equals(((SelfServiceProfileCustomTextPageEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET_STARTED:
-                return visitor.visitGetStarted();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SelfServiceProfileCustomTextPageEnum valueOf(String value) {
-        switch (value) {
-            case "get-started":
-                return GET_STARTED;
-            default:
-                return new SelfServiceProfileCustomTextPageEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GET_STARTED,
 
-        UNKNOWN
+        GET_STARTED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGetStarted();
 
         T visitUnknown(String unknownType);

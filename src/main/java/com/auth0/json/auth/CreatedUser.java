@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatedUser {
 
     @JsonProperty("_id")
-    @JsonAlias({"_id", "id", "user_id"})
+    @JsonAlias({ "_id", "id", "user_id" })
     private String userId;
 
     @JsonProperty("email")
@@ -30,28 +30,28 @@ public class CreatedUser {
     private String phoneNumber;
 
     @JsonProperty("_id")
-    @JsonAlias({"_id", "id", "user_id"})
+    @JsonAlias({ "_id", "id", "user_id" })
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email")
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("username")
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email_verified")
     public Boolean isEmailVerified() {
-        return emailVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone_number")
     public String getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

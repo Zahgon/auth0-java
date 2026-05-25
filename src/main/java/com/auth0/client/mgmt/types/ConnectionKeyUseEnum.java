@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionKeyUseEnum {
+
     public static final ConnectionKeyUseEnum SIGNING = new ConnectionKeyUseEnum(Value.SIGNING, "signing");
 
     public static final ConnectionKeyUseEnum ENCRYPTION = new ConnectionKeyUseEnum(Value.ENCRYPTION, "encryption");
@@ -21,59 +22,41 @@ public final class ConnectionKeyUseEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionKeyUseEnum && this.string.equals(((ConnectionKeyUseEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SIGNING:
-                return visitor.visitSigning();
-            case ENCRYPTION:
-                return visitor.visitEncryption();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionKeyUseEnum valueOf(String value) {
-        switch (value) {
-            case "signing":
-                return SIGNING;
-            case "encryption":
-                return ENCRYPTION;
-            default:
-                return new ConnectionKeyUseEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ENCRYPTION,
 
-        SIGNING,
-
-        UNKNOWN
+        ENCRYPTION, SIGNING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEncryption();
 
         T visitSigning();

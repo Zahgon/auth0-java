@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetCustomSigningKeysResponseContent;
 import com.auth0.client.mgmt.types.SetCustomSigningKeysResponseContent;
 
 public class CustomSigningClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCustomSigningClient rawClient;
@@ -23,49 +24,48 @@ public class CustomSigningClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCustomSigningClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get entire jwks representation of custom signing keys.
      */
     public GetCustomSigningKeysResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get entire jwks representation of custom signing keys.
      */
     public GetCustomSigningKeysResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace entire jwks representation of custom signing keys.
      */
     public SetCustomSigningKeysResponseContent set(SetCustomSigningKeysRequestContent request) {
-        return this.rawClient.set(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace entire jwks representation of custom signing keys.
      */
-    public SetCustomSigningKeysResponseContent set(
-            SetCustomSigningKeysRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).body();
+    public SetCustomSigningKeysResponseContent set(SetCustomSigningKeysRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete entire jwks representation of custom signing keys.
      */
     public void delete() {
-        this.rawClient.delete().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete entire jwks representation of custom signing keys.
      */
     public void delete(RequestOptions requestOptions) {
-        this.rawClient.delete(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

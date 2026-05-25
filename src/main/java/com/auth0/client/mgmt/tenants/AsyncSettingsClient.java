@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.UpdateTenantSettingsResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSettingsClient rawClient;
@@ -25,64 +26,62 @@ public class AsyncSettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public CompletableFuture<GetTenantSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public CompletableFuture<GetTenantSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public CompletableFuture<GetTenantSettingsResponseContent> get(GetTenantSettingsRequestParameters request) {
-        return this.rawClient.get(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
-    public CompletableFuture<GetTenantSettingsResponseContent> get(
-            GetTenantSettingsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetTenantSettingsResponseContent> get(GetTenantSettingsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public CompletableFuture<UpdateTenantSettingsResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public CompletableFuture<UpdateTenantSettingsResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public CompletableFuture<UpdateTenantSettingsResponseContent> update(UpdateTenantSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
-    public CompletableFuture<UpdateTenantSettingsResponseContent> update(
-            UpdateTenantSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateTenantSettingsResponseContent> update(UpdateTenantSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

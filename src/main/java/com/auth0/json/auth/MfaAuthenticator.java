@@ -24,22 +24,22 @@ public class MfaAuthenticator {
     private String oobChannel;
 
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getAuthenticatorType() {
-        return authenticatorType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getOobChannel() {
-        return oobChannel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

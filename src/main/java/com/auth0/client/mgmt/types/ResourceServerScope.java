@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ResourceServerScope.Builder.class)
 public final class ResourceServerScope {
+
     private final String value;
 
     private final Optional<String> description;
@@ -38,7 +39,7 @@ public final class ResourceServerScope {
      */
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +47,17 @@ public final class ResourceServerScope {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ResourceServerScope && equalTo((ResourceServerScope) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ResourceServerScope other) {
@@ -66,19 +66,20 @@ public final class ResourceServerScope {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value, this.description);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ValueStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ValueStage {
+
         /**
          * <p>Value of this scope.</p>
          */
@@ -88,6 +89,7 @@ public final class ResourceServerScope {
     }
 
     public interface _FinalStage {
+
         ResourceServerScope build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +106,7 @@ public final class ResourceServerScope {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ValueStage, _FinalStage {
+
         private String value;
 
         private Optional<String> description = Optional.empty();
@@ -111,13 +114,12 @@ public final class ResourceServerScope {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ResourceServerScope other) {
-            value(other.getValue());
-            description(other.getDescription());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,8 +130,7 @@ public final class ResourceServerScope {
         @java.lang.Override
         @JsonSetter("value")
         public _FinalStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,8 +139,7 @@ public final class ResourceServerScope {
          */
         @java.lang.Override
         public _FinalStage description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,25 +148,22 @@ public final class ResourceServerScope {
         @java.lang.Override
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public _FinalStage description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ResourceServerScope build() {
-            return new ResourceServerScope(value, description, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

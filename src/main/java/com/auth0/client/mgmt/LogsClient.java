@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.ListLogsRequestParameters;
 import com.auth0.client.mgmt.types.Log;
 
 public class LogsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawLogsClient rawClient;
@@ -24,7 +25,7 @@ public class LogsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawLogsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,7 +52,7 @@ public class LogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public SyncPagingIterable<Log> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +79,7 @@ public class LogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public SyncPagingIterable<Log> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,7 +106,7 @@ public class LogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public SyncPagingIterable<Log> list(ListLogsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,20 +133,20 @@ public class LogsClient {
      * <p><strong>Important:</strong> When fetching logs from a checkpoint log ID, any parameter other than <code>from</code> and <code>take</code> will be ignored, and date ordering is not guaranteed.</p>
      */
     public SyncPagingIterable<Log> list(ListLogsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an individual log event.
      */
     public GetLogResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an individual log event.
      */
     public GetLogResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

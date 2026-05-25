@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectioSetupTypeApiKeyEnum {
-    public static final FlowsVaultConnectioSetupTypeApiKeyEnum API_KEY =
-            new FlowsVaultConnectioSetupTypeApiKeyEnum(Value.API_KEY, "API_KEY");
+
+    public static final FlowsVaultConnectioSetupTypeApiKeyEnum API_KEY = new FlowsVaultConnectioSetupTypeApiKeyEnum(Value.API_KEY, "API_KEY");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectioSetupTypeApiKeyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectioSetupTypeApiKeyEnum
-                        && this.string.equals(((FlowsVaultConnectioSetupTypeApiKeyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case API_KEY:
-                return visitor.visitApiKey();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectioSetupTypeApiKeyEnum valueOf(String value) {
-        switch (value) {
-            case "API_KEY":
-                return API_KEY;
-            default:
-                return new FlowsVaultConnectioSetupTypeApiKeyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        API_KEY,
 
-        UNKNOWN
+        API_KEY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitApiKey();
 
         T visitUnknown(String unknownType);

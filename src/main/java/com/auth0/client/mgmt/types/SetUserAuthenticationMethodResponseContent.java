@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetUserAuthenticationMethodResponseContent.Builder.class)
 public final class SetUserAuthenticationMethodResponseContent {
+
     private final Optional<String> id;
 
     private final CreatedAuthenticationMethodTypeEnum type;
@@ -51,21 +52,7 @@ public final class SetUserAuthenticationMethodResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private SetUserAuthenticationMethodResponseContent(
-            Optional<String> id,
-            CreatedAuthenticationMethodTypeEnum type,
-            Optional<String> name,
-            Optional<String> totpSecret,
-            Optional<String> phoneNumber,
-            Optional<String> email,
-            Optional<List<UserAuthenticationMethodProperties>> authenticationMethods,
-            Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod,
-            Optional<String> keyId,
-            Optional<String> publicKey,
-            Optional<String> aaguid,
-            Optional<String> relyingPartyIdentifier,
-            Optional<OffsetDateTime> createdAt,
-            Map<String, Object> additionalProperties) {
+    private SetUserAuthenticationMethodResponseContent(Optional<String> id, CreatedAuthenticationMethodTypeEnum type, Optional<String> name, Optional<String> totpSecret, Optional<String> phoneNumber, Optional<String> email, Optional<List<UserAuthenticationMethodProperties>> authenticationMethods, Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod, Optional<String> keyId, Optional<String> publicKey, Optional<String> aaguid, Optional<String> relyingPartyIdentifier, Optional<OffsetDateTime> createdAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.type = type;
         this.name = name;
@@ -87,12 +74,12 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public CreatedAuthenticationMethodTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,7 +87,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -108,7 +95,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("totp_secret")
     public Optional<String> getTotpSecret() {
-        return totpSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,7 +103,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("phone_number")
     public Optional<String> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,12 +111,12 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authentication_methods")
     public Optional<List<UserAuthenticationMethodProperties>> getAuthenticationMethods() {
-        return authenticationMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -137,7 +124,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("preferred_authentication_method")
     public Optional<PreferredAuthenticationMethodEnum> getPreferredAuthenticationMethod() {
-        return preferredAuthenticationMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -145,7 +132,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("key_id")
     public Optional<String> getKeyId() {
-        return keyId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,7 +140,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("public_key")
     public Optional<String> getPublicKey() {
-        return publicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -161,7 +148,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("aaguid")
     public Optional<String> getAaguid() {
-        return aaguid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -169,7 +156,7 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("relying_party_identifier")
     public Optional<String> getRelyingPartyIdentifier() {
-        return relyingPartyIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -177,71 +164,46 @@ public final class SetUserAuthenticationMethodResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetUserAuthenticationMethodResponseContent
-                && equalTo((SetUserAuthenticationMethodResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetUserAuthenticationMethodResponseContent other) {
-        return id.equals(other.id)
-                && type.equals(other.type)
-                && name.equals(other.name)
-                && totpSecret.equals(other.totpSecret)
-                && phoneNumber.equals(other.phoneNumber)
-                && email.equals(other.email)
-                && authenticationMethods.equals(other.authenticationMethods)
-                && preferredAuthenticationMethod.equals(other.preferredAuthenticationMethod)
-                && keyId.equals(other.keyId)
-                && publicKey.equals(other.publicKey)
-                && aaguid.equals(other.aaguid)
-                && relyingPartyIdentifier.equals(other.relyingPartyIdentifier)
-                && createdAt.equals(other.createdAt);
+        return id.equals(other.id) && type.equals(other.type) && name.equals(other.name) && totpSecret.equals(other.totpSecret) && phoneNumber.equals(other.phoneNumber) && email.equals(other.email) && authenticationMethods.equals(other.authenticationMethods) && preferredAuthenticationMethod.equals(other.preferredAuthenticationMethod) && keyId.equals(other.keyId) && publicKey.equals(other.publicKey) && aaguid.equals(other.aaguid) && relyingPartyIdentifier.equals(other.relyingPartyIdentifier) && createdAt.equals(other.createdAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.type,
-                this.name,
-                this.totpSecret,
-                this.phoneNumber,
-                this.email,
-                this.authenticationMethods,
-                this.preferredAuthenticationMethod,
-                this.keyId,
-                this.publicKey,
-                this.aaguid,
-                this.relyingPartyIdentifier,
-                this.createdAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull CreatedAuthenticationMethodTypeEnum type);
 
         Builder from(SetUserAuthenticationMethodResponseContent other);
     }
 
     public interface _FinalStage {
+
         SetUserAuthenticationMethodResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -290,8 +252,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         /**
          * <p>Preferred phone authentication method</p>
          */
-        _FinalStage preferredAuthenticationMethod(
-                Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod);
+        _FinalStage preferredAuthenticationMethod(Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod);
 
         _FinalStage preferredAuthenticationMethod(PreferredAuthenticationMethodEnum preferredAuthenticationMethod);
 
@@ -333,6 +294,7 @@ public final class SetUserAuthenticationMethodResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, _FinalStage {
+
         private CreatedAuthenticationMethodTypeEnum type;
 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
@@ -362,31 +324,18 @@ public final class SetUserAuthenticationMethodResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SetUserAuthenticationMethodResponseContent other) {
-            id(other.getId());
-            type(other.getType());
-            name(other.getName());
-            totpSecret(other.getTotpSecret());
-            phoneNumber(other.getPhoneNumber());
-            email(other.getEmail());
-            authenticationMethods(other.getAuthenticationMethods());
-            preferredAuthenticationMethod(other.getPreferredAuthenticationMethod());
-            keyId(other.getKeyId());
-            publicKey(other.getPublicKey());
-            aaguid(other.getAaguid());
-            relyingPartyIdentifier(other.getRelyingPartyIdentifier());
-            createdAt(other.getCreatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull CreatedAuthenticationMethodTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -395,8 +344,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -405,8 +353,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public _FinalStage createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -415,8 +362,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage relyingPartyIdentifier(String relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = Optional.ofNullable(relyingPartyIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -425,8 +371,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "relying_party_identifier", nulls = Nulls.SKIP)
         public _FinalStage relyingPartyIdentifier(Optional<String> relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = relyingPartyIdentifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -435,8 +380,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage aaguid(String aaguid) {
-            this.aaguid = Optional.ofNullable(aaguid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -445,8 +389,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "aaguid", nulls = Nulls.SKIP)
         public _FinalStage aaguid(Optional<String> aaguid) {
-            this.aaguid = aaguid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -455,8 +398,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage publicKey(String publicKey) {
-            this.publicKey = Optional.ofNullable(publicKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -465,8 +407,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "public_key", nulls = Nulls.SKIP)
         public _FinalStage publicKey(Optional<String> publicKey) {
-            this.publicKey = publicKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -475,8 +416,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage keyId(String keyId) {
-            this.keyId = Optional.ofNullable(keyId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -485,8 +425,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "key_id", nulls = Nulls.SKIP)
         public _FinalStage keyId(Optional<String> keyId) {
-            this.keyId = keyId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -494,10 +433,8 @@ public final class SetUserAuthenticationMethodResponseContent {
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @java.lang.Override
-        public _FinalStage preferredAuthenticationMethod(
-                PreferredAuthenticationMethodEnum preferredAuthenticationMethod) {
-            this.preferredAuthenticationMethod = Optional.ofNullable(preferredAuthenticationMethod);
-            return this;
+        public _FinalStage preferredAuthenticationMethod(PreferredAuthenticationMethodEnum preferredAuthenticationMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -505,24 +442,19 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         @JsonSetter(value = "preferred_authentication_method", nulls = Nulls.SKIP)
-        public _FinalStage preferredAuthenticationMethod(
-                Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod) {
-            this.preferredAuthenticationMethod = preferredAuthenticationMethod;
-            return this;
+        public _FinalStage preferredAuthenticationMethod(Optional<PreferredAuthenticationMethodEnum> preferredAuthenticationMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage authenticationMethods(List<UserAuthenticationMethodProperties> authenticationMethods) {
-            this.authenticationMethods = Optional.ofNullable(authenticationMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "authentication_methods", nulls = Nulls.SKIP)
-        public _FinalStage authenticationMethods(
-                Optional<List<UserAuthenticationMethodProperties>> authenticationMethods) {
-            this.authenticationMethods = authenticationMethods;
-            return this;
+        public _FinalStage authenticationMethods(Optional<List<UserAuthenticationMethodProperties>> authenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -531,8 +463,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -541,8 +472,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public _FinalStage email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -551,8 +481,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage phoneNumber(String phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -561,8 +490,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public _FinalStage phoneNumber(Optional<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -571,8 +499,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage totpSecret(String totpSecret) {
-            this.totpSecret = Optional.ofNullable(totpSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -581,8 +508,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "totp_secret", nulls = Nulls.SKIP)
         public _FinalStage totpSecret(Optional<String> totpSecret) {
-            this.totpSecret = totpSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -591,8 +517,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -601,8 +526,7 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -611,8 +535,7 @@ public final class SetUserAuthenticationMethodResponseContent {
          */
         @java.lang.Override
         public _FinalStage id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -621,39 +544,22 @@ public final class SetUserAuthenticationMethodResponseContent {
         @java.lang.Override
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public _FinalStage id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SetUserAuthenticationMethodResponseContent build() {
-            return new SetUserAuthenticationMethodResponseContent(
-                    id,
-                    type,
-                    name,
-                    totpSecret,
-                    phoneNumber,
-                    email,
-                    authenticationMethods,
-                    preferredAuthenticationMethod,
-                    keyId,
-                    publicKey,
-                    aaguid,
-                    relyingPartyIdentifier,
-                    createdAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

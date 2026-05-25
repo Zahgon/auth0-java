@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentUntappdStrategy {
-    public static final CreateConnectionRequestContentUntappdStrategy UNTAPPD =
-            new CreateConnectionRequestContentUntappdStrategy(Value.UNTAPPD, "untappd");
+
+    public static final CreateConnectionRequestContentUntappdStrategy UNTAPPD = new CreateConnectionRequestContentUntappdStrategy(Value.UNTAPPD, "untappd");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentUntappdStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentUntappdStrategy
-                        && this.string.equals(((CreateConnectionRequestContentUntappdStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UNTAPPD:
-                return visitor.visitUntappd();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentUntappdStrategy valueOf(String value) {
-        switch (value) {
-            case "untappd":
-                return UNTAPPD;
-            default:
-                return new CreateConnectionRequestContentUntappdStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UNTAPPD,
 
-        UNKNOWN
+        UNTAPPD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUntappd();
 
         T visitUnknown(String unknownType);

@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionDecryptionKeySamlCert.Builder.class)
 public final class ConnectionDecryptionKeySamlCert {
+
     private final Optional<String> cert;
 
     private final Optional<String> key;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionDecryptionKeySamlCert(
-            Optional<String> cert, Optional<String> key, Map<String, Object> additionalProperties) {
+    private ConnectionDecryptionKeySamlCert(Optional<String> cert, Optional<String> key, Map<String, Object> additionalProperties) {
         this.cert = cert;
         this.key = key;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class ConnectionDecryptionKeySamlCert {
      */
     @JsonProperty("cert")
     public Optional<String> getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class ConnectionDecryptionKeySamlCert {
      */
     @JsonProperty("key")
     public Optional<String> getKey() {
-        return key;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionDecryptionKeySamlCert && equalTo((ConnectionDecryptionKeySamlCert) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionDecryptionKeySamlCert other) {
@@ -66,20 +65,21 @@ public final class ConnectionDecryptionKeySamlCert {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.cert, this.key);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> cert = Optional.empty();
 
         private Optional<String> key = Optional.empty();
@@ -87,12 +87,11 @@ public final class ConnectionDecryptionKeySamlCert {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionDecryptionKeySamlCert other) {
-            cert(other.getCert());
-            key(other.getKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class ConnectionDecryptionKeySamlCert {
          */
         @JsonSetter(value = "cert", nulls = Nulls.SKIP)
         public Builder cert(Optional<String> cert) {
-            this.cert = cert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder cert(String cert) {
-            this.cert = Optional.ofNullable(cert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class ConnectionDecryptionKeySamlCert {
          */
         @JsonSetter(value = "key", nulls = Nulls.SKIP)
         public Builder key(Optional<String> key) {
-            this.key = key;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder key(String key) {
-            this.key = Optional.ofNullable(key);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionDecryptionKeySamlCert build() {
-            return new ConnectionDecryptionKeySamlCert(cert, key, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

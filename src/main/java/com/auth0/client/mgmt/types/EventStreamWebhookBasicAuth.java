@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamWebhookBasicAuth.Builder.class)
 public final class EventStreamWebhookBasicAuth {
+
     private final EventStreamWebhookBasicAuthMethodEnum method;
 
     private final String username;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamWebhookBasicAuth(
-            EventStreamWebhookBasicAuthMethodEnum method, String username, Map<String, Object> additionalProperties) {
+    private EventStreamWebhookBasicAuth(EventStreamWebhookBasicAuthMethodEnum method, String username, Map<String, Object> additionalProperties) {
         this.method = method;
         this.username = username;
         this.additionalProperties = additionalProperties;
@@ -34,7 +34,7 @@ public final class EventStreamWebhookBasicAuth {
 
     @JsonProperty("method")
     public EventStreamWebhookBasicAuthMethodEnum getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,18 +42,17 @@ public final class EventStreamWebhookBasicAuth {
      */
     @JsonProperty("username")
     public String getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamWebhookBasicAuth && equalTo((EventStreamWebhookBasicAuth) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamWebhookBasicAuth other) {
@@ -62,25 +61,27 @@ public final class EventStreamWebhookBasicAuth {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.method, this.username);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MethodStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MethodStage {
+
         UsernameStage method(@NotNull EventStreamWebhookBasicAuthMethodEnum method);
 
         Builder from(EventStreamWebhookBasicAuth other);
     }
 
     public interface UsernameStage {
+
         /**
          * <p>Username</p>
          */
@@ -88,6 +89,7 @@ public final class EventStreamWebhookBasicAuth {
     }
 
     public interface _FinalStage {
+
         EventStreamWebhookBasicAuth build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -97,6 +99,7 @@ public final class EventStreamWebhookBasicAuth {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MethodStage, UsernameStage, _FinalStage {
+
         private EventStreamWebhookBasicAuthMethodEnum method;
 
         private String username;
@@ -104,20 +107,18 @@ public final class EventStreamWebhookBasicAuth {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamWebhookBasicAuth other) {
-            method(other.getMethod());
-            username(other.getUsername());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("method")
         public UsernameStage method(@NotNull EventStreamWebhookBasicAuthMethodEnum method) {
-            this.method = Objects.requireNonNull(method, "method must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,25 +129,22 @@ public final class EventStreamWebhookBasicAuth {
         @java.lang.Override
         @JsonSetter("username")
         public _FinalStage username(@NotNull String username) {
-            this.username = Objects.requireNonNull(username, "username must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamWebhookBasicAuth build() {
-            return new EventStreamWebhookBasicAuth(method, username, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

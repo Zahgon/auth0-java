@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsFacebook.Builder.class)
 public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> clientId;
@@ -119,56 +120,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsFacebook(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<Map<String, ConnectionUpstreamAdditionalProperties>> upstreamParams,
-            Optional<String> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<Boolean> adsManagement,
-            Optional<Boolean> adsRead,
-            Optional<Boolean> allowContextProfileField,
-            Optional<Boolean> businessManagement,
-            Optional<Boolean> email,
-            Optional<Boolean> groupsAccessMemberInfo,
-            Optional<Boolean> leadsRetrieval,
-            Optional<Boolean> manageNotifications,
-            Optional<Boolean> managePages,
-            Optional<Boolean> pagesManageCta,
-            Optional<Boolean> pagesManageInstantArticles,
-            Optional<Boolean> pagesMessaging,
-            Optional<Boolean> pagesMessagingPhoneNumber,
-            Optional<Boolean> pagesMessagingSubscriptions,
-            Optional<Boolean> pagesShowList,
-            Optional<Boolean> publicProfile,
-            Optional<Boolean> publishActions,
-            Optional<Boolean> publishPages,
-            Optional<Boolean> publishToGroups,
-            Optional<Boolean> publishVideo,
-            Optional<Boolean> readAudienceNetworkInsights,
-            Optional<Boolean> readInsights,
-            Optional<Boolean> readMailbox,
-            Optional<Boolean> readPageMailboxes,
-            Optional<Boolean> readStream,
-            Optional<Boolean> userAgeRange,
-            Optional<Boolean> userBirthday,
-            Optional<Boolean> userEvents,
-            Optional<Boolean> userFriends,
-            Optional<Boolean> userGender,
-            Optional<Boolean> userGroups,
-            Optional<Boolean> userHometown,
-            Optional<Boolean> userLikes,
-            Optional<Boolean> userLink,
-            Optional<Boolean> userLocation,
-            Optional<Boolean> userManagedGroups,
-            Optional<Boolean> userPhotos,
-            Optional<Boolean> userPosts,
-            Optional<Boolean> userStatus,
-            Optional<Boolean> userTaggedPlaces,
-            Optional<Boolean> userVideos,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsFacebook(Optional<List<String>> nonPersistentAttrs, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<Map<String, ConnectionUpstreamAdditionalProperties>> upstreamParams, Optional<String> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<Boolean> adsManagement, Optional<Boolean> adsRead, Optional<Boolean> allowContextProfileField, Optional<Boolean> businessManagement, Optional<Boolean> email, Optional<Boolean> groupsAccessMemberInfo, Optional<Boolean> leadsRetrieval, Optional<Boolean> manageNotifications, Optional<Boolean> managePages, Optional<Boolean> pagesManageCta, Optional<Boolean> pagesManageInstantArticles, Optional<Boolean> pagesMessaging, Optional<Boolean> pagesMessagingPhoneNumber, Optional<Boolean> pagesMessagingSubscriptions, Optional<Boolean> pagesShowList, Optional<Boolean> publicProfile, Optional<Boolean> publishActions, Optional<Boolean> publishPages, Optional<Boolean> publishToGroups, Optional<Boolean> publishVideo, Optional<Boolean> readAudienceNetworkInsights, Optional<Boolean> readInsights, Optional<Boolean> readMailbox, Optional<Boolean> readPageMailboxes, Optional<Boolean> readStream, Optional<Boolean> userAgeRange, Optional<Boolean> userBirthday, Optional<Boolean> userEvents, Optional<Boolean> userFriends, Optional<Boolean> userGender, Optional<Boolean> userGroups, Optional<Boolean> userHometown, Optional<Boolean> userLikes, Optional<Boolean> userLink, Optional<Boolean> userLocation, Optional<Boolean> userManagedGroups, Optional<Boolean> userPhotos, Optional<Boolean> userPosts, Optional<Boolean> userStatus, Optional<Boolean> userTaggedPlaces, Optional<Boolean> userVideos, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -223,37 +175,37 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("upstream_params")
     public Optional<Map<String, ConnectionUpstreamAdditionalProperties>> getUpstreamParams() {
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -261,7 +213,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("ads_management")
     public Optional<Boolean> getAdsManagement() {
-        return adsManagement;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -269,7 +221,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("ads_read")
     public Optional<Boolean> getAdsRead() {
-        return adsRead;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -277,7 +229,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("allow_context_profile_field")
     public Optional<Boolean> getAllowContextProfileField() {
-        return allowContextProfileField;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -285,7 +237,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("business_management")
     public Optional<Boolean> getBusinessManagement() {
-        return businessManagement;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -293,7 +245,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -301,7 +253,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("groups_access_member_info")
     public Optional<Boolean> getGroupsAccessMemberInfo() {
-        return groupsAccessMemberInfo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -309,7 +261,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("leads_retrieval")
     public Optional<Boolean> getLeadsRetrieval() {
-        return leadsRetrieval;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -317,7 +269,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("manage_notifications")
     public Optional<Boolean> getManageNotifications() {
-        return manageNotifications;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -325,7 +277,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("manage_pages")
     public Optional<Boolean> getManagePages() {
-        return managePages;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -333,7 +285,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_manage_cta")
     public Optional<Boolean> getPagesManageCta() {
-        return pagesManageCta;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -341,7 +293,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_manage_instant_articles")
     public Optional<Boolean> getPagesManageInstantArticles() {
-        return pagesManageInstantArticles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -349,7 +301,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_messaging")
     public Optional<Boolean> getPagesMessaging() {
-        return pagesMessaging;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -357,7 +309,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_messaging_phone_number")
     public Optional<Boolean> getPagesMessagingPhoneNumber() {
-        return pagesMessagingPhoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -365,7 +317,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_messaging_subscriptions")
     public Optional<Boolean> getPagesMessagingSubscriptions() {
-        return pagesMessagingSubscriptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -373,7 +325,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("pages_show_list")
     public Optional<Boolean> getPagesShowList() {
-        return pagesShowList;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -381,7 +333,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("public_profile")
     public Optional<Boolean> getPublicProfile() {
-        return publicProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -389,7 +341,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("publish_actions")
     public Optional<Boolean> getPublishActions() {
-        return publishActions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -397,7 +349,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("publish_pages")
     public Optional<Boolean> getPublishPages() {
-        return publishPages;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -405,7 +357,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("publish_to_groups")
     public Optional<Boolean> getPublishToGroups() {
-        return publishToGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -413,7 +365,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("publish_video")
     public Optional<Boolean> getPublishVideo() {
-        return publishVideo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -421,7 +373,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("read_audience_network_insights")
     public Optional<Boolean> getReadAudienceNetworkInsights() {
-        return readAudienceNetworkInsights;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -429,7 +381,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("read_insights")
     public Optional<Boolean> getReadInsights() {
-        return readInsights;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -437,7 +389,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("read_mailbox")
     public Optional<Boolean> getReadMailbox() {
-        return readMailbox;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -445,7 +397,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("read_page_mailboxes")
     public Optional<Boolean> getReadPageMailboxes() {
-        return readPageMailboxes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -453,7 +405,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("read_stream")
     public Optional<Boolean> getReadStream() {
-        return readStream;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -461,7 +413,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_age_range")
     public Optional<Boolean> getUserAgeRange() {
-        return userAgeRange;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -469,7 +421,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_birthday")
     public Optional<Boolean> getUserBirthday() {
-        return userBirthday;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -477,7 +429,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_events")
     public Optional<Boolean> getUserEvents() {
-        return userEvents;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -485,7 +437,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_friends")
     public Optional<Boolean> getUserFriends() {
-        return userFriends;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -493,7 +445,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_gender")
     public Optional<Boolean> getUserGender() {
-        return userGender;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -501,7 +453,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_groups")
     public Optional<Boolean> getUserGroups() {
-        return userGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -509,7 +461,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_hometown")
     public Optional<Boolean> getUserHometown() {
-        return userHometown;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -517,7 +469,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_likes")
     public Optional<Boolean> getUserLikes() {
-        return userLikes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -525,7 +477,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_link")
     public Optional<Boolean> getUserLink() {
-        return userLink;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -533,7 +485,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_location")
     public Optional<Boolean> getUserLocation() {
-        return userLocation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -541,7 +493,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_managed_groups")
     public Optional<Boolean> getUserManagedGroups() {
-        return userManagedGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -549,7 +501,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_photos")
     public Optional<Boolean> getUserPhotos() {
-        return userPhotos;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -557,7 +509,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_posts")
     public Optional<Boolean> getUserPosts() {
-        return userPosts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -565,7 +517,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_status")
     public Optional<Boolean> getUserStatus() {
-        return userStatus;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -573,7 +525,7 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_tagged_places")
     public Optional<Boolean> getUserTaggedPlaces() {
-        return userTaggedPlaces;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -581,135 +533,40 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
      */
     @JsonProperty("user_videos")
     public Optional<Boolean> getUserVideos() {
-        return userVideos;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsFacebook && equalTo((ConnectionOptionsFacebook) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsFacebook other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && upstreamParams.equals(other.upstreamParams)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && adsManagement.equals(other.adsManagement)
-                && adsRead.equals(other.adsRead)
-                && allowContextProfileField.equals(other.allowContextProfileField)
-                && businessManagement.equals(other.businessManagement)
-                && email.equals(other.email)
-                && groupsAccessMemberInfo.equals(other.groupsAccessMemberInfo)
-                && leadsRetrieval.equals(other.leadsRetrieval)
-                && manageNotifications.equals(other.manageNotifications)
-                && managePages.equals(other.managePages)
-                && pagesManageCta.equals(other.pagesManageCta)
-                && pagesManageInstantArticles.equals(other.pagesManageInstantArticles)
-                && pagesMessaging.equals(other.pagesMessaging)
-                && pagesMessagingPhoneNumber.equals(other.pagesMessagingPhoneNumber)
-                && pagesMessagingSubscriptions.equals(other.pagesMessagingSubscriptions)
-                && pagesShowList.equals(other.pagesShowList)
-                && publicProfile.equals(other.publicProfile)
-                && publishActions.equals(other.publishActions)
-                && publishPages.equals(other.publishPages)
-                && publishToGroups.equals(other.publishToGroups)
-                && publishVideo.equals(other.publishVideo)
-                && readAudienceNetworkInsights.equals(other.readAudienceNetworkInsights)
-                && readInsights.equals(other.readInsights)
-                && readMailbox.equals(other.readMailbox)
-                && readPageMailboxes.equals(other.readPageMailboxes)
-                && readStream.equals(other.readStream)
-                && userAgeRange.equals(other.userAgeRange)
-                && userBirthday.equals(other.userBirthday)
-                && userEvents.equals(other.userEvents)
-                && userFriends.equals(other.userFriends)
-                && userGender.equals(other.userGender)
-                && userGroups.equals(other.userGroups)
-                && userHometown.equals(other.userHometown)
-                && userLikes.equals(other.userLikes)
-                && userLink.equals(other.userLink)
-                && userLocation.equals(other.userLocation)
-                && userManagedGroups.equals(other.userManagedGroups)
-                && userPhotos.equals(other.userPhotos)
-                && userPosts.equals(other.userPosts)
-                && userStatus.equals(other.userStatus)
-                && userTaggedPlaces.equals(other.userTaggedPlaces)
-                && userVideos.equals(other.userVideos);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && upstreamParams.equals(other.upstreamParams) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && adsManagement.equals(other.adsManagement) && adsRead.equals(other.adsRead) && allowContextProfileField.equals(other.allowContextProfileField) && businessManagement.equals(other.businessManagement) && email.equals(other.email) && groupsAccessMemberInfo.equals(other.groupsAccessMemberInfo) && leadsRetrieval.equals(other.leadsRetrieval) && manageNotifications.equals(other.manageNotifications) && managePages.equals(other.managePages) && pagesManageCta.equals(other.pagesManageCta) && pagesManageInstantArticles.equals(other.pagesManageInstantArticles) && pagesMessaging.equals(other.pagesMessaging) && pagesMessagingPhoneNumber.equals(other.pagesMessagingPhoneNumber) && pagesMessagingSubscriptions.equals(other.pagesMessagingSubscriptions) && pagesShowList.equals(other.pagesShowList) && publicProfile.equals(other.publicProfile) && publishActions.equals(other.publishActions) && publishPages.equals(other.publishPages) && publishToGroups.equals(other.publishToGroups) && publishVideo.equals(other.publishVideo) && readAudienceNetworkInsights.equals(other.readAudienceNetworkInsights) && readInsights.equals(other.readInsights) && readMailbox.equals(other.readMailbox) && readPageMailboxes.equals(other.readPageMailboxes) && readStream.equals(other.readStream) && userAgeRange.equals(other.userAgeRange) && userBirthday.equals(other.userBirthday) && userEvents.equals(other.userEvents) && userFriends.equals(other.userFriends) && userGender.equals(other.userGender) && userGroups.equals(other.userGroups) && userHometown.equals(other.userHometown) && userLikes.equals(other.userLikes) && userLink.equals(other.userLink) && userLocation.equals(other.userLocation) && userManagedGroups.equals(other.userManagedGroups) && userPhotos.equals(other.userPhotos) && userPosts.equals(other.userPosts) && userStatus.equals(other.userStatus) && userTaggedPlaces.equals(other.userTaggedPlaces) && userVideos.equals(other.userVideos);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.upstreamParams,
-                this.scope,
-                this.setUserRootAttributes,
-                this.adsManagement,
-                this.adsRead,
-                this.allowContextProfileField,
-                this.businessManagement,
-                this.email,
-                this.groupsAccessMemberInfo,
-                this.leadsRetrieval,
-                this.manageNotifications,
-                this.managePages,
-                this.pagesManageCta,
-                this.pagesManageInstantArticles,
-                this.pagesMessaging,
-                this.pagesMessagingPhoneNumber,
-                this.pagesMessagingSubscriptions,
-                this.pagesShowList,
-                this.publicProfile,
-                this.publishActions,
-                this.publishPages,
-                this.publishToGroups,
-                this.publishVideo,
-                this.readAudienceNetworkInsights,
-                this.readInsights,
-                this.readMailbox,
-                this.readPageMailboxes,
-                this.readStream,
-                this.userAgeRange,
-                this.userBirthday,
-                this.userEvents,
-                this.userFriends,
-                this.userGender,
-                this.userGroups,
-                this.userHometown,
-                this.userLikes,
-                this.userLink,
-                this.userLocation,
-                this.userManagedGroups,
-                this.userPhotos,
-                this.userPosts,
-                this.userStatus,
-                this.userTaggedPlaces,
-                this.userVideos);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -809,135 +666,74 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsFacebook other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            upstreamParams(other.getUpstreamParams());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            adsManagement(other.getAdsManagement());
-            adsRead(other.getAdsRead());
-            allowContextProfileField(other.getAllowContextProfileField());
-            businessManagement(other.getBusinessManagement());
-            email(other.getEmail());
-            groupsAccessMemberInfo(other.getGroupsAccessMemberInfo());
-            leadsRetrieval(other.getLeadsRetrieval());
-            manageNotifications(other.getManageNotifications());
-            managePages(other.getManagePages());
-            pagesManageCta(other.getPagesManageCta());
-            pagesManageInstantArticles(other.getPagesManageInstantArticles());
-            pagesMessaging(other.getPagesMessaging());
-            pagesMessagingPhoneNumber(other.getPagesMessagingPhoneNumber());
-            pagesMessagingSubscriptions(other.getPagesMessagingSubscriptions());
-            pagesShowList(other.getPagesShowList());
-            publicProfile(other.getPublicProfile());
-            publishActions(other.getPublishActions());
-            publishPages(other.getPublishPages());
-            publishToGroups(other.getPublishToGroups());
-            publishVideo(other.getPublishVideo());
-            readAudienceNetworkInsights(other.getReadAudienceNetworkInsights());
-            readInsights(other.getReadInsights());
-            readMailbox(other.getReadMailbox());
-            readPageMailboxes(other.getReadPageMailboxes());
-            readStream(other.getReadStream());
-            userAgeRange(other.getUserAgeRange());
-            userBirthday(other.getUserBirthday());
-            userEvents(other.getUserEvents());
-            userFriends(other.getUserFriends());
-            userGender(other.getUserGender());
-            userGroups(other.getUserGroups());
-            userHometown(other.getUserHometown());
-            userLikes(other.getUserLikes());
-            userLink(other.getUserLink());
-            userLocation(other.getUserLocation());
-            userManagedGroups(other.getUserManagedGroups());
-            userPhotos(other.getUserPhotos());
-            userPosts(other.getUserPosts());
-            userStatus(other.getUserStatus());
-            userTaggedPlaces(other.getUserTaggedPlaces());
-            userVideos(other.getUserVideos());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
         public Builder upstreamParams(Optional<Map<String, ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder upstreamParams(Map<String, ConnectionUpstreamAdditionalProperties> upstreamParams) {
-            this.upstreamParams = Optional.ofNullable(upstreamParams);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -945,13 +741,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "ads_management", nulls = Nulls.SKIP)
         public Builder adsManagement(Optional<Boolean> adsManagement) {
-            this.adsManagement = adsManagement;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adsManagement(Boolean adsManagement) {
-            this.adsManagement = Optional.ofNullable(adsManagement);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -959,13 +753,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "ads_read", nulls = Nulls.SKIP)
         public Builder adsRead(Optional<Boolean> adsRead) {
-            this.adsRead = adsRead;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adsRead(Boolean adsRead) {
-            this.adsRead = Optional.ofNullable(adsRead);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -973,13 +765,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "allow_context_profile_field", nulls = Nulls.SKIP)
         public Builder allowContextProfileField(Optional<Boolean> allowContextProfileField) {
-            this.allowContextProfileField = allowContextProfileField;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowContextProfileField(Boolean allowContextProfileField) {
-            this.allowContextProfileField = Optional.ofNullable(allowContextProfileField);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -987,13 +777,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "business_management", nulls = Nulls.SKIP)
         public Builder businessManagement(Optional<Boolean> businessManagement) {
-            this.businessManagement = businessManagement;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder businessManagement(Boolean businessManagement) {
-            this.businessManagement = Optional.ofNullable(businessManagement);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1001,13 +789,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1015,13 +801,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "groups_access_member_info", nulls = Nulls.SKIP)
         public Builder groupsAccessMemberInfo(Optional<Boolean> groupsAccessMemberInfo) {
-            this.groupsAccessMemberInfo = groupsAccessMemberInfo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder groupsAccessMemberInfo(Boolean groupsAccessMemberInfo) {
-            this.groupsAccessMemberInfo = Optional.ofNullable(groupsAccessMemberInfo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1029,13 +813,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "leads_retrieval", nulls = Nulls.SKIP)
         public Builder leadsRetrieval(Optional<Boolean> leadsRetrieval) {
-            this.leadsRetrieval = leadsRetrieval;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder leadsRetrieval(Boolean leadsRetrieval) {
-            this.leadsRetrieval = Optional.ofNullable(leadsRetrieval);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1043,13 +825,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "manage_notifications", nulls = Nulls.SKIP)
         public Builder manageNotifications(Optional<Boolean> manageNotifications) {
-            this.manageNotifications = manageNotifications;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder manageNotifications(Boolean manageNotifications) {
-            this.manageNotifications = Optional.ofNullable(manageNotifications);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1057,13 +837,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "manage_pages", nulls = Nulls.SKIP)
         public Builder managePages(Optional<Boolean> managePages) {
-            this.managePages = managePages;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder managePages(Boolean managePages) {
-            this.managePages = Optional.ofNullable(managePages);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1071,13 +849,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_manage_cta", nulls = Nulls.SKIP)
         public Builder pagesManageCta(Optional<Boolean> pagesManageCta) {
-            this.pagesManageCta = pagesManageCta;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesManageCta(Boolean pagesManageCta) {
-            this.pagesManageCta = Optional.ofNullable(pagesManageCta);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1085,13 +861,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_manage_instant_articles", nulls = Nulls.SKIP)
         public Builder pagesManageInstantArticles(Optional<Boolean> pagesManageInstantArticles) {
-            this.pagesManageInstantArticles = pagesManageInstantArticles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesManageInstantArticles(Boolean pagesManageInstantArticles) {
-            this.pagesManageInstantArticles = Optional.ofNullable(pagesManageInstantArticles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1099,13 +873,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_messaging", nulls = Nulls.SKIP)
         public Builder pagesMessaging(Optional<Boolean> pagesMessaging) {
-            this.pagesMessaging = pagesMessaging;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesMessaging(Boolean pagesMessaging) {
-            this.pagesMessaging = Optional.ofNullable(pagesMessaging);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1113,13 +885,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_messaging_phone_number", nulls = Nulls.SKIP)
         public Builder pagesMessagingPhoneNumber(Optional<Boolean> pagesMessagingPhoneNumber) {
-            this.pagesMessagingPhoneNumber = pagesMessagingPhoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesMessagingPhoneNumber(Boolean pagesMessagingPhoneNumber) {
-            this.pagesMessagingPhoneNumber = Optional.ofNullable(pagesMessagingPhoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1127,13 +897,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_messaging_subscriptions", nulls = Nulls.SKIP)
         public Builder pagesMessagingSubscriptions(Optional<Boolean> pagesMessagingSubscriptions) {
-            this.pagesMessagingSubscriptions = pagesMessagingSubscriptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesMessagingSubscriptions(Boolean pagesMessagingSubscriptions) {
-            this.pagesMessagingSubscriptions = Optional.ofNullable(pagesMessagingSubscriptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1141,13 +909,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "pages_show_list", nulls = Nulls.SKIP)
         public Builder pagesShowList(Optional<Boolean> pagesShowList) {
-            this.pagesShowList = pagesShowList;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pagesShowList(Boolean pagesShowList) {
-            this.pagesShowList = Optional.ofNullable(pagesShowList);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1155,13 +921,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "public_profile", nulls = Nulls.SKIP)
         public Builder publicProfile(Optional<Boolean> publicProfile) {
-            this.publicProfile = publicProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publicProfile(Boolean publicProfile) {
-            this.publicProfile = Optional.ofNullable(publicProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1169,13 +933,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "publish_actions", nulls = Nulls.SKIP)
         public Builder publishActions(Optional<Boolean> publishActions) {
-            this.publishActions = publishActions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publishActions(Boolean publishActions) {
-            this.publishActions = Optional.ofNullable(publishActions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1183,13 +945,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "publish_pages", nulls = Nulls.SKIP)
         public Builder publishPages(Optional<Boolean> publishPages) {
-            this.publishPages = publishPages;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publishPages(Boolean publishPages) {
-            this.publishPages = Optional.ofNullable(publishPages);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1197,13 +957,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "publish_to_groups", nulls = Nulls.SKIP)
         public Builder publishToGroups(Optional<Boolean> publishToGroups) {
-            this.publishToGroups = publishToGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publishToGroups(Boolean publishToGroups) {
-            this.publishToGroups = Optional.ofNullable(publishToGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1211,13 +969,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "publish_video", nulls = Nulls.SKIP)
         public Builder publishVideo(Optional<Boolean> publishVideo) {
-            this.publishVideo = publishVideo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publishVideo(Boolean publishVideo) {
-            this.publishVideo = Optional.ofNullable(publishVideo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1225,13 +981,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "read_audience_network_insights", nulls = Nulls.SKIP)
         public Builder readAudienceNetworkInsights(Optional<Boolean> readAudienceNetworkInsights) {
-            this.readAudienceNetworkInsights = readAudienceNetworkInsights;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readAudienceNetworkInsights(Boolean readAudienceNetworkInsights) {
-            this.readAudienceNetworkInsights = Optional.ofNullable(readAudienceNetworkInsights);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1239,13 +993,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "read_insights", nulls = Nulls.SKIP)
         public Builder readInsights(Optional<Boolean> readInsights) {
-            this.readInsights = readInsights;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readInsights(Boolean readInsights) {
-            this.readInsights = Optional.ofNullable(readInsights);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1253,13 +1005,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "read_mailbox", nulls = Nulls.SKIP)
         public Builder readMailbox(Optional<Boolean> readMailbox) {
-            this.readMailbox = readMailbox;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readMailbox(Boolean readMailbox) {
-            this.readMailbox = Optional.ofNullable(readMailbox);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1267,13 +1017,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "read_page_mailboxes", nulls = Nulls.SKIP)
         public Builder readPageMailboxes(Optional<Boolean> readPageMailboxes) {
-            this.readPageMailboxes = readPageMailboxes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readPageMailboxes(Boolean readPageMailboxes) {
-            this.readPageMailboxes = Optional.ofNullable(readPageMailboxes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1281,13 +1029,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "read_stream", nulls = Nulls.SKIP)
         public Builder readStream(Optional<Boolean> readStream) {
-            this.readStream = readStream;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readStream(Boolean readStream) {
-            this.readStream = Optional.ofNullable(readStream);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1295,13 +1041,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_age_range", nulls = Nulls.SKIP)
         public Builder userAgeRange(Optional<Boolean> userAgeRange) {
-            this.userAgeRange = userAgeRange;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAgeRange(Boolean userAgeRange) {
-            this.userAgeRange = Optional.ofNullable(userAgeRange);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1309,13 +1053,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_birthday", nulls = Nulls.SKIP)
         public Builder userBirthday(Optional<Boolean> userBirthday) {
-            this.userBirthday = userBirthday;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userBirthday(Boolean userBirthday) {
-            this.userBirthday = Optional.ofNullable(userBirthday);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1323,13 +1065,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_events", nulls = Nulls.SKIP)
         public Builder userEvents(Optional<Boolean> userEvents) {
-            this.userEvents = userEvents;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userEvents(Boolean userEvents) {
-            this.userEvents = Optional.ofNullable(userEvents);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1337,13 +1077,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_friends", nulls = Nulls.SKIP)
         public Builder userFriends(Optional<Boolean> userFriends) {
-            this.userFriends = userFriends;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userFriends(Boolean userFriends) {
-            this.userFriends = Optional.ofNullable(userFriends);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1351,13 +1089,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_gender", nulls = Nulls.SKIP)
         public Builder userGender(Optional<Boolean> userGender) {
-            this.userGender = userGender;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userGender(Boolean userGender) {
-            this.userGender = Optional.ofNullable(userGender);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1365,13 +1101,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_groups", nulls = Nulls.SKIP)
         public Builder userGroups(Optional<Boolean> userGroups) {
-            this.userGroups = userGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userGroups(Boolean userGroups) {
-            this.userGroups = Optional.ofNullable(userGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1379,13 +1113,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_hometown", nulls = Nulls.SKIP)
         public Builder userHometown(Optional<Boolean> userHometown) {
-            this.userHometown = userHometown;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userHometown(Boolean userHometown) {
-            this.userHometown = Optional.ofNullable(userHometown);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1393,13 +1125,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_likes", nulls = Nulls.SKIP)
         public Builder userLikes(Optional<Boolean> userLikes) {
-            this.userLikes = userLikes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userLikes(Boolean userLikes) {
-            this.userLikes = Optional.ofNullable(userLikes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1407,13 +1137,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_link", nulls = Nulls.SKIP)
         public Builder userLink(Optional<Boolean> userLink) {
-            this.userLink = userLink;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userLink(Boolean userLink) {
-            this.userLink = Optional.ofNullable(userLink);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1421,13 +1149,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_location", nulls = Nulls.SKIP)
         public Builder userLocation(Optional<Boolean> userLocation) {
-            this.userLocation = userLocation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userLocation(Boolean userLocation) {
-            this.userLocation = Optional.ofNullable(userLocation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1435,13 +1161,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_managed_groups", nulls = Nulls.SKIP)
         public Builder userManagedGroups(Optional<Boolean> userManagedGroups) {
-            this.userManagedGroups = userManagedGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userManagedGroups(Boolean userManagedGroups) {
-            this.userManagedGroups = Optional.ofNullable(userManagedGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1449,13 +1173,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_photos", nulls = Nulls.SKIP)
         public Builder userPhotos(Optional<Boolean> userPhotos) {
-            this.userPhotos = userPhotos;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userPhotos(Boolean userPhotos) {
-            this.userPhotos = Optional.ofNullable(userPhotos);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1463,13 +1185,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_posts", nulls = Nulls.SKIP)
         public Builder userPosts(Optional<Boolean> userPosts) {
-            this.userPosts = userPosts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userPosts(Boolean userPosts) {
-            this.userPosts = Optional.ofNullable(userPosts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1477,13 +1197,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_status", nulls = Nulls.SKIP)
         public Builder userStatus(Optional<Boolean> userStatus) {
-            this.userStatus = userStatus;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userStatus(Boolean userStatus) {
-            this.userStatus = Optional.ofNullable(userStatus);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1491,13 +1209,11 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_tagged_places", nulls = Nulls.SKIP)
         public Builder userTaggedPlaces(Optional<Boolean> userTaggedPlaces) {
-            this.userTaggedPlaces = userTaggedPlaces;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userTaggedPlaces(Boolean userTaggedPlaces) {
-            this.userTaggedPlaces = Optional.ofNullable(userTaggedPlaces);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1505,76 +1221,23 @@ public final class ConnectionOptionsFacebook implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "user_videos", nulls = Nulls.SKIP)
         public Builder userVideos(Optional<Boolean> userVideos) {
-            this.userVideos = userVideos;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userVideos(Boolean userVideos) {
-            this.userVideos = Optional.ofNullable(userVideos);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsFacebook build() {
-            return new ConnectionOptionsFacebook(
-                    nonPersistentAttrs,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    upstreamParams,
-                    scope,
-                    setUserRootAttributes,
-                    adsManagement,
-                    adsRead,
-                    allowContextProfileField,
-                    businessManagement,
-                    email,
-                    groupsAccessMemberInfo,
-                    leadsRetrieval,
-                    manageNotifications,
-                    managePages,
-                    pagesManageCta,
-                    pagesManageInstantArticles,
-                    pagesMessaging,
-                    pagesMessagingPhoneNumber,
-                    pagesMessagingSubscriptions,
-                    pagesShowList,
-                    publicProfile,
-                    publishActions,
-                    publishPages,
-                    publishToGroups,
-                    publishVideo,
-                    readAudienceNetworkInsights,
-                    readInsights,
-                    readMailbox,
-                    readPageMailboxes,
-                    readStream,
-                    userAgeRange,
-                    userBirthday,
-                    userEvents,
-                    userFriends,
-                    userGender,
-                    userGroups,
-                    userHometown,
-                    userLikes,
-                    userLink,
-                    userLocation,
-                    userManagedGroups,
-                    userPhotos,
-                    userPosts,
-                    userStatus,
-                    userTaggedPlaces,
-                    userVideos,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DirectoryProvisioningMappingItem.Builder.class)
 public final class DirectoryProvisioningMappingItem {
+
     private final String auth0;
 
     private final String idp;
@@ -36,7 +37,7 @@ public final class DirectoryProvisioningMappingItem {
      */
     @JsonProperty("auth0")
     public String getAuth0() {
-        return auth0;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,18 +45,17 @@ public final class DirectoryProvisioningMappingItem {
      */
     @JsonProperty("idp")
     public String getIdp() {
-        return idp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DirectoryProvisioningMappingItem && equalTo((DirectoryProvisioningMappingItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DirectoryProvisioningMappingItem other) {
@@ -64,19 +64,20 @@ public final class DirectoryProvisioningMappingItem {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.auth0, this.idp);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Auth0Stage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Auth0Stage {
+
         /**
          * <p>The field location in the Auth0 schema</p>
          */
@@ -86,6 +87,7 @@ public final class DirectoryProvisioningMappingItem {
     }
 
     public interface IdpStage {
+
         /**
          * <p>The field location in the IDP schema</p>
          */
@@ -93,6 +95,7 @@ public final class DirectoryProvisioningMappingItem {
     }
 
     public interface _FinalStage {
+
         DirectoryProvisioningMappingItem build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -102,6 +105,7 @@ public final class DirectoryProvisioningMappingItem {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements Auth0Stage, IdpStage, _FinalStage {
+
         private String auth0;
 
         private String idp;
@@ -109,13 +113,12 @@ public final class DirectoryProvisioningMappingItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(DirectoryProvisioningMappingItem other) {
-            auth0(other.getAuth0());
-            idp(other.getIdp());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -126,8 +129,7 @@ public final class DirectoryProvisioningMappingItem {
         @java.lang.Override
         @JsonSetter("auth0")
         public IdpStage auth0(@NotNull String auth0) {
-            this.auth0 = Objects.requireNonNull(auth0, "auth0 must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,25 +140,22 @@ public final class DirectoryProvisioningMappingItem {
         @java.lang.Override
         @JsonSetter("idp")
         public _FinalStage idp(@NotNull String idp) {
-            this.idp = Objects.requireNonNull(idp, "idp must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public DirectoryProvisioningMappingItem build() {
-            return new DirectoryProvisioningMappingItem(auth0, idp, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

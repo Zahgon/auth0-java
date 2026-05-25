@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RevokeUserAccessRequestContent.Builder.class)
 public final class RevokeUserAccessRequestContent {
+
     private final Optional<String> sessionId;
 
     private final Optional<Boolean> preserveRefreshTokens;
 
     private final Map<String, Object> additionalProperties;
 
-    private RevokeUserAccessRequestContent(
-            Optional<String> sessionId,
-            Optional<Boolean> preserveRefreshTokens,
-            Map<String, Object> additionalProperties) {
+    private RevokeUserAccessRequestContent(Optional<String> sessionId, Optional<Boolean> preserveRefreshTokens, Map<String, Object> additionalProperties) {
         this.sessionId = sessionId;
         this.preserveRefreshTokens = preserveRefreshTokens;
         this.additionalProperties = additionalProperties;
@@ -40,7 +38,7 @@ public final class RevokeUserAccessRequestContent {
      */
     @JsonProperty("session_id")
     public Optional<String> getSessionId() {
-        return sessionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,18 +46,17 @@ public final class RevokeUserAccessRequestContent {
      */
     @JsonProperty("preserve_refresh_tokens")
     public Optional<Boolean> getPreserveRefreshTokens() {
-        return preserveRefreshTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RevokeUserAccessRequestContent && equalTo((RevokeUserAccessRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RevokeUserAccessRequestContent other) {
@@ -68,20 +65,21 @@ public final class RevokeUserAccessRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.sessionId, this.preserveRefreshTokens);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> sessionId = Optional.empty();
 
         private Optional<Boolean> preserveRefreshTokens = Optional.empty();
@@ -89,12 +87,11 @@ public final class RevokeUserAccessRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RevokeUserAccessRequestContent other) {
-            sessionId(other.getSessionId());
-            preserveRefreshTokens(other.getPreserveRefreshTokens());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -102,13 +99,11 @@ public final class RevokeUserAccessRequestContent {
          */
         @JsonSetter(value = "session_id", nulls = Nulls.SKIP)
         public Builder sessionId(Optional<String> sessionId) {
-            this.sessionId = sessionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionId(String sessionId) {
-            this.sessionId = Optional.ofNullable(sessionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,27 +111,23 @@ public final class RevokeUserAccessRequestContent {
          */
         @JsonSetter(value = "preserve_refresh_tokens", nulls = Nulls.SKIP)
         public Builder preserveRefreshTokens(Optional<Boolean> preserveRefreshTokens) {
-            this.preserveRefreshTokens = preserveRefreshTokens;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder preserveRefreshTokens(Boolean preserveRefreshTokens) {
-            this.preserveRefreshTokens = Optional.ofNullable(preserveRefreshTokens);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RevokeUserAccessRequestContent build() {
-            return new RevokeUserAccessRequestContent(sessionId, preserveRefreshTokens, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

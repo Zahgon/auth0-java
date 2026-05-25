@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AssociateOrganizationClientGrantRequestContent.Builder.class)
 public final class AssociateOrganizationClientGrantRequestContent {
+
     private final String grantId;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class AssociateOrganizationClientGrantRequestContent {
      */
     @JsonProperty("grant_id")
     public String getGrantId() {
-        return grantId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AssociateOrganizationClientGrantRequestContent
-                && equalTo((AssociateOrganizationClientGrantRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AssociateOrganizationClientGrantRequestContent other) {
@@ -54,19 +53,20 @@ public final class AssociateOrganizationClientGrantRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.grantId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static GrantIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface GrantIdStage {
+
         /**
          * <p>A Client Grant ID to add to the organization.</p>
          */
@@ -76,6 +76,7 @@ public final class AssociateOrganizationClientGrantRequestContent {
     }
 
     public interface _FinalStage {
+
         AssociateOrganizationClientGrantRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class AssociateOrganizationClientGrantRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements GrantIdStage, _FinalStage {
+
         private String grantId;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(AssociateOrganizationClientGrantRequestContent other) {
-            grantId(other.getGrantId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class AssociateOrganizationClientGrantRequestContent {
         @java.lang.Override
         @JsonSetter("grant_id")
         public _FinalStage grantId(@NotNull String grantId) {
-            this.grantId = Objects.requireNonNull(grantId, "grantId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public AssociateOrganizationClientGrantRequestContent build() {
-            return new AssociateOrganizationClientGrantRequestContent(grantId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

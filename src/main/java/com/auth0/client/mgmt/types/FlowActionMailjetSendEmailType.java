@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionMailjetSendEmailType {
-    public static final FlowActionMailjetSendEmailType MAILJET =
-            new FlowActionMailjetSendEmailType(Value.MAILJET, "MAILJET");
+
+    public static final FlowActionMailjetSendEmailType MAILJET = new FlowActionMailjetSendEmailType(Value.MAILJET, "MAILJET");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionMailjetSendEmailType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionMailjetSendEmailType
-                        && this.string.equals(((FlowActionMailjetSendEmailType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MAILJET:
-                return visitor.visitMailjet();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionMailjetSendEmailType valueOf(String value) {
-        switch (value) {
-            case "MAILJET":
-                return MAILJET;
-            default:
-                return new FlowActionMailjetSendEmailType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MAILJET,
 
-        UNKNOWN
+        MAILJET, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMailjet();
 
         T visitUnknown(String unknownType);

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormStep.Builder.class)
 public final class FormStep {
+
     private final String id;
 
     private final FormNodeTypeStepConst type;
@@ -33,13 +34,7 @@ public final class FormStep {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormStep(
-            String id,
-            FormNodeTypeStepConst type,
-            Optional<FormNodeCoordinates> coordinates,
-            Optional<String> alias,
-            Optional<FormStepConfig> config,
-            Map<String, Object> additionalProperties) {
+    private FormStep(String id, FormNodeTypeStepConst type, Optional<FormNodeCoordinates> coordinates, Optional<String> alias, Optional<FormStepConfig> config, Map<String, Object> additionalProperties) {
         this.id = id;
         this.type = type;
         this.coordinates = coordinates;
@@ -50,73 +45,71 @@ public final class FormStep {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FormNodeTypeStepConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("coordinates")
     public Optional<FormNodeCoordinates> getCoordinates() {
-        return coordinates;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alias")
     public Optional<String> getAlias() {
-        return alias;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("config")
     public Optional<FormStepConfig> getConfig() {
-        return config;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormStep && equalTo((FormStep) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormStep other) {
-        return id.equals(other.id)
-                && type.equals(other.type)
-                && coordinates.equals(other.coordinates)
-                && alias.equals(other.alias)
-                && config.equals(other.config);
+        return id.equals(other.id) && type.equals(other.type) && coordinates.equals(other.coordinates) && alias.equals(other.alias) && config.equals(other.config);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.type, this.coordinates, this.alias, this.config);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         TypeStage id(@NotNull String id);
 
         Builder from(FormStep other);
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull FormNodeTypeStepConst type);
     }
 
     public interface _FinalStage {
+
         FormStep build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -138,6 +131,7 @@ public final class FormStep {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, TypeStage, _FinalStage {
+
         private String id;
 
         private FormNodeTypeStepConst type;
@@ -151,86 +145,72 @@ public final class FormStep {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormStep other) {
-            id(other.getId());
-            type(other.getType());
-            coordinates(other.getCoordinates());
-            alias(other.getAlias());
-            config(other.getConfig());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public TypeStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull FormNodeTypeStepConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage config(FormStepConfig config) {
-            this.config = Optional.ofNullable(config);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "config", nulls = Nulls.SKIP)
         public _FinalStage config(Optional<FormStepConfig> config) {
-            this.config = config;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage alias(String alias) {
-            this.alias = Optional.ofNullable(alias);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "alias", nulls = Nulls.SKIP)
         public _FinalStage alias(Optional<String> alias) {
-            this.alias = alias;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage coordinates(FormNodeCoordinates coordinates) {
-            this.coordinates = Optional.ofNullable(coordinates);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "coordinates", nulls = Nulls.SKIP)
         public _FinalStage coordinates(Optional<FormNodeCoordinates> coordinates) {
-            this.coordinates = coordinates;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormStep build() {
-            return new FormStep(id, type, coordinates, alias, config, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

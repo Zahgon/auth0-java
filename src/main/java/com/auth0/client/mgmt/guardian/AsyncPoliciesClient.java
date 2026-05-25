@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncPoliciesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawPoliciesClient rawClient;
@@ -23,7 +24,7 @@ public class AsyncPoliciesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawPoliciesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -36,7 +37,7 @@ public class AsyncPoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public CompletableFuture<List<MfaPolicyEnum>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,7 +50,7 @@ public class AsyncPoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public CompletableFuture<List<MfaPolicyEnum>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +63,7 @@ public class AsyncPoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public CompletableFuture<List<MfaPolicyEnum>> set(List<MfaPolicyEnum> request) {
-        return this.rawClient.set(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,6 +76,6 @@ public class AsyncPoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public CompletableFuture<List<MfaPolicyEnum>> set(List<MfaPolicyEnum> request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

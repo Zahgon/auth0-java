@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PostClientCredentialRequestContent.Builder.class)
 public final class PostClientCredentialRequestContent {
+
     private final ClientCredentialTypeEnum credentialType;
 
     private final Optional<String> name;
@@ -42,16 +43,7 @@ public final class PostClientCredentialRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private PostClientCredentialRequestContent(
-            ClientCredentialTypeEnum credentialType,
-            Optional<String> name,
-            Optional<String> subjectDn,
-            Optional<String> pem,
-            Optional<PublicKeyCredentialAlgorithmEnum> alg,
-            Optional<Boolean> parseExpiryFromCert,
-            Optional<OffsetDateTime> expiresAt,
-            Optional<String> kid,
-            Map<String, Object> additionalProperties) {
+    private PostClientCredentialRequestContent(ClientCredentialTypeEnum credentialType, Optional<String> name, Optional<String> subjectDn, Optional<String> pem, Optional<PublicKeyCredentialAlgorithmEnum> alg, Optional<Boolean> parseExpiryFromCert, Optional<OffsetDateTime> expiresAt, Optional<String> kid, Map<String, Object> additionalProperties) {
         this.credentialType = credentialType;
         this.name = name;
         this.subjectDn = subjectDn;
@@ -65,7 +57,7 @@ public final class PostClientCredentialRequestContent {
 
     @JsonProperty("credential_type")
     public ClientCredentialTypeEnum getCredentialType() {
-        return credentialType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +65,7 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +73,7 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("subject_dn")
     public Optional<String> getSubjectDn() {
-        return subjectDn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,12 +81,12 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("pem")
     public Optional<String> getPem() {
-        return pem;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alg")
     public Optional<PublicKeyCredentialAlgorithmEnum> getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +94,7 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("parse_expiry_from_cert")
     public Optional<Boolean> getParseExpiryFromCert() {
-        return parseExpiryFromCert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,7 +102,7 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("expires_at")
     public Optional<OffsetDateTime> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -118,61 +110,46 @@ public final class PostClientCredentialRequestContent {
      */
     @JsonProperty("kid")
     public Optional<String> getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PostClientCredentialRequestContent
-                && equalTo((PostClientCredentialRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PostClientCredentialRequestContent other) {
-        return credentialType.equals(other.credentialType)
-                && name.equals(other.name)
-                && subjectDn.equals(other.subjectDn)
-                && pem.equals(other.pem)
-                && alg.equals(other.alg)
-                && parseExpiryFromCert.equals(other.parseExpiryFromCert)
-                && expiresAt.equals(other.expiresAt)
-                && kid.equals(other.kid);
+        return credentialType.equals(other.credentialType) && name.equals(other.name) && subjectDn.equals(other.subjectDn) && pem.equals(other.pem) && alg.equals(other.alg) && parseExpiryFromCert.equals(other.parseExpiryFromCert) && expiresAt.equals(other.expiresAt) && kid.equals(other.kid);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.credentialType,
-                this.name,
-                this.subjectDn,
-                this.pem,
-                this.alg,
-                this.parseExpiryFromCert,
-                this.expiresAt,
-                this.kid);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CredentialTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface CredentialTypeStage {
+
         _FinalStage credentialType(@NotNull ClientCredentialTypeEnum credentialType);
 
         Builder from(PostClientCredentialRequestContent other);
     }
 
     public interface _FinalStage {
+
         PostClientCredentialRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -228,6 +205,7 @@ public final class PostClientCredentialRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements CredentialTypeStage, _FinalStage {
+
         private ClientCredentialTypeEnum credentialType;
 
         private Optional<String> kid = Optional.empty();
@@ -247,26 +225,18 @@ public final class PostClientCredentialRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(PostClientCredentialRequestContent other) {
-            credentialType(other.getCredentialType());
-            name(other.getName());
-            subjectDn(other.getSubjectDn());
-            pem(other.getPem());
-            alg(other.getAlg());
-            parseExpiryFromCert(other.getParseExpiryFromCert());
-            expiresAt(other.getExpiresAt());
-            kid(other.getKid());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("credential_type")
         public _FinalStage credentialType(@NotNull ClientCredentialTypeEnum credentialType) {
-            this.credentialType = Objects.requireNonNull(credentialType, "credentialType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -275,8 +245,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage kid(String kid) {
-            this.kid = Optional.ofNullable(kid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -285,8 +254,7 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "kid", nulls = Nulls.SKIP)
         public _FinalStage kid(Optional<String> kid) {
-            this.kid = kid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,8 +263,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -305,8 +272,7 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public _FinalStage expiresAt(Optional<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,8 +281,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage parseExpiryFromCert(Boolean parseExpiryFromCert) {
-            this.parseExpiryFromCert = Optional.ofNullable(parseExpiryFromCert);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -325,21 +290,18 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "parse_expiry_from_cert", nulls = Nulls.SKIP)
         public _FinalStage parseExpiryFromCert(Optional<Boolean> parseExpiryFromCert) {
-            this.parseExpiryFromCert = parseExpiryFromCert;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage alg(PublicKeyCredentialAlgorithmEnum alg) {
-            this.alg = Optional.ofNullable(alg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "alg", nulls = Nulls.SKIP)
         public _FinalStage alg(Optional<PublicKeyCredentialAlgorithmEnum> alg) {
-            this.alg = alg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,8 +310,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage pem(String pem) {
-            this.pem = Optional.ofNullable(pem);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -358,8 +319,7 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "pem", nulls = Nulls.SKIP)
         public _FinalStage pem(Optional<String> pem) {
-            this.pem = pem;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -368,8 +328,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage subjectDn(String subjectDn) {
-            this.subjectDn = Optional.ofNullable(subjectDn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -378,8 +337,7 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "subject_dn", nulls = Nulls.SKIP)
         public _FinalStage subjectDn(Optional<String> subjectDn) {
-            this.subjectDn = subjectDn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -388,8 +346,7 @@ public final class PostClientCredentialRequestContent {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -398,34 +355,22 @@ public final class PostClientCredentialRequestContent {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public PostClientCredentialRequestContent build() {
-            return new PostClientCredentialRequestContent(
-                    credentialType,
-                    name,
-                    subjectDn,
-                    pem,
-                    alg,
-                    parseExpiryFromCert,
-                    expiresAt,
-                    kid,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

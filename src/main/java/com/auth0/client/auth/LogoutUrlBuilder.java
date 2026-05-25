@@ -1,7 +1,6 @@
 package com.auth0.client.auth;
 
 import static com.auth0.utils.Asserts.assertNotNull;
-
 import java.util.HashMap;
 import java.util.Map;
 import okhttp3.HttpUrl;
@@ -17,6 +16,7 @@ import okhttp3.HttpUrl;
 public class LogoutUrlBuilder {
 
     private final HttpUrl.Builder builder;
+
     private final Map<String, String> parameters;
 
     /**
@@ -31,18 +31,14 @@ public class LogoutUrlBuilder {
      * @return a new instance of the {@link LogoutUrlBuilder} to configure.
      */
     static LogoutUrlBuilder newInstance(HttpUrl baseUrl, String clientId, String returnToUrl, boolean setClientId) {
-        return new LogoutUrlBuilder(baseUrl, setClientId ? clientId : null, returnToUrl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private LogoutUrlBuilder(HttpUrl url, String clientId, String returnToUrl) {
         assertNotNull(url, "base url");
         assertNotNull(returnToUrl, "return to url");
-
         parameters = new HashMap<>();
-        builder = url.newBuilder()
-                .addPathSegment("v2")
-                .addPathSegment("logout")
-                .addEncodedQueryParameter("returnTo", returnToUrl);
+        builder = url.newBuilder().addPathSegment("v2").addPathSegment("logout").addEncodedQueryParameter("returnTo", returnToUrl);
         if (clientId != null) {
             builder.addQueryParameter("client_id", clientId);
         }
@@ -55,12 +51,7 @@ public class LogoutUrlBuilder {
      * @return the builder instance
      */
     public LogoutUrlBuilder useFederated(boolean federated) {
-        if (federated) {
-            parameters.put("federated", "");
-        } else {
-            parameters.remove("federated");
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,9 +60,6 @@ public class LogoutUrlBuilder {
      * @return the string URL
      */
     public String build() {
-        for (Map.Entry<String, String> p : parameters.entrySet()) {
-            builder.addQueryParameter(p.getKey(), p.getValue());
-        }
-        return builder.build().toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

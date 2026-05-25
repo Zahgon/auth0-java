@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentDwollaStrategy {
-    public static final CreateConnectionRequestContentDwollaStrategy DWOLLA =
-            new CreateConnectionRequestContentDwollaStrategy(Value.DWOLLA, "dwolla");
+
+    public static final CreateConnectionRequestContentDwollaStrategy DWOLLA = new CreateConnectionRequestContentDwollaStrategy(Value.DWOLLA, "dwolla");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentDwollaStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentDwollaStrategy
-                        && this.string.equals(((CreateConnectionRequestContentDwollaStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DWOLLA:
-                return visitor.visitDwolla();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentDwollaStrategy valueOf(String value) {
-        switch (value) {
-            case "dwolla":
-                return DWOLLA;
-            default:
-                return new CreateConnectionRequestContentDwollaStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DWOLLA,
 
-        UNKNOWN
+        DWOLLA, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDwolla();
 
         T visitUnknown(String unknownType);

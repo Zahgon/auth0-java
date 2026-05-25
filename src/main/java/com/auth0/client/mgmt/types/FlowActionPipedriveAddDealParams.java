@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionPipedriveAddDealParams.Builder.class)
 public final class FlowActionPipedriveAddDealParams {
+
     private final String connectionId;
 
     private final String title;
@@ -39,16 +40,7 @@ public final class FlowActionPipedriveAddDealParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionPipedriveAddDealParams(
-            String connectionId,
-            String title,
-            Optional<String> value,
-            Optional<FlowActionPipedriveAddDealParamsUserId> userId,
-            Optional<FlowActionPipedriveAddDealParamsPersonId> personId,
-            Optional<FlowActionPipedriveAddDealParamsOrganizationId> organizationId,
-            Optional<FlowActionPipedriveAddDealParamsStageId> stageId,
-            Optional<Map<String, Object>> fields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionPipedriveAddDealParams(String connectionId, String title, Optional<String> value, Optional<FlowActionPipedriveAddDealParamsUserId> userId, Optional<FlowActionPipedriveAddDealParamsPersonId> personId, Optional<FlowActionPipedriveAddDealParamsOrganizationId> organizationId, Optional<FlowActionPipedriveAddDealParamsStageId> stageId, Optional<Map<String, Object>> fields, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.title = title;
         this.value = value;
@@ -62,99 +54,86 @@ public final class FlowActionPipedriveAddDealParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("title")
     public String getTitle() {
-        return title;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("value")
     public Optional<String> getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_id")
     public Optional<FlowActionPipedriveAddDealParamsUserId> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("person_id")
     public Optional<FlowActionPipedriveAddDealParamsPersonId> getPersonId() {
-        return personId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organization_id")
     public Optional<FlowActionPipedriveAddDealParamsOrganizationId> getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("stage_id")
     public Optional<FlowActionPipedriveAddDealParamsStageId> getStageId() {
-        return stageId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fields")
     public Optional<Map<String, Object>> getFields() {
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionPipedriveAddDealParams && equalTo((FlowActionPipedriveAddDealParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionPipedriveAddDealParams other) {
-        return connectionId.equals(other.connectionId)
-                && title.equals(other.title)
-                && value.equals(other.value)
-                && userId.equals(other.userId)
-                && personId.equals(other.personId)
-                && organizationId.equals(other.organizationId)
-                && stageId.equals(other.stageId)
-                && fields.equals(other.fields);
+        return connectionId.equals(other.connectionId) && title.equals(other.title) && value.equals(other.value) && userId.equals(other.userId) && personId.equals(other.personId) && organizationId.equals(other.organizationId) && stageId.equals(other.stageId) && fields.equals(other.fields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId,
-                this.title,
-                this.value,
-                this.userId,
-                this.personId,
-                this.organizationId,
-                this.stageId,
-                this.fields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         TitleStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionPipedriveAddDealParams other);
     }
 
     public interface TitleStage {
+
         _FinalStage title(@NotNull String title);
     }
 
     public interface _FinalStage {
+
         FlowActionPipedriveAddDealParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -188,6 +167,7 @@ public final class FlowActionPipedriveAddDealParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, TitleStage, _FinalStage {
+
         private String connectionId;
 
         private String title;
@@ -207,137 +187,105 @@ public final class FlowActionPipedriveAddDealParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionPipedriveAddDealParams other) {
-            connectionId(other.getConnectionId());
-            title(other.getTitle());
-            value(other.getValue());
-            userId(other.getUserId());
-            personId(other.getPersonId());
-            organizationId(other.getOrganizationId());
-            stageId(other.getStageId());
-            fields(other.getFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public TitleStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("title")
         public _FinalStage title(@NotNull String title) {
-            this.title = Objects.requireNonNull(title, "title must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage fields(Map<String, Object> fields) {
-            this.fields = Optional.ofNullable(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public _FinalStage fields(Optional<Map<String, Object>> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage stageId(FlowActionPipedriveAddDealParamsStageId stageId) {
-            this.stageId = Optional.ofNullable(stageId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "stage_id", nulls = Nulls.SKIP)
         public _FinalStage stageId(Optional<FlowActionPipedriveAddDealParamsStageId> stageId) {
-            this.stageId = stageId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage organizationId(FlowActionPipedriveAddDealParamsOrganizationId organizationId) {
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "organization_id", nulls = Nulls.SKIP)
         public _FinalStage organizationId(Optional<FlowActionPipedriveAddDealParamsOrganizationId> organizationId) {
-            this.organizationId = organizationId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage personId(FlowActionPipedriveAddDealParamsPersonId personId) {
-            this.personId = Optional.ofNullable(personId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "person_id", nulls = Nulls.SKIP)
         public _FinalStage personId(Optional<FlowActionPipedriveAddDealParamsPersonId> personId) {
-            this.personId = personId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userId(FlowActionPipedriveAddDealParamsUserId userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public _FinalStage userId(Optional<FlowActionPipedriveAddDealParamsUserId> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage value(String value) {
-            this.value = Optional.ofNullable(value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "value", nulls = Nulls.SKIP)
         public _FinalStage value(Optional<String> value) {
-            this.value = value;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionPipedriveAddDealParams build() {
-            return new FlowActionPipedriveAddDealParams(
-                    connectionId,
-                    title,
-                    value,
-                    userId,
-                    personId,
-                    organizationId,
-                    stageId,
-                    fields,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

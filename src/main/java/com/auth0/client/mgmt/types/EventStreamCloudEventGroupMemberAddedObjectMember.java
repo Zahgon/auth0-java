@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EventStreamCloudEventGroupMemberAddedObjectMember.Deserializer.class)
 public final class EventStreamCloudEventGroupMemberAddedObjectMember {
+
     private final Object value;
 
     private final int type;
@@ -27,24 +28,17 @@ public final class EventStreamCloudEventGroupMemberAddedObjectMember {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EventStreamCloudEventGroupMemberAddedObjectMember0) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EventStreamCloudEventGroupMemberAddedObjectMember1) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventGroupMemberAddedObjectMember
-                && equalTo((EventStreamCloudEventGroupMemberAddedObjectMember) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventGroupMemberAddedObjectMember other) {
@@ -53,60 +47,38 @@ public final class EventStreamCloudEventGroupMemberAddedObjectMember {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventGroupMemberAddedObjectMember of(
-            EventStreamCloudEventGroupMemberAddedObjectMember0 value) {
-        return new EventStreamCloudEventGroupMemberAddedObjectMember(value, 0);
+    public static EventStreamCloudEventGroupMemberAddedObjectMember of(EventStreamCloudEventGroupMemberAddedObjectMember0 value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventGroupMemberAddedObjectMember of(
-            EventStreamCloudEventGroupMemberAddedObjectMember1 value) {
-        return new EventStreamCloudEventGroupMemberAddedObjectMember(value, 1);
+    public static EventStreamCloudEventGroupMemberAddedObjectMember of(EventStreamCloudEventGroupMemberAddedObjectMember1 value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EventStreamCloudEventGroupMemberAddedObjectMember0 value);
 
         T visit(EventStreamCloudEventGroupMemberAddedObjectMember1 value);
     }
 
     static final class Deserializer extends StdDeserializer<EventStreamCloudEventGroupMemberAddedObjectMember> {
+
         Deserializer() {
             super(EventStreamCloudEventGroupMemberAddedObjectMember.class);
         }
 
         @java.lang.Override
-        public EventStreamCloudEventGroupMemberAddedObjectMember deserialize(
-                JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("member_type")
-                    && ((Map<?, ?>) value).containsKey("id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventGroupMemberAddedObjectMember0.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("member_type")
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("connection_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventGroupMemberAddedObjectMember1.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public EventStreamCloudEventGroupMemberAddedObjectMember deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

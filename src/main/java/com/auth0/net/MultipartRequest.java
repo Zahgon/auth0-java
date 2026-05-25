@@ -1,7 +1,6 @@
 package com.auth0.net;
 
 import static com.auth0.utils.Asserts.assertNotNull;
-
 import com.auth0.client.mgmt.TokenProvider;
 import com.auth0.json.ObjectMapperProvider;
 import com.auth0.net.client.*;
@@ -24,19 +23,16 @@ import java.util.HashMap;
 public class MultipartRequest<T> extends BaseRequest<T> {
 
     private static final String CONTENT_TYPE_FORM_DATA = "multipart/form-data";
+
     private final Auth0MultipartRequestBody.Builder bodyBuilder;
 
     private final TypeReference<T> tType;
+
     private final ObjectMapper mapper;
+
     private int partsCount;
 
-    MultipartRequest(
-            Auth0HttpClient client,
-            TokenProvider tokenProvider,
-            String url,
-            HttpMethod method,
-            ObjectMapper mapper,
-            TypeReference<T> tType) {
+    MultipartRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method, ObjectMapper mapper, TypeReference<T> tType) {
         super(client, tokenProvider, url, method, mapper, tType);
         if (HttpMethod.GET.equals(method)) {
             throw new IllegalArgumentException("Multipart/form-data requests do not support the GET method.");
@@ -46,39 +42,28 @@ public class MultipartRequest<T> extends BaseRequest<T> {
         this.bodyBuilder = Auth0MultipartRequestBody.newBuilder();
     }
 
-    public MultipartRequest(
-            Auth0HttpClient client,
-            TokenProvider tokenProvider,
-            String url,
-            HttpMethod method,
-            TypeReference<T> tType) {
+    public MultipartRequest(Auth0HttpClient client, TokenProvider tokenProvider, String url, HttpMethod method, TypeReference<T> tType) {
         this(client, tokenProvider, url, method, ObjectMapperProvider.getMapper(), tType);
     }
 
     @Override
     protected String getContentType() {
-        return CONTENT_TYPE_FORM_DATA;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected HttpRequestBody createRequestBody() throws IOException {
-        if (partsCount == 0) {
-            throw new IOException("Cannot create multipart/form-data request body with zero parts.");
-        }
-        return HttpRequestBody.create("application/json", bodyBuilder.build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     protected T readResponseBody(Auth0HttpResponse response) throws IOException {
-        String payload = response.getBody();
-        return mapper.readValue(payload, tType);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public MultipartRequest<T> addHeader(String name, String value) {
-        // This is to avoid returning a different type
-        super.addHeader(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,10 +74,6 @@ public class MultipartRequest<T> extends BaseRequest<T> {
      * @return this same request instance
      */
     public MultipartRequest<T> addPart(String name, String value) {
-        assertNotNull(name, "name");
-        assertNotNull(value, "value");
-        bodyBuilder.withPart(name, value);
-        partsCount++;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

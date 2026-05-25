@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionSignatureMethodOAuth1 {
-    public static final ConnectionSignatureMethodOAuth1 RSA_SHA1 =
-            new ConnectionSignatureMethodOAuth1(Value.RSA_SHA1, "RSA-SHA1");
+
+    public static final ConnectionSignatureMethodOAuth1 RSA_SHA1 = new ConnectionSignatureMethodOAuth1(Value.RSA_SHA1, "RSA-SHA1");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionSignatureMethodOAuth1 {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionSignatureMethodOAuth1
-                        && this.string.equals(((ConnectionSignatureMethodOAuth1) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RSA_SHA1:
-                return visitor.visitRsaSha1();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionSignatureMethodOAuth1 valueOf(String value) {
-        switch (value) {
-            case "RSA-SHA1":
-                return RSA_SHA1;
-            default:
-                return new ConnectionSignatureMethodOAuth1(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RSA_SHA1,
 
-        UNKNOWN
+        RSA_SHA1, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRsaSha1();
 
         T visitUnknown(String unknownType);

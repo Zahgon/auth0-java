@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.CreateSelfServiceProfileSsoTicketResponseCont
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSsoTicketClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSsoTicketClient rawClient;
@@ -23,38 +24,35 @@ public class AsyncSsoTicketClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSsoTicketClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
     public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(
-            String id, CreateSelfServiceProfileSsoTicketRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(String id, CreateSelfServiceProfileSsoTicketRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an access ticket to initiate the Self-Service Enterprise Configuration flow using a self-service profile.
      */
-    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(
-            String id, CreateSelfServiceProfileSsoTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateSelfServiceProfileSsoTicketResponseContent> create(String id, CreateSelfServiceProfileSsoTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +60,7 @@ public class AsyncSsoTicketClient {
      * Clients should treat these <code>202</code> responses as an acknowledgment that the request has been accepted and is in progress, even if the ticket was not found.
      */
     public CompletableFuture<Void> revoke(String profileId, String id) {
-        return this.rawClient.revoke(profileId, id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,6 +68,6 @@ public class AsyncSsoTicketClient {
      * Clients should treat these <code>202</code> responses as an acknowledgment that the request has been accepted and is in progress, even if the ticket was not found.
      */
     public CompletableFuture<Void> revoke(String profileId, String id, RequestOptions requestOptions) {
-        return this.rawClient.revoke(profileId, id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

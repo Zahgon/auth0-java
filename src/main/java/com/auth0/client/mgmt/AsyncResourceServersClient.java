@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.UpdateResourceServerResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncResourceServersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawResourceServersClient rawClient;
@@ -30,124 +31,118 @@ public class AsyncResourceServersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawResourceServersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all APIs associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<ResourceServer>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all APIs associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<ResourceServer>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all APIs associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<ResourceServer>> list(ListResourceServerRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all APIs associated with your tenant.
      */
-    public CompletableFuture<SyncPagingIterable<ResourceServer>> list(
-            ListResourceServerRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ResourceServer>> list(ListResourceServerRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new API associated with your tenant. Note that all new APIs must be registered with Auth0. For more information, read <a href="https://www.auth0.com/docs/get-started/apis"> APIs</a>.
      */
     public CompletableFuture<CreateResourceServerResponseContent> create(CreateResourceServerRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new API associated with your tenant. Note that all new APIs must be registered with Auth0. For more information, read <a href="https://www.auth0.com/docs/get-started/apis"> APIs</a>.
      */
-    public CompletableFuture<CreateResourceServerResponseContent> create(
-            CreateResourceServerRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateResourceServerResponseContent> create(CreateResourceServerRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/apis">API</a> details with the given ID.
      */
     public CompletableFuture<GetResourceServerResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/apis">API</a> details with the given ID.
      */
     public CompletableFuture<GetResourceServerResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/apis">API</a> details with the given ID.
      */
-    public CompletableFuture<GetResourceServerResponseContent> get(
-            String id, GetResourceServerRequestParameters request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+    public CompletableFuture<GetResourceServerResponseContent> get(String id, GetResourceServerRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/apis">API</a> details with the given ID.
      */
-    public CompletableFuture<GetResourceServerResponseContent> get(
-            String id, GetResourceServerRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetResourceServerResponseContent> get(String id, GetResourceServerRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete an existing API by ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete an existing API by ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change an existing API setting by resource server ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
     public CompletableFuture<UpdateResourceServerResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change an existing API setting by resource server ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
     public CompletableFuture<UpdateResourceServerResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change an existing API setting by resource server ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
-    public CompletableFuture<UpdateResourceServerResponseContent> update(
-            String id, UpdateResourceServerRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateResourceServerResponseContent> update(String id, UpdateResourceServerRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change an existing API setting by resource server ID. For more information, read <a href="https://www.auth0.com/docs/get-started/apis/api-settings">API Settings</a>.
      */
-    public CompletableFuture<UpdateResourceServerResponseContent> update(
-            String id, UpdateResourceServerRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateResourceServerResponseContent> update(String id, UpdateResourceServerRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

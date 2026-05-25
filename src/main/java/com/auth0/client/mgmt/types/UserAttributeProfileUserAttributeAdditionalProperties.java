@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserAttributeProfileUserAttributeAdditionalProperties.Builder.class)
 public final class UserAttributeProfileUserAttributeAdditionalProperties {
+
     private final String description;
 
     private final String label;
@@ -40,16 +41,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
 
     private final Map<String, Object> additionalProperties;
 
-    private UserAttributeProfileUserAttributeAdditionalProperties(
-            String description,
-            String label,
-            boolean profileRequired,
-            String auth0Mapping,
-            Optional<UserAttributeProfileOidcMapping> oidcMapping,
-            Optional<List<String>> samlMapping,
-            Optional<String> scimMapping,
-            Optional<UserAttributeProfileStrategyOverrides> strategyOverrides,
-            Map<String, Object> additionalProperties) {
+    private UserAttributeProfileUserAttributeAdditionalProperties(String description, String label, boolean profileRequired, String auth0Mapping, Optional<UserAttributeProfileOidcMapping> oidcMapping, Optional<List<String>> samlMapping, Optional<String> scimMapping, Optional<UserAttributeProfileStrategyOverrides> strategyOverrides, Map<String, Object> additionalProperties) {
         this.description = description;
         this.label = label;
         this.profileRequired = profileRequired;
@@ -66,7 +58,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("description")
     public String getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +66,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("label")
     public String getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +74,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("profile_required")
     public boolean getProfileRequired() {
-        return profileRequired;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,12 +82,12 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("auth0_mapping")
     public String getAuth0Mapping() {
-        return auth0Mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc_mapping")
     public Optional<UserAttributeProfileOidcMapping> getOidcMapping() {
-        return oidcMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +95,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("saml_mapping")
     public Optional<List<String>> getSamlMapping() {
-        return samlMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,60 +103,44 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
      */
     @JsonProperty("scim_mapping")
     public Optional<String> getScimMapping() {
-        return scimMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strategy_overrides")
     public Optional<UserAttributeProfileStrategyOverrides> getStrategyOverrides() {
-        return strategyOverrides;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserAttributeProfileUserAttributeAdditionalProperties
-                && equalTo((UserAttributeProfileUserAttributeAdditionalProperties) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserAttributeProfileUserAttributeAdditionalProperties other) {
-        return description.equals(other.description)
-                && label.equals(other.label)
-                && profileRequired == other.profileRequired
-                && auth0Mapping.equals(other.auth0Mapping)
-                && oidcMapping.equals(other.oidcMapping)
-                && samlMapping.equals(other.samlMapping)
-                && scimMapping.equals(other.scimMapping)
-                && strategyOverrides.equals(other.strategyOverrides);
+        return description.equals(other.description) && label.equals(other.label) && profileRequired == other.profileRequired && auth0Mapping.equals(other.auth0Mapping) && oidcMapping.equals(other.oidcMapping) && samlMapping.equals(other.samlMapping) && scimMapping.equals(other.scimMapping) && strategyOverrides.equals(other.strategyOverrides);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.description,
-                this.label,
-                this.profileRequired,
-                this.auth0Mapping,
-                this.oidcMapping,
-                this.samlMapping,
-                this.scimMapping,
-                this.strategyOverrides);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DescriptionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DescriptionStage {
+
         /**
          * <p>Description of this attribute</p>
          */
@@ -174,6 +150,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
     }
 
     public interface LabelStage {
+
         /**
          * <p>Display label for this attribute</p>
          */
@@ -181,6 +158,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
     }
 
     public interface ProfileRequiredStage {
+
         /**
          * <p>Whether this attribute is required in the profile</p>
          */
@@ -188,6 +166,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
     }
 
     public interface Auth0MappingStage {
+
         /**
          * <p>Auth0 mapping for this attribute</p>
          */
@@ -195,6 +174,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
     }
 
     public interface _FinalStage {
+
         UserAttributeProfileUserAttributeAdditionalProperties build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -225,8 +205,8 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements DescriptionStage, LabelStage, ProfileRequiredStage, Auth0MappingStage, _FinalStage {
+    public static final class Builder implements DescriptionStage, LabelStage, ProfileRequiredStage, Auth0MappingStage, _FinalStage {
+
         private String description;
 
         private String label;
@@ -246,19 +226,12 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UserAttributeProfileUserAttributeAdditionalProperties other) {
-            description(other.getDescription());
-            label(other.getLabel());
-            profileRequired(other.getProfileRequired());
-            auth0Mapping(other.getAuth0Mapping());
-            oidcMapping(other.getOidcMapping());
-            samlMapping(other.getSamlMapping());
-            scimMapping(other.getScimMapping());
-            strategyOverrides(other.getStrategyOverrides());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -269,8 +242,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter("description")
         public LabelStage description(@NotNull String description) {
-            this.description = Objects.requireNonNull(description, "description must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,8 +253,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter("label")
         public ProfileRequiredStage label(@NotNull String label) {
-            this.label = Objects.requireNonNull(label, "label must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -293,8 +264,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter("profile_required")
         public Auth0MappingStage profileRequired(boolean profileRequired) {
-            this.profileRequired = profileRequired;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -305,21 +275,18 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter("auth0_mapping")
         public _FinalStage auth0Mapping(@NotNull String auth0Mapping) {
-            this.auth0Mapping = Objects.requireNonNull(auth0Mapping, "auth0Mapping must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage strategyOverrides(UserAttributeProfileStrategyOverrides strategyOverrides) {
-            this.strategyOverrides = Optional.ofNullable(strategyOverrides);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "strategy_overrides", nulls = Nulls.SKIP)
         public _FinalStage strategyOverrides(Optional<UserAttributeProfileStrategyOverrides> strategyOverrides) {
-            this.strategyOverrides = strategyOverrides;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -328,8 +295,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
          */
         @java.lang.Override
         public _FinalStage scimMapping(String scimMapping) {
-            this.scimMapping = Optional.ofNullable(scimMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -338,8 +304,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter(value = "scim_mapping", nulls = Nulls.SKIP)
         public _FinalStage scimMapping(Optional<String> scimMapping) {
-            this.scimMapping = scimMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,8 +313,7 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
          */
         @java.lang.Override
         public _FinalStage samlMapping(List<String> samlMapping) {
-            this.samlMapping = Optional.ofNullable(samlMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -358,47 +322,33 @@ public final class UserAttributeProfileUserAttributeAdditionalProperties {
         @java.lang.Override
         @JsonSetter(value = "saml_mapping", nulls = Nulls.SKIP)
         public _FinalStage samlMapping(Optional<List<String>> samlMapping) {
-            this.samlMapping = samlMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage oidcMapping(UserAttributeProfileOidcMapping oidcMapping) {
-            this.oidcMapping = Optional.ofNullable(oidcMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "oidc_mapping", nulls = Nulls.SKIP)
         public _FinalStage oidcMapping(Optional<UserAttributeProfileOidcMapping> oidcMapping) {
-            this.oidcMapping = oidcMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UserAttributeProfileUserAttributeAdditionalProperties build() {
-            return new UserAttributeProfileUserAttributeAdditionalProperties(
-                    description,
-                    label,
-                    profileRequired,
-                    auth0Mapping,
-                    oidcMapping,
-                    samlMapping,
-                    scimMapping,
-                    strategyOverrides,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

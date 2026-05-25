@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionSendgridSendEmailParams.Builder.class)
 public final class FlowActionSendgridSendEmailParams {
+
     private final String connectionId;
 
     private final FlowActionSendgridSendEmailParamsPerson from;
@@ -30,11 +31,7 @@ public final class FlowActionSendgridSendEmailParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionSendgridSendEmailParams(
-            String connectionId,
-            FlowActionSendgridSendEmailParamsPerson from,
-            List<Object> personalizations,
-            Map<String, Object> additionalProperties) {
+    private FlowActionSendgridSendEmailParams(String connectionId, FlowActionSendgridSendEmailParamsPerson from, List<Object> personalizations, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.from = from;
         this.personalizations = personalizations;
@@ -43,61 +40,61 @@ public final class FlowActionSendgridSendEmailParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("from")
     public FlowActionSendgridSendEmailParamsPerson getFrom() {
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("personalizations")
     public List<Object> getPersonalizations() {
-        return personalizations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSendgridSendEmailParams && equalTo((FlowActionSendgridSendEmailParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSendgridSendEmailParams other) {
-        return connectionId.equals(other.connectionId)
-                && from.equals(other.from)
-                && personalizations.equals(other.personalizations);
+        return connectionId.equals(other.connectionId) && from.equals(other.from) && personalizations.equals(other.personalizations);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.from, this.personalizations);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         FromStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionSendgridSendEmailParams other);
     }
 
     public interface FromStage {
+
         _FinalStage from(@NotNull FlowActionSendgridSendEmailParamsPerson from);
     }
 
     public interface _FinalStage {
+
         FlowActionSendgridSendEmailParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -113,6 +110,7 @@ public final class FlowActionSendgridSendEmailParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, FromStage, _FinalStage {
+
         private String connectionId;
 
         private FlowActionSendgridSendEmailParamsPerson from;
@@ -122,69 +120,55 @@ public final class FlowActionSendgridSendEmailParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionSendgridSendEmailParams other) {
-            connectionId(other.getConnectionId());
-            from(other.getFrom());
-            personalizations(other.getPersonalizations());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public FromStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("from")
         public _FinalStage from(@NotNull FlowActionSendgridSendEmailParamsPerson from) {
-            this.from = Objects.requireNonNull(from, "from must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllPersonalizations(List<Object> personalizations) {
-            if (personalizations != null) {
-                this.personalizations.addAll(personalizations);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addPersonalizations(Object personalizations) {
-            this.personalizations.add(personalizations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "personalizations", nulls = Nulls.SKIP)
         public _FinalStage personalizations(List<Object> personalizations) {
-            this.personalizations.clear();
-            if (personalizations != null) {
-                this.personalizations.addAll(personalizations);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionSendgridSendEmailParams build() {
-            return new FlowActionSendgridSendEmailParams(connectionId, from, personalizations, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

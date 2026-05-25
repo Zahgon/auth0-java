@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetUserResponseContent.Builder.class)
 public final class GetUserResponseContent {
+
     private final Optional<String> userId;
 
     private final Optional<String> email;
@@ -65,29 +66,7 @@ public final class GetUserResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetUserResponseContent(
-            Optional<String> userId,
-            Optional<String> email,
-            Optional<Boolean> emailVerified,
-            Optional<String> username,
-            Optional<String> phoneNumber,
-            Optional<Boolean> phoneVerified,
-            Optional<UserDateSchema> createdAt,
-            Optional<UserDateSchema> updatedAt,
-            Optional<List<UserIdentitySchema>> identities,
-            Optional<Map<String, Object>> appMetadata,
-            Optional<Map<String, Object>> userMetadata,
-            Optional<String> picture,
-            Optional<String> name,
-            Optional<String> nickname,
-            Optional<List<String>> multifactor,
-            Optional<String> lastIp,
-            Optional<UserDateSchema> lastLogin,
-            Optional<Integer> loginsCount,
-            Optional<Boolean> blocked,
-            Optional<String> givenName,
-            Optional<String> familyName,
-            Map<String, Object> additionalProperties) {
+    private GetUserResponseContent(Optional<String> userId, Optional<String> email, Optional<Boolean> emailVerified, Optional<String> username, Optional<String> phoneNumber, Optional<Boolean> phoneVerified, Optional<UserDateSchema> createdAt, Optional<UserDateSchema> updatedAt, Optional<List<UserIdentitySchema>> identities, Optional<Map<String, Object>> appMetadata, Optional<Map<String, Object>> userMetadata, Optional<String> picture, Optional<String> name, Optional<String> nickname, Optional<List<String>> multifactor, Optional<String> lastIp, Optional<UserDateSchema> lastLogin, Optional<Integer> loginsCount, Optional<Boolean> blocked, Optional<String> givenName, Optional<String> familyName, Map<String, Object> additionalProperties) {
         this.userId = userId;
         this.email = email;
         this.emailVerified = emailVerified;
@@ -117,7 +96,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,7 +104,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,7 +112,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("email_verified")
     public Optional<Boolean> getEmailVerified() {
-        return emailVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +120,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("username")
     public Optional<String> getUsername() {
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -149,7 +128,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("phone_number")
     public Optional<String> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -157,17 +136,17 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("phone_verified")
     public Optional<Boolean> getPhoneVerified() {
-        return phoneVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("created_at")
     public Optional<UserDateSchema> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("updated_at")
     public Optional<UserDateSchema> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -175,17 +154,17 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("identities")
     public Optional<List<UserIdentitySchema>> getIdentities() {
-        return identities;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_metadata")
     public Optional<Map<String, Object>> getAppMetadata() {
-        return appMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_metadata")
     public Optional<Map<String, Object>> getUserMetadata() {
-        return userMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -193,7 +172,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("picture")
     public Optional<String> getPicture() {
-        return picture;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -201,7 +180,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -209,7 +188,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("nickname")
     public Optional<String> getNickname() {
-        return nickname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -217,7 +196,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("multifactor")
     public Optional<List<String>> getMultifactor() {
-        return multifactor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -225,12 +204,12 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("last_ip")
     public Optional<String> getLastIp() {
-        return lastIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("last_login")
     public Optional<UserDateSchema> getLastLogin() {
-        return lastLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -238,7 +217,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("logins_count")
     public Optional<Integer> getLoginsCount() {
-        return loginsCount;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -246,7 +225,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("blocked")
     public Optional<Boolean> getBlocked() {
-        return blocked;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -254,7 +233,7 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("given_name")
     public Optional<String> getGivenName() {
-        return givenName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -262,81 +241,40 @@ public final class GetUserResponseContent {
      */
     @JsonProperty("family_name")
     public Optional<String> getFamilyName() {
-        return familyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetUserResponseContent && equalTo((GetUserResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetUserResponseContent other) {
-        return userId.equals(other.userId)
-                && email.equals(other.email)
-                && emailVerified.equals(other.emailVerified)
-                && username.equals(other.username)
-                && phoneNumber.equals(other.phoneNumber)
-                && phoneVerified.equals(other.phoneVerified)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && identities.equals(other.identities)
-                && appMetadata.equals(other.appMetadata)
-                && userMetadata.equals(other.userMetadata)
-                && picture.equals(other.picture)
-                && name.equals(other.name)
-                && nickname.equals(other.nickname)
-                && multifactor.equals(other.multifactor)
-                && lastIp.equals(other.lastIp)
-                && lastLogin.equals(other.lastLogin)
-                && loginsCount.equals(other.loginsCount)
-                && blocked.equals(other.blocked)
-                && givenName.equals(other.givenName)
-                && familyName.equals(other.familyName);
+        return userId.equals(other.userId) && email.equals(other.email) && emailVerified.equals(other.emailVerified) && username.equals(other.username) && phoneNumber.equals(other.phoneNumber) && phoneVerified.equals(other.phoneVerified) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && identities.equals(other.identities) && appMetadata.equals(other.appMetadata) && userMetadata.equals(other.userMetadata) && picture.equals(other.picture) && name.equals(other.name) && nickname.equals(other.nickname) && multifactor.equals(other.multifactor) && lastIp.equals(other.lastIp) && lastLogin.equals(other.lastLogin) && loginsCount.equals(other.loginsCount) && blocked.equals(other.blocked) && givenName.equals(other.givenName) && familyName.equals(other.familyName);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.userId,
-                this.email,
-                this.emailVerified,
-                this.username,
-                this.phoneNumber,
-                this.phoneVerified,
-                this.createdAt,
-                this.updatedAt,
-                this.identities,
-                this.appMetadata,
-                this.userMetadata,
-                this.picture,
-                this.name,
-                this.nickname,
-                this.multifactor,
-                this.lastIp,
-                this.lastLogin,
-                this.loginsCount,
-                this.blocked,
-                this.givenName,
-                this.familyName);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> userId = Optional.empty();
 
         private Optional<String> email = Optional.empty();
@@ -382,31 +320,11 @@ public final class GetUserResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetUserResponseContent other) {
-            userId(other.getUserId());
-            email(other.getEmail());
-            emailVerified(other.getEmailVerified());
-            username(other.getUsername());
-            phoneNumber(other.getPhoneNumber());
-            phoneVerified(other.getPhoneVerified());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            identities(other.getIdentities());
-            appMetadata(other.getAppMetadata());
-            userMetadata(other.getUserMetadata());
-            picture(other.getPicture());
-            name(other.getName());
-            nickname(other.getNickname());
-            multifactor(other.getMultifactor());
-            lastIp(other.getLastIp());
-            lastLogin(other.getLastLogin());
-            loginsCount(other.getLoginsCount());
-            blocked(other.getBlocked());
-            givenName(other.getGivenName());
-            familyName(other.getFamilyName());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -414,13 +332,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -428,13 +344,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -442,13 +356,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "email_verified", nulls = Nulls.SKIP)
         public Builder emailVerified(Optional<Boolean> emailVerified) {
-            this.emailVerified = emailVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder emailVerified(Boolean emailVerified) {
-            this.emailVerified = Optional.ofNullable(emailVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -456,13 +368,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public Builder username(Optional<String> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(String username) {
-            this.username = Optional.ofNullable(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -470,13 +380,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public Builder phoneNumber(Optional<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -484,35 +392,29 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "phone_verified", nulls = Nulls.SKIP)
         public Builder phoneVerified(Optional<Boolean> phoneVerified) {
-            this.phoneVerified = phoneVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneVerified(Boolean phoneVerified) {
-            this.phoneVerified = Optional.ofNullable(phoneVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<UserDateSchema> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(UserDateSchema createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<UserDateSchema> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(UserDateSchema updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -520,35 +422,29 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "identities", nulls = Nulls.SKIP)
         public Builder identities(Optional<List<UserIdentitySchema>> identities) {
-            this.identities = identities;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identities(List<UserIdentitySchema> identities) {
-            this.identities = Optional.ofNullable(identities);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "app_metadata", nulls = Nulls.SKIP)
         public Builder appMetadata(Optional<Map<String, Object>> appMetadata) {
-            this.appMetadata = appMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appMetadata(Map<String, Object> appMetadata) {
-            this.appMetadata = Optional.ofNullable(appMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_metadata", nulls = Nulls.SKIP)
         public Builder userMetadata(Optional<Map<String, Object>> userMetadata) {
-            this.userMetadata = userMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userMetadata(Map<String, Object> userMetadata) {
-            this.userMetadata = Optional.ofNullable(userMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -556,13 +452,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "picture", nulls = Nulls.SKIP)
         public Builder picture(Optional<String> picture) {
-            this.picture = picture;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picture(String picture) {
-            this.picture = Optional.ofNullable(picture);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -570,13 +464,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -584,13 +476,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "nickname", nulls = Nulls.SKIP)
         public Builder nickname(Optional<String> nickname) {
-            this.nickname = nickname;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nickname(String nickname) {
-            this.nickname = Optional.ofNullable(nickname);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -598,13 +488,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "multifactor", nulls = Nulls.SKIP)
         public Builder multifactor(Optional<List<String>> multifactor) {
-            this.multifactor = multifactor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder multifactor(List<String> multifactor) {
-            this.multifactor = Optional.ofNullable(multifactor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -612,24 +500,20 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "last_ip", nulls = Nulls.SKIP)
         public Builder lastIp(Optional<String> lastIp) {
-            this.lastIp = lastIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastIp(String lastIp) {
-            this.lastIp = Optional.ofNullable(lastIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "last_login", nulls = Nulls.SKIP)
         public Builder lastLogin(Optional<UserDateSchema> lastLogin) {
-            this.lastLogin = lastLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastLogin(UserDateSchema lastLogin) {
-            this.lastLogin = Optional.ofNullable(lastLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -637,13 +521,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "logins_count", nulls = Nulls.SKIP)
         public Builder loginsCount(Optional<Integer> loginsCount) {
-            this.loginsCount = loginsCount;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder loginsCount(Integer loginsCount) {
-            this.loginsCount = Optional.ofNullable(loginsCount);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -651,13 +533,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "blocked", nulls = Nulls.SKIP)
         public Builder blocked(Optional<Boolean> blocked) {
-            this.blocked = blocked;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blocked(Boolean blocked) {
-            this.blocked = Optional.ofNullable(blocked);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -665,13 +545,11 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "given_name", nulls = Nulls.SKIP)
         public Builder givenName(Optional<String> givenName) {
-            this.givenName = givenName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenName(String givenName) {
-            this.givenName = Optional.ofNullable(givenName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -679,49 +557,23 @@ public final class GetUserResponseContent {
          */
         @JsonSetter(value = "family_name", nulls = Nulls.SKIP)
         public Builder familyName(Optional<String> familyName) {
-            this.familyName = familyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyName(String familyName) {
-            this.familyName = Optional.ofNullable(familyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetUserResponseContent build() {
-            return new GetUserResponseContent(
-                    userId,
-                    email,
-                    emailVerified,
-                    username,
-                    phoneNumber,
-                    phoneVerified,
-                    createdAt,
-                    updatedAt,
-                    identities,
-                    appMetadata,
-                    userMetadata,
-                    picture,
-                    name,
-                    nickname,
-                    multifactor,
-                    lastIp,
-                    lastLogin,
-                    loginsCount,
-                    blocked,
-                    givenName,
-                    familyName,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

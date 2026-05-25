@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetBotDetectionSettingsResponseContent;
 import com.auth0.client.mgmt.types.UpdateBotDetectionSettingsResponseContent;
 
 public class BotDetectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawBotDetectionClient rawClient;
@@ -23,49 +24,48 @@ public class BotDetectionClient {
      * Get responses with HTTP metadata like headers
      */
     public RawBotDetectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the Bot Detection configuration of your tenant.
      */
     public GetBotDetectionSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the Bot Detection configuration of your tenant.
      */
     public GetBotDetectionSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
     public UpdateBotDetectionSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
     public UpdateBotDetectionSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
     public UpdateBotDetectionSettingsResponseContent update(UpdateBotDetectionSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
-    public UpdateBotDetectionSettingsResponseContent update(
-            UpdateBotDetectionSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateBotDetectionSettingsResponseContent update(UpdateBotDetectionSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

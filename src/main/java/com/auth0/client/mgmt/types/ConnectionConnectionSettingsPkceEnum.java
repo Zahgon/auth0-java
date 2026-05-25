@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionConnectionSettingsPkceEnum {
-    public static final ConnectionConnectionSettingsPkceEnum S256 =
-            new ConnectionConnectionSettingsPkceEnum(Value.S256, "S256");
 
-    public static final ConnectionConnectionSettingsPkceEnum AUTO =
-            new ConnectionConnectionSettingsPkceEnum(Value.AUTO, "auto");
+    public static final ConnectionConnectionSettingsPkceEnum S256 = new ConnectionConnectionSettingsPkceEnum(Value.S256, "S256");
 
-    public static final ConnectionConnectionSettingsPkceEnum DISABLED =
-            new ConnectionConnectionSettingsPkceEnum(Value.DISABLED, "disabled");
+    public static final ConnectionConnectionSettingsPkceEnum AUTO = new ConnectionConnectionSettingsPkceEnum(Value.AUTO, "auto");
 
-    public static final ConnectionConnectionSettingsPkceEnum PLAIN =
-            new ConnectionConnectionSettingsPkceEnum(Value.PLAIN, "plain");
+    public static final ConnectionConnectionSettingsPkceEnum DISABLED = new ConnectionConnectionSettingsPkceEnum(Value.DISABLED, "disabled");
+
+    public static final ConnectionConnectionSettingsPkceEnum PLAIN = new ConnectionConnectionSettingsPkceEnum(Value.PLAIN, "plain");
 
     private final Value value;
 
@@ -29,72 +26,41 @@ public final class ConnectionConnectionSettingsPkceEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionConnectionSettingsPkceEnum
-                        && this.string.equals(((ConnectionConnectionSettingsPkceEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case S256:
-                return visitor.visitS256();
-            case AUTO:
-                return visitor.visitAuto();
-            case DISABLED:
-                return visitor.visitDisabled();
-            case PLAIN:
-                return visitor.visitPlain();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionConnectionSettingsPkceEnum valueOf(String value) {
-        switch (value) {
-            case "S256":
-                return S256;
-            case "auto":
-                return AUTO;
-            case "disabled":
-                return DISABLED;
-            case "plain":
-                return PLAIN;
-            default:
-                return new ConnectionConnectionSettingsPkceEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTO,
 
-        S256,
-
-        PLAIN,
-
-        DISABLED,
-
-        UNKNOWN
+        AUTO, S256, PLAIN, DISABLED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuto();
 
         T visitS256();

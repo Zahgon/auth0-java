@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormEndingNode.Builder.class)
 public final class FormEndingNode {
+
     private final Optional<FormEndingNodeRedirection> redirection;
 
     private final Optional<FormEndingNodeAfterSubmit> afterSubmit;
@@ -30,12 +31,7 @@ public final class FormEndingNode {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormEndingNode(
-            Optional<FormEndingNodeRedirection> redirection,
-            Optional<FormEndingNodeAfterSubmit> afterSubmit,
-            Optional<FormNodeCoordinates> coordinates,
-            Optional<Boolean> resumeFlow,
-            Map<String, Object> additionalProperties) {
+    private FormEndingNode(Optional<FormEndingNodeRedirection> redirection, Optional<FormEndingNodeAfterSubmit> afterSubmit, Optional<FormNodeCoordinates> coordinates, Optional<Boolean> resumeFlow, Map<String, Object> additionalProperties) {
         this.redirection = redirection;
         this.afterSubmit = afterSubmit;
         this.coordinates = coordinates;
@@ -45,58 +41,55 @@ public final class FormEndingNode {
 
     @JsonProperty("redirection")
     public Optional<FormEndingNodeRedirection> getRedirection() {
-        return redirection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("after_submit")
     public Optional<FormEndingNodeAfterSubmit> getAfterSubmit() {
-        return afterSubmit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("coordinates")
     public Optional<FormNodeCoordinates> getCoordinates() {
-        return coordinates;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("resume_flow")
     public Optional<Boolean> getResumeFlow() {
-        return resumeFlow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormEndingNode && equalTo((FormEndingNode) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormEndingNode other) {
-        return redirection.equals(other.redirection)
-                && afterSubmit.equals(other.afterSubmit)
-                && coordinates.equals(other.coordinates)
-                && resumeFlow.equals(other.resumeFlow);
+        return redirection.equals(other.redirection) && afterSubmit.equals(other.afterSubmit) && coordinates.equals(other.coordinates) && resumeFlow.equals(other.resumeFlow);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.redirection, this.afterSubmit, this.coordinates, this.resumeFlow);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FormEndingNodeRedirection> redirection = Optional.empty();
 
         private Optional<FormEndingNodeAfterSubmit> afterSubmit = Optional.empty();
@@ -108,72 +101,59 @@ public final class FormEndingNode {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormEndingNode other) {
-            redirection(other.getRedirection());
-            afterSubmit(other.getAfterSubmit());
-            coordinates(other.getCoordinates());
-            resumeFlow(other.getResumeFlow());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "redirection", nulls = Nulls.SKIP)
         public Builder redirection(Optional<FormEndingNodeRedirection> redirection) {
-            this.redirection = redirection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder redirection(FormEndingNodeRedirection redirection) {
-            this.redirection = Optional.ofNullable(redirection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "after_submit", nulls = Nulls.SKIP)
         public Builder afterSubmit(Optional<FormEndingNodeAfterSubmit> afterSubmit) {
-            this.afterSubmit = afterSubmit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder afterSubmit(FormEndingNodeAfterSubmit afterSubmit) {
-            this.afterSubmit = Optional.ofNullable(afterSubmit);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "coordinates", nulls = Nulls.SKIP)
         public Builder coordinates(Optional<FormNodeCoordinates> coordinates) {
-            this.coordinates = coordinates;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder coordinates(FormNodeCoordinates coordinates) {
-            this.coordinates = Optional.ofNullable(coordinates);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "resume_flow", nulls = Nulls.SKIP)
         public Builder resumeFlow(Optional<Boolean> resumeFlow) {
-            this.resumeFlow = resumeFlow;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resumeFlow(Boolean resumeFlow) {
-            this.resumeFlow = Optional.ofNullable(resumeFlow);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormEndingNode build() {
-            return new FormEndingNode(redirection, afterSubmit, coordinates, resumeFlow, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

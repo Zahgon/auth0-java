@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.CreateExportUsersResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncUsersExportsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUsersExportsClient rawClient;
@@ -23,35 +24,34 @@ public class AsyncUsersExportsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUsersExportsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CompletableFuture<CreateExportUsersResponseContent> create() {
-        return this.rawClient.create().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CompletableFuture<CreateExportUsersResponseContent> create(RequestOptions requestOptions) {
-        return this.rawClient.create(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
     public CompletableFuture<CreateExportUsersResponseContent> create(CreateExportUsersRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Export all users to a file via a long-running job.
      */
-    public CompletableFuture<CreateExportUsersResponseContent> create(
-            CreateExportUsersRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateExportUsersResponseContent> create(CreateExportUsersRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

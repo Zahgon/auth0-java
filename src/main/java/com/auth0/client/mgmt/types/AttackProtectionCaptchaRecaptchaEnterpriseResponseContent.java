@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AttackProtectionCaptchaRecaptchaEnterpriseResponseContent.Builder.class)
 public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
+
     private final Optional<String> siteKey;
 
     private final Optional<String> projectId;
 
     private final Map<String, Object> additionalProperties;
 
-    private AttackProtectionCaptchaRecaptchaEnterpriseResponseContent(
-            Optional<String> siteKey, Optional<String> projectId, Map<String, Object> additionalProperties) {
+    private AttackProtectionCaptchaRecaptchaEnterpriseResponseContent(Optional<String> siteKey, Optional<String> projectId, Map<String, Object> additionalProperties) {
         this.siteKey = siteKey;
         this.projectId = projectId;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
      */
     @JsonProperty("site_key")
     public Optional<String> getSiteKey() {
-        return siteKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +46,17 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
      */
     @JsonProperty("project_id")
     public Optional<String> getProjectId() {
-        return projectId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AttackProtectionCaptchaRecaptchaEnterpriseResponseContent
-                && equalTo((AttackProtectionCaptchaRecaptchaEnterpriseResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AttackProtectionCaptchaRecaptchaEnterpriseResponseContent other) {
@@ -67,20 +65,21 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.siteKey, this.projectId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> siteKey = Optional.empty();
 
         private Optional<String> projectId = Optional.empty();
@@ -88,12 +87,11 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AttackProtectionCaptchaRecaptchaEnterpriseResponseContent other) {
-            siteKey(other.getSiteKey());
-            projectId(other.getProjectId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,13 +99,11 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
          */
         @JsonSetter(value = "site_key", nulls = Nulls.SKIP)
         public Builder siteKey(Optional<String> siteKey) {
-            this.siteKey = siteKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder siteKey(String siteKey) {
-            this.siteKey = Optional.ofNullable(siteKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,28 +111,23 @@ public final class AttackProtectionCaptchaRecaptchaEnterpriseResponseContent {
          */
         @JsonSetter(value = "project_id", nulls = Nulls.SKIP)
         public Builder projectId(Optional<String> projectId) {
-            this.projectId = projectId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Optional.ofNullable(projectId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AttackProtectionCaptchaRecaptchaEnterpriseResponseContent build() {
-            return new AttackProtectionCaptchaRecaptchaEnterpriseResponseContent(
-                    siteKey, projectId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

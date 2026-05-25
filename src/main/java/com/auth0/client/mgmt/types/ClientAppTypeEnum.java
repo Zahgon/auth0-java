@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientAppTypeEnum {
+
     public static final ClientAppTypeEnum DROPBOX = new ClientAppTypeEnum(Value.DROPBOX, "dropbox");
 
     public static final ClientAppTypeEnum NEWRELIC = new ClientAppTypeEnum(Value.NEWRELIC, "newrelic");
@@ -23,8 +24,7 @@ public final class ClientAppTypeEnum {
 
     public static final ClientAppTypeEnum ZENDESK = new ClientAppTypeEnum(Value.ZENDESK, "zendesk");
 
-    public static final ClientAppTypeEnum NON_INTERACTIVE =
-            new ClientAppTypeEnum(Value.NON_INTERACTIVE, "non_interactive");
+    public static final ClientAppTypeEnum NON_INTERACTIVE = new ClientAppTypeEnum(Value.NON_INTERACTIVE, "non_interactive");
 
     public static final ClientAppTypeEnum SHAREPOINT = new ClientAppTypeEnum(Value.SHAREPOINT, "sharepoint");
 
@@ -32,11 +32,9 @@ public final class ClientAppTypeEnum {
 
     public static final ClientAppTypeEnum SLACK = new ClientAppTypeEnum(Value.SLACK, "slack");
 
-    public static final ClientAppTypeEnum EXPRESS_CONFIGURATION =
-            new ClientAppTypeEnum(Value.EXPRESS_CONFIGURATION, "express_configuration");
+    public static final ClientAppTypeEnum EXPRESS_CONFIGURATION = new ClientAppTypeEnum(Value.EXPRESS_CONFIGURATION, "express_configuration");
 
-    public static final ClientAppTypeEnum SSO_INTEGRATION =
-            new ClientAppTypeEnum(Value.SSO_INTEGRATION, "sso_integration");
+    public static final ClientAppTypeEnum SSO_INTEGRATION = new ClientAppTypeEnum(Value.SSO_INTEGRATION, "sso_integration");
 
     public static final ClientAppTypeEnum BOX = new ClientAppTypeEnum(Value.BOX, "box");
 
@@ -48,8 +46,7 @@ public final class ClientAppTypeEnum {
 
     public static final ClientAppTypeEnum SALESFORCE = new ClientAppTypeEnum(Value.SALESFORCE, "salesforce");
 
-    public static final ClientAppTypeEnum RESOURCE_SERVER =
-            new ClientAppTypeEnum(Value.RESOURCE_SERVER, "resource_server");
+    public static final ClientAppTypeEnum RESOURCE_SERVER = new ClientAppTypeEnum(Value.RESOURCE_SERVER, "resource_server");
 
     public static final ClientAppTypeEnum ZOOM = new ClientAppTypeEnum(Value.ZOOM, "zoom");
 
@@ -71,197 +68,66 @@ public final class ClientAppTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientAppTypeEnum && this.string.equals(((ClientAppTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DROPBOX:
-                return visitor.visitDropbox();
-            case NEWRELIC:
-                return visitor.visitNewrelic();
-            case REGULAR_WEB:
-                return visitor.visitRegularWeb();
-            case SPA:
-                return visitor.visitSpa();
-            case SPRINGCM:
-                return visitor.visitSpringcm();
-            case NATIVE:
-                return visitor.visitNative();
-            case EGNYTE:
-                return visitor.visitEgnyte();
-            case ZENDESK:
-                return visitor.visitZendesk();
-            case NON_INTERACTIVE:
-                return visitor.visitNonInteractive();
-            case SHAREPOINT:
-                return visitor.visitSharepoint();
-            case SENTRY:
-                return visitor.visitSentry();
-            case SLACK:
-                return visitor.visitSlack();
-            case EXPRESS_CONFIGURATION:
-                return visitor.visitExpressConfiguration();
-            case SSO_INTEGRATION:
-                return visitor.visitSsoIntegration();
-            case BOX:
-                return visitor.visitBox();
-            case ECHOSIGN:
-                return visitor.visitEchosign();
-            case RMS:
-                return visitor.visitRms();
-            case CLOUDBEES:
-                return visitor.visitCloudbees();
-            case SALESFORCE:
-                return visitor.visitSalesforce();
-            case RESOURCE_SERVER:
-                return visitor.visitResourceServer();
-            case ZOOM:
-                return visitor.visitZoom();
-            case CONCUR:
-                return visitor.visitConcur();
-            case OFFICE365:
-                return visitor.visitOffice365();
-            case MSCRM:
-                return visitor.visitMscrm();
-            case OAG:
-                return visitor.visitOag();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientAppTypeEnum valueOf(String value) {
-        switch (value) {
-            case "dropbox":
-                return DROPBOX;
-            case "newrelic":
-                return NEWRELIC;
-            case "regular_web":
-                return REGULAR_WEB;
-            case "spa":
-                return SPA;
-            case "springcm":
-                return SPRINGCM;
-            case "native":
-                return NATIVE;
-            case "egnyte":
-                return EGNYTE;
-            case "zendesk":
-                return ZENDESK;
-            case "non_interactive":
-                return NON_INTERACTIVE;
-            case "sharepoint":
-                return SHAREPOINT;
-            case "sentry":
-                return SENTRY;
-            case "slack":
-                return SLACK;
-            case "express_configuration":
-                return EXPRESS_CONFIGURATION;
-            case "sso_integration":
-                return SSO_INTEGRATION;
-            case "box":
-                return BOX;
-            case "echosign":
-                return ECHOSIGN;
-            case "rms":
-                return RMS;
-            case "cloudbees":
-                return CLOUDBEES;
-            case "salesforce":
-                return SALESFORCE;
-            case "resource_server":
-                return RESOURCE_SERVER;
-            case "zoom":
-                return ZOOM;
-            case "concur":
-                return CONCUR;
-            case "office365":
-                return OFFICE365;
-            case "mscrm":
-                return MSCRM;
-            case "oag":
-                return OAG;
-            default:
-                return new ClientAppTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         NATIVE,
-
         SPA,
-
         REGULAR_WEB,
-
         NON_INTERACTIVE,
-
         RESOURCE_SERVER,
-
         EXPRESS_CONFIGURATION,
-
         RMS,
-
         BOX,
-
         CLOUDBEES,
-
         CONCUR,
-
         DROPBOX,
-
         MSCRM,
-
         ECHOSIGN,
-
         EGNYTE,
-
         NEWRELIC,
-
         OFFICE365,
-
         SALESFORCE,
-
         SENTRY,
-
         SHAREPOINT,
-
         SLACK,
-
         SPRINGCM,
-
         ZENDESK,
-
         ZOOM,
-
         SSO_INTEGRATION,
-
         OAG,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNative();
 
         T visitSpa();

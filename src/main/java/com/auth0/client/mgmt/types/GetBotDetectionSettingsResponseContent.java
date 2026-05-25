@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetBotDetectionSettingsResponseContent.Builder.class)
 public final class GetBotDetectionSettingsResponseContent {
+
     private final BotDetectionLevelEnum botDetectionLevel;
 
     private final BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy;
@@ -36,14 +37,7 @@ public final class GetBotDetectionSettingsResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetBotDetectionSettingsResponseContent(
-            BotDetectionLevelEnum botDetectionLevel,
-            BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy,
-            BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy,
-            BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy,
-            List<String> allowlist,
-            boolean monitoringModeEnabled,
-            Map<String, Object> additionalProperties) {
+    private GetBotDetectionSettingsResponseContent(BotDetectionLevelEnum botDetectionLevel, BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy, BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy, BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy, List<String> allowlist, boolean monitoringModeEnabled, Map<String, Object> additionalProperties) {
         this.botDetectionLevel = botDetectionLevel;
         this.challengePasswordPolicy = challengePasswordPolicy;
         this.challengePasswordlessPolicy = challengePasswordlessPolicy;
@@ -55,101 +49,91 @@ public final class GetBotDetectionSettingsResponseContent {
 
     @JsonProperty("bot_detection_level")
     public BotDetectionLevelEnum getBotDetectionLevel() {
-        return botDetectionLevel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("challenge_password_policy")
     public BotDetectionChallengePolicyPasswordFlowEnum getChallengePasswordPolicy() {
-        return challengePasswordPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("challenge_passwordless_policy")
     public BotDetectionChallengePolicyPasswordlessFlowEnum getChallengePasswordlessPolicy() {
-        return challengePasswordlessPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("challenge_password_reset_policy")
     public BotDetectionChallengePolicyPasswordResetFlowEnum getChallengePasswordResetPolicy() {
-        return challengePasswordResetPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allowlist")
     public List<String> getAllowlist() {
-        return allowlist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("monitoring_mode_enabled")
     public boolean getMonitoringModeEnabled() {
-        return monitoringModeEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetBotDetectionSettingsResponseContent
-                && equalTo((GetBotDetectionSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetBotDetectionSettingsResponseContent other) {
-        return botDetectionLevel.equals(other.botDetectionLevel)
-                && challengePasswordPolicy.equals(other.challengePasswordPolicy)
-                && challengePasswordlessPolicy.equals(other.challengePasswordlessPolicy)
-                && challengePasswordResetPolicy.equals(other.challengePasswordResetPolicy)
-                && allowlist.equals(other.allowlist)
-                && monitoringModeEnabled == other.monitoringModeEnabled;
+        return botDetectionLevel.equals(other.botDetectionLevel) && challengePasswordPolicy.equals(other.challengePasswordPolicy) && challengePasswordlessPolicy.equals(other.challengePasswordlessPolicy) && challengePasswordResetPolicy.equals(other.challengePasswordResetPolicy) && allowlist.equals(other.allowlist) && monitoringModeEnabled == other.monitoringModeEnabled;
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.botDetectionLevel,
-                this.challengePasswordPolicy,
-                this.challengePasswordlessPolicy,
-                this.challengePasswordResetPolicy,
-                this.allowlist,
-                this.monitoringModeEnabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BotDetectionLevelStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BotDetectionLevelStage {
+
         ChallengePasswordPolicyStage botDetectionLevel(@NotNull BotDetectionLevelEnum botDetectionLevel);
 
         Builder from(GetBotDetectionSettingsResponseContent other);
     }
 
     public interface ChallengePasswordPolicyStage {
-        ChallengePasswordlessPolicyStage challengePasswordPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy);
+
+        ChallengePasswordlessPolicyStage challengePasswordPolicy(@NotNull BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy);
     }
 
     public interface ChallengePasswordlessPolicyStage {
-        ChallengePasswordResetPolicyStage challengePasswordlessPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy);
+
+        ChallengePasswordResetPolicyStage challengePasswordlessPolicy(@NotNull BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy);
     }
 
     public interface ChallengePasswordResetPolicyStage {
-        MonitoringModeEnabledStage challengePasswordResetPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy);
+
+        MonitoringModeEnabledStage challengePasswordResetPolicy(@NotNull BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy);
     }
 
     public interface MonitoringModeEnabledStage {
+
         _FinalStage monitoringModeEnabled(boolean monitoringModeEnabled);
     }
 
     public interface _FinalStage {
+
         GetBotDetectionSettingsResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -164,13 +148,8 @@ public final class GetBotDetectionSettingsResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements BotDetectionLevelStage,
-                    ChallengePasswordPolicyStage,
-                    ChallengePasswordlessPolicyStage,
-                    ChallengePasswordResetPolicyStage,
-                    MonitoringModeEnabledStage,
-                    _FinalStage {
+    public static final class Builder implements BotDetectionLevelStage, ChallengePasswordPolicyStage, ChallengePasswordlessPolicyStage, ChallengePasswordResetPolicyStage, MonitoringModeEnabledStage, _FinalStage {
+
         private BotDetectionLevelEnum botDetectionLevel;
 
         private BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy;
@@ -186,106 +165,73 @@ public final class GetBotDetectionSettingsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetBotDetectionSettingsResponseContent other) {
-            botDetectionLevel(other.getBotDetectionLevel());
-            challengePasswordPolicy(other.getChallengePasswordPolicy());
-            challengePasswordlessPolicy(other.getChallengePasswordlessPolicy());
-            challengePasswordResetPolicy(other.getChallengePasswordResetPolicy());
-            allowlist(other.getAllowlist());
-            monitoringModeEnabled(other.getMonitoringModeEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("bot_detection_level")
         public ChallengePasswordPolicyStage botDetectionLevel(@NotNull BotDetectionLevelEnum botDetectionLevel) {
-            this.botDetectionLevel = Objects.requireNonNull(botDetectionLevel, "botDetectionLevel must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("challenge_password_policy")
-        public ChallengePasswordlessPolicyStage challengePasswordPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy) {
-            this.challengePasswordPolicy =
-                    Objects.requireNonNull(challengePasswordPolicy, "challengePasswordPolicy must not be null");
-            return this;
+        public ChallengePasswordlessPolicyStage challengePasswordPolicy(@NotNull BotDetectionChallengePolicyPasswordFlowEnum challengePasswordPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("challenge_passwordless_policy")
-        public ChallengePasswordResetPolicyStage challengePasswordlessPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy) {
-            this.challengePasswordlessPolicy =
-                    Objects.requireNonNull(challengePasswordlessPolicy, "challengePasswordlessPolicy must not be null");
-            return this;
+        public ChallengePasswordResetPolicyStage challengePasswordlessPolicy(@NotNull BotDetectionChallengePolicyPasswordlessFlowEnum challengePasswordlessPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("challenge_password_reset_policy")
-        public MonitoringModeEnabledStage challengePasswordResetPolicy(
-                @NotNull BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy) {
-            this.challengePasswordResetPolicy = Objects.requireNonNull(
-                    challengePasswordResetPolicy, "challengePasswordResetPolicy must not be null");
-            return this;
+        public MonitoringModeEnabledStage challengePasswordResetPolicy(@NotNull BotDetectionChallengePolicyPasswordResetFlowEnum challengePasswordResetPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("monitoring_mode_enabled")
         public _FinalStage monitoringModeEnabled(boolean monitoringModeEnabled) {
-            this.monitoringModeEnabled = monitoringModeEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllAllowlist(List<String> allowlist) {
-            if (allowlist != null) {
-                this.allowlist.addAll(allowlist);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllowlist(String allowlist) {
-            this.allowlist.add(allowlist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "allowlist", nulls = Nulls.SKIP)
         public _FinalStage allowlist(List<String> allowlist) {
-            this.allowlist.clear();
-            if (allowlist != null) {
-                this.allowlist.addAll(allowlist);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetBotDetectionSettingsResponseContent build() {
-            return new GetBotDetectionSettingsResponseContent(
-                    botDetectionLevel,
-                    challengePasswordPolicy,
-                    challengePasswordlessPolicy,
-                    challengePasswordResetPolicy,
-                    allowlist,
-                    monitoringModeEnabled,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

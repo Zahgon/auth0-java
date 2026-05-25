@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateRuleRequestContent.Builder.class)
 public final class UpdateRuleRequestContent {
+
     private final Optional<String> script;
 
     private final Optional<String> name;
@@ -30,12 +31,7 @@ public final class UpdateRuleRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateRuleRequestContent(
-            Optional<String> script,
-            Optional<String> name,
-            Optional<Double> order,
-            Optional<Boolean> enabled,
-            Map<String, Object> additionalProperties) {
+    private UpdateRuleRequestContent(Optional<String> script, Optional<String> name, Optional<Double> order, Optional<Boolean> enabled, Map<String, Object> additionalProperties) {
         this.script = script;
         this.name = name;
         this.order = order;
@@ -48,7 +44,7 @@ public final class UpdateRuleRequestContent {
      */
     @JsonProperty("script")
     public Optional<String> getScript() {
-        return script;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class UpdateRuleRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +60,7 @@ public final class UpdateRuleRequestContent {
      */
     @JsonProperty("order")
     public Optional<Double> getOrder() {
-        return order;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,43 +68,40 @@ public final class UpdateRuleRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateRuleRequestContent && equalTo((UpdateRuleRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateRuleRequestContent other) {
-        return script.equals(other.script)
-                && name.equals(other.name)
-                && order.equals(other.order)
-                && enabled.equals(other.enabled);
+        return script.equals(other.script) && name.equals(other.name) && order.equals(other.order) && enabled.equals(other.enabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.script, this.name, this.order, this.enabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> script = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -120,14 +113,11 @@ public final class UpdateRuleRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateRuleRequestContent other) {
-            script(other.getScript());
-            name(other.getName());
-            order(other.getOrder());
-            enabled(other.getEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -135,13 +125,11 @@ public final class UpdateRuleRequestContent {
          */
         @JsonSetter(value = "script", nulls = Nulls.SKIP)
         public Builder script(Optional<String> script) {
-            this.script = script;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder script(String script) {
-            this.script = Optional.ofNullable(script);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,13 +137,11 @@ public final class UpdateRuleRequestContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,13 +149,11 @@ public final class UpdateRuleRequestContent {
          */
         @JsonSetter(value = "order", nulls = Nulls.SKIP)
         public Builder order(Optional<Double> order) {
-            this.order = order;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder order(Double order) {
-            this.order = Optional.ofNullable(order);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,27 +161,23 @@ public final class UpdateRuleRequestContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateRuleRequestContent build() {
-            return new UpdateRuleRequestContent(script, name, order, enabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

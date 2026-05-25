@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.UpdateLogStreamResponseContent;
 import java.util.List;
 
 public class LogStreamsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawLogStreamsClient rawClient;
@@ -27,7 +28,7 @@ public class LogStreamsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawLogStreamsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +102,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public List<LogStreamResponseSchema> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -175,7 +176,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public List<LogStreamResponseSchema> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -339,7 +340,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public CreateLogStreamResponseContent create(CreateLogStreamRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -503,7 +504,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public CreateLogStreamResponseContent create(CreateLogStreamRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -630,7 +631,7 @@ public class LogStreamsClient {
      * </ol>
      */
     public GetLogStreamResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -757,21 +758,21 @@ public class LogStreamsClient {
      * </ol>
      */
     public GetLogStreamResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a log stream.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a log stream.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -831,7 +832,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public UpdateLogStreamResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -891,7 +892,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public UpdateLogStreamResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -951,7 +952,7 @@ public class LogStreamsClient {
      * </code></pre>
      */
     public UpdateLogStreamResponseContent update(String id, UpdateLogStreamRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1010,8 +1011,7 @@ public class LogStreamsClient {
      * }
      * </code></pre>
      */
-    public UpdateLogStreamResponseContent update(
-            String id, UpdateLogStreamRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateLogStreamResponseContent update(String id, UpdateLogStreamRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

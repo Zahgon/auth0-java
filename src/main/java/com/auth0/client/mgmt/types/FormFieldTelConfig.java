@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldTelConfig.Builder.class)
 public final class FormFieldTelConfig {
+
     private final Optional<String> defaultValue;
 
     private final Optional<String> placeholder;
@@ -34,14 +35,7 @@ public final class FormFieldTelConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldTelConfig(
-            Optional<String> defaultValue,
-            Optional<String> placeholder,
-            Optional<Integer> minLength,
-            Optional<Integer> maxLength,
-            Optional<Boolean> countryPicker,
-            Optional<FormFieldTelConfigStrings> strings,
-            Map<String, Object> additionalProperties) {
+    private FormFieldTelConfig(Optional<String> defaultValue, Optional<String> placeholder, Optional<Integer> minLength, Optional<Integer> maxLength, Optional<Boolean> countryPicker, Optional<FormFieldTelConfigStrings> strings, Map<String, Object> additionalProperties) {
         this.defaultValue = defaultValue;
         this.placeholder = placeholder;
         this.minLength = minLength;
@@ -53,71 +47,65 @@ public final class FormFieldTelConfig {
 
     @JsonProperty("default_value")
     public Optional<String> getDefaultValue() {
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("min_length")
     public Optional<Integer> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_length")
     public Optional<Integer> getMaxLength() {
-        return maxLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("country_picker")
     public Optional<Boolean> getCountryPicker() {
-        return countryPicker;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strings")
     public Optional<FormFieldTelConfigStrings> getStrings() {
-        return strings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldTelConfig && equalTo((FormFieldTelConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldTelConfig other) {
-        return defaultValue.equals(other.defaultValue)
-                && placeholder.equals(other.placeholder)
-                && minLength.equals(other.minLength)
-                && maxLength.equals(other.maxLength)
-                && countryPicker.equals(other.countryPicker)
-                && strings.equals(other.strings);
+        return defaultValue.equals(other.defaultValue) && placeholder.equals(other.placeholder) && minLength.equals(other.minLength) && maxLength.equals(other.maxLength) && countryPicker.equals(other.countryPicker) && strings.equals(other.strings);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.defaultValue, this.placeholder, this.minLength, this.maxLength, this.countryPicker, this.strings);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> defaultValue = Optional.empty();
 
         private Optional<String> placeholder = Optional.empty();
@@ -133,97 +121,77 @@ public final class FormFieldTelConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldTelConfig other) {
-            defaultValue(other.getDefaultValue());
-            placeholder(other.getPlaceholder());
-            minLength(other.getMinLength());
-            maxLength(other.getMaxLength());
-            countryPicker(other.getCountryPicker());
-            strings(other.getStrings());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_value", nulls = Nulls.SKIP)
         public Builder defaultValue(Optional<String> defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Integer> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Integer minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "max_length", nulls = Nulls.SKIP)
         public Builder maxLength(Optional<Integer> maxLength) {
-            this.maxLength = maxLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxLength(Integer maxLength) {
-            this.maxLength = Optional.ofNullable(maxLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "country_picker", nulls = Nulls.SKIP)
         public Builder countryPicker(Optional<Boolean> countryPicker) {
-            this.countryPicker = countryPicker;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder countryPicker(Boolean countryPicker) {
-            this.countryPicker = Optional.ofNullable(countryPicker);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "strings", nulls = Nulls.SKIP)
         public Builder strings(Optional<FormFieldTelConfigStrings> strings) {
-            this.strings = strings;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strings(FormFieldTelConfigStrings strings) {
-            this.strings = Optional.ofNullable(strings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldTelConfig build() {
-            return new FormFieldTelConfig(
-                    defaultValue, placeholder, minLength, maxLength, countryPicker, strings, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

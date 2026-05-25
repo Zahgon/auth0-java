@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEnrollmentsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEnrollmentsClient rawClient;
@@ -23,20 +24,20 @@ public class AsyncEnrollmentsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEnrollmentsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the first <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication</a> enrollment that a specific user has confirmed.
      */
     public CompletableFuture<List<UsersEnrollment>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the first <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication</a> enrollment that a specific user has confirmed.
      */
     public CompletableFuture<List<UsersEnrollment>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

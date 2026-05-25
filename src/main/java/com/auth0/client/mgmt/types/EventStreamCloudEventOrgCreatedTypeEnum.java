@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventOrgCreatedTypeEnum {
-    public static final EventStreamCloudEventOrgCreatedTypeEnum ORGANIZATION_CREATED =
-            new EventStreamCloudEventOrgCreatedTypeEnum(Value.ORGANIZATION_CREATED, "organization.created");
+
+    public static final EventStreamCloudEventOrgCreatedTypeEnum ORGANIZATION_CREATED = new EventStreamCloudEventOrgCreatedTypeEnum(Value.ORGANIZATION_CREATED, "organization.created");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventOrgCreatedTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventOrgCreatedTypeEnum
-                        && this.string.equals(((EventStreamCloudEventOrgCreatedTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ORGANIZATION_CREATED:
-                return visitor.visitOrganizationCreated();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventOrgCreatedTypeEnum valueOf(String value) {
-        switch (value) {
-            case "organization.created":
-                return ORGANIZATION_CREATED;
-            default:
-                return new EventStreamCloudEventOrgCreatedTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ORGANIZATION_CREATED,
 
-        UNKNOWN
+        ORGANIZATION_CREATED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOrganizationCreated();
 
         T visitUnknown(String unknownType);

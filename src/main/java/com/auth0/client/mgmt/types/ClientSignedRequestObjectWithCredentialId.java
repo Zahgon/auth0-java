@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientSignedRequestObjectWithCredentialId.Builder.class)
 public final class ClientSignedRequestObjectWithCredentialId {
+
     private final Optional<Boolean> required;
 
     private final Optional<List<CredentialId>> credentials;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientSignedRequestObjectWithCredentialId(
-            Optional<Boolean> required,
-            Optional<List<CredentialId>> credentials,
-            Map<String, Object> additionalProperties) {
+    private ClientSignedRequestObjectWithCredentialId(Optional<Boolean> required, Optional<List<CredentialId>> credentials, Map<String, Object> additionalProperties) {
         this.required = required;
         this.credentials = credentials;
         this.additionalProperties = additionalProperties;
@@ -41,24 +39,22 @@ public final class ClientSignedRequestObjectWithCredentialId {
      */
     @JsonProperty("required")
     public Optional<Boolean> getRequired() {
-        return required;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("credentials")
     public Optional<List<CredentialId>> getCredentials() {
-        return credentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientSignedRequestObjectWithCredentialId
-                && equalTo((ClientSignedRequestObjectWithCredentialId) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientSignedRequestObjectWithCredentialId other) {
@@ -67,20 +63,21 @@ public final class ClientSignedRequestObjectWithCredentialId {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.required, this.credentials);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> required = Optional.empty();
 
         private Optional<List<CredentialId>> credentials = Optional.empty();
@@ -88,12 +85,11 @@ public final class ClientSignedRequestObjectWithCredentialId {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientSignedRequestObjectWithCredentialId other) {
-            required(other.getRequired());
-            credentials(other.getCredentials());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,38 +97,32 @@ public final class ClientSignedRequestObjectWithCredentialId {
          */
         @JsonSetter(value = "required", nulls = Nulls.SKIP)
         public Builder required(Optional<Boolean> required) {
-            this.required = required;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder required(Boolean required) {
-            this.required = Optional.ofNullable(required);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "credentials", nulls = Nulls.SKIP)
         public Builder credentials(Optional<List<CredentialId>> credentials) {
-            this.credentials = credentials;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder credentials(List<CredentialId> credentials) {
-            this.credentials = Optional.ofNullable(credentials);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientSignedRequestObjectWithCredentialId build() {
-            return new ClientSignedRequestObjectWithCredentialId(required, credentials, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

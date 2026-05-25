@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowAction.Deserializer.class)
 public final class FlowAction {
+
     private final Object value;
 
     private final int type;
@@ -27,69 +28,17 @@ public final class FlowAction {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionActivecampaign) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionAirtable) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowActionAuth0) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowActionBigqueryInsertRows) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FlowActionClearbit) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FlowActionEmailVerifyEmail) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FlowActionFlow) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((FlowActionGoogleSheetsAddRow) this.value);
-        } else if (this.type == 8) {
-            return visitor.visit((FlowActionHttpSendRequest) this.value);
-        } else if (this.type == 9) {
-            return visitor.visit((FlowActionHubspot) this.value);
-        } else if (this.type == 10) {
-            return visitor.visit((FlowActionJson) this.value);
-        } else if (this.type == 11) {
-            return visitor.visit((FlowActionJwt) this.value);
-        } else if (this.type == 12) {
-            return visitor.visit((FlowActionMailchimpUpsertMember) this.value);
-        } else if (this.type == 13) {
-            return visitor.visit((FlowActionMailjetSendEmail) this.value);
-        } else if (this.type == 14) {
-            return visitor.visit((FlowActionOtp) this.value);
-        } else if (this.type == 15) {
-            return visitor.visit((FlowActionPipedrive) this.value);
-        } else if (this.type == 16) {
-            return visitor.visit((FlowActionSalesforce) this.value);
-        } else if (this.type == 17) {
-            return visitor.visit((FlowActionSendgridSendEmail) this.value);
-        } else if (this.type == 18) {
-            return visitor.visit((FlowActionSlackPostMessage) this.value);
-        } else if (this.type == 19) {
-            return visitor.visit((FlowActionStripe) this.value);
-        } else if (this.type == 20) {
-            return visitor.visit((FlowActionTelegramSendMessage) this.value);
-        } else if (this.type == 21) {
-            return visitor.visit((FlowActionTwilio) this.value);
-        } else if (this.type == 22) {
-            return visitor.visit((FlowActionWhatsappSendMessage) this.value);
-        } else if (this.type == 23) {
-            return visitor.visit((FlowActionXml) this.value);
-        } else if (this.type == 24) {
-            return visitor.visit((FlowActionZapierTriggerWebhook) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowAction && equalTo((FlowAction) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowAction other) {
@@ -98,115 +47,116 @@ public final class FlowAction {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionActivecampaign value) {
-        return new FlowAction(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionAirtable value) {
-        return new FlowAction(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionAuth0 value) {
-        return new FlowAction(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionBigqueryInsertRows value) {
-        return new FlowAction(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionClearbit value) {
-        return new FlowAction(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionEmailVerifyEmail value) {
-        return new FlowAction(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionFlow value) {
-        return new FlowAction(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionGoogleSheetsAddRow value) {
-        return new FlowAction(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionHttpSendRequest value) {
-        return new FlowAction(value, 8);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionHubspot value) {
-        return new FlowAction(value, 9);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionJson value) {
-        return new FlowAction(value, 10);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionJwt value) {
-        return new FlowAction(value, 11);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionMailchimpUpsertMember value) {
-        return new FlowAction(value, 12);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionMailjetSendEmail value) {
-        return new FlowAction(value, 13);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionOtp value) {
-        return new FlowAction(value, 14);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionPipedrive value) {
-        return new FlowAction(value, 15);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionSalesforce value) {
-        return new FlowAction(value, 16);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionSendgridSendEmail value) {
-        return new FlowAction(value, 17);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionSlackPostMessage value) {
-        return new FlowAction(value, 18);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionStripe value) {
-        return new FlowAction(value, 19);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionTelegramSendMessage value) {
-        return new FlowAction(value, 20);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionTwilio value) {
-        return new FlowAction(value, 21);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionWhatsappSendMessage value) {
-        return new FlowAction(value, 22);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionXml value) {
-        return new FlowAction(value, 23);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowAction of(FlowActionZapierTriggerWebhook value) {
-        return new FlowAction(value, 24);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionActivecampaign value);
 
         T visit(FlowActionAirtable value);
@@ -259,180 +209,14 @@ public final class FlowAction {
     }
 
     static final class Deserializer extends StdDeserializer<FlowAction> {
+
         Deserializer() {
             super(FlowAction.class);
         }
 
         @java.lang.Override
         public FlowAction deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionActivecampaign.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAirtable.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionAuth0.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionBigqueryInsertRows.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionClearbit.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionEmailVerifyEmail.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionFlow.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionGoogleSheetsAddRow.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionHttpSendRequest.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionHubspot.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionJson.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionJwt.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionMailchimpUpsertMember.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionMailjetSendEmail.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionOtp.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionPipedrive.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSalesforce.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSendgridSendEmail.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionSlackPostMessage.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripe.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionTelegramSendMessage.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionTwilio.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionWhatsappSendMessage.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionXml.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionZapierTriggerWebhook.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

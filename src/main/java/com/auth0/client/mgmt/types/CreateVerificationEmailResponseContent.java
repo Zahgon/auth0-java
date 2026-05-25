@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateVerificationEmailResponseContent.Builder.class)
 public final class CreateVerificationEmailResponseContent {
+
     private final String status;
 
     private final String type;
@@ -31,12 +32,7 @@ public final class CreateVerificationEmailResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateVerificationEmailResponseContent(
-            String status,
-            String type,
-            Optional<String> createdAt,
-            String id,
-            Map<String, Object> additionalProperties) {
+    private CreateVerificationEmailResponseContent(String status, String type, Optional<String> createdAt, String id, Map<String, Object> additionalProperties) {
         this.status = status;
         this.type = type;
         this.createdAt = createdAt;
@@ -49,7 +45,7 @@ public final class CreateVerificationEmailResponseContent {
      */
     @JsonProperty("status")
     public String getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class CreateVerificationEmailResponseContent {
      */
     @JsonProperty("type")
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +61,7 @@ public final class CreateVerificationEmailResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<String> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,43 +69,39 @@ public final class CreateVerificationEmailResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateVerificationEmailResponseContent
-                && equalTo((CreateVerificationEmailResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateVerificationEmailResponseContent other) {
-        return status.equals(other.status)
-                && type.equals(other.type)
-                && createdAt.equals(other.createdAt)
-                && id.equals(other.id);
+        return status.equals(other.status) && type.equals(other.type) && createdAt.equals(other.createdAt) && id.equals(other.id);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.status, this.type, this.createdAt, this.id);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static StatusStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface StatusStage {
+
         /**
          * <p>Status of this job.</p>
          */
@@ -119,6 +111,7 @@ public final class CreateVerificationEmailResponseContent {
     }
 
     public interface TypeStage {
+
         /**
          * <p>Type of job this is.</p>
          */
@@ -126,6 +119,7 @@ public final class CreateVerificationEmailResponseContent {
     }
 
     public interface IdStage {
+
         /**
          * <p>ID of this job.</p>
          */
@@ -133,6 +127,7 @@ public final class CreateVerificationEmailResponseContent {
     }
 
     public interface _FinalStage {
+
         CreateVerificationEmailResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -149,6 +144,7 @@ public final class CreateVerificationEmailResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements StatusStage, TypeStage, IdStage, _FinalStage {
+
         private String status;
 
         private String type;
@@ -160,15 +156,12 @@ public final class CreateVerificationEmailResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateVerificationEmailResponseContent other) {
-            status(other.getStatus());
-            type(other.getType());
-            createdAt(other.getCreatedAt());
-            id(other.getId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,8 +172,7 @@ public final class CreateVerificationEmailResponseContent {
         @java.lang.Override
         @JsonSetter("status")
         public TypeStage status(@NotNull String status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -191,8 +183,7 @@ public final class CreateVerificationEmailResponseContent {
         @java.lang.Override
         @JsonSetter("type")
         public IdStage type(@NotNull String type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -203,8 +194,7 @@ public final class CreateVerificationEmailResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public _FinalStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,8 +203,7 @@ public final class CreateVerificationEmailResponseContent {
          */
         @java.lang.Override
         public _FinalStage createdAt(String createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -223,25 +212,22 @@ public final class CreateVerificationEmailResponseContent {
         @java.lang.Override
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public _FinalStage createdAt(Optional<String> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateVerificationEmailResponseContent build() {
-            return new CreateVerificationEmailResponseContent(status, type, createdAt, id, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

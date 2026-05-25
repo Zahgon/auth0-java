@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateSelfServiceProfileRequestContent.Builder.class)
 public final class UpdateSelfServiceProfileRequestContent {
+
     private final Optional<String> name;
 
     private final OptionalNullable<String> description;
@@ -38,14 +39,7 @@ public final class UpdateSelfServiceProfileRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateSelfServiceProfileRequestContent(
-            Optional<String> name,
-            OptionalNullable<String> description,
-            OptionalNullable<SelfServiceProfileBrandingProperties> branding,
-            Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies,
-            OptionalNullable<List<SelfServiceProfileUserAttribute>> userAttributes,
-            OptionalNullable<String> userAttributeProfileId,
-            Map<String, Object> additionalProperties) {
+    private UpdateSelfServiceProfileRequestContent(Optional<String> name, OptionalNullable<String> description, OptionalNullable<SelfServiceProfileBrandingProperties> branding, Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies, OptionalNullable<List<SelfServiceProfileUserAttribute>> userAttributes, OptionalNullable<String> userAttributeProfileId, Map<String, Object> additionalProperties) {
         this.name = name;
         this.description = description;
         this.branding = branding;
@@ -60,22 +54,19 @@ public final class UpdateSelfServiceProfileRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("description")
     public OptionalNullable<String> getDescription() {
-        if (description == null) {
-            return OptionalNullable.absent();
-        }
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("branding")
     public OptionalNullable<SelfServiceProfileBrandingProperties> getBranding() {
-        return branding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,16 +74,13 @@ public final class UpdateSelfServiceProfileRequestContent {
      */
     @JsonProperty("allowed_strategies")
     public Optional<List<SelfServiceProfileAllowedStrategyEnum>> getAllowedStrategies() {
-        return allowedStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("user_attributes")
     public OptionalNullable<List<SelfServiceProfileUserAttribute>> getUserAttributes() {
-        if (userAttributes == null) {
-            return OptionalNullable.absent();
-        }
-        return userAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,10 +89,7 @@ public final class UpdateSelfServiceProfileRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("user_attribute_profile_id")
     public OptionalNullable<String> getUserAttributeProfileId() {
-        if (userAttributeProfileId == null) {
-            return OptionalNullable.absent();
-        }
-        return userAttributeProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -127,47 +112,35 @@ public final class UpdateSelfServiceProfileRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateSelfServiceProfileRequestContent
-                && equalTo((UpdateSelfServiceProfileRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateSelfServiceProfileRequestContent other) {
-        return name.equals(other.name)
-                && description.equals(other.description)
-                && branding.equals(other.branding)
-                && allowedStrategies.equals(other.allowedStrategies)
-                && userAttributes.equals(other.userAttributes)
-                && userAttributeProfileId.equals(other.userAttributeProfileId);
+        return name.equals(other.name) && description.equals(other.description) && branding.equals(other.branding) && allowedStrategies.equals(other.allowedStrategies) && userAttributes.equals(other.userAttributes) && userAttributeProfileId.equals(other.userAttributeProfileId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.description,
-                this.branding,
-                this.allowedStrategies,
-                this.userAttributes,
-                this.userAttributeProfileId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private OptionalNullable<String> description = OptionalNullable.absent();
@@ -183,16 +156,11 @@ public final class UpdateSelfServiceProfileRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateSelfServiceProfileRequestContent other) {
-            name(other.getName());
-            description(other.getDescription());
-            branding(other.getBranding());
-            allowedStrategies(other.getAllowedStrategies());
-            userAttributes(other.getUserAttributes());
-            userAttributeProfileId(other.getUserAttributeProfileId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -200,75 +168,45 @@ public final class UpdateSelfServiceProfileRequestContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(@Nullable OptionalNullable<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = OptionalNullable.of(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(Optional<String> description) {
-            if (description.isPresent()) {
-                this.description = OptionalNullable.of(description.get());
-            } else {
-                this.description = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(com.auth0.client.mgmt.core.Nullable<String> description) {
-            if (description.isNull()) {
-                this.description = OptionalNullable.ofNull();
-            } else if (description.isEmpty()) {
-                this.description = OptionalNullable.absent();
-            } else {
-                this.description = OptionalNullable.of(description.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "branding", nulls = Nulls.SKIP)
         public Builder branding(OptionalNullable<SelfServiceProfileBrandingProperties> branding) {
-            this.branding = branding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder branding(SelfServiceProfileBrandingProperties branding) {
-            this.branding = OptionalNullable.of(branding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder branding(Optional<SelfServiceProfileBrandingProperties> branding) {
-            if (branding.isPresent()) {
-                this.branding = OptionalNullable.of(branding.get());
-            } else {
-                this.branding = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder branding(com.auth0.client.mgmt.core.Nullable<SelfServiceProfileBrandingProperties> branding) {
-            if (branding.isNull()) {
-                this.branding = OptionalNullable.ofNull();
-            } else if (branding.isEmpty()) {
-                this.branding = OptionalNullable.absent();
-            } else {
-                this.branding = OptionalNullable.of(branding.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -276,46 +214,28 @@ public final class UpdateSelfServiceProfileRequestContent {
          */
         @JsonSetter(value = "allowed_strategies", nulls = Nulls.SKIP)
         public Builder allowedStrategies(Optional<List<SelfServiceProfileAllowedStrategyEnum>> allowedStrategies) {
-            this.allowedStrategies = allowedStrategies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedStrategies(List<SelfServiceProfileAllowedStrategyEnum> allowedStrategies) {
-            this.allowedStrategies = Optional.ofNullable(allowedStrategies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_attributes", nulls = Nulls.SKIP)
-        public Builder userAttributes(
-                @Nullable OptionalNullable<List<SelfServiceProfileUserAttribute>> userAttributes) {
-            this.userAttributes = userAttributes;
-            return this;
+        public Builder userAttributes(@Nullable OptionalNullable<List<SelfServiceProfileUserAttribute>> userAttributes) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAttributes(List<SelfServiceProfileUserAttribute> userAttributes) {
-            this.userAttributes = OptionalNullable.of(userAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAttributes(Optional<List<SelfServiceProfileUserAttribute>> userAttributes) {
-            if (userAttributes.isPresent()) {
-                this.userAttributes = OptionalNullable.of(userAttributes.get());
-            } else {
-                this.userAttributes = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder userAttributes(
-                com.auth0.client.mgmt.core.Nullable<List<SelfServiceProfileUserAttribute>> userAttributes) {
-            if (userAttributes.isNull()) {
-                this.userAttributes = OptionalNullable.ofNull();
-            } else if (userAttributes.isEmpty()) {
-                this.userAttributes = OptionalNullable.absent();
-            } else {
-                this.userAttributes = OptionalNullable.of(userAttributes.get());
-            }
-            return this;
+        public Builder userAttributes(com.auth0.client.mgmt.core.Nullable<List<SelfServiceProfileUserAttribute>> userAttributes) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,54 +243,31 @@ public final class UpdateSelfServiceProfileRequestContent {
          */
         @JsonSetter(value = "user_attribute_profile_id", nulls = Nulls.SKIP)
         public Builder userAttributeProfileId(@Nullable OptionalNullable<String> userAttributeProfileId) {
-            this.userAttributeProfileId = userAttributeProfileId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAttributeProfileId(String userAttributeProfileId) {
-            this.userAttributeProfileId = OptionalNullable.of(userAttributeProfileId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAttributeProfileId(Optional<String> userAttributeProfileId) {
-            if (userAttributeProfileId.isPresent()) {
-                this.userAttributeProfileId = OptionalNullable.of(userAttributeProfileId.get());
-            } else {
-                this.userAttributeProfileId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAttributeProfileId(com.auth0.client.mgmt.core.Nullable<String> userAttributeProfileId) {
-            if (userAttributeProfileId.isNull()) {
-                this.userAttributeProfileId = OptionalNullable.ofNull();
-            } else if (userAttributeProfileId.isEmpty()) {
-                this.userAttributeProfileId = OptionalNullable.absent();
-            } else {
-                this.userAttributeProfileId = OptionalNullable.of(userAttributeProfileId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateSelfServiceProfileRequestContent build() {
-            return new UpdateSelfServiceProfileRequestContent(
-                    name,
-                    description,
-                    branding,
-                    allowedStrategies,
-                    userAttributes,
-                    userAttributeProfileId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

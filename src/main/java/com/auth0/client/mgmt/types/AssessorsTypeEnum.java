@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AssessorsTypeEnum {
+
     public static final AssessorsTypeEnum NEW_DEVICE = new AssessorsTypeEnum(Value.NEW_DEVICE, "new-device");
 
     private final Value value;
@@ -19,53 +20,41 @@ public final class AssessorsTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AssessorsTypeEnum && this.string.equals(((AssessorsTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NEW_DEVICE:
-                return visitor.visitNewDevice();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AssessorsTypeEnum valueOf(String value) {
-        switch (value) {
-            case "new-device":
-                return NEW_DEVICE;
-            default:
-                return new AssessorsTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NEW_DEVICE,
 
-        UNKNOWN
+        NEW_DEVICE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNewDevice();
 
         T visitUnknown(String unknownType);

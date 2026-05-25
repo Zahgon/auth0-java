@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupOauthApp.Builder.class)
 public final class FlowsVaultConnectioSetupOauthApp {
+
     private final FlowsVaultConnectioSetupTypeOauthAppEnum type;
 
     private final String clientId;
@@ -33,13 +34,7 @@ public final class FlowsVaultConnectioSetupOauthApp {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupOauthApp(
-            FlowsVaultConnectioSetupTypeOauthAppEnum type,
-            String clientId,
-            String clientSecret,
-            String domain,
-            Optional<String> audience,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupOauthApp(FlowsVaultConnectioSetupTypeOauthAppEnum type, String clientId, String clientSecret, String domain, Optional<String> audience, Map<String, Object> additionalProperties) {
         this.type = type;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -50,81 +45,81 @@ public final class FlowsVaultConnectioSetupOauthApp {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeOauthAppEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public String getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain")
     public String getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupOauthApp && equalTo((FlowsVaultConnectioSetupOauthApp) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupOauthApp other) {
-        return type.equals(other.type)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && domain.equals(other.domain)
-                && audience.equals(other.audience);
+        return type.equals(other.type) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && domain.equals(other.domain) && audience.equals(other.audience);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.clientId, this.clientSecret, this.domain, this.audience);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         ClientIdStage type(@NotNull FlowsVaultConnectioSetupTypeOauthAppEnum type);
 
         Builder from(FlowsVaultConnectioSetupOauthApp other);
     }
 
     public interface ClientIdStage {
+
         ClientSecretStage clientId(@NotNull String clientId);
     }
 
     public interface ClientSecretStage {
+
         DomainStage clientSecret(@NotNull String clientSecret);
     }
 
     public interface DomainStage {
+
         _FinalStage domain(@NotNull String domain);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupOauthApp build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -138,6 +133,7 @@ public final class FlowsVaultConnectioSetupOauthApp {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, ClientIdStage, ClientSecretStage, DomainStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeOauthAppEnum type;
 
         private String clientId;
@@ -151,75 +147,62 @@ public final class FlowsVaultConnectioSetupOauthApp {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupOauthApp other) {
-            type(other.getType());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            domain(other.getDomain());
-            audience(other.getAudience());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ClientIdStage type(@NotNull FlowsVaultConnectioSetupTypeOauthAppEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_id")
         public ClientSecretStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_secret")
         public DomainStage clientSecret(@NotNull String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret, "clientSecret must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("domain")
         public _FinalStage domain(@NotNull String domain) {
-            this.domain = Objects.requireNonNull(domain, "domain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public _FinalStage audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupOauthApp build() {
-            return new FlowsVaultConnectioSetupOauthApp(
-                    type, clientId, clientSecret, domain, audience, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionConnectedAccountsPurposeXaa.Builder.class)
 public final class ConnectionConnectedAccountsPurposeXaa {
+
     private final Optional<Boolean> crossAppAccess;
 
     private final boolean active;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionConnectedAccountsPurposeXaa(
-            Optional<Boolean> crossAppAccess, boolean active, Map<String, Object> additionalProperties) {
+    private ConnectionConnectedAccountsPurposeXaa(Optional<Boolean> crossAppAccess, boolean active, Map<String, Object> additionalProperties) {
         this.crossAppAccess = crossAppAccess;
         this.active = active;
         this.additionalProperties = additionalProperties;
@@ -35,24 +35,22 @@ public final class ConnectionConnectedAccountsPurposeXaa {
 
     @JsonProperty("cross_app_access")
     public Optional<Boolean> getCrossAppAccess() {
-        return crossAppAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("active")
     public boolean getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionConnectedAccountsPurposeXaa
-                && equalTo((ConnectionConnectedAccountsPurposeXaa) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionConnectedAccountsPurposeXaa other) {
@@ -61,25 +59,27 @@ public final class ConnectionConnectedAccountsPurposeXaa {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.crossAppAccess, this.active);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ActiveStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ActiveStage {
+
         _FinalStage active(boolean active);
 
         Builder from(ConnectionConnectedAccountsPurposeXaa other);
     }
 
     public interface _FinalStage {
+
         ConnectionConnectedAccountsPurposeXaa build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class ConnectionConnectedAccountsPurposeXaa {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ActiveStage, _FinalStage {
+
         private boolean active;
 
         private Optional<Boolean> crossAppAccess = Optional.empty();
@@ -100,50 +101,44 @@ public final class ConnectionConnectedAccountsPurposeXaa {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionConnectedAccountsPurposeXaa other) {
-            crossAppAccess(other.getCrossAppAccess());
-            active(other.getActive());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("active")
         public _FinalStage active(boolean active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage crossAppAccess(Boolean crossAppAccess) {
-            this.crossAppAccess = Optional.ofNullable(crossAppAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "cross_app_access", nulls = Nulls.SKIP)
         public _FinalStage crossAppAccess(Optional<Boolean> crossAppAccess) {
-            this.crossAppAccess = crossAppAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionConnectedAccountsPurposeXaa build() {
-            return new ConnectionConnectedAccountsPurposeXaa(crossAppAccess, active, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

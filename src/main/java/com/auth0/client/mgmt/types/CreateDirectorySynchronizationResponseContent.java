@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateDirectorySynchronizationResponseContent.Builder.class)
 public final class CreateDirectorySynchronizationResponseContent {
+
     private final String connectionId;
 
     private final String synchronizationId;
@@ -27,8 +28,7 @@ public final class CreateDirectorySynchronizationResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateDirectorySynchronizationResponseContent(
-            String connectionId, String synchronizationId, String status, Map<String, Object> additionalProperties) {
+    private CreateDirectorySynchronizationResponseContent(String connectionId, String synchronizationId, String status, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.synchronizationId = synchronizationId;
         this.status = status;
@@ -40,7 +40,7 @@ public final class CreateDirectorySynchronizationResponseContent {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CreateDirectorySynchronizationResponseContent {
      */
     @JsonProperty("synchronization_id")
     public String getSynchronizationId() {
-        return synchronizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,42 +56,39 @@ public final class CreateDirectorySynchronizationResponseContent {
      */
     @JsonProperty("status")
     public String getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateDirectorySynchronizationResponseContent
-                && equalTo((CreateDirectorySynchronizationResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateDirectorySynchronizationResponseContent other) {
-        return connectionId.equals(other.connectionId)
-                && synchronizationId.equals(other.synchronizationId)
-                && status.equals(other.status);
+        return connectionId.equals(other.connectionId) && synchronizationId.equals(other.synchronizationId) && status.equals(other.status);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.synchronizationId, this.status);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>The connection's identifier</p>
          */
@@ -101,6 +98,7 @@ public final class CreateDirectorySynchronizationResponseContent {
     }
 
     public interface SynchronizationIdStage {
+
         /**
          * <p>The synchronization's identifier</p>
          */
@@ -108,6 +106,7 @@ public final class CreateDirectorySynchronizationResponseContent {
     }
 
     public interface StatusStage {
+
         /**
          * <p>The synchronization status</p>
          */
@@ -115,6 +114,7 @@ public final class CreateDirectorySynchronizationResponseContent {
     }
 
     public interface _FinalStage {
+
         CreateDirectorySynchronizationResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +124,7 @@ public final class CreateDirectorySynchronizationResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, SynchronizationIdStage, StatusStage, _FinalStage {
+
         private String connectionId;
 
         private String synchronizationId;
@@ -133,14 +134,12 @@ public final class CreateDirectorySynchronizationResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateDirectorySynchronizationResponseContent other) {
-            connectionId(other.getConnectionId());
-            synchronizationId(other.getSynchronizationId());
-            status(other.getStatus());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,8 +150,7 @@ public final class CreateDirectorySynchronizationResponseContent {
         @java.lang.Override
         @JsonSetter("connection_id")
         public SynchronizationIdStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,8 +161,7 @@ public final class CreateDirectorySynchronizationResponseContent {
         @java.lang.Override
         @JsonSetter("synchronization_id")
         public StatusStage synchronizationId(@NotNull String synchronizationId) {
-            this.synchronizationId = Objects.requireNonNull(synchronizationId, "synchronizationId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -175,26 +172,22 @@ public final class CreateDirectorySynchronizationResponseContent {
         @java.lang.Override
         @JsonSetter("status")
         public _FinalStage status(@NotNull String status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateDirectorySynchronizationResponseContent build() {
-            return new CreateDirectorySynchronizationResponseContent(
-                    connectionId, synchronizationId, status, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

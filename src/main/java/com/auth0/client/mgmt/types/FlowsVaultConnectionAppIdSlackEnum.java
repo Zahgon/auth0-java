@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdSlackEnum {
-    public static final FlowsVaultConnectionAppIdSlackEnum SLACK =
-            new FlowsVaultConnectionAppIdSlackEnum(Value.SLACK, "SLACK");
+
+    public static final FlowsVaultConnectionAppIdSlackEnum SLACK = new FlowsVaultConnectionAppIdSlackEnum(Value.SLACK, "SLACK");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdSlackEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdSlackEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdSlackEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SLACK:
-                return visitor.visitSlack();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdSlackEnum valueOf(String value) {
-        switch (value) {
-            case "SLACK":
-                return SLACK;
-            default:
-                return new FlowsVaultConnectionAppIdSlackEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SLACK,
 
-        UNKNOWN
+        SLACK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSlack();
 
         T visitUnknown(String unknownType);

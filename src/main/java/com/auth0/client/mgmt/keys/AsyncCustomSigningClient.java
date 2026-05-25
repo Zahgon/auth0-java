@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.SetCustomSigningKeysResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncCustomSigningClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawCustomSigningClient rawClient;
@@ -24,49 +25,48 @@ public class AsyncCustomSigningClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawCustomSigningClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get entire jwks representation of custom signing keys.
      */
     public CompletableFuture<GetCustomSigningKeysResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get entire jwks representation of custom signing keys.
      */
     public CompletableFuture<GetCustomSigningKeysResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace entire jwks representation of custom signing keys.
      */
     public CompletableFuture<SetCustomSigningKeysResponseContent> set(SetCustomSigningKeysRequestContent request) {
-        return this.rawClient.set(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create or replace entire jwks representation of custom signing keys.
      */
-    public CompletableFuture<SetCustomSigningKeysResponseContent> set(
-            SetCustomSigningKeysRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetCustomSigningKeysResponseContent> set(SetCustomSigningKeysRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete entire jwks representation of custom signing keys.
      */
     public CompletableFuture<Void> delete() {
-        return this.rawClient.delete().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete entire jwks representation of custom signing keys.
      */
     public CompletableFuture<Void> delete(RequestOptions requestOptions) {
-        return this.rawClient.delete(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

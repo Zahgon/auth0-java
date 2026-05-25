@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockHtmlConfig.Builder.class)
 public final class FormBlockHtmlConfig {
+
     private final Optional<String> content;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class FormBlockHtmlConfig {
 
     @JsonProperty("content")
     public Optional<String> getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockHtmlConfig && equalTo((FormBlockHtmlConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockHtmlConfig other) {
@@ -51,55 +51,52 @@ public final class FormBlockHtmlConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.content);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> content = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormBlockHtmlConfig other) {
-            content(other.getContent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "content", nulls = Nulls.SKIP)
         public Builder content(Optional<String> content) {
-            this.content = content;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder content(String content) {
-            this.content = Optional.ofNullable(content);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormBlockHtmlConfig build() {
-            return new FormBlockHtmlConfig(content, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

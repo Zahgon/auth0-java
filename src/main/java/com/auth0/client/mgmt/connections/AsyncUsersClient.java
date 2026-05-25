@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncUsersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUsersClient rawClient;
@@ -22,21 +23,20 @@ public class AsyncUsersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUsersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a specified connection user by its email (you cannot delete all users from specific connection). Currently, only Database Connections are supported.
      */
     public CompletableFuture<Void> deleteByEmail(String id, DeleteConnectionUsersByEmailQueryParameters request) {
-        return this.rawClient.deleteByEmail(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a specified connection user by its email (you cannot delete all users from specific connection). Currently, only Database Connections are supported.
      */
-    public CompletableFuture<Void> deleteByEmail(
-            String id, DeleteConnectionUsersByEmailQueryParameters request, RequestOptions requestOptions) {
-        return this.rawClient.deleteByEmail(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> deleteByEmail(String id, DeleteConnectionUsersByEmailQueryParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

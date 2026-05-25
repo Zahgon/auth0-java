@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamFilter.Builder.class)
 public final class LogStreamFilter {
+
     private final Optional<LogStreamFilterTypeEnum> type;
 
     private final Optional<LogStreamFilterGroupNameEnum> name;
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamFilter(
-            Optional<LogStreamFilterTypeEnum> type,
-            Optional<LogStreamFilterGroupNameEnum> name,
-            Map<String, Object> additionalProperties) {
+    private LogStreamFilter(Optional<LogStreamFilterTypeEnum> type, Optional<LogStreamFilterGroupNameEnum> name, Map<String, Object> additionalProperties) {
         this.type = type;
         this.name = name;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class LogStreamFilter {
 
     @JsonProperty("type")
     public Optional<LogStreamFilterTypeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     public Optional<LogStreamFilterGroupNameEnum> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamFilter && equalTo((LogStreamFilter) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamFilter other) {
@@ -62,20 +59,21 @@ public final class LogStreamFilter {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.name);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<LogStreamFilterTypeEnum> type = Optional.empty();
 
         private Optional<LogStreamFilterGroupNameEnum> name = Optional.empty();
@@ -83,48 +81,41 @@ public final class LogStreamFilter {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LogStreamFilter other) {
-            type(other.getType());
-            name(other.getName());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<LogStreamFilterTypeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(LogStreamFilterTypeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<LogStreamFilterGroupNameEnum> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(LogStreamFilterGroupNameEnum name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogStreamFilter build() {
-            return new LogStreamFilter(type, name, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

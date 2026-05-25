@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetAttackProtectionCaptchaResponseContent;
 import com.auth0.client.mgmt.types.UpdateAttackProtectionCaptchaResponseContent;
 
 public class CaptchaClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCaptchaClient rawClient;
@@ -23,49 +24,48 @@ public class CaptchaClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCaptchaClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the CAPTCHA configuration for your client.
      */
     public GetAttackProtectionCaptchaResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the CAPTCHA configuration for your client.
      */
     public GetAttackProtectionCaptchaResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
     public UpdateAttackProtectionCaptchaResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
     public UpdateAttackProtectionCaptchaResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
     public UpdateAttackProtectionCaptchaResponseContent update(UpdateAttackProtectionCaptchaRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
-    public UpdateAttackProtectionCaptchaResponseContent update(
-            UpdateAttackProtectionCaptchaRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateAttackProtectionCaptchaResponseContent update(UpdateAttackProtectionCaptchaRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -18,7 +18,9 @@ public final class Logger {
     private static final Logger DEFAULT = new Logger(LogLevel.INFO, new ConsoleLogger(), true);
 
     private final LogLevel level;
+
     private final ILogger logger;
+
     private final boolean silent;
 
     public Logger(LogLevel level, ILogger logger, boolean silent) {
@@ -31,24 +33,21 @@ public final class Logger {
      * Returns a default silent logger (no output).
      */
     public static Logger getDefault() {
-        return DEFAULT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a Logger from a {@link LogConfig}. If config is {@code null}, returns the default silent logger.
      */
     public static Logger from(LogConfig config) {
-        if (config == null) {
-            return DEFAULT;
-        }
-        return new Logger(config.level(), config.logger(), config.silent());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a Logger from an {@code Optional<LogConfig>}. If empty, returns the default silent logger.
      */
     public static Logger from(java.util.Optional<LogConfig> config) {
-        return config.map(Logger::from).orElse(DEFAULT);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean shouldLog(LogLevel messageLevel) {
@@ -56,42 +55,34 @@ public final class Logger {
     }
 
     public boolean isDebug() {
-        return shouldLog(LogLevel.DEBUG);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isInfo() {
-        return shouldLog(LogLevel.INFO);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isWarn() {
-        return shouldLog(LogLevel.WARN);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isError() {
-        return shouldLog(LogLevel.ERROR);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void debug(String message) {
-        if (isDebug()) {
-            logger.debug(message);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void info(String message) {
-        if (isInfo()) {
-            logger.info(message);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void warn(String message) {
-        if (isWarn()) {
-            logger.warn(message);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void error(String message) {
-        if (isError()) {
-            logger.error(message);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

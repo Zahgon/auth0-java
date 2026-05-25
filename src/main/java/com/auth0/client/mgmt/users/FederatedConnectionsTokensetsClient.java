@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.FederatedConnectionTokenSet;
 import java.util.List;
 
 public class FederatedConnectionsTokensetsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawFederatedConnectionsTokensetsClient rawClient;
@@ -22,28 +23,28 @@ public class FederatedConnectionsTokensetsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawFederatedConnectionsTokensetsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List active federated connections tokensets for a provided user
      */
     public List<FederatedConnectionTokenSet> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List active federated connections tokensets for a provided user
      */
     public List<FederatedConnectionTokenSet> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String tokensetId) {
-        this.rawClient.delete(id, tokensetId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String tokensetId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, tokensetId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

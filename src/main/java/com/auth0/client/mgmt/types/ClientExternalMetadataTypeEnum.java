@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientExternalMetadataTypeEnum {
+
     public static final ClientExternalMetadataTypeEnum CIMD = new ClientExternalMetadataTypeEnum(Value.CIMD, "cimd");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class ClientExternalMetadataTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientExternalMetadataTypeEnum
-                        && this.string.equals(((ClientExternalMetadataTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CIMD:
-                return visitor.visitCimd();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientExternalMetadataTypeEnum valueOf(String value) {
-        switch (value) {
-            case "cimd":
-                return CIMD;
-            default:
-                return new ClientExternalMetadataTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CIMD,
 
-        UNKNOWN
+        CIMD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCimd();
 
         T visitUnknown(String unknownType);

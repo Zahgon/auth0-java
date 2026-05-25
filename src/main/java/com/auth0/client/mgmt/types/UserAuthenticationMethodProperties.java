@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserAuthenticationMethodProperties.Builder.class)
 public final class UserAuthenticationMethodProperties {
+
     private final Optional<UserAuthenticationMethodPropertiesEnum> type;
 
     private final Optional<String> id;
 
     private final Map<String, Object> additionalProperties;
 
-    private UserAuthenticationMethodProperties(
-            Optional<UserAuthenticationMethodPropertiesEnum> type,
-            Optional<String> id,
-            Map<String, Object> additionalProperties) {
+    private UserAuthenticationMethodProperties(Optional<UserAuthenticationMethodPropertiesEnum> type, Optional<String> id, Map<String, Object> additionalProperties) {
         this.type = type;
         this.id = id;
         this.additionalProperties = additionalProperties;
@@ -37,24 +35,22 @@ public final class UserAuthenticationMethodProperties {
 
     @JsonProperty("type")
     public Optional<UserAuthenticationMethodPropertiesEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserAuthenticationMethodProperties
-                && equalTo((UserAuthenticationMethodProperties) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserAuthenticationMethodProperties other) {
@@ -63,20 +59,21 @@ public final class UserAuthenticationMethodProperties {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.id);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UserAuthenticationMethodPropertiesEnum> type = Optional.empty();
 
         private Optional<String> id = Optional.empty();
@@ -84,48 +81,41 @@ public final class UserAuthenticationMethodProperties {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UserAuthenticationMethodProperties other) {
-            type(other.getType());
-            id(other.getId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<UserAuthenticationMethodPropertiesEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(UserAuthenticationMethodPropertiesEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UserAuthenticationMethodProperties build() {
-            return new UserAuthenticationMethodProperties(type, id, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

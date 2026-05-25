@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionTwilioSendSmsParams.Builder.class)
 public final class FlowActionTwilioSendSmsParams {
+
     private final String connectionId;
 
     private final String from;
@@ -29,8 +30,7 @@ public final class FlowActionTwilioSendSmsParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionTwilioSendSmsParams(
-            String connectionId, String from, String to, String message, Map<String, Object> additionalProperties) {
+    private FlowActionTwilioSendSmsParams(String connectionId, String from, String to, String message, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.from = from;
         this.to = to;
@@ -40,75 +40,76 @@ public final class FlowActionTwilioSendSmsParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("from")
     public String getFrom() {
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("to")
     public String getTo() {
-        return to;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("message")
     public String getMessage() {
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionTwilioSendSmsParams && equalTo((FlowActionTwilioSendSmsParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionTwilioSendSmsParams other) {
-        return connectionId.equals(other.connectionId)
-                && from.equals(other.from)
-                && to.equals(other.to)
-                && message.equals(other.message);
+        return connectionId.equals(other.connectionId) && from.equals(other.from) && to.equals(other.to) && message.equals(other.message);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.from, this.to, this.message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         FromStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionTwilioSendSmsParams other);
     }
 
     public interface FromStage {
+
         ToStage from(@NotNull String from);
     }
 
     public interface ToStage {
+
         MessageStage to(@NotNull String to);
     }
 
     public interface MessageStage {
+
         _FinalStage message(@NotNull String message);
     }
 
     public interface _FinalStage {
+
         FlowActionTwilioSendSmsParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -118,6 +119,7 @@ public final class FlowActionTwilioSendSmsParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, FromStage, ToStage, MessageStage, _FinalStage {
+
         private String connectionId;
 
         private String from;
@@ -129,60 +131,51 @@ public final class FlowActionTwilioSendSmsParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionTwilioSendSmsParams other) {
-            connectionId(other.getConnectionId());
-            from(other.getFrom());
-            to(other.getTo());
-            message(other.getMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public FromStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("from")
         public ToStage from(@NotNull String from) {
-            this.from = Objects.requireNonNull(from, "from must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("to")
         public MessageStage to(@NotNull String to) {
-            this.to = Objects.requireNonNull(to, "to must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("message")
         public _FinalStage message(@NotNull String message) {
-            this.message = Objects.requireNonNull(message, "message must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionTwilioSendSmsParams build() {
-            return new FlowActionTwilioSendSmsParams(connectionId, from, to, message, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

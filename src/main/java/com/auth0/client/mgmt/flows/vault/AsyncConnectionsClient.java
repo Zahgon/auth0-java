@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateFlowsVaultConnectionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawConnectionsClient rawClient;
@@ -29,69 +30,62 @@ public class AsyncConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list(
-            ListFlowsVaultConnectionsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list(ListFlowsVaultConnectionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list(
-            ListFlowsVaultConnectionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<FlowsVaultConnectionSummary>> list(ListFlowsVaultConnectionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateFlowsVaultConnectionResponseContent> create(
-            CreateFlowsVaultConnectionRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateFlowsVaultConnectionResponseContent> create(CreateFlowsVaultConnectionRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateFlowsVaultConnectionResponseContent> create(
-            CreateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateFlowsVaultConnectionResponseContent> create(CreateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetFlowsVaultConnectionResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetFlowsVaultConnectionResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(
-            String id, UpdateFlowsVaultConnectionRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(String id, UpdateFlowsVaultConnectionRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(
-            String id, UpdateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateFlowsVaultConnectionResponseContent> update(String id, UpdateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

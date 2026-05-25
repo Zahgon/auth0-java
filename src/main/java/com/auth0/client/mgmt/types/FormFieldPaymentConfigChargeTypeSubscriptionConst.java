@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldPaymentConfigChargeTypeSubscriptionConst {
-    public static final FormFieldPaymentConfigChargeTypeSubscriptionConst SUBSCRIPTION =
-            new FormFieldPaymentConfigChargeTypeSubscriptionConst(Value.SUBSCRIPTION, "SUBSCRIPTION");
+
+    public static final FormFieldPaymentConfigChargeTypeSubscriptionConst SUBSCRIPTION = new FormFieldPaymentConfigChargeTypeSubscriptionConst(Value.SUBSCRIPTION, "SUBSCRIPTION");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormFieldPaymentConfigChargeTypeSubscriptionConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldPaymentConfigChargeTypeSubscriptionConst
-                        && this.string.equals(((FormFieldPaymentConfigChargeTypeSubscriptionConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SUBSCRIPTION:
-                return visitor.visitSubscription();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldPaymentConfigChargeTypeSubscriptionConst valueOf(String value) {
-        switch (value) {
-            case "SUBSCRIPTION":
-                return SUBSCRIPTION;
-            default:
-                return new FormFieldPaymentConfigChargeTypeSubscriptionConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SUBSCRIPTION,
 
-        UNKNOWN
+        SUBSCRIPTION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSubscription();
 
         T visitUnknown(String unknownType);

@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class PhoneClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<ProvidersClient> providersClient;
@@ -21,10 +22,10 @@ public class PhoneClient {
     }
 
     public ProvidersClient providers() {
-        return this.providersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TemplatesClient templates() {
-        return this.templatesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

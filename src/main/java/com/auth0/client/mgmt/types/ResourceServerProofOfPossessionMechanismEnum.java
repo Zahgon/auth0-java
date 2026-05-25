@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerProofOfPossessionMechanismEnum {
-    public static final ResourceServerProofOfPossessionMechanismEnum DPOP =
-            new ResourceServerProofOfPossessionMechanismEnum(Value.DPOP, "dpop");
 
-    public static final ResourceServerProofOfPossessionMechanismEnum MTLS =
-            new ResourceServerProofOfPossessionMechanismEnum(Value.MTLS, "mtls");
+    public static final ResourceServerProofOfPossessionMechanismEnum DPOP = new ResourceServerProofOfPossessionMechanismEnum(Value.DPOP, "dpop");
+
+    public static final ResourceServerProofOfPossessionMechanismEnum MTLS = new ResourceServerProofOfPossessionMechanismEnum(Value.MTLS, "mtls");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ResourceServerProofOfPossessionMechanismEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerProofOfPossessionMechanismEnum
-                        && this.string.equals(((ResourceServerProofOfPossessionMechanismEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DPOP:
-                return visitor.visitDpop();
-            case MTLS:
-                return visitor.visitMtls();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerProofOfPossessionMechanismEnum valueOf(String value) {
-        switch (value) {
-            case "dpop":
-                return DPOP;
-            case "mtls":
-                return MTLS;
-            default:
-                return new ResourceServerProofOfPossessionMechanismEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MTLS,
 
-        DPOP,
-
-        UNKNOWN
+        MTLS, DPOP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMtls();
 
         T visitDpop();

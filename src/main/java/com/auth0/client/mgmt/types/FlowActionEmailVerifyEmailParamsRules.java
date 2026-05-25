@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionEmailVerifyEmailParamsRules.Builder.class)
 public final class FlowActionEmailVerifyEmailParamsRules {
+
     private final Optional<Boolean> requireMxRecord;
 
     private final Optional<Boolean> blockAliases;
@@ -35,14 +36,7 @@ public final class FlowActionEmailVerifyEmailParamsRules {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionEmailVerifyEmailParamsRules(
-            Optional<Boolean> requireMxRecord,
-            Optional<Boolean> blockAliases,
-            Optional<Boolean> blockFreeEmails,
-            Optional<Boolean> blockDisposableEmails,
-            Optional<List<String>> blocklist,
-            Optional<List<String>> allowlist,
-            Map<String, Object> additionalProperties) {
+    private FlowActionEmailVerifyEmailParamsRules(Optional<Boolean> requireMxRecord, Optional<Boolean> blockAliases, Optional<Boolean> blockFreeEmails, Optional<Boolean> blockDisposableEmails, Optional<List<String>> blocklist, Optional<List<String>> allowlist, Map<String, Object> additionalProperties) {
         this.requireMxRecord = requireMxRecord;
         this.blockAliases = blockAliases;
         this.blockFreeEmails = blockFreeEmails;
@@ -54,77 +48,65 @@ public final class FlowActionEmailVerifyEmailParamsRules {
 
     @JsonProperty("require_mx_record")
     public Optional<Boolean> getRequireMxRecord() {
-        return requireMxRecord;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("block_aliases")
     public Optional<Boolean> getBlockAliases() {
-        return blockAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("block_free_emails")
     public Optional<Boolean> getBlockFreeEmails() {
-        return blockFreeEmails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("block_disposable_emails")
     public Optional<Boolean> getBlockDisposableEmails() {
-        return blockDisposableEmails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("blocklist")
     public Optional<List<String>> getBlocklist() {
-        return blocklist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allowlist")
     public Optional<List<String>> getAllowlist() {
-        return allowlist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionEmailVerifyEmailParamsRules
-                && equalTo((FlowActionEmailVerifyEmailParamsRules) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionEmailVerifyEmailParamsRules other) {
-        return requireMxRecord.equals(other.requireMxRecord)
-                && blockAliases.equals(other.blockAliases)
-                && blockFreeEmails.equals(other.blockFreeEmails)
-                && blockDisposableEmails.equals(other.blockDisposableEmails)
-                && blocklist.equals(other.blocklist)
-                && allowlist.equals(other.allowlist);
+        return requireMxRecord.equals(other.requireMxRecord) && blockAliases.equals(other.blockAliases) && blockFreeEmails.equals(other.blockFreeEmails) && blockDisposableEmails.equals(other.blockDisposableEmails) && blocklist.equals(other.blocklist) && allowlist.equals(other.allowlist);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.requireMxRecord,
-                this.blockAliases,
-                this.blockFreeEmails,
-                this.blockDisposableEmails,
-                this.blocklist,
-                this.allowlist);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> requireMxRecord = Optional.empty();
 
         private Optional<Boolean> blockAliases = Optional.empty();
@@ -140,103 +122,77 @@ public final class FlowActionEmailVerifyEmailParamsRules {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionEmailVerifyEmailParamsRules other) {
-            requireMxRecord(other.getRequireMxRecord());
-            blockAliases(other.getBlockAliases());
-            blockFreeEmails(other.getBlockFreeEmails());
-            blockDisposableEmails(other.getBlockDisposableEmails());
-            blocklist(other.getBlocklist());
-            allowlist(other.getAllowlist());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "require_mx_record", nulls = Nulls.SKIP)
         public Builder requireMxRecord(Optional<Boolean> requireMxRecord) {
-            this.requireMxRecord = requireMxRecord;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requireMxRecord(Boolean requireMxRecord) {
-            this.requireMxRecord = Optional.ofNullable(requireMxRecord);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "block_aliases", nulls = Nulls.SKIP)
         public Builder blockAliases(Optional<Boolean> blockAliases) {
-            this.blockAliases = blockAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blockAliases(Boolean blockAliases) {
-            this.blockAliases = Optional.ofNullable(blockAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "block_free_emails", nulls = Nulls.SKIP)
         public Builder blockFreeEmails(Optional<Boolean> blockFreeEmails) {
-            this.blockFreeEmails = blockFreeEmails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blockFreeEmails(Boolean blockFreeEmails) {
-            this.blockFreeEmails = Optional.ofNullable(blockFreeEmails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "block_disposable_emails", nulls = Nulls.SKIP)
         public Builder blockDisposableEmails(Optional<Boolean> blockDisposableEmails) {
-            this.blockDisposableEmails = blockDisposableEmails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blockDisposableEmails(Boolean blockDisposableEmails) {
-            this.blockDisposableEmails = Optional.ofNullable(blockDisposableEmails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "blocklist", nulls = Nulls.SKIP)
         public Builder blocklist(Optional<List<String>> blocklist) {
-            this.blocklist = blocklist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blocklist(List<String> blocklist) {
-            this.blocklist = Optional.ofNullable(blocklist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "allowlist", nulls = Nulls.SKIP)
         public Builder allowlist(Optional<List<String>> allowlist) {
-            this.allowlist = allowlist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowlist(List<String> allowlist) {
-            this.allowlist = Optional.ofNullable(allowlist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionEmailVerifyEmailParamsRules build() {
-            return new FlowActionEmailVerifyEmailParamsRules(
-                    requireMxRecord,
-                    blockAliases,
-                    blockFreeEmails,
-                    blockDisposableEmails,
-                    blocklist,
-                    allowlist,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

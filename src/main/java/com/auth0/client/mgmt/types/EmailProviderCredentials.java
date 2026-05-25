@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentials.Builder.class)
 public final class EmailProviderCredentials {
+
     private final Optional<String> apiUser;
 
     private final Optional<String> region;
@@ -32,13 +33,7 @@ public final class EmailProviderCredentials {
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailProviderCredentials(
-            Optional<String> apiUser,
-            Optional<String> region,
-            Optional<String> smtpHost,
-            Optional<Integer> smtpPort,
-            Optional<String> smtpUser,
-            Map<String, Object> additionalProperties) {
+    private EmailProviderCredentials(Optional<String> apiUser, Optional<String> region, Optional<String> smtpHost, Optional<Integer> smtpPort, Optional<String> smtpUser, Map<String, Object> additionalProperties) {
         this.apiUser = apiUser;
         this.region = region;
         this.smtpHost = smtpHost;
@@ -52,7 +47,7 @@ public final class EmailProviderCredentials {
      */
     @JsonProperty("api_user")
     public Optional<String> getApiUser() {
-        return apiUser;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,7 +55,7 @@ public final class EmailProviderCredentials {
      */
     @JsonProperty("region")
     public Optional<String> getRegion() {
-        return region;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +63,7 @@ public final class EmailProviderCredentials {
      */
     @JsonProperty("smtp_host")
     public Optional<String> getSmtpHost() {
-        return smtpHost;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +71,7 @@ public final class EmailProviderCredentials {
      */
     @JsonProperty("smtp_port")
     public Optional<Integer> getSmtpPort() {
-        return smtpPort;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,44 +79,40 @@ public final class EmailProviderCredentials {
      */
     @JsonProperty("smtp_user")
     public Optional<String> getSmtpUser() {
-        return smtpUser;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentials && equalTo((EmailProviderCredentials) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentials other) {
-        return apiUser.equals(other.apiUser)
-                && region.equals(other.region)
-                && smtpHost.equals(other.smtpHost)
-                && smtpPort.equals(other.smtpPort)
-                && smtpUser.equals(other.smtpUser);
+        return apiUser.equals(other.apiUser) && region.equals(other.region) && smtpHost.equals(other.smtpHost) && smtpPort.equals(other.smtpPort) && smtpUser.equals(other.smtpUser);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.apiUser, this.region, this.smtpHost, this.smtpPort, this.smtpUser);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> apiUser = Optional.empty();
 
         private Optional<String> region = Optional.empty();
@@ -135,15 +126,11 @@ public final class EmailProviderCredentials {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailProviderCredentials other) {
-            apiUser(other.getApiUser());
-            region(other.getRegion());
-            smtpHost(other.getSmtpHost());
-            smtpPort(other.getSmtpPort());
-            smtpUser(other.getSmtpUser());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,13 +138,11 @@ public final class EmailProviderCredentials {
          */
         @JsonSetter(value = "api_user", nulls = Nulls.SKIP)
         public Builder apiUser(Optional<String> apiUser) {
-            this.apiUser = apiUser;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiUser(String apiUser) {
-            this.apiUser = Optional.ofNullable(apiUser);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +150,11 @@ public final class EmailProviderCredentials {
          */
         @JsonSetter(value = "region", nulls = Nulls.SKIP)
         public Builder region(Optional<String> region) {
-            this.region = region;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder region(String region) {
-            this.region = Optional.ofNullable(region);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,13 +162,11 @@ public final class EmailProviderCredentials {
          */
         @JsonSetter(value = "smtp_host", nulls = Nulls.SKIP)
         public Builder smtpHost(Optional<String> smtpHost) {
-            this.smtpHost = smtpHost;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder smtpHost(String smtpHost) {
-            this.smtpHost = Optional.ofNullable(smtpHost);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -193,13 +174,11 @@ public final class EmailProviderCredentials {
          */
         @JsonSetter(value = "smtp_port", nulls = Nulls.SKIP)
         public Builder smtpPort(Optional<Integer> smtpPort) {
-            this.smtpPort = smtpPort;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder smtpPort(Integer smtpPort) {
-            this.smtpPort = Optional.ofNullable(smtpPort);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,27 +186,23 @@ public final class EmailProviderCredentials {
          */
         @JsonSetter(value = "smtp_user", nulls = Nulls.SKIP)
         public Builder smtpUser(Optional<String> smtpUser) {
-            this.smtpUser = smtpUser;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder smtpUser(String smtpUser) {
-            this.smtpUser = Optional.ofNullable(smtpUser);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailProviderCredentials build() {
-            return new EmailProviderCredentials(apiUser, region, smtpHost, smtpPort, smtpUser, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

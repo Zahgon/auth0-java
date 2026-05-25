@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RefreshTokenResponseContent.Builder.class)
 public final class RefreshTokenResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> userId;
@@ -50,20 +51,7 @@ public final class RefreshTokenResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private RefreshTokenResponseContent(
-            Optional<String> id,
-            Optional<String> userId,
-            Optional<RefreshTokenDate> createdAt,
-            Optional<RefreshTokenDate> idleExpiresAt,
-            Optional<RefreshTokenDate> expiresAt,
-            Optional<RefreshTokenDevice> device,
-            Optional<String> clientId,
-            OptionalNullable<String> sessionId,
-            Optional<Boolean> rotating,
-            Optional<List<RefreshTokenResourceServer>> resourceServers,
-            OptionalNullable<Map<String, Object>> refreshTokenMetadata,
-            Optional<RefreshTokenDate> lastExchangedAt,
-            Map<String, Object> additionalProperties) {
+    private RefreshTokenResponseContent(Optional<String> id, Optional<String> userId, Optional<RefreshTokenDate> createdAt, Optional<RefreshTokenDate> idleExpiresAt, Optional<RefreshTokenDate> expiresAt, Optional<RefreshTokenDevice> device, Optional<String> clientId, OptionalNullable<String> sessionId, Optional<Boolean> rotating, Optional<List<RefreshTokenResourceServer>> resourceServers, OptionalNullable<Map<String, Object>> refreshTokenMetadata, Optional<RefreshTokenDate> lastExchangedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.userId = userId;
         this.createdAt = createdAt;
@@ -84,7 +72,7 @@ public final class RefreshTokenResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,27 +80,27 @@ public final class RefreshTokenResponseContent {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("created_at")
     public Optional<RefreshTokenDate> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("idle_expires_at")
     public Optional<RefreshTokenDate> getIdleExpiresAt() {
-        return idleExpiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("expires_at")
     public Optional<RefreshTokenDate> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("device")
     public Optional<RefreshTokenDevice> getDevice() {
-        return device;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,16 +108,13 @@ public final class RefreshTokenResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("session_id")
     public OptionalNullable<String> getSessionId() {
-        if (sessionId == null) {
-            return OptionalNullable.absent();
-        }
-        return sessionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -137,7 +122,7 @@ public final class RefreshTokenResponseContent {
      */
     @JsonProperty("rotating")
     public Optional<Boolean> getRotating() {
-        return rotating;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -145,21 +130,18 @@ public final class RefreshTokenResponseContent {
      */
     @JsonProperty("resource_servers")
     public Optional<List<RefreshTokenResourceServer>> getResourceServers() {
-        return resourceServers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("refresh_token_metadata")
     public OptionalNullable<Map<String, Object>> getRefreshTokenMetadata() {
-        if (refreshTokenMetadata == null) {
-            return OptionalNullable.absent();
-        }
-        return refreshTokenMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("last_exchanged_at")
     public Optional<RefreshTokenDate> getLastExchangedAt() {
-        return lastExchangedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -176,58 +158,35 @@ public final class RefreshTokenResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RefreshTokenResponseContent && equalTo((RefreshTokenResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RefreshTokenResponseContent other) {
-        return id.equals(other.id)
-                && userId.equals(other.userId)
-                && createdAt.equals(other.createdAt)
-                && idleExpiresAt.equals(other.idleExpiresAt)
-                && expiresAt.equals(other.expiresAt)
-                && device.equals(other.device)
-                && clientId.equals(other.clientId)
-                && sessionId.equals(other.sessionId)
-                && rotating.equals(other.rotating)
-                && resourceServers.equals(other.resourceServers)
-                && refreshTokenMetadata.equals(other.refreshTokenMetadata)
-                && lastExchangedAt.equals(other.lastExchangedAt);
+        return id.equals(other.id) && userId.equals(other.userId) && createdAt.equals(other.createdAt) && idleExpiresAt.equals(other.idleExpiresAt) && expiresAt.equals(other.expiresAt) && device.equals(other.device) && clientId.equals(other.clientId) && sessionId.equals(other.sessionId) && rotating.equals(other.rotating) && resourceServers.equals(other.resourceServers) && refreshTokenMetadata.equals(other.refreshTokenMetadata) && lastExchangedAt.equals(other.lastExchangedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.userId,
-                this.createdAt,
-                this.idleExpiresAt,
-                this.expiresAt,
-                this.device,
-                this.clientId,
-                this.sessionId,
-                this.rotating,
-                this.resourceServers,
-                this.refreshTokenMetadata,
-                this.lastExchangedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> userId = Optional.empty();
@@ -255,22 +214,11 @@ public final class RefreshTokenResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RefreshTokenResponseContent other) {
-            id(other.getId());
-            userId(other.getUserId());
-            createdAt(other.getCreatedAt());
-            idleExpiresAt(other.getIdleExpiresAt());
-            expiresAt(other.getExpiresAt());
-            device(other.getDevice());
-            clientId(other.getClientId());
-            sessionId(other.getSessionId());
-            rotating(other.getRotating());
-            resourceServers(other.getResourceServers());
-            refreshTokenMetadata(other.getRefreshTokenMetadata());
-            lastExchangedAt(other.getLastExchangedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -278,13 +226,11 @@ public final class RefreshTokenResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -292,57 +238,47 @@ public final class RefreshTokenResponseContent {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<RefreshTokenDate> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(RefreshTokenDate createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "idle_expires_at", nulls = Nulls.SKIP)
         public Builder idleExpiresAt(Optional<RefreshTokenDate> idleExpiresAt) {
-            this.idleExpiresAt = idleExpiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idleExpiresAt(RefreshTokenDate idleExpiresAt) {
-            this.idleExpiresAt = Optional.ofNullable(idleExpiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(Optional<RefreshTokenDate> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(RefreshTokenDate expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "device", nulls = Nulls.SKIP)
         public Builder device(Optional<RefreshTokenDevice> device) {
-            this.device = device;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder device(RefreshTokenDevice device) {
-            this.device = Optional.ofNullable(device);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -350,44 +286,28 @@ public final class RefreshTokenResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "session_id", nulls = Nulls.SKIP)
         public Builder sessionId(@Nullable OptionalNullable<String> sessionId) {
-            this.sessionId = sessionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionId(String sessionId) {
-            this.sessionId = OptionalNullable.of(sessionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionId(Optional<String> sessionId) {
-            if (sessionId.isPresent()) {
-                this.sessionId = OptionalNullable.of(sessionId.get());
-            } else {
-                this.sessionId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionId(com.auth0.client.mgmt.core.Nullable<String> sessionId) {
-            if (sessionId.isNull()) {
-                this.sessionId = OptionalNullable.ofNull();
-            } else if (sessionId.isEmpty()) {
-                this.sessionId = OptionalNullable.absent();
-            } else {
-                this.sessionId = OptionalNullable.of(sessionId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -395,13 +315,11 @@ public final class RefreshTokenResponseContent {
          */
         @JsonSetter(value = "rotating", nulls = Nulls.SKIP)
         public Builder rotating(Optional<Boolean> rotating) {
-            this.rotating = rotating;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rotating(Boolean rotating) {
-            this.rotating = Optional.ofNullable(rotating);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -409,83 +327,49 @@ public final class RefreshTokenResponseContent {
          */
         @JsonSetter(value = "resource_servers", nulls = Nulls.SKIP)
         public Builder resourceServers(Optional<List<RefreshTokenResourceServer>> resourceServers) {
-            this.resourceServers = resourceServers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resourceServers(List<RefreshTokenResourceServer> resourceServers) {
-            this.resourceServers = Optional.ofNullable(resourceServers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "refresh_token_metadata", nulls = Nulls.SKIP)
         public Builder refreshTokenMetadata(@Nullable OptionalNullable<Map<String, Object>> refreshTokenMetadata) {
-            this.refreshTokenMetadata = refreshTokenMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshTokenMetadata(Map<String, Object> refreshTokenMetadata) {
-            this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshTokenMetadata(Optional<Map<String, Object>> refreshTokenMetadata) {
-            if (refreshTokenMetadata.isPresent()) {
-                this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata.get());
-            } else {
-                this.refreshTokenMetadata = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder refreshTokenMetadata(
-                com.auth0.client.mgmt.core.Nullable<Map<String, Object>> refreshTokenMetadata) {
-            if (refreshTokenMetadata.isNull()) {
-                this.refreshTokenMetadata = OptionalNullable.ofNull();
-            } else if (refreshTokenMetadata.isEmpty()) {
-                this.refreshTokenMetadata = OptionalNullable.absent();
-            } else {
-                this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata.get());
-            }
-            return this;
+        public Builder refreshTokenMetadata(com.auth0.client.mgmt.core.Nullable<Map<String, Object>> refreshTokenMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "last_exchanged_at", nulls = Nulls.SKIP)
         public Builder lastExchangedAt(Optional<RefreshTokenDate> lastExchangedAt) {
-            this.lastExchangedAt = lastExchangedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastExchangedAt(RefreshTokenDate lastExchangedAt) {
-            this.lastExchangedAt = Optional.ofNullable(lastExchangedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RefreshTokenResponseContent build() {
-            return new RefreshTokenResponseContent(
-                    id,
-                    userId,
-                    createdAt,
-                    idleExpiresAt,
-                    expiresAt,
-                    device,
-                    clientId,
-                    sessionId,
-                    rotating,
-                    resourceServers,
-                    refreshTokenMetadata,
-                    lastExchangedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

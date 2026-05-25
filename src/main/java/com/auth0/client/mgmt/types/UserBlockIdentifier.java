@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserBlockIdentifier.Builder.class)
 public final class UserBlockIdentifier {
+
     private final Optional<String> identifier;
 
     private final Optional<String> ip;
@@ -28,11 +29,7 @@ public final class UserBlockIdentifier {
 
     private final Map<String, Object> additionalProperties;
 
-    private UserBlockIdentifier(
-            Optional<String> identifier,
-            Optional<String> ip,
-            Optional<String> connection,
-            Map<String, Object> additionalProperties) {
+    private UserBlockIdentifier(Optional<String> identifier, Optional<String> ip, Optional<String> connection, Map<String, Object> additionalProperties) {
         this.identifier = identifier;
         this.ip = ip;
         this.connection = connection;
@@ -44,7 +41,7 @@ public final class UserBlockIdentifier {
      */
     @JsonProperty("identifier")
     public Optional<String> getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class UserBlockIdentifier {
      */
     @JsonProperty("ip")
     public Optional<String> getIp() {
-        return ip;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,18 +57,17 @@ public final class UserBlockIdentifier {
      */
     @JsonProperty("connection")
     public Optional<String> getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserBlockIdentifier && equalTo((UserBlockIdentifier) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserBlockIdentifier other) {
@@ -80,20 +76,21 @@ public final class UserBlockIdentifier {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.identifier, this.ip, this.connection);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> identifier = Optional.empty();
 
         private Optional<String> ip = Optional.empty();
@@ -103,13 +100,11 @@ public final class UserBlockIdentifier {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UserBlockIdentifier other) {
-            identifier(other.getIdentifier());
-            ip(other.getIp());
-            connection(other.getConnection());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -117,13 +112,11 @@ public final class UserBlockIdentifier {
          */
         @JsonSetter(value = "identifier", nulls = Nulls.SKIP)
         public Builder identifier(Optional<String> identifier) {
-            this.identifier = identifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Optional.ofNullable(identifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +124,11 @@ public final class UserBlockIdentifier {
          */
         @JsonSetter(value = "ip", nulls = Nulls.SKIP)
         public Builder ip(Optional<String> ip) {
-            this.ip = ip;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ip(String ip) {
-            this.ip = Optional.ofNullable(ip);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,27 +136,23 @@ public final class UserBlockIdentifier {
          */
         @JsonSetter(value = "connection", nulls = Nulls.SKIP)
         public Builder connection(Optional<String> connection) {
-            this.connection = connection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connection(String connection) {
-            this.connection = Optional.ofNullable(connection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UserBlockIdentifier build() {
-            return new UserBlockIdentifier(identifier, ip, connection, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

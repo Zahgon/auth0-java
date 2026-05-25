@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOrgConnectionRemovedCloudEvent.Builder.class)
 public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
+
     private final String specversion;
 
     private final EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type;
@@ -42,17 +43,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventOrgConnectionRemovedCloudEvent(
-            String specversion,
-            EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type,
-            String source,
-            String id,
-            OffsetDateTime time,
-            EventStreamCloudEventOrgConnectionRemovedData data,
-            String a0Tenant,
-            String a0Stream,
-            Optional<EventStreamCloudEventA0PurposeEnum> a0Purpose,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventOrgConnectionRemovedCloudEvent(String specversion, EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type, String source, String id, OffsetDateTime time, EventStreamCloudEventOrgConnectionRemovedData data, String a0Tenant, String a0Stream, Optional<EventStreamCloudEventA0PurposeEnum> a0Purpose, Map<String, Object> additionalProperties) {
         this.specversion = specversion;
         this.type = type;
         this.source = source;
@@ -70,12 +61,12 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("specversion")
     public String getSpecversion() {
-        return specversion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +74,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("source")
     public String getSource() {
-        return source;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +82,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,12 +90,12 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("time")
     public OffsetDateTime getTime() {
-        return time;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("data")
     public EventStreamCloudEventOrgConnectionRemovedData getData() {
-        return data;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,7 +103,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("a0tenant")
     public String getA0Tenant() {
-        return a0Tenant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,62 +111,44 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
      */
     @JsonProperty("a0stream")
     public String getA0Stream() {
-        return a0Stream;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("a0purpose")
     public Optional<EventStreamCloudEventA0PurposeEnum> getA0Purpose() {
-        return a0Purpose;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgConnectionRemovedCloudEvent
-                && equalTo((EventStreamCloudEventOrgConnectionRemovedCloudEvent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgConnectionRemovedCloudEvent other) {
-        return specversion.equals(other.specversion)
-                && type.equals(other.type)
-                && source.equals(other.source)
-                && id.equals(other.id)
-                && time.equals(other.time)
-                && data.equals(other.data)
-                && a0Tenant.equals(other.a0Tenant)
-                && a0Stream.equals(other.a0Stream)
-                && a0Purpose.equals(other.a0Purpose);
+        return specversion.equals(other.specversion) && type.equals(other.type) && source.equals(other.source) && id.equals(other.id) && time.equals(other.time) && data.equals(other.data) && a0Tenant.equals(other.a0Tenant) && a0Stream.equals(other.a0Stream) && a0Purpose.equals(other.a0Purpose);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.specversion,
-                this.type,
-                this.source,
-                this.id,
-                this.time,
-                this.data,
-                this.a0Tenant,
-                this.a0Stream,
-                this.a0Purpose);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SpecversionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SpecversionStage {
+
         /**
          * <p>The version of the CloudEvents specification which the event uses.</p>
          */
@@ -185,10 +158,12 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface TypeStage {
+
         SourceStage type(@NotNull EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type);
     }
 
     public interface SourceStage {
+
         /**
          * <p>The source of the event. This will take the form 'urn:auth0:&lt;tenant&gt;.&lt;domain&gt;'.</p>
          */
@@ -196,6 +171,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface IdStage {
+
         /**
          * <p>A unique identifier for the event.</p>
          */
@@ -203,6 +179,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface TimeStage {
+
         /**
          * <p>An ISO-8601 timestamp indicating when the event physically occurred.</p>
          */
@@ -210,10 +187,12 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface DataStage {
+
         A0TenantStage data(@NotNull EventStreamCloudEventOrgConnectionRemovedData data);
     }
 
     public interface A0TenantStage {
+
         /**
          * <p>The auth0 tenant ID to which the event is associated.</p>
          */
@@ -221,6 +200,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface A0StreamStage {
+
         /**
          * <p>The auth0 event stream ID of the stream the event was delivered on.</p>
          */
@@ -228,6 +208,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventOrgConnectionRemovedCloudEvent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -240,16 +221,8 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements SpecversionStage,
-                    TypeStage,
-                    SourceStage,
-                    IdStage,
-                    TimeStage,
-                    DataStage,
-                    A0TenantStage,
-                    A0StreamStage,
-                    _FinalStage {
+    public static final class Builder implements SpecversionStage, TypeStage, SourceStage, IdStage, TimeStage, DataStage, A0TenantStage, A0StreamStage, _FinalStage {
+
         private String specversion;
 
         private EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type;
@@ -271,20 +244,12 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventOrgConnectionRemovedCloudEvent other) {
-            specversion(other.getSpecversion());
-            type(other.getType());
-            source(other.getSource());
-            id(other.getId());
-            time(other.getTime());
-            data(other.getData());
-            a0Tenant(other.getA0Tenant());
-            a0Stream(other.getA0Stream());
-            a0Purpose(other.getA0Purpose());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,15 +260,13 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("specversion")
         public TypeStage specversion(@NotNull String specversion) {
-            this.specversion = Objects.requireNonNull(specversion, "specversion must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public SourceStage type(@NotNull EventStreamCloudEventOrgConnectionRemovedCloudEventTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -314,8 +277,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("source")
         public IdStage source(@NotNull String source) {
-            this.source = Objects.requireNonNull(source, "source must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -326,8 +288,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("id")
         public TimeStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -338,15 +299,13 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("time")
         public DataStage time(@NotNull OffsetDateTime time) {
-            this.time = Objects.requireNonNull(time, "time must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("data")
         public A0TenantStage data(@NotNull EventStreamCloudEventOrgConnectionRemovedData data) {
-            this.data = Objects.requireNonNull(data, "data must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -357,8 +316,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("a0tenant")
         public A0StreamStage a0Tenant(@NotNull String a0Tenant) {
-            this.a0Tenant = Objects.requireNonNull(a0Tenant, "a0Tenant must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -369,39 +327,33 @@ public final class EventStreamCloudEventOrgConnectionRemovedCloudEvent {
         @java.lang.Override
         @JsonSetter("a0stream")
         public _FinalStage a0Stream(@NotNull String a0Stream) {
-            this.a0Stream = Objects.requireNonNull(a0Stream, "a0Stream must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage a0Purpose(EventStreamCloudEventA0PurposeEnum a0Purpose) {
-            this.a0Purpose = Optional.ofNullable(a0Purpose);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "a0purpose", nulls = Nulls.SKIP)
         public _FinalStage a0Purpose(Optional<EventStreamCloudEventA0PurposeEnum> a0Purpose) {
-            this.a0Purpose = a0Purpose;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventOrgConnectionRemovedCloudEvent build() {
-            return new EventStreamCloudEventOrgConnectionRemovedCloudEvent(
-                    specversion, type, source, id, time, data, a0Tenant, a0Stream, a0Purpose, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

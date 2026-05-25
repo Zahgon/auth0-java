@@ -25,6 +25,7 @@ import com.auth0.client.mgmt.types.UpdateClientResponseContent;
 import java.util.function.Supplier;
 
 public class ClientsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawClientsClient rawClient;
@@ -44,7 +45,7 @@ public class ClientsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawClientsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +83,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public SyncPagingIterable<Client> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,7 +121,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public SyncPagingIterable<Client> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -158,7 +159,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public SyncPagingIterable<Client> list(ListClientsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -196,7 +197,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public SyncPagingIterable<Client> list(ListClientsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -216,7 +217,7 @@ public class ClientsClient {
      * <p><div class="alert alert-warning">SSO Integrations created via this endpoint will accept login requests and share user profile information.</div></p>
      */
     public CreateClientResponseContent create(CreateClientRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -236,7 +237,7 @@ public class ClientsClient {
      * <p><div class="alert alert-warning">SSO Integrations created via this endpoint will accept login requests and share user profile information.</div></p>
      */
     public CreateClientResponseContent create(CreateClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -245,7 +246,7 @@ public class ClientsClient {
      * This endpoint is useful for testing metadata URIs before creating CIMD clients.
      */
     public PreviewCimdMetadataResponseContent previewCimdMetadata(PreviewCimdMetadataRequestContent request) {
-        return this.rawClient.previewCimdMetadata(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -253,9 +254,8 @@ public class ClientsClient {
      * Returns the raw metadata and how it would be mapped to Auth0 client fields.
      * This endpoint is useful for testing metadata URIs before creating CIMD clients.
      */
-    public PreviewCimdMetadataResponseContent previewCimdMetadata(
-            PreviewCimdMetadataRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.previewCimdMetadata(request, requestOptions).body();
+    public PreviewCimdMetadataResponseContent previewCimdMetadata(PreviewCimdMetadataRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -272,7 +272,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public RegisterCimdClientResponseContent registerCimdClient(RegisterCimdClientRequestContent request) {
-        return this.rawClient.registerCimdClient(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -288,9 +288,8 @@ public class ClientsClient {
      *   <li>Enforces CIMD security policies (HTTPS-only, no shared secrets)</li>
      * </ul></p>
      */
-    public RegisterCimdClientResponseContent registerCimdClient(
-            RegisterCimdClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.registerCimdClient(request, requestOptions).body();
+    public RegisterCimdClientResponseContent registerCimdClient(RegisterCimdClientRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -327,7 +326,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public GetClientResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -364,7 +363,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public GetClientResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -401,7 +400,7 @@ public class ClientsClient {
      * </ul></p>
      */
     public GetClientResponseContent get(String id, GetClientRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -438,21 +437,21 @@ public class ClientsClient {
      * </ul></p>
      */
     public GetClientResponseContent get(String id, GetClientRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client and related configuration (rules, connections, etc).
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client and related configuration (rules, connections, etc).
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -468,7 +467,7 @@ public class ClientsClient {
      * </ul>
      */
     public UpdateClientResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -484,7 +483,7 @@ public class ClientsClient {
      * </ul>
      */
     public UpdateClientResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -500,7 +499,7 @@ public class ClientsClient {
      * </ul>
      */
     public UpdateClientResponseContent update(String id, UpdateClientRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -515,9 +514,8 @@ public class ClientsClient {
      * <li>To change a client's <code>is_first_party</code> property to <code>false</code>, the <code>organization_usage</code> and <code>organization_require_behavior</code> properties must be unset.</li>
      * </ul>
      */
-    public UpdateClientResponseContent update(
-            String id, UpdateClientRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateClientResponseContent update(String id, UpdateClientRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -526,7 +524,7 @@ public class ClientsClient {
      * <p>For more information, read <a href="https://www.auth0.com/docs/get-started/applications/rotate-client-secret">Rotate Client Secrets</a>.</p>
      */
     public RotateClientSecretResponseContent rotateSecret(String id) {
-        return this.rawClient.rotateSecret(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -535,14 +533,14 @@ public class ClientsClient {
      * <p>For more information, read <a href="https://www.auth0.com/docs/get-started/applications/rotate-client-secret">Rotate Client Secrets</a>.</p>
      */
     public RotateClientSecretResponseContent rotateSecret(String id, RequestOptions requestOptions) {
-        return this.rawClient.rotateSecret(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CredentialsClient credentials() {
-        return this.credentialsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

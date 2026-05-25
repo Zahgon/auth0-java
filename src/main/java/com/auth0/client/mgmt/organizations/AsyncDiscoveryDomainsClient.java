@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.UpdateOrganizationDiscoveryDomainResponseCont
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncDiscoveryDomainsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawDiscoveryDomainsClient rawClient;
@@ -30,7 +31,7 @@ public class AsyncDiscoveryDomainsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawDiscoveryDomainsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -38,68 +39,61 @@ public class AsyncDiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of all organization discovery domains associated with the specified organization.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of all organization discovery domains associated with the specified organization.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(
-            String id, ListOrganizationDiscoveryDomainsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(String id, ListOrganizationDiscoveryDomainsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve list of all organization discovery domains associated with the specified organization.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(
-            String id, ListOrganizationDiscoveryDomainsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationDiscoveryDomain>> list(String id, ListOrganizationDiscoveryDomainsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new discovery domain for an organization.
      */
-    public CompletableFuture<CreateOrganizationDiscoveryDomainResponseContent> create(
-            String id, CreateOrganizationDiscoveryDomainRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateOrganizationDiscoveryDomainResponseContent> create(String id, CreateOrganizationDiscoveryDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new discovery domain for an organization.
      */
-    public CompletableFuture<CreateOrganizationDiscoveryDomainResponseContent> create(
-            String id, CreateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateOrganizationDiscoveryDomainResponseContent> create(String id, CreateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single organization discovery domain specified by domain name.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<GetOrganizationDiscoveryDomainByNameResponseContent> getByName(
-            String id, String discoveryDomain) {
-        return this.rawClient.getByName(id, discoveryDomain).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationDiscoveryDomainByNameResponseContent> getByName(String id, String discoveryDomain) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single organization discovery domain specified by domain name.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<GetOrganizationDiscoveryDomainByNameResponseContent> getByName(
-            String id, String discoveryDomain, RequestOptions requestOptions) {
-        return this.rawClient.getByName(id, discoveryDomain, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationDiscoveryDomainByNameResponseContent> getByName(String id, String discoveryDomain, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,66 +101,56 @@ public class AsyncDiscoveryDomainsClient {
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
     public CompletableFuture<GetOrganizationDiscoveryDomainResponseContent> get(String id, String discoveryDomainId) {
-        return this.rawClient.get(id, discoveryDomainId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single organization discovery domain specified by ID.
      * This endpoint is subject to eventual consistency; newly created, updated, or deleted discovery domains may not immediately appear in the response.
      */
-    public CompletableFuture<GetOrganizationDiscoveryDomainResponseContent> get(
-            String id, String discoveryDomainId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, discoveryDomainId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationDiscoveryDomainResponseContent> get(String id, String discoveryDomainId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a discovery domain from an organization. This action cannot be undone.
      */
     public CompletableFuture<Void> delete(String id, String discoveryDomainId) {
-        return this.rawClient.delete(id, discoveryDomainId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a discovery domain from an organization. This action cannot be undone.
      */
     public CompletableFuture<Void> delete(String id, String discoveryDomainId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, discoveryDomainId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(
-            String id, String discoveryDomainId) {
-        return this.rawClient.update(id, discoveryDomainId).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(String id, String discoveryDomainId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(
-            String id, String discoveryDomainId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, discoveryDomainId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(String id, String discoveryDomainId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(
-            String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request) {
-        return this.rawClient.update(id, discoveryDomainId, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the verification status and/or use_for_organization_discovery for an organization discovery domain. The <code>status</code> field must be either <code>pending</code> or <code>verified</code>. The <code>use_for_organization_discovery</code> field can be <code>true</code> or <code>false</code> (default: <code>true</code>).
      */
-    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(
-            String id,
-            String discoveryDomainId,
-            UpdateOrganizationDiscoveryDomainRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient
-                .update(id, discoveryDomainId, request, requestOptions)
-                .thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationDiscoveryDomainResponseContent> update(String id, String discoveryDomainId, UpdateOrganizationDiscoveryDomainRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

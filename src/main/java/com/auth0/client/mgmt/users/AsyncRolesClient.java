@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.users.types.ListUserRolesRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRolesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRolesClient rawClient;
@@ -26,7 +27,7 @@ public class AsyncRolesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRolesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,7 +35,7 @@ public class AsyncRolesClient {
      * <p><b>Note</b>: This action retrieves all roles assigned to a user in the context of your whole tenant. To retrieve Organization-specific roles, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/get-organization-member-roles">Get user roles assigned to an Organization member</a>.</p>
      */
     public CompletableFuture<SyncPagingIterable<Role>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,7 +43,7 @@ public class AsyncRolesClient {
      * <p><b>Note</b>: This action retrieves all roles assigned to a user in the context of your whole tenant. To retrieve Organization-specific roles, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/get-organization-member-roles">Get user roles assigned to an Organization member</a>.</p>
      */
     public CompletableFuture<SyncPagingIterable<Role>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,16 +51,15 @@ public class AsyncRolesClient {
      * <p><b>Note</b>: This action retrieves all roles assigned to a user in the context of your whole tenant. To retrieve Organization-specific roles, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/get-organization-member-roles">Get user roles assigned to an Organization member</a>.</p>
      */
     public CompletableFuture<SyncPagingIterable<Role>> list(String id, ListUserRolesRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of all user roles currently assigned to a user.
      * <p><b>Note</b>: This action retrieves all roles assigned to a user in the context of your whole tenant. To retrieve Organization-specific roles, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/get-organization-member-roles">Get user roles assigned to an Organization member</a>.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Role>> list(
-            String id, ListUserRolesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Role>> list(String id, ListUserRolesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,16 +67,15 @@ public class AsyncRolesClient {
      * <p><b>Note</b>: New roles cannot be created through this action. Additionally, this action is used to assign roles to a user in the context of your whole tenant. To assign roles in the context of a specific Organization, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/post-organization-member-roles">Assign user roles to an Organization member</a>.</p>
      */
     public CompletableFuture<Void> assign(String id, AssignUserRolesRequestContent request) {
-        return this.rawClient.assign(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign one or more existing user roles to a user. For more information, review <a href="https://auth0.com/docs/manage-users/access-control/rbac">Role-Based Access Control</a>.
      * <p><b>Note</b>: New roles cannot be created through this action. Additionally, this action is used to assign roles to a user in the context of your whole tenant. To assign roles in the context of a specific Organization, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/post-organization-member-roles">Assign user roles to an Organization member</a>.</p>
      */
-    public CompletableFuture<Void> assign(
-            String id, AssignUserRolesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.assign(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> assign(String id, AssignUserRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,15 +83,14 @@ public class AsyncRolesClient {
      * <p><b>Note</b>: This action removes a role from a user in the context of your whole tenant. If you want to unassign a role from a user in the context of a specific Organization, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/delete-organization-member-roles">Delete user roles from an Organization member</a>.</p>
      */
     public CompletableFuture<Void> delete(String id, DeleteUserRolesRequestContent request) {
-        return this.rawClient.delete(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more specified user roles assigned to a user.
      * <p><b>Note</b>: This action removes a role from a user in the context of your whole tenant. If you want to unassign a role from a user in the context of a specific Organization, use the following endpoint: <a href="https://auth0.com/docs/api/management/v2/organizations/delete-organization-member-roles">Delete user roles from an Organization member</a>.</p>
      */
-    public CompletableFuture<Void> delete(
-            String id, DeleteUserRolesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> delete(String id, DeleteUserRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

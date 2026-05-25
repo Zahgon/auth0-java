@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdatePhoneTemplateRequestContent.Builder.class)
 public final class UpdatePhoneTemplateRequestContent {
+
     private final Optional<PartialPhoneTemplateContent> content;
 
     private final Optional<Boolean> disabled;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdatePhoneTemplateRequestContent(
-            Optional<PartialPhoneTemplateContent> content,
-            Optional<Boolean> disabled,
-            Map<String, Object> additionalProperties) {
+    private UpdatePhoneTemplateRequestContent(Optional<PartialPhoneTemplateContent> content, Optional<Boolean> disabled, Map<String, Object> additionalProperties) {
         this.content = content;
         this.disabled = disabled;
         this.additionalProperties = additionalProperties;
@@ -38,7 +36,7 @@ public final class UpdatePhoneTemplateRequestContent {
 
     @JsonProperty("content")
     public Optional<PartialPhoneTemplateContent> getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +44,17 @@ public final class UpdatePhoneTemplateRequestContent {
      */
     @JsonProperty("disabled")
     public Optional<Boolean> getDisabled() {
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdatePhoneTemplateRequestContent && equalTo((UpdatePhoneTemplateRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdatePhoneTemplateRequestContent other) {
@@ -66,20 +63,21 @@ public final class UpdatePhoneTemplateRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.content, this.disabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<PartialPhoneTemplateContent> content = Optional.empty();
 
         private Optional<Boolean> disabled = Optional.empty();
@@ -87,23 +85,20 @@ public final class UpdatePhoneTemplateRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdatePhoneTemplateRequestContent other) {
-            content(other.getContent());
-            disabled(other.getDisabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "content", nulls = Nulls.SKIP)
         public Builder content(Optional<PartialPhoneTemplateContent> content) {
-            this.content = content;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder content(PartialPhoneTemplateContent content) {
-            this.content = Optional.ofNullable(content);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -111,27 +106,23 @@ public final class UpdatePhoneTemplateRequestContent {
          */
         @JsonSetter(value = "disabled", nulls = Nulls.SKIP)
         public Builder disabled(Optional<Boolean> disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Optional.ofNullable(disabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdatePhoneTemplateRequestContent build() {
-            return new UpdatePhoneTemplateRequestContent(content, disabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

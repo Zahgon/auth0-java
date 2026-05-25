@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.UpdateUserAttributeProfileResponseContent;
 import com.auth0.client.mgmt.types.UserAttributeProfile;
 
 public class UserAttributeProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUserAttributeProfilesClient rawClient;
@@ -30,136 +31,132 @@ public class UserAttributeProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUserAttributeProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<UserAttributeProfile> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<UserAttributeProfile> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<UserAttributeProfile> list(ListUserAttributeProfileRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profiles. This endpoint supports Checkpoint pagination.
      */
-    public SyncPagingIterable<UserAttributeProfile> list(
-            ListUserAttributeProfileRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<UserAttributeProfile> list(ListUserAttributeProfileRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a User Attribute Profile
      */
     public CreateUserAttributeProfileResponseContent create(CreateUserAttributeProfileRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a User Attribute Profile
      */
-    public CreateUserAttributeProfileResponseContent create(
-            CreateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateUserAttributeProfileResponseContent create(CreateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profile Templates.
      */
     public ListUserAttributeProfileTemplateResponseContent listTemplates() {
-        return this.rawClient.listTemplates().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of User Attribute Profile Templates.
      */
     public ListUserAttributeProfileTemplateResponseContent listTemplates(RequestOptions requestOptions) {
-        return this.rawClient.listTemplates(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a User Attribute Profile Template.
      */
     public GetUserAttributeProfileTemplateResponseContent getTemplate(String id) {
-        return this.rawClient.getTemplate(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a User Attribute Profile Template.
      */
     public GetUserAttributeProfileTemplateResponseContent getTemplate(String id, RequestOptions requestOptions) {
-        return this.rawClient.getTemplate(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single User Attribute Profile specified by ID.
      */
     public GetUserAttributeProfileResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single User Attribute Profile specified by ID.
      */
     public GetUserAttributeProfileResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single User Attribute Profile specified by ID.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single User Attribute Profile specified by ID.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
     public UpdateUserAttributeProfileResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
     public UpdateUserAttributeProfileResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
-    public UpdateUserAttributeProfileResponseContent update(
-            String id, UpdateUserAttributeProfileRequestContent request) {
-        return this.rawClient.update(id, request).body();
+    public UpdateUserAttributeProfileResponseContent update(String id, UpdateUserAttributeProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific User attribute profile, such as name, user_id and user_attributes.
      */
-    public UpdateUserAttributeProfileResponseContent update(
-            String id, UpdateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateUserAttributeProfileResponseContent update(String id, UpdateUserAttributeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

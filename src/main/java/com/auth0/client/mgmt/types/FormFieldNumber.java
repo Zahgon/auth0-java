@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldNumber.Builder.class)
 public final class FormFieldNumber {
+
     private final String id;
 
     private final FormComponentCategoryFieldConst category;
@@ -39,16 +40,7 @@ public final class FormFieldNumber {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldNumber(
-            String id,
-            FormComponentCategoryFieldConst category,
-            FormFieldTypeNumberConst type,
-            Optional<FormFieldNumberConfig> config,
-            Optional<String> label,
-            Optional<String> hint,
-            Optional<Boolean> required,
-            Optional<Boolean> sensitive,
-            Map<String, Object> additionalProperties) {
+    private FormFieldNumber(String id, FormComponentCategoryFieldConst category, FormFieldTypeNumberConst type, Optional<FormFieldNumberConfig> config, Optional<String> label, Optional<String> hint, Optional<Boolean> required, Optional<Boolean> sensitive, Map<String, Object> additionalProperties) {
         this.id = id;
         this.category = category;
         this.type = type;
@@ -62,96 +54,91 @@ public final class FormFieldNumber {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("category")
     public FormComponentCategoryFieldConst getCategory() {
-        return category;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FormFieldTypeNumberConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("config")
     public Optional<FormFieldNumberConfig> getConfig() {
-        return config;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("label")
     public Optional<String> getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("hint")
     public Optional<String> getHint() {
-        return hint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("required")
     public Optional<Boolean> getRequired() {
-        return required;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sensitive")
     public Optional<Boolean> getSensitive() {
-        return sensitive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldNumber && equalTo((FormFieldNumber) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldNumber other) {
-        return id.equals(other.id)
-                && category.equals(other.category)
-                && type.equals(other.type)
-                && config.equals(other.config)
-                && label.equals(other.label)
-                && hint.equals(other.hint)
-                && required.equals(other.required)
-                && sensitive.equals(other.sensitive);
+        return id.equals(other.id) && category.equals(other.category) && type.equals(other.type) && config.equals(other.config) && label.equals(other.label) && hint.equals(other.hint) && required.equals(other.required) && sensitive.equals(other.sensitive);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.category, this.type, this.config, this.label, this.hint, this.required, this.sensitive);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         CategoryStage id(@NotNull String id);
 
         Builder from(FormFieldNumber other);
     }
 
     public interface CategoryStage {
+
         TypeStage category(@NotNull FormComponentCategoryFieldConst category);
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull FormFieldTypeNumberConst type);
     }
 
     public interface _FinalStage {
+
         FormFieldNumber build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -181,6 +168,7 @@ public final class FormFieldNumber {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, CategoryStage, TypeStage, _FinalStage {
+
         private String id;
 
         private FormComponentCategoryFieldConst category;
@@ -200,123 +188,100 @@ public final class FormFieldNumber {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldNumber other) {
-            id(other.getId());
-            category(other.getCategory());
-            type(other.getType());
-            config(other.getConfig());
-            label(other.getLabel());
-            hint(other.getHint());
-            required(other.getRequired());
-            sensitive(other.getSensitive());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public CategoryStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("category")
         public TypeStage category(@NotNull FormComponentCategoryFieldConst category) {
-            this.category = Objects.requireNonNull(category, "category must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull FormFieldTypeNumberConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage sensitive(Boolean sensitive) {
-            this.sensitive = Optional.ofNullable(sensitive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "sensitive", nulls = Nulls.SKIP)
         public _FinalStage sensitive(Optional<Boolean> sensitive) {
-            this.sensitive = sensitive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage required(Boolean required) {
-            this.required = Optional.ofNullable(required);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "required", nulls = Nulls.SKIP)
         public _FinalStage required(Optional<Boolean> required) {
-            this.required = required;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage hint(String hint) {
-            this.hint = Optional.ofNullable(hint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "hint", nulls = Nulls.SKIP)
         public _FinalStage hint(Optional<String> hint) {
-            this.hint = hint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage label(String label) {
-            this.label = Optional.ofNullable(label);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "label", nulls = Nulls.SKIP)
         public _FinalStage label(Optional<String> label) {
-            this.label = label;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage config(FormFieldNumberConfig config) {
-            this.config = Optional.ofNullable(config);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "config", nulls = Nulls.SKIP)
         public _FinalStage config(Optional<FormFieldNumberConfig> config) {
-            this.config = config;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldNumber build() {
-            return new FormFieldNumber(
-                    id, category, type, config, label, hint, required, sensitive, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

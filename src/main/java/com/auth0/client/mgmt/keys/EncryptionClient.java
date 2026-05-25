@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.GetEncryptionKeyResponseContent;
 import com.auth0.client.mgmt.types.ImportEncryptionKeyResponseContent;
 
 public class EncryptionClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawEncryptionClient rawClient;
@@ -29,122 +30,118 @@ public class EncryptionClient {
      * Get responses with HTTP metadata like headers
      */
     public RawEncryptionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public SyncPagingIterable<EncryptionKey> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public SyncPagingIterable<EncryptionKey> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public SyncPagingIterable<EncryptionKey> list(ListEncryptionKeysRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
-    public SyncPagingIterable<EncryptionKey> list(
-            ListEncryptionKeysRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<EncryptionKey> list(ListEncryptionKeysRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the new, pre-activated encryption key, without the key material.
      */
     public CreateEncryptionKeyResponseContent create(CreateEncryptionKeyRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the new, pre-activated encryption key, without the key material.
      */
-    public CreateEncryptionKeyResponseContent create(
-            CreateEncryptionKeyRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateEncryptionKeyResponseContent create(CreateEncryptionKeyRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Perform rekeying operation on the key hierarchy.
      */
     public void rekey() {
-        this.rawClient.rekey().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Perform rekeying operation on the key hierarchy.
      */
     public void rekey(RequestOptions requestOptions) {
-        this.rawClient.rekey(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the encryption key with the given ID.
      */
     public GetEncryptionKeyResponseContent get(String kid) {
-        return this.rawClient.get(kid).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the encryption key with the given ID.
      */
     public GetEncryptionKeyResponseContent get(String kid, RequestOptions requestOptions) {
-        return this.rawClient.get(kid, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import wrapped key material and activate encryption key.
      */
     public ImportEncryptionKeyResponseContent import_(String kid, ImportEncryptionKeyRequestContent request) {
-        return this.rawClient.import_(kid, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import wrapped key material and activate encryption key.
      */
-    public ImportEncryptionKeyResponseContent import_(
-            String kid, ImportEncryptionKeyRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.import_(kid, request, requestOptions).body();
+    public ImportEncryptionKeyResponseContent import_(String kid, ImportEncryptionKeyRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the custom provided encryption key with the given ID and move back to using native encryption key.
      */
     public void delete(String kid) {
-        this.rawClient.delete(kid).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the custom provided encryption key with the given ID and move back to using native encryption key.
      */
     public void delete(String kid, RequestOptions requestOptions) {
-        this.rawClient.delete(kid, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the public wrapping key to wrap your own encryption key material.
      */
     public CreateEncryptionKeyPublicWrappingResponseContent createPublicWrappingKey(String kid) {
-        return this.rawClient.createPublicWrappingKey(kid).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the public wrapping key to wrap your own encryption key material.
      */
-    public CreateEncryptionKeyPublicWrappingResponseContent createPublicWrappingKey(
-            String kid, RequestOptions requestOptions) {
-        return this.rawClient.createPublicWrappingKey(kid, requestOptions).body();
+    public CreateEncryptionKeyPublicWrappingResponseContent createPublicWrappingKey(String kid, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

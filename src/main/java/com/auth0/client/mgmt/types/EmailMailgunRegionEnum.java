@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EmailMailgunRegionEnum {
+
     public static final EmailMailgunRegionEnum EU = new EmailMailgunRegionEnum(Value.EU, "eu");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class EmailMailgunRegionEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EmailMailgunRegionEnum
-                        && this.string.equals(((EmailMailgunRegionEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EU:
-                return visitor.visitEu();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EmailMailgunRegionEnum valueOf(String value) {
-        switch (value) {
-            case "eu":
-                return EU;
-            default:
-                return new EmailMailgunRegionEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EU,
 
-        UNKNOWN
+        EU, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEu();
 
         T visitUnknown(String unknownType);

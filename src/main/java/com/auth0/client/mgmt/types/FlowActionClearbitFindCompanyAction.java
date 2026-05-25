@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionClearbitFindCompanyAction {
-    public static final FlowActionClearbitFindCompanyAction FIND_COMPANY =
-            new FlowActionClearbitFindCompanyAction(Value.FIND_COMPANY, "FIND_COMPANY");
+
+    public static final FlowActionClearbitFindCompanyAction FIND_COMPANY = new FlowActionClearbitFindCompanyAction(Value.FIND_COMPANY, "FIND_COMPANY");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionClearbitFindCompanyAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionClearbitFindCompanyAction
-                        && this.string.equals(((FlowActionClearbitFindCompanyAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FIND_COMPANY:
-                return visitor.visitFindCompany();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionClearbitFindCompanyAction valueOf(String value) {
-        switch (value) {
-            case "FIND_COMPANY":
-                return FIND_COMPANY;
-            default:
-                return new FlowActionClearbitFindCompanyAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FIND_COMPANY,
 
-        UNKNOWN
+        FIND_COMPANY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFindCompany();
 
         T visitUnknown(String unknownType);

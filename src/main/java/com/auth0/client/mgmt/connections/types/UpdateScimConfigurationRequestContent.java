@@ -23,14 +23,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateScimConfigurationRequestContent.Builder.class)
 public final class UpdateScimConfigurationRequestContent {
+
     private final String userIdAttribute;
 
     private final List<ScimMappingItem> mapping;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateScimConfigurationRequestContent(
-            String userIdAttribute, List<ScimMappingItem> mapping, Map<String, Object> additionalProperties) {
+    private UpdateScimConfigurationRequestContent(String userIdAttribute, List<ScimMappingItem> mapping, Map<String, Object> additionalProperties) {
         this.userIdAttribute = userIdAttribute;
         this.mapping = mapping;
         this.additionalProperties = additionalProperties;
@@ -41,7 +41,7 @@ public final class UpdateScimConfigurationRequestContent {
      */
     @JsonProperty("user_id_attribute")
     public String getUserIdAttribute() {
-        return userIdAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -49,19 +49,17 @@ public final class UpdateScimConfigurationRequestContent {
      */
     @JsonProperty("mapping")
     public List<ScimMappingItem> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateScimConfigurationRequestContent
-                && equalTo((UpdateScimConfigurationRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateScimConfigurationRequestContent other) {
@@ -70,19 +68,20 @@ public final class UpdateScimConfigurationRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.userIdAttribute, this.mapping);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UserIdAttributeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UserIdAttributeStage {
+
         /**
          * <p>User ID attribute for generating unique user ids</p>
          */
@@ -92,6 +91,7 @@ public final class UpdateScimConfigurationRequestContent {
     }
 
     public interface _FinalStage {
+
         UpdateScimConfigurationRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -110,6 +110,7 @@ public final class UpdateScimConfigurationRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements UserIdAttributeStage, _FinalStage {
+
         private String userIdAttribute;
 
         private List<ScimMappingItem> mapping = new ArrayList<>();
@@ -117,13 +118,12 @@ public final class UpdateScimConfigurationRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateScimConfigurationRequestContent other) {
-            userIdAttribute(other.getUserIdAttribute());
-            mapping(other.getMapping());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,8 +134,7 @@ public final class UpdateScimConfigurationRequestContent {
         @java.lang.Override
         @JsonSetter("user_id_attribute")
         public _FinalStage userIdAttribute(@NotNull String userIdAttribute) {
-            this.userIdAttribute = Objects.requireNonNull(userIdAttribute, "userIdAttribute must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -144,10 +143,7 @@ public final class UpdateScimConfigurationRequestContent {
          */
         @java.lang.Override
         public _FinalStage addAllMapping(List<ScimMappingItem> mapping) {
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -156,8 +152,7 @@ public final class UpdateScimConfigurationRequestContent {
          */
         @java.lang.Override
         public _FinalStage addMapping(ScimMappingItem mapping) {
-            this.mapping.add(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,28 +161,22 @@ public final class UpdateScimConfigurationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public _FinalStage mapping(List<ScimMappingItem> mapping) {
-            this.mapping.clear();
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateScimConfigurationRequestContent build() {
-            return new UpdateScimConfigurationRequestContent(userIdAttribute, mapping, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

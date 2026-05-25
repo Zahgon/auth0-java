@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldFileConfigCategoryEnum {
-    public static final FormFieldFileConfigCategoryEnum VIDEO =
-            new FormFieldFileConfigCategoryEnum(Value.VIDEO, "VIDEO");
 
-    public static final FormFieldFileConfigCategoryEnum DOCUMENT =
-            new FormFieldFileConfigCategoryEnum(Value.DOCUMENT, "DOCUMENT");
+    public static final FormFieldFileConfigCategoryEnum VIDEO = new FormFieldFileConfigCategoryEnum(Value.VIDEO, "VIDEO");
 
-    public static final FormFieldFileConfigCategoryEnum AUDIO =
-            new FormFieldFileConfigCategoryEnum(Value.AUDIO, "AUDIO");
+    public static final FormFieldFileConfigCategoryEnum DOCUMENT = new FormFieldFileConfigCategoryEnum(Value.DOCUMENT, "DOCUMENT");
 
-    public static final FormFieldFileConfigCategoryEnum ARCHIVE =
-            new FormFieldFileConfigCategoryEnum(Value.ARCHIVE, "ARCHIVE");
+    public static final FormFieldFileConfigCategoryEnum AUDIO = new FormFieldFileConfigCategoryEnum(Value.AUDIO, "AUDIO");
 
-    public static final FormFieldFileConfigCategoryEnum IMAGE =
-            new FormFieldFileConfigCategoryEnum(Value.IMAGE, "IMAGE");
+    public static final FormFieldFileConfigCategoryEnum ARCHIVE = new FormFieldFileConfigCategoryEnum(Value.ARCHIVE, "ARCHIVE");
+
+    public static final FormFieldFileConfigCategoryEnum IMAGE = new FormFieldFileConfigCategoryEnum(Value.IMAGE, "IMAGE");
 
     private final Value value;
 
@@ -32,78 +28,46 @@ public final class FormFieldFileConfigCategoryEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldFileConfigCategoryEnum
-                        && this.string.equals(((FormFieldFileConfigCategoryEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VIDEO:
-                return visitor.visitVideo();
-            case DOCUMENT:
-                return visitor.visitDocument();
-            case AUDIO:
-                return visitor.visitAudio();
-            case ARCHIVE:
-                return visitor.visitArchive();
-            case IMAGE:
-                return visitor.visitImage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldFileConfigCategoryEnum valueOf(String value) {
-        switch (value) {
-            case "VIDEO":
-                return VIDEO;
-            case "DOCUMENT":
-                return DOCUMENT;
-            case "AUDIO":
-                return AUDIO;
-            case "ARCHIVE":
-                return ARCHIVE;
-            case "IMAGE":
-                return IMAGE;
-            default:
-                return new FormFieldFileConfigCategoryEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         AUDIO,
-
         VIDEO,
-
         IMAGE,
-
         DOCUMENT,
-
         ARCHIVE,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAudio();
 
         T visitVideo();

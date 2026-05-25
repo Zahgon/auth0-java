@@ -7,17 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ActionExecutionStatusEnum {
+
     public static final ActionExecutionStatusEnum PARTIAL = new ActionExecutionStatusEnum(Value.PARTIAL, "partial");
 
-    public static final ActionExecutionStatusEnum UNSPECIFIED =
-            new ActionExecutionStatusEnum(Value.UNSPECIFIED, "unspecified");
+    public static final ActionExecutionStatusEnum UNSPECIFIED = new ActionExecutionStatusEnum(Value.UNSPECIFIED, "unspecified");
 
     public static final ActionExecutionStatusEnum PENDING = new ActionExecutionStatusEnum(Value.PENDING, "pending");
 
     public static final ActionExecutionStatusEnum CANCELED = new ActionExecutionStatusEnum(Value.CANCELED, "canceled");
 
-    public static final ActionExecutionStatusEnum SUSPENDED =
-            new ActionExecutionStatusEnum(Value.SUSPENDED, "suspended");
+    public static final ActionExecutionStatusEnum SUSPENDED = new ActionExecutionStatusEnum(Value.SUSPENDED, "suspended");
 
     public static final ActionExecutionStatusEnum FINAL = new ActionExecutionStatusEnum(Value.FINAL, "final");
 
@@ -31,84 +30,47 @@ public final class ActionExecutionStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ActionExecutionStatusEnum
-                        && this.string.equals(((ActionExecutionStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PARTIAL:
-                return visitor.visitPartial();
-            case UNSPECIFIED:
-                return visitor.visitUnspecified();
-            case PENDING:
-                return visitor.visitPending();
-            case CANCELED:
-                return visitor.visitCanceled();
-            case SUSPENDED:
-                return visitor.visitSuspended();
-            case FINAL:
-                return visitor.visitFinal();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ActionExecutionStatusEnum valueOf(String value) {
-        switch (value) {
-            case "partial":
-                return PARTIAL;
-            case "unspecified":
-                return UNSPECIFIED;
-            case "pending":
-                return PENDING;
-            case "canceled":
-                return CANCELED;
-            case "suspended":
-                return SUSPENDED;
-            case "final":
-                return FINAL;
-            default:
-                return new ActionExecutionStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         UNSPECIFIED,
-
         PENDING,
-
         FINAL,
-
         PARTIAL,
-
         CANCELED,
-
         SUSPENDED,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUnspecified();
 
         T visitPending();

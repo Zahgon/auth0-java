@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientOidcBackchannelLogoutSettings.Builder.class)
 public final class ClientOidcBackchannelLogoutSettings {
+
     private final Optional<List<String>> backchannelLogoutUrls;
 
     private final Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators;
@@ -32,11 +33,7 @@ public final class ClientOidcBackchannelLogoutSettings {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientOidcBackchannelLogoutSettings(
-            Optional<List<String>> backchannelLogoutUrls,
-            Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators,
-            OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata,
-            Map<String, Object> additionalProperties) {
+    private ClientOidcBackchannelLogoutSettings(Optional<List<String>> backchannelLogoutUrls, Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators, OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata, Map<String, Object> additionalProperties) {
         this.backchannelLogoutUrls = backchannelLogoutUrls;
         this.backchannelLogoutInitiators = backchannelLogoutInitiators;
         this.backchannelLogoutSessionMetadata = backchannelLogoutSessionMetadata;
@@ -48,21 +45,18 @@ public final class ClientOidcBackchannelLogoutSettings {
      */
     @JsonProperty("backchannel_logout_urls")
     public Optional<List<String>> getBackchannelLogoutUrls() {
-        return backchannelLogoutUrls;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("backchannel_logout_initiators")
     public Optional<ClientOidcBackchannelLogoutInitiators> getBackchannelLogoutInitiators() {
-        return backchannelLogoutInitiators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("backchannel_logout_session_metadata")
     public OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> getBackchannelLogoutSessionMetadata() {
-        if (backchannelLogoutSessionMetadata == null) {
-            return OptionalNullable.absent();
-        }
-        return backchannelLogoutSessionMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -73,56 +67,49 @@ public final class ClientOidcBackchannelLogoutSettings {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientOidcBackchannelLogoutSettings
-                && equalTo((ClientOidcBackchannelLogoutSettings) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientOidcBackchannelLogoutSettings other) {
-        return backchannelLogoutUrls.equals(other.backchannelLogoutUrls)
-                && backchannelLogoutInitiators.equals(other.backchannelLogoutInitiators)
-                && backchannelLogoutSessionMetadata.equals(other.backchannelLogoutSessionMetadata);
+        return backchannelLogoutUrls.equals(other.backchannelLogoutUrls) && backchannelLogoutInitiators.equals(other.backchannelLogoutInitiators) && backchannelLogoutSessionMetadata.equals(other.backchannelLogoutSessionMetadata);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.backchannelLogoutUrls, this.backchannelLogoutInitiators, this.backchannelLogoutSessionMetadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> backchannelLogoutUrls = Optional.empty();
 
         private Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators = Optional.empty();
 
-        private OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata =
-                OptionalNullable.absent();
+        private OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientOidcBackchannelLogoutSettings other) {
-            backchannelLogoutUrls(other.getBackchannelLogoutUrls());
-            backchannelLogoutInitiators(other.getBackchannelLogoutInitiators());
-            backchannelLogoutSessionMetadata(other.getBackchannelLogoutSessionMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -130,80 +117,49 @@ public final class ClientOidcBackchannelLogoutSettings {
          */
         @JsonSetter(value = "backchannel_logout_urls", nulls = Nulls.SKIP)
         public Builder backchannelLogoutUrls(Optional<List<String>> backchannelLogoutUrls) {
-            this.backchannelLogoutUrls = backchannelLogoutUrls;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder backchannelLogoutUrls(List<String> backchannelLogoutUrls) {
-            this.backchannelLogoutUrls = Optional.ofNullable(backchannelLogoutUrls);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "backchannel_logout_initiators", nulls = Nulls.SKIP)
-        public Builder backchannelLogoutInitiators(
-                Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators) {
-            this.backchannelLogoutInitiators = backchannelLogoutInitiators;
-            return this;
+        public Builder backchannelLogoutInitiators(Optional<ClientOidcBackchannelLogoutInitiators> backchannelLogoutInitiators) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder backchannelLogoutInitiators(ClientOidcBackchannelLogoutInitiators backchannelLogoutInitiators) {
-            this.backchannelLogoutInitiators = Optional.ofNullable(backchannelLogoutInitiators);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "backchannel_logout_session_metadata", nulls = Nulls.SKIP)
-        public Builder backchannelLogoutSessionMetadata(
-                @Nullable
-                        OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata) {
-            this.backchannelLogoutSessionMetadata = backchannelLogoutSessionMetadata;
-            return this;
+        public Builder backchannelLogoutSessionMetadata(@Nullable OptionalNullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder backchannelLogoutSessionMetadata(
-                ClientOidcBackchannelLogoutSessionMetadata backchannelLogoutSessionMetadata) {
-            this.backchannelLogoutSessionMetadata = OptionalNullable.of(backchannelLogoutSessionMetadata);
-            return this;
+        public Builder backchannelLogoutSessionMetadata(ClientOidcBackchannelLogoutSessionMetadata backchannelLogoutSessionMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder backchannelLogoutSessionMetadata(
-                Optional<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata) {
-            if (backchannelLogoutSessionMetadata.isPresent()) {
-                this.backchannelLogoutSessionMetadata = OptionalNullable.of(backchannelLogoutSessionMetadata.get());
-            } else {
-                this.backchannelLogoutSessionMetadata = OptionalNullable.absent();
-            }
-            return this;
+        public Builder backchannelLogoutSessionMetadata(Optional<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder backchannelLogoutSessionMetadata(
-                com.auth0.client.mgmt.core.Nullable<ClientOidcBackchannelLogoutSessionMetadata>
-                        backchannelLogoutSessionMetadata) {
-            if (backchannelLogoutSessionMetadata.isNull()) {
-                this.backchannelLogoutSessionMetadata = OptionalNullable.ofNull();
-            } else if (backchannelLogoutSessionMetadata.isEmpty()) {
-                this.backchannelLogoutSessionMetadata = OptionalNullable.absent();
-            } else {
-                this.backchannelLogoutSessionMetadata = OptionalNullable.of(backchannelLogoutSessionMetadata.get());
-            }
-            return this;
+        public Builder backchannelLogoutSessionMetadata(com.auth0.client.mgmt.core.Nullable<ClientOidcBackchannelLogoutSessionMetadata> backchannelLogoutSessionMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientOidcBackchannelLogoutSettings build() {
-            return new ClientOidcBackchannelLogoutSettings(
-                    backchannelLogoutUrls,
-                    backchannelLogoutInitiators,
-                    backchannelLogoutSessionMetadata,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

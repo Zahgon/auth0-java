@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypePaymentConst {
+
     public static final FormFieldTypePaymentConst PAYMENT = new FormFieldTypePaymentConst(Value.PAYMENT, "PAYMENT");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypePaymentConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypePaymentConst
-                        && this.string.equals(((FormFieldTypePaymentConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PAYMENT:
-                return visitor.visitPayment();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypePaymentConst valueOf(String value) {
-        switch (value) {
-            case "PAYMENT":
-                return PAYMENT;
-            default:
-                return new FormFieldTypePaymentConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PAYMENT,
 
-        UNKNOWN
+        PAYMENT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPayment();
 
         T visitUnknown(String unknownType);

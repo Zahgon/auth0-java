@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncClientsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawClientsClient rawClient;
@@ -26,7 +27,7 @@ public class AsyncClientsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawClientsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,42 +35,38 @@ public class AsyncClientsClient {
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, GetConnectionEnabledClientsRequestParameters request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(String id, GetConnectionEnabledClientsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all clients that have the specified <a href="https://auth0.com/docs/authenticate/identity-providers">connection</a> enabled.
      * <p><b>Note</b>: The first time you call this endpoint, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no further results are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(
-            String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectionEnabledClient>> get(String id, GetConnectionEnabledClientsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<Void> update(
-            String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> update(String id, List<UpdateEnabledClientConnectionsRequestContentItem> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

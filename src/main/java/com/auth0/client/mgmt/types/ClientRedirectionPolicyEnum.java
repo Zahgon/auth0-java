@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientRedirectionPolicyEnum {
-    public static final ClientRedirectionPolicyEnum ALLOW_ALWAYS =
-            new ClientRedirectionPolicyEnum(Value.ALLOW_ALWAYS, "allow_always");
 
-    public static final ClientRedirectionPolicyEnum OPEN_REDIRECT_PROTECTION =
-            new ClientRedirectionPolicyEnum(Value.OPEN_REDIRECT_PROTECTION, "open_redirect_protection");
+    public static final ClientRedirectionPolicyEnum ALLOW_ALWAYS = new ClientRedirectionPolicyEnum(Value.ALLOW_ALWAYS, "allow_always");
+
+    public static final ClientRedirectionPolicyEnum OPEN_REDIRECT_PROTECTION = new ClientRedirectionPolicyEnum(Value.OPEN_REDIRECT_PROTECTION, "open_redirect_protection");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientRedirectionPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientRedirectionPolicyEnum
-                        && this.string.equals(((ClientRedirectionPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALLOW_ALWAYS:
-                return visitor.visitAllowAlways();
-            case OPEN_REDIRECT_PROTECTION:
-                return visitor.visitOpenRedirectProtection();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientRedirectionPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "allow_always":
-                return ALLOW_ALWAYS;
-            case "open_redirect_protection":
-                return OPEN_REDIRECT_PROTECTION;
-            default:
-                return new ClientRedirectionPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALLOW_ALWAYS,
 
-        OPEN_REDIRECT_PROTECTION,
-
-        UNKNOWN
+        ALLOW_ALWAYS, OPEN_REDIRECT_PROTECTION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAllowAlways();
 
         T visitOpenRedirectProtection();

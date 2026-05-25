@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionAuthenticationMethods.Builder.class)
 public final class ConnectionAuthenticationMethods {
+
     private final Optional<ConnectionPasswordAuthenticationMethod> password;
 
     private final Optional<ConnectionPasskeyAuthenticationMethod> passkey;
@@ -30,12 +31,7 @@ public final class ConnectionAuthenticationMethods {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionAuthenticationMethods(
-            Optional<ConnectionPasswordAuthenticationMethod> password,
-            Optional<ConnectionPasskeyAuthenticationMethod> passkey,
-            Optional<ConnectionEmailOtpAuthenticationMethod> emailOtp,
-            Optional<ConnectionPhoneOtpAuthenticationMethod> phoneOtp,
-            Map<String, Object> additionalProperties) {
+    private ConnectionAuthenticationMethods(Optional<ConnectionPasswordAuthenticationMethod> password, Optional<ConnectionPasskeyAuthenticationMethod> passkey, Optional<ConnectionEmailOtpAuthenticationMethod> emailOtp, Optional<ConnectionPhoneOtpAuthenticationMethod> phoneOtp, Map<String, Object> additionalProperties) {
         this.password = password;
         this.passkey = passkey;
         this.emailOtp = emailOtp;
@@ -45,58 +41,55 @@ public final class ConnectionAuthenticationMethods {
 
     @JsonProperty("password")
     public Optional<ConnectionPasswordAuthenticationMethod> getPassword() {
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("passkey")
     public Optional<ConnectionPasskeyAuthenticationMethod> getPasskey() {
-        return passkey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email_otp")
     public Optional<ConnectionEmailOtpAuthenticationMethod> getEmailOtp() {
-        return emailOtp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone_otp")
     public Optional<ConnectionPhoneOtpAuthenticationMethod> getPhoneOtp() {
-        return phoneOtp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionAuthenticationMethods && equalTo((ConnectionAuthenticationMethods) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionAuthenticationMethods other) {
-        return password.equals(other.password)
-                && passkey.equals(other.passkey)
-                && emailOtp.equals(other.emailOtp)
-                && phoneOtp.equals(other.phoneOtp);
+        return password.equals(other.password) && passkey.equals(other.passkey) && emailOtp.equals(other.emailOtp) && phoneOtp.equals(other.phoneOtp);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.password, this.passkey, this.emailOtp, this.phoneOtp);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionPasswordAuthenticationMethod> password = Optional.empty();
 
         private Optional<ConnectionPasskeyAuthenticationMethod> passkey = Optional.empty();
@@ -108,72 +101,59 @@ public final class ConnectionAuthenticationMethods {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionAuthenticationMethods other) {
-            password(other.getPassword());
-            passkey(other.getPasskey());
-            emailOtp(other.getEmailOtp());
-            phoneOtp(other.getPhoneOtp());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "password", nulls = Nulls.SKIP)
         public Builder password(Optional<ConnectionPasswordAuthenticationMethod> password) {
-            this.password = password;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder password(ConnectionPasswordAuthenticationMethod password) {
-            this.password = Optional.ofNullable(password);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "passkey", nulls = Nulls.SKIP)
         public Builder passkey(Optional<ConnectionPasskeyAuthenticationMethod> passkey) {
-            this.passkey = passkey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder passkey(ConnectionPasskeyAuthenticationMethod passkey) {
-            this.passkey = Optional.ofNullable(passkey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "email_otp", nulls = Nulls.SKIP)
         public Builder emailOtp(Optional<ConnectionEmailOtpAuthenticationMethod> emailOtp) {
-            this.emailOtp = emailOtp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder emailOtp(ConnectionEmailOtpAuthenticationMethod emailOtp) {
-            this.emailOtp = Optional.ofNullable(emailOtp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "phone_otp", nulls = Nulls.SKIP)
         public Builder phoneOtp(Optional<ConnectionPhoneOtpAuthenticationMethod> phoneOtp) {
-            this.phoneOtp = phoneOtp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneOtp(ConnectionPhoneOtpAuthenticationMethod phoneOtp) {
-            this.phoneOtp = Optional.ofNullable(phoneOtp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionAuthenticationMethods build() {
-            return new ConnectionAuthenticationMethods(password, passkey, emailOtp, phoneOtp, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

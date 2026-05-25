@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormWidgetTypeAuth0VerifiableCredentialsConst {
-    public static final FormWidgetTypeAuth0VerifiableCredentialsConst AUTH0VERIFIABLE_CREDENTIALS =
-            new FormWidgetTypeAuth0VerifiableCredentialsConst(
-                    Value.AUTH0VERIFIABLE_CREDENTIALS, "AUTH0_VERIFIABLE_CREDENTIALS");
+
+    public static final FormWidgetTypeAuth0VerifiableCredentialsConst AUTH0VERIFIABLE_CREDENTIALS = new FormWidgetTypeAuth0VerifiableCredentialsConst(Value.AUTH0VERIFIABLE_CREDENTIALS, "AUTH0_VERIFIABLE_CREDENTIALS");
 
     private final Value value;
 
@@ -21,54 +20,41 @@ public final class FormWidgetTypeAuth0VerifiableCredentialsConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormWidgetTypeAuth0VerifiableCredentialsConst
-                        && this.string.equals(((FormWidgetTypeAuth0VerifiableCredentialsConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTH0VERIFIABLE_CREDENTIALS:
-                return visitor.visitAuth0VerifiableCredentials();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormWidgetTypeAuth0VerifiableCredentialsConst valueOf(String value) {
-        switch (value) {
-            case "AUTH0_VERIFIABLE_CREDENTIALS":
-                return AUTH0VERIFIABLE_CREDENTIALS;
-            default:
-                return new FormWidgetTypeAuth0VerifiableCredentialsConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0VERIFIABLE_CREDENTIALS,
 
-        UNKNOWN
+        AUTH0VERIFIABLE_CREDENTIALS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0VerifiableCredentials();
 
         T visitUnknown(String unknownType);

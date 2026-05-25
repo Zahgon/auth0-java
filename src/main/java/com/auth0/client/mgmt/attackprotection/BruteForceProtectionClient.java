@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetBruteForceSettingsResponseContent;
 import com.auth0.client.mgmt.types.UpdateBruteForceSettingsResponseContent;
 
 public class BruteForceProtectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawBruteForceProtectionClient rawClient;
@@ -23,49 +24,48 @@ public class BruteForceProtectionClient {
      * Get responses with HTTP metadata like headers
      */
     public RawBruteForceProtectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Brute-force Protection configuration of your tenant.
      */
     public GetBruteForceSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Brute-force Protection configuration of your tenant.
      */
     public GetBruteForceSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
     public UpdateBruteForceSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
     public UpdateBruteForceSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
     public UpdateBruteForceSettingsResponseContent update(UpdateBruteForceSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Brute-force Protection configuration of your tenant.
      */
-    public UpdateBruteForceSettingsResponseContent update(
-            UpdateBruteForceSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateBruteForceSettingsResponseContent update(UpdateBruteForceSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SignupVerified.Builder.class)
 public final class SignupVerified {
+
     private final Optional<SignupStatusEnum> status;
 
     private final Optional<SignupVerification> verification;
 
     private final Map<String, Object> additionalProperties;
 
-    private SignupVerified(
-            Optional<SignupStatusEnum> status,
-            Optional<SignupVerification> verification,
-            Map<String, Object> additionalProperties) {
+    private SignupVerified(Optional<SignupStatusEnum> status, Optional<SignupVerification> verification, Map<String, Object> additionalProperties) {
         this.status = status;
         this.verification = verification;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class SignupVerified {
 
     @JsonProperty("status")
     public Optional<SignupStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("verification")
     public Optional<SignupVerification> getVerification() {
-        return verification;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SignupVerified && equalTo((SignupVerified) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SignupVerified other) {
@@ -62,20 +59,21 @@ public final class SignupVerified {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.status, this.verification);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<SignupStatusEnum> status = Optional.empty();
 
         private Optional<SignupVerification> verification = Optional.empty();
@@ -83,48 +81,41 @@ public final class SignupVerified {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SignupVerified other) {
-            status(other.getStatus());
-            verification(other.getVerification());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<SignupStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(SignupStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "verification", nulls = Nulls.SKIP)
         public Builder verification(Optional<SignupVerification> verification) {
-            this.verification = verification;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verification(SignupVerification verification) {
-            this.verification = Optional.ofNullable(verification);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SignupVerified build() {
-            return new SignupVerified(status, verification, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.jobs.types.ErrorsGetResponse;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncErrorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawErrorsClient rawClient;
@@ -22,20 +23,20 @@ public class AsyncErrorsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawErrorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve error details of a failed job.
      */
     public CompletableFuture<ErrorsGetResponse> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve error details of a failed job.
      */
     public CompletableFuture<ErrorsGetResponse> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

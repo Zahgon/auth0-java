@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0SendRequestParamsMethod {
-    public static final FlowActionAuth0SendRequestParamsMethod GET =
-            new FlowActionAuth0SendRequestParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionAuth0SendRequestParamsMethod PUT =
-            new FlowActionAuth0SendRequestParamsMethod(Value.PUT, "PUT");
+    public static final FlowActionAuth0SendRequestParamsMethod GET = new FlowActionAuth0SendRequestParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionAuth0SendRequestParamsMethod PATCH =
-            new FlowActionAuth0SendRequestParamsMethod(Value.PATCH, "PATCH");
+    public static final FlowActionAuth0SendRequestParamsMethod PUT = new FlowActionAuth0SendRequestParamsMethod(Value.PUT, "PUT");
 
-    public static final FlowActionAuth0SendRequestParamsMethod DELETE =
-            new FlowActionAuth0SendRequestParamsMethod(Value.DELETE, "DELETE");
+    public static final FlowActionAuth0SendRequestParamsMethod PATCH = new FlowActionAuth0SendRequestParamsMethod(Value.PATCH, "PATCH");
 
-    public static final FlowActionAuth0SendRequestParamsMethod POST =
-            new FlowActionAuth0SendRequestParamsMethod(Value.POST, "POST");
+    public static final FlowActionAuth0SendRequestParamsMethod DELETE = new FlowActionAuth0SendRequestParamsMethod(Value.DELETE, "DELETE");
+
+    public static final FlowActionAuth0SendRequestParamsMethod POST = new FlowActionAuth0SendRequestParamsMethod(Value.POST, "POST");
 
     private final Value value;
 
@@ -32,78 +28,46 @@ public final class FlowActionAuth0SendRequestParamsMethod {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0SendRequestParamsMethod
-                        && this.string.equals(((FlowActionAuth0SendRequestParamsMethod) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET:
-                return visitor.visitGet();
-            case PUT:
-                return visitor.visitPut();
-            case PATCH:
-                return visitor.visitPatch();
-            case DELETE:
-                return visitor.visitDelete();
-            case POST:
-                return visitor.visitPost();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0SendRequestParamsMethod valueOf(String value) {
-        switch (value) {
-            case "GET":
-                return GET;
-            case "PUT":
-                return PUT;
-            case "PATCH":
-                return PATCH;
-            case "DELETE":
-                return DELETE;
-            case "POST":
-                return POST;
-            default:
-                return new FlowActionAuth0SendRequestParamsMethod(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         GET,
-
         POST,
-
         PUT,
-
         PATCH,
-
         DELETE,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGet();
 
         T visitPost();

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentLinkedinStrategy {
-    public static final ConnectionResponseContentLinkedinStrategy LINKEDIN =
-            new ConnectionResponseContentLinkedinStrategy(Value.LINKEDIN, "linkedin");
+
+    public static final ConnectionResponseContentLinkedinStrategy LINKEDIN = new ConnectionResponseContentLinkedinStrategy(Value.LINKEDIN, "linkedin");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentLinkedinStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentLinkedinStrategy
-                        && this.string.equals(((ConnectionResponseContentLinkedinStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LINKEDIN:
-                return visitor.visitLinkedin();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentLinkedinStrategy valueOf(String value) {
-        switch (value) {
-            case "linkedin":
-                return LINKEDIN;
-            default:
-                return new ConnectionResponseContentLinkedinStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LINKEDIN,
 
-        UNKNOWN
+        LINKEDIN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLinkedin();
 
         T visitUnknown(String unknownType);

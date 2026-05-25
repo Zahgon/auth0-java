@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamEventBridgeDestination.Builder.class)
 public final class EventStreamEventBridgeDestination {
+
     private final EventStreamEventBridgeDestinationTypeEnum type;
 
     private final EventStreamEventBridgeConfiguration configuration;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamEventBridgeDestination(
-            EventStreamEventBridgeDestinationTypeEnum type,
-            EventStreamEventBridgeConfiguration configuration,
-            Map<String, Object> additionalProperties) {
+    private EventStreamEventBridgeDestination(EventStreamEventBridgeDestinationTypeEnum type, EventStreamEventBridgeConfiguration configuration, Map<String, Object> additionalProperties) {
         this.type = type;
         this.configuration = configuration;
         this.additionalProperties = additionalProperties;
@@ -36,23 +34,22 @@ public final class EventStreamEventBridgeDestination {
 
     @JsonProperty("type")
     public EventStreamEventBridgeDestinationTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("configuration")
     public EventStreamEventBridgeConfiguration getConfiguration() {
-        return configuration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamEventBridgeDestination && equalTo((EventStreamEventBridgeDestination) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamEventBridgeDestination other) {
@@ -61,29 +58,32 @@ public final class EventStreamEventBridgeDestination {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.configuration);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         ConfigurationStage type(@NotNull EventStreamEventBridgeDestinationTypeEnum type);
 
         Builder from(EventStreamEventBridgeDestination other);
     }
 
     public interface ConfigurationStage {
+
         _FinalStage configuration(@NotNull EventStreamEventBridgeConfiguration configuration);
     }
 
     public interface _FinalStage {
+
         EventStreamEventBridgeDestination build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class EventStreamEventBridgeDestination {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, ConfigurationStage, _FinalStage {
+
         private EventStreamEventBridgeDestinationTypeEnum type;
 
         private EventStreamEventBridgeConfiguration configuration;
@@ -100,44 +101,39 @@ public final class EventStreamEventBridgeDestination {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamEventBridgeDestination other) {
-            type(other.getType());
-            configuration(other.getConfiguration());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ConfigurationStage type(@NotNull EventStreamEventBridgeDestinationTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("configuration")
         public _FinalStage configuration(@NotNull EventStreamEventBridgeConfiguration configuration) {
-            this.configuration = Objects.requireNonNull(configuration, "configuration must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamEventBridgeDestination build() {
-            return new EventStreamEventBridgeDestination(type, configuration, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

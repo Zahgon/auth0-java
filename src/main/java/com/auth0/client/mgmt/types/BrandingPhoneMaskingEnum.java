@@ -7,13 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingPhoneMaskingEnum {
+
     public static final BrandingPhoneMaskingEnum SHOW_ALL = new BrandingPhoneMaskingEnum(Value.SHOW_ALL, "show_all");
 
-    public static final BrandingPhoneMaskingEnum MASK_DIGITS =
-            new BrandingPhoneMaskingEnum(Value.MASK_DIGITS, "mask_digits");
+    public static final BrandingPhoneMaskingEnum MASK_DIGITS = new BrandingPhoneMaskingEnum(Value.MASK_DIGITS, "mask_digits");
 
-    public static final BrandingPhoneMaskingEnum HIDE_COUNTRY_CODE =
-            new BrandingPhoneMaskingEnum(Value.HIDE_COUNTRY_CODE, "hide_country_code");
+    public static final BrandingPhoneMaskingEnum HIDE_COUNTRY_CODE = new BrandingPhoneMaskingEnum(Value.HIDE_COUNTRY_CODE, "hide_country_code");
 
     private final Value value;
 
@@ -25,66 +24,41 @@ public final class BrandingPhoneMaskingEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingPhoneMaskingEnum
-                        && this.string.equals(((BrandingPhoneMaskingEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SHOW_ALL:
-                return visitor.visitShowAll();
-            case MASK_DIGITS:
-                return visitor.visitMaskDigits();
-            case HIDE_COUNTRY_CODE:
-                return visitor.visitHideCountryCode();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingPhoneMaskingEnum valueOf(String value) {
-        switch (value) {
-            case "show_all":
-                return SHOW_ALL;
-            case "mask_digits":
-                return MASK_DIGITS;
-            case "hide_country_code":
-                return HIDE_COUNTRY_CODE;
-            default:
-                return new BrandingPhoneMaskingEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SHOW_ALL,
 
-        HIDE_COUNTRY_CODE,
-
-        MASK_DIGITS,
-
-        UNKNOWN
+        SHOW_ALL, HIDE_COUNTRY_CODE, MASK_DIGITS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitShowAll();
 
         T visitHideCountryCode();

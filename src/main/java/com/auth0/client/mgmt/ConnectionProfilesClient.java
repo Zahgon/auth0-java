@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.UpdateConnectionProfileRequestContent;
 import com.auth0.client.mgmt.types.UpdateConnectionProfileResponseContent;
 
 public class ConnectionProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectionProfilesClient rawClient;
@@ -30,135 +31,132 @@ public class ConnectionProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectionProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<ConnectionProfile> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<ConnectionProfile> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
     public SyncPagingIterable<ConnectionProfile> list(ListConnectionProfileRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profiles. This endpoint supports Checkpoint pagination.
      */
-    public SyncPagingIterable<ConnectionProfile> list(
-            ListConnectionProfileRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<ConnectionProfile> list(ListConnectionProfileRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a Connection Profile.
      */
     public CreateConnectionProfileResponseContent create(CreateConnectionProfileRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a Connection Profile.
      */
-    public CreateConnectionProfileResponseContent create(
-            CreateConnectionProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateConnectionProfileResponseContent create(CreateConnectionProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profile Templates.
      */
     public ListConnectionProfileTemplateResponseContent listTemplates() {
-        return this.rawClient.listTemplates().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of Connection Profile Templates.
      */
     public ListConnectionProfileTemplateResponseContent listTemplates(RequestOptions requestOptions) {
-        return this.rawClient.listTemplates(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a Connection Profile Template.
      */
     public GetConnectionProfileTemplateResponseContent getTemplate(String id) {
-        return this.rawClient.getTemplate(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a Connection Profile Template.
      */
     public GetConnectionProfileTemplateResponseContent getTemplate(String id, RequestOptions requestOptions) {
-        return this.rawClient.getTemplate(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Connection Profile specified by ID.
      */
     public GetConnectionProfileResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a single Connection Profile specified by ID.
      */
     public GetConnectionProfileResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single Connection Profile specified by ID.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a single Connection Profile specified by ID.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
     public UpdateConnectionProfileResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
     public UpdateConnectionProfileResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
     public UpdateConnectionProfileResponseContent update(String id, UpdateConnectionProfileRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the details of a specific Connection Profile.
      */
-    public UpdateConnectionProfileResponseContent update(
-            String id, UpdateConnectionProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateConnectionProfileResponseContent update(String id, UpdateConnectionProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

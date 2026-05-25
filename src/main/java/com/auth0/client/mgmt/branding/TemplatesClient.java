@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.GetUniversalLoginTemplateResponseContent;
 import com.auth0.client.mgmt.types.UpdateUniversalLoginTemplateRequestContent;
 
 public class TemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTemplatesClient rawClient;
@@ -22,15 +23,15 @@ public class TemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetUniversalLoginTemplateResponseContent getUniversalLogin() {
-        return this.rawClient.getUniversalLogin().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetUniversalLoginTemplateResponseContent getUniversalLogin(RequestOptions requestOptions) {
-        return this.rawClient.getUniversalLogin(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,7 +59,7 @@ public class TemplatesClient {
      * </pre></p>
      */
     public void updateUniversalLogin(UpdateUniversalLoginTemplateRequestContent request) {
-        this.rawClient.updateUniversalLogin(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,16 +86,15 @@ public class TemplatesClient {
      * &amp;lt;/html&amp;gt;
      * </pre></p>
      */
-    public void updateUniversalLogin(
-            UpdateUniversalLoginTemplateRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.updateUniversalLogin(request, requestOptions).body();
+    public void updateUniversalLogin(UpdateUniversalLoginTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void deleteUniversalLogin() {
-        this.rawClient.deleteUniversalLogin().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void deleteUniversalLogin(RequestOptions requestOptions) {
-        this.rawClient.deleteUniversalLogin(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RegisterCimdClientResponseContent.Builder.class)
 public final class RegisterCimdClientResponseContent {
+
     private final String clientId;
 
     private final CimdMappedClientFields mappedFields;
@@ -27,11 +28,7 @@ public final class RegisterCimdClientResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private RegisterCimdClientResponseContent(
-            String clientId,
-            CimdMappedClientFields mappedFields,
-            CimdValidationResult validation,
-            Map<String, Object> additionalProperties) {
+    private RegisterCimdClientResponseContent(String clientId, CimdMappedClientFields mappedFields, CimdValidationResult validation, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.mappedFields = mappedFields;
         this.validation = validation;
@@ -43,51 +40,49 @@ public final class RegisterCimdClientResponseContent {
      */
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mapped_fields")
     public CimdMappedClientFields getMappedFields() {
-        return mappedFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("validation")
     public CimdValidationResult getValidation() {
-        return validation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RegisterCimdClientResponseContent && equalTo((RegisterCimdClientResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RegisterCimdClientResponseContent other) {
-        return clientId.equals(other.clientId)
-                && mappedFields.equals(other.mappedFields)
-                && validation.equals(other.validation);
+        return clientId.equals(other.clientId) && mappedFields.equals(other.mappedFields) && validation.equals(other.validation);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientId, this.mappedFields, this.validation);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         /**
          * <p>The Auth0 client_id of the created or updated client</p>
          */
@@ -97,14 +92,17 @@ public final class RegisterCimdClientResponseContent {
     }
 
     public interface MappedFieldsStage {
+
         ValidationStage mappedFields(@NotNull CimdMappedClientFields mappedFields);
     }
 
     public interface ValidationStage {
+
         _FinalStage validation(@NotNull CimdValidationResult validation);
     }
 
     public interface _FinalStage {
+
         RegisterCimdClientResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -114,6 +112,7 @@ public final class RegisterCimdClientResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, MappedFieldsStage, ValidationStage, _FinalStage {
+
         private String clientId;
 
         private CimdMappedClientFields mappedFields;
@@ -123,14 +122,12 @@ public final class RegisterCimdClientResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(RegisterCimdClientResponseContent other) {
-            clientId(other.getClientId());
-            mappedFields(other.getMappedFields());
-            validation(other.getValidation());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -141,39 +138,34 @@ public final class RegisterCimdClientResponseContent {
         @java.lang.Override
         @JsonSetter("client_id")
         public MappedFieldsStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("mapped_fields")
         public ValidationStage mappedFields(@NotNull CimdMappedClientFields mappedFields) {
-            this.mappedFields = Objects.requireNonNull(mappedFields, "mappedFields must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("validation")
         public _FinalStage validation(@NotNull CimdValidationResult validation) {
-            this.validation = Objects.requireNonNull(validation, "validation must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public RegisterCimdClientResponseContent build() {
-            return new RegisterCimdClientResponseContent(clientId, mappedFields, validation, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordOptionsComplexity.Builder.class)
 public final class ConnectionPasswordOptionsComplexity {
+
     private final Optional<Integer> minLength;
 
     private final Optional<List<PasswordCharacterTypeEnum>> characterTypes;
@@ -35,14 +36,7 @@ public final class ConnectionPasswordOptionsComplexity {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordOptionsComplexity(
-            Optional<Integer> minLength,
-            Optional<List<PasswordCharacterTypeEnum>> characterTypes,
-            Optional<PasswordCharacterTypeRulePolicyEnum> characterTypeRule,
-            Optional<PasswordIdenticalCharactersPolicyEnum> identicalCharacters,
-            Optional<PasswordSequentialCharactersPolicyEnum> sequentialCharacters,
-            Optional<PasswordMaxLengthExceededPolicyEnum> maxLengthExceeded,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPasswordOptionsComplexity(Optional<Integer> minLength, Optional<List<PasswordCharacterTypeEnum>> characterTypes, Optional<PasswordCharacterTypeRulePolicyEnum> characterTypeRule, Optional<PasswordIdenticalCharactersPolicyEnum> identicalCharacters, Optional<PasswordSequentialCharactersPolicyEnum> sequentialCharacters, Optional<PasswordMaxLengthExceededPolicyEnum> maxLengthExceeded, Map<String, Object> additionalProperties) {
         this.minLength = minLength;
         this.characterTypes = characterTypes;
         this.characterTypeRule = characterTypeRule;
@@ -57,7 +51,7 @@ public final class ConnectionPasswordOptionsComplexity {
      */
     @JsonProperty("min_length")
     public Optional<Integer> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,72 +59,60 @@ public final class ConnectionPasswordOptionsComplexity {
      */
     @JsonProperty("character_types")
     public Optional<List<PasswordCharacterTypeEnum>> getCharacterTypes() {
-        return characterTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("character_type_rule")
     public Optional<PasswordCharacterTypeRulePolicyEnum> getCharacterTypeRule() {
-        return characterTypeRule;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("identical_characters")
     public Optional<PasswordIdenticalCharactersPolicyEnum> getIdenticalCharacters() {
-        return identicalCharacters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sequential_characters")
     public Optional<PasswordSequentialCharactersPolicyEnum> getSequentialCharacters() {
-        return sequentialCharacters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_length_exceeded")
     public Optional<PasswordMaxLengthExceededPolicyEnum> getMaxLengthExceeded() {
-        return maxLengthExceeded;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordOptionsComplexity
-                && equalTo((ConnectionPasswordOptionsComplexity) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordOptionsComplexity other) {
-        return minLength.equals(other.minLength)
-                && characterTypes.equals(other.characterTypes)
-                && characterTypeRule.equals(other.characterTypeRule)
-                && identicalCharacters.equals(other.identicalCharacters)
-                && sequentialCharacters.equals(other.sequentialCharacters)
-                && maxLengthExceeded.equals(other.maxLengthExceeded);
+        return minLength.equals(other.minLength) && characterTypes.equals(other.characterTypes) && characterTypeRule.equals(other.characterTypeRule) && identicalCharacters.equals(other.identicalCharacters) && sequentialCharacters.equals(other.sequentialCharacters) && maxLengthExceeded.equals(other.maxLengthExceeded);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.minLength,
-                this.characterTypes,
-                this.characterTypeRule,
-                this.identicalCharacters,
-                this.sequentialCharacters,
-                this.maxLengthExceeded);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> minLength = Optional.empty();
 
         private Optional<List<PasswordCharacterTypeEnum>> characterTypes = Optional.empty();
@@ -146,16 +128,11 @@ public final class ConnectionPasswordOptionsComplexity {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordOptionsComplexity other) {
-            minLength(other.getMinLength());
-            characterTypes(other.getCharacterTypes());
-            characterTypeRule(other.getCharacterTypeRule());
-            identicalCharacters(other.getIdenticalCharacters());
-            sequentialCharacters(other.getSequentialCharacters());
-            maxLengthExceeded(other.getMaxLengthExceeded());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,13 +140,11 @@ public final class ConnectionPasswordOptionsComplexity {
          */
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Integer> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Integer minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,78 +152,59 @@ public final class ConnectionPasswordOptionsComplexity {
          */
         @JsonSetter(value = "character_types", nulls = Nulls.SKIP)
         public Builder characterTypes(Optional<List<PasswordCharacterTypeEnum>> characterTypes) {
-            this.characterTypes = characterTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder characterTypes(List<PasswordCharacterTypeEnum> characterTypes) {
-            this.characterTypes = Optional.ofNullable(characterTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "character_type_rule", nulls = Nulls.SKIP)
         public Builder characterTypeRule(Optional<PasswordCharacterTypeRulePolicyEnum> characterTypeRule) {
-            this.characterTypeRule = characterTypeRule;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder characterTypeRule(PasswordCharacterTypeRulePolicyEnum characterTypeRule) {
-            this.characterTypeRule = Optional.ofNullable(characterTypeRule);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "identical_characters", nulls = Nulls.SKIP)
         public Builder identicalCharacters(Optional<PasswordIdenticalCharactersPolicyEnum> identicalCharacters) {
-            this.identicalCharacters = identicalCharacters;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identicalCharacters(PasswordIdenticalCharactersPolicyEnum identicalCharacters) {
-            this.identicalCharacters = Optional.ofNullable(identicalCharacters);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sequential_characters", nulls = Nulls.SKIP)
         public Builder sequentialCharacters(Optional<PasswordSequentialCharactersPolicyEnum> sequentialCharacters) {
-            this.sequentialCharacters = sequentialCharacters;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sequentialCharacters(PasswordSequentialCharactersPolicyEnum sequentialCharacters) {
-            this.sequentialCharacters = Optional.ofNullable(sequentialCharacters);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "max_length_exceeded", nulls = Nulls.SKIP)
         public Builder maxLengthExceeded(Optional<PasswordMaxLengthExceededPolicyEnum> maxLengthExceeded) {
-            this.maxLengthExceeded = maxLengthExceeded;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxLengthExceeded(PasswordMaxLengthExceededPolicyEnum maxLengthExceeded) {
-            this.maxLengthExceeded = Optional.ofNullable(maxLengthExceeded);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordOptionsComplexity build() {
-            return new ConnectionPasswordOptionsComplexity(
-                    minLength,
-                    characterTypes,
-                    characterTypeRule,
-                    identicalCharacters,
-                    sequentialCharacters,
-                    maxLengthExceeded,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,13 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientTokenExchangeConfiguration.Builder.class)
 public final class ClientTokenExchangeConfiguration {
+
     private final Optional<List<ClientTokenExchangeTypeEnum>> allowAnyProfileOfType;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientTokenExchangeConfiguration(
-            Optional<List<ClientTokenExchangeTypeEnum>> allowAnyProfileOfType,
-            Map<String, Object> additionalProperties) {
+    private ClientTokenExchangeConfiguration(Optional<List<ClientTokenExchangeTypeEnum>> allowAnyProfileOfType, Map<String, Object> additionalProperties) {
         this.allowAnyProfileOfType = allowAnyProfileOfType;
         this.additionalProperties = additionalProperties;
     }
@@ -37,18 +36,17 @@ public final class ClientTokenExchangeConfiguration {
      */
     @JsonProperty("allow_any_profile_of_type")
     public Optional<List<ClientTokenExchangeTypeEnum>> getAllowAnyProfileOfType() {
-        return allowAnyProfileOfType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientTokenExchangeConfiguration && equalTo((ClientTokenExchangeConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientTokenExchangeConfiguration other) {
@@ -57,30 +55,31 @@ public final class ClientTokenExchangeConfiguration {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.allowAnyProfileOfType);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<ClientTokenExchangeTypeEnum>> allowAnyProfileOfType = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientTokenExchangeConfiguration other) {
-            allowAnyProfileOfType(other.getAllowAnyProfileOfType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -88,27 +87,23 @@ public final class ClientTokenExchangeConfiguration {
          */
         @JsonSetter(value = "allow_any_profile_of_type", nulls = Nulls.SKIP)
         public Builder allowAnyProfileOfType(Optional<List<ClientTokenExchangeTypeEnum>> allowAnyProfileOfType) {
-            this.allowAnyProfileOfType = allowAnyProfileOfType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyProfileOfType(List<ClientTokenExchangeTypeEnum> allowAnyProfileOfType) {
-            this.allowAnyProfileOfType = Optional.ofNullable(allowAnyProfileOfType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientTokenExchangeConfiguration build() {
-            return new ClientTokenExchangeConfiguration(allowAnyProfileOfType, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

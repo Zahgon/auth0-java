@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.MfaPolicyEnum;
 import java.util.List;
 
 public class PoliciesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawPoliciesClient rawClient;
@@ -22,7 +23,7 @@ public class PoliciesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawPoliciesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -35,7 +36,7 @@ public class PoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public List<MfaPolicyEnum> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,7 +49,7 @@ public class PoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public List<MfaPolicyEnum> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,7 +62,7 @@ public class PoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public List<MfaPolicyEnum> set(List<MfaPolicyEnum> request) {
-        return this.rawClient.set(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,6 +75,6 @@ public class PoliciesClient {
      * <p><b>Note</b>: The <code>confidence-score</code> policy is part of the <a href="https://auth0.com/docs/secure/multi-factor-authentication/adaptive-mfa">Adaptive MFA feature</a>. Adaptive MFA requires an add-on for the Enterprise plan; review <a href="https://auth0.com/pricing">Auth0 Pricing</a> for more details.</p>
      */
     public List<MfaPolicyEnum> set(List<MfaPolicyEnum> request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

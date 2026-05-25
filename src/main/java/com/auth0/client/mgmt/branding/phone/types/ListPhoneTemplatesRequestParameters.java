@@ -22,12 +22,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListPhoneTemplatesRequestParameters.Builder.class)
 public final class ListPhoneTemplatesRequestParameters {
+
     private final OptionalNullable<Boolean> disabled;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListPhoneTemplatesRequestParameters(
-            OptionalNullable<Boolean> disabled, Map<String, Object> additionalProperties) {
+    private ListPhoneTemplatesRequestParameters(OptionalNullable<Boolean> disabled, Map<String, Object> additionalProperties) {
         this.disabled = disabled;
         this.additionalProperties = additionalProperties;
     }
@@ -37,22 +37,17 @@ public final class ListPhoneTemplatesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getDisabled() {
-        if (disabled == null) {
-            return OptionalNullable.absent();
-        }
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListPhoneTemplatesRequestParameters
-                && equalTo((ListPhoneTemplatesRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListPhoneTemplatesRequestParameters other) {
@@ -61,30 +56,31 @@ public final class ListPhoneTemplatesRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.disabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<Boolean> disabled = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListPhoneTemplatesRequestParameters other) {
-            disabled(other.getDisabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -92,47 +88,31 @@ public final class ListPhoneTemplatesRequestParameters {
          */
         @JsonSetter(value = "disabled", nulls = Nulls.SKIP)
         public Builder disabled(@Nullable OptionalNullable<Boolean> disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = OptionalNullable.of(disabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disabled(Optional<Boolean> disabled) {
-            if (disabled.isPresent()) {
-                this.disabled = OptionalNullable.of(disabled.get());
-            } else {
-                this.disabled = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disabled(com.auth0.client.mgmt.core.Nullable<Boolean> disabled) {
-            if (disabled.isNull()) {
-                this.disabled = OptionalNullable.ofNull();
-            } else if (disabled.isEmpty()) {
-                this.disabled = OptionalNullable.absent();
-            } else {
-                this.disabled = OptionalNullable.of(disabled.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListPhoneTemplatesRequestParameters build() {
-            return new ListPhoneTemplatesRequestParameters(disabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

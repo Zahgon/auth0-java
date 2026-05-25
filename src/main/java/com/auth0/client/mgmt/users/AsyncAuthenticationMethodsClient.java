@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncAuthenticationMethodsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawAuthenticationMethodsClient rawClient;
@@ -32,54 +33,49 @@ public class AsyncAuthenticationMethodsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawAuthenticationMethodsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
     public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
-    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
-    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(
-            String id, ListUserAuthenticationMethodsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(String id, ListUserAuthenticationMethodsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of authentication methods associated with a specified user.
      */
-    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(
-            String id, ListUserAuthenticationMethodsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserAuthenticationMethod>> list(String id, ListUserAuthenticationMethodsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an authentication method. Authentication methods created via this endpoint will be auto confirmed and should already have verification completed.
      */
-    public CompletableFuture<CreateUserAuthenticationMethodResponseContent> create(
-            String id, CreateUserAuthenticationMethodRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateUserAuthenticationMethodResponseContent> create(String id, CreateUserAuthenticationMethodRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an authentication method. Authentication methods created via this endpoint will be auto confirmed and should already have verification completed.
      */
-    public CompletableFuture<CreateUserAuthenticationMethodResponseContent> create(
-            String id, CreateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateUserAuthenticationMethodResponseContent> create(String id, CreateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,9 +83,8 @@ public class AsyncAuthenticationMethodsClient {
      * <pre><code><b>Note</b>: Authentication methods supplied through this action do not iterate on existing methods. Instead, any methods passed will overwrite the user&amp;#8217s existing settings.
      * </code></pre>
      */
-    public CompletableFuture<List<SetUserAuthenticationMethodResponseContent>> set(
-            String id, List<SetUserAuthenticationMethods> request) {
-        return this.rawClient.set(id, request).thenApply(response -> response.body());
+    public CompletableFuture<List<SetUserAuthenticationMethodResponseContent>> set(String id, List<SetUserAuthenticationMethods> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,82 +92,71 @@ public class AsyncAuthenticationMethodsClient {
      * <pre><code><b>Note</b>: Authentication methods supplied through this action do not iterate on existing methods. Instead, any methods passed will overwrite the user&amp;#8217s existing settings.
      * </code></pre>
      */
-    public CompletableFuture<List<SetUserAuthenticationMethodResponseContent>> set(
-            String id, List<SetUserAuthenticationMethods> request, RequestOptions requestOptions) {
-        return this.rawClient.set(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<SetUserAuthenticationMethodResponseContent>> set(String id, List<SetUserAuthenticationMethods> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authentication methods (i.e., enrolled MFA factors) from the specified user account. This action cannot be undone.
      */
     public CompletableFuture<Void> deleteAll(String id) {
-        return this.rawClient.deleteAll(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove all authentication methods (i.e., enrolled MFA factors) from the specified user account. This action cannot be undone.
      */
     public CompletableFuture<Void> deleteAll(String id, RequestOptions requestOptions) {
-        return this.rawClient.deleteAll(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetUserAuthenticationMethodResponseContent> get(String id, String authenticationMethodId) {
-        return this.rawClient.get(id, authenticationMethodId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<GetUserAuthenticationMethodResponseContent> get(
-            String id, String authenticationMethodId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, authenticationMethodId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetUserAuthenticationMethodResponseContent> get(String id, String authenticationMethodId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public CompletableFuture<Void> delete(String id, String authenticationMethodId) {
-        return this.rawClient.delete(id, authenticationMethodId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
     public CompletableFuture<Void> delete(String id, String authenticationMethodId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, authenticationMethodId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(
-            String id, String authenticationMethodId) {
-        return this.rawClient.update(id, authenticationMethodId).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(String id, String authenticationMethodId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(
-            String id, String authenticationMethodId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, authenticationMethodId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(String id, String authenticationMethodId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(
-            String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request) {
-        return this.rawClient.update(id, authenticationMethodId, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the authentication method with the given ID from the specified user. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api">Manage Authentication Methods with Management API</a>.
      */
-    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(
-            String id,
-            String authenticationMethodId,
-            UpdateUserAuthenticationMethodRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient
-                .update(id, authenticationMethodId, request, requestOptions)
-                .thenApply(response -> response.body());
+    public CompletableFuture<UpdateUserAuthenticationMethodResponseContent> update(String id, String authenticationMethodId, UpdateUserAuthenticationMethodRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionMappingModeEnumOkta {
-    public static final ConnectionMappingModeEnumOkta USE_MAP =
-            new ConnectionMappingModeEnumOkta(Value.USE_MAP, "use_map");
 
-    public static final ConnectionMappingModeEnumOkta BASIC_PROFILE =
-            new ConnectionMappingModeEnumOkta(Value.BASIC_PROFILE, "basic_profile");
+    public static final ConnectionMappingModeEnumOkta USE_MAP = new ConnectionMappingModeEnumOkta(Value.USE_MAP, "use_map");
+
+    public static final ConnectionMappingModeEnumOkta BASIC_PROFILE = new ConnectionMappingModeEnumOkta(Value.BASIC_PROFILE, "basic_profile");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionMappingModeEnumOkta {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionMappingModeEnumOkta
-                        && this.string.equals(((ConnectionMappingModeEnumOkta) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case USE_MAP:
-                return visitor.visitUseMap();
-            case BASIC_PROFILE:
-                return visitor.visitBasicProfile();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionMappingModeEnumOkta valueOf(String value) {
-        switch (value) {
-            case "use_map":
-                return USE_MAP;
-            case "basic_profile":
-                return BASIC_PROFILE;
-            default:
-                return new ConnectionMappingModeEnumOkta(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BASIC_PROFILE,
 
-        USE_MAP,
-
-        UNKNOWN
+        BASIC_PROFILE, USE_MAP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBasicProfile();
 
         T visitUseMap();

@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = AculOrganizationFilter.Deserializer.class)
 public final class AculOrganizationFilter {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class AculOrganizationFilter {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((AculOrganizationFilterById) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((AculOrganizationFilterByMetadata) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AculOrganizationFilter && equalTo((AculOrganizationFilter) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AculOrganizationFilter other) {
@@ -52,49 +47,38 @@ public final class AculOrganizationFilter {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AculOrganizationFilter of(AculOrganizationFilterById value) {
-        return new AculOrganizationFilter(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AculOrganizationFilter of(AculOrganizationFilterByMetadata value) {
-        return new AculOrganizationFilter(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(AculOrganizationFilterById value);
 
         T visit(AculOrganizationFilterByMetadata value);
     }
 
     static final class Deserializer extends StdDeserializer<AculOrganizationFilter> {
+
         Deserializer() {
             super(AculOrganizationFilter.class);
         }
 
         @java.lang.Override
         public AculOrganizationFilter deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, AculOrganizationFilterById.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("metadata")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, AculOrganizationFilterByMetadata.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

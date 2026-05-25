@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class RefreshTokenRotationTypeEnum {
-    public static final RefreshTokenRotationTypeEnum ROTATING =
-            new RefreshTokenRotationTypeEnum(Value.ROTATING, "rotating");
 
-    public static final RefreshTokenRotationTypeEnum NON_ROTATING =
-            new RefreshTokenRotationTypeEnum(Value.NON_ROTATING, "non-rotating");
+    public static final RefreshTokenRotationTypeEnum ROTATING = new RefreshTokenRotationTypeEnum(Value.ROTATING, "rotating");
+
+    public static final RefreshTokenRotationTypeEnum NON_ROTATING = new RefreshTokenRotationTypeEnum(Value.NON_ROTATING, "non-rotating");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class RefreshTokenRotationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof RefreshTokenRotationTypeEnum
-                        && this.string.equals(((RefreshTokenRotationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ROTATING:
-                return visitor.visitRotating();
-            case NON_ROTATING:
-                return visitor.visitNonRotating();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static RefreshTokenRotationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "rotating":
-                return ROTATING;
-            case "non-rotating":
-                return NON_ROTATING;
-            default:
-                return new RefreshTokenRotationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ROTATING,
 
-        NON_ROTATING,
-
-        UNKNOWN
+        ROTATING, NON_ROTATING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRotating();
 
         T visitNonRotating();

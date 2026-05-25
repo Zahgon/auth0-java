@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PermissionRequestPayload.Builder.class)
 public final class PermissionRequestPayload {
+
     private final String resourceServerIdentifier;
 
     private final String permissionName;
 
     private final Map<String, Object> additionalProperties;
 
-    private PermissionRequestPayload(
-            String resourceServerIdentifier, String permissionName, Map<String, Object> additionalProperties) {
+    private PermissionRequestPayload(String resourceServerIdentifier, String permissionName, Map<String, Object> additionalProperties) {
         this.resourceServerIdentifier = resourceServerIdentifier;
         this.permissionName = permissionName;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class PermissionRequestPayload {
      */
     @JsonProperty("resource_server_identifier")
     public String getResourceServerIdentifier() {
-        return resourceServerIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,40 +45,39 @@ public final class PermissionRequestPayload {
      */
     @JsonProperty("permission_name")
     public String getPermissionName() {
-        return permissionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PermissionRequestPayload && equalTo((PermissionRequestPayload) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PermissionRequestPayload other) {
-        return resourceServerIdentifier.equals(other.resourceServerIdentifier)
-                && permissionName.equals(other.permissionName);
+        return resourceServerIdentifier.equals(other.resourceServerIdentifier) && permissionName.equals(other.permissionName);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.resourceServerIdentifier, this.permissionName);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ResourceServerIdentifierStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ResourceServerIdentifierStage {
+
         /**
          * <p>Resource server (API) identifier that this permission is for.</p>
          */
@@ -88,6 +87,7 @@ public final class PermissionRequestPayload {
     }
 
     public interface PermissionNameStage {
+
         /**
          * <p>Name of this permission.</p>
          */
@@ -95,6 +95,7 @@ public final class PermissionRequestPayload {
     }
 
     public interface _FinalStage {
+
         PermissionRequestPayload build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +105,7 @@ public final class PermissionRequestPayload {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ResourceServerIdentifierStage, PermissionNameStage, _FinalStage {
+
         private String resourceServerIdentifier;
 
         private String permissionName;
@@ -111,13 +113,12 @@ public final class PermissionRequestPayload {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(PermissionRequestPayload other) {
-            resourceServerIdentifier(other.getResourceServerIdentifier());
-            permissionName(other.getPermissionName());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,9 +129,7 @@ public final class PermissionRequestPayload {
         @java.lang.Override
         @JsonSetter("resource_server_identifier")
         public PermissionNameStage resourceServerIdentifier(@NotNull String resourceServerIdentifier) {
-            this.resourceServerIdentifier =
-                    Objects.requireNonNull(resourceServerIdentifier, "resourceServerIdentifier must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -141,25 +140,22 @@ public final class PermissionRequestPayload {
         @java.lang.Override
         @JsonSetter("permission_name")
         public _FinalStage permissionName(@NotNull String permissionName) {
-            this.permissionName = Objects.requireNonNull(permissionName, "permissionName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public PermissionRequestPayload build() {
-            return new PermissionRequestPayload(resourceServerIdentifier, permissionName, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

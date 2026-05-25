@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingThemeWidget.Builder.class)
 public final class BrandingThemeWidget {
+
     private final BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment;
 
     private final double logoHeight;
@@ -31,13 +32,7 @@ public final class BrandingThemeWidget {
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingThemeWidget(
-            BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment,
-            double logoHeight,
-            BrandingThemeWidgetLogoPositionEnum logoPosition,
-            String logoUrl,
-            BrandingThemeWidgetSocialButtonsLayoutEnum socialButtonsLayout,
-            Map<String, Object> additionalProperties) {
+    private BrandingThemeWidget(BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment, double logoHeight, BrandingThemeWidgetLogoPositionEnum logoPosition, String logoUrl, BrandingThemeWidgetSocialButtonsLayoutEnum socialButtonsLayout, Map<String, Object> additionalProperties) {
         this.headerTextAlignment = headerTextAlignment;
         this.logoHeight = logoHeight;
         this.logoPosition = logoPosition;
@@ -48,7 +43,7 @@ public final class BrandingThemeWidget {
 
     @JsonProperty("header_text_alignment")
     public BrandingThemeWidgetHeaderTextAlignmentEnum getHeaderTextAlignment() {
-        return headerTextAlignment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,12 +51,12 @@ public final class BrandingThemeWidget {
      */
     @JsonProperty("logo_height")
     public double getLogoHeight() {
-        return logoHeight;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("logo_position")
     public BrandingThemeWidgetLogoPositionEnum getLogoPosition() {
-        return logoPosition;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,55 +64,51 @@ public final class BrandingThemeWidget {
      */
     @JsonProperty("logo_url")
     public String getLogoUrl() {
-        return logoUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("social_buttons_layout")
     public BrandingThemeWidgetSocialButtonsLayoutEnum getSocialButtonsLayout() {
-        return socialButtonsLayout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingThemeWidget && equalTo((BrandingThemeWidget) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingThemeWidget other) {
-        return headerTextAlignment.equals(other.headerTextAlignment)
-                && logoHeight == other.logoHeight
-                && logoPosition.equals(other.logoPosition)
-                && logoUrl.equals(other.logoUrl)
-                && socialButtonsLayout.equals(other.socialButtonsLayout);
+        return headerTextAlignment.equals(other.headerTextAlignment) && logoHeight == other.logoHeight && logoPosition.equals(other.logoPosition) && logoUrl.equals(other.logoUrl) && socialButtonsLayout.equals(other.socialButtonsLayout);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.headerTextAlignment, this.logoHeight, this.logoPosition, this.logoUrl, this.socialButtonsLayout);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static HeaderTextAlignmentStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface HeaderTextAlignmentStage {
+
         LogoHeightStage headerTextAlignment(@NotNull BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment);
 
         Builder from(BrandingThemeWidget other);
     }
 
     public interface LogoHeightStage {
+
         /**
          * <p>Logo height</p>
          */
@@ -125,10 +116,12 @@ public final class BrandingThemeWidget {
     }
 
     public interface LogoPositionStage {
+
         LogoUrlStage logoPosition(@NotNull BrandingThemeWidgetLogoPositionEnum logoPosition);
     }
 
     public interface LogoUrlStage {
+
         /**
          * <p>Logo url</p>
          */
@@ -136,10 +129,12 @@ public final class BrandingThemeWidget {
     }
 
     public interface SocialButtonsLayoutStage {
+
         _FinalStage socialButtonsLayout(@NotNull BrandingThemeWidgetSocialButtonsLayoutEnum socialButtonsLayout);
     }
 
     public interface _FinalStage {
+
         BrandingThemeWidget build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -148,13 +143,8 @@ public final class BrandingThemeWidget {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements HeaderTextAlignmentStage,
-                    LogoHeightStage,
-                    LogoPositionStage,
-                    LogoUrlStage,
-                    SocialButtonsLayoutStage,
-                    _FinalStage {
+    public static final class Builder implements HeaderTextAlignmentStage, LogoHeightStage, LogoPositionStage, LogoUrlStage, SocialButtonsLayoutStage, _FinalStage {
+
         private BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment;
 
         private double logoHeight;
@@ -168,25 +158,18 @@ public final class BrandingThemeWidget {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(BrandingThemeWidget other) {
-            headerTextAlignment(other.getHeaderTextAlignment());
-            logoHeight(other.getLogoHeight());
-            logoPosition(other.getLogoPosition());
-            logoUrl(other.getLogoUrl());
-            socialButtonsLayout(other.getSocialButtonsLayout());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("header_text_alignment")
-        public LogoHeightStage headerTextAlignment(
-                @NotNull BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment) {
-            this.headerTextAlignment =
-                    Objects.requireNonNull(headerTextAlignment, "headerTextAlignment must not be null");
-            return this;
+        public LogoHeightStage headerTextAlignment(@NotNull BrandingThemeWidgetHeaderTextAlignmentEnum headerTextAlignment) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -197,15 +180,13 @@ public final class BrandingThemeWidget {
         @java.lang.Override
         @JsonSetter("logo_height")
         public LogoPositionStage logoHeight(double logoHeight) {
-            this.logoHeight = logoHeight;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("logo_position")
         public LogoUrlStage logoPosition(@NotNull BrandingThemeWidgetLogoPositionEnum logoPosition) {
-            this.logoPosition = Objects.requireNonNull(logoPosition, "logoPosition must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -216,35 +197,28 @@ public final class BrandingThemeWidget {
         @java.lang.Override
         @JsonSetter("logo_url")
         public SocialButtonsLayoutStage logoUrl(@NotNull String logoUrl) {
-            this.logoUrl = Objects.requireNonNull(logoUrl, "logoUrl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("social_buttons_layout")
-        public _FinalStage socialButtonsLayout(
-                @NotNull BrandingThemeWidgetSocialButtonsLayoutEnum socialButtonsLayout) {
-            this.socialButtonsLayout =
-                    Objects.requireNonNull(socialButtonsLayout, "socialButtonsLayout must not be null");
-            return this;
+        public _FinalStage socialButtonsLayout(@NotNull BrandingThemeWidgetSocialButtonsLayoutEnum socialButtonsLayout) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public BrandingThemeWidget build() {
-            return new BrandingThemeWidget(
-                    headerTextAlignment, logoHeight, logoPosition, logoUrl, socialButtonsLayout, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

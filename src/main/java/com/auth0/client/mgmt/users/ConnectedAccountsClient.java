@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.ConnectedAccount;
 import com.auth0.client.mgmt.users.types.GetUserConnectedAccountsRequestParameters;
 
 public class ConnectedAccountsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectedAccountsClient rawClient;
@@ -23,35 +24,34 @@ public class ConnectedAccountsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectedAccountsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
     public SyncPagingIterable<ConnectedAccount> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
     public SyncPagingIterable<ConnectedAccount> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
     public SyncPagingIterable<ConnectedAccount> list(String id, GetUserConnectedAccountsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
-    public SyncPagingIterable<ConnectedAccount> list(
-            String id, GetUserConnectedAccountsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<ConnectedAccount> list(String id, GetUserConnectedAccountsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

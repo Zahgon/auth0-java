@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamEventGridSink.Builder.class)
 public final class LogStreamEventGridSink {
+
     private final String azureSubscriptionId;
 
     private final LogStreamEventGridRegionEnum azureRegion;
@@ -31,12 +32,7 @@ public final class LogStreamEventGridSink {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamEventGridSink(
-            String azureSubscriptionId,
-            LogStreamEventGridRegionEnum azureRegion,
-            String azureResourceGroup,
-            Optional<String> azurePartnerTopic,
-            Map<String, Object> additionalProperties) {
+    private LogStreamEventGridSink(String azureSubscriptionId, LogStreamEventGridRegionEnum azureRegion, String azureResourceGroup, Optional<String> azurePartnerTopic, Map<String, Object> additionalProperties) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.azureRegion = azureRegion;
         this.azureResourceGroup = azureResourceGroup;
@@ -49,12 +45,12 @@ public final class LogStreamEventGridSink {
      */
     @JsonProperty("azureSubscriptionId")
     public String getAzureSubscriptionId() {
-        return azureSubscriptionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("azureRegion")
     public LogStreamEventGridRegionEnum getAzureRegion() {
-        return azureRegion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class LogStreamEventGridSink {
      */
     @JsonProperty("azureResourceGroup")
     public String getAzureResourceGroup() {
-        return azureResourceGroup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,43 +66,39 @@ public final class LogStreamEventGridSink {
      */
     @JsonProperty("azurePartnerTopic")
     public Optional<String> getAzurePartnerTopic() {
-        return azurePartnerTopic;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamEventGridSink && equalTo((LogStreamEventGridSink) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamEventGridSink other) {
-        return azureSubscriptionId.equals(other.azureSubscriptionId)
-                && azureRegion.equals(other.azureRegion)
-                && azureResourceGroup.equals(other.azureResourceGroup)
-                && azurePartnerTopic.equals(other.azurePartnerTopic);
+        return azureSubscriptionId.equals(other.azureSubscriptionId) && azureRegion.equals(other.azureRegion) && azureResourceGroup.equals(other.azureResourceGroup) && azurePartnerTopic.equals(other.azurePartnerTopic);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.azureSubscriptionId, this.azureRegion, this.azureResourceGroup, this.azurePartnerTopic);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AzureSubscriptionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AzureSubscriptionIdStage {
+
         /**
          * <p>Subscription ID</p>
          */
@@ -116,10 +108,12 @@ public final class LogStreamEventGridSink {
     }
 
     public interface AzureRegionStage {
+
         AzureResourceGroupStage azureRegion(@NotNull LogStreamEventGridRegionEnum azureRegion);
     }
 
     public interface AzureResourceGroupStage {
+
         /**
          * <p>Resource Group</p>
          */
@@ -127,6 +121,7 @@ public final class LogStreamEventGridSink {
     }
 
     public interface _FinalStage {
+
         LogStreamEventGridSink build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -142,8 +137,8 @@ public final class LogStreamEventGridSink {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements AzureSubscriptionIdStage, AzureRegionStage, AzureResourceGroupStage, _FinalStage {
+    public static final class Builder implements AzureSubscriptionIdStage, AzureRegionStage, AzureResourceGroupStage, _FinalStage {
+
         private String azureSubscriptionId;
 
         private LogStreamEventGridRegionEnum azureRegion;
@@ -155,15 +150,12 @@ public final class LogStreamEventGridSink {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamEventGridSink other) {
-            azureSubscriptionId(other.getAzureSubscriptionId());
-            azureRegion(other.getAzureRegion());
-            azureResourceGroup(other.getAzureResourceGroup());
-            azurePartnerTopic(other.getAzurePartnerTopic());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -174,16 +166,13 @@ public final class LogStreamEventGridSink {
         @java.lang.Override
         @JsonSetter("azureSubscriptionId")
         public AzureRegionStage azureSubscriptionId(@NotNull String azureSubscriptionId) {
-            this.azureSubscriptionId =
-                    Objects.requireNonNull(azureSubscriptionId, "azureSubscriptionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("azureRegion")
         public AzureResourceGroupStage azureRegion(@NotNull LogStreamEventGridRegionEnum azureRegion) {
-            this.azureRegion = Objects.requireNonNull(azureRegion, "azureRegion must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -194,8 +183,7 @@ public final class LogStreamEventGridSink {
         @java.lang.Override
         @JsonSetter("azureResourceGroup")
         public _FinalStage azureResourceGroup(@NotNull String azureResourceGroup) {
-            this.azureResourceGroup = Objects.requireNonNull(azureResourceGroup, "azureResourceGroup must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -204,8 +192,7 @@ public final class LogStreamEventGridSink {
          */
         @java.lang.Override
         public _FinalStage azurePartnerTopic(String azurePartnerTopic) {
-            this.azurePartnerTopic = Optional.ofNullable(azurePartnerTopic);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -214,26 +201,22 @@ public final class LogStreamEventGridSink {
         @java.lang.Override
         @JsonSetter(value = "azurePartnerTopic", nulls = Nulls.SKIP)
         public _FinalStage azurePartnerTopic(Optional<String> azurePartnerTopic) {
-            this.azurePartnerTopic = azurePartnerTopic;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamEventGridSink build() {
-            return new LogStreamEventGridSink(
-                    azureSubscriptionId, azureRegion, azureResourceGroup, azurePartnerTopic, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

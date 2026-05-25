@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UniversalLoginExperienceEnum {
+
     public static final UniversalLoginExperienceEnum NEW = new UniversalLoginExperienceEnum(Value.NEW, "new");
 
-    public static final UniversalLoginExperienceEnum CLASSIC =
-            new UniversalLoginExperienceEnum(Value.CLASSIC, "classic");
+    public static final UniversalLoginExperienceEnum CLASSIC = new UniversalLoginExperienceEnum(Value.CLASSIC, "classic");
 
     private final Value value;
 
@@ -22,60 +22,41 @@ public final class UniversalLoginExperienceEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UniversalLoginExperienceEnum
-                        && this.string.equals(((UniversalLoginExperienceEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NEW:
-                return visitor.visitNew();
-            case CLASSIC:
-                return visitor.visitClassic();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UniversalLoginExperienceEnum valueOf(String value) {
-        switch (value) {
-            case "new":
-                return NEW;
-            case "classic":
-                return CLASSIC;
-            default:
-                return new UniversalLoginExperienceEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NEW,
 
-        CLASSIC,
-
-        UNKNOWN
+        NEW, CLASSIC, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNew();
 
         T visitClassic();

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJwtVerifyJwtAction {
-    public static final FlowActionJwtVerifyJwtAction VERIFY_JWT =
-            new FlowActionJwtVerifyJwtAction(Value.VERIFY_JWT, "VERIFY_JWT");
+
+    public static final FlowActionJwtVerifyJwtAction VERIFY_JWT = new FlowActionJwtVerifyJwtAction(Value.VERIFY_JWT, "VERIFY_JWT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionJwtVerifyJwtAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJwtVerifyJwtAction
-                        && this.string.equals(((FlowActionJwtVerifyJwtAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VERIFY_JWT:
-                return visitor.visitVerifyJwt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJwtVerifyJwtAction valueOf(String value) {
-        switch (value) {
-            case "VERIFY_JWT":
-                return VERIFY_JWT;
-            default:
-                return new FlowActionJwtVerifyJwtAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        VERIFY_JWT,
 
-        UNKNOWN
+        VERIFY_JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitVerifyJwt();
 
         T visitUnknown(String unknownType);

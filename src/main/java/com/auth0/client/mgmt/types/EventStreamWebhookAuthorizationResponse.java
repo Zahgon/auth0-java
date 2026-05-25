@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EventStreamWebhookAuthorizationResponse.Deserializer.class)
 public final class EventStreamWebhookAuthorizationResponse {
+
     private final Object value;
 
     private final int type;
@@ -27,26 +28,17 @@ public final class EventStreamWebhookAuthorizationResponse {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EventStreamWebhookBasicAuth) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EventStreamWebhookBearerAuth) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((EventStreamWebhookCustomHeaderAuth) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamWebhookAuthorizationResponse
-                && equalTo((EventStreamWebhookAuthorizationResponse) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamWebhookAuthorizationResponse other) {
@@ -55,27 +47,28 @@ public final class EventStreamWebhookAuthorizationResponse {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamWebhookAuthorizationResponse of(EventStreamWebhookBasicAuth value) {
-        return new EventStreamWebhookAuthorizationResponse(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamWebhookAuthorizationResponse of(EventStreamWebhookBearerAuth value) {
-        return new EventStreamWebhookAuthorizationResponse(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamWebhookAuthorizationResponse of(EventStreamWebhookCustomHeaderAuth value) {
-        return new EventStreamWebhookAuthorizationResponse(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EventStreamWebhookBasicAuth value);
 
         T visit(EventStreamWebhookBearerAuth value);
@@ -84,37 +77,14 @@ public final class EventStreamWebhookAuthorizationResponse {
     }
 
     static final class Deserializer extends StdDeserializer<EventStreamWebhookAuthorizationResponse> {
+
         Deserializer() {
             super(EventStreamWebhookAuthorizationResponse.class);
         }
 
         @java.lang.Override
-        public EventStreamWebhookAuthorizationResponse deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("method")
-                    && ((Map<?, ?>) value).containsKey("username")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamWebhookBasicAuth.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("method")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamWebhookBearerAuth.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("method")
-                    && ((Map<?, ?>) value).containsKey("header_key")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, EventStreamWebhookCustomHeaderAuth.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public EventStreamWebhookAuthorizationResponse deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

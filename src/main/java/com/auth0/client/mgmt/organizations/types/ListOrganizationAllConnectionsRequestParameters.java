@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListOrganizationAllConnectionsRequestParameters.Builder.class)
 public final class ListOrganizationAllConnectionsRequestParameters {
+
     private final OptionalNullable<Integer> page;
 
     private final OptionalNullable<Integer> perPage;
@@ -32,12 +33,7 @@ public final class ListOrganizationAllConnectionsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListOrganizationAllConnectionsRequestParameters(
-            OptionalNullable<Integer> page,
-            OptionalNullable<Integer> perPage,
-            OptionalNullable<Boolean> includeTotals,
-            OptionalNullable<Boolean> isEnabled,
-            Map<String, Object> additionalProperties) {
+    private ListOrganizationAllConnectionsRequestParameters(OptionalNullable<Integer> page, OptionalNullable<Integer> perPage, OptionalNullable<Boolean> includeTotals, OptionalNullable<Boolean> isEnabled, Map<String, Object> additionalProperties) {
         this.page = page;
         this.perPage = perPage;
         this.includeTotals = includeTotals;
@@ -50,10 +46,7 @@ public final class ListOrganizationAllConnectionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPage() {
-        if (page == null) {
-            return OptionalNullable.absent();
-        }
-        return page;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,10 +54,7 @@ public final class ListOrganizationAllConnectionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPerPage() {
-        if (perPage == null) {
-            return OptionalNullable.absent();
-        }
-        return perPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,10 +62,7 @@ public final class ListOrganizationAllConnectionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeTotals() {
-        if (includeTotals == null) {
-            return OptionalNullable.absent();
-        }
-        return includeTotals;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,47 +70,40 @@ public final class ListOrganizationAllConnectionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIsEnabled() {
-        if (isEnabled == null) {
-            return OptionalNullable.absent();
-        }
-        return isEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListOrganizationAllConnectionsRequestParameters
-                && equalTo((ListOrganizationAllConnectionsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListOrganizationAllConnectionsRequestParameters other) {
-        return page.equals(other.page)
-                && perPage.equals(other.perPage)
-                && includeTotals.equals(other.includeTotals)
-                && isEnabled.equals(other.isEnabled);
+        return page.equals(other.page) && perPage.equals(other.perPage) && includeTotals.equals(other.includeTotals) && isEnabled.equals(other.isEnabled);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.page, this.perPage, this.includeTotals, this.isEnabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<Integer> page = OptionalNullable.absent();
 
         private OptionalNullable<Integer> perPage = OptionalNullable.absent();
@@ -135,14 +115,11 @@ public final class ListOrganizationAllConnectionsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListOrganizationAllConnectionsRequestParameters other) {
-            page(other.getPage());
-            perPage(other.getPerPage());
-            includeTotals(other.getIncludeTotals());
-            isEnabled(other.getIsEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,33 +127,19 @@ public final class ListOrganizationAllConnectionsRequestParameters {
          */
         @JsonSetter(value = "page", nulls = Nulls.SKIP)
         public Builder page(@Nullable OptionalNullable<Integer> page) {
-            this.page = page;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Integer page) {
-            this.page = OptionalNullable.of(page);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Optional<Integer> page) {
-            if (page.isPresent()) {
-                this.page = OptionalNullable.of(page.get());
-            } else {
-                this.page = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(com.auth0.client.mgmt.core.Nullable<Integer> page) {
-            if (page.isNull()) {
-                this.page = OptionalNullable.ofNull();
-            } else if (page.isEmpty()) {
-                this.page = OptionalNullable.absent();
-            } else {
-                this.page = OptionalNullable.of(page.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,33 +147,19 @@ public final class ListOrganizationAllConnectionsRequestParameters {
          */
         @JsonSetter(value = "per_page", nulls = Nulls.SKIP)
         public Builder perPage(@Nullable OptionalNullable<Integer> perPage) {
-            this.perPage = perPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Integer perPage) {
-            this.perPage = OptionalNullable.of(perPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Optional<Integer> perPage) {
-            if (perPage.isPresent()) {
-                this.perPage = OptionalNullable.of(perPage.get());
-            } else {
-                this.perPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(com.auth0.client.mgmt.core.Nullable<Integer> perPage) {
-            if (perPage.isNull()) {
-                this.perPage = OptionalNullable.ofNull();
-            } else if (perPage.isEmpty()) {
-                this.perPage = OptionalNullable.absent();
-            } else {
-                this.perPage = OptionalNullable.of(perPage.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -218,33 +167,19 @@ public final class ListOrganizationAllConnectionsRequestParameters {
          */
         @JsonSetter(value = "include_totals", nulls = Nulls.SKIP)
         public Builder includeTotals(@Nullable OptionalNullable<Boolean> includeTotals) {
-            this.includeTotals = includeTotals;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Boolean includeTotals) {
-            this.includeTotals = OptionalNullable.of(includeTotals);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Optional<Boolean> includeTotals) {
-            if (includeTotals.isPresent()) {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            } else {
-                this.includeTotals = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(com.auth0.client.mgmt.core.Nullable<Boolean> includeTotals) {
-            if (includeTotals.isNull()) {
-                this.includeTotals = OptionalNullable.ofNull();
-            } else if (includeTotals.isEmpty()) {
-                this.includeTotals = OptionalNullable.absent();
-            } else {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -252,48 +187,31 @@ public final class ListOrganizationAllConnectionsRequestParameters {
          */
         @JsonSetter(value = "is_enabled", nulls = Nulls.SKIP)
         public Builder isEnabled(@Nullable OptionalNullable<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = OptionalNullable.of(isEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isEnabled(Optional<Boolean> isEnabled) {
-            if (isEnabled.isPresent()) {
-                this.isEnabled = OptionalNullable.of(isEnabled.get());
-            } else {
-                this.isEnabled = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isEnabled(com.auth0.client.mgmt.core.Nullable<Boolean> isEnabled) {
-            if (isEnabled.isNull()) {
-                this.isEnabled = OptionalNullable.ofNull();
-            } else if (isEnabled.isEmpty()) {
-                this.isEnabled = OptionalNullable.absent();
-            } else {
-                this.isEnabled = OptionalNullable.of(isEnabled.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListOrganizationAllConnectionsRequestParameters build() {
-            return new ListOrganizationAllConnectionsRequestParameters(
-                    page, perPage, includeTotals, isEnabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

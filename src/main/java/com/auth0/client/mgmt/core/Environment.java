@@ -4,6 +4,7 @@
 package com.auth0.client.mgmt.core;
 
 public final class Environment {
+
     public static final Environment DEFAULT = new Environment("https://%7BTENANT%7D.auth0.com/api/v2");
 
     private final String url;
@@ -13,10 +14,10 @@ public final class Environment {
     }
 
     public String getUrl() {
-        return this.url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Environment custom(String url) {
-        return new Environment(url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

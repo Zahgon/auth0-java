@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypeResendButtonConst {
-    public static final FormBlockTypeResendButtonConst RESEND_BUTTON =
-            new FormBlockTypeResendButtonConst(Value.RESEND_BUTTON, "RESEND_BUTTON");
+
+    public static final FormBlockTypeResendButtonConst RESEND_BUTTON = new FormBlockTypeResendButtonConst(Value.RESEND_BUTTON, "RESEND_BUTTON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormBlockTypeResendButtonConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypeResendButtonConst
-                        && this.string.equals(((FormBlockTypeResendButtonConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RESEND_BUTTON:
-                return visitor.visitResendButton();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypeResendButtonConst valueOf(String value) {
-        switch (value) {
-            case "RESEND_BUTTON":
-                return RESEND_BUTTON;
-            default:
-                return new FormBlockTypeResendButtonConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RESEND_BUTTON,
 
-        UNKNOWN
+        RESEND_BUTTON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitResendButton();
 
         T visitUnknown(String unknownType);

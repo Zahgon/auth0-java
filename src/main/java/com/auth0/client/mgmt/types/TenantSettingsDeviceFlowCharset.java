@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class TenantSettingsDeviceFlowCharset {
-    public static final TenantSettingsDeviceFlowCharset DIGITS =
-            new TenantSettingsDeviceFlowCharset(Value.DIGITS, "digits");
 
-    public static final TenantSettingsDeviceFlowCharset BASE20 =
-            new TenantSettingsDeviceFlowCharset(Value.BASE20, "base20");
+    public static final TenantSettingsDeviceFlowCharset DIGITS = new TenantSettingsDeviceFlowCharset(Value.DIGITS, "digits");
+
+    public static final TenantSettingsDeviceFlowCharset BASE20 = new TenantSettingsDeviceFlowCharset(Value.BASE20, "base20");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class TenantSettingsDeviceFlowCharset {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof TenantSettingsDeviceFlowCharset
-                        && this.string.equals(((TenantSettingsDeviceFlowCharset) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DIGITS:
-                return visitor.visitDigits();
-            case BASE20:
-                return visitor.visitBase20();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static TenantSettingsDeviceFlowCharset valueOf(String value) {
-        switch (value) {
-            case "digits":
-                return DIGITS;
-            case "base20":
-                return BASE20;
-            default:
-                return new TenantSettingsDeviceFlowCharset(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BASE20,
 
-        DIGITS,
-
-        UNKNOWN
+        BASE20, DIGITS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBase20();
 
         T visitDigits();

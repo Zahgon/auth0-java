@@ -18,6 +18,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormNodeCoordinates.Builder.class)
 public final class FormNodeCoordinates {
+
     private final int x;
 
     private final int y;
@@ -32,23 +33,22 @@ public final class FormNodeCoordinates {
 
     @JsonProperty("x")
     public int getX() {
-        return x;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("y")
     public int getY() {
-        return y;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormNodeCoordinates && equalTo((FormNodeCoordinates) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormNodeCoordinates other) {
@@ -57,29 +57,32 @@ public final class FormNodeCoordinates {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.x, this.y);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static XStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface XStage {
+
         YStage x(int x);
 
         Builder from(FormNodeCoordinates other);
     }
 
     public interface YStage {
+
         _FinalStage y(int y);
     }
 
     public interface _FinalStage {
+
         FormNodeCoordinates build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -89,6 +92,7 @@ public final class FormNodeCoordinates {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements XStage, YStage, _FinalStage {
+
         private int x;
 
         private int y;
@@ -96,44 +100,39 @@ public final class FormNodeCoordinates {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormNodeCoordinates other) {
-            x(other.getX());
-            y(other.getY());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("x")
         public YStage x(int x) {
-            this.x = x;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("y")
         public _FinalStage y(int y) {
-            this.y = y;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormNodeCoordinates build() {
-            return new FormNodeCoordinates(x, y, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

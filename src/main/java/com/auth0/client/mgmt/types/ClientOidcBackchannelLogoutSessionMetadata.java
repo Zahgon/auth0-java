@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientOidcBackchannelLogoutSessionMetadata.Builder.class)
 public final class ClientOidcBackchannelLogoutSessionMetadata {
+
     private final Optional<Boolean> include;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientOidcBackchannelLogoutSessionMetadata(
-            Optional<Boolean> include, Map<String, Object> additionalProperties) {
+    private ClientOidcBackchannelLogoutSessionMetadata(Optional<Boolean> include, Map<String, Object> additionalProperties) {
         this.include = include;
         this.additionalProperties = additionalProperties;
     }
@@ -35,19 +35,17 @@ public final class ClientOidcBackchannelLogoutSessionMetadata {
      */
     @JsonProperty("include")
     public Optional<Boolean> getInclude() {
-        return include;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientOidcBackchannelLogoutSessionMetadata
-                && equalTo((ClientOidcBackchannelLogoutSessionMetadata) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientOidcBackchannelLogoutSessionMetadata other) {
@@ -56,30 +54,31 @@ public final class ClientOidcBackchannelLogoutSessionMetadata {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.include);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> include = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientOidcBackchannelLogoutSessionMetadata other) {
-            include(other.getInclude());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +86,23 @@ public final class ClientOidcBackchannelLogoutSessionMetadata {
          */
         @JsonSetter(value = "include", nulls = Nulls.SKIP)
         public Builder include(Optional<Boolean> include) {
-            this.include = include;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder include(Boolean include) {
-            this.include = Optional.ofNullable(include);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientOidcBackchannelLogoutSessionMetadata build() {
-            return new ClientOidcBackchannelLogoutSessionMetadata(include, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

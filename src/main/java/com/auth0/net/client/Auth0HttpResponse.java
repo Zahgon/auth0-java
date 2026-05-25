@@ -7,6 +7,7 @@ import java.util.Map;
 public class Auth0HttpResponse {
 
     private final int code;
+
     private final String body;
 
     private final Map<String, String> headers;
@@ -20,58 +21,58 @@ public class Auth0HttpResponse {
     }
 
     public static Builder newBuilder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isSuccessful() {
-        return code >= 200 && code <= 299;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getBody() {
-        return body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> getHeaders() {
-        return this.headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getHeader(String header) {
-        return headers.get(header);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getHeader(String header, String defaultValue) {
-        return headers.get(header) != null ? headers.get(header) : defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Builder {
+
         private int code;
+
         private String body;
 
         private Map<String, String> headers = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder withStatusCode(int code) {
-            this.code = code;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder withBody(String body) {
-            this.body = body;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder withHeaders(Map<String, String> headers) {
-            this.headers = headers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Auth0HttpResponse build() {
-            return new Auth0HttpResponse(this);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

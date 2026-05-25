@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionTypeEnumOkta {
-    public static final ConnectionTypeEnumOkta BACK_CHANNEL =
-            new ConnectionTypeEnumOkta(Value.BACK_CHANNEL, "back_channel");
+
+    public static final ConnectionTypeEnumOkta BACK_CHANNEL = new ConnectionTypeEnumOkta(Value.BACK_CHANNEL, "back_channel");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionTypeEnumOkta {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionTypeEnumOkta
-                        && this.string.equals(((ConnectionTypeEnumOkta) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BACK_CHANNEL:
-                return visitor.visitBackChannel();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionTypeEnumOkta valueOf(String value) {
-        switch (value) {
-            case "back_channel":
-                return BACK_CHANNEL;
-            default:
-                return new ConnectionTypeEnumOkta(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BACK_CHANNEL,
 
-        UNKNOWN
+        BACK_CHANNEL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBackChannel();
 
         T visitUnknown(String unknownType);

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOffsetOnlyMessage.Builder.class)
 public final class EventStreamCloudEventOffsetOnlyMessage {
+
     private final String offset;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class EventStreamCloudEventOffsetOnlyMessage {
      */
     @JsonProperty("offset")
     public String getOffset() {
-        return offset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOffsetOnlyMessage
-                && equalTo((EventStreamCloudEventOffsetOnlyMessage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOffsetOnlyMessage other) {
@@ -54,19 +53,20 @@ public final class EventStreamCloudEventOffsetOnlyMessage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.offset);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OffsetStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OffsetStage {
+
         /**
          * <p>Opaque cursor representing the latest position in the stream. Pass as the <code>from</code> query parameter to resume.</p>
          */
@@ -76,6 +76,7 @@ public final class EventStreamCloudEventOffsetOnlyMessage {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventOffsetOnlyMessage build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class EventStreamCloudEventOffsetOnlyMessage {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OffsetStage, _FinalStage {
+
         private String offset;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventOffsetOnlyMessage other) {
-            offset(other.getOffset());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class EventStreamCloudEventOffsetOnlyMessage {
         @java.lang.Override
         @JsonSetter("offset")
         public _FinalStage offset(@NotNull String offset) {
-            this.offset = Objects.requireNonNull(offset, "offset must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventOffsetOnlyMessage build() {
-            return new EventStreamCloudEventOffsetOnlyMessage(offset, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

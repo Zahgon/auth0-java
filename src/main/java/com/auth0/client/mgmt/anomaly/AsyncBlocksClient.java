@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncBlocksClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawBlocksClient rawClient;
@@ -21,34 +22,34 @@ public class AsyncBlocksClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawBlocksClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Check if the given IP address is blocked via the <a href="https://auth0.com/docs/configure/attack-protection/suspicious-ip-throttling">Suspicious IP Throttling</a> due to multiple suspicious attempts.
      */
     public CompletableFuture<Void> checkIp(String id) {
-        return this.rawClient.checkIp(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Check if the given IP address is blocked via the <a href="https://auth0.com/docs/configure/attack-protection/suspicious-ip-throttling">Suspicious IP Throttling</a> due to multiple suspicious attempts.
      */
     public CompletableFuture<Void> checkIp(String id, RequestOptions requestOptions) {
-        return this.rawClient.checkIp(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a block imposed by <a href="https://auth0.com/docs/configure/attack-protection/suspicious-ip-throttling">Suspicious IP Throttling</a> for the given IP address.
      */
     public CompletableFuture<Void> unblockIp(String id) {
-        return this.rawClient.unblockIp(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a block imposed by <a href="https://auth0.com/docs/configure/attack-protection/suspicious-ip-throttling">Suspicious IP Throttling</a> for the given IP address.
      */
     public CompletableFuture<Void> unblockIp(String id, RequestOptions requestOptions) {
-        return this.rawClient.unblockIp(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

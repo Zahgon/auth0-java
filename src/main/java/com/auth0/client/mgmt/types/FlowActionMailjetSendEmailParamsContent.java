@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionMailjetSendEmailParamsContent.Builder.class)
 public final class FlowActionMailjetSendEmailParamsContent {
+
     private final String content;
 
     private final Map<String, Object> additionalProperties;
@@ -30,19 +31,17 @@ public final class FlowActionMailjetSendEmailParamsContent {
 
     @JsonProperty("content")
     public String getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionMailjetSendEmailParamsContent
-                && equalTo((FlowActionMailjetSendEmailParamsContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionMailjetSendEmailParamsContent other) {
@@ -51,25 +50,27 @@ public final class FlowActionMailjetSendEmailParamsContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.content);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ContentStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ContentStage {
+
         _FinalStage content(@NotNull String content);
 
         Builder from(FlowActionMailjetSendEmailParamsContent other);
     }
 
     public interface _FinalStage {
+
         FlowActionMailjetSendEmailParamsContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class FlowActionMailjetSendEmailParamsContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ContentStage, _FinalStage {
+
         private String content;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionMailjetSendEmailParamsContent other) {
-            content(other.getContent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("content")
         public _FinalStage content(@NotNull String content) {
-            this.content = Objects.requireNonNull(content, "content must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionMailjetSendEmailParamsContent build() {
-            return new FlowActionMailjetSendEmailParamsContent(content, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

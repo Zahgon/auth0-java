@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentEvernoteStrategy {
-    public static final CreateConnectionRequestContentEvernoteStrategy EVERNOTE =
-            new CreateConnectionRequestContentEvernoteStrategy(Value.EVERNOTE, "evernote");
+
+    public static final CreateConnectionRequestContentEvernoteStrategy EVERNOTE = new CreateConnectionRequestContentEvernoteStrategy(Value.EVERNOTE, "evernote");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentEvernoteStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentEvernoteStrategy
-                        && this.string.equals(((CreateConnectionRequestContentEvernoteStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EVERNOTE:
-                return visitor.visitEvernote();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentEvernoteStrategy valueOf(String value) {
-        switch (value) {
-            case "evernote":
-                return EVERNOTE;
-            default:
-                return new CreateConnectionRequestContentEvernoteStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EVERNOTE,
 
-        UNKNOWN
+        EVERNOTE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEvernote();
 
         T visitUnknown(String unknownType);

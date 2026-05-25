@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum {
-    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum WSFED =
-            new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.WSFED, "wsfed");
 
-    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum OAUTH2 =
-            new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.OAUTH2, "oauth2");
+    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum WSFED = new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.WSFED, "wsfed");
 
-    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum SAMLP =
-            new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.SAMLP, "samlp");
+    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum OAUTH2 = new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.OAUTH2, "oauth2");
+
+    public static final SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum SAMLP = new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.SAMLP, "samlp");
 
     private final Value value;
 
@@ -26,67 +24,41 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum
-                        && this.string.equals(
-                                ((SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WSFED:
-                return visitor.visitWsfed();
-            case OAUTH2:
-                return visitor.visitOauth2();
-            case SAMLP:
-                return visitor.visitSamlp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum valueOf(String value) {
-        switch (value) {
-            case "wsfed":
-                return WSFED;
-            case "oauth2":
-                return OAUTH2;
-            case "samlp":
-                return SAMLP;
-            default:
-                return new SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SAMLP,
 
-        WSFED,
-
-        OAUTH2,
-
-        UNKNOWN
+        SAMLP, WSFED, OAUTH2, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSamlp();
 
         T visitWsfed();

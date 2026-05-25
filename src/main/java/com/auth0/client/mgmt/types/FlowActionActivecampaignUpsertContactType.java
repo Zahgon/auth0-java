@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionActivecampaignUpsertContactType {
-    public static final FlowActionActivecampaignUpsertContactType ACTIVECAMPAIGN =
-            new FlowActionActivecampaignUpsertContactType(Value.ACTIVECAMPAIGN, "ACTIVECAMPAIGN");
+
+    public static final FlowActionActivecampaignUpsertContactType ACTIVECAMPAIGN = new FlowActionActivecampaignUpsertContactType(Value.ACTIVECAMPAIGN, "ACTIVECAMPAIGN");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionActivecampaignUpsertContactType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionActivecampaignUpsertContactType
-                        && this.string.equals(((FlowActionActivecampaignUpsertContactType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ACTIVECAMPAIGN:
-                return visitor.visitActivecampaign();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionActivecampaignUpsertContactType valueOf(String value) {
-        switch (value) {
-            case "ACTIVECAMPAIGN":
-                return ACTIVECAMPAIGN;
-            default:
-                return new FlowActionActivecampaignUpsertContactType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ACTIVECAMPAIGN,
 
-        UNKNOWN
+        ACTIVECAMPAIGN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitActivecampaign();
 
         T visitUnknown(String unknownType);

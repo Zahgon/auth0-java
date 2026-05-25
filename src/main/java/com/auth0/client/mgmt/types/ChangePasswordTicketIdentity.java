@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ChangePasswordTicketIdentity.Builder.class)
 public final class ChangePasswordTicketIdentity {
+
     private final String userId;
 
     private final IdentityProviderOnlyAuth0Enum provider;
@@ -29,11 +30,7 @@ public final class ChangePasswordTicketIdentity {
 
     private final Map<String, Object> additionalProperties;
 
-    private ChangePasswordTicketIdentity(
-            String userId,
-            IdentityProviderOnlyAuth0Enum provider,
-            Optional<String> connectionId,
-            Map<String, Object> additionalProperties) {
+    private ChangePasswordTicketIdentity(String userId, IdentityProviderOnlyAuth0Enum provider, Optional<String> connectionId, Map<String, Object> additionalProperties) {
         this.userId = userId;
         this.provider = provider;
         this.connectionId = connectionId;
@@ -45,12 +42,12 @@ public final class ChangePasswordTicketIdentity {
      */
     @JsonProperty("user_id")
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("provider")
     public IdentityProviderOnlyAuth0Enum getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,41 +55,39 @@ public final class ChangePasswordTicketIdentity {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ChangePasswordTicketIdentity && equalTo((ChangePasswordTicketIdentity) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ChangePasswordTicketIdentity other) {
-        return userId.equals(other.userId)
-                && provider.equals(other.provider)
-                && connectionId.equals(other.connectionId);
+        return userId.equals(other.userId) && provider.equals(other.provider) && connectionId.equals(other.connectionId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.userId, this.provider, this.connectionId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UserIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UserIdStage {
+
         /**
          * <p>user_id of the identity.</p>
          */
@@ -102,10 +97,12 @@ public final class ChangePasswordTicketIdentity {
     }
 
     public interface ProviderStage {
+
         _FinalStage provider(@NotNull IdentityProviderOnlyAuth0Enum provider);
     }
 
     public interface _FinalStage {
+
         ChangePasswordTicketIdentity build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -122,6 +119,7 @@ public final class ChangePasswordTicketIdentity {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements UserIdStage, ProviderStage, _FinalStage {
+
         private String userId;
 
         private IdentityProviderOnlyAuth0Enum provider;
@@ -131,14 +129,12 @@ public final class ChangePasswordTicketIdentity {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ChangePasswordTicketIdentity other) {
-            userId(other.getUserId());
-            provider(other.getProvider());
-            connectionId(other.getConnectionId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,15 +145,13 @@ public final class ChangePasswordTicketIdentity {
         @java.lang.Override
         @JsonSetter("user_id")
         public ProviderStage userId(@NotNull String userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("provider")
         public _FinalStage provider(@NotNull IdentityProviderOnlyAuth0Enum provider) {
-            this.provider = Objects.requireNonNull(provider, "provider must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,8 +160,7 @@ public final class ChangePasswordTicketIdentity {
          */
         @java.lang.Override
         public _FinalStage connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -176,25 +169,22 @@ public final class ChangePasswordTicketIdentity {
         @java.lang.Override
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public _FinalStage connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ChangePasswordTicketIdentity build() {
-            return new ChangePasswordTicketIdentity(userId, provider, connectionId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

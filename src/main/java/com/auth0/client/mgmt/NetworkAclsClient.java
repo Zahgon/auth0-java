@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateNetworkAclRequestContent;
 import com.auth0.client.mgmt.types.UpdateNetworkAclResponseContent;
 
 public class NetworkAclsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawNetworkAclsClient rawClient;
@@ -29,121 +30,118 @@ public class NetworkAclsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawNetworkAclsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
     public SyncPagingIterable<NetworkAclsResponseContent> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
     public SyncPagingIterable<NetworkAclsResponseContent> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
     public SyncPagingIterable<NetworkAclsResponseContent> list(ListNetworkAclsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
-    public SyncPagingIterable<NetworkAclsResponseContent> list(
-            ListNetworkAclsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<NetworkAclsResponseContent> list(ListNetworkAclsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new access control list for your client.
      */
     public void create(CreateNetworkAclRequestContent request) {
-        this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new access control list for your client.
      */
     public void create(CreateNetworkAclRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a specific access control list entry for your client.
      */
     public GetNetworkAclsResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a specific access control list entry for your client.
      */
     public GetNetworkAclsResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public SetNetworkAclsResponseContent set(String id, SetNetworkAclRequestContent request) {
-        return this.rawClient.set(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
-    public SetNetworkAclsResponseContent set(
-            String id, SetNetworkAclRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(id, request, requestOptions).body();
+    public SetNetworkAclsResponseContent set(String id, SetNetworkAclRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete existing access control list for your client.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete existing access control list for your client.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public UpdateNetworkAclResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public UpdateNetworkAclResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public UpdateNetworkAclResponseContent update(String id, UpdateNetworkAclRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
-    public UpdateNetworkAclResponseContent update(
-            String id, UpdateNetworkAclRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateNetworkAclResponseContent update(String id, UpdateNetworkAclRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

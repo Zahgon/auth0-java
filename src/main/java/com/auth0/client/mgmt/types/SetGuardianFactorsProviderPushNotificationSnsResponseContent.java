@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetGuardianFactorsProviderPushNotificationSnsResponseContent.Builder.class)
 public final class SetGuardianFactorsProviderPushNotificationSnsResponseContent {
+
     private final OptionalNullable<String> awsAccessKeyId;
 
     private final OptionalNullable<String> awsSecretAccessKey;
@@ -35,13 +36,7 @@ public final class SetGuardianFactorsProviderPushNotificationSnsResponseContent 
 
     private final Map<String, Object> additionalProperties;
 
-    private SetGuardianFactorsProviderPushNotificationSnsResponseContent(
-            OptionalNullable<String> awsAccessKeyId,
-            OptionalNullable<String> awsSecretAccessKey,
-            OptionalNullable<String> awsRegion,
-            OptionalNullable<String> snsApnsPlatformApplicationArn,
-            OptionalNullable<String> snsGcmPlatformApplicationArn,
-            Map<String, Object> additionalProperties) {
+    private SetGuardianFactorsProviderPushNotificationSnsResponseContent(OptionalNullable<String> awsAccessKeyId, OptionalNullable<String> awsSecretAccessKey, OptionalNullable<String> awsRegion, OptionalNullable<String> snsApnsPlatformApplicationArn, OptionalNullable<String> snsGcmPlatformApplicationArn, Map<String, Object> additionalProperties) {
         this.awsAccessKeyId = awsAccessKeyId;
         this.awsSecretAccessKey = awsSecretAccessKey;
         this.awsRegion = awsRegion;
@@ -53,46 +48,31 @@ public final class SetGuardianFactorsProviderPushNotificationSnsResponseContent 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("aws_access_key_id")
     public OptionalNullable<String> getAwsAccessKeyId() {
-        if (awsAccessKeyId == null) {
-            return OptionalNullable.absent();
-        }
-        return awsAccessKeyId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("aws_secret_access_key")
     public OptionalNullable<String> getAwsSecretAccessKey() {
-        if (awsSecretAccessKey == null) {
-            return OptionalNullable.absent();
-        }
-        return awsSecretAccessKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("aws_region")
     public OptionalNullable<String> getAwsRegion() {
-        if (awsRegion == null) {
-            return OptionalNullable.absent();
-        }
-        return awsRegion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("sns_apns_platform_application_arn")
     public OptionalNullable<String> getSnsApnsPlatformApplicationArn() {
-        if (snsApnsPlatformApplicationArn == null) {
-            return OptionalNullable.absent();
-        }
-        return snsApnsPlatformApplicationArn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("sns_gcm_platform_application_arn")
     public OptionalNullable<String> getSnsGcmPlatformApplicationArn() {
-        if (snsGcmPlatformApplicationArn == null) {
-            return OptionalNullable.absent();
-        }
-        return snsGcmPlatformApplicationArn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -127,45 +107,35 @@ public final class SetGuardianFactorsProviderPushNotificationSnsResponseContent 
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetGuardianFactorsProviderPushNotificationSnsResponseContent
-                && equalTo((SetGuardianFactorsProviderPushNotificationSnsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetGuardianFactorsProviderPushNotificationSnsResponseContent other) {
-        return awsAccessKeyId.equals(other.awsAccessKeyId)
-                && awsSecretAccessKey.equals(other.awsSecretAccessKey)
-                && awsRegion.equals(other.awsRegion)
-                && snsApnsPlatformApplicationArn.equals(other.snsApnsPlatformApplicationArn)
-                && snsGcmPlatformApplicationArn.equals(other.snsGcmPlatformApplicationArn);
+        return awsAccessKeyId.equals(other.awsAccessKeyId) && awsSecretAccessKey.equals(other.awsSecretAccessKey) && awsRegion.equals(other.awsRegion) && snsApnsPlatformApplicationArn.equals(other.snsApnsPlatformApplicationArn) && snsGcmPlatformApplicationArn.equals(other.snsGcmPlatformApplicationArn);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.awsAccessKeyId,
-                this.awsSecretAccessKey,
-                this.awsRegion,
-                this.snsApnsPlatformApplicationArn,
-                this.snsGcmPlatformApplicationArn);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> awsAccessKeyId = OptionalNullable.absent();
 
         private OptionalNullable<String> awsSecretAccessKey = OptionalNullable.absent();
@@ -179,192 +149,108 @@ public final class SetGuardianFactorsProviderPushNotificationSnsResponseContent 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SetGuardianFactorsProviderPushNotificationSnsResponseContent other) {
-            awsAccessKeyId(other.getAwsAccessKeyId());
-            awsSecretAccessKey(other.getAwsSecretAccessKey());
-            awsRegion(other.getAwsRegion());
-            snsApnsPlatformApplicationArn(other.getSnsApnsPlatformApplicationArn());
-            snsGcmPlatformApplicationArn(other.getSnsGcmPlatformApplicationArn());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "aws_access_key_id", nulls = Nulls.SKIP)
         public Builder awsAccessKeyId(@Nullable OptionalNullable<String> awsAccessKeyId) {
-            this.awsAccessKeyId = awsAccessKeyId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsAccessKeyId(String awsAccessKeyId) {
-            this.awsAccessKeyId = OptionalNullable.of(awsAccessKeyId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsAccessKeyId(Optional<String> awsAccessKeyId) {
-            if (awsAccessKeyId.isPresent()) {
-                this.awsAccessKeyId = OptionalNullable.of(awsAccessKeyId.get());
-            } else {
-                this.awsAccessKeyId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsAccessKeyId(com.auth0.client.mgmt.core.Nullable<String> awsAccessKeyId) {
-            if (awsAccessKeyId.isNull()) {
-                this.awsAccessKeyId = OptionalNullable.ofNull();
-            } else if (awsAccessKeyId.isEmpty()) {
-                this.awsAccessKeyId = OptionalNullable.absent();
-            } else {
-                this.awsAccessKeyId = OptionalNullable.of(awsAccessKeyId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "aws_secret_access_key", nulls = Nulls.SKIP)
         public Builder awsSecretAccessKey(@Nullable OptionalNullable<String> awsSecretAccessKey) {
-            this.awsSecretAccessKey = awsSecretAccessKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
-            this.awsSecretAccessKey = OptionalNullable.of(awsSecretAccessKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsSecretAccessKey(Optional<String> awsSecretAccessKey) {
-            if (awsSecretAccessKey.isPresent()) {
-                this.awsSecretAccessKey = OptionalNullable.of(awsSecretAccessKey.get());
-            } else {
-                this.awsSecretAccessKey = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsSecretAccessKey(com.auth0.client.mgmt.core.Nullable<String> awsSecretAccessKey) {
-            if (awsSecretAccessKey.isNull()) {
-                this.awsSecretAccessKey = OptionalNullable.ofNull();
-            } else if (awsSecretAccessKey.isEmpty()) {
-                this.awsSecretAccessKey = OptionalNullable.absent();
-            } else {
-                this.awsSecretAccessKey = OptionalNullable.of(awsSecretAccessKey.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "aws_region", nulls = Nulls.SKIP)
         public Builder awsRegion(@Nullable OptionalNullable<String> awsRegion) {
-            this.awsRegion = awsRegion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsRegion(String awsRegion) {
-            this.awsRegion = OptionalNullable.of(awsRegion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsRegion(Optional<String> awsRegion) {
-            if (awsRegion.isPresent()) {
-                this.awsRegion = OptionalNullable.of(awsRegion.get());
-            } else {
-                this.awsRegion = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder awsRegion(com.auth0.client.mgmt.core.Nullable<String> awsRegion) {
-            if (awsRegion.isNull()) {
-                this.awsRegion = OptionalNullable.ofNull();
-            } else if (awsRegion.isEmpty()) {
-                this.awsRegion = OptionalNullable.absent();
-            } else {
-                this.awsRegion = OptionalNullable.of(awsRegion.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sns_apns_platform_application_arn", nulls = Nulls.SKIP)
         public Builder snsApnsPlatformApplicationArn(@Nullable OptionalNullable<String> snsApnsPlatformApplicationArn) {
-            this.snsApnsPlatformApplicationArn = snsApnsPlatformApplicationArn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder snsApnsPlatformApplicationArn(String snsApnsPlatformApplicationArn) {
-            this.snsApnsPlatformApplicationArn = OptionalNullable.of(snsApnsPlatformApplicationArn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder snsApnsPlatformApplicationArn(Optional<String> snsApnsPlatformApplicationArn) {
-            if (snsApnsPlatformApplicationArn.isPresent()) {
-                this.snsApnsPlatformApplicationArn = OptionalNullable.of(snsApnsPlatformApplicationArn.get());
-            } else {
-                this.snsApnsPlatformApplicationArn = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder snsApnsPlatformApplicationArn(
-                com.auth0.client.mgmt.core.Nullable<String> snsApnsPlatformApplicationArn) {
-            if (snsApnsPlatformApplicationArn.isNull()) {
-                this.snsApnsPlatformApplicationArn = OptionalNullable.ofNull();
-            } else if (snsApnsPlatformApplicationArn.isEmpty()) {
-                this.snsApnsPlatformApplicationArn = OptionalNullable.absent();
-            } else {
-                this.snsApnsPlatformApplicationArn = OptionalNullable.of(snsApnsPlatformApplicationArn.get());
-            }
-            return this;
+        public Builder snsApnsPlatformApplicationArn(com.auth0.client.mgmt.core.Nullable<String> snsApnsPlatformApplicationArn) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sns_gcm_platform_application_arn", nulls = Nulls.SKIP)
         public Builder snsGcmPlatformApplicationArn(@Nullable OptionalNullable<String> snsGcmPlatformApplicationArn) {
-            this.snsGcmPlatformApplicationArn = snsGcmPlatformApplicationArn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder snsGcmPlatformApplicationArn(String snsGcmPlatformApplicationArn) {
-            this.snsGcmPlatformApplicationArn = OptionalNullable.of(snsGcmPlatformApplicationArn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder snsGcmPlatformApplicationArn(Optional<String> snsGcmPlatformApplicationArn) {
-            if (snsGcmPlatformApplicationArn.isPresent()) {
-                this.snsGcmPlatformApplicationArn = OptionalNullable.of(snsGcmPlatformApplicationArn.get());
-            } else {
-                this.snsGcmPlatformApplicationArn = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder snsGcmPlatformApplicationArn(
-                com.auth0.client.mgmt.core.Nullable<String> snsGcmPlatformApplicationArn) {
-            if (snsGcmPlatformApplicationArn.isNull()) {
-                this.snsGcmPlatformApplicationArn = OptionalNullable.ofNull();
-            } else if (snsGcmPlatformApplicationArn.isEmpty()) {
-                this.snsGcmPlatformApplicationArn = OptionalNullable.absent();
-            } else {
-                this.snsGcmPlatformApplicationArn = OptionalNullable.of(snsGcmPlatformApplicationArn.get());
-            }
-            return this;
+        public Builder snsGcmPlatformApplicationArn(com.auth0.client.mgmt.core.Nullable<String> snsGcmPlatformApplicationArn) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SetGuardianFactorsProviderPushNotificationSnsResponseContent build() {
-            return new SetGuardianFactorsProviderPushNotificationSnsResponseContent(
-                    awsAccessKeyId,
-                    awsSecretAccessKey,
-                    awsRegion,
-                    snsApnsPlatformApplicationArn,
-                    snsGcmPlatformApplicationArn,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

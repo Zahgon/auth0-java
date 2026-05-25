@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionStripeDeleteTaxIdType {
-    public static final FlowActionStripeDeleteTaxIdType STRIPE =
-            new FlowActionStripeDeleteTaxIdType(Value.STRIPE, "STRIPE");
+
+    public static final FlowActionStripeDeleteTaxIdType STRIPE = new FlowActionStripeDeleteTaxIdType(Value.STRIPE, "STRIPE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionStripeDeleteTaxIdType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionStripeDeleteTaxIdType
-                        && this.string.equals(((FlowActionStripeDeleteTaxIdType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case STRIPE:
-                return visitor.visitStripe();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionStripeDeleteTaxIdType valueOf(String value) {
-        switch (value) {
-            case "STRIPE":
-                return STRIPE;
-            default:
-                return new FlowActionStripeDeleteTaxIdType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STRIPE,
 
-        UNKNOWN
+        STRIPE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStripe();
 
         T visitUnknown(String unknownType);

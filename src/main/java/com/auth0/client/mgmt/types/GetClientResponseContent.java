@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetClientResponseContent.Builder.class)
 public final class GetClientResponseContent {
+
     private final Optional<String> clientId;
 
     private final Optional<String> tenant;
@@ -146,68 +147,7 @@ public final class GetClientResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetClientResponseContent(
-            Optional<String> clientId,
-            Optional<String> tenant,
-            Optional<String> name,
-            Optional<String> description,
-            Optional<Boolean> global,
-            Optional<String> clientSecret,
-            Optional<ClientAppTypeEnum> appType,
-            Optional<String> logoUri,
-            Optional<Boolean> isFirstParty,
-            Optional<Boolean> oidcConformant,
-            Optional<List<String>> callbacks,
-            Optional<List<String>> allowedOrigins,
-            Optional<List<String>> webOrigins,
-            Optional<List<String>> clientAliases,
-            Optional<List<String>> allowedClients,
-            Optional<List<String>> allowedLogoutUrls,
-            OptionalNullable<ClientSessionTransferConfiguration> sessionTransfer,
-            Optional<ClientOidcBackchannelLogoutSettings> oidcLogout,
-            Optional<List<String>> grantTypes,
-            Optional<ClientJwtConfiguration> jwtConfiguration,
-            OptionalNullable<List<ClientSigningKey>> signingKeys,
-            OptionalNullable<ClientEncryptionKey> encryptionKey,
-            Optional<Boolean> sso,
-            Optional<Boolean> ssoDisabled,
-            Optional<Boolean> crossOriginAuthentication,
-            Optional<String> crossOriginLoc,
-            Optional<Boolean> customLoginPageOn,
-            Optional<String> customLoginPage,
-            Optional<String> customLoginPagePreview,
-            Optional<String> formTemplate,
-            Optional<ClientAddons> addons,
-            Optional<ClientTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod,
-            Optional<Boolean> isTokenEndpointIpHeaderTrusted,
-            Optional<Map<String, Object>> clientMetadata,
-            Optional<ClientMobile> mobile,
-            Optional<String> initiateLoginUri,
-            OptionalNullable<ClientRefreshTokenConfiguration> refreshToken,
-            OptionalNullable<ClientDefaultOrganization> defaultOrganization,
-            Optional<ClientOrganizationUsageEnum> organizationUsage,
-            Optional<ClientOrganizationRequireBehaviorEnum> organizationRequireBehavior,
-            Optional<List<ClientOrganizationDiscoveryEnum>> organizationDiscoveryMethods,
-            OptionalNullable<ClientAuthenticationMethod> clientAuthenticationMethods,
-            Optional<Boolean> requirePushedAuthorizationRequests,
-            Optional<Boolean> requireProofOfPossession,
-            Optional<ClientSignedRequestObjectWithCredentialId> signedRequestObject,
-            OptionalNullable<ClientComplianceLevelEnum> complianceLevel,
-            Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt,
-            Optional<ClientTokenExchangeConfiguration> tokenExchange,
-            OptionalNullable<Integer> parRequestExpiry,
-            Optional<TokenQuota> tokenQuota,
-            Optional<ExpressConfiguration> expressConfiguration,
-            Optional<ClientMyOrganizationResponseConfiguration> myOrganizationConfiguration,
-            Optional<ClientThirdPartySecurityModeEnum> thirdPartySecurityMode,
-            Optional<ClientRedirectionPolicyEnum> redirectionPolicy,
-            Optional<String> resourceServerIdentifier,
-            Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels,
-            Optional<ClientExternalMetadataTypeEnum> externalMetadataType,
-            Optional<ClientExternalMetadataCreatedByEnum> externalMetadataCreatedBy,
-            Optional<String> externalClientId,
-            Optional<String> jwksUri,
-            Map<String, Object> additionalProperties) {
+    private GetClientResponseContent(Optional<String> clientId, Optional<String> tenant, Optional<String> name, Optional<String> description, Optional<Boolean> global, Optional<String> clientSecret, Optional<ClientAppTypeEnum> appType, Optional<String> logoUri, Optional<Boolean> isFirstParty, Optional<Boolean> oidcConformant, Optional<List<String>> callbacks, Optional<List<String>> allowedOrigins, Optional<List<String>> webOrigins, Optional<List<String>> clientAliases, Optional<List<String>> allowedClients, Optional<List<String>> allowedLogoutUrls, OptionalNullable<ClientSessionTransferConfiguration> sessionTransfer, Optional<ClientOidcBackchannelLogoutSettings> oidcLogout, Optional<List<String>> grantTypes, Optional<ClientJwtConfiguration> jwtConfiguration, OptionalNullable<List<ClientSigningKey>> signingKeys, OptionalNullable<ClientEncryptionKey> encryptionKey, Optional<Boolean> sso, Optional<Boolean> ssoDisabled, Optional<Boolean> crossOriginAuthentication, Optional<String> crossOriginLoc, Optional<Boolean> customLoginPageOn, Optional<String> customLoginPage, Optional<String> customLoginPagePreview, Optional<String> formTemplate, Optional<ClientAddons> addons, Optional<ClientTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod, Optional<Boolean> isTokenEndpointIpHeaderTrusted, Optional<Map<String, Object>> clientMetadata, Optional<ClientMobile> mobile, Optional<String> initiateLoginUri, OptionalNullable<ClientRefreshTokenConfiguration> refreshToken, OptionalNullable<ClientDefaultOrganization> defaultOrganization, Optional<ClientOrganizationUsageEnum> organizationUsage, Optional<ClientOrganizationRequireBehaviorEnum> organizationRequireBehavior, Optional<List<ClientOrganizationDiscoveryEnum>> organizationDiscoveryMethods, OptionalNullable<ClientAuthenticationMethod> clientAuthenticationMethods, Optional<Boolean> requirePushedAuthorizationRequests, Optional<Boolean> requireProofOfPossession, Optional<ClientSignedRequestObjectWithCredentialId> signedRequestObject, OptionalNullable<ClientComplianceLevelEnum> complianceLevel, Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt, Optional<ClientTokenExchangeConfiguration> tokenExchange, OptionalNullable<Integer> parRequestExpiry, Optional<TokenQuota> tokenQuota, Optional<ExpressConfiguration> expressConfiguration, Optional<ClientMyOrganizationResponseConfiguration> myOrganizationConfiguration, Optional<ClientThirdPartySecurityModeEnum> thirdPartySecurityMode, Optional<ClientRedirectionPolicyEnum> redirectionPolicy, Optional<String> resourceServerIdentifier, Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels, Optional<ClientExternalMetadataTypeEnum> externalMetadataType, Optional<ClientExternalMetadataCreatedByEnum> externalMetadataCreatedBy, Optional<String> externalClientId, Optional<String> jwksUri, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.tenant = tenant;
         this.name = name;
@@ -276,7 +216,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -284,7 +224,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("tenant")
     public Optional<String> getTenant() {
-        return tenant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -292,7 +232,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -300,7 +240,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -308,7 +248,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("global")
     public Optional<Boolean> getGlobal() {
-        return global;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -316,12 +256,12 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_type")
     public Optional<ClientAppTypeEnum> getAppType() {
-        return appType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -329,7 +269,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("logo_uri")
     public Optional<String> getLogoUri() {
-        return logoUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -337,7 +277,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("is_first_party")
     public Optional<Boolean> getIsFirstParty() {
-        return isFirstParty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -345,7 +285,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("oidc_conformant")
     public Optional<Boolean> getOidcConformant() {
-        return oidcConformant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -353,7 +293,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("callbacks")
     public Optional<List<String>> getCallbacks() {
-        return callbacks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -361,7 +301,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("allowed_origins")
     public Optional<List<String>> getAllowedOrigins() {
-        return allowedOrigins;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -369,7 +309,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("web_origins")
     public Optional<List<String>> getWebOrigins() {
-        return webOrigins;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -377,7 +317,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("client_aliases")
     public Optional<List<String>> getClientAliases() {
-        return clientAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -385,7 +325,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("allowed_clients")
     public Optional<List<String>> getAllowedClients() {
-        return allowedClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -393,21 +333,18 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("allowed_logout_urls")
     public Optional<List<String>> getAllowedLogoutUrls() {
-        return allowedLogoutUrls;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("session_transfer")
     public OptionalNullable<ClientSessionTransferConfiguration> getSessionTransfer() {
-        if (sessionTransfer == null) {
-            return OptionalNullable.absent();
-        }
-        return sessionTransfer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc_logout")
     public Optional<ClientOidcBackchannelLogoutSettings> getOidcLogout() {
-        return oidcLogout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -415,30 +352,24 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("grant_types")
     public Optional<List<String>> getGrantTypes() {
-        return grantTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("jwt_configuration")
     public Optional<ClientJwtConfiguration> getJwtConfiguration() {
-        return jwtConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("signing_keys")
     public OptionalNullable<List<ClientSigningKey>> getSigningKeys() {
-        if (signingKeys == null) {
-            return OptionalNullable.absent();
-        }
-        return signingKeys;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("encryption_key")
     public OptionalNullable<ClientEncryptionKey> getEncryptionKey() {
-        if (encryptionKey == null) {
-            return OptionalNullable.absent();
-        }
-        return encryptionKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -446,7 +377,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("sso")
     public Optional<Boolean> getSso() {
-        return sso;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -454,7 +385,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("sso_disabled")
     public Optional<Boolean> getSsoDisabled() {
-        return ssoDisabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -462,7 +393,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("cross_origin_authentication")
     public Optional<Boolean> getCrossOriginAuthentication() {
-        return crossOriginAuthentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -470,7 +401,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("cross_origin_loc")
     public Optional<String> getCrossOriginLoc() {
-        return crossOriginLoc;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -478,7 +409,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("custom_login_page_on")
     public Optional<Boolean> getCustomLoginPageOn() {
-        return customLoginPageOn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -486,7 +417,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("custom_login_page")
     public Optional<String> getCustomLoginPage() {
-        return customLoginPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -494,7 +425,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("custom_login_page_preview")
     public Optional<String> getCustomLoginPagePreview() {
-        return customLoginPagePreview;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -502,17 +433,17 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("form_template")
     public Optional<String> getFormTemplate() {
-        return formTemplate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("addons")
     public Optional<ClientAddons> getAddons() {
-        return addons;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint_auth_method")
     public Optional<ClientTokenEndpointAuthMethodEnum> getTokenEndpointAuthMethod() {
-        return tokenEndpointAuthMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -520,17 +451,17 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("is_token_endpoint_ip_header_trusted")
     public Optional<Boolean> getIsTokenEndpointIpHeaderTrusted() {
-        return isTokenEndpointIpHeaderTrusted;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_metadata")
     public Optional<Map<String, Object>> getClientMetadata() {
-        return clientMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mobile")
     public Optional<ClientMobile> getMobile() {
-        return mobile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -538,35 +469,29 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("initiate_login_uri")
     public Optional<String> getInitiateLoginUri() {
-        return initiateLoginUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("refresh_token")
     public OptionalNullable<ClientRefreshTokenConfiguration> getRefreshToken() {
-        if (refreshToken == null) {
-            return OptionalNullable.absent();
-        }
-        return refreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("default_organization")
     public OptionalNullable<ClientDefaultOrganization> getDefaultOrganization() {
-        if (defaultOrganization == null) {
-            return OptionalNullable.absent();
-        }
-        return defaultOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organization_usage")
     public Optional<ClientOrganizationUsageEnum> getOrganizationUsage() {
-        return organizationUsage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organization_require_behavior")
     public Optional<ClientOrganizationRequireBehaviorEnum> getOrganizationRequireBehavior() {
-        return organizationRequireBehavior;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -574,16 +499,13 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("organization_discovery_methods")
     public Optional<List<ClientOrganizationDiscoveryEnum>> getOrganizationDiscoveryMethods() {
-        return organizationDiscoveryMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("client_authentication_methods")
     public OptionalNullable<ClientAuthenticationMethod> getClientAuthenticationMethods() {
-        if (clientAuthenticationMethods == null) {
-            return OptionalNullable.absent();
-        }
-        return clientAuthenticationMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -591,7 +513,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("require_pushed_authorization_requests")
     public Optional<Boolean> getRequirePushedAuthorizationRequests() {
-        return requirePushedAuthorizationRequests;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -599,21 +521,18 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("require_proof_of_possession")
     public Optional<Boolean> getRequireProofOfPossession() {
-        return requireProofOfPossession;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signed_request_object")
     public Optional<ClientSignedRequestObjectWithCredentialId> getSignedRequestObject() {
-        return signedRequestObject;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("compliance_level")
     public OptionalNullable<ClientComplianceLevelEnum> getComplianceLevel() {
-        if (complianceLevel == null) {
-            return OptionalNullable.absent();
-        }
-        return complianceLevel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -623,12 +542,12 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("skip_non_verifiable_callback_uri_confirmation_prompt")
     public Optional<Boolean> getSkipNonVerifiableCallbackUriConfirmationPrompt() {
-        return skipNonVerifiableCallbackUriConfirmationPrompt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_exchange")
     public Optional<ClientTokenExchangeConfiguration> getTokenExchange() {
-        return tokenExchange;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -637,35 +556,32 @@ public final class GetClientResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("par_request_expiry")
     public OptionalNullable<Integer> getParRequestExpiry() {
-        if (parRequestExpiry == null) {
-            return OptionalNullable.absent();
-        }
-        return parRequestExpiry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_quota")
     public Optional<TokenQuota> getTokenQuota() {
-        return tokenQuota;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("express_configuration")
     public Optional<ExpressConfiguration> getExpressConfiguration() {
-        return expressConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("my_organization_configuration")
     public Optional<ClientMyOrganizationResponseConfiguration> getMyOrganizationConfiguration() {
-        return myOrganizationConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("third_party_security_mode")
     public Optional<ClientThirdPartySecurityModeEnum> getThirdPartySecurityMode() {
-        return thirdPartySecurityMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("redirection_policy")
     public Optional<ClientRedirectionPolicyEnum> getRedirectionPolicy() {
-        return redirectionPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -673,22 +589,22 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("resource_server_identifier")
     public Optional<String> getResourceServerIdentifier() {
-        return resourceServerIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("async_approval_notification_channels")
     public Optional<List<AsyncApprovalNotificationsChannelsEnum>> getAsyncApprovalNotificationChannels() {
-        return asyncApprovalNotificationChannels;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("external_metadata_type")
     public Optional<ClientExternalMetadataTypeEnum> getExternalMetadataType() {
-        return externalMetadataType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("external_metadata_created_by")
     public Optional<ClientExternalMetadataCreatedByEnum> getExternalMetadataCreatedBy() {
-        return externalMetadataCreatedBy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -696,7 +612,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("external_client_id")
     public Optional<String> getExternalClientId() {
-        return externalClientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -704,7 +620,7 @@ public final class GetClientResponseContent {
      */
     @JsonProperty("jwks_uri")
     public Optional<String> getJwksUri() {
-        return jwksUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -757,155 +673,35 @@ public final class GetClientResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetClientResponseContent && equalTo((GetClientResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetClientResponseContent other) {
-        return clientId.equals(other.clientId)
-                && tenant.equals(other.tenant)
-                && name.equals(other.name)
-                && description.equals(other.description)
-                && global.equals(other.global)
-                && clientSecret.equals(other.clientSecret)
-                && appType.equals(other.appType)
-                && logoUri.equals(other.logoUri)
-                && isFirstParty.equals(other.isFirstParty)
-                && oidcConformant.equals(other.oidcConformant)
-                && callbacks.equals(other.callbacks)
-                && allowedOrigins.equals(other.allowedOrigins)
-                && webOrigins.equals(other.webOrigins)
-                && clientAliases.equals(other.clientAliases)
-                && allowedClients.equals(other.allowedClients)
-                && allowedLogoutUrls.equals(other.allowedLogoutUrls)
-                && sessionTransfer.equals(other.sessionTransfer)
-                && oidcLogout.equals(other.oidcLogout)
-                && grantTypes.equals(other.grantTypes)
-                && jwtConfiguration.equals(other.jwtConfiguration)
-                && signingKeys.equals(other.signingKeys)
-                && encryptionKey.equals(other.encryptionKey)
-                && sso.equals(other.sso)
-                && ssoDisabled.equals(other.ssoDisabled)
-                && crossOriginAuthentication.equals(other.crossOriginAuthentication)
-                && crossOriginLoc.equals(other.crossOriginLoc)
-                && customLoginPageOn.equals(other.customLoginPageOn)
-                && customLoginPage.equals(other.customLoginPage)
-                && customLoginPagePreview.equals(other.customLoginPagePreview)
-                && formTemplate.equals(other.formTemplate)
-                && addons.equals(other.addons)
-                && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod)
-                && isTokenEndpointIpHeaderTrusted.equals(other.isTokenEndpointIpHeaderTrusted)
-                && clientMetadata.equals(other.clientMetadata)
-                && mobile.equals(other.mobile)
-                && initiateLoginUri.equals(other.initiateLoginUri)
-                && refreshToken.equals(other.refreshToken)
-                && defaultOrganization.equals(other.defaultOrganization)
-                && organizationUsage.equals(other.organizationUsage)
-                && organizationRequireBehavior.equals(other.organizationRequireBehavior)
-                && organizationDiscoveryMethods.equals(other.organizationDiscoveryMethods)
-                && clientAuthenticationMethods.equals(other.clientAuthenticationMethods)
-                && requirePushedAuthorizationRequests.equals(other.requirePushedAuthorizationRequests)
-                && requireProofOfPossession.equals(other.requireProofOfPossession)
-                && signedRequestObject.equals(other.signedRequestObject)
-                && complianceLevel.equals(other.complianceLevel)
-                && skipNonVerifiableCallbackUriConfirmationPrompt.equals(
-                        other.skipNonVerifiableCallbackUriConfirmationPrompt)
-                && tokenExchange.equals(other.tokenExchange)
-                && parRequestExpiry.equals(other.parRequestExpiry)
-                && tokenQuota.equals(other.tokenQuota)
-                && expressConfiguration.equals(other.expressConfiguration)
-                && myOrganizationConfiguration.equals(other.myOrganizationConfiguration)
-                && thirdPartySecurityMode.equals(other.thirdPartySecurityMode)
-                && redirectionPolicy.equals(other.redirectionPolicy)
-                && resourceServerIdentifier.equals(other.resourceServerIdentifier)
-                && asyncApprovalNotificationChannels.equals(other.asyncApprovalNotificationChannels)
-                && externalMetadataType.equals(other.externalMetadataType)
-                && externalMetadataCreatedBy.equals(other.externalMetadataCreatedBy)
-                && externalClientId.equals(other.externalClientId)
-                && jwksUri.equals(other.jwksUri);
+        return clientId.equals(other.clientId) && tenant.equals(other.tenant) && name.equals(other.name) && description.equals(other.description) && global.equals(other.global) && clientSecret.equals(other.clientSecret) && appType.equals(other.appType) && logoUri.equals(other.logoUri) && isFirstParty.equals(other.isFirstParty) && oidcConformant.equals(other.oidcConformant) && callbacks.equals(other.callbacks) && allowedOrigins.equals(other.allowedOrigins) && webOrigins.equals(other.webOrigins) && clientAliases.equals(other.clientAliases) && allowedClients.equals(other.allowedClients) && allowedLogoutUrls.equals(other.allowedLogoutUrls) && sessionTransfer.equals(other.sessionTransfer) && oidcLogout.equals(other.oidcLogout) && grantTypes.equals(other.grantTypes) && jwtConfiguration.equals(other.jwtConfiguration) && signingKeys.equals(other.signingKeys) && encryptionKey.equals(other.encryptionKey) && sso.equals(other.sso) && ssoDisabled.equals(other.ssoDisabled) && crossOriginAuthentication.equals(other.crossOriginAuthentication) && crossOriginLoc.equals(other.crossOriginLoc) && customLoginPageOn.equals(other.customLoginPageOn) && customLoginPage.equals(other.customLoginPage) && customLoginPagePreview.equals(other.customLoginPagePreview) && formTemplate.equals(other.formTemplate) && addons.equals(other.addons) && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod) && isTokenEndpointIpHeaderTrusted.equals(other.isTokenEndpointIpHeaderTrusted) && clientMetadata.equals(other.clientMetadata) && mobile.equals(other.mobile) && initiateLoginUri.equals(other.initiateLoginUri) && refreshToken.equals(other.refreshToken) && defaultOrganization.equals(other.defaultOrganization) && organizationUsage.equals(other.organizationUsage) && organizationRequireBehavior.equals(other.organizationRequireBehavior) && organizationDiscoveryMethods.equals(other.organizationDiscoveryMethods) && clientAuthenticationMethods.equals(other.clientAuthenticationMethods) && requirePushedAuthorizationRequests.equals(other.requirePushedAuthorizationRequests) && requireProofOfPossession.equals(other.requireProofOfPossession) && signedRequestObject.equals(other.signedRequestObject) && complianceLevel.equals(other.complianceLevel) && skipNonVerifiableCallbackUriConfirmationPrompt.equals(other.skipNonVerifiableCallbackUriConfirmationPrompt) && tokenExchange.equals(other.tokenExchange) && parRequestExpiry.equals(other.parRequestExpiry) && tokenQuota.equals(other.tokenQuota) && expressConfiguration.equals(other.expressConfiguration) && myOrganizationConfiguration.equals(other.myOrganizationConfiguration) && thirdPartySecurityMode.equals(other.thirdPartySecurityMode) && redirectionPolicy.equals(other.redirectionPolicy) && resourceServerIdentifier.equals(other.resourceServerIdentifier) && asyncApprovalNotificationChannels.equals(other.asyncApprovalNotificationChannels) && externalMetadataType.equals(other.externalMetadataType) && externalMetadataCreatedBy.equals(other.externalMetadataCreatedBy) && externalClientId.equals(other.externalClientId) && jwksUri.equals(other.jwksUri);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.clientId,
-                this.tenant,
-                this.name,
-                this.description,
-                this.global,
-                this.clientSecret,
-                this.appType,
-                this.logoUri,
-                this.isFirstParty,
-                this.oidcConformant,
-                this.callbacks,
-                this.allowedOrigins,
-                this.webOrigins,
-                this.clientAliases,
-                this.allowedClients,
-                this.allowedLogoutUrls,
-                this.sessionTransfer,
-                this.oidcLogout,
-                this.grantTypes,
-                this.jwtConfiguration,
-                this.signingKeys,
-                this.encryptionKey,
-                this.sso,
-                this.ssoDisabled,
-                this.crossOriginAuthentication,
-                this.crossOriginLoc,
-                this.customLoginPageOn,
-                this.customLoginPage,
-                this.customLoginPagePreview,
-                this.formTemplate,
-                this.addons,
-                this.tokenEndpointAuthMethod,
-                this.isTokenEndpointIpHeaderTrusted,
-                this.clientMetadata,
-                this.mobile,
-                this.initiateLoginUri,
-                this.refreshToken,
-                this.defaultOrganization,
-                this.organizationUsage,
-                this.organizationRequireBehavior,
-                this.organizationDiscoveryMethods,
-                this.clientAuthenticationMethods,
-                this.requirePushedAuthorizationRequests,
-                this.requireProofOfPossession,
-                this.signedRequestObject,
-                this.complianceLevel,
-                this.skipNonVerifiableCallbackUriConfirmationPrompt,
-                this.tokenExchange,
-                this.parRequestExpiry,
-                this.tokenQuota,
-                this.expressConfiguration,
-                this.myOrganizationConfiguration,
-                this.thirdPartySecurityMode,
-                this.redirectionPolicy,
-                this.resourceServerIdentifier,
-                this.asyncApprovalNotificationChannels,
-                this.externalMetadataType,
-                this.externalMetadataCreatedBy,
-                this.externalClientId,
-                this.jwksUri);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientId = Optional.empty();
 
         private Optional<String> tenant = Optional.empty();
@@ -1016,8 +812,7 @@ public final class GetClientResponseContent {
 
         private Optional<String> resourceServerIdentifier = Optional.empty();
 
-        private Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels =
-                Optional.empty();
+        private Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels = Optional.empty();
 
         private Optional<ClientExternalMetadataTypeEnum> externalMetadataType = Optional.empty();
 
@@ -1030,70 +825,11 @@ public final class GetClientResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetClientResponseContent other) {
-            clientId(other.getClientId());
-            tenant(other.getTenant());
-            name(other.getName());
-            description(other.getDescription());
-            global(other.getGlobal());
-            clientSecret(other.getClientSecret());
-            appType(other.getAppType());
-            logoUri(other.getLogoUri());
-            isFirstParty(other.getIsFirstParty());
-            oidcConformant(other.getOidcConformant());
-            callbacks(other.getCallbacks());
-            allowedOrigins(other.getAllowedOrigins());
-            webOrigins(other.getWebOrigins());
-            clientAliases(other.getClientAliases());
-            allowedClients(other.getAllowedClients());
-            allowedLogoutUrls(other.getAllowedLogoutUrls());
-            sessionTransfer(other.getSessionTransfer());
-            oidcLogout(other.getOidcLogout());
-            grantTypes(other.getGrantTypes());
-            jwtConfiguration(other.getJwtConfiguration());
-            signingKeys(other.getSigningKeys());
-            encryptionKey(other.getEncryptionKey());
-            sso(other.getSso());
-            ssoDisabled(other.getSsoDisabled());
-            crossOriginAuthentication(other.getCrossOriginAuthentication());
-            crossOriginLoc(other.getCrossOriginLoc());
-            customLoginPageOn(other.getCustomLoginPageOn());
-            customLoginPage(other.getCustomLoginPage());
-            customLoginPagePreview(other.getCustomLoginPagePreview());
-            formTemplate(other.getFormTemplate());
-            addons(other.getAddons());
-            tokenEndpointAuthMethod(other.getTokenEndpointAuthMethod());
-            isTokenEndpointIpHeaderTrusted(other.getIsTokenEndpointIpHeaderTrusted());
-            clientMetadata(other.getClientMetadata());
-            mobile(other.getMobile());
-            initiateLoginUri(other.getInitiateLoginUri());
-            refreshToken(other.getRefreshToken());
-            defaultOrganization(other.getDefaultOrganization());
-            organizationUsage(other.getOrganizationUsage());
-            organizationRequireBehavior(other.getOrganizationRequireBehavior());
-            organizationDiscoveryMethods(other.getOrganizationDiscoveryMethods());
-            clientAuthenticationMethods(other.getClientAuthenticationMethods());
-            requirePushedAuthorizationRequests(other.getRequirePushedAuthorizationRequests());
-            requireProofOfPossession(other.getRequireProofOfPossession());
-            signedRequestObject(other.getSignedRequestObject());
-            complianceLevel(other.getComplianceLevel());
-            skipNonVerifiableCallbackUriConfirmationPrompt(other.getSkipNonVerifiableCallbackUriConfirmationPrompt());
-            tokenExchange(other.getTokenExchange());
-            parRequestExpiry(other.getParRequestExpiry());
-            tokenQuota(other.getTokenQuota());
-            expressConfiguration(other.getExpressConfiguration());
-            myOrganizationConfiguration(other.getMyOrganizationConfiguration());
-            thirdPartySecurityMode(other.getThirdPartySecurityMode());
-            redirectionPolicy(other.getRedirectionPolicy());
-            resourceServerIdentifier(other.getResourceServerIdentifier());
-            asyncApprovalNotificationChannels(other.getAsyncApprovalNotificationChannels());
-            externalMetadataType(other.getExternalMetadataType());
-            externalMetadataCreatedBy(other.getExternalMetadataCreatedBy());
-            externalClientId(other.getExternalClientId());
-            jwksUri(other.getJwksUri());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1101,13 +837,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1115,13 +849,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "tenant", nulls = Nulls.SKIP)
         public Builder tenant(Optional<String> tenant) {
-            this.tenant = tenant;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tenant(String tenant) {
-            this.tenant = Optional.ofNullable(tenant);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1129,13 +861,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1143,13 +873,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1157,13 +885,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "global", nulls = Nulls.SKIP)
         public Builder global(Optional<Boolean> global) {
-            this.global = global;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder global(Boolean global) {
-            this.global = Optional.ofNullable(global);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1171,24 +897,20 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "app_type", nulls = Nulls.SKIP)
         public Builder appType(Optional<ClientAppTypeEnum> appType) {
-            this.appType = appType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appType(ClientAppTypeEnum appType) {
-            this.appType = Optional.ofNullable(appType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1196,13 +918,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "logo_uri", nulls = Nulls.SKIP)
         public Builder logoUri(Optional<String> logoUri) {
-            this.logoUri = logoUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUri(String logoUri) {
-            this.logoUri = Optional.ofNullable(logoUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1210,13 +930,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "is_first_party", nulls = Nulls.SKIP)
         public Builder isFirstParty(Optional<Boolean> isFirstParty) {
-            this.isFirstParty = isFirstParty;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isFirstParty(Boolean isFirstParty) {
-            this.isFirstParty = Optional.ofNullable(isFirstParty);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1224,13 +942,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "oidc_conformant", nulls = Nulls.SKIP)
         public Builder oidcConformant(Optional<Boolean> oidcConformant) {
-            this.oidcConformant = oidcConformant;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidcConformant(Boolean oidcConformant) {
-            this.oidcConformant = Optional.ofNullable(oidcConformant);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1238,13 +954,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "callbacks", nulls = Nulls.SKIP)
         public Builder callbacks(Optional<List<String>> callbacks) {
-            this.callbacks = callbacks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder callbacks(List<String> callbacks) {
-            this.callbacks = Optional.ofNullable(callbacks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1252,13 +966,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "allowed_origins", nulls = Nulls.SKIP)
         public Builder allowedOrigins(Optional<List<String>> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedOrigins(List<String> allowedOrigins) {
-            this.allowedOrigins = Optional.ofNullable(allowedOrigins);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1266,13 +978,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "web_origins", nulls = Nulls.SKIP)
         public Builder webOrigins(Optional<List<String>> webOrigins) {
-            this.webOrigins = webOrigins;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder webOrigins(List<String> webOrigins) {
-            this.webOrigins = Optional.ofNullable(webOrigins);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1280,13 +990,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "client_aliases", nulls = Nulls.SKIP)
         public Builder clientAliases(Optional<List<String>> clientAliases) {
-            this.clientAliases = clientAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAliases(List<String> clientAliases) {
-            this.clientAliases = Optional.ofNullable(clientAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1294,13 +1002,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "allowed_clients", nulls = Nulls.SKIP)
         public Builder allowedClients(Optional<List<String>> allowedClients) {
-            this.allowedClients = allowedClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedClients(List<String> allowedClients) {
-            this.allowedClients = Optional.ofNullable(allowedClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1308,56 +1014,37 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "allowed_logout_urls", nulls = Nulls.SKIP)
         public Builder allowedLogoutUrls(Optional<List<String>> allowedLogoutUrls) {
-            this.allowedLogoutUrls = allowedLogoutUrls;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedLogoutUrls(List<String> allowedLogoutUrls) {
-            this.allowedLogoutUrls = Optional.ofNullable(allowedLogoutUrls);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "session_transfer", nulls = Nulls.SKIP)
         public Builder sessionTransfer(@Nullable OptionalNullable<ClientSessionTransferConfiguration> sessionTransfer) {
-            this.sessionTransfer = sessionTransfer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionTransfer(ClientSessionTransferConfiguration sessionTransfer) {
-            this.sessionTransfer = OptionalNullable.of(sessionTransfer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionTransfer(Optional<ClientSessionTransferConfiguration> sessionTransfer) {
-            if (sessionTransfer.isPresent()) {
-                this.sessionTransfer = OptionalNullable.of(sessionTransfer.get());
-            } else {
-                this.sessionTransfer = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder sessionTransfer(
-                com.auth0.client.mgmt.core.Nullable<ClientSessionTransferConfiguration> sessionTransfer) {
-            if (sessionTransfer.isNull()) {
-                this.sessionTransfer = OptionalNullable.ofNull();
-            } else if (sessionTransfer.isEmpty()) {
-                this.sessionTransfer = OptionalNullable.absent();
-            } else {
-                this.sessionTransfer = OptionalNullable.of(sessionTransfer.get());
-            }
-            return this;
+        public Builder sessionTransfer(com.auth0.client.mgmt.core.Nullable<ClientSessionTransferConfiguration> sessionTransfer) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oidc_logout", nulls = Nulls.SKIP)
         public Builder oidcLogout(Optional<ClientOidcBackchannelLogoutSettings> oidcLogout) {
-            this.oidcLogout = oidcLogout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidcLogout(ClientOidcBackchannelLogoutSettings oidcLogout) {
-            this.oidcLogout = Optional.ofNullable(oidcLogout);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1365,86 +1052,54 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "grant_types", nulls = Nulls.SKIP)
         public Builder grantTypes(Optional<List<String>> grantTypes) {
-            this.grantTypes = grantTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder grantTypes(List<String> grantTypes) {
-            this.grantTypes = Optional.ofNullable(grantTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "jwt_configuration", nulls = Nulls.SKIP)
         public Builder jwtConfiguration(Optional<ClientJwtConfiguration> jwtConfiguration) {
-            this.jwtConfiguration = jwtConfiguration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder jwtConfiguration(ClientJwtConfiguration jwtConfiguration) {
-            this.jwtConfiguration = Optional.ofNullable(jwtConfiguration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signing_keys", nulls = Nulls.SKIP)
         public Builder signingKeys(@Nullable OptionalNullable<List<ClientSigningKey>> signingKeys) {
-            this.signingKeys = signingKeys;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingKeys(List<ClientSigningKey> signingKeys) {
-            this.signingKeys = OptionalNullable.of(signingKeys);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingKeys(Optional<List<ClientSigningKey>> signingKeys) {
-            if (signingKeys.isPresent()) {
-                this.signingKeys = OptionalNullable.of(signingKeys.get());
-            } else {
-                this.signingKeys = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingKeys(com.auth0.client.mgmt.core.Nullable<List<ClientSigningKey>> signingKeys) {
-            if (signingKeys.isNull()) {
-                this.signingKeys = OptionalNullable.ofNull();
-            } else if (signingKeys.isEmpty()) {
-                this.signingKeys = OptionalNullable.absent();
-            } else {
-                this.signingKeys = OptionalNullable.of(signingKeys.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "encryption_key", nulls = Nulls.SKIP)
         public Builder encryptionKey(@Nullable OptionalNullable<ClientEncryptionKey> encryptionKey) {
-            this.encryptionKey = encryptionKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder encryptionKey(ClientEncryptionKey encryptionKey) {
-            this.encryptionKey = OptionalNullable.of(encryptionKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder encryptionKey(Optional<ClientEncryptionKey> encryptionKey) {
-            if (encryptionKey.isPresent()) {
-                this.encryptionKey = OptionalNullable.of(encryptionKey.get());
-            } else {
-                this.encryptionKey = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder encryptionKey(com.auth0.client.mgmt.core.Nullable<ClientEncryptionKey> encryptionKey) {
-            if (encryptionKey.isNull()) {
-                this.encryptionKey = OptionalNullable.ofNull();
-            } else if (encryptionKey.isEmpty()) {
-                this.encryptionKey = OptionalNullable.absent();
-            } else {
-                this.encryptionKey = OptionalNullable.of(encryptionKey.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1452,13 +1107,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "sso", nulls = Nulls.SKIP)
         public Builder sso(Optional<Boolean> sso) {
-            this.sso = sso;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sso(Boolean sso) {
-            this.sso = Optional.ofNullable(sso);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1466,13 +1119,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "sso_disabled", nulls = Nulls.SKIP)
         public Builder ssoDisabled(Optional<Boolean> ssoDisabled) {
-            this.ssoDisabled = ssoDisabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ssoDisabled(Boolean ssoDisabled) {
-            this.ssoDisabled = Optional.ofNullable(ssoDisabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1480,13 +1131,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "cross_origin_authentication", nulls = Nulls.SKIP)
         public Builder crossOriginAuthentication(Optional<Boolean> crossOriginAuthentication) {
-            this.crossOriginAuthentication = crossOriginAuthentication;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder crossOriginAuthentication(Boolean crossOriginAuthentication) {
-            this.crossOriginAuthentication = Optional.ofNullable(crossOriginAuthentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1494,13 +1143,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "cross_origin_loc", nulls = Nulls.SKIP)
         public Builder crossOriginLoc(Optional<String> crossOriginLoc) {
-            this.crossOriginLoc = crossOriginLoc;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder crossOriginLoc(String crossOriginLoc) {
-            this.crossOriginLoc = Optional.ofNullable(crossOriginLoc);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1508,13 +1155,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "custom_login_page_on", nulls = Nulls.SKIP)
         public Builder customLoginPageOn(Optional<Boolean> customLoginPageOn) {
-            this.customLoginPageOn = customLoginPageOn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customLoginPageOn(Boolean customLoginPageOn) {
-            this.customLoginPageOn = Optional.ofNullable(customLoginPageOn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1522,13 +1167,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "custom_login_page", nulls = Nulls.SKIP)
         public Builder customLoginPage(Optional<String> customLoginPage) {
-            this.customLoginPage = customLoginPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customLoginPage(String customLoginPage) {
-            this.customLoginPage = Optional.ofNullable(customLoginPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1536,13 +1179,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "custom_login_page_preview", nulls = Nulls.SKIP)
         public Builder customLoginPagePreview(Optional<String> customLoginPagePreview) {
-            this.customLoginPagePreview = customLoginPagePreview;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customLoginPagePreview(String customLoginPagePreview) {
-            this.customLoginPagePreview = Optional.ofNullable(customLoginPagePreview);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1550,35 +1191,29 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "form_template", nulls = Nulls.SKIP)
         public Builder formTemplate(Optional<String> formTemplate) {
-            this.formTemplate = formTemplate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder formTemplate(String formTemplate) {
-            this.formTemplate = Optional.ofNullable(formTemplate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "addons", nulls = Nulls.SKIP)
         public Builder addons(Optional<ClientAddons> addons) {
-            this.addons = addons;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addons(ClientAddons addons) {
-            this.addons = Optional.ofNullable(addons);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_endpoint_auth_method", nulls = Nulls.SKIP)
         public Builder tokenEndpointAuthMethod(Optional<ClientTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = tokenEndpointAuthMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEndpointAuthMethod(ClientTokenEndpointAuthMethodEnum tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = Optional.ofNullable(tokenEndpointAuthMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1586,35 +1221,29 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "is_token_endpoint_ip_header_trusted", nulls = Nulls.SKIP)
         public Builder isTokenEndpointIpHeaderTrusted(Optional<Boolean> isTokenEndpointIpHeaderTrusted) {
-            this.isTokenEndpointIpHeaderTrusted = isTokenEndpointIpHeaderTrusted;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isTokenEndpointIpHeaderTrusted(Boolean isTokenEndpointIpHeaderTrusted) {
-            this.isTokenEndpointIpHeaderTrusted = Optional.ofNullable(isTokenEndpointIpHeaderTrusted);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_metadata", nulls = Nulls.SKIP)
         public Builder clientMetadata(Optional<Map<String, Object>> clientMetadata) {
-            this.clientMetadata = clientMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientMetadata(Map<String, Object> clientMetadata) {
-            this.clientMetadata = Optional.ofNullable(clientMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mobile", nulls = Nulls.SKIP)
         public Builder mobile(Optional<ClientMobile> mobile) {
-            this.mobile = mobile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mobile(ClientMobile mobile) {
-            this.mobile = Optional.ofNullable(mobile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1622,148 +1251,92 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "initiate_login_uri", nulls = Nulls.SKIP)
         public Builder initiateLoginUri(Optional<String> initiateLoginUri) {
-            this.initiateLoginUri = initiateLoginUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initiateLoginUri(String initiateLoginUri) {
-            this.initiateLoginUri = Optional.ofNullable(initiateLoginUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "refresh_token", nulls = Nulls.SKIP)
         public Builder refreshToken(@Nullable OptionalNullable<ClientRefreshTokenConfiguration> refreshToken) {
-            this.refreshToken = refreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshToken(ClientRefreshTokenConfiguration refreshToken) {
-            this.refreshToken = OptionalNullable.of(refreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshToken(Optional<ClientRefreshTokenConfiguration> refreshToken) {
-            if (refreshToken.isPresent()) {
-                this.refreshToken = OptionalNullable.of(refreshToken.get());
-            } else {
-                this.refreshToken = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshToken(com.auth0.client.mgmt.core.Nullable<ClientRefreshTokenConfiguration> refreshToken) {
-            if (refreshToken.isNull()) {
-                this.refreshToken = OptionalNullable.ofNull();
-            } else if (refreshToken.isEmpty()) {
-                this.refreshToken = OptionalNullable.absent();
-            } else {
-                this.refreshToken = OptionalNullable.of(refreshToken.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_organization", nulls = Nulls.SKIP)
         public Builder defaultOrganization(@Nullable OptionalNullable<ClientDefaultOrganization> defaultOrganization) {
-            this.defaultOrganization = defaultOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultOrganization(ClientDefaultOrganization defaultOrganization) {
-            this.defaultOrganization = OptionalNullable.of(defaultOrganization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultOrganization(Optional<ClientDefaultOrganization> defaultOrganization) {
-            if (defaultOrganization.isPresent()) {
-                this.defaultOrganization = OptionalNullable.of(defaultOrganization.get());
-            } else {
-                this.defaultOrganization = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder defaultOrganization(
-                com.auth0.client.mgmt.core.Nullable<ClientDefaultOrganization> defaultOrganization) {
-            if (defaultOrganization.isNull()) {
-                this.defaultOrganization = OptionalNullable.ofNull();
-            } else if (defaultOrganization.isEmpty()) {
-                this.defaultOrganization = OptionalNullable.absent();
-            } else {
-                this.defaultOrganization = OptionalNullable.of(defaultOrganization.get());
-            }
-            return this;
+        public Builder defaultOrganization(com.auth0.client.mgmt.core.Nullable<ClientDefaultOrganization> defaultOrganization) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organization_usage", nulls = Nulls.SKIP)
         public Builder organizationUsage(Optional<ClientOrganizationUsageEnum> organizationUsage) {
-            this.organizationUsage = organizationUsage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationUsage(ClientOrganizationUsageEnum organizationUsage) {
-            this.organizationUsage = Optional.ofNullable(organizationUsage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organization_require_behavior", nulls = Nulls.SKIP)
-        public Builder organizationRequireBehavior(
-                Optional<ClientOrganizationRequireBehaviorEnum> organizationRequireBehavior) {
-            this.organizationRequireBehavior = organizationRequireBehavior;
-            return this;
+        public Builder organizationRequireBehavior(Optional<ClientOrganizationRequireBehaviorEnum> organizationRequireBehavior) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationRequireBehavior(ClientOrganizationRequireBehaviorEnum organizationRequireBehavior) {
-            this.organizationRequireBehavior = Optional.ofNullable(organizationRequireBehavior);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Defines the available methods for organization discovery during the <code>pre_login_prompt</code>. Users can discover their organization either by <code>email</code>, <code>organization_name</code> or both.</p>
          */
         @JsonSetter(value = "organization_discovery_methods", nulls = Nulls.SKIP)
-        public Builder organizationDiscoveryMethods(
-                Optional<List<ClientOrganizationDiscoveryEnum>> organizationDiscoveryMethods) {
-            this.organizationDiscoveryMethods = organizationDiscoveryMethods;
-            return this;
+        public Builder organizationDiscoveryMethods(Optional<List<ClientOrganizationDiscoveryEnum>> organizationDiscoveryMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder organizationDiscoveryMethods(
-                List<ClientOrganizationDiscoveryEnum> organizationDiscoveryMethods) {
-            this.organizationDiscoveryMethods = Optional.ofNullable(organizationDiscoveryMethods);
-            return this;
+        public Builder organizationDiscoveryMethods(List<ClientOrganizationDiscoveryEnum> organizationDiscoveryMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_authentication_methods", nulls = Nulls.SKIP)
-        public Builder clientAuthenticationMethods(
-                @Nullable OptionalNullable<ClientAuthenticationMethod> clientAuthenticationMethods) {
-            this.clientAuthenticationMethods = clientAuthenticationMethods;
-            return this;
+        public Builder clientAuthenticationMethods(@Nullable OptionalNullable<ClientAuthenticationMethod> clientAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAuthenticationMethods(ClientAuthenticationMethod clientAuthenticationMethods) {
-            this.clientAuthenticationMethods = OptionalNullable.of(clientAuthenticationMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAuthenticationMethods(Optional<ClientAuthenticationMethod> clientAuthenticationMethods) {
-            if (clientAuthenticationMethods.isPresent()) {
-                this.clientAuthenticationMethods = OptionalNullable.of(clientAuthenticationMethods.get());
-            } else {
-                this.clientAuthenticationMethods = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder clientAuthenticationMethods(
-                com.auth0.client.mgmt.core.Nullable<ClientAuthenticationMethod> clientAuthenticationMethods) {
-            if (clientAuthenticationMethods.isNull()) {
-                this.clientAuthenticationMethods = OptionalNullable.ofNull();
-            } else if (clientAuthenticationMethods.isEmpty()) {
-                this.clientAuthenticationMethods = OptionalNullable.absent();
-            } else {
-                this.clientAuthenticationMethods = OptionalNullable.of(clientAuthenticationMethods.get());
-            }
-            return this;
+        public Builder clientAuthenticationMethods(com.auth0.client.mgmt.core.Nullable<ClientAuthenticationMethod> clientAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1771,13 +1344,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "require_pushed_authorization_requests", nulls = Nulls.SKIP)
         public Builder requirePushedAuthorizationRequests(Optional<Boolean> requirePushedAuthorizationRequests) {
-            this.requirePushedAuthorizationRequests = requirePushedAuthorizationRequests;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requirePushedAuthorizationRequests(Boolean requirePushedAuthorizationRequests) {
-            this.requirePushedAuthorizationRequests = Optional.ofNullable(requirePushedAuthorizationRequests);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1785,55 +1356,37 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "require_proof_of_possession", nulls = Nulls.SKIP)
         public Builder requireProofOfPossession(Optional<Boolean> requireProofOfPossession) {
-            this.requireProofOfPossession = requireProofOfPossession;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requireProofOfPossession(Boolean requireProofOfPossession) {
-            this.requireProofOfPossession = Optional.ofNullable(requireProofOfPossession);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signed_request_object", nulls = Nulls.SKIP)
         public Builder signedRequestObject(Optional<ClientSignedRequestObjectWithCredentialId> signedRequestObject) {
-            this.signedRequestObject = signedRequestObject;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signedRequestObject(ClientSignedRequestObjectWithCredentialId signedRequestObject) {
-            this.signedRequestObject = Optional.ofNullable(signedRequestObject);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "compliance_level", nulls = Nulls.SKIP)
         public Builder complianceLevel(@Nullable OptionalNullable<ClientComplianceLevelEnum> complianceLevel) {
-            this.complianceLevel = complianceLevel;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder complianceLevel(ClientComplianceLevelEnum complianceLevel) {
-            this.complianceLevel = OptionalNullable.of(complianceLevel);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder complianceLevel(Optional<ClientComplianceLevelEnum> complianceLevel) {
-            if (complianceLevel.isPresent()) {
-                this.complianceLevel = OptionalNullable.of(complianceLevel.get());
-            } else {
-                this.complianceLevel = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder complianceLevel(com.auth0.client.mgmt.core.Nullable<ClientComplianceLevelEnum> complianceLevel) {
-            if (complianceLevel.isNull()) {
-                this.complianceLevel = OptionalNullable.ofNull();
-            } else if (complianceLevel.isEmpty()) {
-                this.complianceLevel = OptionalNullable.absent();
-            } else {
-                this.complianceLevel = OptionalNullable.of(complianceLevel.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1842,28 +1395,21 @@ public final class GetClientResponseContent {
          * See https://auth0.com/docs/secure/security-guidance/measures-against-app-impersonation for more information.</p>
          */
         @JsonSetter(value = "skip_non_verifiable_callback_uri_confirmation_prompt", nulls = Nulls.SKIP)
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
-            this.skipNonVerifiableCallbackUriConfirmationPrompt = skipNonVerifiableCallbackUriConfirmationPrompt;
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                Boolean skipNonVerifiableCallbackUriConfirmationPrompt) {
-            this.skipNonVerifiableCallbackUriConfirmationPrompt =
-                    Optional.ofNullable(skipNonVerifiableCallbackUriConfirmationPrompt);
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(Boolean skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_exchange", nulls = Nulls.SKIP)
         public Builder tokenExchange(Optional<ClientTokenExchangeConfiguration> tokenExchange) {
-            this.tokenExchange = tokenExchange;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenExchange(ClientTokenExchangeConfiguration tokenExchange) {
-            this.tokenExchange = Optional.ofNullable(tokenExchange);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1871,90 +1417,64 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "par_request_expiry", nulls = Nulls.SKIP)
         public Builder parRequestExpiry(@Nullable OptionalNullable<Integer> parRequestExpiry) {
-            this.parRequestExpiry = parRequestExpiry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder parRequestExpiry(Integer parRequestExpiry) {
-            this.parRequestExpiry = OptionalNullable.of(parRequestExpiry);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder parRequestExpiry(Optional<Integer> parRequestExpiry) {
-            if (parRequestExpiry.isPresent()) {
-                this.parRequestExpiry = OptionalNullable.of(parRequestExpiry.get());
-            } else {
-                this.parRequestExpiry = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder parRequestExpiry(com.auth0.client.mgmt.core.Nullable<Integer> parRequestExpiry) {
-            if (parRequestExpiry.isNull()) {
-                this.parRequestExpiry = OptionalNullable.ofNull();
-            } else if (parRequestExpiry.isEmpty()) {
-                this.parRequestExpiry = OptionalNullable.absent();
-            } else {
-                this.parRequestExpiry = OptionalNullable.of(parRequestExpiry.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_quota", nulls = Nulls.SKIP)
         public Builder tokenQuota(Optional<TokenQuota> tokenQuota) {
-            this.tokenQuota = tokenQuota;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenQuota(TokenQuota tokenQuota) {
-            this.tokenQuota = Optional.ofNullable(tokenQuota);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "express_configuration", nulls = Nulls.SKIP)
         public Builder expressConfiguration(Optional<ExpressConfiguration> expressConfiguration) {
-            this.expressConfiguration = expressConfiguration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expressConfiguration(ExpressConfiguration expressConfiguration) {
-            this.expressConfiguration = Optional.ofNullable(expressConfiguration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "my_organization_configuration", nulls = Nulls.SKIP)
-        public Builder myOrganizationConfiguration(
-                Optional<ClientMyOrganizationResponseConfiguration> myOrganizationConfiguration) {
-            this.myOrganizationConfiguration = myOrganizationConfiguration;
-            return this;
+        public Builder myOrganizationConfiguration(Optional<ClientMyOrganizationResponseConfiguration> myOrganizationConfiguration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder myOrganizationConfiguration(
-                ClientMyOrganizationResponseConfiguration myOrganizationConfiguration) {
-            this.myOrganizationConfiguration = Optional.ofNullable(myOrganizationConfiguration);
-            return this;
+        public Builder myOrganizationConfiguration(ClientMyOrganizationResponseConfiguration myOrganizationConfiguration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "third_party_security_mode", nulls = Nulls.SKIP)
         public Builder thirdPartySecurityMode(Optional<ClientThirdPartySecurityModeEnum> thirdPartySecurityMode) {
-            this.thirdPartySecurityMode = thirdPartySecurityMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder thirdPartySecurityMode(ClientThirdPartySecurityModeEnum thirdPartySecurityMode) {
-            this.thirdPartySecurityMode = Optional.ofNullable(thirdPartySecurityMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "redirection_policy", nulls = Nulls.SKIP)
         public Builder redirectionPolicy(Optional<ClientRedirectionPolicyEnum> redirectionPolicy) {
-            this.redirectionPolicy = redirectionPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder redirectionPolicy(ClientRedirectionPolicyEnum redirectionPolicy) {
-            this.redirectionPolicy = Optional.ofNullable(redirectionPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1962,49 +1482,38 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "resource_server_identifier", nulls = Nulls.SKIP)
         public Builder resourceServerIdentifier(Optional<String> resourceServerIdentifier) {
-            this.resourceServerIdentifier = resourceServerIdentifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resourceServerIdentifier(String resourceServerIdentifier) {
-            this.resourceServerIdentifier = Optional.ofNullable(resourceServerIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "async_approval_notification_channels", nulls = Nulls.SKIP)
-        public Builder asyncApprovalNotificationChannels(
-                Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels) {
-            this.asyncApprovalNotificationChannels = asyncApprovalNotificationChannels;
-            return this;
+        public Builder asyncApprovalNotificationChannels(Optional<List<AsyncApprovalNotificationsChannelsEnum>> asyncApprovalNotificationChannels) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder asyncApprovalNotificationChannels(
-                List<AsyncApprovalNotificationsChannelsEnum> asyncApprovalNotificationChannels) {
-            this.asyncApprovalNotificationChannels = Optional.ofNullable(asyncApprovalNotificationChannels);
-            return this;
+        public Builder asyncApprovalNotificationChannels(List<AsyncApprovalNotificationsChannelsEnum> asyncApprovalNotificationChannels) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "external_metadata_type", nulls = Nulls.SKIP)
         public Builder externalMetadataType(Optional<ClientExternalMetadataTypeEnum> externalMetadataType) {
-            this.externalMetadataType = externalMetadataType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalMetadataType(ClientExternalMetadataTypeEnum externalMetadataType) {
-            this.externalMetadataType = Optional.ofNullable(externalMetadataType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "external_metadata_created_by", nulls = Nulls.SKIP)
-        public Builder externalMetadataCreatedBy(
-                Optional<ClientExternalMetadataCreatedByEnum> externalMetadataCreatedBy) {
-            this.externalMetadataCreatedBy = externalMetadataCreatedBy;
-            return this;
+        public Builder externalMetadataCreatedBy(Optional<ClientExternalMetadataCreatedByEnum> externalMetadataCreatedBy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalMetadataCreatedBy(ClientExternalMetadataCreatedByEnum externalMetadataCreatedBy) {
-            this.externalMetadataCreatedBy = Optional.ofNullable(externalMetadataCreatedBy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2012,13 +1521,11 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "external_client_id", nulls = Nulls.SKIP)
         public Builder externalClientId(Optional<String> externalClientId) {
-            this.externalClientId = externalClientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalClientId(String externalClientId) {
-            this.externalClientId = Optional.ofNullable(externalClientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2026,88 +1533,23 @@ public final class GetClientResponseContent {
          */
         @JsonSetter(value = "jwks_uri", nulls = Nulls.SKIP)
         public Builder jwksUri(Optional<String> jwksUri) {
-            this.jwksUri = jwksUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder jwksUri(String jwksUri) {
-            this.jwksUri = Optional.ofNullable(jwksUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetClientResponseContent build() {
-            return new GetClientResponseContent(
-                    clientId,
-                    tenant,
-                    name,
-                    description,
-                    global,
-                    clientSecret,
-                    appType,
-                    logoUri,
-                    isFirstParty,
-                    oidcConformant,
-                    callbacks,
-                    allowedOrigins,
-                    webOrigins,
-                    clientAliases,
-                    allowedClients,
-                    allowedLogoutUrls,
-                    sessionTransfer,
-                    oidcLogout,
-                    grantTypes,
-                    jwtConfiguration,
-                    signingKeys,
-                    encryptionKey,
-                    sso,
-                    ssoDisabled,
-                    crossOriginAuthentication,
-                    crossOriginLoc,
-                    customLoginPageOn,
-                    customLoginPage,
-                    customLoginPagePreview,
-                    formTemplate,
-                    addons,
-                    tokenEndpointAuthMethod,
-                    isTokenEndpointIpHeaderTrusted,
-                    clientMetadata,
-                    mobile,
-                    initiateLoginUri,
-                    refreshToken,
-                    defaultOrganization,
-                    organizationUsage,
-                    organizationRequireBehavior,
-                    organizationDiscoveryMethods,
-                    clientAuthenticationMethods,
-                    requirePushedAuthorizationRequests,
-                    requireProofOfPossession,
-                    signedRequestObject,
-                    complianceLevel,
-                    skipNonVerifiableCallbackUriConfirmationPrompt,
-                    tokenExchange,
-                    parRequestExpiry,
-                    tokenQuota,
-                    expressConfiguration,
-                    myOrganizationConfiguration,
-                    thirdPartySecurityMode,
-                    redirectionPolicy,
-                    resourceServerIdentifier,
-                    asyncApprovalNotificationChannels,
-                    externalMetadataType,
-                    externalMetadataCreatedBy,
-                    externalClientId,
-                    jwksUri,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

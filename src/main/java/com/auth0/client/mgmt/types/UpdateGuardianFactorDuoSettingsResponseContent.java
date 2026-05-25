@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateGuardianFactorDuoSettingsResponseContent.Builder.class)
 public final class UpdateGuardianFactorDuoSettingsResponseContent {
+
     private final Optional<String> ikey;
 
     private final Optional<String> skey;
@@ -28,11 +29,7 @@ public final class UpdateGuardianFactorDuoSettingsResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateGuardianFactorDuoSettingsResponseContent(
-            Optional<String> ikey,
-            Optional<String> skey,
-            Optional<String> host,
-            Map<String, Object> additionalProperties) {
+    private UpdateGuardianFactorDuoSettingsResponseContent(Optional<String> ikey, Optional<String> skey, Optional<String> host, Map<String, Object> additionalProperties) {
         this.ikey = ikey;
         this.skey = skey;
         this.host = host;
@@ -41,29 +38,27 @@ public final class UpdateGuardianFactorDuoSettingsResponseContent {
 
     @JsonProperty("ikey")
     public Optional<String> getIkey() {
-        return ikey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("skey")
     public Optional<String> getSkey() {
-        return skey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("host")
     public Optional<String> getHost() {
-        return host;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateGuardianFactorDuoSettingsResponseContent
-                && equalTo((UpdateGuardianFactorDuoSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateGuardianFactorDuoSettingsResponseContent other) {
@@ -72,20 +67,21 @@ public final class UpdateGuardianFactorDuoSettingsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ikey, this.skey, this.host);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> ikey = Optional.empty();
 
         private Optional<String> skey = Optional.empty();
@@ -95,60 +91,50 @@ public final class UpdateGuardianFactorDuoSettingsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateGuardianFactorDuoSettingsResponseContent other) {
-            ikey(other.getIkey());
-            skey(other.getSkey());
-            host(other.getHost());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ikey", nulls = Nulls.SKIP)
         public Builder ikey(Optional<String> ikey) {
-            this.ikey = ikey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ikey(String ikey) {
-            this.ikey = Optional.ofNullable(ikey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "skey", nulls = Nulls.SKIP)
         public Builder skey(Optional<String> skey) {
-            this.skey = skey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder skey(String skey) {
-            this.skey = Optional.ofNullable(skey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "host", nulls = Nulls.SKIP)
         public Builder host(Optional<String> host) {
-            this.host = host;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder host(String host) {
-            this.host = Optional.ofNullable(host);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateGuardianFactorDuoSettingsResponseContent build() {
-            return new UpdateGuardianFactorDuoSettingsResponseContent(ikey, skey, host, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

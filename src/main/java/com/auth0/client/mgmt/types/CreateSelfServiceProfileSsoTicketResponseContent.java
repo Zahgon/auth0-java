@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateSelfServiceProfileSsoTicketResponseContent.Builder.class)
 public final class CreateSelfServiceProfileSsoTicketResponseContent {
+
     private final Optional<String> ticket;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateSelfServiceProfileSsoTicketResponseContent(
-            Optional<String> ticket, Map<String, Object> additionalProperties) {
+    private CreateSelfServiceProfileSsoTicketResponseContent(Optional<String> ticket, Map<String, Object> additionalProperties) {
         this.ticket = ticket;
         this.additionalProperties = additionalProperties;
     }
@@ -35,19 +35,17 @@ public final class CreateSelfServiceProfileSsoTicketResponseContent {
      */
     @JsonProperty("ticket")
     public Optional<String> getTicket() {
-        return ticket;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateSelfServiceProfileSsoTicketResponseContent
-                && equalTo((CreateSelfServiceProfileSsoTicketResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateSelfServiceProfileSsoTicketResponseContent other) {
@@ -56,30 +54,31 @@ public final class CreateSelfServiceProfileSsoTicketResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ticket);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> ticket = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateSelfServiceProfileSsoTicketResponseContent other) {
-            ticket(other.getTicket());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +86,23 @@ public final class CreateSelfServiceProfileSsoTicketResponseContent {
          */
         @JsonSetter(value = "ticket", nulls = Nulls.SKIP)
         public Builder ticket(Optional<String> ticket) {
-            this.ticket = ticket;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ticket(String ticket) {
-            this.ticket = Optional.ofNullable(ticket);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateSelfServiceProfileSsoTicketResponseContent build() {
-            return new CreateSelfServiceProfileSsoTicketResponseContent(ticket, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

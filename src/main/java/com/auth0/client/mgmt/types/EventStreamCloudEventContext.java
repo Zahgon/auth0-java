@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventContext.Builder.class)
 public final class EventStreamCloudEventContext {
+
     private final Optional<EventStreamCloudEventContextClient> client;
 
     private final Optional<EventStreamCloudEventContextConnection> connection;
@@ -31,12 +32,7 @@ public final class EventStreamCloudEventContext {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventContext(
-            Optional<EventStreamCloudEventContextClient> client,
-            Optional<EventStreamCloudEventContextConnection> connection,
-            Optional<EventStreamCloudEventContextRequest> request,
-            EventStreamCloudEventContextTenant tenant,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventContext(Optional<EventStreamCloudEventContextClient> client, Optional<EventStreamCloudEventContextConnection> connection, Optional<EventStreamCloudEventContextRequest> request, EventStreamCloudEventContextTenant tenant, Map<String, Object> additionalProperties) {
         this.client = client;
         this.connection = connection;
         this.request = request;
@@ -46,63 +42,61 @@ public final class EventStreamCloudEventContext {
 
     @JsonProperty("client")
     public Optional<EventStreamCloudEventContextClient> getClient() {
-        return client;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection")
     public Optional<EventStreamCloudEventContextConnection> getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("request")
     public Optional<EventStreamCloudEventContextRequest> getRequest() {
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant")
     public EventStreamCloudEventContextTenant getTenant() {
-        return tenant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventContext && equalTo((EventStreamCloudEventContext) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventContext other) {
-        return client.equals(other.client)
-                && connection.equals(other.connection)
-                && request.equals(other.request)
-                && tenant.equals(other.tenant);
+        return client.equals(other.client) && connection.equals(other.connection) && request.equals(other.request) && tenant.equals(other.tenant);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.client, this.connection, this.request, this.tenant);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TenantStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TenantStage {
+
         _FinalStage tenant(@NotNull EventStreamCloudEventContextTenant tenant);
 
         Builder from(EventStreamCloudEventContext other);
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventContext build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +118,7 @@ public final class EventStreamCloudEventContext {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TenantStage, _FinalStage {
+
         private EventStreamCloudEventContextTenant tenant;
 
         private Optional<EventStreamCloudEventContextRequest> request = Optional.empty();
@@ -135,78 +130,66 @@ public final class EventStreamCloudEventContext {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventContext other) {
-            client(other.getClient());
-            connection(other.getConnection());
-            request(other.getRequest());
-            tenant(other.getTenant());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("tenant")
         public _FinalStage tenant(@NotNull EventStreamCloudEventContextTenant tenant) {
-            this.tenant = Objects.requireNonNull(tenant, "tenant must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage request(EventStreamCloudEventContextRequest request) {
-            this.request = Optional.ofNullable(request);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "request", nulls = Nulls.SKIP)
         public _FinalStage request(Optional<EventStreamCloudEventContextRequest> request) {
-            this.request = request;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage connection(EventStreamCloudEventContextConnection connection) {
-            this.connection = Optional.ofNullable(connection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "connection", nulls = Nulls.SKIP)
         public _FinalStage connection(Optional<EventStreamCloudEventContextConnection> connection) {
-            this.connection = connection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage client(EventStreamCloudEventContextClient client) {
-            this.client = Optional.ofNullable(client);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "client", nulls = Nulls.SKIP)
         public _FinalStage client(Optional<EventStreamCloudEventContextClient> client) {
-            this.client = client;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventContext build() {
-            return new EventStreamCloudEventContext(client, connection, request, tenant, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

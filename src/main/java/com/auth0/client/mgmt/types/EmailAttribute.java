@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailAttribute.Builder.class)
 public final class EmailAttribute {
+
     private final Optional<ConnectionAttributeIdentifier> identifier;
 
     private final Optional<Boolean> unique;
@@ -32,13 +33,7 @@ public final class EmailAttribute {
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailAttribute(
-            Optional<ConnectionAttributeIdentifier> identifier,
-            Optional<Boolean> unique,
-            Optional<Boolean> profileRequired,
-            Optional<VerificationMethodEnum> verificationMethod,
-            Optional<SignupVerified> signup,
-            Map<String, Object> additionalProperties) {
+    private EmailAttribute(Optional<ConnectionAttributeIdentifier> identifier, Optional<Boolean> unique, Optional<Boolean> profileRequired, Optional<VerificationMethodEnum> verificationMethod, Optional<SignupVerified> signup, Map<String, Object> additionalProperties) {
         this.identifier = identifier;
         this.unique = unique;
         this.profileRequired = profileRequired;
@@ -49,7 +44,7 @@ public final class EmailAttribute {
 
     @JsonProperty("identifier")
     public Optional<ConnectionAttributeIdentifier> getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +52,7 @@ public final class EmailAttribute {
      */
     @JsonProperty("unique")
     public Optional<Boolean> getUnique() {
-        return unique;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,54 +60,50 @@ public final class EmailAttribute {
      */
     @JsonProperty("profile_required")
     public Optional<Boolean> getProfileRequired() {
-        return profileRequired;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("verification_method")
     public Optional<VerificationMethodEnum> getVerificationMethod() {
-        return verificationMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signup")
     public Optional<SignupVerified> getSignup() {
-        return signup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailAttribute && equalTo((EmailAttribute) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailAttribute other) {
-        return identifier.equals(other.identifier)
-                && unique.equals(other.unique)
-                && profileRequired.equals(other.profileRequired)
-                && verificationMethod.equals(other.verificationMethod)
-                && signup.equals(other.signup);
+        return identifier.equals(other.identifier) && unique.equals(other.unique) && profileRequired.equals(other.profileRequired) && verificationMethod.equals(other.verificationMethod) && signup.equals(other.signup);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.identifier, this.unique, this.profileRequired, this.verificationMethod, this.signup);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionAttributeIdentifier> identifier = Optional.empty();
 
         private Optional<Boolean> unique = Optional.empty();
@@ -126,26 +117,20 @@ public final class EmailAttribute {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailAttribute other) {
-            identifier(other.getIdentifier());
-            unique(other.getUnique());
-            profileRequired(other.getProfileRequired());
-            verificationMethod(other.getVerificationMethod());
-            signup(other.getSignup());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "identifier", nulls = Nulls.SKIP)
         public Builder identifier(Optional<ConnectionAttributeIdentifier> identifier) {
-            this.identifier = identifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifier(ConnectionAttributeIdentifier identifier) {
-            this.identifier = Optional.ofNullable(identifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,13 +138,11 @@ public final class EmailAttribute {
          */
         @JsonSetter(value = "unique", nulls = Nulls.SKIP)
         public Builder unique(Optional<Boolean> unique) {
-            this.unique = unique;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder unique(Boolean unique) {
-            this.unique = Optional.ofNullable(unique);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,50 +150,41 @@ public final class EmailAttribute {
          */
         @JsonSetter(value = "profile_required", nulls = Nulls.SKIP)
         public Builder profileRequired(Optional<Boolean> profileRequired) {
-            this.profileRequired = profileRequired;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profileRequired(Boolean profileRequired) {
-            this.profileRequired = Optional.ofNullable(profileRequired);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "verification_method", nulls = Nulls.SKIP)
         public Builder verificationMethod(Optional<VerificationMethodEnum> verificationMethod) {
-            this.verificationMethod = verificationMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verificationMethod(VerificationMethodEnum verificationMethod) {
-            this.verificationMethod = Optional.ofNullable(verificationMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signup", nulls = Nulls.SKIP)
         public Builder signup(Optional<SignupVerified> signup) {
-            this.signup = signup;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signup(SignupVerified signup) {
-            this.signup = Optional.ofNullable(signup);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailAttribute build() {
-            return new EmailAttribute(
-                    identifier, unique, profileRequired, verificationMethod, signup, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

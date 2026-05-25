@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.UpdateTokenExchangeProfileRequestContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTokenExchangeProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTokenExchangeProfilesClient rawClient;
@@ -28,7 +29,7 @@ public class AsyncTokenExchangeProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTokenExchangeProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,7 +43,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,9 +56,8 @@ public class AsyncTokenExchangeProfilesClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(
-            RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,9 +70,8 @@ public class AsyncTokenExchangeProfilesClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(
-            TokenExchangeProfilesListRequest request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(TokenExchangeProfilesListRequest request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,27 +84,24 @@ public class AsyncTokenExchangeProfilesClient {
      * </ul></p>
      * <p><b>Note</b>: The first time you call this endpoint using checkpoint pagination, omit the <code>from</code> parameter. If there are more results, a <code>next</code> value is included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, no pages are remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(
-            TokenExchangeProfilesListRequest request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<TokenExchangeProfileResponseContent>> list(TokenExchangeProfilesListRequest request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Token Exchange Profile within your tenant.
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
-    public CompletableFuture<CreateTokenExchangeProfileResponseContent> create(
-            CreateTokenExchangeProfileRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateTokenExchangeProfileResponseContent> create(CreateTokenExchangeProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Token Exchange Profile within your tenant.
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
-    public CompletableFuture<CreateTokenExchangeProfileResponseContent> create(
-            CreateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateTokenExchangeProfileResponseContent> create(CreateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,7 +109,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<GetTokenExchangeProfileResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +117,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta’s Master Subscription Agreement</a>. It is your responsibility to securely validate the user’s subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<GetTokenExchangeProfileResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -129,7 +125,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -137,7 +133,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -145,7 +141,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<Void> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,7 +149,7 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<Void> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -161,15 +157,14 @@ public class AsyncTokenExchangeProfilesClient {
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
     public CompletableFuture<Void> update(String id, UpdateTokenExchangeProfileRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a Token Exchange Profile within your tenant.
      * <p>By using this feature, you agree to the applicable Free Trial terms in <a href="https://www.okta.com/legal/">Okta's Master Subscription Agreement</a>. It is your responsibility to securely validate the user's subject_token. See <a href="https://auth0.com/docs/authenticate/custom-token-exchange">User Guide</a> for more details.</p>
      */
-    public CompletableFuture<Void> update(
-            String id, UpdateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> update(String id, UpdateTokenExchangeProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

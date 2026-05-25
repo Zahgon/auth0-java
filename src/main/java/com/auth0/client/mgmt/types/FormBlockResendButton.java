@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockResendButton.Builder.class)
 public final class FormBlockResendButton {
+
     private final String id;
 
     private final FormComponentCategoryBlockConst category;
@@ -29,12 +30,7 @@ public final class FormBlockResendButton {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormBlockResendButton(
-            String id,
-            FormComponentCategoryBlockConst category,
-            FormBlockTypeResendButtonConst type,
-            FormBlockResendButtonConfig config,
-            Map<String, Object> additionalProperties) {
+    private FormBlockResendButton(String id, FormComponentCategoryBlockConst category, FormBlockTypeResendButtonConst type, FormBlockResendButtonConfig config, Map<String, Object> additionalProperties) {
         this.id = id;
         this.category = category;
         this.type = type;
@@ -44,75 +40,76 @@ public final class FormBlockResendButton {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("category")
     public FormComponentCategoryBlockConst getCategory() {
-        return category;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FormBlockTypeResendButtonConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("config")
     public FormBlockResendButtonConfig getConfig() {
-        return config;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockResendButton && equalTo((FormBlockResendButton) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockResendButton other) {
-        return id.equals(other.id)
-                && category.equals(other.category)
-                && type.equals(other.type)
-                && config.equals(other.config);
+        return id.equals(other.id) && category.equals(other.category) && type.equals(other.type) && config.equals(other.config);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.category, this.type, this.config);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         CategoryStage id(@NotNull String id);
 
         Builder from(FormBlockResendButton other);
     }
 
     public interface CategoryStage {
+
         TypeStage category(@NotNull FormComponentCategoryBlockConst category);
     }
 
     public interface TypeStage {
+
         ConfigStage type(@NotNull FormBlockTypeResendButtonConst type);
     }
 
     public interface ConfigStage {
+
         _FinalStage config(@NotNull FormBlockResendButtonConfig config);
     }
 
     public interface _FinalStage {
+
         FormBlockResendButton build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -122,6 +119,7 @@ public final class FormBlockResendButton {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, CategoryStage, TypeStage, ConfigStage, _FinalStage {
+
         private String id;
 
         private FormComponentCategoryBlockConst category;
@@ -133,60 +131,51 @@ public final class FormBlockResendButton {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockResendButton other) {
-            id(other.getId());
-            category(other.getCategory());
-            type(other.getType());
-            config(other.getConfig());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public CategoryStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("category")
         public TypeStage category(@NotNull FormComponentCategoryBlockConst category) {
-            this.category = Objects.requireNonNull(category, "category must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ConfigStage type(@NotNull FormBlockTypeResendButtonConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("config")
         public _FinalStage config(@NotNull FormBlockResendButtonConfig config) {
-            this.config = Objects.requireNonNull(config, "config must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockResendButton build() {
-            return new FormBlockResendButton(id, category, type, config, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

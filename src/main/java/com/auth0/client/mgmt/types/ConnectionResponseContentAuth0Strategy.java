@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentAuth0Strategy {
-    public static final ConnectionResponseContentAuth0Strategy AUTH0 =
-            new ConnectionResponseContentAuth0Strategy(Value.AUTH0, "auth0");
+
+    public static final ConnectionResponseContentAuth0Strategy AUTH0 = new ConnectionResponseContentAuth0Strategy(Value.AUTH0, "auth0");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentAuth0Strategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentAuth0Strategy
-                        && this.string.equals(((ConnectionResponseContentAuth0Strategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTH0:
-                return visitor.visitAuth0();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentAuth0Strategy valueOf(String value) {
-        switch (value) {
-            case "auth0":
-                return AUTH0;
-            default:
-                return new ConnectionResponseContentAuth0Strategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0,
 
-        UNKNOWN
+        AUTH0, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0();
 
         T visitUnknown(String unknownType);

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSalesforceSandboxApi.Builder.class)
 public final class ClientAddonSalesforceSandboxApi {
+
     private final Optional<String> clientid;
 
     private final Optional<String> principal;
@@ -30,12 +31,7 @@ public final class ClientAddonSalesforceSandboxApi {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonSalesforceSandboxApi(
-            Optional<String> clientid,
-            Optional<String> principal,
-            Optional<String> communityName,
-            Optional<String> communityUrlSection,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonSalesforceSandboxApi(Optional<String> clientid, Optional<String> principal, Optional<String> communityName, Optional<String> communityUrlSection, Map<String, Object> additionalProperties) {
         this.clientid = clientid;
         this.principal = principal;
         this.communityName = communityName;
@@ -48,7 +44,7 @@ public final class ClientAddonSalesforceSandboxApi {
      */
     @JsonProperty("clientid")
     public Optional<String> getClientid() {
-        return clientid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class ClientAddonSalesforceSandboxApi {
      */
     @JsonProperty("principal")
     public Optional<String> getPrincipal() {
-        return principal;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +60,7 @@ public final class ClientAddonSalesforceSandboxApi {
      */
     @JsonProperty("communityName")
     public Optional<String> getCommunityName() {
-        return communityName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,43 +68,40 @@ public final class ClientAddonSalesforceSandboxApi {
      */
     @JsonProperty("community_url_section")
     public Optional<String> getCommunityUrlSection() {
-        return communityUrlSection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSalesforceSandboxApi && equalTo((ClientAddonSalesforceSandboxApi) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSalesforceSandboxApi other) {
-        return clientid.equals(other.clientid)
-                && principal.equals(other.principal)
-                && communityName.equals(other.communityName)
-                && communityUrlSection.equals(other.communityUrlSection);
+        return clientid.equals(other.clientid) && principal.equals(other.principal) && communityName.equals(other.communityName) && communityUrlSection.equals(other.communityUrlSection);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientid, this.principal, this.communityName, this.communityUrlSection);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientid = Optional.empty();
 
         private Optional<String> principal = Optional.empty();
@@ -120,14 +113,11 @@ public final class ClientAddonSalesforceSandboxApi {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSalesforceSandboxApi other) {
-            clientid(other.getClientid());
-            principal(other.getPrincipal());
-            communityName(other.getCommunityName());
-            communityUrlSection(other.getCommunityUrlSection());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -135,13 +125,11 @@ public final class ClientAddonSalesforceSandboxApi {
          */
         @JsonSetter(value = "clientid", nulls = Nulls.SKIP)
         public Builder clientid(Optional<String> clientid) {
-            this.clientid = clientid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientid(String clientid) {
-            this.clientid = Optional.ofNullable(clientid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,13 +137,11 @@ public final class ClientAddonSalesforceSandboxApi {
          */
         @JsonSetter(value = "principal", nulls = Nulls.SKIP)
         public Builder principal(Optional<String> principal) {
-            this.principal = principal;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder principal(String principal) {
-            this.principal = Optional.ofNullable(principal);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,13 +149,11 @@ public final class ClientAddonSalesforceSandboxApi {
          */
         @JsonSetter(value = "communityName", nulls = Nulls.SKIP)
         public Builder communityName(Optional<String> communityName) {
-            this.communityName = communityName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder communityName(String communityName) {
-            this.communityName = Optional.ofNullable(communityName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,28 +161,23 @@ public final class ClientAddonSalesforceSandboxApi {
          */
         @JsonSetter(value = "community_url_section", nulls = Nulls.SKIP)
         public Builder communityUrlSection(Optional<String> communityUrlSection) {
-            this.communityUrlSection = communityUrlSection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder communityUrlSection(String communityUrlSection) {
-            this.communityUrlSection = Optional.ofNullable(communityUrlSection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSalesforceSandboxApi build() {
-            return new ClientAddonSalesforceSandboxApi(
-                    clientid, principal, communityName, communityUrlSection, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

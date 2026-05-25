@@ -7,26 +7,20 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class RotateConnectionKeysSigningAlgEnum {
-    public static final RotateConnectionKeysSigningAlgEnum RS512 =
-            new RotateConnectionKeysSigningAlgEnum(Value.RS512, "RS512");
 
-    public static final RotateConnectionKeysSigningAlgEnum PS384 =
-            new RotateConnectionKeysSigningAlgEnum(Value.PS384, "PS384");
+    public static final RotateConnectionKeysSigningAlgEnum RS512 = new RotateConnectionKeysSigningAlgEnum(Value.RS512, "RS512");
 
-    public static final RotateConnectionKeysSigningAlgEnum ES384 =
-            new RotateConnectionKeysSigningAlgEnum(Value.ES384, "ES384");
+    public static final RotateConnectionKeysSigningAlgEnum PS384 = new RotateConnectionKeysSigningAlgEnum(Value.PS384, "PS384");
 
-    public static final RotateConnectionKeysSigningAlgEnum PS256 =
-            new RotateConnectionKeysSigningAlgEnum(Value.PS256, "PS256");
+    public static final RotateConnectionKeysSigningAlgEnum ES384 = new RotateConnectionKeysSigningAlgEnum(Value.ES384, "ES384");
 
-    public static final RotateConnectionKeysSigningAlgEnum ES256 =
-            new RotateConnectionKeysSigningAlgEnum(Value.ES256, "ES256");
+    public static final RotateConnectionKeysSigningAlgEnum PS256 = new RotateConnectionKeysSigningAlgEnum(Value.PS256, "PS256");
 
-    public static final RotateConnectionKeysSigningAlgEnum RS384 =
-            new RotateConnectionKeysSigningAlgEnum(Value.RS384, "RS384");
+    public static final RotateConnectionKeysSigningAlgEnum ES256 = new RotateConnectionKeysSigningAlgEnum(Value.ES256, "ES256");
 
-    public static final RotateConnectionKeysSigningAlgEnum RS256 =
-            new RotateConnectionKeysSigningAlgEnum(Value.RS256, "RS256");
+    public static final RotateConnectionKeysSigningAlgEnum RS384 = new RotateConnectionKeysSigningAlgEnum(Value.RS384, "RS384");
+
+    public static final RotateConnectionKeysSigningAlgEnum RS256 = new RotateConnectionKeysSigningAlgEnum(Value.RS256, "RS256");
 
     private final Value value;
 
@@ -38,90 +32,48 @@ public final class RotateConnectionKeysSigningAlgEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof RotateConnectionKeysSigningAlgEnum
-                        && this.string.equals(((RotateConnectionKeysSigningAlgEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RS512:
-                return visitor.visitRs512();
-            case PS384:
-                return visitor.visitPs384();
-            case ES384:
-                return visitor.visitEs384();
-            case PS256:
-                return visitor.visitPs256();
-            case ES256:
-                return visitor.visitEs256();
-            case RS384:
-                return visitor.visitRs384();
-            case RS256:
-                return visitor.visitRs256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static RotateConnectionKeysSigningAlgEnum valueOf(String value) {
-        switch (value) {
-            case "RS512":
-                return RS512;
-            case "PS384":
-                return PS384;
-            case "ES384":
-                return ES384;
-            case "PS256":
-                return PS256;
-            case "ES256":
-                return ES256;
-            case "RS384":
-                return RS384;
-            case "RS256":
-                return RS256;
-            default:
-                return new RotateConnectionKeysSigningAlgEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         RS256,
-
         RS384,
-
         RS512,
-
         PS256,
-
         PS384,
-
         ES256,
-
         ES384,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRs256();
 
         T visitRs384();

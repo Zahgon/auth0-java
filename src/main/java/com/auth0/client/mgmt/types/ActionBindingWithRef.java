@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionBindingWithRef.Builder.class)
 public final class ActionBindingWithRef {
+
     private final ActionBindingRef ref;
 
     private final Optional<String> displayName;
@@ -30,11 +31,7 @@ public final class ActionBindingWithRef {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionBindingWithRef(
-            ActionBindingRef ref,
-            Optional<String> displayName,
-            Optional<List<ActionSecretRequest>> secrets,
-            Map<String, Object> additionalProperties) {
+    private ActionBindingWithRef(ActionBindingRef ref, Optional<String> displayName, Optional<List<ActionSecretRequest>> secrets, Map<String, Object> additionalProperties) {
         this.ref = ref;
         this.displayName = displayName;
         this.secrets = secrets;
@@ -43,7 +40,7 @@ public final class ActionBindingWithRef {
 
     @JsonProperty("ref")
     public ActionBindingRef getRef() {
-        return ref;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,7 +48,7 @@ public final class ActionBindingWithRef {
      */
     @JsonProperty("display_name")
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,18 +56,17 @@ public final class ActionBindingWithRef {
      */
     @JsonProperty("secrets")
     public Optional<List<ActionSecretRequest>> getSecrets() {
-        return secrets;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionBindingWithRef && equalTo((ActionBindingWithRef) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionBindingWithRef other) {
@@ -79,25 +75,27 @@ public final class ActionBindingWithRef {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ref, this.displayName, this.secrets);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static RefStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface RefStage {
+
         _FinalStage ref(@NotNull ActionBindingRef ref);
 
         Builder from(ActionBindingWithRef other);
     }
 
     public interface _FinalStage {
+
         ActionBindingWithRef build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -121,6 +119,7 @@ public final class ActionBindingWithRef {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements RefStage, _FinalStage {
+
         private ActionBindingRef ref;
 
         private Optional<List<ActionSecretRequest>> secrets = Optional.empty();
@@ -130,21 +129,18 @@ public final class ActionBindingWithRef {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ActionBindingWithRef other) {
-            ref(other.getRef());
-            displayName(other.getDisplayName());
-            secrets(other.getSecrets());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("ref")
         public _FinalStage ref(@NotNull ActionBindingRef ref) {
-            this.ref = Objects.requireNonNull(ref, "ref must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,8 +149,7 @@ public final class ActionBindingWithRef {
          */
         @java.lang.Override
         public _FinalStage secrets(List<ActionSecretRequest> secrets) {
-            this.secrets = Optional.ofNullable(secrets);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,8 +158,7 @@ public final class ActionBindingWithRef {
         @java.lang.Override
         @JsonSetter(value = "secrets", nulls = Nulls.SKIP)
         public _FinalStage secrets(Optional<List<ActionSecretRequest>> secrets) {
-            this.secrets = secrets;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -173,8 +167,7 @@ public final class ActionBindingWithRef {
          */
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -183,25 +176,22 @@ public final class ActionBindingWithRef {
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ActionBindingWithRef build() {
-            return new ActionBindingWithRef(ref, displayName, secrets, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

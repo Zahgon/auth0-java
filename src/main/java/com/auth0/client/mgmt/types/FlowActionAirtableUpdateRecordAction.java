@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAirtableUpdateRecordAction {
-    public static final FlowActionAirtableUpdateRecordAction UPDATE_RECORD =
-            new FlowActionAirtableUpdateRecordAction(Value.UPDATE_RECORD, "UPDATE_RECORD");
+
+    public static final FlowActionAirtableUpdateRecordAction UPDATE_RECORD = new FlowActionAirtableUpdateRecordAction(Value.UPDATE_RECORD, "UPDATE_RECORD");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAirtableUpdateRecordAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAirtableUpdateRecordAction
-                        && this.string.equals(((FlowActionAirtableUpdateRecordAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UPDATE_RECORD:
-                return visitor.visitUpdateRecord();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAirtableUpdateRecordAction valueOf(String value) {
-        switch (value) {
-            case "UPDATE_RECORD":
-                return UPDATE_RECORD;
-            default:
-                return new FlowActionAirtableUpdateRecordAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UPDATE_RECORD,
 
-        UNKNOWN
+        UPDATE_RECORD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUpdateRecord();
 
         T visitUnknown(String unknownType);

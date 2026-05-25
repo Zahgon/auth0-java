@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.SetGuardianFactorDuoSettingsResponseContent;
 import com.auth0.client.mgmt.types.UpdateGuardianFactorDuoSettingsResponseContent;
 
 public class SettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSettingsClient rawClient;
@@ -25,67 +26,64 @@ public class SettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the DUO account and factor configuration.
      */
     public GetGuardianFactorDuoSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the DUO account and factor configuration.
      */
     public GetGuardianFactorDuoSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
     public SetGuardianFactorDuoSettingsResponseContent set() {
-        return this.rawClient.set().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
     public SetGuardianFactorDuoSettingsResponseContent set(RequestOptions requestOptions) {
-        return this.rawClient.set(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
     public SetGuardianFactorDuoSettingsResponseContent set(SetGuardianFactorDuoSettingsRequestContent request) {
-        return this.rawClient.set(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
-    public SetGuardianFactorDuoSettingsResponseContent set(
-            SetGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).body();
+    public SetGuardianFactorDuoSettingsResponseContent set(SetGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateGuardianFactorDuoSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateGuardianFactorDuoSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateGuardianFactorDuoSettingsResponseContent update(
-            UpdateGuardianFactorDuoSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+    public UpdateGuardianFactorDuoSettingsResponseContent update(UpdateGuardianFactorDuoSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateGuardianFactorDuoSettingsResponseContent update(
-            UpdateGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateGuardianFactorDuoSettingsResponseContent update(UpdateGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

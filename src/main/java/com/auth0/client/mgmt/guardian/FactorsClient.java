@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class FactorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawFactorsClient rawClient;
@@ -43,51 +44,50 @@ public class FactorsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawFactorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication factors</a> associated with your tenant.
      */
     public List<GuardianFactor> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors">multi-factor authentication factors</a> associated with your tenant.
      */
     public List<GuardianFactor> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the status (i.e., enabled or disabled) of a specific multi-factor authentication factor.
      */
     public SetGuardianFactorResponseContent set(GuardianFactorNameEnum name, SetGuardianFactorRequestContent request) {
-        return this.rawClient.set(name, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the status (i.e., enabled or disabled) of a specific multi-factor authentication factor.
      */
-    public SetGuardianFactorResponseContent set(
-            GuardianFactorNameEnum name, SetGuardianFactorRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(name, request, requestOptions).body();
+    public SetGuardianFactorResponseContent set(GuardianFactorNameEnum name, SetGuardianFactorRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PhoneClient phone() {
-        return this.phoneClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PushNotificationClient pushNotification() {
-        return this.pushNotificationClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SmsClient sms() {
-        return this.smsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public DuoClient duo() {
-        return this.duoClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

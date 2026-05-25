@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSecretsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSecretsClient rawClient;
@@ -23,62 +24,62 @@ public class AsyncSecretsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSecretsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a hook's secrets by the ID of the hook.
      */
     public CompletableFuture<Map<String, String>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a hook's secrets by the ID of the hook.
      */
     public CompletableFuture<Map<String, String>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more secrets to an existing hook. Accepts an object of key-value pairs, where the key is the name of the secret. A hook can have a maximum of 20 secrets.
      */
     public CompletableFuture<Void> create(String id, Map<String, String> request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more secrets to an existing hook. Accepts an object of key-value pairs, where the key is the name of the secret. A hook can have a maximum of 20 secrets.
      */
     public CompletableFuture<Void> create(String id, Map<String, String> request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete one or more existing secrets for a given hook. Accepts an array of secret names to delete.
      */
     public CompletableFuture<Void> delete(String id, List<String> request) {
-        return this.rawClient.delete(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete one or more existing secrets for a given hook. Accepts an array of secret names to delete.
      */
     public CompletableFuture<Void> delete(String id, List<String> request, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update one or more existing secrets for an existing hook. Accepts an object of key-value pairs, where the key is the name of the existing secret.
      */
     public CompletableFuture<Void> update(String id, Map<String, String> request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update one or more existing secrets for an existing hook. Accepts an object of key-value pairs, where the key is the name of the existing secret.
      */
     public CompletableFuture<Void> update(String id, Map<String, String> request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

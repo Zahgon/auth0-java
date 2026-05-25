@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientMobile.Builder.class)
 public final class ClientMobile {
+
     private final Optional<ClientMobileAndroid> android;
 
     private final Optional<ClientMobileiOs> ios;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientMobile(
-            Optional<ClientMobileAndroid> android,
-            Optional<ClientMobileiOs> ios,
-            Map<String, Object> additionalProperties) {
+    private ClientMobile(Optional<ClientMobileAndroid> android, Optional<ClientMobileiOs> ios, Map<String, Object> additionalProperties) {
         this.android = android;
         this.ios = ios;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class ClientMobile {
 
     @JsonProperty("android")
     public Optional<ClientMobileAndroid> getAndroid() {
-        return android;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ios")
     public Optional<ClientMobileiOs> getIos() {
-        return ios;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientMobile && equalTo((ClientMobile) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientMobile other) {
@@ -62,20 +59,21 @@ public final class ClientMobile {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.android, this.ios);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ClientMobileAndroid> android = Optional.empty();
 
         private Optional<ClientMobileiOs> ios = Optional.empty();
@@ -83,48 +81,41 @@ public final class ClientMobile {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientMobile other) {
-            android(other.getAndroid());
-            ios(other.getIos());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "android", nulls = Nulls.SKIP)
         public Builder android(Optional<ClientMobileAndroid> android) {
-            this.android = android;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder android(ClientMobileAndroid android) {
-            this.android = Optional.ofNullable(android);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ios", nulls = Nulls.SKIP)
         public Builder ios(Optional<ClientMobileiOs> ios) {
-            this.ios = ios;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ios(ClientMobileiOs ios) {
-            this.ios = Optional.ofNullable(ios);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientMobile build() {
-            return new ClientMobile(android, ios, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -19,30 +19,29 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TokenQuotaConfiguration.Builder.class)
 public final class TokenQuotaConfiguration {
+
     private final TokenQuotaClientCredentials clientCredentials;
 
     private final Map<String, Object> additionalProperties;
 
-    private TokenQuotaConfiguration(
-            TokenQuotaClientCredentials clientCredentials, Map<String, Object> additionalProperties) {
+    private TokenQuotaConfiguration(TokenQuotaClientCredentials clientCredentials, Map<String, Object> additionalProperties) {
         this.clientCredentials = clientCredentials;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("client_credentials")
     public TokenQuotaClientCredentials getClientCredentials() {
-        return clientCredentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TokenQuotaConfiguration && equalTo((TokenQuotaConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TokenQuotaConfiguration other) {
@@ -51,25 +50,27 @@ public final class TokenQuotaConfiguration {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientCredentials);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientCredentialsStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientCredentialsStage {
+
         _FinalStage clientCredentials(@NotNull TokenQuotaClientCredentials clientCredentials);
 
         Builder from(TokenQuotaConfiguration other);
     }
 
     public interface _FinalStage {
+
         TokenQuotaConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class TokenQuotaConfiguration {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientCredentialsStage, _FinalStage {
+
         private TokenQuotaClientCredentials clientCredentials;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(TokenQuotaConfiguration other) {
-            clientCredentials(other.getClientCredentials());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_credentials")
         public _FinalStage clientCredentials(@NotNull TokenQuotaClientCredentials clientCredentials) {
-            this.clientCredentials = Objects.requireNonNull(clientCredentials, "clientCredentials must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public TokenQuotaConfiguration build() {
-            return new TokenQuotaConfiguration(clientCredentials, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -15,18 +15,15 @@ public class LoggingOptions {
          * No logging.
          */
         NONE,
-
         /**
          * Logs request and response lines.
          */
         BASIC,
-
         /**
          * Logs request and response lines, along with their respective headers. Note that headers may contain
          * sensitive information; see {@linkplain #headersToRedact}
          */
         HEADERS,
-
         /**
          * Logs request and response lines, along with their respective headers and bodies. Note that headers and bodies
          * may contain sensitive information; see {@linkplain #headersToRedact} for header redaction, but that only
@@ -36,6 +33,7 @@ public class LoggingOptions {
     }
 
     private LogLevel logLevel;
+
     private Set<String> headersToRedact = Collections.emptySet();
 
     /**
@@ -51,14 +49,14 @@ public class LoggingOptions {
      * @return the log level of this instance.
      */
     public LogLevel getLogLevel() {
-        return this.logLevel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * @return the headers that should be redacted from the output log.
      */
     public Set<String> getHeadersToRedact() {
-        return headersToRedact;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,6 +68,6 @@ public class LoggingOptions {
      * @param headersToRedact the Set of headers to redact.
      */
     public void setHeadersToRedact(Set<String> headersToRedact) {
-        this.headersToRedact = headersToRedact;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateImportUsersResponseContent.Builder.class)
 public final class CreateImportUsersResponseContent {
+
     private final String status;
 
     private final String type;
@@ -35,14 +36,7 @@ public final class CreateImportUsersResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateImportUsersResponseContent(
-            String status,
-            String type,
-            String createdAt,
-            String id,
-            String connectionId,
-            Optional<String> externalId,
-            Map<String, Object> additionalProperties) {
+    private CreateImportUsersResponseContent(String status, String type, String createdAt, String id, String connectionId, Optional<String> externalId, Map<String, Object> additionalProperties) {
         this.status = status;
         this.type = type;
         this.createdAt = createdAt;
@@ -57,7 +51,7 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("status")
     public String getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +59,7 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("type")
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +67,7 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("created_at")
     public String getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +75,7 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +83,7 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,44 +91,39 @@ public final class CreateImportUsersResponseContent {
      */
     @JsonProperty("external_id")
     public Optional<String> getExternalId() {
-        return externalId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateImportUsersResponseContent && equalTo((CreateImportUsersResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateImportUsersResponseContent other) {
-        return status.equals(other.status)
-                && type.equals(other.type)
-                && createdAt.equals(other.createdAt)
-                && id.equals(other.id)
-                && connectionId.equals(other.connectionId)
-                && externalId.equals(other.externalId);
+        return status.equals(other.status) && type.equals(other.type) && createdAt.equals(other.createdAt) && id.equals(other.id) && connectionId.equals(other.connectionId) && externalId.equals(other.externalId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.status, this.type, this.createdAt, this.id, this.connectionId, this.externalId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static StatusStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface StatusStage {
+
         /**
          * <p>Status of this job.</p>
          */
@@ -144,6 +133,7 @@ public final class CreateImportUsersResponseContent {
     }
 
     public interface TypeStage {
+
         /**
          * <p>Type of job this is.</p>
          */
@@ -151,6 +141,7 @@ public final class CreateImportUsersResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>When this job was created.</p>
          */
@@ -158,6 +149,7 @@ public final class CreateImportUsersResponseContent {
     }
 
     public interface IdStage {
+
         /**
          * <p>ID of this job.</p>
          */
@@ -165,6 +157,7 @@ public final class CreateImportUsersResponseContent {
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>connection_id of the connection to which users will be imported.</p>
          */
@@ -172,6 +165,7 @@ public final class CreateImportUsersResponseContent {
     }
 
     public interface _FinalStage {
+
         CreateImportUsersResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -187,8 +181,8 @@ public final class CreateImportUsersResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements StatusStage, TypeStage, CreatedAtStage, IdStage, ConnectionIdStage, _FinalStage {
+    public static final class Builder implements StatusStage, TypeStage, CreatedAtStage, IdStage, ConnectionIdStage, _FinalStage {
+
         private String status;
 
         private String type;
@@ -204,17 +198,12 @@ public final class CreateImportUsersResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateImportUsersResponseContent other) {
-            status(other.getStatus());
-            type(other.getType());
-            createdAt(other.getCreatedAt());
-            id(other.getId());
-            connectionId(other.getConnectionId());
-            externalId(other.getExternalId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -225,8 +214,7 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter("status")
         public TypeStage status(@NotNull String status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -237,8 +225,7 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter("type")
         public CreatedAtStage type(@NotNull String type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -249,8 +236,7 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public IdStage createdAt(@NotNull String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -261,8 +247,7 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public ConnectionIdStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -273,8 +258,7 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter("connection_id")
         public _FinalStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -283,8 +267,7 @@ public final class CreateImportUsersResponseContent {
          */
         @java.lang.Override
         public _FinalStage externalId(String externalId) {
-            this.externalId = Optional.ofNullable(externalId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -293,26 +276,22 @@ public final class CreateImportUsersResponseContent {
         @java.lang.Override
         @JsonSetter(value = "external_id", nulls = Nulls.SKIP)
         public _FinalStage externalId(Optional<String> externalId) {
-            this.externalId = externalId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateImportUsersResponseContent build() {
-            return new CreateImportUsersResponseContent(
-                    status, type, createdAt, id, connectionId, externalId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

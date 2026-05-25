@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionDigestAlgorithmEnumSaml {
-    public static final ConnectionDigestAlgorithmEnumSaml SHA256 =
-            new ConnectionDigestAlgorithmEnumSaml(Value.SHA256, "sha256");
 
-    public static final ConnectionDigestAlgorithmEnumSaml SHA1 =
-            new ConnectionDigestAlgorithmEnumSaml(Value.SHA1, "sha1");
+    public static final ConnectionDigestAlgorithmEnumSaml SHA256 = new ConnectionDigestAlgorithmEnumSaml(Value.SHA256, "sha256");
+
+    public static final ConnectionDigestAlgorithmEnumSaml SHA1 = new ConnectionDigestAlgorithmEnumSaml(Value.SHA1, "sha1");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionDigestAlgorithmEnumSaml {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionDigestAlgorithmEnumSaml
-                        && this.string.equals(((ConnectionDigestAlgorithmEnumSaml) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SHA256:
-                return visitor.visitSha256();
-            case SHA1:
-                return visitor.visitSha1();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionDigestAlgorithmEnumSaml valueOf(String value) {
-        switch (value) {
-            case "sha256":
-                return SHA256;
-            case "sha1":
-                return SHA1;
-            default:
-                return new ConnectionDigestAlgorithmEnumSaml(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SHA1,
 
-        SHA256,
-
-        UNKNOWN
+        SHA1, SHA256, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSha1();
 
         T visitSha256();

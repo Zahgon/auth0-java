@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class X509CertificateCredentialTypeEnum {
-    public static final X509CertificateCredentialTypeEnum X509CERT =
-            new X509CertificateCredentialTypeEnum(Value.X509CERT, "x509_cert");
+
+    public static final X509CertificateCredentialTypeEnum X509CERT = new X509CertificateCredentialTypeEnum(Value.X509CERT, "x509_cert");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class X509CertificateCredentialTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof X509CertificateCredentialTypeEnum
-                        && this.string.equals(((X509CertificateCredentialTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case X509CERT:
-                return visitor.visitX509Cert();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static X509CertificateCredentialTypeEnum valueOf(String value) {
-        switch (value) {
-            case "x509_cert":
-                return X509CERT;
-            default:
-                return new X509CertificateCredentialTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        X509CERT,
 
-        UNKNOWN
+        X509CERT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitX509Cert();
 
         T visitUnknown(String unknownType);

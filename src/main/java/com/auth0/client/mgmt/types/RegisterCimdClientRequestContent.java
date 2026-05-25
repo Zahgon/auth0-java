@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RegisterCimdClientRequestContent.Builder.class)
 public final class RegisterCimdClientRequestContent {
+
     private final String externalClientId;
 
     private final Map<String, Object> additionalProperties;
@@ -33,18 +34,17 @@ public final class RegisterCimdClientRequestContent {
      */
     @JsonProperty("external_client_id")
     public String getExternalClientId() {
-        return externalClientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RegisterCimdClientRequestContent && equalTo((RegisterCimdClientRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RegisterCimdClientRequestContent other) {
@@ -53,19 +53,20 @@ public final class RegisterCimdClientRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.externalClientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ExternalClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ExternalClientIdStage {
+
         /**
          * <p>URL to the Client ID Metadata Document. Acts as the unique identifier for upsert operations.</p>
          */
@@ -75,6 +76,7 @@ public final class RegisterCimdClientRequestContent {
     }
 
     public interface _FinalStage {
+
         RegisterCimdClientRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +86,18 @@ public final class RegisterCimdClientRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ExternalClientIdStage, _FinalStage {
+
         private String externalClientId;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(RegisterCimdClientRequestContent other) {
-            externalClientId(other.getExternalClientId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +108,22 @@ public final class RegisterCimdClientRequestContent {
         @java.lang.Override
         @JsonSetter("external_client_id")
         public _FinalStage externalClientId(@NotNull String externalClientId) {
-            this.externalClientId = Objects.requireNonNull(externalClientId, "externalClientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public RegisterCimdClientRequestContent build() {
-            return new RegisterCimdClientRequestContent(externalClientId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

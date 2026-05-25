@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.users.types.GetUserGroupsRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncGroupsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawGroupsClient rawClient;
@@ -24,37 +25,34 @@ public class AsyncGroupsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawGroupsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
     public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, GetUserGroupsRequestParameters request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, GetUserGroupsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

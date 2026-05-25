@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeNumberConst {
+
     public static final FormFieldTypeNumberConst NUMBER = new FormFieldTypeNumberConst(Value.NUMBER, "NUMBER");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeNumberConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeNumberConst
-                        && this.string.equals(((FormFieldTypeNumberConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case NUMBER:
-                return visitor.visitNumber();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeNumberConst valueOf(String value) {
-        switch (value) {
-            case "NUMBER":
-                return NUMBER;
-            default:
-                return new FormFieldTypeNumberConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NUMBER,
 
-        UNKNOWN
+        NUMBER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNumber();
 
         T visitUnknown(String unknownType);

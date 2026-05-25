@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ScimTokenItem.Builder.class)
 public final class ScimTokenItem {
+
     private final Optional<String> tokenId;
 
     private final Optional<List<String>> scopes;
@@ -33,13 +34,7 @@ public final class ScimTokenItem {
 
     private final Map<String, Object> additionalProperties;
 
-    private ScimTokenItem(
-            Optional<String> tokenId,
-            Optional<List<String>> scopes,
-            Optional<String> createdAt,
-            Optional<String> validUntil,
-            Optional<String> lastUsedAt,
-            Map<String, Object> additionalProperties) {
+    private ScimTokenItem(Optional<String> tokenId, Optional<List<String>> scopes, Optional<String> createdAt, Optional<String> validUntil, Optional<String> lastUsedAt, Map<String, Object> additionalProperties) {
         this.tokenId = tokenId;
         this.scopes = scopes;
         this.createdAt = createdAt;
@@ -53,7 +48,7 @@ public final class ScimTokenItem {
      */
     @JsonProperty("token_id")
     public Optional<String> getTokenId() {
-        return tokenId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,7 +56,7 @@ public final class ScimTokenItem {
      */
     @JsonProperty("scopes")
     public Optional<List<String>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +64,7 @@ public final class ScimTokenItem {
      */
     @JsonProperty("created_at")
     public Optional<String> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,7 +72,7 @@ public final class ScimTokenItem {
      */
     @JsonProperty("valid_until")
     public Optional<String> getValidUntil() {
-        return validUntil;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,44 +80,40 @@ public final class ScimTokenItem {
      */
     @JsonProperty("last_used_at")
     public Optional<String> getLastUsedAt() {
-        return lastUsedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ScimTokenItem && equalTo((ScimTokenItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ScimTokenItem other) {
-        return tokenId.equals(other.tokenId)
-                && scopes.equals(other.scopes)
-                && createdAt.equals(other.createdAt)
-                && validUntil.equals(other.validUntil)
-                && lastUsedAt.equals(other.lastUsedAt);
+        return tokenId.equals(other.tokenId) && scopes.equals(other.scopes) && createdAt.equals(other.createdAt) && validUntil.equals(other.validUntil) && lastUsedAt.equals(other.lastUsedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.tokenId, this.scopes, this.createdAt, this.validUntil, this.lastUsedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> tokenId = Optional.empty();
 
         private Optional<List<String>> scopes = Optional.empty();
@@ -136,15 +127,11 @@ public final class ScimTokenItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ScimTokenItem other) {
-            tokenId(other.getTokenId());
-            scopes(other.getScopes());
-            createdAt(other.getCreatedAt());
-            validUntil(other.getValidUntil());
-            lastUsedAt(other.getLastUsedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -152,13 +139,11 @@ public final class ScimTokenItem {
          */
         @JsonSetter(value = "token_id", nulls = Nulls.SKIP)
         public Builder tokenId(Optional<String> tokenId) {
-            this.tokenId = tokenId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenId(String tokenId) {
-            this.tokenId = Optional.ofNullable(tokenId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,13 +151,11 @@ public final class ScimTokenItem {
          */
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<List<String>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(List<String> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -180,13 +163,11 @@ public final class ScimTokenItem {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<String> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(String createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -194,13 +175,11 @@ public final class ScimTokenItem {
          */
         @JsonSetter(value = "valid_until", nulls = Nulls.SKIP)
         public Builder validUntil(Optional<String> validUntil) {
-            this.validUntil = validUntil;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder validUntil(String validUntil) {
-            this.validUntil = Optional.ofNullable(validUntil);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -208,27 +187,23 @@ public final class ScimTokenItem {
          */
         @JsonSetter(value = "last_used_at", nulls = Nulls.SKIP)
         public Builder lastUsedAt(Optional<String> lastUsedAt) {
-            this.lastUsedAt = lastUsedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUsedAt(String lastUsedAt) {
-            this.lastUsedAt = Optional.ofNullable(lastUsedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ScimTokenItem build() {
-            return new ScimTokenItem(tokenId, scopes, createdAt, validUntil, lastUsedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

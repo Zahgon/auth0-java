@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionPasskeyChallengeUiEnum {
-    public static final ConnectionPasskeyChallengeUiEnum AUTOFILL =
-            new ConnectionPasskeyChallengeUiEnum(Value.AUTOFILL, "autofill");
 
-    public static final ConnectionPasskeyChallengeUiEnum BOTH =
-            new ConnectionPasskeyChallengeUiEnum(Value.BOTH, "both");
+    public static final ConnectionPasskeyChallengeUiEnum AUTOFILL = new ConnectionPasskeyChallengeUiEnum(Value.AUTOFILL, "autofill");
 
-    public static final ConnectionPasskeyChallengeUiEnum BUTTON =
-            new ConnectionPasskeyChallengeUiEnum(Value.BUTTON, "button");
+    public static final ConnectionPasskeyChallengeUiEnum BOTH = new ConnectionPasskeyChallengeUiEnum(Value.BOTH, "both");
+
+    public static final ConnectionPasskeyChallengeUiEnum BUTTON = new ConnectionPasskeyChallengeUiEnum(Value.BUTTON, "button");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ConnectionPasskeyChallengeUiEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionPasskeyChallengeUiEnum
-                        && this.string.equals(((ConnectionPasskeyChallengeUiEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUTOFILL:
-                return visitor.visitAutofill();
-            case BOTH:
-                return visitor.visitBoth();
-            case BUTTON:
-                return visitor.visitButton();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionPasskeyChallengeUiEnum valueOf(String value) {
-        switch (value) {
-            case "autofill":
-                return AUTOFILL;
-            case "both":
-                return BOTH;
-            case "button":
-                return BUTTON;
-            default:
-                return new ConnectionPasskeyChallengeUiEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BOTH,
 
-        AUTOFILL,
-
-        BUTTON,
-
-        UNKNOWN
+        BOTH, AUTOFILL, BUTTON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBoth();
 
         T visitAutofill();

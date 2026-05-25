@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PhoneProviderChannelEnum {
+
     public static final PhoneProviderChannelEnum PHONE = new PhoneProviderChannelEnum(Value.PHONE, "phone");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class PhoneProviderChannelEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PhoneProviderChannelEnum
-                        && this.string.equals(((PhoneProviderChannelEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PHONE:
-                return visitor.visitPhone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PhoneProviderChannelEnum valueOf(String value) {
-        switch (value) {
-            case "phone":
-                return PHONE;
-            default:
-                return new PhoneProviderChannelEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PHONE,
 
-        UNKNOWN
+        PHONE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPhone();
 
         T visitUnknown(String unknownType);

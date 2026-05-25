@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventGroupUpdatedObject2TypeEnum {
-    public static final EventStreamCloudEventGroupUpdatedObject2TypeEnum TENANT =
-            new EventStreamCloudEventGroupUpdatedObject2TypeEnum(Value.TENANT, "tenant");
+
+    public static final EventStreamCloudEventGroupUpdatedObject2TypeEnum TENANT = new EventStreamCloudEventGroupUpdatedObject2TypeEnum(Value.TENANT, "tenant");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventGroupUpdatedObject2TypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventGroupUpdatedObject2TypeEnum
-                        && this.string.equals(((EventStreamCloudEventGroupUpdatedObject2TypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TENANT:
-                return visitor.visitTenant();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventGroupUpdatedObject2TypeEnum valueOf(String value) {
-        switch (value) {
-            case "tenant":
-                return TENANT;
-            default:
-                return new EventStreamCloudEventGroupUpdatedObject2TypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TENANT,
 
-        UNKNOWN
+        TENANT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTenant();
 
         T visitUnknown(String unknownType);

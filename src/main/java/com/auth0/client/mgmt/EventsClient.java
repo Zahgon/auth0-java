@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.EventStreamSubscribeEventsResponseContent;
 import com.auth0.client.mgmt.types.SubscribeEventsRequestParameters;
 
 public class EventsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawEventsClient rawClient;
@@ -22,35 +23,34 @@ public class EventsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawEventsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
     public Iterable<EventStreamSubscribeEventsResponseContent> subscribe() {
-        return this.rawClient.subscribe().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
     public Iterable<EventStreamSubscribeEventsResponseContent> subscribe(RequestOptions requestOptions) {
-        return this.rawClient.subscribe(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
     public Iterable<EventStreamSubscribeEventsResponseContent> subscribe(SubscribeEventsRequestParameters request) {
-        return this.rawClient.subscribe(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
-    public Iterable<EventStreamSubscribeEventsResponseContent> subscribe(
-            SubscribeEventsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.subscribe(request, requestOptions).body();
+    public Iterable<EventStreamSubscribeEventsResponseContent> subscribe(SubscribeEventsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

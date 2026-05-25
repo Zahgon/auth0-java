@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeSocialConst {
+
     public static final FormFieldTypeSocialConst SOCIAL = new FormFieldTypeSocialConst(Value.SOCIAL, "SOCIAL");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeSocialConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeSocialConst
-                        && this.string.equals(((FormFieldTypeSocialConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SOCIAL:
-                return visitor.visitSocial();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeSocialConst valueOf(String value) {
-        switch (value) {
-            case "SOCIAL":
-                return SOCIAL;
-            default:
-                return new FormFieldTypeSocialConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SOCIAL,
 
-        UNKNOWN
+        SOCIAL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSocial();
 
         T visitUnknown(String unknownType);

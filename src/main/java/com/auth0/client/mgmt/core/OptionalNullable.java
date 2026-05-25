@@ -24,12 +24,12 @@ import java.util.function.Function;
 public final class OptionalNullable<T> {
 
     private enum State {
-        ABSENT,
-        NULL,
-        PRESENT
+
+        ABSENT, NULL, PRESENT
     }
 
     private final State state;
+
     private final T value;
 
     private OptionalNullable(State state, T value) {
@@ -41,22 +41,21 @@ public final class OptionalNullable<T> {
      * Creates an absent OptionalNullable (field not present).
      */
     public static <T> OptionalNullable<T> absent() {
-        return new OptionalNullable<>(State.ABSENT, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a null OptionalNullable (field explicitly set to null).
      */
     public static <T> OptionalNullable<T> ofNull() {
-        return new OptionalNullable<>(State.NULL, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates an OptionalNullable with a value.
      */
     public static <T> OptionalNullable<T> of(T value) {
-        Objects.requireNonNull(value, "Use ofNull() for null values");
-        return new OptionalNullable<>(State.PRESENT, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,45 +63,42 @@ public final class OptionalNullable<T> {
      */
     @JsonCreator
     public static <T> OptionalNullable<T> ofNullable(T value) {
-        return value == null ? ofNull() : of(value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns true if the field was absent from the request.
      */
     public boolean isAbsent() {
-        return state == State.ABSENT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns true if the field was explicitly set to null.
      */
     public boolean isNull() {
-        return state == State.NULL;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns true if the field has a value.
      */
     public boolean isPresent() {
-        return state == State.PRESENT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns true if the field was present in the request (either null or with a value).
      */
     public boolean wasSpecified() {
-        return state != State.ABSENT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the value if present, throws if absent or null.
      */
     public T get() {
-        if (state != State.PRESENT) {
-            throw new IllegalStateException("Cannot get value from " + state + " OptionalNullable");
-        }
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,39 +106,28 @@ public final class OptionalNullable<T> {
      * This is useful for update operations where null is a valid value to set.
      */
     public T getValueOrNull() {
-        if (state == State.ABSENT) {
-            throw new IllegalStateException("No value set");
-        }
-        return value; // Returns the actual value if PRESENT, or null if NULL
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the value if present, returns null if explicitly set to null, or returns the provided default if absent.
      */
     public T orElse(T defaultValue) {
-        if (state == State.PRESENT) return value;
-        if (state == State.NULL) return null;
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Converts to an Optional, returning empty for both absent and null states.
      */
     public Optional<T> toOptional() {
-        return state == State.PRESENT ? Optional.of(value) : Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Maps the value if present, preserving absent and null states.
      */
     public <U> OptionalNullable<U> map(Function<? super T, ? extends U> mapper) {
-        if (state == State.PRESENT) {
-            return OptionalNullable.of(mapper.apply(value));
-        } else if (state == State.NULL) {
-            return OptionalNullable.ofNull();
-        } else {
-            return OptionalNullable.absent();
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -151,37 +136,21 @@ public final class OptionalNullable<T> {
      */
     @JsonValue
     public Object getJsonValue() {
-        if (state == State.ABSENT) {
-            // Should not be serialized - handled by custom inclusion
-            throw new IllegalStateException("Absent values should not be serialized");
-        }
-        return state == State.NULL ? null : value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        OptionalNullable<?> that = (OptionalNullable<?>) o;
-        return state == that.state && Objects.equals(value, that.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(state, value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        switch (state) {
-            case ABSENT:
-                return "OptionalNullable.absent()";
-            case NULL:
-                return "OptionalNullable.ofNull()";
-            case PRESENT:
-                return "OptionalNullable.of(" + value + ")";
-            default:
-                throw new IllegalStateException("Unknown state: " + state);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

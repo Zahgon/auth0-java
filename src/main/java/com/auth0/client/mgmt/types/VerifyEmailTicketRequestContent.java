@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = VerifyEmailTicketRequestContent.Builder.class)
 public final class VerifyEmailTicketRequestContent {
+
     private final Optional<String> resultUrl;
 
     private final String userId;
@@ -37,15 +38,7 @@ public final class VerifyEmailTicketRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private VerifyEmailTicketRequestContent(
-            Optional<String> resultUrl,
-            String userId,
-            Optional<String> clientId,
-            Optional<String> organizationId,
-            Optional<Integer> ttlSec,
-            Optional<Boolean> includeEmailInRedirect,
-            Optional<Identity> identity,
-            Map<String, Object> additionalProperties) {
+    private VerifyEmailTicketRequestContent(Optional<String> resultUrl, String userId, Optional<String> clientId, Optional<String> organizationId, Optional<Integer> ttlSec, Optional<Boolean> includeEmailInRedirect, Optional<Identity> identity, Map<String, Object> additionalProperties) {
         this.resultUrl = resultUrl;
         this.userId = userId;
         this.clientId = clientId;
@@ -61,7 +54,7 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("result_url")
     public Optional<String> getResultUrl() {
-        return resultUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,7 +62,7 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("user_id")
     public String getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -77,7 +70,7 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +78,7 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("organization_id")
     public Optional<String> getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -93,7 +86,7 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("ttl_sec")
     public Optional<Integer> getTtlSec() {
-        return ttlSec;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,57 +94,44 @@ public final class VerifyEmailTicketRequestContent {
      */
     @JsonProperty("includeEmailInRedirect")
     public Optional<Boolean> getIncludeEmailInRedirect() {
-        return includeEmailInRedirect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("identity")
     public Optional<Identity> getIdentity() {
-        return identity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof VerifyEmailTicketRequestContent && equalTo((VerifyEmailTicketRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(VerifyEmailTicketRequestContent other) {
-        return resultUrl.equals(other.resultUrl)
-                && userId.equals(other.userId)
-                && clientId.equals(other.clientId)
-                && organizationId.equals(other.organizationId)
-                && ttlSec.equals(other.ttlSec)
-                && includeEmailInRedirect.equals(other.includeEmailInRedirect)
-                && identity.equals(other.identity);
+        return resultUrl.equals(other.resultUrl) && userId.equals(other.userId) && clientId.equals(other.clientId) && organizationId.equals(other.organizationId) && ttlSec.equals(other.ttlSec) && includeEmailInRedirect.equals(other.includeEmailInRedirect) && identity.equals(other.identity);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.resultUrl,
-                this.userId,
-                this.clientId,
-                this.organizationId,
-                this.ttlSec,
-                this.includeEmailInRedirect,
-                this.identity);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UserIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UserIdStage {
+
         /**
          * <p>user_id of for whom the ticket should be created.</p>
          */
@@ -161,6 +141,7 @@ public final class VerifyEmailTicketRequestContent {
     }
 
     public interface _FinalStage {
+
         VerifyEmailTicketRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -209,6 +190,7 @@ public final class VerifyEmailTicketRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements UserIdStage, _FinalStage {
+
         private String userId;
 
         private Optional<Identity> identity = Optional.empty();
@@ -226,18 +208,12 @@ public final class VerifyEmailTicketRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(VerifyEmailTicketRequestContent other) {
-            resultUrl(other.getResultUrl());
-            userId(other.getUserId());
-            clientId(other.getClientId());
-            organizationId(other.getOrganizationId());
-            ttlSec(other.getTtlSec());
-            includeEmailInRedirect(other.getIncludeEmailInRedirect());
-            identity(other.getIdentity());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -248,21 +224,18 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter("user_id")
         public _FinalStage userId(@NotNull String userId) {
-            this.userId = Objects.requireNonNull(userId, "userId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage identity(Identity identity) {
-            this.identity = Optional.ofNullable(identity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "identity", nulls = Nulls.SKIP)
         public _FinalStage identity(Optional<Identity> identity) {
-            this.identity = identity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -271,8 +244,7 @@ public final class VerifyEmailTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage includeEmailInRedirect(Boolean includeEmailInRedirect) {
-            this.includeEmailInRedirect = Optional.ofNullable(includeEmailInRedirect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,8 +253,7 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "includeEmailInRedirect", nulls = Nulls.SKIP)
         public _FinalStage includeEmailInRedirect(Optional<Boolean> includeEmailInRedirect) {
-            this.includeEmailInRedirect = includeEmailInRedirect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -291,8 +262,7 @@ public final class VerifyEmailTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage ttlSec(Integer ttlSec) {
-            this.ttlSec = Optional.ofNullable(ttlSec);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -301,8 +271,7 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "ttl_sec", nulls = Nulls.SKIP)
         public _FinalStage ttlSec(Optional<Integer> ttlSec) {
-            this.ttlSec = ttlSec;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -311,8 +280,7 @@ public final class VerifyEmailTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage organizationId(String organizationId) {
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -321,8 +289,7 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "organization_id", nulls = Nulls.SKIP)
         public _FinalStage organizationId(Optional<String> organizationId) {
-            this.organizationId = organizationId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -331,8 +298,7 @@ public final class VerifyEmailTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -341,8 +307,7 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public _FinalStage clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,8 +316,7 @@ public final class VerifyEmailTicketRequestContent {
          */
         @java.lang.Override
         public _FinalStage resultUrl(String resultUrl) {
-            this.resultUrl = Optional.ofNullable(resultUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -361,33 +325,22 @@ public final class VerifyEmailTicketRequestContent {
         @java.lang.Override
         @JsonSetter(value = "result_url", nulls = Nulls.SKIP)
         public _FinalStage resultUrl(Optional<String> resultUrl) {
-            this.resultUrl = resultUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public VerifyEmailTicketRequestContent build() {
-            return new VerifyEmailTicketRequestContent(
-                    resultUrl,
-                    userId,
-                    clientId,
-                    organizationId,
-                    ttlSec,
-                    includeEmailInRedirect,
-                    identity,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

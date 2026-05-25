@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class MfaPolicyEnum {
+
     public static final MfaPolicyEnum CONFIDENCE_SCORE = new MfaPolicyEnum(Value.CONFIDENCE_SCORE, "confidence-score");
 
     public static final MfaPolicyEnum ALL_APPLICATIONS = new MfaPolicyEnum(Value.ALL_APPLICATIONS, "all-applications");
@@ -21,59 +22,41 @@ public final class MfaPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof MfaPolicyEnum && this.string.equals(((MfaPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CONFIDENCE_SCORE:
-                return visitor.visitConfidenceScore();
-            case ALL_APPLICATIONS:
-                return visitor.visitAllApplications();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static MfaPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "confidence-score":
-                return CONFIDENCE_SCORE;
-            case "all-applications":
-                return ALL_APPLICATIONS;
-            default:
-                return new MfaPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALL_APPLICATIONS,
 
-        CONFIDENCE_SCORE,
-
-        UNKNOWN
+        ALL_APPLICATIONS, CONFIDENCE_SCORE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAllApplications();
 
         T visitConfidenceScore();

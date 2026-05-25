@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0MakeCallAction {
-    public static final FlowActionAuth0MakeCallAction MAKE_CALL =
-            new FlowActionAuth0MakeCallAction(Value.MAKE_CALL, "MAKE_CALL");
+
+    public static final FlowActionAuth0MakeCallAction MAKE_CALL = new FlowActionAuth0MakeCallAction(Value.MAKE_CALL, "MAKE_CALL");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAuth0MakeCallAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0MakeCallAction
-                        && this.string.equals(((FlowActionAuth0MakeCallAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MAKE_CALL:
-                return visitor.visitMakeCall();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0MakeCallAction valueOf(String value) {
-        switch (value) {
-            case "MAKE_CALL":
-                return MAKE_CALL;
-            default:
-                return new FlowActionAuth0MakeCallAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MAKE_CALL,
 
-        UNKNOWN
+        MAKE_CALL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMakeCall();
 
         T visitUnknown(String unknownType);

@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.users.types.ListRefreshTokensRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRefreshTokenClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRefreshTokenClient rawClient;
@@ -24,51 +25,48 @@ public class AsyncRefreshTokenClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRefreshTokenClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
     public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(String userId) {
-        return this.rawClient.list(userId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
-    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(
-            String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(String userId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
-    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(
-            String userId, ListRefreshTokensRequestParameters request) {
-        return this.rawClient.list(userId, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(String userId, ListRefreshTokensRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details for a user's refresh tokens.
      */
-    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(
-            String userId, ListRefreshTokensRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(userId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(String userId, ListRefreshTokensRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all refresh tokens for a user.
      */
     public CompletableFuture<Void> delete(String userId) {
-        return this.rawClient.delete(userId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete all refresh tokens for a user.
      */
     public CompletableFuture<Void> delete(String userId, RequestOptions requestOptions) {
-        return this.rawClient.delete(userId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

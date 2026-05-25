@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GuardianFactorsProviderPushNotificationProviderDataEnum {
-    public static final GuardianFactorsProviderPushNotificationProviderDataEnum GUARDIAN =
-            new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.GUARDIAN, "guardian");
 
-    public static final GuardianFactorsProviderPushNotificationProviderDataEnum SNS =
-            new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.SNS, "sns");
+    public static final GuardianFactorsProviderPushNotificationProviderDataEnum GUARDIAN = new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.GUARDIAN, "guardian");
 
-    public static final GuardianFactorsProviderPushNotificationProviderDataEnum DIRECT =
-            new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.DIRECT, "direct");
+    public static final GuardianFactorsProviderPushNotificationProviderDataEnum SNS = new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.SNS, "sns");
+
+    public static final GuardianFactorsProviderPushNotificationProviderDataEnum DIRECT = new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.DIRECT, "direct");
 
     private final Value value;
 
@@ -26,67 +24,41 @@ public final class GuardianFactorsProviderPushNotificationProviderDataEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GuardianFactorsProviderPushNotificationProviderDataEnum
-                        && this.string.equals(
-                                ((GuardianFactorsProviderPushNotificationProviderDataEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GUARDIAN:
-                return visitor.visitGuardian();
-            case SNS:
-                return visitor.visitSns();
-            case DIRECT:
-                return visitor.visitDirect();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GuardianFactorsProviderPushNotificationProviderDataEnum valueOf(String value) {
-        switch (value) {
-            case "guardian":
-                return GUARDIAN;
-            case "sns":
-                return SNS;
-            case "direct":
-                return DIRECT;
-            default:
-                return new GuardianFactorsProviderPushNotificationProviderDataEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GUARDIAN,
 
-        SNS,
-
-        DIRECT,
-
-        UNKNOWN
+        GUARDIAN, SNS, DIRECT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGuardian();
 
         T visitSns();

@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LinkedClientConfiguration.Builder.class)
 public final class LinkedClientConfiguration {
+
     private final String clientId;
 
     private final Map<String, Object> additionalProperties;
@@ -33,18 +34,17 @@ public final class LinkedClientConfiguration {
      */
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LinkedClientConfiguration && equalTo((LinkedClientConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LinkedClientConfiguration other) {
@@ -53,19 +53,20 @@ public final class LinkedClientConfiguration {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         /**
          * <p>The ID of the linked client.</p>
          */
@@ -75,6 +76,7 @@ public final class LinkedClientConfiguration {
     }
 
     public interface _FinalStage {
+
         LinkedClientConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +86,18 @@ public final class LinkedClientConfiguration {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, _FinalStage {
+
         private String clientId;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LinkedClientConfiguration other) {
-            clientId(other.getClientId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +108,22 @@ public final class LinkedClientConfiguration {
         @java.lang.Override
         @JsonSetter("client_id")
         public _FinalStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LinkedClientConfiguration build() {
-            return new LinkedClientConfiguration(clientId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

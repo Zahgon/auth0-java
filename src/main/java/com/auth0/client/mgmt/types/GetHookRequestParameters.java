@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetHookRequestParameters.Builder.class)
 public final class GetHookRequestParameters {
+
     private final OptionalNullable<String> fields;
 
     private final Map<String, Object> additionalProperties;
@@ -36,21 +37,17 @@ public final class GetHookRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetHookRequestParameters && equalTo((GetHookRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetHookRequestParameters other) {
@@ -59,30 +56,31 @@ public final class GetHookRequestParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.fields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> fields = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetHookRequestParameters other) {
-            fields(other.getFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -90,47 +88,31 @@ public final class GetHookRequestParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetHookRequestParameters build() {
-            return new GetHookRequestParameters(fields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

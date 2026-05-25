@@ -7,42 +7,28 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum {
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum AD =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.AD, "ad");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum PINGFEDERATE =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(
-                    Value.PINGFEDERATE, "pingfederate");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum AD = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.AD, "ad");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OKTA =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.OKTA, "okta");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum PINGFEDERATE = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.PINGFEDERATE, "pingfederate");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum SAMLP =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.SAMLP, "samlp");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OKTA = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.OKTA, "okta");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum WAAD =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.WAAD, "waad");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum SAMLP = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.SAMLP, "samlp");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OFFICE365 =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(
-                    Value.OFFICE365, "office365");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum WAAD = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.WAAD, "waad");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum SHAREPOINT =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(
-                    Value.SHAREPOINT, "sharepoint");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OFFICE365 = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.OFFICE365, "office365");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum IP =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.IP, "ip");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum SHAREPOINT = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.SHAREPOINT, "sharepoint");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum ADFS =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.ADFS, "adfs");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum IP = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.IP, "ip");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OIDC =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.OIDC, "oidc");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum ADFS = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.ADFS, "adfs");
 
-    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum GOOGLE_APPS =
-            new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(
-                    Value.GOOGLE_APPS, "google-apps");
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum OIDC = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.OIDC, "oidc");
+
+    public static final EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum GOOGLE_APPS = new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(Value.GOOGLE_APPS, "google-apps");
 
     private final Value value;
 
@@ -54,117 +40,52 @@ public final class EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpris
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum
-                        && this.string.equals(
-                                ((EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum) other)
-                                        .string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AD:
-                return visitor.visitAd();
-            case PINGFEDERATE:
-                return visitor.visitPingfederate();
-            case OKTA:
-                return visitor.visitOkta();
-            case SAMLP:
-                return visitor.visitSamlp();
-            case WAAD:
-                return visitor.visitWaad();
-            case OFFICE365:
-                return visitor.visitOffice365();
-            case SHAREPOINT:
-                return visitor.visitSharepoint();
-            case IP:
-                return visitor.visitIp();
-            case ADFS:
-                return visitor.visitAdfs();
-            case OIDC:
-                return visitor.visitOidc();
-            case GOOGLE_APPS:
-                return visitor.visitGoogleApps();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum valueOf(String value) {
-        switch (value) {
-            case "ad":
-                return AD;
-            case "pingfederate":
-                return PINGFEDERATE;
-            case "okta":
-                return OKTA;
-            case "samlp":
-                return SAMLP;
-            case "waad":
-                return WAAD;
-            case "office365":
-                return OFFICE365;
-            case "sharepoint":
-                return SHAREPOINT;
-            case "ip":
-                return IP;
-            case "adfs":
-                return ADFS;
-            case "oidc":
-                return OIDC;
-            case "google-apps":
-                return GOOGLE_APPS;
-            default:
-                return new EventStreamCloudEventUserCreatedObjectIdentitiesItemEnterpriseProviderEnum(
-                        Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         AD,
-
         ADFS,
-
         GOOGLE_APPS,
-
         IP,
-
         OFFICE365,
-
         OIDC,
-
         OKTA,
-
         PINGFEDERATE,
-
         SAMLP,
-
         SHAREPOINT,
-
         WAAD,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAd();
 
         T visitAdfs();

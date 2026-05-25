@@ -18,6 +18,7 @@ import com.auth0.client.mgmt.types.ResetPhoneTemplateResponseContent;
 import com.auth0.client.mgmt.types.UpdatePhoneTemplateResponseContent;
 
 public class TemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTemplatesClient rawClient;
@@ -31,92 +32,86 @@ public class TemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListPhoneTemplatesResponseContent list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListPhoneTemplatesResponseContent list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListPhoneTemplatesResponseContent list(ListPhoneTemplatesRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ListPhoneTemplatesResponseContent list(
-            ListPhoneTemplatesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public ListPhoneTemplatesResponseContent list(ListPhoneTemplatesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreatePhoneTemplateResponseContent create() {
-        return this.rawClient.create().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreatePhoneTemplateResponseContent create(RequestOptions requestOptions) {
-        return this.rawClient.create(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreatePhoneTemplateResponseContent create(CreatePhoneTemplateRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreatePhoneTemplateResponseContent create(
-            CreatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreatePhoneTemplateResponseContent create(CreatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetPhoneTemplateResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetPhoneTemplateResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdatePhoneTemplateResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdatePhoneTemplateResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdatePhoneTemplateResponseContent update(String id, UpdatePhoneTemplateRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdatePhoneTemplateResponseContent update(
-            String id, UpdatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdatePhoneTemplateResponseContent update(String id, UpdatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ResetPhoneTemplateResponseContent reset(String id, ResetPhoneTemplateRequestContent request) {
-        return this.rawClient.reset(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ResetPhoneTemplateResponseContent reset(
-            String id, ResetPhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.reset(id, request, requestOptions).body();
+    public ResetPhoneTemplateResponseContent reset(String id, ResetPhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreatePhoneTemplateTestNotificationResponseContent test(
-            String id, CreatePhoneTemplateTestNotificationRequestContent request) {
-        return this.rawClient.test(id, request).body();
+    public CreatePhoneTemplateTestNotificationResponseContent test(String id, CreatePhoneTemplateTestNotificationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreatePhoneTemplateTestNotificationResponseContent test(
-            String id, CreatePhoneTemplateTestNotificationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.test(id, request, requestOptions).body();
+    public CreatePhoneTemplateTestNotificationResponseContent test(String id, CreatePhoneTemplateTestNotificationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

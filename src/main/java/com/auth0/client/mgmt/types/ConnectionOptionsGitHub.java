@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsGitHub.Builder.class)
 public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> clientId;
@@ -36,8 +37,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
 
     private final Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> adminOrg;
 
@@ -81,35 +81,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsGitHub(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> adminOrg,
-            Optional<Boolean> adminPublicKey,
-            Optional<Boolean> adminRepoHook,
-            Optional<Boolean> deleteRepo,
-            Optional<Boolean> email,
-            Optional<Boolean> follow,
-            Optional<Boolean> gist,
-            Optional<Boolean> notifications,
-            Optional<Boolean> profile,
-            Optional<Boolean> publicRepo,
-            Optional<Boolean> readOrg,
-            Optional<Boolean> readPublicKey,
-            Optional<Boolean> readRepoHook,
-            Optional<Boolean> readUser,
-            Optional<Boolean> repo,
-            Optional<Boolean> repoDeployment,
-            Optional<Boolean> repoStatus,
-            Optional<Boolean> writeOrg,
-            Optional<Boolean> writePublicKey,
-            Optional<Boolean> writeRepoHook,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsGitHub(Optional<List<String>> nonPersistentAttrs, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> adminOrg, Optional<Boolean> adminPublicKey, Optional<Boolean> adminRepoHook, Optional<Boolean> deleteRepo, Optional<Boolean> email, Optional<Boolean> follow, Optional<Boolean> gist, Optional<Boolean> notifications, Optional<Boolean> profile, Optional<Boolean> publicRepo, Optional<Boolean> readOrg, Optional<Boolean> readPublicKey, Optional<Boolean> readRepoHook, Optional<Boolean> readUser, Optional<Boolean> repo, Optional<Boolean> repoDeployment, Optional<Boolean> repoStatus, Optional<Boolean> writeOrg, Optional<Boolean> writePublicKey, Optional<Boolean> writeRepoHook, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -143,41 +115,38 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -185,7 +154,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("admin_org")
     public Optional<Boolean> getAdminOrg() {
-        return adminOrg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -193,7 +162,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("admin_public_key")
     public Optional<Boolean> getAdminPublicKey() {
-        return adminPublicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -201,7 +170,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("admin_repo_hook")
     public Optional<Boolean> getAdminRepoHook() {
-        return adminRepoHook;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -209,7 +178,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("delete_repo")
     public Optional<Boolean> getDeleteRepo() {
-        return deleteRepo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -217,7 +186,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -225,7 +194,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("follow")
     public Optional<Boolean> getFollow() {
-        return follow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -233,7 +202,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("gist")
     public Optional<Boolean> getGist() {
-        return gist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -241,7 +210,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("notifications")
     public Optional<Boolean> getNotifications() {
-        return notifications;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -249,7 +218,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("profile")
     public Optional<Boolean> getProfile() {
-        return profile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -257,7 +226,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("public_repo")
     public Optional<Boolean> getPublicRepo() {
-        return publicRepo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -265,7 +234,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("read_org")
     public Optional<Boolean> getReadOrg() {
-        return readOrg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -273,7 +242,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("read_public_key")
     public Optional<Boolean> getReadPublicKey() {
-        return readPublicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -281,7 +250,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("read_repo_hook")
     public Optional<Boolean> getReadRepoHook() {
-        return readRepoHook;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -289,7 +258,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("read_user")
     public Optional<Boolean> getReadUser() {
-        return readUser;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -297,7 +266,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("repo")
     public Optional<Boolean> getRepo() {
-        return repo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -305,7 +274,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("repo_deployment")
     public Optional<Boolean> getRepoDeployment() {
-        return repoDeployment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -313,7 +282,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("repo_status")
     public Optional<Boolean> getRepoStatus() {
-        return repoStatus;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -321,7 +290,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("write_org")
     public Optional<Boolean> getWriteOrg() {
-        return writeOrg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -329,7 +298,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("write_public_key")
     public Optional<Boolean> getWritePublicKey() {
-        return writePublicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -337,100 +306,46 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
      */
     @JsonProperty("write_repo_hook")
     public Optional<Boolean> getWriteRepoHook() {
-        return writeRepoHook;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsGitHub && equalTo((ConnectionOptionsGitHub) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsGitHub other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && upstreamParams.equals(other.upstreamParams)
-                && adminOrg.equals(other.adminOrg)
-                && adminPublicKey.equals(other.adminPublicKey)
-                && adminRepoHook.equals(other.adminRepoHook)
-                && deleteRepo.equals(other.deleteRepo)
-                && email.equals(other.email)
-                && follow.equals(other.follow)
-                && gist.equals(other.gist)
-                && notifications.equals(other.notifications)
-                && profile.equals(other.profile)
-                && publicRepo.equals(other.publicRepo)
-                && readOrg.equals(other.readOrg)
-                && readPublicKey.equals(other.readPublicKey)
-                && readRepoHook.equals(other.readRepoHook)
-                && readUser.equals(other.readUser)
-                && repo.equals(other.repo)
-                && repoDeployment.equals(other.repoDeployment)
-                && repoStatus.equals(other.repoStatus)
-                && writeOrg.equals(other.writeOrg)
-                && writePublicKey.equals(other.writePublicKey)
-                && writeRepoHook.equals(other.writeRepoHook);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && upstreamParams.equals(other.upstreamParams) && adminOrg.equals(other.adminOrg) && adminPublicKey.equals(other.adminPublicKey) && adminRepoHook.equals(other.adminRepoHook) && deleteRepo.equals(other.deleteRepo) && email.equals(other.email) && follow.equals(other.follow) && gist.equals(other.gist) && notifications.equals(other.notifications) && profile.equals(other.profile) && publicRepo.equals(other.publicRepo) && readOrg.equals(other.readOrg) && readPublicKey.equals(other.readPublicKey) && readRepoHook.equals(other.readRepoHook) && readUser.equals(other.readUser) && repo.equals(other.repo) && repoDeployment.equals(other.repoDeployment) && repoStatus.equals(other.repoStatus) && writeOrg.equals(other.writeOrg) && writePublicKey.equals(other.writePublicKey) && writeRepoHook.equals(other.writeRepoHook);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.scope,
-                this.setUserRootAttributes,
-                this.upstreamParams,
-                this.adminOrg,
-                this.adminPublicKey,
-                this.adminRepoHook,
-                this.deleteRepo,
-                this.email,
-                this.follow,
-                this.gist,
-                this.notifications,
-                this.profile,
-                this.publicRepo,
-                this.readOrg,
-                this.readPublicKey,
-                this.readRepoHook,
-                this.readUser,
-                this.repo,
-                this.repoDeployment,
-                this.repoStatus,
-                this.writeOrg,
-                this.writePublicKey,
-                this.writeRepoHook);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -443,8 +358,7 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<Boolean> adminOrg = Optional.empty();
 
@@ -489,142 +403,82 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsGitHub other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            upstreamParams(other.getUpstreamParams());
-            adminOrg(other.getAdminOrg());
-            adminPublicKey(other.getAdminPublicKey());
-            adminRepoHook(other.getAdminRepoHook());
-            deleteRepo(other.getDeleteRepo());
-            email(other.getEmail());
-            follow(other.getFollow());
-            gist(other.getGist());
-            notifications(other.getNotifications());
-            profile(other.getProfile());
-            publicRepo(other.getPublicRepo());
-            readOrg(other.getReadOrg());
-            readPublicKey(other.getReadPublicKey());
-            readRepoHook(other.getReadRepoHook());
-            readUser(other.getReadUser());
-            repo(other.getRepo());
-            repoDeployment(other.getRepoDeployment());
-            repoStatus(other.getRepoStatus());
-            writeOrg(other.getWriteOrg());
-            writePublicKey(other.getWritePublicKey());
-            writeRepoHook(other.getWriteRepoHook());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -632,13 +486,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "admin_org", nulls = Nulls.SKIP)
         public Builder adminOrg(Optional<Boolean> adminOrg) {
-            this.adminOrg = adminOrg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adminOrg(Boolean adminOrg) {
-            this.adminOrg = Optional.ofNullable(adminOrg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -646,13 +498,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "admin_public_key", nulls = Nulls.SKIP)
         public Builder adminPublicKey(Optional<Boolean> adminPublicKey) {
-            this.adminPublicKey = adminPublicKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adminPublicKey(Boolean adminPublicKey) {
-            this.adminPublicKey = Optional.ofNullable(adminPublicKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -660,13 +510,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "admin_repo_hook", nulls = Nulls.SKIP)
         public Builder adminRepoHook(Optional<Boolean> adminRepoHook) {
-            this.adminRepoHook = adminRepoHook;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder adminRepoHook(Boolean adminRepoHook) {
-            this.adminRepoHook = Optional.ofNullable(adminRepoHook);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -674,13 +522,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "delete_repo", nulls = Nulls.SKIP)
         public Builder deleteRepo(Optional<Boolean> deleteRepo) {
-            this.deleteRepo = deleteRepo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deleteRepo(Boolean deleteRepo) {
-            this.deleteRepo = Optional.ofNullable(deleteRepo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -688,13 +534,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -702,13 +546,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "follow", nulls = Nulls.SKIP)
         public Builder follow(Optional<Boolean> follow) {
-            this.follow = follow;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder follow(Boolean follow) {
-            this.follow = Optional.ofNullable(follow);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -716,13 +558,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "gist", nulls = Nulls.SKIP)
         public Builder gist(Optional<Boolean> gist) {
-            this.gist = gist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gist(Boolean gist) {
-            this.gist = Optional.ofNullable(gist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -730,13 +570,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "notifications", nulls = Nulls.SKIP)
         public Builder notifications(Optional<Boolean> notifications) {
-            this.notifications = notifications;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder notifications(Boolean notifications) {
-            this.notifications = Optional.ofNullable(notifications);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -744,13 +582,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "profile", nulls = Nulls.SKIP)
         public Builder profile(Optional<Boolean> profile) {
-            this.profile = profile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profile(Boolean profile) {
-            this.profile = Optional.ofNullable(profile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -758,13 +594,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "public_repo", nulls = Nulls.SKIP)
         public Builder publicRepo(Optional<Boolean> publicRepo) {
-            this.publicRepo = publicRepo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder publicRepo(Boolean publicRepo) {
-            this.publicRepo = Optional.ofNullable(publicRepo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -772,13 +606,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "read_org", nulls = Nulls.SKIP)
         public Builder readOrg(Optional<Boolean> readOrg) {
-            this.readOrg = readOrg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readOrg(Boolean readOrg) {
-            this.readOrg = Optional.ofNullable(readOrg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -786,13 +618,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "read_public_key", nulls = Nulls.SKIP)
         public Builder readPublicKey(Optional<Boolean> readPublicKey) {
-            this.readPublicKey = readPublicKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readPublicKey(Boolean readPublicKey) {
-            this.readPublicKey = Optional.ofNullable(readPublicKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -800,13 +630,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "read_repo_hook", nulls = Nulls.SKIP)
         public Builder readRepoHook(Optional<Boolean> readRepoHook) {
-            this.readRepoHook = readRepoHook;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readRepoHook(Boolean readRepoHook) {
-            this.readRepoHook = Optional.ofNullable(readRepoHook);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -814,13 +642,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "read_user", nulls = Nulls.SKIP)
         public Builder readUser(Optional<Boolean> readUser) {
-            this.readUser = readUser;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder readUser(Boolean readUser) {
-            this.readUser = Optional.ofNullable(readUser);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -828,13 +654,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "repo", nulls = Nulls.SKIP)
         public Builder repo(Optional<Boolean> repo) {
-            this.repo = repo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder repo(Boolean repo) {
-            this.repo = Optional.ofNullable(repo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -842,13 +666,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "repo_deployment", nulls = Nulls.SKIP)
         public Builder repoDeployment(Optional<Boolean> repoDeployment) {
-            this.repoDeployment = repoDeployment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder repoDeployment(Boolean repoDeployment) {
-            this.repoDeployment = Optional.ofNullable(repoDeployment);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -856,13 +678,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "repo_status", nulls = Nulls.SKIP)
         public Builder repoStatus(Optional<Boolean> repoStatus) {
-            this.repoStatus = repoStatus;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder repoStatus(Boolean repoStatus) {
-            this.repoStatus = Optional.ofNullable(repoStatus);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -870,13 +690,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "write_org", nulls = Nulls.SKIP)
         public Builder writeOrg(Optional<Boolean> writeOrg) {
-            this.writeOrg = writeOrg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder writeOrg(Boolean writeOrg) {
-            this.writeOrg = Optional.ofNullable(writeOrg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -884,13 +702,11 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "write_public_key", nulls = Nulls.SKIP)
         public Builder writePublicKey(Optional<Boolean> writePublicKey) {
-            this.writePublicKey = writePublicKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder writePublicKey(Boolean writePublicKey) {
-            this.writePublicKey = Optional.ofNullable(writePublicKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -898,55 +714,23 @@ public final class ConnectionOptionsGitHub implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "write_repo_hook", nulls = Nulls.SKIP)
         public Builder writeRepoHook(Optional<Boolean> writeRepoHook) {
-            this.writeRepoHook = writeRepoHook;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder writeRepoHook(Boolean writeRepoHook) {
-            this.writeRepoHook = Optional.ofNullable(writeRepoHook);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsGitHub build() {
-            return new ConnectionOptionsGitHub(
-                    nonPersistentAttrs,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    scope,
-                    setUserRootAttributes,
-                    upstreamParams,
-                    adminOrg,
-                    adminPublicKey,
-                    adminRepoHook,
-                    deleteRepo,
-                    email,
-                    follow,
-                    gist,
-                    notifications,
-                    profile,
-                    publicRepo,
-                    readOrg,
-                    readPublicKey,
-                    readRepoHook,
-                    readUser,
-                    repo,
-                    repoDeployment,
-                    repoStatus,
-                    writeOrg,
-                    writePublicKey,
-                    writeRepoHook,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

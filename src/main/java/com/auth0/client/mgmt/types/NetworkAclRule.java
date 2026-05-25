@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = NetworkAclRule.Builder.class)
 public final class NetworkAclRule {
+
     private final NetworkAclAction action;
 
     private final Optional<NetworkAclMatch> match;
@@ -31,12 +32,7 @@ public final class NetworkAclRule {
 
     private final Map<String, Object> additionalProperties;
 
-    private NetworkAclRule(
-            NetworkAclAction action,
-            Optional<NetworkAclMatch> match,
-            Optional<NetworkAclMatch> notMatch,
-            NetworkAclRuleScopeEnum scope,
-            Map<String, Object> additionalProperties) {
+    private NetworkAclRule(NetworkAclAction action, Optional<NetworkAclMatch> match, Optional<NetworkAclMatch> notMatch, NetworkAclRuleScopeEnum scope, Map<String, Object> additionalProperties) {
         this.action = action;
         this.match = match;
         this.notMatch = notMatch;
@@ -46,67 +42,66 @@ public final class NetworkAclRule {
 
     @JsonProperty("action")
     public NetworkAclAction getAction() {
-        return action;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("match")
     public Optional<NetworkAclMatch> getMatch() {
-        return match;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("not_match")
     public Optional<NetworkAclMatch> getNotMatch() {
-        return notMatch;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public NetworkAclRuleScopeEnum getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof NetworkAclRule && equalTo((NetworkAclRule) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(NetworkAclRule other) {
-        return action.equals(other.action)
-                && match.equals(other.match)
-                && notMatch.equals(other.notMatch)
-                && scope.equals(other.scope);
+        return action.equals(other.action) && match.equals(other.match) && notMatch.equals(other.notMatch) && scope.equals(other.scope);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.action, this.match, this.notMatch, this.scope);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ActionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ActionStage {
+
         ScopeStage action(@NotNull NetworkAclAction action);
 
         Builder from(NetworkAclRule other);
     }
 
     public interface ScopeStage {
+
         _FinalStage scope(@NotNull NetworkAclRuleScopeEnum scope);
     }
 
     public interface _FinalStage {
+
         NetworkAclRule build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +119,7 @@ public final class NetworkAclRule {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ActionStage, ScopeStage, _FinalStage {
+
         private NetworkAclAction action;
 
         private NetworkAclRuleScopeEnum scope;
@@ -135,72 +131,61 @@ public final class NetworkAclRule {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(NetworkAclRule other) {
-            action(other.getAction());
-            match(other.getMatch());
-            notMatch(other.getNotMatch());
-            scope(other.getScope());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("action")
         public ScopeStage action(@NotNull NetworkAclAction action) {
-            this.action = Objects.requireNonNull(action, "action must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("scope")
         public _FinalStage scope(@NotNull NetworkAclRuleScopeEnum scope) {
-            this.scope = Objects.requireNonNull(scope, "scope must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage notMatch(NetworkAclMatch notMatch) {
-            this.notMatch = Optional.ofNullable(notMatch);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "not_match", nulls = Nulls.SKIP)
         public _FinalStage notMatch(Optional<NetworkAclMatch> notMatch) {
-            this.notMatch = notMatch;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage match(NetworkAclMatch match) {
-            this.match = Optional.ofNullable(match);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "match", nulls = Nulls.SKIP)
         public _FinalStage match(Optional<NetworkAclMatch> match) {
-            this.match = match;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public NetworkAclRule build() {
-            return new NetworkAclRule(action, match, notMatch, scope, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

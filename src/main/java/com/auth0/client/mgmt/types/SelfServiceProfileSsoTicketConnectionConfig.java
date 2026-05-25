@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketConnectionConfig.Builder.class)
 public final class SelfServiceProfileSsoTicketConnectionConfig {
+
     private final String name;
 
     private final Optional<String> displayName;
@@ -38,14 +39,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketConnectionConfig(
-            String name,
-            Optional<String> displayName,
-            Optional<Boolean> isDomainConnection,
-            Optional<Boolean> showAsButton,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            OptionalNullable<SelfServiceProfileSsoTicketConnectionOptions> options,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketConnectionConfig(String name, Optional<String> displayName, Optional<Boolean> isDomainConnection, Optional<Boolean> showAsButton, Optional<Map<String, OptionalNullable<String>>> metadata, OptionalNullable<SelfServiceProfileSsoTicketConnectionOptions> options, Map<String, Object> additionalProperties) {
         this.name = name;
         this.displayName = displayName;
         this.isDomainConnection = isDomainConnection;
@@ -60,7 +54,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +62,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
      */
     @JsonProperty("display_name")
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +70,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
      */
     @JsonProperty("is_domain_connection")
     public Optional<Boolean> getIsDomainConnection() {
-        return isDomainConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,21 +78,18 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
      */
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("options")
     public OptionalNullable<SelfServiceProfileSsoTicketConnectionOptions> getOptions() {
-        if (options == null) {
-            return OptionalNullable.absent();
-        }
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -109,41 +100,34 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketConnectionConfig
-                && equalTo((SelfServiceProfileSsoTicketConnectionConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketConnectionConfig other) {
-        return name.equals(other.name)
-                && displayName.equals(other.displayName)
-                && isDomainConnection.equals(other.isDomainConnection)
-                && showAsButton.equals(other.showAsButton)
-                && metadata.equals(other.metadata)
-                && options.equals(other.options);
+        return name.equals(other.name) && displayName.equals(other.displayName) && isDomainConnection.equals(other.isDomainConnection) && showAsButton.equals(other.showAsButton) && metadata.equals(other.metadata) && options.equals(other.options);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name, this.displayName, this.isDomainConnection, this.showAsButton, this.metadata, this.options);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of the connection that will be created as a part of the Self-Service Enterprise Configuration flow.</p>
          */
@@ -153,6 +137,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
     }
 
     public interface _FinalStage {
+
         SelfServiceProfileSsoTicketConnectionConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -195,6 +180,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private OptionalNullable<SelfServiceProfileSsoTicketConnectionOptions> options = OptionalNullable.absent();
@@ -210,17 +196,12 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SelfServiceProfileSsoTicketConnectionConfig other) {
-            name(other.getName());
-            displayName(other.getDisplayName());
-            isDomainConnection(other.getIsDomainConnection());
-            showAsButton(other.getShowAsButton());
-            metadata(other.getMetadata());
-            options(other.getOptions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -231,57 +212,39 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage options(
-                com.auth0.client.mgmt.core.Nullable<SelfServiceProfileSsoTicketConnectionOptions> options) {
-            if (options.isNull()) {
-                this.options = OptionalNullable.ofNull();
-            } else if (options.isEmpty()) {
-                this.options = OptionalNullable.absent();
-            } else {
-                this.options = OptionalNullable.of(options.get());
-            }
-            return this;
+        public _FinalStage options(com.auth0.client.mgmt.core.Nullable<SelfServiceProfileSsoTicketConnectionOptions> options) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage options(Optional<SelfServiceProfileSsoTicketConnectionOptions> options) {
-            if (options.isPresent()) {
-                this.options = OptionalNullable.of(options.get());
-            } else {
-                this.options = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage options(SelfServiceProfileSsoTicketConnectionOptions options) {
-            this.options = OptionalNullable.of(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public _FinalStage options(@Nullable OptionalNullable<SelfServiceProfileSsoTicketConnectionOptions> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -290,8 +253,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
          */
         @java.lang.Override
         public _FinalStage showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -300,8 +262,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
         @java.lang.Override
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public _FinalStage showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -310,8 +271,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
          */
         @java.lang.Override
         public _FinalStage isDomainConnection(Boolean isDomainConnection) {
-            this.isDomainConnection = Optional.ofNullable(isDomainConnection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -320,8 +280,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
         @java.lang.Override
         @JsonSetter(value = "is_domain_connection", nulls = Nulls.SKIP)
         public _FinalStage isDomainConnection(Optional<Boolean> isDomainConnection) {
-            this.isDomainConnection = isDomainConnection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -330,8 +289,7 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
          */
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -340,26 +298,22 @@ public final class SelfServiceProfileSsoTicketConnectionConfig {
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SelfServiceProfileSsoTicketConnectionConfig build() {
-            return new SelfServiceProfileSsoTicketConnectionConfig(
-                    name, displayName, isDomainConnection, showAsButton, metadata, options, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

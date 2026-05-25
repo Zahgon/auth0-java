@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentialsSchemaThree.Builder.class)
 public final class EmailProviderCredentialsSchemaThree {
+
     private final Optional<String> apiKey;
 
     private final Optional<EmailSparkPostRegionEnum> region;
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailProviderCredentialsSchemaThree(
-            Optional<String> apiKey,
-            Optional<EmailSparkPostRegionEnum> region,
-            Map<String, Object> additionalProperties) {
+    private EmailProviderCredentialsSchemaThree(Optional<String> apiKey, Optional<EmailSparkPostRegionEnum> region, Map<String, Object> additionalProperties) {
         this.apiKey = apiKey;
         this.region = region;
         this.additionalProperties = additionalProperties;
@@ -40,24 +38,22 @@ public final class EmailProviderCredentialsSchemaThree {
      */
     @JsonProperty("api_key")
     public Optional<String> getApiKey() {
-        return apiKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("region")
     public Optional<EmailSparkPostRegionEnum> getRegion() {
-        return region;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchemaThree
-                && equalTo((EmailProviderCredentialsSchemaThree) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchemaThree other) {
@@ -66,20 +62,21 @@ public final class EmailProviderCredentialsSchemaThree {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.apiKey, this.region);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> apiKey = Optional.empty();
 
         private Optional<EmailSparkPostRegionEnum> region = Optional.empty();
@@ -87,12 +84,11 @@ public final class EmailProviderCredentialsSchemaThree {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailProviderCredentialsSchemaThree other) {
-            apiKey(other.getApiKey());
-            region(other.getRegion());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,38 +96,32 @@ public final class EmailProviderCredentialsSchemaThree {
          */
         @JsonSetter(value = "api_key", nulls = Nulls.SKIP)
         public Builder apiKey(Optional<String> apiKey) {
-            this.apiKey = apiKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Optional.ofNullable(apiKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "region", nulls = Nulls.SKIP)
         public Builder region(Optional<EmailSparkPostRegionEnum> region) {
-            this.region = region;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder region(EmailSparkPostRegionEnum region) {
-            this.region = Optional.ofNullable(region);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailProviderCredentialsSchemaThree build() {
-            return new EmailProviderCredentialsSchemaThree(apiKey, region, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

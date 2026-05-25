@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionError.Builder.class)
 public final class ActionError {
+
     private final Optional<String> id;
 
     private final Optional<String> msg;
@@ -28,8 +29,7 @@ public final class ActionError {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionError(
-            Optional<String> id, Optional<String> msg, Optional<String> url, Map<String, Object> additionalProperties) {
+    private ActionError(Optional<String> id, Optional<String> msg, Optional<String> url, Map<String, Object> additionalProperties) {
         this.id = id;
         this.msg = msg;
         this.url = url;
@@ -38,28 +38,27 @@ public final class ActionError {
 
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("msg")
     public Optional<String> getMsg() {
-        return msg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("url")
     public Optional<String> getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionError && equalTo((ActionError) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionError other) {
@@ -68,20 +67,21 @@ public final class ActionError {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.msg, this.url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> msg = Optional.empty();
@@ -91,60 +91,50 @@ public final class ActionError {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ActionError other) {
-            id(other.getId());
-            msg(other.getMsg());
-            url(other.getUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "msg", nulls = Nulls.SKIP)
         public Builder msg(Optional<String> msg) {
-            this.msg = msg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder msg(String msg) {
-            this.msg = Optional.ofNullable(msg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "url", nulls = Nulls.SKIP)
         public Builder url(Optional<String> url) {
-            this.url = url;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(String url) {
-            this.url = Optional.ofNullable(url);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ActionError build() {
-            return new ActionError(id, msg, url, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.verifiablecredentials.verification.AsyncVerificatio
 import java.util.function.Supplier;
 
 public class AsyncVerifiableCredentialsClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncVerificationClient> verificationClient;
@@ -19,6 +20,6 @@ public class AsyncVerifiableCredentialsClient {
     }
 
     public AsyncVerificationClient verification() {
-        return this.verificationClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateOrganizationInvitationRequestContent.Builder.class)
 public final class CreateOrganizationInvitationRequestContent {
+
     private final OrganizationInvitationInviter inviter;
 
     private final OrganizationInvitationInvitee invitee;
@@ -44,17 +45,7 @@ public final class CreateOrganizationInvitationRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateOrganizationInvitationRequestContent(
-            OrganizationInvitationInviter inviter,
-            OrganizationInvitationInvitee invitee,
-            String clientId,
-            Optional<String> connectionId,
-            Optional<Map<String, Object>> appMetadata,
-            Optional<Map<String, Object>> userMetadata,
-            Optional<Integer> ttlSec,
-            Optional<List<String>> roles,
-            Optional<Boolean> sendInvitationEmail,
-            Map<String, Object> additionalProperties) {
+    private CreateOrganizationInvitationRequestContent(OrganizationInvitationInviter inviter, OrganizationInvitationInvitee invitee, String clientId, Optional<String> connectionId, Optional<Map<String, Object>> appMetadata, Optional<Map<String, Object>> userMetadata, Optional<Integer> ttlSec, Optional<List<String>> roles, Optional<Boolean> sendInvitationEmail, Map<String, Object> additionalProperties) {
         this.inviter = inviter;
         this.invitee = invitee;
         this.clientId = clientId;
@@ -69,12 +60,12 @@ public final class CreateOrganizationInvitationRequestContent {
 
     @JsonProperty("inviter")
     public OrganizationInvitationInviter getInviter() {
-        return inviter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("invitee")
     public OrganizationInvitationInvitee getInvitee() {
-        return invitee;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,7 +73,7 @@ public final class CreateOrganizationInvitationRequestContent {
      */
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -90,17 +81,17 @@ public final class CreateOrganizationInvitationRequestContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_metadata")
     public Optional<Map<String, Object>> getAppMetadata() {
-        return appMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_metadata")
     public Optional<Map<String, Object>> getUserMetadata() {
-        return userMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -108,7 +99,7 @@ public final class CreateOrganizationInvitationRequestContent {
      */
     @JsonProperty("ttl_sec")
     public Optional<Integer> getTtlSec() {
-        return ttlSec;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,7 +107,7 @@ public final class CreateOrganizationInvitationRequestContent {
      */
     @JsonProperty("roles")
     public Optional<List<String>> getRoles() {
-        return roles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,67 +115,51 @@ public final class CreateOrganizationInvitationRequestContent {
      */
     @JsonProperty("send_invitation_email")
     public Optional<Boolean> getSendInvitationEmail() {
-        return sendInvitationEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateOrganizationInvitationRequestContent
-                && equalTo((CreateOrganizationInvitationRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateOrganizationInvitationRequestContent other) {
-        return inviter.equals(other.inviter)
-                && invitee.equals(other.invitee)
-                && clientId.equals(other.clientId)
-                && connectionId.equals(other.connectionId)
-                && appMetadata.equals(other.appMetadata)
-                && userMetadata.equals(other.userMetadata)
-                && ttlSec.equals(other.ttlSec)
-                && roles.equals(other.roles)
-                && sendInvitationEmail.equals(other.sendInvitationEmail);
+        return inviter.equals(other.inviter) && invitee.equals(other.invitee) && clientId.equals(other.clientId) && connectionId.equals(other.connectionId) && appMetadata.equals(other.appMetadata) && userMetadata.equals(other.userMetadata) && ttlSec.equals(other.ttlSec) && roles.equals(other.roles) && sendInvitationEmail.equals(other.sendInvitationEmail);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.inviter,
-                this.invitee,
-                this.clientId,
-                this.connectionId,
-                this.appMetadata,
-                this.userMetadata,
-                this.ttlSec,
-                this.roles,
-                this.sendInvitationEmail);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static InviterStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface InviterStage {
+
         InviteeStage inviter(@NotNull OrganizationInvitationInviter inviter);
 
         Builder from(CreateOrganizationInvitationRequestContent other);
     }
 
     public interface InviteeStage {
+
         ClientIdStage invitee(@NotNull OrganizationInvitationInvitee invitee);
     }
 
     public interface ClientIdStage {
+
         /**
          * <p>Auth0 client ID. Used to resolve the application's login initiation endpoint.</p>
          */
@@ -192,6 +167,7 @@ public final class CreateOrganizationInvitationRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateOrganizationInvitationRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -237,6 +213,7 @@ public final class CreateOrganizationInvitationRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements InviterStage, InviteeStage, ClientIdStage, _FinalStage {
+
         private OrganizationInvitationInviter inviter;
 
         private OrganizationInvitationInvitee invitee;
@@ -258,34 +235,24 @@ public final class CreateOrganizationInvitationRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateOrganizationInvitationRequestContent other) {
-            inviter(other.getInviter());
-            invitee(other.getInvitee());
-            clientId(other.getClientId());
-            connectionId(other.getConnectionId());
-            appMetadata(other.getAppMetadata());
-            userMetadata(other.getUserMetadata());
-            ttlSec(other.getTtlSec());
-            roles(other.getRoles());
-            sendInvitationEmail(other.getSendInvitationEmail());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("inviter")
         public InviteeStage inviter(@NotNull OrganizationInvitationInviter inviter) {
-            this.inviter = Objects.requireNonNull(inviter, "inviter must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("invitee")
         public ClientIdStage invitee(@NotNull OrganizationInvitationInvitee invitee) {
-            this.invitee = Objects.requireNonNull(invitee, "invitee must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -296,8 +263,7 @@ public final class CreateOrganizationInvitationRequestContent {
         @java.lang.Override
         @JsonSetter("client_id")
         public _FinalStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -306,8 +272,7 @@ public final class CreateOrganizationInvitationRequestContent {
          */
         @java.lang.Override
         public _FinalStage sendInvitationEmail(Boolean sendInvitationEmail) {
-            this.sendInvitationEmail = Optional.ofNullable(sendInvitationEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -316,8 +281,7 @@ public final class CreateOrganizationInvitationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "send_invitation_email", nulls = Nulls.SKIP)
         public _FinalStage sendInvitationEmail(Optional<Boolean> sendInvitationEmail) {
-            this.sendInvitationEmail = sendInvitationEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -326,8 +290,7 @@ public final class CreateOrganizationInvitationRequestContent {
          */
         @java.lang.Override
         public _FinalStage roles(List<String> roles) {
-            this.roles = Optional.ofNullable(roles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -336,8 +299,7 @@ public final class CreateOrganizationInvitationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "roles", nulls = Nulls.SKIP)
         public _FinalStage roles(Optional<List<String>> roles) {
-            this.roles = roles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -346,8 +308,7 @@ public final class CreateOrganizationInvitationRequestContent {
          */
         @java.lang.Override
         public _FinalStage ttlSec(Integer ttlSec) {
-            this.ttlSec = Optional.ofNullable(ttlSec);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,34 +317,29 @@ public final class CreateOrganizationInvitationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "ttl_sec", nulls = Nulls.SKIP)
         public _FinalStage ttlSec(Optional<Integer> ttlSec) {
-            this.ttlSec = ttlSec;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userMetadata(Map<String, Object> userMetadata) {
-            this.userMetadata = Optional.ofNullable(userMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "user_metadata", nulls = Nulls.SKIP)
         public _FinalStage userMetadata(Optional<Map<String, Object>> userMetadata) {
-            this.userMetadata = userMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage appMetadata(Map<String, Object> appMetadata) {
-            this.appMetadata = Optional.ofNullable(appMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "app_metadata", nulls = Nulls.SKIP)
         public _FinalStage appMetadata(Optional<Map<String, Object>> appMetadata) {
-            this.appMetadata = appMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -392,8 +348,7 @@ public final class CreateOrganizationInvitationRequestContent {
          */
         @java.lang.Override
         public _FinalStage connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -402,35 +357,22 @@ public final class CreateOrganizationInvitationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public _FinalStage connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateOrganizationInvitationRequestContent build() {
-            return new CreateOrganizationInvitationRequestContent(
-                    inviter,
-                    invitee,
-                    clientId,
-                    connectionId,
-                    appMetadata,
-                    userMetadata,
-                    ttlSec,
-                    roles,
-                    sendInvitationEmail,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

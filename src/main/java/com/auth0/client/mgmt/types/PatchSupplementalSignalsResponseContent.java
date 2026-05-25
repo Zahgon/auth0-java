@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PatchSupplementalSignalsResponseContent.Builder.class)
 public final class PatchSupplementalSignalsResponseContent {
+
     private final Optional<Boolean> akamaiEnabled;
 
     private final Map<String, Object> additionalProperties;
 
-    private PatchSupplementalSignalsResponseContent(
-            Optional<Boolean> akamaiEnabled, Map<String, Object> additionalProperties) {
+    private PatchSupplementalSignalsResponseContent(Optional<Boolean> akamaiEnabled, Map<String, Object> additionalProperties) {
         this.akamaiEnabled = akamaiEnabled;
         this.additionalProperties = additionalProperties;
     }
@@ -35,19 +35,17 @@ public final class PatchSupplementalSignalsResponseContent {
      */
     @JsonProperty("akamai_enabled")
     public Optional<Boolean> getAkamaiEnabled() {
-        return akamaiEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PatchSupplementalSignalsResponseContent
-                && equalTo((PatchSupplementalSignalsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PatchSupplementalSignalsResponseContent other) {
@@ -56,30 +54,31 @@ public final class PatchSupplementalSignalsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.akamaiEnabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> akamaiEnabled = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(PatchSupplementalSignalsResponseContent other) {
-            akamaiEnabled(other.getAkamaiEnabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +86,23 @@ public final class PatchSupplementalSignalsResponseContent {
          */
         @JsonSetter(value = "akamai_enabled", nulls = Nulls.SKIP)
         public Builder akamaiEnabled(Optional<Boolean> akamaiEnabled) {
-            this.akamaiEnabled = akamaiEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder akamaiEnabled(Boolean akamaiEnabled) {
-            this.akamaiEnabled = Optional.ofNullable(akamaiEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public PatchSupplementalSignalsResponseContent build() {
-            return new PatchSupplementalSignalsResponseContent(akamaiEnabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

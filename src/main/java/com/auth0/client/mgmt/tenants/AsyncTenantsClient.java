@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AsyncTenantsClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncSettingsClient> settingsClient;
@@ -18,6 +19,6 @@ public class AsyncTenantsClient {
     }
 
     public AsyncSettingsClient settings() {
-        return this.settingsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

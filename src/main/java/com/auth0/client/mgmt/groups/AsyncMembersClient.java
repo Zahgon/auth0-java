@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.GroupMember;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncMembersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawMembersClient rawClient;
@@ -24,35 +25,34 @@ public class AsyncMembersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawMembersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
     public CompletableFuture<SyncPagingIterable<GroupMember>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
     public CompletableFuture<SyncPagingIterable<GroupMember>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
     public CompletableFuture<SyncPagingIterable<GroupMember>> get(String id, GetGroupMembersRequestParameters request) {
-        return this.rawClient.get(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all users that are a member of this group.
      */
-    public CompletableFuture<SyncPagingIterable<GroupMember>> get(
-            String id, GetGroupMembersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<GroupMember>> get(String id, GetGroupMembersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

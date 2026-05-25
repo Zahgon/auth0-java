@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSpringCm.Builder.class)
 public final class ClientAddonSpringCm {
+
     private final Optional<String> acsurl;
 
     private final Map<String, Object> additionalProperties;
@@ -34,18 +35,17 @@ public final class ClientAddonSpringCm {
      */
     @JsonProperty("acsurl")
     public Optional<String> getAcsurl() {
-        return acsurl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSpringCm && equalTo((ClientAddonSpringCm) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSpringCm other) {
@@ -54,30 +54,31 @@ public final class ClientAddonSpringCm {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.acsurl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> acsurl = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSpringCm other) {
-            acsurl(other.getAcsurl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -85,27 +86,23 @@ public final class ClientAddonSpringCm {
          */
         @JsonSetter(value = "acsurl", nulls = Nulls.SKIP)
         public Builder acsurl(Optional<String> acsurl) {
-            this.acsurl = acsurl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder acsurl(String acsurl) {
-            this.acsurl = Optional.ofNullable(acsurl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSpringCm build() {
-            return new ClientAddonSpringCm(acsurl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

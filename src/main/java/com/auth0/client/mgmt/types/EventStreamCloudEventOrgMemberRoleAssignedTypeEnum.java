@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventOrgMemberRoleAssignedTypeEnum {
-    public static final EventStreamCloudEventOrgMemberRoleAssignedTypeEnum ORGANIZATION_MEMBER_ROLE_ASSIGNED =
-            new EventStreamCloudEventOrgMemberRoleAssignedTypeEnum(
-                    Value.ORGANIZATION_MEMBER_ROLE_ASSIGNED, "organization.member.role.assigned");
+
+    public static final EventStreamCloudEventOrgMemberRoleAssignedTypeEnum ORGANIZATION_MEMBER_ROLE_ASSIGNED = new EventStreamCloudEventOrgMemberRoleAssignedTypeEnum(Value.ORGANIZATION_MEMBER_ROLE_ASSIGNED, "organization.member.role.assigned");
 
     private final Value value;
 
@@ -21,54 +20,41 @@ public final class EventStreamCloudEventOrgMemberRoleAssignedTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventOrgMemberRoleAssignedTypeEnum
-                        && this.string.equals(((EventStreamCloudEventOrgMemberRoleAssignedTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ORGANIZATION_MEMBER_ROLE_ASSIGNED:
-                return visitor.visitOrganizationMemberRoleAssigned();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventOrgMemberRoleAssignedTypeEnum valueOf(String value) {
-        switch (value) {
-            case "organization.member.role.assigned":
-                return ORGANIZATION_MEMBER_ROLE_ASSIGNED;
-            default:
-                return new EventStreamCloudEventOrgMemberRoleAssignedTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ORGANIZATION_MEMBER_ROLE_ASSIGNED,
 
-        UNKNOWN
+        ORGANIZATION_MEMBER_ROLE_ASSIGNED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOrganizationMemberRoleAssigned();
 
         T visitUnknown(String unknownType);

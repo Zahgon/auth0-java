@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateCustomDomainRequestContent.Builder.class)
 public final class CreateCustomDomainRequestContent {
+
     private final String domain;
 
     private final CustomDomainProvisioningTypeEnum type;
@@ -40,15 +41,7 @@ public final class CreateCustomDomainRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateCustomDomainRequestContent(
-            String domain,
-            CustomDomainProvisioningTypeEnum type,
-            Optional<CustomDomainVerificationMethodEnum> verificationMethod,
-            Optional<CustomDomainTlsPolicyEnum> tlsPolicy,
-            OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader,
-            Optional<Map<String, OptionalNullable<String>>> domainMetadata,
-            Optional<String> relyingPartyIdentifier,
-            Map<String, Object> additionalProperties) {
+    private CreateCustomDomainRequestContent(String domain, CustomDomainProvisioningTypeEnum type, Optional<CustomDomainVerificationMethodEnum> verificationMethod, Optional<CustomDomainTlsPolicyEnum> tlsPolicy, OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader, Optional<Map<String, OptionalNullable<String>>> domainMetadata, Optional<String> relyingPartyIdentifier, Map<String, Object> additionalProperties) {
         this.domain = domain;
         this.type = type;
         this.verificationMethod = verificationMethod;
@@ -64,33 +57,33 @@ public final class CreateCustomDomainRequestContent {
      */
     @JsonProperty("domain")
     public String getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public CustomDomainProvisioningTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("verification_method")
     public Optional<CustomDomainVerificationMethodEnum> getVerificationMethod() {
-        return verificationMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tls_policy")
     public Optional<CustomDomainTlsPolicyEnum> getTlsPolicy() {
-        return tlsPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("custom_client_ip_header")
     public OptionalNullable<CustomDomainCustomClientIpHeaderEnum> getCustomClientIpHeader() {
-        return customClientIpHeader;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_metadata")
     public Optional<Map<String, OptionalNullable<String>>> getDomainMetadata() {
-        return domainMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -98,52 +91,39 @@ public final class CreateCustomDomainRequestContent {
      */
     @JsonProperty("relying_party_identifier")
     public Optional<String> getRelyingPartyIdentifier() {
-        return relyingPartyIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateCustomDomainRequestContent && equalTo((CreateCustomDomainRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateCustomDomainRequestContent other) {
-        return domain.equals(other.domain)
-                && type.equals(other.type)
-                && verificationMethod.equals(other.verificationMethod)
-                && tlsPolicy.equals(other.tlsPolicy)
-                && customClientIpHeader.equals(other.customClientIpHeader)
-                && domainMetadata.equals(other.domainMetadata)
-                && relyingPartyIdentifier.equals(other.relyingPartyIdentifier);
+        return domain.equals(other.domain) && type.equals(other.type) && verificationMethod.equals(other.verificationMethod) && tlsPolicy.equals(other.tlsPolicy) && customClientIpHeader.equals(other.customClientIpHeader) && domainMetadata.equals(other.domainMetadata) && relyingPartyIdentifier.equals(other.relyingPartyIdentifier);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.domain,
-                this.type,
-                this.verificationMethod,
-                this.tlsPolicy,
-                this.customClientIpHeader,
-                this.domainMetadata,
-                this.relyingPartyIdentifier);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DomainStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DomainStage {
+
         /**
          * <p>Domain name.</p>
          */
@@ -153,10 +133,12 @@ public final class CreateCustomDomainRequestContent {
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull CustomDomainProvisioningTypeEnum type);
     }
 
     public interface _FinalStage {
+
         CreateCustomDomainRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -193,6 +175,7 @@ public final class CreateCustomDomainRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DomainStage, TypeStage, _FinalStage {
+
         private String domain;
 
         private CustomDomainProvisioningTypeEnum type;
@@ -210,18 +193,12 @@ public final class CreateCustomDomainRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateCustomDomainRequestContent other) {
-            domain(other.getDomain());
-            type(other.getType());
-            verificationMethod(other.getVerificationMethod());
-            tlsPolicy(other.getTlsPolicy());
-            customClientIpHeader(other.getCustomClientIpHeader());
-            domainMetadata(other.getDomainMetadata());
-            relyingPartyIdentifier(other.getRelyingPartyIdentifier());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -232,15 +209,13 @@ public final class CreateCustomDomainRequestContent {
         @java.lang.Override
         @JsonSetter("domain")
         public TypeStage domain(@NotNull String domain) {
-            this.domain = Objects.requireNonNull(domain, "domain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull CustomDomainProvisioningTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -249,8 +224,7 @@ public final class CreateCustomDomainRequestContent {
          */
         @java.lang.Override
         public _FinalStage relyingPartyIdentifier(String relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = Optional.ofNullable(relyingPartyIdentifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -259,108 +233,76 @@ public final class CreateCustomDomainRequestContent {
         @java.lang.Override
         @JsonSetter(value = "relying_party_identifier", nulls = Nulls.SKIP)
         public _FinalStage relyingPartyIdentifier(Optional<String> relyingPartyIdentifier) {
-            this.relyingPartyIdentifier = relyingPartyIdentifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domainMetadata(Map<String, OptionalNullable<String>> domainMetadata) {
-            this.domainMetadata = Optional.ofNullable(domainMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain_metadata", nulls = Nulls.SKIP)
         public _FinalStage domainMetadata(Optional<Map<String, OptionalNullable<String>>> domainMetadata) {
-            this.domainMetadata = domainMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customClientIpHeader(Nullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            if (customClientIpHeader.isNull()) {
-                this.customClientIpHeader = OptionalNullable.ofNull();
-            } else if (customClientIpHeader.isEmpty()) {
-                this.customClientIpHeader = OptionalNullable.absent();
-            } else {
-                this.customClientIpHeader = OptionalNullable.of(customClientIpHeader.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customClientIpHeader(Optional<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            if (customClientIpHeader.isPresent()) {
-                this.customClientIpHeader = OptionalNullable.of(customClientIpHeader.get());
-            } else {
-                this.customClientIpHeader = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customClientIpHeader(CustomDomainCustomClientIpHeaderEnum customClientIpHeader) {
-            this.customClientIpHeader = OptionalNullable.of(customClientIpHeader);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "custom_client_ip_header", nulls = Nulls.SKIP)
-        public _FinalStage customClientIpHeader(
-                OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
-            this.customClientIpHeader = customClientIpHeader;
-            return this;
+        public _FinalStage customClientIpHeader(OptionalNullable<CustomDomainCustomClientIpHeaderEnum> customClientIpHeader) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tlsPolicy(CustomDomainTlsPolicyEnum tlsPolicy) {
-            this.tlsPolicy = Optional.ofNullable(tlsPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tls_policy", nulls = Nulls.SKIP)
         public _FinalStage tlsPolicy(Optional<CustomDomainTlsPolicyEnum> tlsPolicy) {
-            this.tlsPolicy = tlsPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage verificationMethod(CustomDomainVerificationMethodEnum verificationMethod) {
-            this.verificationMethod = Optional.ofNullable(verificationMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "verification_method", nulls = Nulls.SKIP)
         public _FinalStage verificationMethod(Optional<CustomDomainVerificationMethodEnum> verificationMethod) {
-            this.verificationMethod = verificationMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateCustomDomainRequestContent build() {
-            return new CreateCustomDomainRequestContent(
-                    domain,
-                    type,
-                    verificationMethod,
-                    tlsPolicy,
-                    customClientIpHeader,
-                    domainMetadata,
-                    relyingPartyIdentifier,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

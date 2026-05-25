@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FormBlock.Deserializer.class)
 public final class FormBlock {
+
     private final Object value;
 
     private final int type;
@@ -27,35 +28,17 @@ public final class FormBlock {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FormBlockDivider) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FormBlockHtml) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FormBlockImage) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FormBlockJumpButton) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FormBlockResendButton) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FormBlockNextButton) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FormBlockPreviousButton) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((FormBlockRichText) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlock && equalTo((FormBlock) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlock other) {
@@ -64,47 +47,48 @@ public final class FormBlock {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockDivider value) {
-        return new FormBlock(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockHtml value) {
-        return new FormBlock(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockImage value) {
-        return new FormBlock(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockJumpButton value) {
-        return new FormBlock(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockResendButton value) {
-        return new FormBlock(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockNextButton value) {
-        return new FormBlock(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockPreviousButton value) {
-        return new FormBlock(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormBlock of(FormBlockRichText value) {
-        return new FormBlock(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FormBlockDivider value);
 
         T visit(FormBlockHtml value);
@@ -123,90 +107,14 @@ public final class FormBlock {
     }
 
     static final class Deserializer extends StdDeserializer<FormBlock> {
+
         Deserializer() {
             super(FormBlock.class);
         }
 
         @java.lang.Override
         public FormBlock deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockDivider.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockHtml.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockImage.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockJumpButton.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockResendButton.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockNextButton.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockPreviousButton.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormBlockRichText.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -6,8 +6,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TokenQuotaLimit {
+
     private int quota;
+
     private int remaining;
+
     private int resetAfter;
 
     public TokenQuotaLimit(int quota, int remaining, int resetAfter) {
@@ -17,14 +20,14 @@ public class TokenQuotaLimit {
     }
 
     public int getQuota() {
-        return quota;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getRemaining() {
-        return remaining;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getResetAfter() {
-        return resetAfter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

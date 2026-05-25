@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionSlackPostMessageParamsAttachment.Builder.class)
 public final class FlowActionSlackPostMessageParamsAttachment {
+
     private final Optional<FlowActionSlackPostMessageParamsAttachmentColor> color;
 
     private final Optional<String> pretext;
@@ -31,12 +32,7 @@ public final class FlowActionSlackPostMessageParamsAttachment {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionSlackPostMessageParamsAttachment(
-            Optional<FlowActionSlackPostMessageParamsAttachmentColor> color,
-            Optional<String> pretext,
-            Optional<String> text,
-            Optional<List<FlowActionSlackPostMessageParamsAttachmentField>> fields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionSlackPostMessageParamsAttachment(Optional<FlowActionSlackPostMessageParamsAttachmentColor> color, Optional<String> pretext, Optional<String> text, Optional<List<FlowActionSlackPostMessageParamsAttachmentField>> fields, Map<String, Object> additionalProperties) {
         this.color = color;
         this.pretext = pretext;
         this.text = text;
@@ -46,59 +42,55 @@ public final class FlowActionSlackPostMessageParamsAttachment {
 
     @JsonProperty("color")
     public Optional<FlowActionSlackPostMessageParamsAttachmentColor> getColor() {
-        return color;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pretext")
     public Optional<String> getPretext() {
-        return pretext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("text")
     public Optional<String> getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fields")
     public Optional<List<FlowActionSlackPostMessageParamsAttachmentField>> getFields() {
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSlackPostMessageParamsAttachment
-                && equalTo((FlowActionSlackPostMessageParamsAttachment) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSlackPostMessageParamsAttachment other) {
-        return color.equals(other.color)
-                && pretext.equals(other.pretext)
-                && text.equals(other.text)
-                && fields.equals(other.fields);
+        return color.equals(other.color) && pretext.equals(other.pretext) && text.equals(other.text) && fields.equals(other.fields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.color, this.pretext, this.text, this.fields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FlowActionSlackPostMessageParamsAttachmentColor> color = Optional.empty();
 
         private Optional<String> pretext = Optional.empty();
@@ -110,72 +102,59 @@ public final class FlowActionSlackPostMessageParamsAttachment {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionSlackPostMessageParamsAttachment other) {
-            color(other.getColor());
-            pretext(other.getPretext());
-            text(other.getText());
-            fields(other.getFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "color", nulls = Nulls.SKIP)
         public Builder color(Optional<FlowActionSlackPostMessageParamsAttachmentColor> color) {
-            this.color = color;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder color(FlowActionSlackPostMessageParamsAttachmentColor color) {
-            this.color = Optional.ofNullable(color);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pretext", nulls = Nulls.SKIP)
         public Builder pretext(Optional<String> pretext) {
-            this.pretext = pretext;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pretext(String pretext) {
-            this.pretext = Optional.ofNullable(pretext);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "text", nulls = Nulls.SKIP)
         public Builder text(Optional<String> text) {
-            this.text = text;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder text(String text) {
-            this.text = Optional.ofNullable(text);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(Optional<List<FlowActionSlackPostMessageParamsAttachmentField>> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(List<FlowActionSlackPostMessageParamsAttachmentField> fields) {
-            this.fields = Optional.ofNullable(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionSlackPostMessageParamsAttachment build() {
-            return new FlowActionSlackPostMessageParamsAttachment(color, pretext, text, fields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

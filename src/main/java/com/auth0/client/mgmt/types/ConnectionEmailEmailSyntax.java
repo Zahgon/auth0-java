@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionEmailEmailSyntax {
+
     public static final ConnectionEmailEmailSyntax LIQUID = new ConnectionEmailEmailSyntax(Value.LIQUID, "liquid");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class ConnectionEmailEmailSyntax {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionEmailEmailSyntax
-                        && this.string.equals(((ConnectionEmailEmailSyntax) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LIQUID:
-                return visitor.visitLiquid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionEmailEmailSyntax valueOf(String value) {
-        switch (value) {
-            case "liquid":
-                return LIQUID;
-            default:
-                return new ConnectionEmailEmailSyntax(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LIQUID,
 
-        UNKNOWN
+        LIQUID, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLiquid();
 
         T visitUnknown(String unknownType);

@@ -19,30 +19,29 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamWebhookBearerAuth.Builder.class)
 public final class EventStreamWebhookBearerAuth {
+
     private final EventStreamWebhookBearerAuthMethodEnum method;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamWebhookBearerAuth(
-            EventStreamWebhookBearerAuthMethodEnum method, Map<String, Object> additionalProperties) {
+    private EventStreamWebhookBearerAuth(EventStreamWebhookBearerAuthMethodEnum method, Map<String, Object> additionalProperties) {
         this.method = method;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("method")
     public EventStreamWebhookBearerAuthMethodEnum getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamWebhookBearerAuth && equalTo((EventStreamWebhookBearerAuth) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamWebhookBearerAuth other) {
@@ -51,25 +50,27 @@ public final class EventStreamWebhookBearerAuth {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.method);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MethodStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MethodStage {
+
         _FinalStage method(@NotNull EventStreamWebhookBearerAuthMethodEnum method);
 
         Builder from(EventStreamWebhookBearerAuth other);
     }
 
     public interface _FinalStage {
+
         EventStreamWebhookBearerAuth build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class EventStreamWebhookBearerAuth {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MethodStage, _FinalStage {
+
         private EventStreamWebhookBearerAuthMethodEnum method;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamWebhookBearerAuth other) {
-            method(other.getMethod());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("method")
         public _FinalStage method(@NotNull EventStreamWebhookBearerAuthMethodEnum method) {
-            this.method = Objects.requireNonNull(method, "method must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamWebhookBearerAuth build() {
-            return new EventStreamWebhookBearerAuth(method, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListConnectionProfilesPaginatedResponseContent.Builder.class)
 public final class ListConnectionProfilesPaginatedResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<ConnectionProfile>> connectionProfiles;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListConnectionProfilesPaginatedResponseContent(
-            Optional<String> next,
-            Optional<List<ConnectionProfile>> connectionProfiles,
-            Map<String, Object> additionalProperties) {
+    private ListConnectionProfilesPaginatedResponseContent(Optional<String> next, Optional<List<ConnectionProfile>> connectionProfiles, Map<String, Object> additionalProperties) {
         this.next = next;
         this.connectionProfiles = connectionProfiles;
         this.additionalProperties = additionalProperties;
@@ -41,24 +39,22 @@ public final class ListConnectionProfilesPaginatedResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection_profiles")
     public Optional<List<ConnectionProfile>> getConnectionProfiles() {
-        return connectionProfiles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListConnectionProfilesPaginatedResponseContent
-                && equalTo((ListConnectionProfilesPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListConnectionProfilesPaginatedResponseContent other) {
@@ -67,20 +63,21 @@ public final class ListConnectionProfilesPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.connectionProfiles);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<ConnectionProfile>> connectionProfiles = Optional.empty();
@@ -88,12 +85,11 @@ public final class ListConnectionProfilesPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListConnectionProfilesPaginatedResponseContent other) {
-            next(other.getNext());
-            connectionProfiles(other.getConnectionProfiles());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,38 +97,32 @@ public final class ListConnectionProfilesPaginatedResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connection_profiles", nulls = Nulls.SKIP)
         public Builder connectionProfiles(Optional<List<ConnectionProfile>> connectionProfiles) {
-            this.connectionProfiles = connectionProfiles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionProfiles(List<ConnectionProfile> connectionProfiles) {
-            this.connectionProfiles = Optional.ofNullable(connectionProfiles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListConnectionProfilesPaginatedResponseContent build() {
-            return new ListConnectionProfilesPaginatedResponseContent(next, connectionProfiles, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

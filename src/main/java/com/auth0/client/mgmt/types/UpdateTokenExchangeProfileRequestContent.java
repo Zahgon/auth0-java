@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateTokenExchangeProfileRequestContent.Builder.class)
 public final class UpdateTokenExchangeProfileRequestContent {
+
     private final Optional<String> name;
 
     private final Optional<String> subjectTokenType;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateTokenExchangeProfileRequestContent(
-            Optional<String> name, Optional<String> subjectTokenType, Map<String, Object> additionalProperties) {
+    private UpdateTokenExchangeProfileRequestContent(Optional<String> name, Optional<String> subjectTokenType, Map<String, Object> additionalProperties) {
         this.name = name;
         this.subjectTokenType = subjectTokenType;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class UpdateTokenExchangeProfileRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +46,17 @@ public final class UpdateTokenExchangeProfileRequestContent {
      */
     @JsonProperty("subject_token_type")
     public Optional<String> getSubjectTokenType() {
-        return subjectTokenType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateTokenExchangeProfileRequestContent
-                && equalTo((UpdateTokenExchangeProfileRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateTokenExchangeProfileRequestContent other) {
@@ -67,20 +65,21 @@ public final class UpdateTokenExchangeProfileRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.subjectTokenType);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private Optional<String> subjectTokenType = Optional.empty();
@@ -88,12 +87,11 @@ public final class UpdateTokenExchangeProfileRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateTokenExchangeProfileRequestContent other) {
-            name(other.getName());
-            subjectTokenType(other.getSubjectTokenType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,13 +99,11 @@ public final class UpdateTokenExchangeProfileRequestContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,27 +111,23 @@ public final class UpdateTokenExchangeProfileRequestContent {
          */
         @JsonSetter(value = "subject_token_type", nulls = Nulls.SKIP)
         public Builder subjectTokenType(Optional<String> subjectTokenType) {
-            this.subjectTokenType = subjectTokenType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectTokenType(String subjectTokenType) {
-            this.subjectTokenType = Optional.ofNullable(subjectTokenType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateTokenExchangeProfileRequestContent build() {
-            return new UpdateTokenExchangeProfileRequestContent(name, subjectTokenType, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

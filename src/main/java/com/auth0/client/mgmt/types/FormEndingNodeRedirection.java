@@ -21,14 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormEndingNodeRedirection.Builder.class)
 public final class FormEndingNodeRedirection {
+
     private final Optional<Integer> delay;
 
     private final String target;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormEndingNodeRedirection(
-            Optional<Integer> delay, String target, Map<String, Object> additionalProperties) {
+    private FormEndingNodeRedirection(Optional<Integer> delay, String target, Map<String, Object> additionalProperties) {
         this.delay = delay;
         this.target = target;
         this.additionalProperties = additionalProperties;
@@ -36,23 +36,22 @@ public final class FormEndingNodeRedirection {
 
     @JsonProperty("delay")
     public Optional<Integer> getDelay() {
-        return delay;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("target")
     public String getTarget() {
-        return target;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormEndingNodeRedirection && equalTo((FormEndingNodeRedirection) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormEndingNodeRedirection other) {
@@ -61,25 +60,27 @@ public final class FormEndingNodeRedirection {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.delay, this.target);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TargetStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TargetStage {
+
         _FinalStage target(@NotNull String target);
 
         Builder from(FormEndingNodeRedirection other);
     }
 
     public interface _FinalStage {
+
         FormEndingNodeRedirection build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +94,7 @@ public final class FormEndingNodeRedirection {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TargetStage, _FinalStage {
+
         private String target;
 
         private Optional<Integer> delay = Optional.empty();
@@ -100,50 +102,44 @@ public final class FormEndingNodeRedirection {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormEndingNodeRedirection other) {
-            delay(other.getDelay());
-            target(other.getTarget());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("target")
         public _FinalStage target(@NotNull String target) {
-            this.target = Objects.requireNonNull(target, "target must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage delay(Integer delay) {
-            this.delay = Optional.ofNullable(delay);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "delay", nulls = Nulls.SKIP)
         public _FinalStage delay(Optional<Integer> delay) {
-            this.delay = delay;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormEndingNodeRedirection build() {
-            return new FormEndingNodeRedirection(delay, target, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

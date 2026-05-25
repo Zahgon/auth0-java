@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListOrganizationMembersPaginatedResponseContent.Builder.class)
 public final class ListOrganizationMembersPaginatedResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<OrganizationMember>> members;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListOrganizationMembersPaginatedResponseContent(
-            Optional<String> next,
-            Optional<List<OrganizationMember>> members,
-            Map<String, Object> additionalProperties) {
+    private ListOrganizationMembersPaginatedResponseContent(Optional<String> next, Optional<List<OrganizationMember>> members, Map<String, Object> additionalProperties) {
         this.next = next;
         this.members = members;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class ListOrganizationMembersPaginatedResponseContent {
 
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("members")
     public Optional<List<OrganizationMember>> getMembers() {
-        return members;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListOrganizationMembersPaginatedResponseContent
-                && equalTo((ListOrganizationMembersPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListOrganizationMembersPaginatedResponseContent other) {
@@ -64,20 +60,21 @@ public final class ListOrganizationMembersPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.members);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<OrganizationMember>> members = Optional.empty();
@@ -85,48 +82,41 @@ public final class ListOrganizationMembersPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListOrganizationMembersPaginatedResponseContent other) {
-            next(other.getNext());
-            members(other.getMembers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "members", nulls = Nulls.SKIP)
         public Builder members(Optional<List<OrganizationMember>> members) {
-            this.members = members;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder members(List<OrganizationMember> members) {
-            this.members = Optional.ofNullable(members);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListOrganizationMembersPaginatedResponseContent build() {
-            return new ListOrganizationMembersPaginatedResponseContent(next, members, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientDefaultOrganizationFlowsEnum {
-    public static final ClientDefaultOrganizationFlowsEnum CLIENT_CREDENTIALS =
-            new ClientDefaultOrganizationFlowsEnum(Value.CLIENT_CREDENTIALS, "client_credentials");
+
+    public static final ClientDefaultOrganizationFlowsEnum CLIENT_CREDENTIALS = new ClientDefaultOrganizationFlowsEnum(Value.CLIENT_CREDENTIALS, "client_credentials");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ClientDefaultOrganizationFlowsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientDefaultOrganizationFlowsEnum
-                        && this.string.equals(((ClientDefaultOrganizationFlowsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CLIENT_CREDENTIALS:
-                return visitor.visitClientCredentials();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientDefaultOrganizationFlowsEnum valueOf(String value) {
-        switch (value) {
-            case "client_credentials":
-                return CLIENT_CREDENTIALS;
-            default:
-                return new ClientDefaultOrganizationFlowsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CLIENT_CREDENTIALS,
 
-        UNKNOWN
+        CLIENT_CREDENTIALS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitClientCredentials();
 
         T visitUnknown(String unknownType);

@@ -19,7 +19,9 @@ import org.jetbrains.annotations.Nullable;
  * which is useful for file uploads or sending large amounts of data without loading it all into memory.
  */
 public class InputStreamRequestBody extends RequestBody {
+
     private final InputStream inputStream;
+
     private final MediaType contentType;
 
     /**
@@ -42,7 +44,7 @@ public class InputStreamRequestBody extends RequestBody {
     @Nullable
     @Override
     public MediaType contentType() {
-        return contentType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +57,7 @@ public class InputStreamRequestBody extends RequestBody {
      */
     @Override
     public long contentLength() throws IOException {
-        return inputStream.available() == 0 ? -1 : inputStream.available();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,8 +69,6 @@ public class InputStreamRequestBody extends RequestBody {
      */
     @Override
     public void writeTo(BufferedSink sink) throws IOException {
-        try (Source source = Okio.source(inputStream)) {
-            sink.writeAll(source);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

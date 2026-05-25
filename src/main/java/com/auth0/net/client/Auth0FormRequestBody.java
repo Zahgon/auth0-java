@@ -14,6 +14,6 @@ public class Auth0FormRequestBody {
     }
 
     public Map<String, Object> getParams() {
-        return params;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSharePoint.Builder.class)
 public final class ClientAddonSharePoint {
+
     private final Optional<String> url;
 
     private final Optional<ClientAddonSharePointExternalUrl> externalUrl;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonSharePoint(
-            Optional<String> url,
-            Optional<ClientAddonSharePointExternalUrl> externalUrl,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonSharePoint(Optional<String> url, Optional<ClientAddonSharePointExternalUrl> externalUrl, Map<String, Object> additionalProperties) {
         this.url = url;
         this.externalUrl = externalUrl;
         this.additionalProperties = additionalProperties;
@@ -40,23 +38,22 @@ public final class ClientAddonSharePoint {
      */
     @JsonProperty("url")
     public Optional<String> getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("external_url")
     public Optional<ClientAddonSharePointExternalUrl> getExternalUrl() {
-        return externalUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSharePoint && equalTo((ClientAddonSharePoint) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSharePoint other) {
@@ -65,20 +62,21 @@ public final class ClientAddonSharePoint {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.url, this.externalUrl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> url = Optional.empty();
 
         private Optional<ClientAddonSharePointExternalUrl> externalUrl = Optional.empty();
@@ -86,12 +84,11 @@ public final class ClientAddonSharePoint {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSharePoint other) {
-            url(other.getUrl());
-            externalUrl(other.getExternalUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,38 +96,32 @@ public final class ClientAddonSharePoint {
          */
         @JsonSetter(value = "url", nulls = Nulls.SKIP)
         public Builder url(Optional<String> url) {
-            this.url = url;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(String url) {
-            this.url = Optional.ofNullable(url);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "external_url", nulls = Nulls.SKIP)
         public Builder externalUrl(Optional<ClientAddonSharePointExternalUrl> externalUrl) {
-            this.externalUrl = externalUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalUrl(ClientAddonSharePointExternalUrl externalUrl) {
-            this.externalUrl = Optional.ofNullable(externalUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSharePoint build() {
-            return new ClientAddonSharePoint(url, externalUrl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

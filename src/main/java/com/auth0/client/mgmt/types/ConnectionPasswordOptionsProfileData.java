@@ -21,14 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordOptionsProfileData.Builder.class)
 public final class ConnectionPasswordOptionsProfileData {
+
     private final Optional<Boolean> active;
 
     private final Optional<List<String>> blockedFields;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordOptionsProfileData(
-            Optional<Boolean> active, Optional<List<String>> blockedFields, Map<String, Object> additionalProperties) {
+    private ConnectionPasswordOptionsProfileData(Optional<Boolean> active, Optional<List<String>> blockedFields, Map<String, Object> additionalProperties) {
         this.active = active;
         this.blockedFields = blockedFields;
         this.additionalProperties = additionalProperties;
@@ -39,7 +39,7 @@ public final class ConnectionPasswordOptionsProfileData {
      */
     @JsonProperty("active")
     public Optional<Boolean> getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,19 +47,17 @@ public final class ConnectionPasswordOptionsProfileData {
      */
     @JsonProperty("blocked_fields")
     public Optional<List<String>> getBlockedFields() {
-        return blockedFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordOptionsProfileData
-                && equalTo((ConnectionPasswordOptionsProfileData) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordOptionsProfileData other) {
@@ -68,20 +66,21 @@ public final class ConnectionPasswordOptionsProfileData {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active, this.blockedFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> active = Optional.empty();
 
         private Optional<List<String>> blockedFields = Optional.empty();
@@ -89,12 +88,11 @@ public final class ConnectionPasswordOptionsProfileData {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPasswordOptionsProfileData other) {
-            active(other.getActive());
-            blockedFields(other.getBlockedFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -102,13 +100,11 @@ public final class ConnectionPasswordOptionsProfileData {
          */
         @JsonSetter(value = "active", nulls = Nulls.SKIP)
         public Builder active(Optional<Boolean> active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder active(Boolean active) {
-            this.active = Optional.ofNullable(active);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,27 +112,23 @@ public final class ConnectionPasswordOptionsProfileData {
          */
         @JsonSetter(value = "blocked_fields", nulls = Nulls.SKIP)
         public Builder blockedFields(Optional<List<String>> blockedFields) {
-            this.blockedFields = blockedFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blockedFields(List<String> blockedFields) {
-            this.blockedFields = Optional.ofNullable(blockedFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPasswordOptionsProfileData build() {
-            return new ConnectionPasswordOptionsProfileData(active, blockedFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

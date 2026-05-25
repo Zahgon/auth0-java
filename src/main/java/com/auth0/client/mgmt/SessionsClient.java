@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.UpdateSessionRequestContent;
 import com.auth0.client.mgmt.types.UpdateSessionResponseContent;
 
 public class SessionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSessionsClient rawClient;
@@ -23,77 +24,76 @@ public class SessionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSessionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve session information.
      */
     public GetSessionResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve session information.
      */
     public GetSessionResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a session by ID.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a session by ID.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public UpdateSessionResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public UpdateSessionResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public UpdateSessionResponseContent update(String id, UpdateSessionRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
-    public UpdateSessionResponseContent update(
-            String id, UpdateSessionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateSessionResponseContent update(String id, UpdateSessionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes a session by ID and all associated refresh tokens.
      */
     public void revoke(String id) {
-        this.rawClient.revoke(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes a session by ID and all associated refresh tokens.
      */
     public void revoke(String id, RequestOptions requestOptions) {
-        this.rawClient.revoke(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

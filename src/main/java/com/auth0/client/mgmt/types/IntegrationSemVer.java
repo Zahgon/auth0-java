@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = IntegrationSemVer.Builder.class)
 public final class IntegrationSemVer {
+
     private final Optional<Integer> major;
 
     private final Optional<Integer> minor;
 
     private final Map<String, Object> additionalProperties;
 
-    private IntegrationSemVer(
-            Optional<Integer> major, Optional<Integer> minor, Map<String, Object> additionalProperties) {
+    private IntegrationSemVer(Optional<Integer> major, Optional<Integer> minor, Map<String, Object> additionalProperties) {
         this.major = major;
         this.minor = minor;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class IntegrationSemVer {
      */
     @JsonProperty("major")
     public Optional<Integer> getMajor() {
-        return major;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class IntegrationSemVer {
      */
     @JsonProperty("minor")
     public Optional<Integer> getMinor() {
-        return minor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof IntegrationSemVer && equalTo((IntegrationSemVer) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(IntegrationSemVer other) {
@@ -66,20 +65,21 @@ public final class IntegrationSemVer {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.major, this.minor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> major = Optional.empty();
 
         private Optional<Integer> minor = Optional.empty();
@@ -87,12 +87,11 @@ public final class IntegrationSemVer {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(IntegrationSemVer other) {
-            major(other.getMajor());
-            minor(other.getMinor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class IntegrationSemVer {
          */
         @JsonSetter(value = "major", nulls = Nulls.SKIP)
         public Builder major(Optional<Integer> major) {
-            this.major = major;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder major(Integer major) {
-            this.major = Optional.ofNullable(major);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class IntegrationSemVer {
          */
         @JsonSetter(value = "minor", nulls = Nulls.SKIP)
         public Builder minor(Optional<Integer> minor) {
-            this.minor = minor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minor(Integer minor) {
-            this.minor = Optional.ofNullable(minor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public IntegrationSemVer build() {
-            return new IntegrationSemVer(major, minor, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

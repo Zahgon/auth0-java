@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class UserEnrollmentStatusEnum {
+
     public static final UserEnrollmentStatusEnum PENDING = new UserEnrollmentStatusEnum(Value.PENDING, "pending");
 
     public static final UserEnrollmentStatusEnum CONFIRMED = new UserEnrollmentStatusEnum(Value.CONFIRMED, "confirmed");
@@ -21,60 +22,41 @@ public final class UserEnrollmentStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof UserEnrollmentStatusEnum
-                        && this.string.equals(((UserEnrollmentStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PENDING:
-                return visitor.visitPending();
-            case CONFIRMED:
-                return visitor.visitConfirmed();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static UserEnrollmentStatusEnum valueOf(String value) {
-        switch (value) {
-            case "pending":
-                return PENDING;
-            case "confirmed":
-                return CONFIRMED;
-            default:
-                return new UserEnrollmentStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PENDING,
 
-        CONFIRMED,
-
-        UNKNOWN
+        PENDING, CONFIRMED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPending();
 
         T visitConfirmed();

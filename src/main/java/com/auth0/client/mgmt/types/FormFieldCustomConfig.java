@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldCustomConfig.Builder.class)
 public final class FormFieldCustomConfig {
+
     private final Map<String, Object> schema;
 
     private final String code;
@@ -32,12 +33,7 @@ public final class FormFieldCustomConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldCustomConfig(
-            Map<String, Object> schema,
-            String code,
-            Optional<String> css,
-            Optional<Map<String, String>> params,
-            Map<String, Object> additionalProperties) {
+    private FormFieldCustomConfig(Map<String, Object> schema, String code, Optional<String> css, Optional<Map<String, String>> params, Map<String, Object> additionalProperties) {
         this.schema = schema;
         this.code = code;
         this.css = css;
@@ -47,63 +43,61 @@ public final class FormFieldCustomConfig {
 
     @JsonProperty("schema")
     public Map<String, Object> getSchema() {
-        return schema;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("code")
     public String getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("css")
     public Optional<String> getCss() {
-        return css;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("params")
     public Optional<Map<String, String>> getParams() {
-        return params;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldCustomConfig && equalTo((FormFieldCustomConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldCustomConfig other) {
-        return schema.equals(other.schema)
-                && code.equals(other.code)
-                && css.equals(other.css)
-                && params.equals(other.params);
+        return schema.equals(other.schema) && code.equals(other.code) && css.equals(other.css) && params.equals(other.params);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.schema, this.code, this.css, this.params);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CodeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface CodeStage {
+
         _FinalStage code(@NotNull String code);
 
         Builder from(FormFieldCustomConfig other);
     }
 
     public interface _FinalStage {
+
         FormFieldCustomConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -127,6 +121,7 @@ public final class FormFieldCustomConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements CodeStage, _FinalStage {
+
         private String code;
 
         private Optional<Map<String, String>> params = Optional.empty();
@@ -138,89 +133,71 @@ public final class FormFieldCustomConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldCustomConfig other) {
-            schema(other.getSchema());
-            code(other.getCode());
-            css(other.getCss());
-            params(other.getParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("code")
         public _FinalStage code(@NotNull String code) {
-            this.code = Objects.requireNonNull(code, "code must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage params(Map<String, String> params) {
-            this.params = Optional.ofNullable(params);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "params", nulls = Nulls.SKIP)
         public _FinalStage params(Optional<Map<String, String>> params) {
-            this.params = params;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage css(String css) {
-            this.css = Optional.ofNullable(css);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "css", nulls = Nulls.SKIP)
         public _FinalStage css(Optional<String> css) {
-            this.css = css;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage schema(String key, Object value) {
-            this.schema.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage putAllSchema(Map<String, Object> schema) {
-            if (schema != null) {
-                this.schema.putAll(schema);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "schema", nulls = Nulls.SKIP)
         public _FinalStage schema(Map<String, Object> schema) {
-            this.schema.clear();
-            if (schema != null) {
-                this.schema.putAll(schema);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldCustomConfig build() {
-            return new FormFieldCustomConfig(schema, code, css, params, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

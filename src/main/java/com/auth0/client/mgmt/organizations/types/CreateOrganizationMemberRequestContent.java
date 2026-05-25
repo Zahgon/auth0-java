@@ -21,6 +21,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateOrganizationMemberRequestContent.Builder.class)
 public final class CreateOrganizationMemberRequestContent {
+
     private final List<String> members;
 
     private final Map<String, Object> additionalProperties;
@@ -35,19 +36,17 @@ public final class CreateOrganizationMemberRequestContent {
      */
     @JsonProperty("members")
     public List<String> getMembers() {
-        return members;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateOrganizationMemberRequestContent
-                && equalTo((CreateOrganizationMemberRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateOrganizationMemberRequestContent other) {
@@ -56,30 +55,31 @@ public final class CreateOrganizationMemberRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.members);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<String> members = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateOrganizationMemberRequestContent other) {
-            members(other.getMembers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,37 +87,27 @@ public final class CreateOrganizationMemberRequestContent {
          */
         @JsonSetter(value = "members", nulls = Nulls.SKIP)
         public Builder members(List<String> members) {
-            this.members.clear();
-            if (members != null) {
-                this.members.addAll(members);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addMembers(String members) {
-            this.members.add(members);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllMembers(List<String> members) {
-            if (members != null) {
-                this.members.addAll(members);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateOrganizationMemberRequestContent build() {
-            return new CreateOrganizationMemberRequestContent(members, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

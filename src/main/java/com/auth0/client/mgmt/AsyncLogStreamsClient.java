@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncLogStreamsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawLogStreamsClient rawClient;
@@ -28,7 +29,7 @@ public class AsyncLogStreamsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawLogStreamsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +103,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<List<LogStreamResponseSchema>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -176,7 +177,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<List<LogStreamResponseSchema>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -340,7 +341,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<CreateLogStreamResponseContent> create(CreateLogStreamRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -503,9 +504,8 @@ public class AsyncLogStreamsClient {
      * }
      * </code></pre>
      */
-    public CompletableFuture<CreateLogStreamResponseContent> create(
-            CreateLogStreamRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateLogStreamResponseContent> create(CreateLogStreamRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -632,7 +632,7 @@ public class AsyncLogStreamsClient {
      * </ol>
      */
     public CompletableFuture<GetLogStreamResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -759,21 +759,21 @@ public class AsyncLogStreamsClient {
      * </ol>
      */
     public CompletableFuture<GetLogStreamResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a log stream.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a log stream.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -833,7 +833,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<UpdateLogStreamResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -893,7 +893,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<UpdateLogStreamResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -953,7 +953,7 @@ public class AsyncLogStreamsClient {
      * </code></pre>
      */
     public CompletableFuture<UpdateLogStreamResponseContent> update(String id, UpdateLogStreamRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1012,8 +1012,7 @@ public class AsyncLogStreamsClient {
      * }
      * </code></pre>
      */
-    public CompletableFuture<UpdateLogStreamResponseContent> update(
-            String id, UpdateLogStreamRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateLogStreamResponseContent> update(String id, UpdateLogStreamRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

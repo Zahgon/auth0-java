@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionFlowBooleanConditionParams.Builder.class)
 public final class FlowActionFlowBooleanConditionParams {
+
     private final Optional<List<FlowAction>> then;
 
     private final Optional<List<FlowAction>> else_;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionFlowBooleanConditionParams(
-            Optional<List<FlowAction>> then,
-            Optional<List<FlowAction>> else_,
-            Map<String, Object> additionalProperties) {
+    private FlowActionFlowBooleanConditionParams(Optional<List<FlowAction>> then, Optional<List<FlowAction>> else_, Map<String, Object> additionalProperties) {
         this.then = then;
         this.else_ = else_;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class FlowActionFlowBooleanConditionParams {
 
     @JsonProperty("then")
     public Optional<List<FlowAction>> getThen() {
-        return then;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("else")
     public Optional<List<FlowAction>> getElse() {
-        return else_;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionFlowBooleanConditionParams
-                && equalTo((FlowActionFlowBooleanConditionParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionFlowBooleanConditionParams other) {
@@ -64,20 +60,21 @@ public final class FlowActionFlowBooleanConditionParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.then, this.else_);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<FlowAction>> then = Optional.empty();
 
         private Optional<List<FlowAction>> else_ = Optional.empty();
@@ -85,48 +82,41 @@ public final class FlowActionFlowBooleanConditionParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowActionFlowBooleanConditionParams other) {
-            then(other.getThen());
-            else_(other.getElse());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "then", nulls = Nulls.SKIP)
         public Builder then(Optional<List<FlowAction>> then) {
-            this.then = then;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder then(List<FlowAction> then) {
-            this.then = Optional.ofNullable(then);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "else", nulls = Nulls.SKIP)
         public Builder else_(Optional<List<FlowAction>> else_) {
-            this.else_ = else_;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder else_(List<FlowAction> else_) {
-            this.else_ = Optional.ofNullable(else_);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowActionFlowBooleanConditionParams build() {
-            return new FlowActionFlowBooleanConditionParams(then, else_, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

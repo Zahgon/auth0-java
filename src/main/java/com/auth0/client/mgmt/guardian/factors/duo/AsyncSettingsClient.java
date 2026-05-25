@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.UpdateGuardianFactorDuoSettingsResponseConten
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSettingsClient rawClient;
@@ -26,68 +27,64 @@ public class AsyncSettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the DUO account and factor configuration.
      */
     public CompletableFuture<GetGuardianFactorDuoSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves the DUO account and factor configuration.
      */
     public CompletableFuture<GetGuardianFactorDuoSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
     public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set() {
-        return this.rawClient.set().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
     public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set(RequestOptions requestOptions) {
-        return this.rawClient.set(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
-    public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set(
-            SetGuardianFactorDuoSettingsRequestContent request) {
-        return this.rawClient.set(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set(SetGuardianFactorDuoSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set the DUO account configuration and other properties specific to this factor.
      */
-    public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set(
-            SetGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorDuoSettingsResponseContent> set(SetGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update(
-            UpdateGuardianFactorDuoSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update(UpdateGuardianFactorDuoSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update(
-            UpdateGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateGuardianFactorDuoSettingsResponseContent> update(UpdateGuardianFactorDuoSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

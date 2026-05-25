@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.CreateDirectorySynchronizationResponseContent
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSynchronizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSynchronizationsClient rawClient;
@@ -22,21 +23,20 @@ public class AsyncSynchronizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSynchronizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Request an on-demand synchronization of the directory.
      */
     public CompletableFuture<CreateDirectorySynchronizationResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Request an on-demand synchronization of the directory.
      */
-    public CompletableFuture<CreateDirectorySynchronizationResponseContent> create(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateDirectorySynchronizationResponseContent> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

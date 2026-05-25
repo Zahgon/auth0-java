@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsOidc.Builder.class)
 public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc, IConnectionOptionsCommon {
+
     private final Optional<String> authorizationEndpoint;
 
     private final String clientId;
@@ -65,8 +66,7 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
     private final Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<String> userinfoEndpoint;
 
@@ -80,34 +80,7 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsOidc(
-            Optional<String> authorizationEndpoint,
-            String clientId,
-            Optional<String> clientSecret,
-            Optional<ConnectionConnectionSettings> connectionSettings,
-            Optional<List<String>> domainAliases,
-            Optional<ConnectionDpopSigningAlgEnum> dpopSigningAlg,
-            OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens,
-            Optional<String> iconUrl,
-            OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs,
-            Optional<String> issuer,
-            Optional<String> jwksUri,
-            Optional<ConnectionOptionsOidcMetadata> oidcMetadata,
-            Optional<String> scope,
-            Optional<Boolean> sendBackChannelNonce,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> tenantDomain,
-            Optional<String> tokenEndpoint,
-            OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod,
-            OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg,
-            Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<String> userinfoEndpoint,
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<ConnectionAttributeMapOidc> attributeMap,
-            Optional<String> discoveryUrl,
-            Optional<ConnectionTypeEnumOidc> type,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsOidc(Optional<String> authorizationEndpoint, String clientId, Optional<String> clientSecret, Optional<ConnectionConnectionSettings> connectionSettings, Optional<List<String>> domainAliases, Optional<ConnectionDpopSigningAlgEnum> dpopSigningAlg, OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens, Optional<String> iconUrl, OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs, Optional<String> issuer, Optional<String> jwksUri, Optional<ConnectionOptionsOidcMetadata> oidcMetadata, Optional<String> scope, Optional<Boolean> sendBackChannelNonce, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> tenantDomain, Optional<String> tokenEndpoint, OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod, OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg, Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<String> userinfoEndpoint, Optional<List<String>> nonPersistentAttrs, Optional<ConnectionAttributeMapOidc> attributeMap, Optional<String> discoveryUrl, Optional<ConnectionTypeEnumOidc> type, Map<String, Object> additionalProperties) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -140,174 +113,159 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
     @JsonProperty("authorization_endpoint")
     @java.lang.Override
     public Optional<String> getAuthorizationEndpoint() {
-        return authorizationEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     @java.lang.Override
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     @java.lang.Override
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection_settings")
     @java.lang.Override
     public Optional<ConnectionConnectionSettings> getConnectionSettings() {
-        return connectionSettings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     @java.lang.Override
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dpop_signing_alg")
     @java.lang.Override
     public Optional<ConnectionDpopSigningAlgEnum> getDpopSigningAlg() {
-        return dpopSigningAlg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("federated_connections_access_tokens")
     @java.lang.Override
     public OptionalNullable<ConnectionFederatedConnectionsAccessTokens> getFederatedConnectionsAccessTokens() {
-        if (federatedConnectionsAccessTokens == null) {
-            return OptionalNullable.absent();
-        }
-        return federatedConnectionsAccessTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     @java.lang.Override
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("id_token_signed_response_algs")
     @java.lang.Override
     public OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> getIdTokenSignedResponseAlgs() {
-        if (idTokenSignedResponseAlgs == null) {
-            return OptionalNullable.absent();
-        }
-        return idTokenSignedResponseAlgs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("issuer")
     @java.lang.Override
     public Optional<String> getIssuer() {
-        return issuer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("jwks_uri")
     @java.lang.Override
     public Optional<String> getJwksUri() {
-        return jwksUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc_metadata")
     @java.lang.Override
     public Optional<ConnectionOptionsOidcMetadata> getOidcMetadata() {
-        return oidcMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     @java.lang.Override
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("send_back_channel_nonce")
     @java.lang.Override
     public Optional<Boolean> getSendBackChannelNonce() {
-        return sendBackChannelNonce;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     @java.lang.Override
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     @java.lang.Override
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint")
     @java.lang.Override
     public Optional<String> getTokenEndpoint() {
-        return tokenEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_endpoint_auth_method")
     @java.lang.Override
     public OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> getTokenEndpointAuthMethod() {
-        if (tokenEndpointAuthMethod == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenEndpointAuthMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_endpoint_auth_signing_alg")
     @java.lang.Override
     public OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> getTokenEndpointAuthSigningAlg() {
-        if (tokenEndpointAuthSigningAlg == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenEndpointAuthSigningAlg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint_jwtca_aud_format")
     @java.lang.Override
     public Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> getTokenEndpointJwtcaAudFormat() {
-        return tokenEndpointJwtcaAudFormat;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     @java.lang.Override
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userinfo_endpoint")
     @java.lang.Override
     public Optional<String> getUserinfoEndpoint() {
-        return userinfoEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("attribute_map")
     public Optional<ConnectionAttributeMapOidc> getAttributeMap() {
-        return attributeMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("discovery_url")
     public Optional<String> getDiscoveryUrl() {
-        return discoveryUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public Optional<ConnectionTypeEnumOidc> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -336,98 +294,47 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsOidc && equalTo((ConnectionOptionsOidc) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsOidc other) {
-        return authorizationEndpoint.equals(other.authorizationEndpoint)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && connectionSettings.equals(other.connectionSettings)
-                && domainAliases.equals(other.domainAliases)
-                && dpopSigningAlg.equals(other.dpopSigningAlg)
-                && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens)
-                && iconUrl.equals(other.iconUrl)
-                && idTokenSignedResponseAlgs.equals(other.idTokenSignedResponseAlgs)
-                && issuer.equals(other.issuer)
-                && jwksUri.equals(other.jwksUri)
-                && oidcMetadata.equals(other.oidcMetadata)
-                && scope.equals(other.scope)
-                && sendBackChannelNonce.equals(other.sendBackChannelNonce)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && tenantDomain.equals(other.tenantDomain)
-                && tokenEndpoint.equals(other.tokenEndpoint)
-                && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod)
-                && tokenEndpointAuthSigningAlg.equals(other.tokenEndpointAuthSigningAlg)
-                && tokenEndpointJwtcaAudFormat.equals(other.tokenEndpointJwtcaAudFormat)
-                && upstreamParams.equals(other.upstreamParams)
-                && userinfoEndpoint.equals(other.userinfoEndpoint)
-                && nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && attributeMap.equals(other.attributeMap)
-                && discoveryUrl.equals(other.discoveryUrl)
-                && type.equals(other.type);
+        return authorizationEndpoint.equals(other.authorizationEndpoint) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && connectionSettings.equals(other.connectionSettings) && domainAliases.equals(other.domainAliases) && dpopSigningAlg.equals(other.dpopSigningAlg) && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens) && iconUrl.equals(other.iconUrl) && idTokenSignedResponseAlgs.equals(other.idTokenSignedResponseAlgs) && issuer.equals(other.issuer) && jwksUri.equals(other.jwksUri) && oidcMetadata.equals(other.oidcMetadata) && scope.equals(other.scope) && sendBackChannelNonce.equals(other.sendBackChannelNonce) && setUserRootAttributes.equals(other.setUserRootAttributes) && tenantDomain.equals(other.tenantDomain) && tokenEndpoint.equals(other.tokenEndpoint) && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod) && tokenEndpointAuthSigningAlg.equals(other.tokenEndpointAuthSigningAlg) && tokenEndpointJwtcaAudFormat.equals(other.tokenEndpointJwtcaAudFormat) && upstreamParams.equals(other.upstreamParams) && userinfoEndpoint.equals(other.userinfoEndpoint) && nonPersistentAttrs.equals(other.nonPersistentAttrs) && attributeMap.equals(other.attributeMap) && discoveryUrl.equals(other.discoveryUrl) && type.equals(other.type);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.authorizationEndpoint,
-                this.clientId,
-                this.clientSecret,
-                this.connectionSettings,
-                this.domainAliases,
-                this.dpopSigningAlg,
-                this.federatedConnectionsAccessTokens,
-                this.iconUrl,
-                this.idTokenSignedResponseAlgs,
-                this.issuer,
-                this.jwksUri,
-                this.oidcMetadata,
-                this.scope,
-                this.sendBackChannelNonce,
-                this.setUserRootAttributes,
-                this.tenantDomain,
-                this.tokenEndpoint,
-                this.tokenEndpointAuthMethod,
-                this.tokenEndpointAuthSigningAlg,
-                this.tokenEndpointJwtcaAudFormat,
-                this.upstreamParams,
-                this.userinfoEndpoint,
-                this.nonPersistentAttrs,
-                this.attributeMap,
-                this.discoveryUrl,
-                this.type);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         _FinalStage clientId(@NotNull String clientId);
 
         Builder from(ConnectionOptionsOidc other);
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsOidc build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -454,35 +361,25 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
         _FinalStage dpopSigningAlg(ConnectionDpopSigningAlgEnum dpopSigningAlg);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
         _FinalStage iconUrl(Optional<String> iconUrl);
 
         _FinalStage iconUrl(String iconUrl);
 
-        _FinalStage idTokenSignedResponseAlgs(
-                @Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs);
+        _FinalStage idTokenSignedResponseAlgs(@Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs);
 
         _FinalStage idTokenSignedResponseAlgs(List<ConnectionIdTokenSignedResponseAlgEnum> idTokenSignedResponseAlgs);
 
-        _FinalStage idTokenSignedResponseAlgs(
-                Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs);
+        _FinalStage idTokenSignedResponseAlgs(Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs);
 
-        _FinalStage idTokenSignedResponseAlgs(
-                com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>>
-                        idTokenSignedResponseAlgs);
+        _FinalStage idTokenSignedResponseAlgs(com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs);
 
         _FinalStage issuer(Optional<String> issuer);
 
@@ -516,49 +413,33 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
         _FinalStage tokenEndpoint(String tokenEndpoint);
 
-        _FinalStage tokenEndpointAuthMethod(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod);
+        _FinalStage tokenEndpointAuthMethod(@Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod);
 
         _FinalStage tokenEndpointAuthMethod(ConnectionTokenEndpointAuthMethodEnum tokenEndpointAuthMethod);
 
         _FinalStage tokenEndpointAuthMethod(Optional<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod);
 
-        _FinalStage tokenEndpointAuthMethod(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod);
+        _FinalStage tokenEndpointAuthMethod(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod);
 
-        _FinalStage tokenEndpointAuthSigningAlg(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg);
+        _FinalStage tokenEndpointAuthSigningAlg(@Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg);
 
         _FinalStage tokenEndpointAuthSigningAlg(ConnectionTokenEndpointAuthSigningAlgEnum tokenEndpointAuthSigningAlg);
 
-        _FinalStage tokenEndpointAuthSigningAlg(
-                Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg);
+        _FinalStage tokenEndpointAuthSigningAlg(Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg);
 
-        _FinalStage tokenEndpointAuthSigningAlg(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum>
-                        tokenEndpointAuthSigningAlg);
+        _FinalStage tokenEndpointAuthSigningAlg(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg);
 
-        _FinalStage tokenEndpointJwtcaAudFormat(
-                Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat);
+        _FinalStage tokenEndpointJwtcaAudFormat(Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat);
 
-        _FinalStage tokenEndpointJwtcaAudFormat(
-                ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat);
+        _FinalStage tokenEndpointJwtcaAudFormat(ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat);
 
-        _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams);
+        _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
+        _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
+        _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams);
+        _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
         _FinalStage userinfoEndpoint(Optional<String> userinfoEndpoint);
 
@@ -583,6 +464,7 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, _FinalStage {
+
         private String clientId;
 
         private Optional<ConnectionTypeEnumOidc> type = Optional.empty();
@@ -595,16 +477,13 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
         private Optional<String> userinfoEndpoint = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat = Optional.empty();
 
-        private OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg = OptionalNullable.absent();
 
-        private OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod = OptionalNullable.absent();
 
         private Optional<String> tokenEndpoint = Optional.empty();
 
@@ -622,13 +501,11 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
 
         private Optional<String> issuer = Optional.empty();
 
-        private OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs =
-                OptionalNullable.absent();
+        private OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs = OptionalNullable.absent();
 
         private Optional<String> iconUrl = Optional.empty();
 
-        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens = OptionalNullable.absent();
 
         private Optional<ConnectionDpopSigningAlgEnum> dpopSigningAlg = Optional.empty();
 
@@ -643,552 +520,358 @@ public final class ConnectionOptionsOidc implements IConnectionOptionsCommonOidc
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsOidc other) {
-            authorizationEndpoint(other.getAuthorizationEndpoint());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            connectionSettings(other.getConnectionSettings());
-            domainAliases(other.getDomainAliases());
-            dpopSigningAlg(other.getDpopSigningAlg());
-            federatedConnectionsAccessTokens(other.getFederatedConnectionsAccessTokens());
-            iconUrl(other.getIconUrl());
-            idTokenSignedResponseAlgs(other.getIdTokenSignedResponseAlgs());
-            issuer(other.getIssuer());
-            jwksUri(other.getJwksUri());
-            oidcMetadata(other.getOidcMetadata());
-            scope(other.getScope());
-            sendBackChannelNonce(other.getSendBackChannelNonce());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            tenantDomain(other.getTenantDomain());
-            tokenEndpoint(other.getTokenEndpoint());
-            tokenEndpointAuthMethod(other.getTokenEndpointAuthMethod());
-            tokenEndpointAuthSigningAlg(other.getTokenEndpointAuthSigningAlg());
-            tokenEndpointJwtcaAudFormat(other.getTokenEndpointJwtcaAudFormat());
-            upstreamParams(other.getUpstreamParams());
-            userinfoEndpoint(other.getUserinfoEndpoint());
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            attributeMap(other.getAttributeMap());
-            discoveryUrl(other.getDiscoveryUrl());
-            type(other.getType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_id")
         public _FinalStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage type(ConnectionTypeEnumOidc type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public _FinalStage type(Optional<ConnectionTypeEnumOidc> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage discoveryUrl(String discoveryUrl) {
-            this.discoveryUrl = Optional.ofNullable(discoveryUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "discovery_url", nulls = Nulls.SKIP)
         public _FinalStage discoveryUrl(Optional<String> discoveryUrl) {
-            this.discoveryUrl = discoveryUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage attributeMap(ConnectionAttributeMapOidc attributeMap) {
-            this.attributeMap = Optional.ofNullable(attributeMap);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "attribute_map", nulls = Nulls.SKIP)
         public _FinalStage attributeMap(Optional<ConnectionAttributeMapOidc> attributeMap) {
-            this.attributeMap = attributeMap;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage userinfoEndpoint(String userinfoEndpoint) {
-            this.userinfoEndpoint = Optional.ofNullable(userinfoEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userinfo_endpoint", nulls = Nulls.SKIP)
         public _FinalStage userinfoEndpoint(Optional<String> userinfoEndpoint) {
-            this.userinfoEndpoint = userinfoEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointJwtcaAudFormat(
-                ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat) {
-            this.tokenEndpointJwtcaAudFormat = Optional.ofNullable(tokenEndpointJwtcaAudFormat);
-            return this;
+        public _FinalStage tokenEndpointJwtcaAudFormat(ConnectionTokenEndpointJwtcaAudFormatEnumOidc tokenEndpointJwtcaAudFormat) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint_jwtca_aud_format", nulls = Nulls.SKIP)
-        public _FinalStage tokenEndpointJwtcaAudFormat(
-                Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat) {
-            this.tokenEndpointJwtcaAudFormat = tokenEndpointJwtcaAudFormat;
-            return this;
+        public _FinalStage tokenEndpointJwtcaAudFormat(Optional<ConnectionTokenEndpointJwtcaAudFormatEnumOidc> tokenEndpointJwtcaAudFormat) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthSigningAlg(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum>
-                        tokenEndpointAuthSigningAlg) {
-            if (tokenEndpointAuthSigningAlg.isNull()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.ofNull();
-            } else if (tokenEndpointAuthSigningAlg.isEmpty()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.absent();
-            } else {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg.get());
-            }
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlg(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthSigningAlg(
-                Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
-            if (tokenEndpointAuthSigningAlg.isPresent()) {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg.get());
-            } else {
-                this.tokenEndpointAuthSigningAlg = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlg(Optional<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthSigningAlg(
-                ConnectionTokenEndpointAuthSigningAlgEnum tokenEndpointAuthSigningAlg) {
-            this.tokenEndpointAuthSigningAlg = OptionalNullable.of(tokenEndpointAuthSigningAlg);
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlg(ConnectionTokenEndpointAuthSigningAlgEnum tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint_auth_signing_alg", nulls = Nulls.SKIP)
-        public _FinalStage tokenEndpointAuthSigningAlg(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
-            this.tokenEndpointAuthSigningAlg = tokenEndpointAuthSigningAlg;
-            return this;
+        public _FinalStage tokenEndpointAuthSigningAlg(@Nullable OptionalNullable<ConnectionTokenEndpointAuthSigningAlgEnum> tokenEndpointAuthSigningAlg) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthMethod(
-                com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            if (tokenEndpointAuthMethod.isNull()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.ofNull();
-            } else if (tokenEndpointAuthMethod.isEmpty()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.absent();
-            } else {
-                this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod.get());
-            }
-            return this;
+        public _FinalStage tokenEndpointAuthMethod(com.auth0.client.mgmt.core.Nullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage tokenEndpointAuthMethod(
-                Optional<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            if (tokenEndpointAuthMethod.isPresent()) {
-                this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod.get());
-            } else {
-                this.tokenEndpointAuthMethod = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage tokenEndpointAuthMethod(Optional<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tokenEndpointAuthMethod(ConnectionTokenEndpointAuthMethodEnum tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = OptionalNullable.of(tokenEndpointAuthMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint_auth_method", nulls = Nulls.SKIP)
-        public _FinalStage tokenEndpointAuthMethod(
-                @Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = tokenEndpointAuthMethod;
-            return this;
+        public _FinalStage tokenEndpointAuthMethod(@Nullable OptionalNullable<ConnectionTokenEndpointAuthMethodEnum> tokenEndpointAuthMethod) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Optional.ofNullable(tokenEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_endpoint", nulls = Nulls.SKIP)
         public _FinalStage tokenEndpoint(Optional<String> tokenEndpoint) {
-            this.tokenEndpoint = tokenEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public _FinalStage tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public _FinalStage setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage sendBackChannelNonce(Boolean sendBackChannelNonce) {
-            this.sendBackChannelNonce = Optional.ofNullable(sendBackChannelNonce);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "send_back_channel_nonce", nulls = Nulls.SKIP)
         public _FinalStage sendBackChannelNonce(Optional<Boolean> sendBackChannelNonce) {
-            this.sendBackChannelNonce = sendBackChannelNonce;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage oidcMetadata(ConnectionOptionsOidcMetadata oidcMetadata) {
-            this.oidcMetadata = Optional.ofNullable(oidcMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "oidc_metadata", nulls = Nulls.SKIP)
         public _FinalStage oidcMetadata(Optional<ConnectionOptionsOidcMetadata> oidcMetadata) {
-            this.oidcMetadata = oidcMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage jwksUri(String jwksUri) {
-            this.jwksUri = Optional.ofNullable(jwksUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "jwks_uri", nulls = Nulls.SKIP)
         public _FinalStage jwksUri(Optional<String> jwksUri) {
-            this.jwksUri = jwksUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage issuer(String issuer) {
-            this.issuer = Optional.ofNullable(issuer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "issuer", nulls = Nulls.SKIP)
         public _FinalStage issuer(Optional<String> issuer) {
-            this.issuer = issuer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage idTokenSignedResponseAlgs(
-                com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>>
-                        idTokenSignedResponseAlgs) {
-            if (idTokenSignedResponseAlgs.isNull()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.ofNull();
-            } else if (idTokenSignedResponseAlgs.isEmpty()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.absent();
-            } else {
-                this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs.get());
-            }
-            return this;
+        public _FinalStage idTokenSignedResponseAlgs(com.auth0.client.mgmt.core.Nullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage idTokenSignedResponseAlgs(
-                Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
-            if (idTokenSignedResponseAlgs.isPresent()) {
-                this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs.get());
-            } else {
-                this.idTokenSignedResponseAlgs = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage idTokenSignedResponseAlgs(Optional<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage idTokenSignedResponseAlgs(
-                List<ConnectionIdTokenSignedResponseAlgEnum> idTokenSignedResponseAlgs) {
-            this.idTokenSignedResponseAlgs = OptionalNullable.of(idTokenSignedResponseAlgs);
-            return this;
+        public _FinalStage idTokenSignedResponseAlgs(List<ConnectionIdTokenSignedResponseAlgEnum> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "id_token_signed_response_algs", nulls = Nulls.SKIP)
-        public _FinalStage idTokenSignedResponseAlgs(
-                @Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
-            this.idTokenSignedResponseAlgs = idTokenSignedResponseAlgs;
-            return this;
+        public _FinalStage idTokenSignedResponseAlgs(@Nullable OptionalNullable<List<ConnectionIdTokenSignedResponseAlgEnum>> idTokenSignedResponseAlgs) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public _FinalStage iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isNull()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.ofNull();
-            } else if (federatedConnectionsAccessTokens.isEmpty()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isPresent()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens);
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "federated_connections_access_tokens", nulls = Nulls.SKIP)
-        public _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = federatedConnectionsAccessTokens;
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage dpopSigningAlg(ConnectionDpopSigningAlgEnum dpopSigningAlg) {
-            this.dpopSigningAlg = Optional.ofNullable(dpopSigningAlg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "dpop_signing_alg", nulls = Nulls.SKIP)
         public _FinalStage dpopSigningAlg(Optional<ConnectionDpopSigningAlgEnum> dpopSigningAlg) {
-            this.dpopSigningAlg = dpopSigningAlg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public _FinalStage domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage connectionSettings(ConnectionConnectionSettings connectionSettings) {
-            this.connectionSettings = Optional.ofNullable(connectionSettings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "connection_settings", nulls = Nulls.SKIP)
         public _FinalStage connectionSettings(Optional<ConnectionConnectionSettings> connectionSettings) {
-            this.connectionSettings = connectionSettings;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public _FinalStage clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Optional.ofNullable(authorizationEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "authorization_endpoint", nulls = Nulls.SKIP)
         public _FinalStage authorizationEndpoint(Optional<String> authorizationEndpoint) {
-            this.authorizationEndpoint = authorizationEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsOidc build() {
-            return new ConnectionOptionsOidc(
-                    authorizationEndpoint,
-                    clientId,
-                    clientSecret,
-                    connectionSettings,
-                    domainAliases,
-                    dpopSigningAlg,
-                    federatedConnectionsAccessTokens,
-                    iconUrl,
-                    idTokenSignedResponseAlgs,
-                    issuer,
-                    jwksUri,
-                    oidcMetadata,
-                    scope,
-                    sendBackChannelNonce,
-                    setUserRootAttributes,
-                    tenantDomain,
-                    tokenEndpoint,
-                    tokenEndpointAuthMethod,
-                    tokenEndpointAuthSigningAlg,
-                    tokenEndpointJwtcaAudFormat,
-                    upstreamParams,
-                    userinfoEndpoint,
-                    nonPersistentAttrs,
-                    attributeMap,
-                    discoveryUrl,
-                    type,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

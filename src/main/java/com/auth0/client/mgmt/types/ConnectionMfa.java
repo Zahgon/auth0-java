@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionMfa.Builder.class)
 public final class ConnectionMfa {
+
     private final Optional<Boolean> active;
 
     private final Optional<Boolean> returnEnrollSettings;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionMfa(
-            Optional<Boolean> active,
-            Optional<Boolean> returnEnrollSettings,
-            Map<String, Object> additionalProperties) {
+    private ConnectionMfa(Optional<Boolean> active, Optional<Boolean> returnEnrollSettings, Map<String, Object> additionalProperties) {
         this.active = active;
         this.returnEnrollSettings = returnEnrollSettings;
         this.additionalProperties = additionalProperties;
@@ -40,7 +38,7 @@ public final class ConnectionMfa {
      */
     @JsonProperty("active")
     public Optional<Boolean> getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,18 +46,17 @@ public final class ConnectionMfa {
      */
     @JsonProperty("return_enroll_settings")
     public Optional<Boolean> getReturnEnrollSettings() {
-        return returnEnrollSettings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionMfa && equalTo((ConnectionMfa) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionMfa other) {
@@ -68,20 +65,21 @@ public final class ConnectionMfa {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active, this.returnEnrollSettings);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> active = Optional.empty();
 
         private Optional<Boolean> returnEnrollSettings = Optional.empty();
@@ -89,12 +87,11 @@ public final class ConnectionMfa {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionMfa other) {
-            active(other.getActive());
-            returnEnrollSettings(other.getReturnEnrollSettings());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -102,13 +99,11 @@ public final class ConnectionMfa {
          */
         @JsonSetter(value = "active", nulls = Nulls.SKIP)
         public Builder active(Optional<Boolean> active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder active(Boolean active) {
-            this.active = Optional.ofNullable(active);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -116,27 +111,23 @@ public final class ConnectionMfa {
          */
         @JsonSetter(value = "return_enroll_settings", nulls = Nulls.SKIP)
         public Builder returnEnrollSettings(Optional<Boolean> returnEnrollSettings) {
-            this.returnEnrollSettings = returnEnrollSettings;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder returnEnrollSettings(Boolean returnEnrollSettings) {
-            this.returnEnrollSettings = Optional.ofNullable(returnEnrollSettings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionMfa build() {
-            return new ConnectionMfa(active, returnEnrollSettings, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

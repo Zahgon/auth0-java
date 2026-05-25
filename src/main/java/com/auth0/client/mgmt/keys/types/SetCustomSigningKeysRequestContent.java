@@ -22,12 +22,12 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetCustomSigningKeysRequestContent.Builder.class)
 public final class SetCustomSigningKeysRequestContent {
+
     private final List<CustomSigningKeyJwk> keys;
 
     private final Map<String, Object> additionalProperties;
 
-    private SetCustomSigningKeysRequestContent(
-            List<CustomSigningKeyJwk> keys, Map<String, Object> additionalProperties) {
+    private SetCustomSigningKeysRequestContent(List<CustomSigningKeyJwk> keys, Map<String, Object> additionalProperties) {
         this.keys = keys;
         this.additionalProperties = additionalProperties;
     }
@@ -37,19 +37,17 @@ public final class SetCustomSigningKeysRequestContent {
      */
     @JsonProperty("keys")
     public List<CustomSigningKeyJwk> getKeys() {
-        return keys;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetCustomSigningKeysRequestContent
-                && equalTo((SetCustomSigningKeysRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetCustomSigningKeysRequestContent other) {
@@ -58,30 +56,31 @@ public final class SetCustomSigningKeysRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.keys);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<CustomSigningKeyJwk> keys = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SetCustomSigningKeysRequestContent other) {
-            keys(other.getKeys());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -89,37 +88,27 @@ public final class SetCustomSigningKeysRequestContent {
          */
         @JsonSetter(value = "keys", nulls = Nulls.SKIP)
         public Builder keys(List<CustomSigningKeyJwk> keys) {
-            this.keys.clear();
-            if (keys != null) {
-                this.keys.addAll(keys);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addKeys(CustomSigningKeyJwk keys) {
-            this.keys.add(keys);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllKeys(List<CustomSigningKeyJwk> keys) {
-            if (keys != null) {
-                this.keys.addAll(keys);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SetCustomSigningKeysRequestContent build() {
-            return new SetCustomSigningKeysRequestContent(keys, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

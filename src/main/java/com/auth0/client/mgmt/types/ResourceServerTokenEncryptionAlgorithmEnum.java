@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerTokenEncryptionAlgorithmEnum {
-    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP256 =
-            new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP256, "RSA-OAEP-256");
 
-    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP384 =
-            new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP384, "RSA-OAEP-384");
+    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP256 = new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP256, "RSA-OAEP-256");
 
-    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP512 =
-            new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP512, "RSA-OAEP-512");
+    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP384 = new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP384, "RSA-OAEP-384");
+
+    public static final ResourceServerTokenEncryptionAlgorithmEnum RSA_OAEP512 = new ResourceServerTokenEncryptionAlgorithmEnum(Value.RSA_OAEP512, "RSA-OAEP-512");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ResourceServerTokenEncryptionAlgorithmEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerTokenEncryptionAlgorithmEnum
-                        && this.string.equals(((ResourceServerTokenEncryptionAlgorithmEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RSA_OAEP256:
-                return visitor.visitRsaOaep256();
-            case RSA_OAEP384:
-                return visitor.visitRsaOaep384();
-            case RSA_OAEP512:
-                return visitor.visitRsaOaep512();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerTokenEncryptionAlgorithmEnum valueOf(String value) {
-        switch (value) {
-            case "RSA-OAEP-256":
-                return RSA_OAEP256;
-            case "RSA-OAEP-384":
-                return RSA_OAEP384;
-            case "RSA-OAEP-512":
-                return RSA_OAEP512;
-            default:
-                return new ResourceServerTokenEncryptionAlgorithmEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RSA_OAEP256,
 
-        RSA_OAEP384,
-
-        RSA_OAEP512,
-
-        UNKNOWN
+        RSA_OAEP256, RSA_OAEP384, RSA_OAEP512, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRsaOaep256();
 
         T visitRsaOaep384();

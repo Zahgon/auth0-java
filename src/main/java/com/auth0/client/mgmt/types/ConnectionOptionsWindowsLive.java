@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsWindowsLive.Builder.class)
 public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> clientId;
@@ -38,8 +39,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
 
     private final Optional<Integer> strategyVersion;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> applications;
 
@@ -159,74 +159,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsWindowsLive(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<Integer> strategyVersion,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> applications,
-            Optional<Boolean> applicationsCreate,
-            Optional<Boolean> basic,
-            Optional<Boolean> birthday,
-            Optional<Boolean> calendars,
-            Optional<Boolean> calendarsUpdate,
-            Optional<Boolean> contactsBirthday,
-            Optional<Boolean> contactsCalendars,
-            Optional<Boolean> contactsCreate,
-            Optional<Boolean> contactsPhotos,
-            Optional<Boolean> contactsSkydrive,
-            Optional<Boolean> directoryAccessasuserAll,
-            Optional<Boolean> directoryReadAll,
-            Optional<Boolean> directoryReadwriteAll,
-            Optional<Boolean> emails,
-            Optional<Boolean> eventsCreate,
-            Optional<Boolean> graphCalendars,
-            Optional<Boolean> graphCalendarsUpdate,
-            Optional<Boolean> graphContacts,
-            Optional<Boolean> graphContactsUpdate,
-            Optional<Boolean> graphDevice,
-            Optional<Boolean> graphDeviceCommand,
-            Optional<Boolean> graphEmails,
-            Optional<Boolean> graphEmailsUpdate,
-            Optional<Boolean> graphFiles,
-            Optional<Boolean> graphFilesAll,
-            Optional<Boolean> graphFilesAllUpdate,
-            Optional<Boolean> graphFilesUpdate,
-            Optional<Boolean> graphNotes,
-            Optional<Boolean> graphNotesCreate,
-            Optional<Boolean> graphNotesUpdate,
-            Optional<Boolean> graphTasks,
-            Optional<Boolean> graphTasksUpdate,
-            Optional<Boolean> graphUser,
-            Optional<Boolean> graphUserActivity,
-            Optional<Boolean> graphUserUpdate,
-            Optional<Boolean> groupReadAll,
-            Optional<Boolean> groupReadwriteAll,
-            Optional<Boolean> mailReadwriteAll,
-            Optional<Boolean> mailSend,
-            Optional<Boolean> messenger,
-            Optional<Boolean> offlineAccess,
-            Optional<Boolean> phoneNumbers,
-            Optional<Boolean> photos,
-            Optional<Boolean> postalAddresses,
-            Optional<Boolean> rolemanagementReadAll,
-            Optional<Boolean> rolemanagementReadwriteDirectory,
-            Optional<Boolean> share,
-            Optional<Boolean> signin,
-            Optional<Boolean> sitesReadAll,
-            Optional<Boolean> sitesReadwriteAll,
-            Optional<Boolean> skydrive,
-            Optional<Boolean> skydriveUpdate,
-            Optional<Boolean> teamReadbasicAll,
-            Optional<Boolean> teamReadwriteAll,
-            Optional<Boolean> userReadAll,
-            Optional<Boolean> userReadbasicAll,
-            Optional<Boolean> workProfile,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsWindowsLive(Optional<List<String>> nonPersistentAttrs, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<Integer> strategyVersion, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> applications, Optional<Boolean> applicationsCreate, Optional<Boolean> basic, Optional<Boolean> birthday, Optional<Boolean> calendars, Optional<Boolean> calendarsUpdate, Optional<Boolean> contactsBirthday, Optional<Boolean> contactsCalendars, Optional<Boolean> contactsCreate, Optional<Boolean> contactsPhotos, Optional<Boolean> contactsSkydrive, Optional<Boolean> directoryAccessasuserAll, Optional<Boolean> directoryReadAll, Optional<Boolean> directoryReadwriteAll, Optional<Boolean> emails, Optional<Boolean> eventsCreate, Optional<Boolean> graphCalendars, Optional<Boolean> graphCalendarsUpdate, Optional<Boolean> graphContacts, Optional<Boolean> graphContactsUpdate, Optional<Boolean> graphDevice, Optional<Boolean> graphDeviceCommand, Optional<Boolean> graphEmails, Optional<Boolean> graphEmailsUpdate, Optional<Boolean> graphFiles, Optional<Boolean> graphFilesAll, Optional<Boolean> graphFilesAllUpdate, Optional<Boolean> graphFilesUpdate, Optional<Boolean> graphNotes, Optional<Boolean> graphNotesCreate, Optional<Boolean> graphNotesUpdate, Optional<Boolean> graphTasks, Optional<Boolean> graphTasksUpdate, Optional<Boolean> graphUser, Optional<Boolean> graphUserActivity, Optional<Boolean> graphUserUpdate, Optional<Boolean> groupReadAll, Optional<Boolean> groupReadwriteAll, Optional<Boolean> mailReadwriteAll, Optional<Boolean> mailSend, Optional<Boolean> messenger, Optional<Boolean> offlineAccess, Optional<Boolean> phoneNumbers, Optional<Boolean> photos, Optional<Boolean> postalAddresses, Optional<Boolean> rolemanagementReadAll, Optional<Boolean> rolemanagementReadwriteDirectory, Optional<Boolean> share, Optional<Boolean> signin, Optional<Boolean> sitesReadAll, Optional<Boolean> sitesReadwriteAll, Optional<Boolean> skydrive, Optional<Boolean> skydriveUpdate, Optional<Boolean> teamReadbasicAll, Optional<Boolean> teamReadwriteAll, Optional<Boolean> userReadAll, Optional<Boolean> userReadbasicAll, Optional<Boolean> workProfile, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -299,46 +232,43 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strategy_version")
     public Optional<Integer> getStrategyVersion() {
-        return strategyVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -346,7 +276,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("applications")
     public Optional<Boolean> getApplications() {
-        return applications;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -354,7 +284,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("applications_create")
     public Optional<Boolean> getApplicationsCreate() {
-        return applicationsCreate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -362,7 +292,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("basic")
     public Optional<Boolean> getBasic() {
-        return basic;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -370,7 +300,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("birthday")
     public Optional<Boolean> getBirthday() {
-        return birthday;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -378,7 +308,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("calendars")
     public Optional<Boolean> getCalendars() {
-        return calendars;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -386,7 +316,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("calendars_update")
     public Optional<Boolean> getCalendarsUpdate() {
-        return calendarsUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -394,7 +324,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("contacts_birthday")
     public Optional<Boolean> getContactsBirthday() {
-        return contactsBirthday;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -402,7 +332,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("contacts_calendars")
     public Optional<Boolean> getContactsCalendars() {
-        return contactsCalendars;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -410,7 +340,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("contacts_create")
     public Optional<Boolean> getContactsCreate() {
-        return contactsCreate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -418,7 +348,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("contacts_photos")
     public Optional<Boolean> getContactsPhotos() {
-        return contactsPhotos;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -426,7 +356,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("contacts_skydrive")
     public Optional<Boolean> getContactsSkydrive() {
-        return contactsSkydrive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -434,7 +364,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("directory_accessasuser_all")
     public Optional<Boolean> getDirectoryAccessasuserAll() {
-        return directoryAccessasuserAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -442,7 +372,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("directory_read_all")
     public Optional<Boolean> getDirectoryReadAll() {
-        return directoryReadAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -450,7 +380,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("directory_readwrite_all")
     public Optional<Boolean> getDirectoryReadwriteAll() {
-        return directoryReadwriteAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -458,7 +388,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("emails")
     public Optional<Boolean> getEmails() {
-        return emails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -466,7 +396,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("events_create")
     public Optional<Boolean> getEventsCreate() {
-        return eventsCreate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -474,7 +404,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_calendars")
     public Optional<Boolean> getGraphCalendars() {
-        return graphCalendars;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -482,7 +412,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_calendars_update")
     public Optional<Boolean> getGraphCalendarsUpdate() {
-        return graphCalendarsUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -490,7 +420,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_contacts")
     public Optional<Boolean> getGraphContacts() {
-        return graphContacts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -498,7 +428,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_contacts_update")
     public Optional<Boolean> getGraphContactsUpdate() {
-        return graphContactsUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -506,7 +436,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_device")
     public Optional<Boolean> getGraphDevice() {
-        return graphDevice;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -514,7 +444,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_device_command")
     public Optional<Boolean> getGraphDeviceCommand() {
-        return graphDeviceCommand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -522,7 +452,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_emails")
     public Optional<Boolean> getGraphEmails() {
-        return graphEmails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -530,7 +460,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_emails_update")
     public Optional<Boolean> getGraphEmailsUpdate() {
-        return graphEmailsUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -538,7 +468,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_files")
     public Optional<Boolean> getGraphFiles() {
-        return graphFiles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -546,7 +476,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_files_all")
     public Optional<Boolean> getGraphFilesAll() {
-        return graphFilesAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -554,7 +484,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_files_all_update")
     public Optional<Boolean> getGraphFilesAllUpdate() {
-        return graphFilesAllUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -562,7 +492,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_files_update")
     public Optional<Boolean> getGraphFilesUpdate() {
-        return graphFilesUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -570,7 +500,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_notes")
     public Optional<Boolean> getGraphNotes() {
-        return graphNotes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -578,7 +508,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_notes_create")
     public Optional<Boolean> getGraphNotesCreate() {
-        return graphNotesCreate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -586,7 +516,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_notes_update")
     public Optional<Boolean> getGraphNotesUpdate() {
-        return graphNotesUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -594,7 +524,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_tasks")
     public Optional<Boolean> getGraphTasks() {
-        return graphTasks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -602,7 +532,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_tasks_update")
     public Optional<Boolean> getGraphTasksUpdate() {
-        return graphTasksUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -610,7 +540,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_user")
     public Optional<Boolean> getGraphUser() {
-        return graphUser;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -618,7 +548,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_user_activity")
     public Optional<Boolean> getGraphUserActivity() {
-        return graphUserActivity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -626,7 +556,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("graph_user_update")
     public Optional<Boolean> getGraphUserUpdate() {
-        return graphUserUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -634,7 +564,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("group_read_all")
     public Optional<Boolean> getGroupReadAll() {
-        return groupReadAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -642,7 +572,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("group_readwrite_all")
     public Optional<Boolean> getGroupReadwriteAll() {
-        return groupReadwriteAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -650,7 +580,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("mail_readwrite_all")
     public Optional<Boolean> getMailReadwriteAll() {
-        return mailReadwriteAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -658,7 +588,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("mail_send")
     public Optional<Boolean> getMailSend() {
-        return mailSend;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -666,7 +596,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("messenger")
     public Optional<Boolean> getMessenger() {
-        return messenger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -674,7 +604,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("offline_access")
     public Optional<Boolean> getOfflineAccess() {
-        return offlineAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -682,7 +612,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("phone_numbers")
     public Optional<Boolean> getPhoneNumbers() {
-        return phoneNumbers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -690,7 +620,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("photos")
     public Optional<Boolean> getPhotos() {
-        return photos;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -698,7 +628,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("postal_addresses")
     public Optional<Boolean> getPostalAddresses() {
-        return postalAddresses;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -706,7 +636,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("rolemanagement_read_all")
     public Optional<Boolean> getRolemanagementReadAll() {
-        return rolemanagementReadAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -714,7 +644,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("rolemanagement_readwrite_directory")
     public Optional<Boolean> getRolemanagementReadwriteDirectory() {
-        return rolemanagementReadwriteDirectory;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -722,7 +652,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("share")
     public Optional<Boolean> getShare() {
-        return share;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -730,7 +660,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("signin")
     public Optional<Boolean> getSignin() {
-        return signin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -738,7 +668,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("sites_read_all")
     public Optional<Boolean> getSitesReadAll() {
-        return sitesReadAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -746,7 +676,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("sites_readwrite_all")
     public Optional<Boolean> getSitesReadwriteAll() {
-        return sitesReadwriteAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -754,7 +684,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("skydrive")
     public Optional<Boolean> getSkydrive() {
-        return skydrive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -762,7 +692,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("skydrive_update")
     public Optional<Boolean> getSkydriveUpdate() {
-        return skydriveUpdate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -770,7 +700,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("team_readbasic_all")
     public Optional<Boolean> getTeamReadbasicAll() {
-        return teamReadbasicAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -778,7 +708,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("team_readwrite_all")
     public Optional<Boolean> getTeamReadwriteAll() {
-        return teamReadwriteAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -786,7 +716,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("user_read_all")
     public Optional<Boolean> getUserReadAll() {
-        return userReadAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -794,7 +724,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("user_readbasic_all")
     public Optional<Boolean> getUserReadbasicAll() {
-        return userReadbasicAll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -802,178 +732,46 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
      */
     @JsonProperty("work_profile")
     public Optional<Boolean> getWorkProfile() {
-        return workProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsWindowsLive && equalTo((ConnectionOptionsWindowsLive) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsWindowsLive other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && strategyVersion.equals(other.strategyVersion)
-                && upstreamParams.equals(other.upstreamParams)
-                && applications.equals(other.applications)
-                && applicationsCreate.equals(other.applicationsCreate)
-                && basic.equals(other.basic)
-                && birthday.equals(other.birthday)
-                && calendars.equals(other.calendars)
-                && calendarsUpdate.equals(other.calendarsUpdate)
-                && contactsBirthday.equals(other.contactsBirthday)
-                && contactsCalendars.equals(other.contactsCalendars)
-                && contactsCreate.equals(other.contactsCreate)
-                && contactsPhotos.equals(other.contactsPhotos)
-                && contactsSkydrive.equals(other.contactsSkydrive)
-                && directoryAccessasuserAll.equals(other.directoryAccessasuserAll)
-                && directoryReadAll.equals(other.directoryReadAll)
-                && directoryReadwriteAll.equals(other.directoryReadwriteAll)
-                && emails.equals(other.emails)
-                && eventsCreate.equals(other.eventsCreate)
-                && graphCalendars.equals(other.graphCalendars)
-                && graphCalendarsUpdate.equals(other.graphCalendarsUpdate)
-                && graphContacts.equals(other.graphContacts)
-                && graphContactsUpdate.equals(other.graphContactsUpdate)
-                && graphDevice.equals(other.graphDevice)
-                && graphDeviceCommand.equals(other.graphDeviceCommand)
-                && graphEmails.equals(other.graphEmails)
-                && graphEmailsUpdate.equals(other.graphEmailsUpdate)
-                && graphFiles.equals(other.graphFiles)
-                && graphFilesAll.equals(other.graphFilesAll)
-                && graphFilesAllUpdate.equals(other.graphFilesAllUpdate)
-                && graphFilesUpdate.equals(other.graphFilesUpdate)
-                && graphNotes.equals(other.graphNotes)
-                && graphNotesCreate.equals(other.graphNotesCreate)
-                && graphNotesUpdate.equals(other.graphNotesUpdate)
-                && graphTasks.equals(other.graphTasks)
-                && graphTasksUpdate.equals(other.graphTasksUpdate)
-                && graphUser.equals(other.graphUser)
-                && graphUserActivity.equals(other.graphUserActivity)
-                && graphUserUpdate.equals(other.graphUserUpdate)
-                && groupReadAll.equals(other.groupReadAll)
-                && groupReadwriteAll.equals(other.groupReadwriteAll)
-                && mailReadwriteAll.equals(other.mailReadwriteAll)
-                && mailSend.equals(other.mailSend)
-                && messenger.equals(other.messenger)
-                && offlineAccess.equals(other.offlineAccess)
-                && phoneNumbers.equals(other.phoneNumbers)
-                && photos.equals(other.photos)
-                && postalAddresses.equals(other.postalAddresses)
-                && rolemanagementReadAll.equals(other.rolemanagementReadAll)
-                && rolemanagementReadwriteDirectory.equals(other.rolemanagementReadwriteDirectory)
-                && share.equals(other.share)
-                && signin.equals(other.signin)
-                && sitesReadAll.equals(other.sitesReadAll)
-                && sitesReadwriteAll.equals(other.sitesReadwriteAll)
-                && skydrive.equals(other.skydrive)
-                && skydriveUpdate.equals(other.skydriveUpdate)
-                && teamReadbasicAll.equals(other.teamReadbasicAll)
-                && teamReadwriteAll.equals(other.teamReadwriteAll)
-                && userReadAll.equals(other.userReadAll)
-                && userReadbasicAll.equals(other.userReadbasicAll)
-                && workProfile.equals(other.workProfile);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && strategyVersion.equals(other.strategyVersion) && upstreamParams.equals(other.upstreamParams) && applications.equals(other.applications) && applicationsCreate.equals(other.applicationsCreate) && basic.equals(other.basic) && birthday.equals(other.birthday) && calendars.equals(other.calendars) && calendarsUpdate.equals(other.calendarsUpdate) && contactsBirthday.equals(other.contactsBirthday) && contactsCalendars.equals(other.contactsCalendars) && contactsCreate.equals(other.contactsCreate) && contactsPhotos.equals(other.contactsPhotos) && contactsSkydrive.equals(other.contactsSkydrive) && directoryAccessasuserAll.equals(other.directoryAccessasuserAll) && directoryReadAll.equals(other.directoryReadAll) && directoryReadwriteAll.equals(other.directoryReadwriteAll) && emails.equals(other.emails) && eventsCreate.equals(other.eventsCreate) && graphCalendars.equals(other.graphCalendars) && graphCalendarsUpdate.equals(other.graphCalendarsUpdate) && graphContacts.equals(other.graphContacts) && graphContactsUpdate.equals(other.graphContactsUpdate) && graphDevice.equals(other.graphDevice) && graphDeviceCommand.equals(other.graphDeviceCommand) && graphEmails.equals(other.graphEmails) && graphEmailsUpdate.equals(other.graphEmailsUpdate) && graphFiles.equals(other.graphFiles) && graphFilesAll.equals(other.graphFilesAll) && graphFilesAllUpdate.equals(other.graphFilesAllUpdate) && graphFilesUpdate.equals(other.graphFilesUpdate) && graphNotes.equals(other.graphNotes) && graphNotesCreate.equals(other.graphNotesCreate) && graphNotesUpdate.equals(other.graphNotesUpdate) && graphTasks.equals(other.graphTasks) && graphTasksUpdate.equals(other.graphTasksUpdate) && graphUser.equals(other.graphUser) && graphUserActivity.equals(other.graphUserActivity) && graphUserUpdate.equals(other.graphUserUpdate) && groupReadAll.equals(other.groupReadAll) && groupReadwriteAll.equals(other.groupReadwriteAll) && mailReadwriteAll.equals(other.mailReadwriteAll) && mailSend.equals(other.mailSend) && messenger.equals(other.messenger) && offlineAccess.equals(other.offlineAccess) && phoneNumbers.equals(other.phoneNumbers) && photos.equals(other.photos) && postalAddresses.equals(other.postalAddresses) && rolemanagementReadAll.equals(other.rolemanagementReadAll) && rolemanagementReadwriteDirectory.equals(other.rolemanagementReadwriteDirectory) && share.equals(other.share) && signin.equals(other.signin) && sitesReadAll.equals(other.sitesReadAll) && sitesReadwriteAll.equals(other.sitesReadwriteAll) && skydrive.equals(other.skydrive) && skydriveUpdate.equals(other.skydriveUpdate) && teamReadbasicAll.equals(other.teamReadbasicAll) && teamReadwriteAll.equals(other.teamReadwriteAll) && userReadAll.equals(other.userReadAll) && userReadbasicAll.equals(other.userReadbasicAll) && workProfile.equals(other.workProfile);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.scope,
-                this.setUserRootAttributes,
-                this.strategyVersion,
-                this.upstreamParams,
-                this.applications,
-                this.applicationsCreate,
-                this.basic,
-                this.birthday,
-                this.calendars,
-                this.calendarsUpdate,
-                this.contactsBirthday,
-                this.contactsCalendars,
-                this.contactsCreate,
-                this.contactsPhotos,
-                this.contactsSkydrive,
-                this.directoryAccessasuserAll,
-                this.directoryReadAll,
-                this.directoryReadwriteAll,
-                this.emails,
-                this.eventsCreate,
-                this.graphCalendars,
-                this.graphCalendarsUpdate,
-                this.graphContacts,
-                this.graphContactsUpdate,
-                this.graphDevice,
-                this.graphDeviceCommand,
-                this.graphEmails,
-                this.graphEmailsUpdate,
-                this.graphFiles,
-                this.graphFilesAll,
-                this.graphFilesAllUpdate,
-                this.graphFilesUpdate,
-                this.graphNotes,
-                this.graphNotesCreate,
-                this.graphNotesUpdate,
-                this.graphTasks,
-                this.graphTasksUpdate,
-                this.graphUser,
-                this.graphUserActivity,
-                this.graphUserUpdate,
-                this.groupReadAll,
-                this.groupReadwriteAll,
-                this.mailReadwriteAll,
-                this.mailSend,
-                this.messenger,
-                this.offlineAccess,
-                this.phoneNumbers,
-                this.photos,
-                this.postalAddresses,
-                this.rolemanagementReadAll,
-                this.rolemanagementReadwriteDirectory,
-                this.share,
-                this.signin,
-                this.sitesReadAll,
-                this.sitesReadwriteAll,
-                this.skydrive,
-                this.skydriveUpdate,
-                this.teamReadbasicAll,
-                this.teamReadwriteAll,
-                this.userReadAll,
-                this.userReadbasicAll,
-                this.workProfile);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -988,8 +786,7 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
 
         private Optional<Integer> strategyVersion = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<Boolean> applications = Optional.empty();
 
@@ -1110,192 +907,91 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsWindowsLive other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            strategyVersion(other.getStrategyVersion());
-            upstreamParams(other.getUpstreamParams());
-            applications(other.getApplications());
-            applicationsCreate(other.getApplicationsCreate());
-            basic(other.getBasic());
-            birthday(other.getBirthday());
-            calendars(other.getCalendars());
-            calendarsUpdate(other.getCalendarsUpdate());
-            contactsBirthday(other.getContactsBirthday());
-            contactsCalendars(other.getContactsCalendars());
-            contactsCreate(other.getContactsCreate());
-            contactsPhotos(other.getContactsPhotos());
-            contactsSkydrive(other.getContactsSkydrive());
-            directoryAccessasuserAll(other.getDirectoryAccessasuserAll());
-            directoryReadAll(other.getDirectoryReadAll());
-            directoryReadwriteAll(other.getDirectoryReadwriteAll());
-            emails(other.getEmails());
-            eventsCreate(other.getEventsCreate());
-            graphCalendars(other.getGraphCalendars());
-            graphCalendarsUpdate(other.getGraphCalendarsUpdate());
-            graphContacts(other.getGraphContacts());
-            graphContactsUpdate(other.getGraphContactsUpdate());
-            graphDevice(other.getGraphDevice());
-            graphDeviceCommand(other.getGraphDeviceCommand());
-            graphEmails(other.getGraphEmails());
-            graphEmailsUpdate(other.getGraphEmailsUpdate());
-            graphFiles(other.getGraphFiles());
-            graphFilesAll(other.getGraphFilesAll());
-            graphFilesAllUpdate(other.getGraphFilesAllUpdate());
-            graphFilesUpdate(other.getGraphFilesUpdate());
-            graphNotes(other.getGraphNotes());
-            graphNotesCreate(other.getGraphNotesCreate());
-            graphNotesUpdate(other.getGraphNotesUpdate());
-            graphTasks(other.getGraphTasks());
-            graphTasksUpdate(other.getGraphTasksUpdate());
-            graphUser(other.getGraphUser());
-            graphUserActivity(other.getGraphUserActivity());
-            graphUserUpdate(other.getGraphUserUpdate());
-            groupReadAll(other.getGroupReadAll());
-            groupReadwriteAll(other.getGroupReadwriteAll());
-            mailReadwriteAll(other.getMailReadwriteAll());
-            mailSend(other.getMailSend());
-            messenger(other.getMessenger());
-            offlineAccess(other.getOfflineAccess());
-            phoneNumbers(other.getPhoneNumbers());
-            photos(other.getPhotos());
-            postalAddresses(other.getPostalAddresses());
-            rolemanagementReadAll(other.getRolemanagementReadAll());
-            rolemanagementReadwriteDirectory(other.getRolemanagementReadwriteDirectory());
-            share(other.getShare());
-            signin(other.getSignin());
-            sitesReadAll(other.getSitesReadAll());
-            sitesReadwriteAll(other.getSitesReadwriteAll());
-            skydrive(other.getSkydrive());
-            skydriveUpdate(other.getSkydriveUpdate());
-            teamReadbasicAll(other.getTeamReadbasicAll());
-            teamReadwriteAll(other.getTeamReadwriteAll());
-            userReadAll(other.getUserReadAll());
-            userReadbasicAll(other.getUserReadbasicAll());
-            workProfile(other.getWorkProfile());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "strategy_version", nulls = Nulls.SKIP)
         public Builder strategyVersion(Optional<Integer> strategyVersion) {
-            this.strategyVersion = strategyVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategyVersion(Integer strategyVersion) {
-            this.strategyVersion = Optional.ofNullable(strategyVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1303,13 +999,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "applications", nulls = Nulls.SKIP)
         public Builder applications(Optional<Boolean> applications) {
-            this.applications = applications;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder applications(Boolean applications) {
-            this.applications = Optional.ofNullable(applications);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1317,13 +1011,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "applications_create", nulls = Nulls.SKIP)
         public Builder applicationsCreate(Optional<Boolean> applicationsCreate) {
-            this.applicationsCreate = applicationsCreate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder applicationsCreate(Boolean applicationsCreate) {
-            this.applicationsCreate = Optional.ofNullable(applicationsCreate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1331,13 +1023,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "basic", nulls = Nulls.SKIP)
         public Builder basic(Optional<Boolean> basic) {
-            this.basic = basic;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder basic(Boolean basic) {
-            this.basic = Optional.ofNullable(basic);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1345,13 +1035,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "birthday", nulls = Nulls.SKIP)
         public Builder birthday(Optional<Boolean> birthday) {
-            this.birthday = birthday;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder birthday(Boolean birthday) {
-            this.birthday = Optional.ofNullable(birthday);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1359,13 +1047,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "calendars", nulls = Nulls.SKIP)
         public Builder calendars(Optional<Boolean> calendars) {
-            this.calendars = calendars;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendars(Boolean calendars) {
-            this.calendars = Optional.ofNullable(calendars);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1373,13 +1059,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "calendars_update", nulls = Nulls.SKIP)
         public Builder calendarsUpdate(Optional<Boolean> calendarsUpdate) {
-            this.calendarsUpdate = calendarsUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder calendarsUpdate(Boolean calendarsUpdate) {
-            this.calendarsUpdate = Optional.ofNullable(calendarsUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1387,13 +1071,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "contacts_birthday", nulls = Nulls.SKIP)
         public Builder contactsBirthday(Optional<Boolean> contactsBirthday) {
-            this.contactsBirthday = contactsBirthday;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsBirthday(Boolean contactsBirthday) {
-            this.contactsBirthday = Optional.ofNullable(contactsBirthday);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1401,13 +1083,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "contacts_calendars", nulls = Nulls.SKIP)
         public Builder contactsCalendars(Optional<Boolean> contactsCalendars) {
-            this.contactsCalendars = contactsCalendars;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsCalendars(Boolean contactsCalendars) {
-            this.contactsCalendars = Optional.ofNullable(contactsCalendars);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1415,13 +1095,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "contacts_create", nulls = Nulls.SKIP)
         public Builder contactsCreate(Optional<Boolean> contactsCreate) {
-            this.contactsCreate = contactsCreate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsCreate(Boolean contactsCreate) {
-            this.contactsCreate = Optional.ofNullable(contactsCreate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1429,13 +1107,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "contacts_photos", nulls = Nulls.SKIP)
         public Builder contactsPhotos(Optional<Boolean> contactsPhotos) {
-            this.contactsPhotos = contactsPhotos;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsPhotos(Boolean contactsPhotos) {
-            this.contactsPhotos = Optional.ofNullable(contactsPhotos);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1443,13 +1119,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "contacts_skydrive", nulls = Nulls.SKIP)
         public Builder contactsSkydrive(Optional<Boolean> contactsSkydrive) {
-            this.contactsSkydrive = contactsSkydrive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder contactsSkydrive(Boolean contactsSkydrive) {
-            this.contactsSkydrive = Optional.ofNullable(contactsSkydrive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1457,13 +1131,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "directory_accessasuser_all", nulls = Nulls.SKIP)
         public Builder directoryAccessasuserAll(Optional<Boolean> directoryAccessasuserAll) {
-            this.directoryAccessasuserAll = directoryAccessasuserAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder directoryAccessasuserAll(Boolean directoryAccessasuserAll) {
-            this.directoryAccessasuserAll = Optional.ofNullable(directoryAccessasuserAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1471,13 +1143,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "directory_read_all", nulls = Nulls.SKIP)
         public Builder directoryReadAll(Optional<Boolean> directoryReadAll) {
-            this.directoryReadAll = directoryReadAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder directoryReadAll(Boolean directoryReadAll) {
-            this.directoryReadAll = Optional.ofNullable(directoryReadAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1485,13 +1155,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "directory_readwrite_all", nulls = Nulls.SKIP)
         public Builder directoryReadwriteAll(Optional<Boolean> directoryReadwriteAll) {
-            this.directoryReadwriteAll = directoryReadwriteAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder directoryReadwriteAll(Boolean directoryReadwriteAll) {
-            this.directoryReadwriteAll = Optional.ofNullable(directoryReadwriteAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1499,13 +1167,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "emails", nulls = Nulls.SKIP)
         public Builder emails(Optional<Boolean> emails) {
-            this.emails = emails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder emails(Boolean emails) {
-            this.emails = Optional.ofNullable(emails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1513,13 +1179,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "events_create", nulls = Nulls.SKIP)
         public Builder eventsCreate(Optional<Boolean> eventsCreate) {
-            this.eventsCreate = eventsCreate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder eventsCreate(Boolean eventsCreate) {
-            this.eventsCreate = Optional.ofNullable(eventsCreate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1527,13 +1191,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_calendars", nulls = Nulls.SKIP)
         public Builder graphCalendars(Optional<Boolean> graphCalendars) {
-            this.graphCalendars = graphCalendars;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphCalendars(Boolean graphCalendars) {
-            this.graphCalendars = Optional.ofNullable(graphCalendars);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1541,13 +1203,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_calendars_update", nulls = Nulls.SKIP)
         public Builder graphCalendarsUpdate(Optional<Boolean> graphCalendarsUpdate) {
-            this.graphCalendarsUpdate = graphCalendarsUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphCalendarsUpdate(Boolean graphCalendarsUpdate) {
-            this.graphCalendarsUpdate = Optional.ofNullable(graphCalendarsUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1555,13 +1215,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_contacts", nulls = Nulls.SKIP)
         public Builder graphContacts(Optional<Boolean> graphContacts) {
-            this.graphContacts = graphContacts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphContacts(Boolean graphContacts) {
-            this.graphContacts = Optional.ofNullable(graphContacts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1569,13 +1227,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_contacts_update", nulls = Nulls.SKIP)
         public Builder graphContactsUpdate(Optional<Boolean> graphContactsUpdate) {
-            this.graphContactsUpdate = graphContactsUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphContactsUpdate(Boolean graphContactsUpdate) {
-            this.graphContactsUpdate = Optional.ofNullable(graphContactsUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1583,13 +1239,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_device", nulls = Nulls.SKIP)
         public Builder graphDevice(Optional<Boolean> graphDevice) {
-            this.graphDevice = graphDevice;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphDevice(Boolean graphDevice) {
-            this.graphDevice = Optional.ofNullable(graphDevice);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1597,13 +1251,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_device_command", nulls = Nulls.SKIP)
         public Builder graphDeviceCommand(Optional<Boolean> graphDeviceCommand) {
-            this.graphDeviceCommand = graphDeviceCommand;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphDeviceCommand(Boolean graphDeviceCommand) {
-            this.graphDeviceCommand = Optional.ofNullable(graphDeviceCommand);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1611,13 +1263,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_emails", nulls = Nulls.SKIP)
         public Builder graphEmails(Optional<Boolean> graphEmails) {
-            this.graphEmails = graphEmails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphEmails(Boolean graphEmails) {
-            this.graphEmails = Optional.ofNullable(graphEmails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1625,13 +1275,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_emails_update", nulls = Nulls.SKIP)
         public Builder graphEmailsUpdate(Optional<Boolean> graphEmailsUpdate) {
-            this.graphEmailsUpdate = graphEmailsUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphEmailsUpdate(Boolean graphEmailsUpdate) {
-            this.graphEmailsUpdate = Optional.ofNullable(graphEmailsUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1639,13 +1287,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_files", nulls = Nulls.SKIP)
         public Builder graphFiles(Optional<Boolean> graphFiles) {
-            this.graphFiles = graphFiles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphFiles(Boolean graphFiles) {
-            this.graphFiles = Optional.ofNullable(graphFiles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1653,13 +1299,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_files_all", nulls = Nulls.SKIP)
         public Builder graphFilesAll(Optional<Boolean> graphFilesAll) {
-            this.graphFilesAll = graphFilesAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphFilesAll(Boolean graphFilesAll) {
-            this.graphFilesAll = Optional.ofNullable(graphFilesAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1667,13 +1311,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_files_all_update", nulls = Nulls.SKIP)
         public Builder graphFilesAllUpdate(Optional<Boolean> graphFilesAllUpdate) {
-            this.graphFilesAllUpdate = graphFilesAllUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphFilesAllUpdate(Boolean graphFilesAllUpdate) {
-            this.graphFilesAllUpdate = Optional.ofNullable(graphFilesAllUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1681,13 +1323,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_files_update", nulls = Nulls.SKIP)
         public Builder graphFilesUpdate(Optional<Boolean> graphFilesUpdate) {
-            this.graphFilesUpdate = graphFilesUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphFilesUpdate(Boolean graphFilesUpdate) {
-            this.graphFilesUpdate = Optional.ofNullable(graphFilesUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1695,13 +1335,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_notes", nulls = Nulls.SKIP)
         public Builder graphNotes(Optional<Boolean> graphNotes) {
-            this.graphNotes = graphNotes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphNotes(Boolean graphNotes) {
-            this.graphNotes = Optional.ofNullable(graphNotes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1709,13 +1347,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_notes_create", nulls = Nulls.SKIP)
         public Builder graphNotesCreate(Optional<Boolean> graphNotesCreate) {
-            this.graphNotesCreate = graphNotesCreate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphNotesCreate(Boolean graphNotesCreate) {
-            this.graphNotesCreate = Optional.ofNullable(graphNotesCreate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1723,13 +1359,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_notes_update", nulls = Nulls.SKIP)
         public Builder graphNotesUpdate(Optional<Boolean> graphNotesUpdate) {
-            this.graphNotesUpdate = graphNotesUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphNotesUpdate(Boolean graphNotesUpdate) {
-            this.graphNotesUpdate = Optional.ofNullable(graphNotesUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1737,13 +1371,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_tasks", nulls = Nulls.SKIP)
         public Builder graphTasks(Optional<Boolean> graphTasks) {
-            this.graphTasks = graphTasks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphTasks(Boolean graphTasks) {
-            this.graphTasks = Optional.ofNullable(graphTasks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1751,13 +1383,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_tasks_update", nulls = Nulls.SKIP)
         public Builder graphTasksUpdate(Optional<Boolean> graphTasksUpdate) {
-            this.graphTasksUpdate = graphTasksUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphTasksUpdate(Boolean graphTasksUpdate) {
-            this.graphTasksUpdate = Optional.ofNullable(graphTasksUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1765,13 +1395,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_user", nulls = Nulls.SKIP)
         public Builder graphUser(Optional<Boolean> graphUser) {
-            this.graphUser = graphUser;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphUser(Boolean graphUser) {
-            this.graphUser = Optional.ofNullable(graphUser);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1779,13 +1407,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_user_activity", nulls = Nulls.SKIP)
         public Builder graphUserActivity(Optional<Boolean> graphUserActivity) {
-            this.graphUserActivity = graphUserActivity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphUserActivity(Boolean graphUserActivity) {
-            this.graphUserActivity = Optional.ofNullable(graphUserActivity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1793,13 +1419,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "graph_user_update", nulls = Nulls.SKIP)
         public Builder graphUserUpdate(Optional<Boolean> graphUserUpdate) {
-            this.graphUserUpdate = graphUserUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder graphUserUpdate(Boolean graphUserUpdate) {
-            this.graphUserUpdate = Optional.ofNullable(graphUserUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1807,13 +1431,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "group_read_all", nulls = Nulls.SKIP)
         public Builder groupReadAll(Optional<Boolean> groupReadAll) {
-            this.groupReadAll = groupReadAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder groupReadAll(Boolean groupReadAll) {
-            this.groupReadAll = Optional.ofNullable(groupReadAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1821,13 +1443,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "group_readwrite_all", nulls = Nulls.SKIP)
         public Builder groupReadwriteAll(Optional<Boolean> groupReadwriteAll) {
-            this.groupReadwriteAll = groupReadwriteAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder groupReadwriteAll(Boolean groupReadwriteAll) {
-            this.groupReadwriteAll = Optional.ofNullable(groupReadwriteAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1835,13 +1455,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "mail_readwrite_all", nulls = Nulls.SKIP)
         public Builder mailReadwriteAll(Optional<Boolean> mailReadwriteAll) {
-            this.mailReadwriteAll = mailReadwriteAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mailReadwriteAll(Boolean mailReadwriteAll) {
-            this.mailReadwriteAll = Optional.ofNullable(mailReadwriteAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1849,13 +1467,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "mail_send", nulls = Nulls.SKIP)
         public Builder mailSend(Optional<Boolean> mailSend) {
-            this.mailSend = mailSend;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mailSend(Boolean mailSend) {
-            this.mailSend = Optional.ofNullable(mailSend);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1863,13 +1479,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "messenger", nulls = Nulls.SKIP)
         public Builder messenger(Optional<Boolean> messenger) {
-            this.messenger = messenger;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder messenger(Boolean messenger) {
-            this.messenger = Optional.ofNullable(messenger);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1877,13 +1491,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "offline_access", nulls = Nulls.SKIP)
         public Builder offlineAccess(Optional<Boolean> offlineAccess) {
-            this.offlineAccess = offlineAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder offlineAccess(Boolean offlineAccess) {
-            this.offlineAccess = Optional.ofNullable(offlineAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1891,13 +1503,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "phone_numbers", nulls = Nulls.SKIP)
         public Builder phoneNumbers(Optional<Boolean> phoneNumbers) {
-            this.phoneNumbers = phoneNumbers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumbers(Boolean phoneNumbers) {
-            this.phoneNumbers = Optional.ofNullable(phoneNumbers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1905,13 +1515,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "photos", nulls = Nulls.SKIP)
         public Builder photos(Optional<Boolean> photos) {
-            this.photos = photos;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder photos(Boolean photos) {
-            this.photos = Optional.ofNullable(photos);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1919,13 +1527,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "postal_addresses", nulls = Nulls.SKIP)
         public Builder postalAddresses(Optional<Boolean> postalAddresses) {
-            this.postalAddresses = postalAddresses;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder postalAddresses(Boolean postalAddresses) {
-            this.postalAddresses = Optional.ofNullable(postalAddresses);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1933,13 +1539,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "rolemanagement_read_all", nulls = Nulls.SKIP)
         public Builder rolemanagementReadAll(Optional<Boolean> rolemanagementReadAll) {
-            this.rolemanagementReadAll = rolemanagementReadAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rolemanagementReadAll(Boolean rolemanagementReadAll) {
-            this.rolemanagementReadAll = Optional.ofNullable(rolemanagementReadAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1947,13 +1551,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "rolemanagement_readwrite_directory", nulls = Nulls.SKIP)
         public Builder rolemanagementReadwriteDirectory(Optional<Boolean> rolemanagementReadwriteDirectory) {
-            this.rolemanagementReadwriteDirectory = rolemanagementReadwriteDirectory;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rolemanagementReadwriteDirectory(Boolean rolemanagementReadwriteDirectory) {
-            this.rolemanagementReadwriteDirectory = Optional.ofNullable(rolemanagementReadwriteDirectory);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1961,13 +1563,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "share", nulls = Nulls.SKIP)
         public Builder share(Optional<Boolean> share) {
-            this.share = share;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder share(Boolean share) {
-            this.share = Optional.ofNullable(share);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1975,13 +1575,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "signin", nulls = Nulls.SKIP)
         public Builder signin(Optional<Boolean> signin) {
-            this.signin = signin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signin(Boolean signin) {
-            this.signin = Optional.ofNullable(signin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1989,13 +1587,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "sites_read_all", nulls = Nulls.SKIP)
         public Builder sitesReadAll(Optional<Boolean> sitesReadAll) {
-            this.sitesReadAll = sitesReadAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sitesReadAll(Boolean sitesReadAll) {
-            this.sitesReadAll = Optional.ofNullable(sitesReadAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2003,13 +1599,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "sites_readwrite_all", nulls = Nulls.SKIP)
         public Builder sitesReadwriteAll(Optional<Boolean> sitesReadwriteAll) {
-            this.sitesReadwriteAll = sitesReadwriteAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sitesReadwriteAll(Boolean sitesReadwriteAll) {
-            this.sitesReadwriteAll = Optional.ofNullable(sitesReadwriteAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2017,13 +1611,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "skydrive", nulls = Nulls.SKIP)
         public Builder skydrive(Optional<Boolean> skydrive) {
-            this.skydrive = skydrive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder skydrive(Boolean skydrive) {
-            this.skydrive = Optional.ofNullable(skydrive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2031,13 +1623,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "skydrive_update", nulls = Nulls.SKIP)
         public Builder skydriveUpdate(Optional<Boolean> skydriveUpdate) {
-            this.skydriveUpdate = skydriveUpdate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder skydriveUpdate(Boolean skydriveUpdate) {
-            this.skydriveUpdate = Optional.ofNullable(skydriveUpdate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2045,13 +1635,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "team_readbasic_all", nulls = Nulls.SKIP)
         public Builder teamReadbasicAll(Optional<Boolean> teamReadbasicAll) {
-            this.teamReadbasicAll = teamReadbasicAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamReadbasicAll(Boolean teamReadbasicAll) {
-            this.teamReadbasicAll = Optional.ofNullable(teamReadbasicAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2059,13 +1647,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "team_readwrite_all", nulls = Nulls.SKIP)
         public Builder teamReadwriteAll(Optional<Boolean> teamReadwriteAll) {
-            this.teamReadwriteAll = teamReadwriteAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder teamReadwriteAll(Boolean teamReadwriteAll) {
-            this.teamReadwriteAll = Optional.ofNullable(teamReadwriteAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2073,13 +1659,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "user_read_all", nulls = Nulls.SKIP)
         public Builder userReadAll(Optional<Boolean> userReadAll) {
-            this.userReadAll = userReadAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userReadAll(Boolean userReadAll) {
-            this.userReadAll = Optional.ofNullable(userReadAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2087,13 +1671,11 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "user_readbasic_all", nulls = Nulls.SKIP)
         public Builder userReadbasicAll(Optional<Boolean> userReadbasicAll) {
-            this.userReadbasicAll = userReadbasicAll;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userReadbasicAll(Boolean userReadbasicAll) {
-            this.userReadbasicAll = Optional.ofNullable(userReadbasicAll);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2101,94 +1683,23 @@ public final class ConnectionOptionsWindowsLive implements IConnectionOptionsCom
          */
         @JsonSetter(value = "work_profile", nulls = Nulls.SKIP)
         public Builder workProfile(Optional<Boolean> workProfile) {
-            this.workProfile = workProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder workProfile(Boolean workProfile) {
-            this.workProfile = Optional.ofNullable(workProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsWindowsLive build() {
-            return new ConnectionOptionsWindowsLive(
-                    nonPersistentAttrs,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    scope,
-                    setUserRootAttributes,
-                    strategyVersion,
-                    upstreamParams,
-                    applications,
-                    applicationsCreate,
-                    basic,
-                    birthday,
-                    calendars,
-                    calendarsUpdate,
-                    contactsBirthday,
-                    contactsCalendars,
-                    contactsCreate,
-                    contactsPhotos,
-                    contactsSkydrive,
-                    directoryAccessasuserAll,
-                    directoryReadAll,
-                    directoryReadwriteAll,
-                    emails,
-                    eventsCreate,
-                    graphCalendars,
-                    graphCalendarsUpdate,
-                    graphContacts,
-                    graphContactsUpdate,
-                    graphDevice,
-                    graphDeviceCommand,
-                    graphEmails,
-                    graphEmailsUpdate,
-                    graphFiles,
-                    graphFilesAll,
-                    graphFilesAllUpdate,
-                    graphFilesUpdate,
-                    graphNotes,
-                    graphNotesCreate,
-                    graphNotesUpdate,
-                    graphTasks,
-                    graphTasksUpdate,
-                    graphUser,
-                    graphUserActivity,
-                    graphUserUpdate,
-                    groupReadAll,
-                    groupReadwriteAll,
-                    mailReadwriteAll,
-                    mailSend,
-                    messenger,
-                    offlineAccess,
-                    phoneNumbers,
-                    photos,
-                    postalAddresses,
-                    rolemanagementReadAll,
-                    rolemanagementReadwriteDirectory,
-                    share,
-                    signin,
-                    sitesReadAll,
-                    sitesReadwriteAll,
-                    skydrive,
-                    skydriveUpdate,
-                    teamReadbasicAll,
-                    teamReadwriteAll,
-                    userReadAll,
-                    userReadbasicAll,
-                    workProfile,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

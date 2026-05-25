@@ -14,6 +14,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncSettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSettingsClient rawClient;
@@ -30,40 +31,38 @@ public class AsyncSettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the tenant settings for risk assessments
      */
     public CompletableFuture<GetRiskAssessmentsSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the tenant settings for risk assessments
      */
     public CompletableFuture<GetRiskAssessmentsSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the tenant settings for risk assessments
      */
-    public CompletableFuture<UpdateRiskAssessmentsSettingsResponseContent> update(
-            UpdateRiskAssessmentsSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateRiskAssessmentsSettingsResponseContent> update(UpdateRiskAssessmentsSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the tenant settings for risk assessments
      */
-    public CompletableFuture<UpdateRiskAssessmentsSettingsResponseContent> update(
-            UpdateRiskAssessmentsSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateRiskAssessmentsSettingsResponseContent> update(UpdateRiskAssessmentsSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncNewDeviceClient newDevice() {
-        return this.newDeviceClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

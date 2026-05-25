@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectioSetupTypeWebhookEnum {
-    public static final FlowsVaultConnectioSetupTypeWebhookEnum WEBHOOK =
-            new FlowsVaultConnectioSetupTypeWebhookEnum(Value.WEBHOOK, "WEBHOOK");
+
+    public static final FlowsVaultConnectioSetupTypeWebhookEnum WEBHOOK = new FlowsVaultConnectioSetupTypeWebhookEnum(Value.WEBHOOK, "WEBHOOK");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectioSetupTypeWebhookEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectioSetupTypeWebhookEnum
-                        && this.string.equals(((FlowsVaultConnectioSetupTypeWebhookEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WEBHOOK:
-                return visitor.visitWebhook();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectioSetupTypeWebhookEnum valueOf(String value) {
-        switch (value) {
-            case "WEBHOOK":
-                return WEBHOOK;
-            default:
-                return new FlowsVaultConnectioSetupTypeWebhookEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WEBHOOK,
 
-        UNKNOWN
+        WEBHOOK, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWebhook();
 
         T visitUnknown(String unknownType);

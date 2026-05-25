@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.DeployActionVersionResponseContent;
 import com.auth0.client.mgmt.types.GetActionVersionResponseContent;
 
 public class VersionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawVersionsClient rawClient;
@@ -27,82 +28,76 @@ public class VersionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawVersionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public SyncPagingIterable<ActionVersion> list(String actionId) {
-        return this.rawClient.list(actionId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public SyncPagingIterable<ActionVersion> list(String actionId, RequestOptions requestOptions) {
-        return this.rawClient.list(actionId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public SyncPagingIterable<ActionVersion> list(String actionId, ListActionVersionsRequestParameters request) {
-        return this.rawClient.list(actionId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all of an action's versions. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
-    public SyncPagingIterable<ActionVersion> list(
-            String actionId, ListActionVersionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(actionId, request, requestOptions).body();
+    public SyncPagingIterable<ActionVersion> list(String actionId, ListActionVersionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a specific version of an action. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public GetActionVersionResponseContent get(String actionId, String id) {
-        return this.rawClient.get(actionId, id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a specific version of an action. An action version is created whenever an action is deployed. An action version is immutable, once created.
      */
     public GetActionVersionResponseContent get(String actionId, String id, RequestOptions requestOptions) {
-        return this.rawClient.get(actionId, id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
     public DeployActionVersionResponseContent deploy(String actionId, String id) {
-        return this.rawClient.deploy(actionId, id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
     public DeployActionVersionResponseContent deploy(String actionId, String id, RequestOptions requestOptions) {
-        return this.rawClient.deploy(actionId, id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
-    public DeployActionVersionResponseContent deploy(
-            String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request) {
-        return this.rawClient.deploy(actionId, id, request).body();
+    public DeployActionVersionResponseContent deploy(String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Performs the equivalent of a roll-back of an action to an earlier, specified version. Creates a new, deployed action version that is identical to the specified version. If this action is currently bound to a trigger, the system will begin executing the newly-created version immediately.
      */
-    public DeployActionVersionResponseContent deploy(
-            String actionId,
-            String id,
-            OptionalNullable<DeployActionVersionRequestContent> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.deploy(actionId, id, request, requestOptions).body();
+    public DeployActionVersionResponseContent deploy(String actionId, String id, OptionalNullable<DeployActionVersionRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamDeliveryStatusEnum {
-    public static final EventStreamDeliveryStatusEnum FAILED =
-            new EventStreamDeliveryStatusEnum(Value.FAILED, "failed");
+
+    public static final EventStreamDeliveryStatusEnum FAILED = new EventStreamDeliveryStatusEnum(Value.FAILED, "failed");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamDeliveryStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamDeliveryStatusEnum
-                        && this.string.equals(((EventStreamDeliveryStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FAILED:
-                return visitor.visitFailed();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamDeliveryStatusEnum valueOf(String value) {
-        switch (value) {
-            case "failed":
-                return FAILED;
-            default:
-                return new EventStreamDeliveryStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FAILED,
 
-        UNKNOWN
+        FAILED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFailed();
 
         T visitUnknown(String unknownType);

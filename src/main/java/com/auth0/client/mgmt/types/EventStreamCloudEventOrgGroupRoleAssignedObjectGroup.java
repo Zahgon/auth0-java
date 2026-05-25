@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = EventStreamCloudEventOrgGroupRoleAssignedObjectGroup.Deserializer.class)
 public final class EventStreamCloudEventOrgGroupRoleAssignedObjectGroup {
+
     private final Object value;
 
     private final int type;
@@ -27,26 +28,17 @@ public final class EventStreamCloudEventOrgGroupRoleAssignedObjectGroup {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((EventStreamCloudEventOrgGroupRoleAssignedObjectGroup0) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((EventStreamCloudEventOrgGroupRoleAssignedObjectGroup1) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((EventStreamCloudEventOrgGroupRoleAssignedObjectGroup2) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgGroupRoleAssignedObjectGroup
-                && equalTo((EventStreamCloudEventOrgGroupRoleAssignedObjectGroup) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup other) {
@@ -55,30 +47,28 @@ public final class EventStreamCloudEventOrgGroupRoleAssignedObjectGroup {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(
-            EventStreamCloudEventOrgGroupRoleAssignedObjectGroup0 value) {
-        return new EventStreamCloudEventOrgGroupRoleAssignedObjectGroup(value, 0);
+    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup0 value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(
-            EventStreamCloudEventOrgGroupRoleAssignedObjectGroup1 value) {
-        return new EventStreamCloudEventOrgGroupRoleAssignedObjectGroup(value, 1);
+    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup1 value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(
-            EventStreamCloudEventOrgGroupRoleAssignedObjectGroup2 value) {
-        return new EventStreamCloudEventOrgGroupRoleAssignedObjectGroup(value, 2);
+    public static EventStreamCloudEventOrgGroupRoleAssignedObjectGroup of(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup2 value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup0 value);
 
         T visit(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup1 value);
@@ -87,44 +77,14 @@ public final class EventStreamCloudEventOrgGroupRoleAssignedObjectGroup {
     }
 
     static final class Deserializer extends StdDeserializer<EventStreamCloudEventOrgGroupRoleAssignedObjectGroup> {
+
         Deserializer() {
             super(EventStreamCloudEventOrgGroupRoleAssignedObjectGroup.class);
         }
 
         @java.lang.Override
-        public EventStreamCloudEventOrgGroupRoleAssignedObjectGroup deserialize(
-                JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("connection_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventOrgGroupRoleAssignedObjectGroup0.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("organization_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventOrgGroupRoleAssignedObjectGroup1.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, EventStreamCloudEventOrgGroupRoleAssignedObjectGroup2.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public EventStreamCloudEventOrgGroupRoleAssignedObjectGroup deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

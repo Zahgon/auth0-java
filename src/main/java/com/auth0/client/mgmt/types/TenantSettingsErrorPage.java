@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TenantSettingsErrorPage.Builder.class)
 public final class TenantSettingsErrorPage {
+
     private final Optional<String> html;
 
     private final Optional<Boolean> showLogLink;
@@ -28,11 +29,7 @@ public final class TenantSettingsErrorPage {
 
     private final Map<String, Object> additionalProperties;
 
-    private TenantSettingsErrorPage(
-            Optional<String> html,
-            Optional<Boolean> showLogLink,
-            Optional<String> url,
-            Map<String, Object> additionalProperties) {
+    private TenantSettingsErrorPage(Optional<String> html, Optional<Boolean> showLogLink, Optional<String> url, Map<String, Object> additionalProperties) {
         this.html = html;
         this.showLogLink = showLogLink;
         this.url = url;
@@ -44,7 +41,7 @@ public final class TenantSettingsErrorPage {
      */
     @JsonProperty("html")
     public Optional<String> getHtml() {
-        return html;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,7 +49,7 @@ public final class TenantSettingsErrorPage {
      */
     @JsonProperty("show_log_link")
     public Optional<Boolean> getShowLogLink() {
-        return showLogLink;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -60,18 +57,17 @@ public final class TenantSettingsErrorPage {
      */
     @JsonProperty("url")
     public Optional<String> getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TenantSettingsErrorPage && equalTo((TenantSettingsErrorPage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TenantSettingsErrorPage other) {
@@ -80,20 +76,21 @@ public final class TenantSettingsErrorPage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.html, this.showLogLink, this.url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> html = Optional.empty();
 
         private Optional<Boolean> showLogLink = Optional.empty();
@@ -103,13 +100,11 @@ public final class TenantSettingsErrorPage {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TenantSettingsErrorPage other) {
-            html(other.getHtml());
-            showLogLink(other.getShowLogLink());
-            url(other.getUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -117,13 +112,11 @@ public final class TenantSettingsErrorPage {
          */
         @JsonSetter(value = "html", nulls = Nulls.SKIP)
         public Builder html(Optional<String> html) {
-            this.html = html;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder html(String html) {
-            this.html = Optional.ofNullable(html);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,13 +124,11 @@ public final class TenantSettingsErrorPage {
          */
         @JsonSetter(value = "show_log_link", nulls = Nulls.SKIP)
         public Builder showLogLink(Optional<Boolean> showLogLink) {
-            this.showLogLink = showLogLink;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder showLogLink(Boolean showLogLink) {
-            this.showLogLink = Optional.ofNullable(showLogLink);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -145,27 +136,23 @@ public final class TenantSettingsErrorPage {
          */
         @JsonSetter(value = "url", nulls = Nulls.SKIP)
         public Builder url(Optional<String> url) {
-            this.url = url;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder url(String url) {
-            this.url = Optional.ofNullable(url);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TenantSettingsErrorPage build() {
-            return new TenantSettingsErrorPage(html, showLogLink, url, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

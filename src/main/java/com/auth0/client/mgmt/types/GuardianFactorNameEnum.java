@@ -7,25 +7,22 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GuardianFactorNameEnum {
+
     public static final GuardianFactorNameEnum OTP = new GuardianFactorNameEnum(Value.OTP, "otp");
 
-    public static final GuardianFactorNameEnum WEBAUTHN_PLATFORM =
-            new GuardianFactorNameEnum(Value.WEBAUTHN_PLATFORM, "webauthn-platform");
+    public static final GuardianFactorNameEnum WEBAUTHN_PLATFORM = new GuardianFactorNameEnum(Value.WEBAUTHN_PLATFORM, "webauthn-platform");
 
     public static final GuardianFactorNameEnum EMAIL = new GuardianFactorNameEnum(Value.EMAIL, "email");
 
     public static final GuardianFactorNameEnum DUO = new GuardianFactorNameEnum(Value.DUO, "duo");
 
-    public static final GuardianFactorNameEnum WEBAUTHN_ROAMING =
-            new GuardianFactorNameEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
+    public static final GuardianFactorNameEnum WEBAUTHN_ROAMING = new GuardianFactorNameEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
 
-    public static final GuardianFactorNameEnum RECOVERY_CODE =
-            new GuardianFactorNameEnum(Value.RECOVERY_CODE, "recovery-code");
+    public static final GuardianFactorNameEnum RECOVERY_CODE = new GuardianFactorNameEnum(Value.RECOVERY_CODE, "recovery-code");
 
     public static final GuardianFactorNameEnum SMS = new GuardianFactorNameEnum(Value.SMS, "sms");
 
-    public static final GuardianFactorNameEnum PUSH_NOTIFICATION =
-            new GuardianFactorNameEnum(Value.PUSH_NOTIFICATION, "push-notification");
+    public static final GuardianFactorNameEnum PUSH_NOTIFICATION = new GuardianFactorNameEnum(Value.PUSH_NOTIFICATION, "push-notification");
 
     private final Value value;
 
@@ -37,96 +34,49 @@ public final class GuardianFactorNameEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GuardianFactorNameEnum
-                        && this.string.equals(((GuardianFactorNameEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OTP:
-                return visitor.visitOtp();
-            case WEBAUTHN_PLATFORM:
-                return visitor.visitWebauthnPlatform();
-            case EMAIL:
-                return visitor.visitEmail();
-            case DUO:
-                return visitor.visitDuo();
-            case WEBAUTHN_ROAMING:
-                return visitor.visitWebauthnRoaming();
-            case RECOVERY_CODE:
-                return visitor.visitRecoveryCode();
-            case SMS:
-                return visitor.visitSms();
-            case PUSH_NOTIFICATION:
-                return visitor.visitPushNotification();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GuardianFactorNameEnum valueOf(String value) {
-        switch (value) {
-            case "otp":
-                return OTP;
-            case "webauthn-platform":
-                return WEBAUTHN_PLATFORM;
-            case "email":
-                return EMAIL;
-            case "duo":
-                return DUO;
-            case "webauthn-roaming":
-                return WEBAUTHN_ROAMING;
-            case "recovery-code":
-                return RECOVERY_CODE;
-            case "sms":
-                return SMS;
-            case "push-notification":
-                return PUSH_NOTIFICATION;
-            default:
-                return new GuardianFactorNameEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         PUSH_NOTIFICATION,
-
         SMS,
-
         EMAIL,
-
         DUO,
-
         OTP,
-
         WEBAUTHN_ROAMING,
-
         WEBAUTHN_PLATFORM,
-
         RECOVERY_CODE,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPushNotification();
 
         T visitSms();

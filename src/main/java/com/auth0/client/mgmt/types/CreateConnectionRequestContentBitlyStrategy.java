@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentBitlyStrategy {
-    public static final CreateConnectionRequestContentBitlyStrategy BITLY =
-            new CreateConnectionRequestContentBitlyStrategy(Value.BITLY, "bitly");
+
+    public static final CreateConnectionRequestContentBitlyStrategy BITLY = new CreateConnectionRequestContentBitlyStrategy(Value.BITLY, "bitly");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentBitlyStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentBitlyStrategy
-                        && this.string.equals(((CreateConnectionRequestContentBitlyStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BITLY:
-                return visitor.visitBitly();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentBitlyStrategy valueOf(String value) {
-        switch (value) {
-            case "bitly":
-                return BITLY;
-            default:
-                return new CreateConnectionRequestContentBitlyStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BITLY,
 
-        UNKNOWN
+        BITLY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBitly();
 
         T visitUnknown(String unknownType);

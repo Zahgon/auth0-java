@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class RefreshTokenExpirationTypeEnum {
-    public static final RefreshTokenExpirationTypeEnum EXPIRING =
-            new RefreshTokenExpirationTypeEnum(Value.EXPIRING, "expiring");
 
-    public static final RefreshTokenExpirationTypeEnum NON_EXPIRING =
-            new RefreshTokenExpirationTypeEnum(Value.NON_EXPIRING, "non-expiring");
+    public static final RefreshTokenExpirationTypeEnum EXPIRING = new RefreshTokenExpirationTypeEnum(Value.EXPIRING, "expiring");
+
+    public static final RefreshTokenExpirationTypeEnum NON_EXPIRING = new RefreshTokenExpirationTypeEnum(Value.NON_EXPIRING, "non-expiring");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class RefreshTokenExpirationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof RefreshTokenExpirationTypeEnum
-                        && this.string.equals(((RefreshTokenExpirationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EXPIRING:
-                return visitor.visitExpiring();
-            case NON_EXPIRING:
-                return visitor.visitNonExpiring();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static RefreshTokenExpirationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "expiring":
-                return EXPIRING;
-            case "non-expiring":
-                return NON_EXPIRING;
-            default:
-                return new RefreshTokenExpirationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EXPIRING,
 
-        NON_EXPIRING,
-
-        UNKNOWN
+        EXPIRING, NON_EXPIRING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitExpiring();
 
         T visitNonExpiring();

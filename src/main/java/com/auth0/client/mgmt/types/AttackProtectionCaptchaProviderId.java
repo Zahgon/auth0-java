@@ -7,26 +7,20 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AttackProtectionCaptchaProviderId {
-    public static final AttackProtectionCaptchaProviderId RECAPTCHA_V2 =
-            new AttackProtectionCaptchaProviderId(Value.RECAPTCHA_V2, "recaptcha_v2");
 
-    public static final AttackProtectionCaptchaProviderId AUTH_CHALLENGE =
-            new AttackProtectionCaptchaProviderId(Value.AUTH_CHALLENGE, "auth_challenge");
+    public static final AttackProtectionCaptchaProviderId RECAPTCHA_V2 = new AttackProtectionCaptchaProviderId(Value.RECAPTCHA_V2, "recaptcha_v2");
 
-    public static final AttackProtectionCaptchaProviderId FRIENDLY_CAPTCHA =
-            new AttackProtectionCaptchaProviderId(Value.FRIENDLY_CAPTCHA, "friendly_captcha");
+    public static final AttackProtectionCaptchaProviderId AUTH_CHALLENGE = new AttackProtectionCaptchaProviderId(Value.AUTH_CHALLENGE, "auth_challenge");
 
-    public static final AttackProtectionCaptchaProviderId ARKOSE =
-            new AttackProtectionCaptchaProviderId(Value.ARKOSE, "arkose");
+    public static final AttackProtectionCaptchaProviderId FRIENDLY_CAPTCHA = new AttackProtectionCaptchaProviderId(Value.FRIENDLY_CAPTCHA, "friendly_captcha");
 
-    public static final AttackProtectionCaptchaProviderId SIMPLE_CAPTCHA =
-            new AttackProtectionCaptchaProviderId(Value.SIMPLE_CAPTCHA, "simple_captcha");
+    public static final AttackProtectionCaptchaProviderId ARKOSE = new AttackProtectionCaptchaProviderId(Value.ARKOSE, "arkose");
 
-    public static final AttackProtectionCaptchaProviderId HCAPTCHA =
-            new AttackProtectionCaptchaProviderId(Value.HCAPTCHA, "hcaptcha");
+    public static final AttackProtectionCaptchaProviderId SIMPLE_CAPTCHA = new AttackProtectionCaptchaProviderId(Value.SIMPLE_CAPTCHA, "simple_captcha");
 
-    public static final AttackProtectionCaptchaProviderId RECAPTCHA_ENTERPRISE =
-            new AttackProtectionCaptchaProviderId(Value.RECAPTCHA_ENTERPRISE, "recaptcha_enterprise");
+    public static final AttackProtectionCaptchaProviderId HCAPTCHA = new AttackProtectionCaptchaProviderId(Value.HCAPTCHA, "hcaptcha");
+
+    public static final AttackProtectionCaptchaProviderId RECAPTCHA_ENTERPRISE = new AttackProtectionCaptchaProviderId(Value.RECAPTCHA_ENTERPRISE, "recaptcha_enterprise");
 
     private final Value value;
 
@@ -38,90 +32,48 @@ public final class AttackProtectionCaptchaProviderId {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AttackProtectionCaptchaProviderId
-                        && this.string.equals(((AttackProtectionCaptchaProviderId) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RECAPTCHA_V2:
-                return visitor.visitRecaptchaV2();
-            case AUTH_CHALLENGE:
-                return visitor.visitAuthChallenge();
-            case FRIENDLY_CAPTCHA:
-                return visitor.visitFriendlyCaptcha();
-            case ARKOSE:
-                return visitor.visitArkose();
-            case SIMPLE_CAPTCHA:
-                return visitor.visitSimpleCaptcha();
-            case HCAPTCHA:
-                return visitor.visitHcaptcha();
-            case RECAPTCHA_ENTERPRISE:
-                return visitor.visitRecaptchaEnterprise();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AttackProtectionCaptchaProviderId valueOf(String value) {
-        switch (value) {
-            case "recaptcha_v2":
-                return RECAPTCHA_V2;
-            case "auth_challenge":
-                return AUTH_CHALLENGE;
-            case "friendly_captcha":
-                return FRIENDLY_CAPTCHA;
-            case "arkose":
-                return ARKOSE;
-            case "simple_captcha":
-                return SIMPLE_CAPTCHA;
-            case "hcaptcha":
-                return HCAPTCHA;
-            case "recaptcha_enterprise":
-                return RECAPTCHA_ENTERPRISE;
-            default:
-                return new AttackProtectionCaptchaProviderId(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         ARKOSE,
-
         AUTH_CHALLENGE,
-
         FRIENDLY_CAPTCHA,
-
         HCAPTCHA,
-
         RECAPTCHA_V2,
-
         RECAPTCHA_ENTERPRISE,
-
         SIMPLE_CAPTCHA,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitArkose();
 
         T visitAuthChallenge();

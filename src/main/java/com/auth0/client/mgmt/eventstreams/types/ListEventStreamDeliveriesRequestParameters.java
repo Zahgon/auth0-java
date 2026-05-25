@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListEventStreamDeliveriesRequestParameters.Builder.class)
 public final class ListEventStreamDeliveriesRequestParameters {
+
     private final OptionalNullable<String> statuses;
 
     private final OptionalNullable<String> eventTypes;
@@ -36,14 +37,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListEventStreamDeliveriesRequestParameters(
-            OptionalNullable<String> statuses,
-            OptionalNullable<String> eventTypes,
-            OptionalNullable<String> dateFrom,
-            OptionalNullable<String> dateTo,
-            OptionalNullable<String> from,
-            OptionalNullable<Integer> take,
-            Map<String, Object> additionalProperties) {
+    private ListEventStreamDeliveriesRequestParameters(OptionalNullable<String> statuses, OptionalNullable<String> eventTypes, OptionalNullable<String> dateFrom, OptionalNullable<String> dateTo, OptionalNullable<String> from, OptionalNullable<Integer> take, Map<String, Object> additionalProperties) {
         this.statuses = statuses;
         this.eventTypes = eventTypes;
         this.dateFrom = dateFrom;
@@ -58,10 +52,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getStatuses() {
-        if (statuses == null) {
-            return OptionalNullable.absent();
-        }
-        return statuses;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,10 +60,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getEventTypes() {
-        if (eventTypes == null) {
-            return OptionalNullable.absent();
-        }
-        return eventTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,10 +68,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getDateFrom() {
-        if (dateFrom == null) {
-            return OptionalNullable.absent();
-        }
-        return dateFrom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,10 +76,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getDateTo() {
-        if (dateTo == null) {
-            return OptionalNullable.absent();
-        }
-        return dateTo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,10 +84,7 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,49 +92,40 @@ public final class ListEventStreamDeliveriesRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getTake() {
-        if (take == null) {
-            return OptionalNullable.absent();
-        }
-        return take;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListEventStreamDeliveriesRequestParameters
-                && equalTo((ListEventStreamDeliveriesRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListEventStreamDeliveriesRequestParameters other) {
-        return statuses.equals(other.statuses)
-                && eventTypes.equals(other.eventTypes)
-                && dateFrom.equals(other.dateFrom)
-                && dateTo.equals(other.dateTo)
-                && from.equals(other.from)
-                && take.equals(other.take);
+        return statuses.equals(other.statuses) && eventTypes.equals(other.eventTypes) && dateFrom.equals(other.dateFrom) && dateTo.equals(other.dateTo) && from.equals(other.from) && take.equals(other.take);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.statuses, this.eventTypes, this.dateFrom, this.dateTo, this.from, this.take);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> statuses = OptionalNullable.absent();
 
         private OptionalNullable<String> eventTypes = OptionalNullable.absent();
@@ -171,16 +141,11 @@ public final class ListEventStreamDeliveriesRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListEventStreamDeliveriesRequestParameters other) {
-            statuses(other.getStatuses());
-            eventTypes(other.getEventTypes());
-            dateFrom(other.getDateFrom());
-            dateTo(other.getDateTo());
-            from(other.getFrom());
-            take(other.getTake());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -188,33 +153,19 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "statuses", nulls = Nulls.SKIP)
         public Builder statuses(@Nullable OptionalNullable<String> statuses) {
-            this.statuses = statuses;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder statuses(String statuses) {
-            this.statuses = OptionalNullable.of(statuses);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder statuses(Optional<String> statuses) {
-            if (statuses.isPresent()) {
-                this.statuses = OptionalNullable.of(statuses.get());
-            } else {
-                this.statuses = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder statuses(com.auth0.client.mgmt.core.Nullable<String> statuses) {
-            if (statuses.isNull()) {
-                this.statuses = OptionalNullable.ofNull();
-            } else if (statuses.isEmpty()) {
-                this.statuses = OptionalNullable.absent();
-            } else {
-                this.statuses = OptionalNullable.of(statuses.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -222,33 +173,19 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "event_types", nulls = Nulls.SKIP)
         public Builder eventTypes(@Nullable OptionalNullable<String> eventTypes) {
-            this.eventTypes = eventTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder eventTypes(String eventTypes) {
-            this.eventTypes = OptionalNullable.of(eventTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder eventTypes(Optional<String> eventTypes) {
-            if (eventTypes.isPresent()) {
-                this.eventTypes = OptionalNullable.of(eventTypes.get());
-            } else {
-                this.eventTypes = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder eventTypes(com.auth0.client.mgmt.core.Nullable<String> eventTypes) {
-            if (eventTypes.isNull()) {
-                this.eventTypes = OptionalNullable.ofNull();
-            } else if (eventTypes.isEmpty()) {
-                this.eventTypes = OptionalNullable.absent();
-            } else {
-                this.eventTypes = OptionalNullable.of(eventTypes.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -256,33 +193,19 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "date_from", nulls = Nulls.SKIP)
         public Builder dateFrom(@Nullable OptionalNullable<String> dateFrom) {
-            this.dateFrom = dateFrom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateFrom(String dateFrom) {
-            this.dateFrom = OptionalNullable.of(dateFrom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateFrom(Optional<String> dateFrom) {
-            if (dateFrom.isPresent()) {
-                this.dateFrom = OptionalNullable.of(dateFrom.get());
-            } else {
-                this.dateFrom = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateFrom(com.auth0.client.mgmt.core.Nullable<String> dateFrom) {
-            if (dateFrom.isNull()) {
-                this.dateFrom = OptionalNullable.ofNull();
-            } else if (dateFrom.isEmpty()) {
-                this.dateFrom = OptionalNullable.absent();
-            } else {
-                this.dateFrom = OptionalNullable.of(dateFrom.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -290,33 +213,19 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "date_to", nulls = Nulls.SKIP)
         public Builder dateTo(@Nullable OptionalNullable<String> dateTo) {
-            this.dateTo = dateTo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateTo(String dateTo) {
-            this.dateTo = OptionalNullable.of(dateTo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateTo(Optional<String> dateTo) {
-            if (dateTo.isPresent()) {
-                this.dateTo = OptionalNullable.of(dateTo.get());
-            } else {
-                this.dateTo = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dateTo(com.auth0.client.mgmt.core.Nullable<String> dateTo) {
-            if (dateTo.isNull()) {
-                this.dateTo = OptionalNullable.ofNull();
-            } else if (dateTo.isEmpty()) {
-                this.dateTo = OptionalNullable.absent();
-            } else {
-                this.dateTo = OptionalNullable.of(dateTo.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -324,33 +233,19 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -358,48 +253,31 @@ public final class ListEventStreamDeliveriesRequestParameters {
          */
         @JsonSetter(value = "take", nulls = Nulls.SKIP)
         public Builder take(@Nullable OptionalNullable<Integer> take) {
-            this.take = take;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Integer take) {
-            this.take = OptionalNullable.of(take);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Optional<Integer> take) {
-            if (take.isPresent()) {
-                this.take = OptionalNullable.of(take.get());
-            } else {
-                this.take = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(com.auth0.client.mgmt.core.Nullable<Integer> take) {
-            if (take.isNull()) {
-                this.take = OptionalNullable.ofNull();
-            } else if (take.isEmpty()) {
-                this.take = OptionalNullable.absent();
-            } else {
-                this.take = OptionalNullable.of(take.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListEventStreamDeliveriesRequestParameters build() {
-            return new ListEventStreamDeliveriesRequestParameters(
-                    statuses, eventTypes, dateFrom, dateTo, from, take, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

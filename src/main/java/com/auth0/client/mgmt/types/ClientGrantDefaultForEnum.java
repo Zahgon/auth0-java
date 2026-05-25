@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientGrantDefaultForEnum {
-    public static final ClientGrantDefaultForEnum THIRD_PARTY_CLIENTS =
-            new ClientGrantDefaultForEnum(Value.THIRD_PARTY_CLIENTS, "third_party_clients");
+
+    public static final ClientGrantDefaultForEnum THIRD_PARTY_CLIENTS = new ClientGrantDefaultForEnum(Value.THIRD_PARTY_CLIENTS, "third_party_clients");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ClientGrantDefaultForEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientGrantDefaultForEnum
-                        && this.string.equals(((ClientGrantDefaultForEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case THIRD_PARTY_CLIENTS:
-                return visitor.visitThirdPartyClients();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientGrantDefaultForEnum valueOf(String value) {
-        switch (value) {
-            case "third_party_clients":
-                return THIRD_PARTY_CLIENTS;
-            default:
-                return new ClientGrantDefaultForEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        THIRD_PARTY_CLIENTS,
 
-        UNKNOWN
+        THIRD_PARTY_CLIENTS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitThirdPartyClients();
 
         T visitUnknown(String unknownType);

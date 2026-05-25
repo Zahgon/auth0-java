@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingThemeColorsCaptchaWidgetThemeEnum {
-    public static final BrandingThemeColorsCaptchaWidgetThemeEnum LIGHT =
-            new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.LIGHT, "light");
 
-    public static final BrandingThemeColorsCaptchaWidgetThemeEnum DARK =
-            new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.DARK, "dark");
+    public static final BrandingThemeColorsCaptchaWidgetThemeEnum LIGHT = new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.LIGHT, "light");
 
-    public static final BrandingThemeColorsCaptchaWidgetThemeEnum AUTO =
-            new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.AUTO, "auto");
+    public static final BrandingThemeColorsCaptchaWidgetThemeEnum DARK = new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.DARK, "dark");
+
+    public static final BrandingThemeColorsCaptchaWidgetThemeEnum AUTO = new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.AUTO, "auto");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class BrandingThemeColorsCaptchaWidgetThemeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingThemeColorsCaptchaWidgetThemeEnum
-                        && this.string.equals(((BrandingThemeColorsCaptchaWidgetThemeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LIGHT:
-                return visitor.visitLight();
-            case DARK:
-                return visitor.visitDark();
-            case AUTO:
-                return visitor.visitAuto();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingThemeColorsCaptchaWidgetThemeEnum valueOf(String value) {
-        switch (value) {
-            case "light":
-                return LIGHT;
-            case "dark":
-                return DARK;
-            case "auto":
-                return AUTO;
-            default:
-                return new BrandingThemeColorsCaptchaWidgetThemeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTO,
 
-        DARK,
-
-        LIGHT,
-
-        UNKNOWN
+        AUTO, DARK, LIGHT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuto();
 
         T visitDark();

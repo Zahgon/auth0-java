@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionTokenEndpointAuthMethodEnum {
-    public static final ConnectionTokenEndpointAuthMethodEnum PRIVATE_KEY_JWT =
-            new ConnectionTokenEndpointAuthMethodEnum(Value.PRIVATE_KEY_JWT, "private_key_jwt");
 
-    public static final ConnectionTokenEndpointAuthMethodEnum CLIENT_SECRET_POST =
-            new ConnectionTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_POST, "client_secret_post");
+    public static final ConnectionTokenEndpointAuthMethodEnum PRIVATE_KEY_JWT = new ConnectionTokenEndpointAuthMethodEnum(Value.PRIVATE_KEY_JWT, "private_key_jwt");
+
+    public static final ConnectionTokenEndpointAuthMethodEnum CLIENT_SECRET_POST = new ConnectionTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_POST, "client_secret_post");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionTokenEndpointAuthMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionTokenEndpointAuthMethodEnum
-                        && this.string.equals(((ConnectionTokenEndpointAuthMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PRIVATE_KEY_JWT:
-                return visitor.visitPrivateKeyJwt();
-            case CLIENT_SECRET_POST:
-                return visitor.visitClientSecretPost();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionTokenEndpointAuthMethodEnum valueOf(String value) {
-        switch (value) {
-            case "private_key_jwt":
-                return PRIVATE_KEY_JWT;
-            case "client_secret_post":
-                return CLIENT_SECRET_POST;
-            default:
-                return new ConnectionTokenEndpointAuthMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CLIENT_SECRET_POST,
 
-        PRIVATE_KEY_JWT,
-
-        UNKNOWN
+        CLIENT_SECRET_POST, PRIVATE_KEY_JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitClientSecretPost();
 
         T visitPrivateKeyJwt();

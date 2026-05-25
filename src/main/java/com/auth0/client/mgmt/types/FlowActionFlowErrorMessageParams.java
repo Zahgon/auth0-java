@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionFlowErrorMessageParams.Builder.class)
 public final class FlowActionFlowErrorMessageParams {
+
     private final String message;
 
     private final Map<String, Object> additionalProperties;
@@ -30,18 +31,17 @@ public final class FlowActionFlowErrorMessageParams {
 
     @JsonProperty("message")
     public String getMessage() {
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionFlowErrorMessageParams && equalTo((FlowActionFlowErrorMessageParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionFlowErrorMessageParams other) {
@@ -50,25 +50,27 @@ public final class FlowActionFlowErrorMessageParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MessageStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MessageStage {
+
         _FinalStage message(@NotNull String message);
 
         Builder from(FlowActionFlowErrorMessageParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionFlowErrorMessageParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -78,41 +80,39 @@ public final class FlowActionFlowErrorMessageParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MessageStage, _FinalStage {
+
         private String message;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionFlowErrorMessageParams other) {
-            message(other.getMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("message")
         public _FinalStage message(@NotNull String message) {
-            this.message = Objects.requireNonNull(message, "message must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionFlowErrorMessageParams build() {
-            return new FlowActionFlowErrorMessageParams(message, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

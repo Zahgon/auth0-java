@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateSupplementalSignalsRequestContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSupplementalSignalsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSupplementalSignalsClient rawClient;
@@ -24,36 +25,34 @@ public class AsyncSupplementalSignalsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSupplementalSignalsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the supplemental signals configuration for a tenant.
      */
     public CompletableFuture<GetSupplementalSignalsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the supplemental signals configuration for a tenant.
      */
     public CompletableFuture<GetSupplementalSignalsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the supplemental signals configuration for a tenant.
      */
-    public CompletableFuture<PatchSupplementalSignalsResponseContent> patch(
-            UpdateSupplementalSignalsRequestContent request) {
-        return this.rawClient.patch(request).thenApply(response -> response.body());
+    public CompletableFuture<PatchSupplementalSignalsResponseContent> patch(UpdateSupplementalSignalsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the supplemental signals configuration for a tenant.
      */
-    public CompletableFuture<PatchSupplementalSignalsResponseContent> patch(
-            UpdateSupplementalSignalsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.patch(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<PatchSupplementalSignalsResponseContent> patch(UpdateSupplementalSignalsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

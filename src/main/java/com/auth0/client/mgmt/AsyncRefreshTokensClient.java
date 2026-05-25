@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.UpdateRefreshTokenResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRefreshTokensClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRefreshTokensClient rawClient;
@@ -28,108 +29,104 @@ public class AsyncRefreshTokensClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRefreshTokensClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of refresh tokens for a specific user, with optional filtering by client ID. Results are sorted by credential_id ascending.
      */
-    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(
-            GetRefreshTokensRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(GetRefreshTokensRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of refresh tokens for a specific user, with optional filtering by client ID. Results are sorted by credential_id ascending.
      */
-    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(
-            GetRefreshTokensRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<RefreshTokenResponseContent>> list(GetRefreshTokensRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke refresh tokens in bulk by ID list, user, user+client, or client.
      */
     public CompletableFuture<Void> revoke() {
-        return this.rawClient.revoke().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke refresh tokens in bulk by ID list, user, user+client, or client.
      */
     public CompletableFuture<Void> revoke(RequestOptions requestOptions) {
-        return this.rawClient.revoke(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke refresh tokens in bulk by ID list, user, user+client, or client.
      */
     public CompletableFuture<Void> revoke(RevokeRefreshTokensRequestContent request) {
-        return this.rawClient.revoke(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke refresh tokens in bulk by ID list, user, user+client, or client.
      */
     public CompletableFuture<Void> revoke(RevokeRefreshTokensRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.revoke(request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve refresh token information.
      */
     public CompletableFuture<GetRefreshTokenResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve refresh token information.
      */
     public CompletableFuture<GetRefreshTokenResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a refresh token by its ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a refresh token by its ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a refresh token by its ID.
      */
     public CompletableFuture<UpdateRefreshTokenResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a refresh token by its ID.
      */
     public CompletableFuture<UpdateRefreshTokenResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a refresh token by its ID.
      */
-    public CompletableFuture<UpdateRefreshTokenResponseContent> update(
-            String id, UpdateRefreshTokenRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateRefreshTokenResponseContent> update(String id, UpdateRefreshTokenRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a refresh token by its ID.
      */
-    public CompletableFuture<UpdateRefreshTokenResponseContent> update(
-            String id, UpdateRefreshTokenRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateRefreshTokenResponseContent> update(String id, UpdateRefreshTokenRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

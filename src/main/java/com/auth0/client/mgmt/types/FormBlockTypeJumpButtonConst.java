@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypeJumpButtonConst {
-    public static final FormBlockTypeJumpButtonConst JUMP_BUTTON =
-            new FormBlockTypeJumpButtonConst(Value.JUMP_BUTTON, "JUMP_BUTTON");
+
+    public static final FormBlockTypeJumpButtonConst JUMP_BUTTON = new FormBlockTypeJumpButtonConst(Value.JUMP_BUTTON, "JUMP_BUTTON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormBlockTypeJumpButtonConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypeJumpButtonConst
-                        && this.string.equals(((FormBlockTypeJumpButtonConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case JUMP_BUTTON:
-                return visitor.visitJumpButton();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypeJumpButtonConst valueOf(String value) {
-        switch (value) {
-            case "JUMP_BUTTON":
-                return JUMP_BUTTON;
-            default:
-                return new FormBlockTypeJumpButtonConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        JUMP_BUTTON,
 
-        UNKNOWN
+        JUMP_BUTTON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitJumpButton();
 
         T visitUnknown(String unknownType);

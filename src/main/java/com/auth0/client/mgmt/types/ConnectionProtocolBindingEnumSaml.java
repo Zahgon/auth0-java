@@ -7,15 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionProtocolBindingEnumSaml {
-    public static final ConnectionProtocolBindingEnumSaml URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT =
-            new ConnectionProtocolBindingEnumSaml(
-                    Value.URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT,
-                    "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect");
 
-    public static final ConnectionProtocolBindingEnumSaml URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST =
-            new ConnectionProtocolBindingEnumSaml(
-                    Value.URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST,
-                    "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST");
+    public static final ConnectionProtocolBindingEnumSaml URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT = new ConnectionProtocolBindingEnumSaml(Value.URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT, "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect");
+
+    public static final ConnectionProtocolBindingEnumSaml URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST = new ConnectionProtocolBindingEnumSaml(Value.URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST, "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST");
 
     private final Value value;
 
@@ -27,60 +22,41 @@ public final class ConnectionProtocolBindingEnumSaml {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionProtocolBindingEnumSaml
-                        && this.string.equals(((ConnectionProtocolBindingEnumSaml) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT:
-                return visitor.visitUrnOasisNamesTcSaml20BindingsHttpRedirect();
-            case URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST:
-                return visitor.visitUrnOasisNamesTcSaml20BindingsHttpPost();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionProtocolBindingEnumSaml valueOf(String value) {
-        switch (value) {
-            case "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect":
-                return URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT;
-            case "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST":
-                return URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST;
-            default:
-                return new ConnectionProtocolBindingEnumSaml(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST,
 
-        URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT,
-
-        UNKNOWN
+        URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_POST, URN_OASIS_NAMES_TC_SAML20BINDINGS_HTTP_REDIRECT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUrnOasisNamesTcSaml20BindingsHttpPost();
 
         T visitUrnOasisNamesTcSaml20BindingsHttpRedirect();

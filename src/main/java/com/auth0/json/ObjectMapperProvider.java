@@ -11,12 +11,13 @@ public class ObjectMapperProvider {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     // prevent instantiation
-    private ObjectMapperProvider() {}
+    private ObjectMapperProvider() {
+    }
 
     /**
      * @return the {@code ObjectMapper} instance to process JSON data
      */
     public static ObjectMapper getMapper() {
-        return objectMapper;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

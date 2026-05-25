@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldCardsConfigOption.Builder.class)
 public final class FormFieldCardsConfigOption {
+
     private final String value;
 
     private final String label;
@@ -27,8 +28,7 @@ public final class FormFieldCardsConfigOption {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldCardsConfigOption(
-            String value, String label, String imageUrl, Map<String, Object> additionalProperties) {
+    private FormFieldCardsConfigOption(String value, String label, String imageUrl, Map<String, Object> additionalProperties) {
         this.value = value;
         this.label = label;
         this.imageUrl = imageUrl;
@@ -37,28 +37,27 @@ public final class FormFieldCardsConfigOption {
 
     @JsonProperty("value")
     public String getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("label")
     public String getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("image_url")
     public String getImageUrl() {
-        return imageUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldCardsConfigOption && equalTo((FormFieldCardsConfigOption) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldCardsConfigOption other) {
@@ -67,33 +66,37 @@ public final class FormFieldCardsConfigOption {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value, this.label, this.imageUrl);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ValueStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ValueStage {
+
         LabelStage value(@NotNull String value);
 
         Builder from(FormFieldCardsConfigOption other);
     }
 
     public interface LabelStage {
+
         ImageUrlStage label(@NotNull String label);
     }
 
     public interface ImageUrlStage {
+
         _FinalStage imageUrl(@NotNull String imageUrl);
     }
 
     public interface _FinalStage {
+
         FormFieldCardsConfigOption build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -103,6 +106,7 @@ public final class FormFieldCardsConfigOption {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ValueStage, LabelStage, ImageUrlStage, _FinalStage {
+
         private String value;
 
         private String label;
@@ -112,52 +116,45 @@ public final class FormFieldCardsConfigOption {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldCardsConfigOption other) {
-            value(other.getValue());
-            label(other.getLabel());
-            imageUrl(other.getImageUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("value")
         public LabelStage value(@NotNull String value) {
-            this.value = Objects.requireNonNull(value, "value must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("label")
         public ImageUrlStage label(@NotNull String label) {
-            this.label = Objects.requireNonNull(label, "label must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("image_url")
         public _FinalStage imageUrl(@NotNull String imageUrl) {
-            this.imageUrl = Objects.requireNonNull(imageUrl, "imageUrl must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldCardsConfigOption build() {
-            return new FormFieldCardsConfigOption(value, label, imageUrl, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

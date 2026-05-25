@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TwilioProviderConfiguration.Builder.class)
 public final class TwilioProviderConfiguration {
+
     private final Optional<String> defaultFrom;
 
     private final Optional<String> mssid;
@@ -33,12 +34,7 @@ public final class TwilioProviderConfiguration {
 
     private final Map<String, Object> additionalProperties;
 
-    private TwilioProviderConfiguration(
-            Optional<String> defaultFrom,
-            Optional<String> mssid,
-            String sid,
-            List<TwilioProviderDeliveryMethodEnum> deliveryMethods,
-            Map<String, Object> additionalProperties) {
+    private TwilioProviderConfiguration(Optional<String> defaultFrom, Optional<String> mssid, String sid, List<TwilioProviderDeliveryMethodEnum> deliveryMethods, Map<String, Object> additionalProperties) {
         this.defaultFrom = defaultFrom;
         this.mssid = mssid;
         this.sid = sid;
@@ -48,63 +44,61 @@ public final class TwilioProviderConfiguration {
 
     @JsonProperty("default_from")
     public Optional<String> getDefaultFrom() {
-        return defaultFrom;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mssid")
     public Optional<String> getMssid() {
-        return mssid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sid")
     public String getSid() {
-        return sid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("delivery_methods")
     public List<TwilioProviderDeliveryMethodEnum> getDeliveryMethods() {
-        return deliveryMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TwilioProviderConfiguration && equalTo((TwilioProviderConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TwilioProviderConfiguration other) {
-        return defaultFrom.equals(other.defaultFrom)
-                && mssid.equals(other.mssid)
-                && sid.equals(other.sid)
-                && deliveryMethods.equals(other.deliveryMethods);
+        return defaultFrom.equals(other.defaultFrom) && mssid.equals(other.mssid) && sid.equals(other.sid) && deliveryMethods.equals(other.deliveryMethods);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.defaultFrom, this.mssid, this.sid, this.deliveryMethods);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SidStage {
+
         _FinalStage sid(@NotNull String sid);
 
         Builder from(TwilioProviderConfiguration other);
     }
 
     public interface _FinalStage {
+
         TwilioProviderConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -128,6 +122,7 @@ public final class TwilioProviderConfiguration {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SidStage, _FinalStage {
+
         private String sid;
 
         private List<TwilioProviderDeliveryMethodEnum> deliveryMethods = new ArrayList<>();
@@ -139,89 +134,71 @@ public final class TwilioProviderConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(TwilioProviderConfiguration other) {
-            defaultFrom(other.getDefaultFrom());
-            mssid(other.getMssid());
-            sid(other.getSid());
-            deliveryMethods(other.getDeliveryMethods());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("sid")
         public _FinalStage sid(@NotNull String sid) {
-            this.sid = Objects.requireNonNull(sid, "sid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addAllDeliveryMethods(List<TwilioProviderDeliveryMethodEnum> deliveryMethods) {
-            if (deliveryMethods != null) {
-                this.deliveryMethods.addAll(deliveryMethods);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage addDeliveryMethods(TwilioProviderDeliveryMethodEnum deliveryMethods) {
-            this.deliveryMethods.add(deliveryMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "delivery_methods", nulls = Nulls.SKIP)
         public _FinalStage deliveryMethods(List<TwilioProviderDeliveryMethodEnum> deliveryMethods) {
-            this.deliveryMethods.clear();
-            if (deliveryMethods != null) {
-                this.deliveryMethods.addAll(deliveryMethods);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage mssid(String mssid) {
-            this.mssid = Optional.ofNullable(mssid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "mssid", nulls = Nulls.SKIP)
         public _FinalStage mssid(Optional<String> mssid) {
-            this.mssid = mssid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage defaultFrom(String defaultFrom) {
-            this.defaultFrom = Optional.ofNullable(defaultFrom);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "default_from", nulls = Nulls.SKIP)
         public _FinalStage defaultFrom(Optional<String> defaultFrom) {
-            this.defaultFrom = defaultFrom;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public TwilioProviderConfiguration build() {
-            return new TwilioProviderConfiguration(defaultFrom, mssid, sid, deliveryMethods, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

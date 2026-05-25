@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DeviceCredential.Builder.class)
 public final class DeviceCredential {
+
     private final Optional<String> id;
 
     private final Optional<String> deviceName;
@@ -34,14 +35,7 @@ public final class DeviceCredential {
 
     private final Map<String, Object> additionalProperties;
 
-    private DeviceCredential(
-            Optional<String> id,
-            Optional<String> deviceName,
-            Optional<String> deviceId,
-            Optional<DeviceCredentialTypeEnum> type,
-            Optional<String> userId,
-            Optional<String> clientId,
-            Map<String, Object> additionalProperties) {
+    private DeviceCredential(Optional<String> id, Optional<String> deviceName, Optional<String> deviceId, Optional<DeviceCredentialTypeEnum> type, Optional<String> userId, Optional<String> clientId, Map<String, Object> additionalProperties) {
         this.id = id;
         this.deviceName = deviceName;
         this.deviceId = deviceId;
@@ -56,7 +50,7 @@ public final class DeviceCredential {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +58,7 @@ public final class DeviceCredential {
      */
     @JsonProperty("device_name")
     public Optional<String> getDeviceName() {
-        return deviceName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +66,7 @@ public final class DeviceCredential {
      */
     @JsonProperty("device_id")
     public Optional<String> getDeviceId() {
-        return deviceId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +74,7 @@ public final class DeviceCredential {
      */
     @JsonProperty("type")
     public Optional<DeviceCredentialTypeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +82,7 @@ public final class DeviceCredential {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,45 +90,40 @@ public final class DeviceCredential {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DeviceCredential && equalTo((DeviceCredential) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DeviceCredential other) {
-        return id.equals(other.id)
-                && deviceName.equals(other.deviceName)
-                && deviceId.equals(other.deviceId)
-                && type.equals(other.type)
-                && userId.equals(other.userId)
-                && clientId.equals(other.clientId);
+        return id.equals(other.id) && deviceName.equals(other.deviceName) && deviceId.equals(other.deviceId) && type.equals(other.type) && userId.equals(other.userId) && clientId.equals(other.clientId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.deviceName, this.deviceId, this.type, this.userId, this.clientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> deviceName = Optional.empty();
@@ -150,16 +139,11 @@ public final class DeviceCredential {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(DeviceCredential other) {
-            id(other.getId());
-            deviceName(other.getDeviceName());
-            deviceId(other.getDeviceId());
-            type(other.getType());
-            userId(other.getUserId());
-            clientId(other.getClientId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,13 +151,11 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -181,13 +163,11 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "device_name", nulls = Nulls.SKIP)
         public Builder deviceName(Optional<String> deviceName) {
-            this.deviceName = deviceName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Optional.ofNullable(deviceName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,13 +175,11 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "device_id", nulls = Nulls.SKIP)
         public Builder deviceId(Optional<String> deviceId) {
-            this.deviceId = deviceId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Optional.ofNullable(deviceId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,13 +187,11 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<DeviceCredentialTypeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(DeviceCredentialTypeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -223,13 +199,11 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -237,27 +211,23 @@ public final class DeviceCredential {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public DeviceCredential build() {
-            return new DeviceCredential(id, deviceName, deviceId, type, userId, clientId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

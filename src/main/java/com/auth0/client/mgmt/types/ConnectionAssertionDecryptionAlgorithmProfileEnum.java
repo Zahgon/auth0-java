@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionAssertionDecryptionAlgorithmProfileEnum {
-    public static final ConnectionAssertionDecryptionAlgorithmProfileEnum V20261 =
-            new ConnectionAssertionDecryptionAlgorithmProfileEnum(Value.V20261, "v2026-1");
+
+    public static final ConnectionAssertionDecryptionAlgorithmProfileEnum V20261 = new ConnectionAssertionDecryptionAlgorithmProfileEnum(Value.V20261, "v2026-1");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionAssertionDecryptionAlgorithmProfileEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionAssertionDecryptionAlgorithmProfileEnum
-                        && this.string.equals(((ConnectionAssertionDecryptionAlgorithmProfileEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case V20261:
-                return visitor.visitV20261();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionAssertionDecryptionAlgorithmProfileEnum valueOf(String value) {
-        switch (value) {
-            case "v2026-1":
-                return V20261;
-            default:
-                return new ConnectionAssertionDecryptionAlgorithmProfileEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        V20261,
 
-        UNKNOWN
+        V20261, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitV20261();
 
         T visitUnknown(String unknownType);

@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientRefreshTokenConfiguration.Builder.class)
 public final class ClientRefreshTokenConfiguration {
+
     private final RefreshTokenRotationTypeEnum rotationType;
 
     private final RefreshTokenExpirationTypeEnum expirationType;
@@ -43,16 +44,7 @@ public final class ClientRefreshTokenConfiguration {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientRefreshTokenConfiguration(
-            RefreshTokenRotationTypeEnum rotationType,
-            RefreshTokenExpirationTypeEnum expirationType,
-            Optional<Integer> leeway,
-            Optional<Integer> tokenLifetime,
-            Optional<Boolean> infiniteTokenLifetime,
-            Optional<Integer> idleTokenLifetime,
-            Optional<Boolean> infiniteIdleTokenLifetime,
-            OptionalNullable<List<ClientRefreshTokenPolicy>> policies,
-            Map<String, Object> additionalProperties) {
+    private ClientRefreshTokenConfiguration(RefreshTokenRotationTypeEnum rotationType, RefreshTokenExpirationTypeEnum expirationType, Optional<Integer> leeway, Optional<Integer> tokenLifetime, Optional<Boolean> infiniteTokenLifetime, Optional<Integer> idleTokenLifetime, Optional<Boolean> infiniteIdleTokenLifetime, OptionalNullable<List<ClientRefreshTokenPolicy>> policies, Map<String, Object> additionalProperties) {
         this.rotationType = rotationType;
         this.expirationType = expirationType;
         this.leeway = leeway;
@@ -66,12 +58,12 @@ public final class ClientRefreshTokenConfiguration {
 
     @JsonProperty("rotation_type")
     public RefreshTokenRotationTypeEnum getRotationType() {
-        return rotationType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("expiration_type")
     public RefreshTokenExpirationTypeEnum getExpirationType() {
-        return expirationType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,7 +71,7 @@ public final class ClientRefreshTokenConfiguration {
      */
     @JsonProperty("leeway")
     public Optional<Integer> getLeeway() {
-        return leeway;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,7 +79,7 @@ public final class ClientRefreshTokenConfiguration {
      */
     @JsonProperty("token_lifetime")
     public Optional<Integer> getTokenLifetime() {
-        return tokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,7 +87,7 @@ public final class ClientRefreshTokenConfiguration {
      */
     @JsonProperty("infinite_token_lifetime")
     public Optional<Boolean> getInfiniteTokenLifetime() {
-        return infiniteTokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +95,7 @@ public final class ClientRefreshTokenConfiguration {
      */
     @JsonProperty("idle_token_lifetime")
     public Optional<Integer> getIdleTokenLifetime() {
-        return idleTokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,7 +103,7 @@ public final class ClientRefreshTokenConfiguration {
      */
     @JsonProperty("infinite_idle_token_lifetime")
     public Optional<Boolean> getInfiniteIdleTokenLifetime() {
-        return infiniteIdleTokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,10 +112,7 @@ public final class ClientRefreshTokenConfiguration {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("policies")
     public OptionalNullable<List<ClientRefreshTokenPolicy>> getPolicies() {
-        if (policies == null) {
-            return OptionalNullable.absent();
-        }
-        return policies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -134,59 +123,46 @@ public final class ClientRefreshTokenConfiguration {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientRefreshTokenConfiguration && equalTo((ClientRefreshTokenConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientRefreshTokenConfiguration other) {
-        return rotationType.equals(other.rotationType)
-                && expirationType.equals(other.expirationType)
-                && leeway.equals(other.leeway)
-                && tokenLifetime.equals(other.tokenLifetime)
-                && infiniteTokenLifetime.equals(other.infiniteTokenLifetime)
-                && idleTokenLifetime.equals(other.idleTokenLifetime)
-                && infiniteIdleTokenLifetime.equals(other.infiniteIdleTokenLifetime)
-                && policies.equals(other.policies);
+        return rotationType.equals(other.rotationType) && expirationType.equals(other.expirationType) && leeway.equals(other.leeway) && tokenLifetime.equals(other.tokenLifetime) && infiniteTokenLifetime.equals(other.infiniteTokenLifetime) && idleTokenLifetime.equals(other.idleTokenLifetime) && infiniteIdleTokenLifetime.equals(other.infiniteIdleTokenLifetime) && policies.equals(other.policies);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.rotationType,
-                this.expirationType,
-                this.leeway,
-                this.tokenLifetime,
-                this.infiniteTokenLifetime,
-                this.idleTokenLifetime,
-                this.infiniteIdleTokenLifetime,
-                this.policies);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static RotationTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface RotationTypeStage {
+
         ExpirationTypeStage rotationType(@NotNull RefreshTokenRotationTypeEnum rotationType);
 
         Builder from(ClientRefreshTokenConfiguration other);
     }
 
     public interface ExpirationTypeStage {
+
         _FinalStage expirationType(@NotNull RefreshTokenExpirationTypeEnum expirationType);
     }
 
     public interface _FinalStage {
+
         ClientRefreshTokenConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -242,6 +218,7 @@ public final class ClientRefreshTokenConfiguration {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements RotationTypeStage, ExpirationTypeStage, _FinalStage {
+
         private RefreshTokenRotationTypeEnum rotationType;
 
         private RefreshTokenExpirationTypeEnum expirationType;
@@ -261,33 +238,24 @@ public final class ClientRefreshTokenConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientRefreshTokenConfiguration other) {
-            rotationType(other.getRotationType());
-            expirationType(other.getExpirationType());
-            leeway(other.getLeeway());
-            tokenLifetime(other.getTokenLifetime());
-            infiniteTokenLifetime(other.getInfiniteTokenLifetime());
-            idleTokenLifetime(other.getIdleTokenLifetime());
-            infiniteIdleTokenLifetime(other.getInfiniteIdleTokenLifetime());
-            policies(other.getPolicies());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("rotation_type")
         public ExpirationTypeStage rotationType(@NotNull RefreshTokenRotationTypeEnum rotationType) {
-            this.rotationType = Objects.requireNonNull(rotationType, "rotationType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("expiration_type")
         public _FinalStage expirationType(@NotNull RefreshTokenExpirationTypeEnum expirationType) {
-            this.expirationType = Objects.requireNonNull(expirationType, "expirationType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -296,14 +264,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage policies(com.auth0.client.mgmt.core.Nullable<List<ClientRefreshTokenPolicy>> policies) {
-            if (policies.isNull()) {
-                this.policies = OptionalNullable.ofNull();
-            } else if (policies.isEmpty()) {
-                this.policies = OptionalNullable.absent();
-            } else {
-                this.policies = OptionalNullable.of(policies.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -312,12 +273,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage policies(Optional<List<ClientRefreshTokenPolicy>> policies) {
-            if (policies.isPresent()) {
-                this.policies = OptionalNullable.of(policies.get());
-            } else {
-                this.policies = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -326,8 +282,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage policies(List<ClientRefreshTokenPolicy> policies) {
-            this.policies = OptionalNullable.of(policies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -336,8 +291,7 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "policies", nulls = Nulls.SKIP)
         public _FinalStage policies(@Nullable OptionalNullable<List<ClientRefreshTokenPolicy>> policies) {
-            this.policies = policies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -346,8 +300,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage infiniteIdleTokenLifetime(Boolean infiniteIdleTokenLifetime) {
-            this.infiniteIdleTokenLifetime = Optional.ofNullable(infiniteIdleTokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,8 +309,7 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "infinite_idle_token_lifetime", nulls = Nulls.SKIP)
         public _FinalStage infiniteIdleTokenLifetime(Optional<Boolean> infiniteIdleTokenLifetime) {
-            this.infiniteIdleTokenLifetime = infiniteIdleTokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -366,8 +318,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage idleTokenLifetime(Integer idleTokenLifetime) {
-            this.idleTokenLifetime = Optional.ofNullable(idleTokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -376,8 +327,7 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "idle_token_lifetime", nulls = Nulls.SKIP)
         public _FinalStage idleTokenLifetime(Optional<Integer> idleTokenLifetime) {
-            this.idleTokenLifetime = idleTokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -386,8 +336,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage infiniteTokenLifetime(Boolean infiniteTokenLifetime) {
-            this.infiniteTokenLifetime = Optional.ofNullable(infiniteTokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -396,8 +345,7 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "infinite_token_lifetime", nulls = Nulls.SKIP)
         public _FinalStage infiniteTokenLifetime(Optional<Boolean> infiniteTokenLifetime) {
-            this.infiniteTokenLifetime = infiniteTokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -406,8 +354,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage tokenLifetime(Integer tokenLifetime) {
-            this.tokenLifetime = Optional.ofNullable(tokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -416,8 +363,7 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "token_lifetime", nulls = Nulls.SKIP)
         public _FinalStage tokenLifetime(Optional<Integer> tokenLifetime) {
-            this.tokenLifetime = tokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -426,8 +372,7 @@ public final class ClientRefreshTokenConfiguration {
          */
         @java.lang.Override
         public _FinalStage leeway(Integer leeway) {
-            this.leeway = Optional.ofNullable(leeway);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -436,34 +381,22 @@ public final class ClientRefreshTokenConfiguration {
         @java.lang.Override
         @JsonSetter(value = "leeway", nulls = Nulls.SKIP)
         public _FinalStage leeway(Optional<Integer> leeway) {
-            this.leeway = leeway;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientRefreshTokenConfiguration build() {
-            return new ClientRefreshTokenConfiguration(
-                    rotationType,
-                    expirationType,
-                    leeway,
-                    tokenLifetime,
-                    infiniteTokenLifetime,
-                    idleTokenLifetime,
-                    infiniteIdleTokenLifetime,
-                    policies,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

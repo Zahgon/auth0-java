@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionTwilioSendSmsAction {
-    public static final FlowActionTwilioSendSmsAction SEND_SMS =
-            new FlowActionTwilioSendSmsAction(Value.SEND_SMS, "SEND_SMS");
+
+    public static final FlowActionTwilioSendSmsAction SEND_SMS = new FlowActionTwilioSendSmsAction(Value.SEND_SMS, "SEND_SMS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionTwilioSendSmsAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionTwilioSendSmsAction
-                        && this.string.equals(((FlowActionTwilioSendSmsAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEND_SMS:
-                return visitor.visitSendSms();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionTwilioSendSmsAction valueOf(String value) {
-        switch (value) {
-            case "SEND_SMS":
-                return SEND_SMS;
-            default:
-                return new FlowActionTwilioSendSmsAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEND_SMS,
 
-        UNKNOWN
+        SEND_SMS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendSms();
 
         T visitUnknown(String unknownType);

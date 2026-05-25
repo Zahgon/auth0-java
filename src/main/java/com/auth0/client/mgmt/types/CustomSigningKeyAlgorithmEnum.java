@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomSigningKeyAlgorithmEnum {
+
     public static final CustomSigningKeyAlgorithmEnum RS512 = new CustomSigningKeyAlgorithmEnum(Value.RS512, "RS512");
 
     public static final CustomSigningKeyAlgorithmEnum ES384 = new CustomSigningKeyAlgorithmEnum(Value.ES384, "ES384");
@@ -35,102 +36,50 @@ public final class CustomSigningKeyAlgorithmEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomSigningKeyAlgorithmEnum
-                        && this.string.equals(((CustomSigningKeyAlgorithmEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RS512:
-                return visitor.visitRs512();
-            case ES384:
-                return visitor.visitEs384();
-            case PS384:
-                return visitor.visitPs384();
-            case ES256:
-                return visitor.visitEs256();
-            case PS256:
-                return visitor.visitPs256();
-            case PS512:
-                return visitor.visitPs512();
-            case ES512:
-                return visitor.visitEs512();
-            case RS384:
-                return visitor.visitRs384();
-            case RS256:
-                return visitor.visitRs256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomSigningKeyAlgorithmEnum valueOf(String value) {
-        switch (value) {
-            case "RS512":
-                return RS512;
-            case "ES384":
-                return ES384;
-            case "PS384":
-                return PS384;
-            case "ES256":
-                return ES256;
-            case "PS256":
-                return PS256;
-            case "PS512":
-                return PS512;
-            case "ES512":
-                return ES512;
-            case "RS384":
-                return RS384;
-            case "RS256":
-                return RS256;
-            default:
-                return new CustomSigningKeyAlgorithmEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         RS256,
-
         RS384,
-
         RS512,
-
         ES256,
-
         ES384,
-
         ES512,
-
         PS256,
-
         PS384,
-
         PS512,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRs256();
 
         T visitRs384();

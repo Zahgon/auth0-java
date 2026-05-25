@@ -16,19 +16,24 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.*;
 
 public class OAuthTokenSupplier implements java.util.function.Supplier<String> {
+
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+
     private static final long BUFFER_SECONDS = 120;
 
     // Shared HTTP client for all OAuth token requests to avoid resource leaks
-    private static final OkHttpClient SHARED_HTTP_CLIENT =
-            new OkHttpClient.Builder().callTimeout(30, TimeUnit.SECONDS).build();
+    private static final OkHttpClient SHARED_HTTP_CLIENT = new OkHttpClient.Builder().callTimeout(30, TimeUnit.SECONDS).build();
 
     private final String clientId;
+
     private final String clientSecret;
+
     private final String tokenUrl;
+
     private final String audience;
 
     private volatile String accessToken;
+
     private volatile Instant expiresAt;
 
     /**
@@ -44,10 +49,8 @@ public class OAuthTokenSupplier implements java.util.function.Supplier<String> {
         if (baseUrl == null || baseUrl.trim().isEmpty()) {
             throw new IllegalArgumentException("baseUrl cannot be null or empty");
         }
-
         this.clientId = clientId;
         this.clientSecret = clientSecret;
-
         String normalizedBaseUrl = baseUrl.replaceAll("/+$", "");
         this.tokenUrl = normalizedBaseUrl + "/oauth/token";
         this.audience = audience != null ? audience : normalizedBaseUrl + "/api/v2/";
@@ -63,14 +66,7 @@ public class OAuthTokenSupplier implements java.util.function.Supplier<String> {
      */
     @Override
     public String get() {
-        if (accessToken == null || Instant.now().isAfter(expiresAt)) {
-            synchronized (this) {
-                if (accessToken == null || Instant.now().isAfter(expiresAt)) {
-                    fetchToken();
-                }
-            }
-        }
-        return accessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,32 +81,19 @@ public class OAuthTokenSupplier implements java.util.function.Supplier<String> {
             requestData.put("client_secret", clientSecret);
             requestData.put("audience", audience);
             requestData.put("grant_type", "client_credentials");
-
             String requestBody = ObjectMappers.JSON_MAPPER.writeValueAsString(requestData);
-
-            Request request = new Request.Builder()
-                    .url(tokenUrl)
-                    .post(RequestBody.create(requestBody, JSON))
-                    .addHeader("Content-Type", "application/json")
-                    .build();
-
+            Request request = new Request.Builder().url(tokenUrl).post(RequestBody.create(requestBody, JSON)).addHeader("Content-Type", "application/json").build();
             try (Response response = SHARED_HTTP_CLIENT.newCall(request).execute()) {
                 if (!response.isSuccessful()) {
-                    throw new OAuthTokenException(
-                            "Failed to fetch OAuth token: HTTP " + response.code() + " - " + response.message());
+                    throw new OAuthTokenException("Failed to fetch OAuth token: HTTP " + response.code() + " - " + response.message());
                 }
-
                 String responseBody = response.body() != null ? response.body().string() : "{}";
                 TokenResponse tokenResponse = ObjectMappers.JSON_MAPPER.readValue(responseBody, TokenResponse.class);
-
                 if (tokenResponse.accessToken == null || tokenResponse.accessToken.isEmpty()) {
                     throw new OAuthTokenException("OAuth token response did not contain an access token");
                 }
-
                 this.accessToken = tokenResponse.accessToken;
-                this.expiresAt = Instant.now()
-                        .plusSeconds(tokenResponse.expiresIn != null ? tokenResponse.expiresIn : 86400)
-                        .minusSeconds(BUFFER_SECONDS);
+                this.expiresAt = Instant.now().plusSeconds(tokenResponse.expiresIn != null ? tokenResponse.expiresIn : 86400).minusSeconds(BUFFER_SECONDS);
             }
         } catch (IOException e) {
             throw new OAuthTokenException("Failed to fetch OAuth token due to network error", e);
@@ -122,6 +105,7 @@ public class OAuthTokenSupplier implements java.util.function.Supplier<String> {
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
     private static class TokenResponse {
+
         @JsonProperty("access_token")
         String accessToken;
 

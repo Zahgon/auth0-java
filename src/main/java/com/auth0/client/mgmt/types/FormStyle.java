@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormStyle.Builder.class)
 public final class FormStyle {
+
     private final Optional<String> css;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class FormStyle {
 
     @JsonProperty("css")
     public Optional<String> getCss() {
-        return css;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormStyle && equalTo((FormStyle) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormStyle other) {
@@ -51,55 +51,52 @@ public final class FormStyle {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.css);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> css = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormStyle other) {
-            css(other.getCss());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "css", nulls = Nulls.SKIP)
         public Builder css(Optional<String> css) {
-            this.css = css;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder css(String css) {
-            this.css = Optional.ofNullable(css);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormStyle build() {
-            return new FormStyle(css, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

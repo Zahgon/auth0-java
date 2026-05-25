@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentWindowsLiveStrategy {
-    public static final ConnectionResponseContentWindowsLiveStrategy WINDOWSLIVE =
-            new ConnectionResponseContentWindowsLiveStrategy(Value.WINDOWSLIVE, "windowslive");
+
+    public static final ConnectionResponseContentWindowsLiveStrategy WINDOWSLIVE = new ConnectionResponseContentWindowsLiveStrategy(Value.WINDOWSLIVE, "windowslive");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentWindowsLiveStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentWindowsLiveStrategy
-                        && this.string.equals(((ConnectionResponseContentWindowsLiveStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case WINDOWSLIVE:
-                return visitor.visitWindowslive();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentWindowsLiveStrategy valueOf(String value) {
-        switch (value) {
-            case "windowslive":
-                return WINDOWSLIVE;
-            default:
-                return new ConnectionResponseContentWindowsLiveStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        WINDOWSLIVE,
 
-        UNKNOWN
+        WINDOWSLIVE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitWindowslive();
 
         T visitUnknown(String unknownType);

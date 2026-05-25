@@ -19,30 +19,29 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionXmlSerializeXmlParams.Builder.class)
 public final class FlowActionXmlSerializeXmlParams {
+
     private final FlowActionXmlSerializeXmlParamsObject object;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionXmlSerializeXmlParams(
-            FlowActionXmlSerializeXmlParamsObject object, Map<String, Object> additionalProperties) {
+    private FlowActionXmlSerializeXmlParams(FlowActionXmlSerializeXmlParamsObject object, Map<String, Object> additionalProperties) {
         this.object = object;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("object")
     public FlowActionXmlSerializeXmlParamsObject getObject() {
-        return object;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionXmlSerializeXmlParams && equalTo((FlowActionXmlSerializeXmlParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionXmlSerializeXmlParams other) {
@@ -51,25 +50,27 @@ public final class FlowActionXmlSerializeXmlParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.object);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ObjectStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ObjectStage {
+
         _FinalStage object(@NotNull FlowActionXmlSerializeXmlParamsObject object);
 
         Builder from(FlowActionXmlSerializeXmlParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionXmlSerializeXmlParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class FlowActionXmlSerializeXmlParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ObjectStage, _FinalStage {
+
         private FlowActionXmlSerializeXmlParamsObject object;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionXmlSerializeXmlParams other) {
-            object(other.getObject());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("object")
         public _FinalStage object(@NotNull FlowActionXmlSerializeXmlParamsObject object) {
-            this.object = Objects.requireNonNull(object, "object must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionXmlSerializeXmlParams build() {
-            return new FlowActionXmlSerializeXmlParams(object, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GuardianEnrollmentStatus {
+
     public static final GuardianEnrollmentStatus PENDING = new GuardianEnrollmentStatus(Value.PENDING, "pending");
 
     public static final GuardianEnrollmentStatus CONFIRMED = new GuardianEnrollmentStatus(Value.CONFIRMED, "confirmed");
@@ -21,60 +22,41 @@ public final class GuardianEnrollmentStatus {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GuardianEnrollmentStatus
-                        && this.string.equals(((GuardianEnrollmentStatus) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PENDING:
-                return visitor.visitPending();
-            case CONFIRMED:
-                return visitor.visitConfirmed();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GuardianEnrollmentStatus valueOf(String value) {
-        switch (value) {
-            case "pending":
-                return PENDING;
-            case "confirmed":
-                return CONFIRMED;
-            default:
-                return new GuardianEnrollmentStatus(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PENDING,
 
-        CONFIRMED,
-
-        UNKNOWN
+        PENDING, CONFIRMED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPending();
 
         T visitConfirmed();

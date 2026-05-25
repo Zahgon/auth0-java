@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = IntegrationRelease.Builder.class)
 public final class IntegrationRelease {
+
     private final Optional<String> id;
 
     private final Optional<ActionTrigger> trigger;
@@ -33,13 +34,7 @@ public final class IntegrationRelease {
 
     private final Map<String, Object> additionalProperties;
 
-    private IntegrationRelease(
-            Optional<String> id,
-            Optional<ActionTrigger> trigger,
-            Optional<IntegrationSemVer> semver,
-            Optional<List<IntegrationRequiredParam>> requiredSecrets,
-            Optional<List<IntegrationRequiredParam>> requiredConfiguration,
-            Map<String, Object> additionalProperties) {
+    private IntegrationRelease(Optional<String> id, Optional<ActionTrigger> trigger, Optional<IntegrationSemVer> semver, Optional<List<IntegrationRequiredParam>> requiredSecrets, Optional<List<IntegrationRequiredParam>> requiredConfiguration, Map<String, Object> additionalProperties) {
         this.id = id;
         this.trigger = trigger;
         this.semver = semver;
@@ -53,17 +48,17 @@ public final class IntegrationRelease {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("trigger")
     public Optional<ActionTrigger> getTrigger() {
-        return trigger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("semver")
     public Optional<IntegrationSemVer> getSemver() {
-        return semver;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +67,7 @@ public final class IntegrationRelease {
      */
     @JsonProperty("required_secrets")
     public Optional<List<IntegrationRequiredParam>> getRequiredSecrets() {
-        return requiredSecrets;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,44 +75,40 @@ public final class IntegrationRelease {
      */
     @JsonProperty("required_configuration")
     public Optional<List<IntegrationRequiredParam>> getRequiredConfiguration() {
-        return requiredConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof IntegrationRelease && equalTo((IntegrationRelease) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(IntegrationRelease other) {
-        return id.equals(other.id)
-                && trigger.equals(other.trigger)
-                && semver.equals(other.semver)
-                && requiredSecrets.equals(other.requiredSecrets)
-                && requiredConfiguration.equals(other.requiredConfiguration);
+        return id.equals(other.id) && trigger.equals(other.trigger) && semver.equals(other.semver) && requiredSecrets.equals(other.requiredSecrets) && requiredConfiguration.equals(other.requiredConfiguration);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.trigger, this.semver, this.requiredSecrets, this.requiredConfiguration);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<ActionTrigger> trigger = Optional.empty();
@@ -131,15 +122,11 @@ public final class IntegrationRelease {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(IntegrationRelease other) {
-            id(other.getId());
-            trigger(other.getTrigger());
-            semver(other.getSemver());
-            requiredSecrets(other.getRequiredSecrets());
-            requiredConfiguration(other.getRequiredConfiguration());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -147,35 +134,29 @@ public final class IntegrationRelease {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "trigger", nulls = Nulls.SKIP)
         public Builder trigger(Optional<ActionTrigger> trigger) {
-            this.trigger = trigger;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder trigger(ActionTrigger trigger) {
-            this.trigger = Optional.ofNullable(trigger);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "semver", nulls = Nulls.SKIP)
         public Builder semver(Optional<IntegrationSemVer> semver) {
-            this.semver = semver;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder semver(IntegrationSemVer semver) {
-            this.semver = Optional.ofNullable(semver);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,13 +165,11 @@ public final class IntegrationRelease {
          */
         @JsonSetter(value = "required_secrets", nulls = Nulls.SKIP)
         public Builder requiredSecrets(Optional<List<IntegrationRequiredParam>> requiredSecrets) {
-            this.requiredSecrets = requiredSecrets;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requiredSecrets(List<IntegrationRequiredParam> requiredSecrets) {
-            this.requiredSecrets = Optional.ofNullable(requiredSecrets);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -198,28 +177,23 @@ public final class IntegrationRelease {
          */
         @JsonSetter(value = "required_configuration", nulls = Nulls.SKIP)
         public Builder requiredConfiguration(Optional<List<IntegrationRequiredParam>> requiredConfiguration) {
-            this.requiredConfiguration = requiredConfiguration;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder requiredConfiguration(List<IntegrationRequiredParam> requiredConfiguration) {
-            this.requiredConfiguration = Optional.ofNullable(requiredConfiguration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public IntegrationRelease build() {
-            return new IntegrationRelease(
-                    id, trigger, semver, requiredSecrets, requiredConfiguration, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

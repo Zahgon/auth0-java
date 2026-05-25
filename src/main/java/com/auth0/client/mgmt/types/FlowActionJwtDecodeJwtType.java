@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJwtDecodeJwtType {
+
     public static final FlowActionJwtDecodeJwtType JWT = new FlowActionJwtDecodeJwtType(Value.JWT, "JWT");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FlowActionJwtDecodeJwtType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJwtDecodeJwtType
-                        && this.string.equals(((FlowActionJwtDecodeJwtType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case JWT:
-                return visitor.visitJwt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJwtDecodeJwtType valueOf(String value) {
-        switch (value) {
-            case "JWT":
-                return JWT;
-            default:
-                return new FlowActionJwtDecodeJwtType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        JWT,
 
-        UNKNOWN
+        JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitJwt();
 
         T visitUnknown(String unknownType);

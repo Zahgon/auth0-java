@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.verifiablecredentials.AsyncVerifiableCredentialsCli
 import java.util.function.Supplier;
 
 public class AsyncManagementApi {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncActionsClient> actionsClient;
@@ -155,182 +156,182 @@ public class AsyncManagementApi {
     }
 
     public AsyncActionsClient actions() {
-        return this.actionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncBrandingClient branding() {
-        return this.brandingClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncClientGrantsClient clientGrants() {
-        return this.clientGrantsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncClientsClient clients() {
-        return this.clientsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncConnectionProfilesClient connectionProfiles() {
-        return this.connectionProfilesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncConnectionsClient connections() {
-        return this.connectionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncCustomDomainsClient customDomains() {
-        return this.customDomainsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncDeviceCredentialsClient deviceCredentials() {
-        return this.deviceCredentialsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncEmailTemplatesClient emailTemplates() {
-        return this.emailTemplatesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncEventStreamsClient eventStreams() {
-        return this.eventStreamsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncEventsClient events() {
-        return this.eventsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncFlowsClient flows() {
-        return this.flowsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncFormsClient forms() {
-        return this.formsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUserGrantsClient userGrants() {
-        return this.userGrantsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncGroupsClient groups() {
-        return this.groupsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncHooksClient hooks() {
-        return this.hooksClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncJobsClient jobs() {
-        return this.jobsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncLogStreamsClient logStreams() {
-        return this.logStreamsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncLogsClient logs() {
-        return this.logsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncNetworkAclsClient networkAcls() {
-        return this.networkAclsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncOrganizationsClient organizations() {
-        return this.organizationsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPromptsClient prompts() {
-        return this.promptsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRefreshTokensClient refreshTokens() {
-        return this.refreshTokensClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncResourceServersClient resourceServers() {
-        return this.resourceServersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRolesClient roles() {
-        return this.rolesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRulesClient rules() {
-        return this.rulesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRulesConfigsClient rulesConfigs() {
-        return this.rulesConfigsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSelfServiceProfilesClient selfServiceProfiles() {
-        return this.selfServiceProfilesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSessionsClient sessions() {
-        return this.sessionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncStatsClient stats() {
-        return this.statsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSupplementalSignalsClient supplementalSignals() {
-        return this.supplementalSignalsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncTicketsClient tickets() {
-        return this.ticketsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncTokenExchangeProfilesClient tokenExchangeProfiles() {
-        return this.tokenExchangeProfilesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUserAttributeProfilesClient userAttributeProfiles() {
-        return this.userAttributeProfilesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUserBlocksClient userBlocks() {
-        return this.userBlocksClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncUsersClient users() {
-        return this.usersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncAnomalyClient anomaly() {
-        return this.anomalyClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncAttackProtectionClient attackProtection() {
-        return this.attackProtectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncEmailsClient emails() {
-        return this.emailsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncGuardianClient guardian() {
-        return this.guardianClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncKeysClient keys() {
-        return this.keysClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRiskAssessmentsClient riskAssessments() {
-        return this.riskAssessmentsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncTenantsClient tenants() {
-        return this.tenantsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncVerifiableCredentialsClient verifiableCredentials() {
-        return this.verifiableCredentialsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AsyncManagementApiBuilder builder() {
-        return new AsyncManagementApiBuilder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -21,14 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListRoleUsersPaginatedResponseContent.Builder.class)
 public final class ListRoleUsersPaginatedResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<RoleUser>> users;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListRoleUsersPaginatedResponseContent(
-            Optional<String> next, Optional<List<RoleUser>> users, Map<String, Object> additionalProperties) {
+    private ListRoleUsersPaginatedResponseContent(Optional<String> next, Optional<List<RoleUser>> users, Map<String, Object> additionalProperties) {
         this.next = next;
         this.users = users;
         this.additionalProperties = additionalProperties;
@@ -36,24 +36,22 @@ public final class ListRoleUsersPaginatedResponseContent {
 
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("users")
     public Optional<List<RoleUser>> getUsers() {
-        return users;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListRoleUsersPaginatedResponseContent
-                && equalTo((ListRoleUsersPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListRoleUsersPaginatedResponseContent other) {
@@ -62,20 +60,21 @@ public final class ListRoleUsersPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.users);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<RoleUser>> users = Optional.empty();
@@ -83,48 +82,41 @@ public final class ListRoleUsersPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListRoleUsersPaginatedResponseContent other) {
-            next(other.getNext());
-            users(other.getUsers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "users", nulls = Nulls.SKIP)
         public Builder users(Optional<List<RoleUser>> users) {
-            this.users = users;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder users(List<RoleUser> users) {
-            this.users = Optional.ofNullable(users);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListRoleUsersPaginatedResponseContent build() {
-            return new ListRoleUsersPaginatedResponseContent(next, users, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

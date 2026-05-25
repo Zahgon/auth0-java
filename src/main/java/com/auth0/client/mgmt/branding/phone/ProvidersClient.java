@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.ListBrandingPhoneProvidersResponseContent;
 import com.auth0.client.mgmt.types.UpdateBrandingPhoneProviderResponseContent;
 
 public class ProvidersClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawProvidersClient rawClient;
@@ -29,36 +30,35 @@ public class ProvidersClient {
      * Get responses with HTTP metadata like headers
      */
     public RawProvidersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone providers</a> details set for a Tenant. A list of fields to include or exclude may also be specified.
      */
     public ListBrandingPhoneProvidersResponseContent list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone providers</a> details set for a Tenant. A list of fields to include or exclude may also be specified.
      */
     public ListBrandingPhoneProvidersResponseContent list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone providers</a> details set for a Tenant. A list of fields to include or exclude may also be specified.
      */
     public ListBrandingPhoneProvidersResponseContent list(ListBrandingPhoneProvidersRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone providers</a> details set for a Tenant. A list of fields to include or exclude may also be specified.
      */
-    public ListBrandingPhoneProvidersResponseContent list(
-            ListBrandingPhoneProvidersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public ListBrandingPhoneProvidersResponseContent list(ListBrandingPhoneProvidersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,44 +66,43 @@ public class ProvidersClient {
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
     public CreateBrandingPhoneProviderResponseContent create(CreateBrandingPhoneProviderRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone provider</a>.
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
-    public CreateBrandingPhoneProviderResponseContent create(
-            CreateBrandingPhoneProviderRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateBrandingPhoneProviderResponseContent create(CreateBrandingPhoneProviderRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone provider</a> details. A list of fields to include or exclude may also be specified.
      */
     public GetBrandingPhoneProviderResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone provider</a> details. A list of fields to include or exclude may also be specified.
      */
     public GetBrandingPhoneProviderResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the configured phone provider.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the configured phone provider.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,7 +110,7 @@ public class ProvidersClient {
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
     public UpdateBrandingPhoneProviderResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,34 +118,30 @@ public class ProvidersClient {
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
     public UpdateBrandingPhoneProviderResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone provider</a>.
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
-    public UpdateBrandingPhoneProviderResponseContent update(
-            String id, UpdateBrandingPhoneProviderRequestContent request) {
-        return this.rawClient.update(id, request).body();
+    public UpdateBrandingPhoneProviderResponseContent update(String id, UpdateBrandingPhoneProviderRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a <a href="https://auth0.com/docs/customize/phone-messages/configure-phone-messaging-providers">phone provider</a>.
      * The <code>credentials</code> object requires different properties depending on the phone provider (which is specified using the <code>name</code> property).
      */
-    public UpdateBrandingPhoneProviderResponseContent update(
-            String id, UpdateBrandingPhoneProviderRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateBrandingPhoneProviderResponseContent update(String id, UpdateBrandingPhoneProviderRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreatePhoneProviderSendTestResponseContent test(
-            String id, CreatePhoneProviderSendTestRequestContent request) {
-        return this.rawClient.test(id, request).body();
+    public CreatePhoneProviderSendTestResponseContent test(String id, CreatePhoneProviderSendTestRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreatePhoneProviderSendTestResponseContent test(
-            String id, CreatePhoneProviderSendTestRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.test(id, request, requestOptions).body();
+    public CreatePhoneProviderSendTestResponseContent test(String id, CreatePhoneProviderSendTestRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

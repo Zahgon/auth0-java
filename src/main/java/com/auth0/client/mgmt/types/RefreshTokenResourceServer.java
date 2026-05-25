@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RefreshTokenResourceServer.Builder.class)
 public final class RefreshTokenResourceServer {
+
     private final Optional<String> audience;
 
     private final Optional<String> scopes;
 
     private final Map<String, Object> additionalProperties;
 
-    private RefreshTokenResourceServer(
-            Optional<String> audience, Optional<String> scopes, Map<String, Object> additionalProperties) {
+    private RefreshTokenResourceServer(Optional<String> audience, Optional<String> scopes, Map<String, Object> additionalProperties) {
         this.audience = audience;
         this.scopes = scopes;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class RefreshTokenResourceServer {
      */
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,18 +46,17 @@ public final class RefreshTokenResourceServer {
      */
     @JsonProperty("scopes")
     public Optional<String> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RefreshTokenResourceServer && equalTo((RefreshTokenResourceServer) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RefreshTokenResourceServer other) {
@@ -66,20 +65,21 @@ public final class RefreshTokenResourceServer {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.audience, this.scopes);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> audience = Optional.empty();
 
         private Optional<String> scopes = Optional.empty();
@@ -87,12 +87,11 @@ public final class RefreshTokenResourceServer {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RefreshTokenResourceServer other) {
-            audience(other.getAudience());
-            scopes(other.getScopes());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -100,13 +99,11 @@ public final class RefreshTokenResourceServer {
          */
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,27 +111,23 @@ public final class RefreshTokenResourceServer {
          */
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<String> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(String scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RefreshTokenResourceServer build() {
-            return new RefreshTokenResourceServer(audience, scopes, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

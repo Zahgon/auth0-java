@@ -13,6 +13,7 @@ import java.util.concurrent.CompletableFuture;
 import okhttp3.MediaType;
 
 public class AsyncUsersImportsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawUsersImportsClient rawClient;
@@ -26,43 +27,36 @@ public class AsyncUsersImportsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawUsersImportsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import users from a <a href="https://auth0.com/docs/users/references/bulk-import-database-schema-examples">formatted file</a> into a connection via a long-running job. When importing users, with or without upsert, the <code>email_verified</code> is set to <code>false</code> when the email address is added or updated. Users must verify their email address. To avoid this behavior, set <code>email_verified</code> to <code>true</code> in the imported data.
      */
-    public CompletableFuture<CreateImportUsersResponseContent> create(
-            File users, CreateImportUsersRequestContent request) {
-        return this.rawClient.create(users, request).thenApply(response -> response.body());
+    public CompletableFuture<CreateImportUsersResponseContent> create(File users, CreateImportUsersRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import users from a <a href="https://auth0.com/docs/users/references/bulk-import-database-schema-examples">formatted file</a> into a connection via a long-running job. When importing users, with or without upsert, the <code>email_verified</code> is set to <code>false</code> when the email address is added or updated. Users must verify their email address. To avoid this behavior, set <code>email_verified</code> to <code>true</code> in the imported data.
      */
-    public CompletableFuture<CreateImportUsersResponseContent> create(
-            File users, CreateImportUsersRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(users, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateImportUsersResponseContent> create(File users, CreateImportUsersRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<CreateImportUsersResponseContent> create(InputStream stream, String filename) {
-        return this.rawClient.create(stream, filename).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateImportUsersResponseContent> create(
-            InputStream stream, String filename, MediaType mediaType) {
-        return this.rawClient.create(stream, filename, mediaType).thenApply(response -> response.body());
+    public CompletableFuture<CreateImportUsersResponseContent> create(InputStream stream, String filename, MediaType mediaType) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateImportUsersResponseContent> create(
-            InputStream stream, String filename, RequestOptions requestOptions) {
-        return this.rawClient.create(stream, filename, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateImportUsersResponseContent> create(InputStream stream, String filename, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreateImportUsersResponseContent> create(
-            InputStream stream, String filename, MediaType mediaType, RequestOptions requestOptions) {
-        return this.rawClient
-                .create(stream, filename, mediaType, requestOptions)
-                .thenApply(response -> response.body());
+    public CompletableFuture<CreateImportUsersResponseContent> create(InputStream stream, String filename, MediaType mediaType, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

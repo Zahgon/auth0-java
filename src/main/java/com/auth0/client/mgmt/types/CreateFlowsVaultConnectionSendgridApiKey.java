@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateFlowsVaultConnectionSendgridApiKey.Builder.class)
 public final class CreateFlowsVaultConnectionSendgridApiKey {
+
     private final String name;
 
     private final FlowsVaultConnectionAppIdSendgridEnum appId;
@@ -27,11 +28,7 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateFlowsVaultConnectionSendgridApiKey(
-            String name,
-            FlowsVaultConnectionAppIdSendgridEnum appId,
-            FlowsVaultConnectioSetupApiKey setup,
-            Map<String, Object> additionalProperties) {
+    private CreateFlowsVaultConnectionSendgridApiKey(String name, FlowsVaultConnectionAppIdSendgridEnum appId, FlowsVaultConnectioSetupApiKey setup, Map<String, Object> additionalProperties) {
         this.name = name;
         this.appId = appId;
         this.setup = setup;
@@ -43,29 +40,27 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_id")
     public FlowsVaultConnectionAppIdSendgridEnum getAppId() {
-        return appId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("setup")
     public FlowsVaultConnectioSetupApiKey getSetup() {
-        return setup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionSendgridApiKey
-                && equalTo((CreateFlowsVaultConnectionSendgridApiKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionSendgridApiKey other) {
@@ -74,19 +69,20 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.appId, this.setup);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Flows Vault Connection name.</p>
          */
@@ -96,14 +92,17 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
     }
 
     public interface AppIdStage {
+
         SetupStage appId(@NotNull FlowsVaultConnectionAppIdSendgridEnum appId);
     }
 
     public interface SetupStage {
+
         _FinalStage setup(@NotNull FlowsVaultConnectioSetupApiKey setup);
     }
 
     public interface _FinalStage {
+
         CreateFlowsVaultConnectionSendgridApiKey build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -113,6 +112,7 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, AppIdStage, SetupStage, _FinalStage {
+
         private String name;
 
         private FlowsVaultConnectionAppIdSendgridEnum appId;
@@ -122,14 +122,12 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateFlowsVaultConnectionSendgridApiKey other) {
-            name(other.getName());
-            appId(other.getAppId());
-            setup(other.getSetup());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -140,39 +138,34 @@ public final class CreateFlowsVaultConnectionSendgridApiKey {
         @java.lang.Override
         @JsonSetter("name")
         public AppIdStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("app_id")
         public SetupStage appId(@NotNull FlowsVaultConnectionAppIdSendgridEnum appId) {
-            this.appId = Objects.requireNonNull(appId, "appId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("setup")
         public _FinalStage setup(@NotNull FlowsVaultConnectioSetupApiKey setup) {
-            this.setup = Objects.requireNonNull(setup, "setup must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateFlowsVaultConnectionSendgridApiKey build() {
-            return new CreateFlowsVaultConnectionSendgridApiKey(name, appId, setup, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

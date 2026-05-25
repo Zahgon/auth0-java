@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PublicKeyCredentialAlgorithmEnum {
-    public static final PublicKeyCredentialAlgorithmEnum PS256 =
-            new PublicKeyCredentialAlgorithmEnum(Value.PS256, "PS256");
 
-    public static final PublicKeyCredentialAlgorithmEnum RS384 =
-            new PublicKeyCredentialAlgorithmEnum(Value.RS384, "RS384");
+    public static final PublicKeyCredentialAlgorithmEnum PS256 = new PublicKeyCredentialAlgorithmEnum(Value.PS256, "PS256");
 
-    public static final PublicKeyCredentialAlgorithmEnum RS256 =
-            new PublicKeyCredentialAlgorithmEnum(Value.RS256, "RS256");
+    public static final PublicKeyCredentialAlgorithmEnum RS384 = new PublicKeyCredentialAlgorithmEnum(Value.RS384, "RS384");
+
+    public static final PublicKeyCredentialAlgorithmEnum RS256 = new PublicKeyCredentialAlgorithmEnum(Value.RS256, "RS256");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class PublicKeyCredentialAlgorithmEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PublicKeyCredentialAlgorithmEnum
-                        && this.string.equals(((PublicKeyCredentialAlgorithmEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PS256:
-                return visitor.visitPs256();
-            case RS384:
-                return visitor.visitRs384();
-            case RS256:
-                return visitor.visitRs256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PublicKeyCredentialAlgorithmEnum valueOf(String value) {
-        switch (value) {
-            case "PS256":
-                return PS256;
-            case "RS384":
-                return RS384;
-            case "RS256":
-                return RS256;
-            default:
-                return new PublicKeyCredentialAlgorithmEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RS256,
 
-        RS384,
-
-        PS256,
-
-        UNKNOWN
+        RS256, RS384, PS256, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRs256();
 
         T visitRs384();

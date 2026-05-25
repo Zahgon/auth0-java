@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionActivecampaignListContactsAction {
-    public static final FlowActionActivecampaignListContactsAction LIST_CONTACTS =
-            new FlowActionActivecampaignListContactsAction(Value.LIST_CONTACTS, "LIST_CONTACTS");
+
+    public static final FlowActionActivecampaignListContactsAction LIST_CONTACTS = new FlowActionActivecampaignListContactsAction(Value.LIST_CONTACTS, "LIST_CONTACTS");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionActivecampaignListContactsAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionActivecampaignListContactsAction
-                        && this.string.equals(((FlowActionActivecampaignListContactsAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LIST_CONTACTS:
-                return visitor.visitListContacts();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionActivecampaignListContactsAction valueOf(String value) {
-        switch (value) {
-            case "LIST_CONTACTS":
-                return LIST_CONTACTS;
-            default:
-                return new FlowActionActivecampaignListContactsAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LIST_CONTACTS,
 
-        UNKNOWN
+        LIST_CONTACTS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitListContacts();
 
         T visitUnknown(String unknownType);

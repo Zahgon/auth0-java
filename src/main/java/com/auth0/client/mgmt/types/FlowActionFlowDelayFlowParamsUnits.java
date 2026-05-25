@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowDelayFlowParamsUnits {
-    public static final FlowActionFlowDelayFlowParamsUnits SECONDS =
-            new FlowActionFlowDelayFlowParamsUnits(Value.SECONDS, "SECONDS");
 
-    public static final FlowActionFlowDelayFlowParamsUnits MINUTES =
-            new FlowActionFlowDelayFlowParamsUnits(Value.MINUTES, "MINUTES");
+    public static final FlowActionFlowDelayFlowParamsUnits SECONDS = new FlowActionFlowDelayFlowParamsUnits(Value.SECONDS, "SECONDS");
 
-    public static final FlowActionFlowDelayFlowParamsUnits HOURS =
-            new FlowActionFlowDelayFlowParamsUnits(Value.HOURS, "HOURS");
+    public static final FlowActionFlowDelayFlowParamsUnits MINUTES = new FlowActionFlowDelayFlowParamsUnits(Value.MINUTES, "MINUTES");
 
-    public static final FlowActionFlowDelayFlowParamsUnits DAYS =
-            new FlowActionFlowDelayFlowParamsUnits(Value.DAYS, "DAYS");
+    public static final FlowActionFlowDelayFlowParamsUnits HOURS = new FlowActionFlowDelayFlowParamsUnits(Value.HOURS, "HOURS");
+
+    public static final FlowActionFlowDelayFlowParamsUnits DAYS = new FlowActionFlowDelayFlowParamsUnits(Value.DAYS, "DAYS");
 
     private final Value value;
 
@@ -29,72 +26,41 @@ public final class FlowActionFlowDelayFlowParamsUnits {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowDelayFlowParamsUnits
-                        && this.string.equals(((FlowActionFlowDelayFlowParamsUnits) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SECONDS:
-                return visitor.visitSeconds();
-            case MINUTES:
-                return visitor.visitMinutes();
-            case HOURS:
-                return visitor.visitHours();
-            case DAYS:
-                return visitor.visitDays();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowDelayFlowParamsUnits valueOf(String value) {
-        switch (value) {
-            case "SECONDS":
-                return SECONDS;
-            case "MINUTES":
-                return MINUTES;
-            case "HOURS":
-                return HOURS;
-            case "DAYS":
-                return DAYS;
-            default:
-                return new FlowActionFlowDelayFlowParamsUnits(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SECONDS,
 
-        MINUTES,
-
-        HOURS,
-
-        DAYS,
-
-        UNKNOWN
+        SECONDS, MINUTES, HOURS, DAYS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSeconds();
 
         T visitMinutes();

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionTokenEndpointJwtcaAudFormatEnumOidc {
-    public static final ConnectionTokenEndpointJwtcaAudFormatEnumOidc ISSUER =
-            new ConnectionTokenEndpointJwtcaAudFormatEnumOidc(Value.ISSUER, "issuer");
 
-    public static final ConnectionTokenEndpointJwtcaAudFormatEnumOidc TOKEN_ENDPOINT =
-            new ConnectionTokenEndpointJwtcaAudFormatEnumOidc(Value.TOKEN_ENDPOINT, "token_endpoint");
+    public static final ConnectionTokenEndpointJwtcaAudFormatEnumOidc ISSUER = new ConnectionTokenEndpointJwtcaAudFormatEnumOidc(Value.ISSUER, "issuer");
+
+    public static final ConnectionTokenEndpointJwtcaAudFormatEnumOidc TOKEN_ENDPOINT = new ConnectionTokenEndpointJwtcaAudFormatEnumOidc(Value.TOKEN_ENDPOINT, "token_endpoint");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionTokenEndpointJwtcaAudFormatEnumOidc {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionTokenEndpointJwtcaAudFormatEnumOidc
-                        && this.string.equals(((ConnectionTokenEndpointJwtcaAudFormatEnumOidc) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ISSUER:
-                return visitor.visitIssuer();
-            case TOKEN_ENDPOINT:
-                return visitor.visitTokenEndpoint();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionTokenEndpointJwtcaAudFormatEnumOidc valueOf(String value) {
-        switch (value) {
-            case "issuer":
-                return ISSUER;
-            case "token_endpoint":
-                return TOKEN_ENDPOINT;
-            default:
-                return new ConnectionTokenEndpointJwtcaAudFormatEnumOidc(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ISSUER,
 
-        TOKEN_ENDPOINT,
-
-        UNKNOWN
+        ISSUER, TOKEN_ENDPOINT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitIssuer();
 
         T visitTokenEndpoint();

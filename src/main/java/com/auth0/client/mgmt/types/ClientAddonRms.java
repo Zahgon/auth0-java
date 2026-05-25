@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonRms.Builder.class)
 public final class ClientAddonRms {
+
     private final String url;
 
     private final Map<String, Object> additionalProperties;
@@ -33,18 +34,17 @@ public final class ClientAddonRms {
      */
     @JsonProperty("url")
     public String getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonRms && equalTo((ClientAddonRms) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonRms other) {
@@ -53,19 +53,20 @@ public final class ClientAddonRms {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UrlStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface UrlStage {
+
         /**
          * <p>URL of your Rights Management Server. It can be internal or external, but users will have to be able to reach it.</p>
          */
@@ -75,6 +76,7 @@ public final class ClientAddonRms {
     }
 
     public interface _FinalStage {
+
         ClientAddonRms build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -84,17 +86,18 @@ public final class ClientAddonRms {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements UrlStage, _FinalStage {
+
         private String url;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientAddonRms other) {
-            url(other.getUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -105,25 +108,22 @@ public final class ClientAddonRms {
         @java.lang.Override
         @JsonSetter("url")
         public _FinalStage url(@NotNull String url) {
-            this.url = Objects.requireNonNull(url, "url must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientAddonRms build() {
-            return new ClientAddonRms(url, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

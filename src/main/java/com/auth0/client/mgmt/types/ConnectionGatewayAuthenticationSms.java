@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionGatewayAuthenticationSms.Builder.class)
 public final class ConnectionGatewayAuthenticationSms {
+
     private final String audience;
 
     private final String method;
@@ -33,13 +34,7 @@ public final class ConnectionGatewayAuthenticationSms {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionGatewayAuthenticationSms(
-            String audience,
-            String method,
-            String secret,
-            Optional<Boolean> secretBase64Encoded,
-            Optional<String> subject,
-            Map<String, Object> additionalProperties) {
+    private ConnectionGatewayAuthenticationSms(String audience, String method, String secret, Optional<Boolean> secretBase64Encoded, Optional<String> subject, Map<String, Object> additionalProperties) {
         this.audience = audience;
         this.method = method;
         this.secret = secret;
@@ -50,12 +45,12 @@ public final class ConnectionGatewayAuthenticationSms {
 
     @JsonProperty("audience")
     public String getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("method")
     public String getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,7 +58,7 @@ public final class ConnectionGatewayAuthenticationSms {
      */
     @JsonProperty("secret")
     public String getSecret() {
-        return secret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,59 +66,56 @@ public final class ConnectionGatewayAuthenticationSms {
      */
     @JsonProperty("secret_base64_encoded")
     public Optional<Boolean> getSecretBase64Encoded() {
-        return secretBase64Encoded;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject")
     public Optional<String> getSubject() {
-        return subject;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionGatewayAuthenticationSms
-                && equalTo((ConnectionGatewayAuthenticationSms) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionGatewayAuthenticationSms other) {
-        return audience.equals(other.audience)
-                && method.equals(other.method)
-                && secret.equals(other.secret)
-                && secretBase64Encoded.equals(other.secretBase64Encoded)
-                && subject.equals(other.subject);
+        return audience.equals(other.audience) && method.equals(other.method) && secret.equals(other.secret) && secretBase64Encoded.equals(other.secretBase64Encoded) && subject.equals(other.subject);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.audience, this.method, this.secret, this.secretBase64Encoded, this.subject);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AudienceStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AudienceStage {
+
         MethodStage audience(@NotNull String audience);
 
         Builder from(ConnectionGatewayAuthenticationSms other);
     }
 
     public interface MethodStage {
+
         SecretStage method(@NotNull String method);
     }
 
     public interface SecretStage {
+
         /**
          * <p>The secret used to sign the JSON Web Token sent to the SMS gateway</p>
          */
@@ -131,6 +123,7 @@ public final class ConnectionGatewayAuthenticationSms {
     }
 
     public interface _FinalStage {
+
         ConnectionGatewayAuthenticationSms build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -151,6 +144,7 @@ public final class ConnectionGatewayAuthenticationSms {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AudienceStage, MethodStage, SecretStage, _FinalStage {
+
         private String audience;
 
         private String method;
@@ -164,30 +158,24 @@ public final class ConnectionGatewayAuthenticationSms {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionGatewayAuthenticationSms other) {
-            audience(other.getAudience());
-            method(other.getMethod());
-            secret(other.getSecret());
-            secretBase64Encoded(other.getSecretBase64Encoded());
-            subject(other.getSubject());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("audience")
         public MethodStage audience(@NotNull String audience) {
-            this.audience = Objects.requireNonNull(audience, "audience must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("method")
         public SecretStage method(@NotNull String method) {
-            this.method = Objects.requireNonNull(method, "method must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -198,21 +186,18 @@ public final class ConnectionGatewayAuthenticationSms {
         @java.lang.Override
         @JsonSetter("secret")
         public _FinalStage secret(@NotNull String secret) {
-            this.secret = Objects.requireNonNull(secret, "secret must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subject(String subject) {
-            this.subject = Optional.ofNullable(subject);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subject", nulls = Nulls.SKIP)
         public _FinalStage subject(Optional<String> subject) {
-            this.subject = subject;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,8 +206,7 @@ public final class ConnectionGatewayAuthenticationSms {
          */
         @java.lang.Override
         public _FinalStage secretBase64Encoded(Boolean secretBase64Encoded) {
-            this.secretBase64Encoded = Optional.ofNullable(secretBase64Encoded);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -231,26 +215,22 @@ public final class ConnectionGatewayAuthenticationSms {
         @java.lang.Override
         @JsonSetter(value = "secret_base64_encoded", nulls = Nulls.SKIP)
         public _FinalStage secretBase64Encoded(Optional<Boolean> secretBase64Encoded) {
-            this.secretBase64Encoded = secretBase64Encoded;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionGatewayAuthenticationSms build() {
-            return new ConnectionGatewayAuthenticationSms(
-                    audience, method, secret, secretBase64Encoded, subject, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

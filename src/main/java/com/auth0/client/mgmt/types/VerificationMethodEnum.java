@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class VerificationMethodEnum {
+
     public static final VerificationMethodEnum OTP = new VerificationMethodEnum(Value.OTP, "otp");
 
     public static final VerificationMethodEnum LINK = new VerificationMethodEnum(Value.LINK, "link");
@@ -21,60 +22,41 @@ public final class VerificationMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof VerificationMethodEnum
-                        && this.string.equals(((VerificationMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OTP:
-                return visitor.visitOtp();
-            case LINK:
-                return visitor.visitLink();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static VerificationMethodEnum valueOf(String value) {
-        switch (value) {
-            case "otp":
-                return OTP;
-            case "link":
-                return LINK;
-            default:
-                return new VerificationMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LINK,
 
-        OTP,
-
-        UNKNOWN
+        LINK, OTP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLink();
 
         T visitOtp();

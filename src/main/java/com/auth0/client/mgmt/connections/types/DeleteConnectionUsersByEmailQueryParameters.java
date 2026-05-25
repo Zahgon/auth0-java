@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DeleteConnectionUsersByEmailQueryParameters.Builder.class)
 public final class DeleteConnectionUsersByEmailQueryParameters {
+
     private final String email;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class DeleteConnectionUsersByEmailQueryParameters {
      */
     @JsonIgnore
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DeleteConnectionUsersByEmailQueryParameters
-                && equalTo((DeleteConnectionUsersByEmailQueryParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DeleteConnectionUsersByEmailQueryParameters other) {
@@ -54,19 +53,20 @@ public final class DeleteConnectionUsersByEmailQueryParameters {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.email);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EmailStage {
+
         /**
          * <p>The email of the user to delete</p>
          */
@@ -76,6 +76,7 @@ public final class DeleteConnectionUsersByEmailQueryParameters {
     }
 
     public interface _FinalStage {
+
         DeleteConnectionUsersByEmailQueryParameters build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class DeleteConnectionUsersByEmailQueryParameters {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EmailStage, _FinalStage {
+
         private String email;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(DeleteConnectionUsersByEmailQueryParameters other) {
-            email(other.getEmail());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class DeleteConnectionUsersByEmailQueryParameters {
         @java.lang.Override
         @JsonSetter("email")
         public _FinalStage email(@NotNull String email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public DeleteConnectionUsersByEmailQueryParameters build() {
-            return new DeleteConnectionUsersByEmailQueryParameters(email, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

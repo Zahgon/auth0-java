@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionSlackPostMessageAction {
-    public static final FlowActionSlackPostMessageAction POST_MESSAGE =
-            new FlowActionSlackPostMessageAction(Value.POST_MESSAGE, "POST_MESSAGE");
+
+    public static final FlowActionSlackPostMessageAction POST_MESSAGE = new FlowActionSlackPostMessageAction(Value.POST_MESSAGE, "POST_MESSAGE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionSlackPostMessageAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionSlackPostMessageAction
-                        && this.string.equals(((FlowActionSlackPostMessageAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case POST_MESSAGE:
-                return visitor.visitPostMessage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionSlackPostMessageAction valueOf(String value) {
-        switch (value) {
-            case "POST_MESSAGE":
-                return POST_MESSAGE;
-            default:
-                return new FlowActionSlackPostMessageAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        POST_MESSAGE,
 
-        UNKNOWN
+        POST_MESSAGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPostMessage();
 
         T visitUnknown(String unknownType);

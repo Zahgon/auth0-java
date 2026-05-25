@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SupportedLocales {
+
     public static final SupportedLocales EN = new SupportedLocales(Value.EN, "en");
 
     public static final SupportedLocales NB = new SupportedLocales(Value.NB, "nb");
@@ -181,539 +182,123 @@ public final class SupportedLocales {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SupportedLocales && this.string.equals(((SupportedLocales) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EN:
-                return visitor.visitEn();
-            case NB:
-                return visitor.visitNb();
-            case HI:
-                return visitor.visitHi();
-            case BS:
-                return visitor.visitBs();
-            case DA:
-                return visitor.visitDa();
-            case LT:
-                return visitor.visitLt();
-            case LV:
-                return visitor.visitLv();
-            case ES_MX:
-                return visitor.visitEsMx();
-            case RO:
-                return visitor.visitRo();
-            case UK:
-                return visitor.visitUk();
-            case ES:
-                return visitor.visitEs();
-            case KK:
-                return visitor.visitKk();
-            case DE:
-                return visitor.visitDe();
-            case ET:
-                return visitor.visitEt();
-            case HR:
-                return visitor.visitHr();
-            case KN:
-                return visitor.visitKn();
-            case ZGH:
-                return visitor.visitZgh();
-            case TA:
-                return visitor.visitTa();
-            case RU:
-                return visitor.visitRu();
-            case AM:
-                return visitor.visitAm();
-            case JA:
-                return visitor.visitJa();
-            case KO:
-                return visitor.visitKo();
-            case NL:
-                return visitor.visitNl();
-            case ZH_MO:
-                return visitor.visitZhMo();
-            case VI:
-                return visitor.visitVi();
-            case NN:
-                return visitor.visitNn();
-            case BG:
-                return visitor.visitBg();
-            case GL_ES:
-                return visitor.visitGlEs();
-            case SR:
-                return visitor.visitSr();
-            case ES419:
-                return visitor.visitEs419();
-            case TH:
-                return visitor.visitTh();
-            case ZH_HK:
-                return visitor.visitZhHk();
-            case EU_ES:
-                return visitor.visitEuEs();
-            case TL:
-                return visitor.visitTl();
-            case HE:
-                return visitor.visitHe();
-            case SV:
-                return visitor.visitSv();
-            case IT:
-                return visitor.visitIt();
-            case EL:
-                return visitor.visitEl();
-            case FR_CA:
-                return visitor.visitFrCa();
-            case AZ:
-                return visitor.visitAz();
-            case ML:
-                return visitor.visitMl();
-            case MK:
-                return visitor.visitMk();
-            case CA_ES:
-                return visitor.visitCaEs();
-            case GU:
-                return visitor.visitGu();
-            case ES_AR:
-                return visitor.visitEsAr();
-            case ID:
-                return visitor.visitId();
-            case TR:
-                return visitor.visitTr();
-            case FI:
-                return visitor.visitFi();
-            case CNR:
-                return visitor.visitCnr();
-            case MN:
-                return visitor.visitMn();
-            case AR_EG:
-                return visitor.visitArEg();
-            case PL:
-                return visitor.visitPl();
-            case EN_CA:
-                return visitor.visitEnCa();
-            case MS:
-                return visitor.visitMs();
-            case PT_PT:
-                return visitor.visitPtPt();
-            case SK:
-                return visitor.visitSk();
-            case MR:
-                return visitor.visitMr();
-            case SL:
-                return visitor.visitSl();
-            case CS:
-                return visitor.visitCs();
-            case UR:
-                return visitor.visitUr();
-            case AR_SA:
-                return visitor.visitArSa();
-            case HU:
-                return visitor.visitHu();
-            case TE:
-                return visitor.visitTe();
-            case ZH_CN:
-                return visitor.visitZhCn();
-            case SO:
-                return visitor.visitSo();
-            case AR:
-                return visitor.visitAr();
-            case PT:
-                return visitor.visitPt();
-            case FR:
-                return visitor.visitFr();
-            case NO:
-                return visitor.visitNo();
-            case ZH_TW:
-                return visitor.visitZhTw();
-            case HY:
-                return visitor.visitHy();
-            case MY:
-                return visitor.visitMy();
-            case SQ:
-                return visitor.visitSq();
-            case PA:
-                return visitor.visitPa();
-            case FR_FR:
-                return visitor.visitFrFr();
-            case CY:
-                return visitor.visitCy();
-            case IS:
-                return visitor.visitIs();
-            case FA:
-                return visitor.visitFa();
-            case KA:
-                return visitor.visitKa();
-            case BN:
-                return visitor.visitBn();
-            case SW:
-                return visitor.visitSw();
-            case PT_BR:
-                return visitor.visitPtBr();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SupportedLocales valueOf(String value) {
-        switch (value) {
-            case "en":
-                return EN;
-            case "nb":
-                return NB;
-            case "hi":
-                return HI;
-            case "bs":
-                return BS;
-            case "da":
-                return DA;
-            case "lt":
-                return LT;
-            case "lv":
-                return LV;
-            case "es-MX":
-                return ES_MX;
-            case "ro":
-                return RO;
-            case "uk":
-                return UK;
-            case "es":
-                return ES;
-            case "kk":
-                return KK;
-            case "de":
-                return DE;
-            case "et":
-                return ET;
-            case "hr":
-                return HR;
-            case "kn":
-                return KN;
-            case "zgh":
-                return ZGH;
-            case "ta":
-                return TA;
-            case "ru":
-                return RU;
-            case "am":
-                return AM;
-            case "ja":
-                return JA;
-            case "ko":
-                return KO;
-            case "nl":
-                return NL;
-            case "zh-MO":
-                return ZH_MO;
-            case "vi":
-                return VI;
-            case "nn":
-                return NN;
-            case "bg":
-                return BG;
-            case "gl-ES":
-                return GL_ES;
-            case "sr":
-                return SR;
-            case "es-419":
-                return ES419;
-            case "th":
-                return TH;
-            case "zh-HK":
-                return ZH_HK;
-            case "eu-ES":
-                return EU_ES;
-            case "tl":
-                return TL;
-            case "he":
-                return HE;
-            case "sv":
-                return SV;
-            case "it":
-                return IT;
-            case "el":
-                return EL;
-            case "fr-CA":
-                return FR_CA;
-            case "az":
-                return AZ;
-            case "ml":
-                return ML;
-            case "mk":
-                return MK;
-            case "ca-ES":
-                return CA_ES;
-            case "gu":
-                return GU;
-            case "es-AR":
-                return ES_AR;
-            case "id":
-                return ID;
-            case "tr":
-                return TR;
-            case "fi":
-                return FI;
-            case "cnr":
-                return CNR;
-            case "mn":
-                return MN;
-            case "ar-EG":
-                return AR_EG;
-            case "pl":
-                return PL;
-            case "en-CA":
-                return EN_CA;
-            case "ms":
-                return MS;
-            case "pt-PT":
-                return PT_PT;
-            case "sk":
-                return SK;
-            case "mr":
-                return MR;
-            case "sl":
-                return SL;
-            case "cs":
-                return CS;
-            case "ur":
-                return UR;
-            case "ar-SA":
-                return AR_SA;
-            case "hu":
-                return HU;
-            case "te":
-                return TE;
-            case "zh-CN":
-                return ZH_CN;
-            case "so":
-                return SO;
-            case "ar":
-                return AR;
-            case "pt":
-                return PT;
-            case "fr":
-                return FR;
-            case "no":
-                return NO;
-            case "zh-TW":
-                return ZH_TW;
-            case "hy":
-                return HY;
-            case "my":
-                return MY;
-            case "sq":
-                return SQ;
-            case "pa":
-                return PA;
-            case "fr-FR":
-                return FR_FR;
-            case "cy":
-                return CY;
-            case "is":
-                return IS;
-            case "fa":
-                return FA;
-            case "ka":
-                return KA;
-            case "bn":
-                return BN;
-            case "sw":
-                return SW;
-            case "pt-BR":
-                return PT_BR;
-            default:
-                return new SupportedLocales(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         AM,
-
         AR,
-
         AR_EG,
-
         AR_SA,
-
         AZ,
-
         BG,
-
         BN,
-
         BS,
-
         CA_ES,
-
         CNR,
-
         CS,
-
         CY,
-
         DA,
-
         DE,
-
         EL,
-
         EN,
-
         EN_CA,
-
         ES,
-
         ES419,
-
         ES_AR,
-
         ES_MX,
-
         ET,
-
         EU_ES,
-
         FA,
-
         FI,
-
         FR,
-
         FR_CA,
-
         FR_FR,
-
         GL_ES,
-
         GU,
-
         HE,
-
         HI,
-
         HR,
-
         HU,
-
         HY,
-
         ID,
-
         IS,
-
         IT,
-
         JA,
-
         KA,
-
         KK,
-
         KN,
-
         KO,
-
         LT,
-
         LV,
-
         MK,
-
         ML,
-
         MN,
-
         MR,
-
         MS,
-
         MY,
-
         NB,
-
         NL,
-
         NN,
-
         NO,
-
         PA,
-
         PL,
-
         PT,
-
         PT_BR,
-
         PT_PT,
-
         RO,
-
         RU,
-
         SK,
-
         SL,
-
         SO,
-
         SQ,
-
         SR,
-
         SV,
-
         SW,
-
         TA,
-
         TE,
-
         TH,
-
         TL,
-
         TR,
-
         UK,
-
         UR,
-
         VI,
-
         ZGH,
-
         ZH_CN,
-
         ZH_HK,
-
         ZH_MO,
-
         ZH_TW,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAm();
 
         T visitAr();

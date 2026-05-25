@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.GetActionExecutionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncExecutionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawExecutionsClient rawClient;
@@ -22,20 +23,20 @@ public class AsyncExecutionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawExecutionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve information about a specific execution of a trigger. Relevant execution IDs will be included in tenant logs generated as part of that authentication flow. Executions will only be stored for 10 days after their creation.
      */
     public CompletableFuture<GetActionExecutionResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve information about a specific execution of a trigger. Relevant execution IDs will be included in tenant logs generated as part of that authentication flow. Executions will only be stored for 10 days after their creation.
      */
     public CompletableFuture<GetActionExecutionResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

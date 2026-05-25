@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionOtpGenerateCodeAction {
-    public static final FlowActionOtpGenerateCodeAction GENERATE_CODE =
-            new FlowActionOtpGenerateCodeAction(Value.GENERATE_CODE, "GENERATE_CODE");
+
+    public static final FlowActionOtpGenerateCodeAction GENERATE_CODE = new FlowActionOtpGenerateCodeAction(Value.GENERATE_CODE, "GENERATE_CODE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionOtpGenerateCodeAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionOtpGenerateCodeAction
-                        && this.string.equals(((FlowActionOtpGenerateCodeAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GENERATE_CODE:
-                return visitor.visitGenerateCode();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionOtpGenerateCodeAction valueOf(String value) {
-        switch (value) {
-            case "GENERATE_CODE":
-                return GENERATE_CODE;
-            default:
-                return new FlowActionOtpGenerateCodeAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GENERATE_CODE,
 
-        UNKNOWN
+        GENERATE_CODE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGenerateCode();
 
         T visitUnknown(String unknownType);

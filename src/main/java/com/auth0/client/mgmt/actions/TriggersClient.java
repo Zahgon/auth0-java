@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.ListActionTriggersResponseContent;
 import java.util.function.Supplier;
 
 public class TriggersClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTriggersClient rawClient;
@@ -27,24 +28,24 @@ public class TriggersClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTriggersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the set of triggers currently available within actions. A trigger is an extensibility point to which actions can be bound.
      */
     public ListActionTriggersResponseContent list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the set of triggers currently available within actions. A trigger is an extensibility point to which actions can be bound.
      */
     public ListActionTriggersResponseContent list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BindingsClient bindings() {
-        return this.bindingsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

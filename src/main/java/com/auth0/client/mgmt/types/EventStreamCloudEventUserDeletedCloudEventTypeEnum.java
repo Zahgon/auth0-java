@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventUserDeletedCloudEventTypeEnum {
-    public static final EventStreamCloudEventUserDeletedCloudEventTypeEnum USER_DELETED =
-            new EventStreamCloudEventUserDeletedCloudEventTypeEnum(Value.USER_DELETED, "user.deleted");
+
+    public static final EventStreamCloudEventUserDeletedCloudEventTypeEnum USER_DELETED = new EventStreamCloudEventUserDeletedCloudEventTypeEnum(Value.USER_DELETED, "user.deleted");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventUserDeletedCloudEventTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventUserDeletedCloudEventTypeEnum
-                        && this.string.equals(((EventStreamCloudEventUserDeletedCloudEventTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case USER_DELETED:
-                return visitor.visitUserDeleted();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventUserDeletedCloudEventTypeEnum valueOf(String value) {
-        switch (value) {
-            case "user.deleted":
-                return USER_DELETED;
-            default:
-                return new EventStreamCloudEventUserDeletedCloudEventTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        USER_DELETED,
 
-        UNKNOWN
+        USER_DELETED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUserDeleted();
 
         T visitUnknown(String unknownType);

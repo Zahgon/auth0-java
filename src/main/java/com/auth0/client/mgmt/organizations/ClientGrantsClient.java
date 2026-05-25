@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.AssociateOrganizationClientGrantResponseConte
 import com.auth0.client.mgmt.types.OrganizationClientGrant;
 
 public class ClientGrantsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawClientGrantsClient rawClient;
@@ -25,42 +26,38 @@ public class ClientGrantsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawClientGrantsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<OrganizationClientGrant> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<OrganizationClientGrant> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<OrganizationClientGrant> list(
-            String id, ListOrganizationClientGrantsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<OrganizationClientGrant> list(String id, ListOrganizationClientGrantsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<OrganizationClientGrant> list(
-            String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<OrganizationClientGrant> list(String id, ListOrganizationClientGrantsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public AssociateOrganizationClientGrantResponseContent create(
-            String id, AssociateOrganizationClientGrantRequestContent request) {
-        return this.rawClient.create(id, request).body();
+    public AssociateOrganizationClientGrantResponseContent create(String id, AssociateOrganizationClientGrantRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public AssociateOrganizationClientGrantResponseContent create(
-            String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public AssociateOrganizationClientGrantResponseContent create(String id, AssociateOrganizationClientGrantRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String grantId) {
-        this.rawClient.delete(id, grantId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String grantId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, grantId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

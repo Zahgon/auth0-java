@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventContextRequest.Builder.class)
 public final class EventStreamCloudEventContextRequest {
+
     private final EventStreamCloudEventContextRequestGeo geo;
 
     private final String hostname;
@@ -35,14 +36,7 @@ public final class EventStreamCloudEventContextRequest {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventContextRequest(
-            EventStreamCloudEventContextRequestGeo geo,
-            String hostname,
-            Optional<String> customDomain,
-            String ip,
-            String method,
-            String userAgent,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventContextRequest(EventStreamCloudEventContextRequestGeo geo, String hostname, Optional<String> customDomain, String ip, String method, String userAgent, Map<String, Object> additionalProperties) {
         this.geo = geo;
         this.hostname = hostname;
         this.customDomain = customDomain;
@@ -54,7 +48,7 @@ public final class EventStreamCloudEventContextRequest {
 
     @JsonProperty("geo")
     public EventStreamCloudEventContextRequestGeo getGeo() {
-        return geo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +56,7 @@ public final class EventStreamCloudEventContextRequest {
      */
     @JsonProperty("hostname")
     public String getHostname() {
-        return hostname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +64,7 @@ public final class EventStreamCloudEventContextRequest {
      */
     @JsonProperty("custom_domain")
     public Optional<String> getCustomDomain() {
-        return customDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +72,7 @@ public final class EventStreamCloudEventContextRequest {
      */
     @JsonProperty("ip")
     public String getIp() {
-        return ip;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +80,7 @@ public final class EventStreamCloudEventContextRequest {
      */
     @JsonProperty("method")
     public String getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,51 +88,46 @@ public final class EventStreamCloudEventContextRequest {
      */
     @JsonProperty("user_agent")
     public String getUserAgent() {
-        return userAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventContextRequest
-                && equalTo((EventStreamCloudEventContextRequest) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventContextRequest other) {
-        return geo.equals(other.geo)
-                && hostname.equals(other.hostname)
-                && customDomain.equals(other.customDomain)
-                && ip.equals(other.ip)
-                && method.equals(other.method)
-                && userAgent.equals(other.userAgent);
+        return geo.equals(other.geo) && hostname.equals(other.hostname) && customDomain.equals(other.customDomain) && ip.equals(other.ip) && method.equals(other.method) && userAgent.equals(other.userAgent);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.geo, this.hostname, this.customDomain, this.ip, this.method, this.userAgent);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static GeoStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface GeoStage {
+
         HostnameStage geo(@NotNull EventStreamCloudEventContextRequestGeo geo);
 
         Builder from(EventStreamCloudEventContextRequest other);
     }
 
     public interface HostnameStage {
+
         /**
          * <p>The hostname the request is for.</p>
          */
@@ -146,6 +135,7 @@ public final class EventStreamCloudEventContextRequest {
     }
 
     public interface IpStage {
+
         /**
          * <p>The originating IP address of the request.</p>
          */
@@ -153,6 +143,7 @@ public final class EventStreamCloudEventContextRequest {
     }
 
     public interface MethodStage {
+
         /**
          * <p>The HTTP method used for the request.</p>
          */
@@ -160,6 +151,7 @@ public final class EventStreamCloudEventContextRequest {
     }
 
     public interface UserAgentStage {
+
         /**
          * <p>The value of the <code>User-Agent</code> header.</p>
          */
@@ -167,6 +159,7 @@ public final class EventStreamCloudEventContextRequest {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventContextRequest build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -182,8 +175,8 @@ public final class EventStreamCloudEventContextRequest {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements GeoStage, HostnameStage, IpStage, MethodStage, UserAgentStage, _FinalStage {
+    public static final class Builder implements GeoStage, HostnameStage, IpStage, MethodStage, UserAgentStage, _FinalStage {
+
         private EventStreamCloudEventContextRequestGeo geo;
 
         private String hostname;
@@ -199,24 +192,18 @@ public final class EventStreamCloudEventContextRequest {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventContextRequest other) {
-            geo(other.getGeo());
-            hostname(other.getHostname());
-            customDomain(other.getCustomDomain());
-            ip(other.getIp());
-            method(other.getMethod());
-            userAgent(other.getUserAgent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("geo")
         public HostnameStage geo(@NotNull EventStreamCloudEventContextRequestGeo geo) {
-            this.geo = Objects.requireNonNull(geo, "geo must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -227,8 +214,7 @@ public final class EventStreamCloudEventContextRequest {
         @java.lang.Override
         @JsonSetter("hostname")
         public IpStage hostname(@NotNull String hostname) {
-            this.hostname = Objects.requireNonNull(hostname, "hostname must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,8 +225,7 @@ public final class EventStreamCloudEventContextRequest {
         @java.lang.Override
         @JsonSetter("ip")
         public MethodStage ip(@NotNull String ip) {
-            this.ip = Objects.requireNonNull(ip, "ip must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -251,8 +236,7 @@ public final class EventStreamCloudEventContextRequest {
         @java.lang.Override
         @JsonSetter("method")
         public UserAgentStage method(@NotNull String method) {
-            this.method = Objects.requireNonNull(method, "method must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -263,8 +247,7 @@ public final class EventStreamCloudEventContextRequest {
         @java.lang.Override
         @JsonSetter("user_agent")
         public _FinalStage userAgent(@NotNull String userAgent) {
-            this.userAgent = Objects.requireNonNull(userAgent, "userAgent must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -273,8 +256,7 @@ public final class EventStreamCloudEventContextRequest {
          */
         @java.lang.Override
         public _FinalStage customDomain(String customDomain) {
-            this.customDomain = Optional.ofNullable(customDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -283,26 +265,22 @@ public final class EventStreamCloudEventContextRequest {
         @java.lang.Override
         @JsonSetter(value = "custom_domain", nulls = Nulls.SKIP)
         public _FinalStage customDomain(Optional<String> customDomain) {
-            this.customDomain = customDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventContextRequest build() {
-            return new EventStreamCloudEventContextRequest(
-                    geo, hostname, customDomain, ip, method, userAgent, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

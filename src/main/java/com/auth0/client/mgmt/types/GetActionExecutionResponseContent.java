@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetActionExecutionResponseContent.Builder.class)
 public final class GetActionExecutionResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<ActionTriggerTypeEnum> triggerId;
@@ -36,14 +37,7 @@ public final class GetActionExecutionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetActionExecutionResponseContent(
-            Optional<String> id,
-            Optional<ActionTriggerTypeEnum> triggerId,
-            Optional<ActionExecutionStatusEnum> status,
-            Optional<List<ActionExecutionResult>> results,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private GetActionExecutionResponseContent(Optional<String> id, Optional<ActionTriggerTypeEnum> triggerId, Optional<ActionExecutionStatusEnum> status, Optional<List<ActionExecutionResult>> results, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.triggerId = triggerId;
         this.status = status;
@@ -58,22 +52,22 @@ public final class GetActionExecutionResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("trigger_id")
     public Optional<ActionTriggerTypeEnum> getTriggerId() {
-        return triggerId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<ActionExecutionStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("results")
     public Optional<List<ActionExecutionResult>> getResults() {
-        return results;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +75,7 @@ public final class GetActionExecutionResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,45 +83,40 @@ public final class GetActionExecutionResponseContent {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetActionExecutionResponseContent && equalTo((GetActionExecutionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetActionExecutionResponseContent other) {
-        return id.equals(other.id)
-                && triggerId.equals(other.triggerId)
-                && status.equals(other.status)
-                && results.equals(other.results)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && triggerId.equals(other.triggerId) && status.equals(other.status) && results.equals(other.results) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.triggerId, this.status, this.results, this.createdAt, this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<ActionTriggerTypeEnum> triggerId = Optional.empty();
@@ -143,16 +132,11 @@ public final class GetActionExecutionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetActionExecutionResponseContent other) {
-            id(other.getId());
-            triggerId(other.getTriggerId());
-            status(other.getStatus());
-            results(other.getResults());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -160,46 +144,38 @@ public final class GetActionExecutionResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "trigger_id", nulls = Nulls.SKIP)
         public Builder triggerId(Optional<ActionTriggerTypeEnum> triggerId) {
-            this.triggerId = triggerId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder triggerId(ActionTriggerTypeEnum triggerId) {
-            this.triggerId = Optional.ofNullable(triggerId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<ActionExecutionStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(ActionExecutionStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "results", nulls = Nulls.SKIP)
         public Builder results(Optional<List<ActionExecutionResult>> results) {
-            this.results = results;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder results(List<ActionExecutionResult> results) {
-            this.results = Optional.ofNullable(results);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,13 +183,11 @@ public final class GetActionExecutionResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,28 +195,23 @@ public final class GetActionExecutionResponseContent {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetActionExecutionResponseContent build() {
-            return new GetActionExecutionResponseContent(
-                    id, triggerId, status, results, createdAt, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

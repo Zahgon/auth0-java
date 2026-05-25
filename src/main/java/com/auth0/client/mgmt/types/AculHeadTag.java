@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AculHeadTag.Builder.class)
 public final class AculHeadTag {
+
     private final Optional<String> tag;
 
     private final Optional<Map<String, Object>> attributes;
@@ -28,11 +29,7 @@ public final class AculHeadTag {
 
     private final Map<String, Object> additionalProperties;
 
-    private AculHeadTag(
-            Optional<String> tag,
-            Optional<Map<String, Object>> attributes,
-            Optional<String> content,
-            Map<String, Object> additionalProperties) {
+    private AculHeadTag(Optional<String> tag, Optional<Map<String, Object>> attributes, Optional<String> content, Map<String, Object> additionalProperties) {
         this.tag = tag;
         this.attributes = attributes;
         this.content = content;
@@ -44,28 +41,27 @@ public final class AculHeadTag {
      */
     @JsonProperty("tag")
     public Optional<String> getTag() {
-        return tag;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("attributes")
     public Optional<Map<String, Object>> getAttributes() {
-        return attributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("content")
     public Optional<String> getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AculHeadTag && equalTo((AculHeadTag) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AculHeadTag other) {
@@ -74,20 +70,21 @@ public final class AculHeadTag {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.tag, this.attributes, this.content);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> tag = Optional.empty();
 
         private Optional<Map<String, Object>> attributes = Optional.empty();
@@ -97,13 +94,11 @@ public final class AculHeadTag {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AculHeadTag other) {
-            tag(other.getTag());
-            attributes(other.getAttributes());
-            content(other.getContent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -111,49 +106,41 @@ public final class AculHeadTag {
          */
         @JsonSetter(value = "tag", nulls = Nulls.SKIP)
         public Builder tag(Optional<String> tag) {
-            this.tag = tag;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tag(String tag) {
-            this.tag = Optional.ofNullable(tag);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "attributes", nulls = Nulls.SKIP)
         public Builder attributes(Optional<Map<String, Object>> attributes) {
-            this.attributes = attributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder attributes(Map<String, Object> attributes) {
-            this.attributes = Optional.ofNullable(attributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "content", nulls = Nulls.SKIP)
         public Builder content(Optional<String> content) {
-            this.content = content;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder content(String content) {
-            this.content = Optional.ofNullable(content);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AculHeadTag build() {
-            return new AculHeadTag(tag, attributes, content, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

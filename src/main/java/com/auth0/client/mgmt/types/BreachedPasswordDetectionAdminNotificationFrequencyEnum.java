@@ -7,17 +7,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BreachedPasswordDetectionAdminNotificationFrequencyEnum {
-    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum IMMEDIATELY =
-            new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.IMMEDIATELY, "immediately");
 
-    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum DAILY =
-            new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.DAILY, "daily");
+    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum IMMEDIATELY = new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.IMMEDIATELY, "immediately");
 
-    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum WEEKLY =
-            new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.WEEKLY, "weekly");
+    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum DAILY = new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.DAILY, "daily");
 
-    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum MONTHLY =
-            new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.MONTHLY, "monthly");
+    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum WEEKLY = new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.WEEKLY, "weekly");
+
+    public static final BreachedPasswordDetectionAdminNotificationFrequencyEnum MONTHLY = new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.MONTHLY, "monthly");
 
     private final Value value;
 
@@ -29,73 +26,41 @@ public final class BreachedPasswordDetectionAdminNotificationFrequencyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BreachedPasswordDetectionAdminNotificationFrequencyEnum
-                        && this.string.equals(
-                                ((BreachedPasswordDetectionAdminNotificationFrequencyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case IMMEDIATELY:
-                return visitor.visitImmediately();
-            case DAILY:
-                return visitor.visitDaily();
-            case WEEKLY:
-                return visitor.visitWeekly();
-            case MONTHLY:
-                return visitor.visitMonthly();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BreachedPasswordDetectionAdminNotificationFrequencyEnum valueOf(String value) {
-        switch (value) {
-            case "immediately":
-                return IMMEDIATELY;
-            case "daily":
-                return DAILY;
-            case "weekly":
-                return WEEKLY;
-            case "monthly":
-                return MONTHLY;
-            default:
-                return new BreachedPasswordDetectionAdminNotificationFrequencyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        IMMEDIATELY,
 
-        DAILY,
-
-        WEEKLY,
-
-        MONTHLY,
-
-        UNKNOWN
+        IMMEDIATELY, DAILY, WEEKLY, MONTHLY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitImmediately();
 
         T visitDaily();

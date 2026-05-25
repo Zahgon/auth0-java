@@ -22,14 +22,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUserConnectedAccountsResponseContent.Builder.class)
 public final class ListUserConnectedAccountsResponseContent {
+
     private final List<ConnectedAccount> connectedAccounts;
 
     private final Optional<String> next;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUserConnectedAccountsResponseContent(
-            List<ConnectedAccount> connectedAccounts, Optional<String> next, Map<String, Object> additionalProperties) {
+    private ListUserConnectedAccountsResponseContent(List<ConnectedAccount> connectedAccounts, Optional<String> next, Map<String, Object> additionalProperties) {
         this.connectedAccounts = connectedAccounts;
         this.next = next;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class ListUserConnectedAccountsResponseContent {
 
     @JsonProperty("connected_accounts")
     public List<ConnectedAccount> getConnectedAccounts() {
-        return connectedAccounts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,19 +45,17 @@ public final class ListUserConnectedAccountsResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUserConnectedAccountsResponseContent
-                && equalTo((ListUserConnectedAccountsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUserConnectedAccountsResponseContent other) {
@@ -66,20 +64,21 @@ public final class ListUserConnectedAccountsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectedAccounts, this.next);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<ConnectedAccount> connectedAccounts = new ArrayList<>();
 
         private Optional<String> next = Optional.empty();
@@ -87,33 +86,24 @@ public final class ListUserConnectedAccountsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListUserConnectedAccountsResponseContent other) {
-            connectedAccounts(other.getConnectedAccounts());
-            next(other.getNext());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connected_accounts", nulls = Nulls.SKIP)
         public Builder connectedAccounts(List<ConnectedAccount> connectedAccounts) {
-            this.connectedAccounts.clear();
-            if (connectedAccounts != null) {
-                this.connectedAccounts.addAll(connectedAccounts);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addConnectedAccounts(ConnectedAccount connectedAccounts) {
-            this.connectedAccounts.add(connectedAccounts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllConnectedAccounts(List<ConnectedAccount> connectedAccounts) {
-            if (connectedAccounts != null) {
-                this.connectedAccounts.addAll(connectedAccounts);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -121,27 +111,23 @@ public final class ListUserConnectedAccountsResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListUserConnectedAccountsResponseContent build() {
-            return new ListUserConnectedAccountsResponseContent(connectedAccounts, next, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

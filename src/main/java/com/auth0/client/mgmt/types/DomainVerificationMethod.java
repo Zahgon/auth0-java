@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DomainVerificationMethod.Builder.class)
 public final class DomainVerificationMethod {
+
     private final DomainVerificationMethodNameEnum name;
 
     private final String record;
@@ -29,11 +30,7 @@ public final class DomainVerificationMethod {
 
     private final Map<String, Object> additionalProperties;
 
-    private DomainVerificationMethod(
-            DomainVerificationMethodNameEnum name,
-            String record,
-            Optional<String> domain,
-            Map<String, Object> additionalProperties) {
+    private DomainVerificationMethod(DomainVerificationMethodNameEnum name, String record, Optional<String> domain, Map<String, Object> additionalProperties) {
         this.name = name;
         this.record = record;
         this.domain = domain;
@@ -42,7 +39,7 @@ public final class DomainVerificationMethod {
 
     @JsonProperty("name")
     public DomainVerificationMethodNameEnum getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,7 +47,7 @@ public final class DomainVerificationMethod {
      */
     @JsonProperty("record")
     public String getRecord() {
-        return record;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,18 +55,17 @@ public final class DomainVerificationMethod {
      */
     @JsonProperty("domain")
     public Optional<String> getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DomainVerificationMethod && equalTo((DomainVerificationMethod) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DomainVerificationMethod other) {
@@ -78,25 +74,27 @@ public final class DomainVerificationMethod {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.record, this.domain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         RecordStage name(@NotNull DomainVerificationMethodNameEnum name);
 
         Builder from(DomainVerificationMethod other);
     }
 
     public interface RecordStage {
+
         /**
          * <p>Value used to verify the domain.</p>
          */
@@ -104,6 +102,7 @@ public final class DomainVerificationMethod {
     }
 
     public interface _FinalStage {
+
         DomainVerificationMethod build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -120,6 +119,7 @@ public final class DomainVerificationMethod {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, RecordStage, _FinalStage {
+
         private DomainVerificationMethodNameEnum name;
 
         private String record;
@@ -129,21 +129,18 @@ public final class DomainVerificationMethod {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(DomainVerificationMethod other) {
-            name(other.getName());
-            record(other.getRecord());
-            domain(other.getDomain());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public RecordStage name(@NotNull DomainVerificationMethodNameEnum name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -154,8 +151,7 @@ public final class DomainVerificationMethod {
         @java.lang.Override
         @JsonSetter("record")
         public _FinalStage record(@NotNull String record) {
-            this.record = Objects.requireNonNull(record, "record must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -164,8 +160,7 @@ public final class DomainVerificationMethod {
          */
         @java.lang.Override
         public _FinalStage domain(String domain) {
-            this.domain = Optional.ofNullable(domain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -174,25 +169,22 @@ public final class DomainVerificationMethod {
         @java.lang.Override
         @JsonSetter(value = "domain", nulls = Nulls.SKIP)
         public _FinalStage domain(Optional<String> domain) {
-            this.domain = domain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public DomainVerificationMethod build() {
-            return new DomainVerificationMethod(name, record, domain, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectioSetupTypeOauthCodeEnum {
-    public static final FlowsVaultConnectioSetupTypeOauthCodeEnum OAUTH_CODE =
-            new FlowsVaultConnectioSetupTypeOauthCodeEnum(Value.OAUTH_CODE, "OAUTH_CODE");
+
+    public static final FlowsVaultConnectioSetupTypeOauthCodeEnum OAUTH_CODE = new FlowsVaultConnectioSetupTypeOauthCodeEnum(Value.OAUTH_CODE, "OAUTH_CODE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectioSetupTypeOauthCodeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectioSetupTypeOauthCodeEnum
-                        && this.string.equals(((FlowsVaultConnectioSetupTypeOauthCodeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OAUTH_CODE:
-                return visitor.visitOauthCode();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectioSetupTypeOauthCodeEnum valueOf(String value) {
-        switch (value) {
-            case "OAUTH_CODE":
-                return OAUTH_CODE;
-            default:
-                return new FlowsVaultConnectioSetupTypeOauthCodeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OAUTH_CODE,
 
-        UNKNOWN
+        OAUTH_CODE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOauthCode();
 
         T visitUnknown(String unknownType);

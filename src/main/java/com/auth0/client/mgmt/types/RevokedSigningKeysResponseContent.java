@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RevokedSigningKeysResponseContent.Builder.class)
 public final class RevokedSigningKeysResponseContent {
+
     private final String cert;
 
     private final String kid;
@@ -36,7 +37,7 @@ public final class RevokedSigningKeysResponseContent {
      */
     @JsonProperty("cert")
     public String getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -44,18 +45,17 @@ public final class RevokedSigningKeysResponseContent {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RevokedSigningKeysResponseContent && equalTo((RevokedSigningKeysResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RevokedSigningKeysResponseContent other) {
@@ -64,19 +64,20 @@ public final class RevokedSigningKeysResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.cert, this.kid);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CertStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface CertStage {
+
         /**
          * <p>Revoked key certificate</p>
          */
@@ -86,6 +87,7 @@ public final class RevokedSigningKeysResponseContent {
     }
 
     public interface KidStage {
+
         /**
          * <p>Revoked key id</p>
          */
@@ -93,6 +95,7 @@ public final class RevokedSigningKeysResponseContent {
     }
 
     public interface _FinalStage {
+
         RevokedSigningKeysResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -102,6 +105,7 @@ public final class RevokedSigningKeysResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements CertStage, KidStage, _FinalStage {
+
         private String cert;
 
         private String kid;
@@ -109,13 +113,12 @@ public final class RevokedSigningKeysResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(RevokedSigningKeysResponseContent other) {
-            cert(other.getCert());
-            kid(other.getKid());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -126,8 +129,7 @@ public final class RevokedSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("cert")
         public KidStage cert(@NotNull String cert) {
-            this.cert = Objects.requireNonNull(cert, "cert must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -138,25 +140,22 @@ public final class RevokedSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("kid")
         public _FinalStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public RevokedSigningKeysResponseContent build() {
-            return new RevokedSigningKeysResponseContent(cert, kid, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

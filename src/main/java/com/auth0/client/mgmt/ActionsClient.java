@@ -25,6 +25,7 @@ import com.auth0.client.mgmt.types.UpdateActionResponseContent;
 import java.util.function.Supplier;
 
 public class ActionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawActionsClient rawClient;
@@ -50,163 +51,162 @@ public class ActionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawActionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all actions.
      */
     public SyncPagingIterable<Action> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all actions.
      */
     public SyncPagingIterable<Action> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all actions.
      */
     public SyncPagingIterable<Action> list(ListActionsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all actions.
      */
     public SyncPagingIterable<Action> list(ListActionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an action. Once an action is created, it must be deployed, and then bound to a trigger before it will be executed as part of a flow.
      */
     public CreateActionResponseContent create(CreateActionRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an action. Once an action is created, it must be deployed, and then bound to a trigger before it will be executed as part of a flow.
      */
     public CreateActionResponseContent create(CreateActionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an action by its ID.
      */
     public GetActionResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an action by its ID.
      */
     public GetActionResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes an action and all of its associated versions. An action must be unbound from all triggers before it can be deleted.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes an action and all of its associated versions. An action must be unbound from all triggers before it can be deleted.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes an action and all of its associated versions. An action must be unbound from all triggers before it can be deleted.
      */
     public void delete(String id, DeleteActionRequestParameters request) {
-        this.rawClient.delete(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes an action and all of its associated versions. An action must be unbound from all triggers before it can be deleted.
      */
     public void delete(String id, DeleteActionRequestParameters request, RequestOptions requestOptions) {
-        this.rawClient.delete(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an existing action. If this action is currently bound to a trigger, updating it will <strong>not</strong> affect any user flows until the action is deployed.
      */
     public UpdateActionResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an existing action. If this action is currently bound to a trigger, updating it will <strong>not</strong> affect any user flows until the action is deployed.
      */
     public UpdateActionResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an existing action. If this action is currently bound to a trigger, updating it will <strong>not</strong> affect any user flows until the action is deployed.
      */
     public UpdateActionResponseContent update(String id, UpdateActionRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an existing action. If this action is currently bound to a trigger, updating it will <strong>not</strong> affect any user flows until the action is deployed.
      */
-    public UpdateActionResponseContent update(
-            String id, UpdateActionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateActionResponseContent update(String id, UpdateActionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deploy an action. Deploying an action will create a new immutable version of the action. If the action is currently bound to a trigger, then the system will begin executing the newly deployed version of the action immediately. Otherwise, the action will only be executed as a part of a flow once it is bound to that flow.
      */
     public DeployActionResponseContent deploy(String id) {
-        return this.rawClient.deploy(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deploy an action. Deploying an action will create a new immutable version of the action. If the action is currently bound to a trigger, then the system will begin executing the newly deployed version of the action immediately. Otherwise, the action will only be executed as a part of a flow once it is bound to that flow.
      */
     public DeployActionResponseContent deploy(String id, RequestOptions requestOptions) {
-        return this.rawClient.deploy(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Test an action. After updating an action, it can be tested prior to being deployed to ensure it behaves as expected.
      */
     public TestActionResponseContent test(String id, TestActionRequestContent request) {
-        return this.rawClient.test(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Test an action. After updating an action, it can be tested prior to being deployed to ensure it behaves as expected.
      */
     public TestActionResponseContent test(String id, TestActionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.test(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public VersionsClient versions() {
-        return this.versionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ExecutionsClient executions() {
-        return this.executionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ModulesClient modules() {
-        return this.modulesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TriggersClient triggers() {
-        return this.triggersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -25,6 +25,7 @@ import com.auth0.client.mgmt.types.UpdateGuardianFactorsProviderPushNotification
 import java.util.Map;
 
 public class PushNotificationClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawPushNotificationClient rawClient;
@@ -38,306 +39,286 @@ public class PushNotificationClient {
      * Get responses with HTTP metadata like headers
      */
     public RawPushNotificationClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for the multi-factor authentication APNS provider associated with your tenant.
      */
     public GetGuardianFactorsProviderApnsResponseContent getApnsProvider() {
-        return this.rawClient.getApnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for the multi-factor authentication APNS provider associated with your tenant.
      */
     public GetGuardianFactorsProviderApnsResponseContent getApnsProvider(RequestOptions requestOptions) {
-        return this.rawClient.getApnsProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
     public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider() {
-        return this.rawClient.setApnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.setApnsProvider(requestOptions).body();
+    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(
-            SetGuardianFactorsProviderPushNotificationApnsRequestContent request) {
-        return this.rawClient.setApnsProvider(request).body();
+    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(SetGuardianFactorsProviderPushNotificationApnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(
-            SetGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setApnsProvider(request, requestOptions).body();
+    public SetGuardianFactorsProviderPushNotificationApnsResponseContent setApnsProvider(SetGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
     public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider() {
-        return this.rawClient.updateApnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.updateApnsProvider(requestOptions).body();
+    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request) {
-        return this.rawClient.updateApnsProvider(request).body();
+    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateApnsProvider(request, requestOptions).body();
+    public UpdateGuardianFactorsProviderPushNotificationApnsResponseContent updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public Map<String, Object> setFcmProvider() {
-        return this.rawClient.setFcmProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public Map<String, Object> setFcmProvider(RequestOptions requestOptions) {
-        return this.rawClient.setFcmProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public Map<String, Object> setFcmProvider(SetGuardianFactorsProviderPushNotificationFcmRequestContent request) {
-        return this.rawClient.setFcmProvider(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public Map<String, Object> setFcmProvider(
-            SetGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setFcmProvider(request, requestOptions).body();
+    public Map<String, Object> setFcmProvider(SetGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public Map<String, Object> updateFcmProvider() {
-        return this.rawClient.updateFcmProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public Map<String, Object> updateFcmProvider(RequestOptions requestOptions) {
-        return this.rawClient.updateFcmProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public Map<String, Object> updateFcmProvider(
-            UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request) {
-        return this.rawClient.updateFcmProvider(request).body();
+    public Map<String, Object> updateFcmProvider(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public Map<String, Object> updateFcmProvider(
-            UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateFcmProvider(request, requestOptions).body();
+    public Map<String, Object> updateFcmProvider(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public Map<String, Object> setFcmv1Provider() {
-        return this.rawClient.setFcmv1Provider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public Map<String, Object> setFcmv1Provider(RequestOptions requestOptions) {
-        return this.rawClient.setFcmv1Provider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public Map<String, Object> setFcmv1Provider(SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
-        return this.rawClient.setFcmv1Provider(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public Map<String, Object> setFcmv1Provider(
-            SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setFcmv1Provider(request, requestOptions).body();
+    public Map<String, Object> setFcmv1Provider(SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public Map<String, Object> updateFcmv1Provider() {
-        return this.rawClient.updateFcmv1Provider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public Map<String, Object> updateFcmv1Provider(RequestOptions requestOptions) {
-        return this.rawClient.updateFcmv1Provider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public Map<String, Object> updateFcmv1Provider(
-            UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
-        return this.rawClient.updateFcmv1Provider(request).body();
+    public Map<String, Object> updateFcmv1Provider(UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public Map<String, Object> updateFcmv1Provider(
-            UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateFcmv1Provider(request, requestOptions).body();
+    public Map<String, Object> updateFcmv1Provider(UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for an AWS SNS push notification provider that has been enabled for MFA. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
     public GetGuardianFactorsProviderSnsResponseContent getSnsProvider() {
-        return this.rawClient.getSnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for an AWS SNS push notification provider that has been enabled for MFA. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
     public GetGuardianFactorsProviderSnsResponseContent getSnsProvider(RequestOptions requestOptions) {
-        return this.rawClient.getSnsProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
     public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider() {
-        return this.rawClient.setSnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
     public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider(RequestOptions requestOptions) {
-        return this.rawClient.setSnsProvider(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider(
-            SetGuardianFactorsProviderPushNotificationSnsRequestContent request) {
-        return this.rawClient.setSnsProvider(request).body();
+    public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider(SetGuardianFactorsProviderPushNotificationSnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider(
-            SetGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setSnsProvider(request, requestOptions).body();
+    public SetGuardianFactorsProviderPushNotificationSnsResponseContent setSnsProvider(SetGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
     public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider() {
-        return this.rawClient.updateSnsProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.updateSnsProvider(requestOptions).body();
+    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request) {
-        return this.rawClient.updateSnsProvider(request).body();
+    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.updateSnsProvider(request, requestOptions).body();
+    public UpdateGuardianFactorsProviderPushNotificationSnsResponseContent updateSnsProvider(UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
     public GetGuardianFactorsProviderPushNotificationResponseContent getSelectedProvider() {
-        return this.rawClient.getSelectedProvider().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public GetGuardianFactorsProviderPushNotificationResponseContent getSelectedProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.getSelectedProvider(requestOptions).body();
+    public GetGuardianFactorsProviderPushNotificationResponseContent getSelectedProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public SetGuardianFactorsProviderPushNotificationResponseContent setProvider(
-            SetGuardianFactorsProviderPushNotificationRequestContent request) {
-        return this.rawClient.setProvider(request).body();
+    public SetGuardianFactorsProviderPushNotificationResponseContent setProvider(SetGuardianFactorsProviderPushNotificationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public SetGuardianFactorsProviderPushNotificationResponseContent setProvider(
-            SetGuardianFactorsProviderPushNotificationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setProvider(request, requestOptions).body();
+    public SetGuardianFactorsProviderPushNotificationResponseContent setProvider(SetGuardianFactorsProviderPushNotificationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

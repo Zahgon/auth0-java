@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypeHtmlConst {
+
     public static final FormBlockTypeHtmlConst HTML = new FormBlockTypeHtmlConst(Value.HTML, "HTML");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormBlockTypeHtmlConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypeHtmlConst
-                        && this.string.equals(((FormBlockTypeHtmlConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case HTML:
-                return visitor.visitHtml();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypeHtmlConst valueOf(String value) {
-        switch (value) {
-            case "HTML":
-                return HTML;
-            default:
-                return new FormBlockTypeHtmlConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        HTML,
 
-        UNKNOWN
+        HTML, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitHtml();
 
         T visitUnknown(String unknownType);

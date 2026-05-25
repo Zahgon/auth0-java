@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListRefreshTokensPaginatedResponseContent.Builder.class)
 public final class ListRefreshTokensPaginatedResponseContent {
+
     private final Optional<List<RefreshTokenResponseContent>> tokens;
 
     private final Optional<String> next;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListRefreshTokensPaginatedResponseContent(
-            Optional<List<RefreshTokenResponseContent>> tokens,
-            Optional<String> next,
-            Map<String, Object> additionalProperties) {
+    private ListRefreshTokensPaginatedResponseContent(Optional<List<RefreshTokenResponseContent>> tokens, Optional<String> next, Map<String, Object> additionalProperties) {
         this.tokens = tokens;
         this.next = next;
         this.additionalProperties = additionalProperties;
@@ -38,7 +36,7 @@ public final class ListRefreshTokensPaginatedResponseContent {
 
     @JsonProperty("tokens")
     public Optional<List<RefreshTokenResponseContent>> getTokens() {
-        return tokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +44,17 @@ public final class ListRefreshTokensPaginatedResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListRefreshTokensPaginatedResponseContent
-                && equalTo((ListRefreshTokensPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListRefreshTokensPaginatedResponseContent other) {
@@ -67,20 +63,21 @@ public final class ListRefreshTokensPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.tokens, this.next);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<RefreshTokenResponseContent>> tokens = Optional.empty();
 
         private Optional<String> next = Optional.empty();
@@ -88,23 +85,20 @@ public final class ListRefreshTokensPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListRefreshTokensPaginatedResponseContent other) {
-            tokens(other.getTokens());
-            next(other.getNext());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "tokens", nulls = Nulls.SKIP)
         public Builder tokens(Optional<List<RefreshTokenResponseContent>> tokens) {
-            this.tokens = tokens;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokens(List<RefreshTokenResponseContent> tokens) {
-            this.tokens = Optional.ofNullable(tokens);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -112,27 +106,23 @@ public final class ListRefreshTokensPaginatedResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListRefreshTokensPaginatedResponseContent build() {
-            return new ListRefreshTokensPaginatedResponseContent(tokens, next, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

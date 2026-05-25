@@ -37,6 +37,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class UsersClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawUsersClient rawClient;
@@ -78,8 +79,7 @@ public class UsersClient {
         this.authenticatorsClient = Suppliers.memoize(() -> new AuthenticatorsClient(clientOptions));
         this.connectedAccountsClient = Suppliers.memoize(() -> new ConnectedAccountsClient(clientOptions));
         this.enrollmentsClient = Suppliers.memoize(() -> new EnrollmentsClient(clientOptions));
-        this.federatedConnectionsTokensetsClient =
-                Suppliers.memoize(() -> new FederatedConnectionsTokensetsClient(clientOptions));
+        this.federatedConnectionsTokensetsClient = Suppliers.memoize(() -> new FederatedConnectionsTokensetsClient(clientOptions));
         this.groupsClient = Suppliers.memoize(() -> new GroupsClient(clientOptions));
         this.identitiesClient = Suppliers.memoize(() -> new IdentitiesClient(clientOptions));
         this.logsClient = Suppliers.memoize(() -> new LogsClient(clientOptions));
@@ -96,7 +96,7 @@ public class UsersClient {
      * Get responses with HTTP metadata like headers
      */
     public RawUsersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -114,7 +114,7 @@ public class UsersClient {
      * <p>Auth0 limits the number of users you can return. If you exceed this threshold, please redefine your search, use the <a href="https://auth0.com/docs/api/management/v2#!/Jobs/post_users_exports">export job</a>, or the <a href="https://auth0.com/docs/extensions/user-import-export">User Import / Export</a> extension.</p>
      */
     public SyncPagingIterable<UserResponseSchema> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +132,7 @@ public class UsersClient {
      * <p>Auth0 limits the number of users you can return. If you exceed this threshold, please redefine your search, use the <a href="https://auth0.com/docs/api/management/v2#!/Jobs/post_users_exports">export job</a>, or the <a href="https://auth0.com/docs/extensions/user-import-export">User Import / Export</a> extension.</p>
      */
     public SyncPagingIterable<UserResponseSchema> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -150,7 +150,7 @@ public class UsersClient {
      * <p>Auth0 limits the number of users you can return. If you exceed this threshold, please redefine your search, use the <a href="https://auth0.com/docs/api/management/v2#!/Jobs/post_users_exports">export job</a>, or the <a href="https://auth0.com/docs/extensions/user-import-export">User Import / Export</a> extension.</p>
      */
     public SyncPagingIterable<UserResponseSchema> list(ListUsersRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -167,9 +167,8 @@ public class UsersClient {
      * <p>Read about <a href="https://auth0.com/docs/users/search/best-practices">best practices</a> when working with the API endpoints for retrieving users.</p>
      * <p>Auth0 limits the number of users you can return. If you exceed this threshold, please redefine your search, use the <a href="https://auth0.com/docs/api/management/v2#!/Jobs/post_users_exports">export job</a>, or the <a href="https://auth0.com/docs/extensions/user-import-export">User Import / Export</a> extension.</p>
      */
-    public SyncPagingIterable<UserResponseSchema> list(
-            ListUsersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<UserResponseSchema> list(ListUsersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -177,7 +176,7 @@ public class UsersClient {
      * <p>Note: <code>connection</code> is required but other parameters such as <code>email</code> and <code>password</code> are dependent upon the type of connection.</p>
      */
     public CreateUserResponseContent create(CreateUserRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -185,7 +184,7 @@ public class UsersClient {
      * <p>Note: <code>connection</code> is required but other parameters such as <code>email</code> and <code>password</code> are dependent upon the type of connection.</p>
      */
     public CreateUserResponseContent create(CreateUserRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -194,7 +193,7 @@ public class UsersClient {
      * <p>Therefore, when using this endpoint, make sure that you are searching for users via email addresses using the correct case.</p>
      */
     public List<UserResponseSchema> listUsersByEmail(ListUsersByEmailRequestParameters request) {
-        return this.rawClient.listUsersByEmail(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -202,51 +201,50 @@ public class UsersClient {
      * <p>For example, if you register a user as JohnSmith@example.com, Auth0 saves the user's email as johnsmith@example.com.</p>
      * <p>Therefore, when using this endpoint, make sure that you are searching for users via email addresses using the correct case.</p>
      */
-    public List<UserResponseSchema> listUsersByEmail(
-            ListUsersByEmailRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.listUsersByEmail(request, requestOptions).body();
+    public List<UserResponseSchema> listUsersByEmail(ListUsersByEmailRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve user details. A list of fields to include or exclude may also be specified. For more information, see <a href="https://auth0.com/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint">Retrieve Users with the Get Users Endpoint</a>.
      */
     public GetUserResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve user details. A list of fields to include or exclude may also be specified. For more information, see <a href="https://auth0.com/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint">Retrieve Users with the Get Users Endpoint</a>.
      */
     public GetUserResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve user details. A list of fields to include or exclude may also be specified. For more information, see <a href="https://auth0.com/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint">Retrieve Users with the Get Users Endpoint</a>.
      */
     public GetUserResponseContent get(String id, GetUserRequestParameters request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve user details. A list of fields to include or exclude may also be specified. For more information, see <a href="https://auth0.com/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint">Retrieve Users with the Get Users Endpoint</a>.
      */
     public GetUserResponseContent get(String id, GetUserRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a user by user ID. This action cannot be undone. For Auth0 Dashboard instructions, see <a href="https://auth0.com/docs/manage-users/user-accounts/delete-users">Delete Users</a>.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a user by user ID. This action cannot be undone. For Auth0 Dashboard instructions, see <a href="https://auth0.com/docs/manage-users/user-accounts/delete-users">Delete Users</a>.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -313,7 +311,7 @@ public class UsersClient {
      * }</code></pre></p>
      */
     public UpdateUserResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -380,7 +378,7 @@ public class UsersClient {
      * }</code></pre></p>
      */
     public UpdateUserResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -447,7 +445,7 @@ public class UsersClient {
      * }</code></pre></p>
      */
     public UpdateUserResponseContent update(String id, UpdateUserRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -513,110 +511,109 @@ public class UsersClient {
      *   }
      * }</code></pre></p>
      */
-    public UpdateUserResponseContent update(
-            String id, UpdateUserRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateUserResponseContent update(String id, UpdateUserRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove an existing multi-factor authentication (MFA) <a href="https://auth0.com/docs/secure/multi-factor-authentication/reset-user-mfa">recovery code</a> and generate a new one. If a user cannot access the original device or account used for MFA enrollment, they can use a recovery code to authenticate.
      */
     public RegenerateUsersRecoveryCodeResponseContent regenerateRecoveryCode(String id) {
-        return this.rawClient.regenerateRecoveryCode(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove an existing multi-factor authentication (MFA) <a href="https://auth0.com/docs/secure/multi-factor-authentication/reset-user-mfa">recovery code</a> and generate a new one. If a user cannot access the original device or account used for MFA enrollment, they can use a recovery code to authenticate.
      */
     public RegenerateUsersRecoveryCodeResponseContent regenerateRecoveryCode(String id, RequestOptions requestOptions) {
-        return this.rawClient.regenerateRecoveryCode(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes selected resources related to a user (sessions, refresh tokens, ...).
      */
     public void revokeAccess(String id) {
-        this.rawClient.revokeAccess(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes selected resources related to a user (sessions, refresh tokens, ...).
      */
     public void revokeAccess(String id, RequestOptions requestOptions) {
-        this.rawClient.revokeAccess(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes selected resources related to a user (sessions, refresh tokens, ...).
      */
     public void revokeAccess(String id, RevokeUserAccessRequestContent request) {
-        this.rawClient.revokeAccess(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes selected resources related to a user (sessions, refresh tokens, ...).
      */
     public void revokeAccess(String id, RevokeUserAccessRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.revokeAccess(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AuthenticationMethodsClient authenticationMethods() {
-        return this.authenticationMethodsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AuthenticatorsClient authenticators() {
-        return this.authenticatorsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ConnectedAccountsClient connectedAccounts() {
-        return this.connectedAccountsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EnrollmentsClient enrollments() {
-        return this.enrollmentsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public FederatedConnectionsTokensetsClient federatedConnectionsTokensets() {
-        return this.federatedConnectionsTokensetsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GroupsClient groups() {
-        return this.groupsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public IdentitiesClient identities() {
-        return this.identitiesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public LogsClient logs() {
-        return this.logsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MultifactorClient multifactor() {
-        return this.multifactorClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public OrganizationsClient organizations() {
-        return this.organizationsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PermissionsClient permissions() {
-        return this.permissionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RiskAssessmentsClient riskAssessments() {
-        return this.riskAssessmentsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RolesClient roles() {
-        return this.rolesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RefreshTokenClient refreshToken() {
-        return this.refreshTokenClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SessionsClient sessions() {
-        return this.sessionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

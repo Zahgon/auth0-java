@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamDatadogSink.Builder.class)
 public final class LogStreamDatadogSink {
+
     private final String datadogApiKey;
 
     private final LogStreamDatadogRegionEnum datadogRegion;
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamDatadogSink(
-            String datadogApiKey, LogStreamDatadogRegionEnum datadogRegion, Map<String, Object> additionalProperties) {
+    private LogStreamDatadogSink(String datadogApiKey, LogStreamDatadogRegionEnum datadogRegion, Map<String, Object> additionalProperties) {
         this.datadogApiKey = datadogApiKey;
         this.datadogRegion = datadogRegion;
         this.additionalProperties = additionalProperties;
@@ -37,23 +37,22 @@ public final class LogStreamDatadogSink {
      */
     @JsonProperty("datadogApiKey")
     public String getDatadogApiKey() {
-        return datadogApiKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("datadogRegion")
     public LogStreamDatadogRegionEnum getDatadogRegion() {
-        return datadogRegion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamDatadogSink && equalTo((LogStreamDatadogSink) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamDatadogSink other) {
@@ -62,19 +61,20 @@ public final class LogStreamDatadogSink {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.datadogApiKey, this.datadogRegion);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DatadogApiKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DatadogApiKeyStage {
+
         /**
          * <p>Datadog API Key</p>
          */
@@ -84,10 +84,12 @@ public final class LogStreamDatadogSink {
     }
 
     public interface DatadogRegionStage {
+
         _FinalStage datadogRegion(@NotNull LogStreamDatadogRegionEnum datadogRegion);
     }
 
     public interface _FinalStage {
+
         LogStreamDatadogSink build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -97,6 +99,7 @@ public final class LogStreamDatadogSink {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DatadogApiKeyStage, DatadogRegionStage, _FinalStage {
+
         private String datadogApiKey;
 
         private LogStreamDatadogRegionEnum datadogRegion;
@@ -104,13 +107,12 @@ public final class LogStreamDatadogSink {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamDatadogSink other) {
-            datadogApiKey(other.getDatadogApiKey());
-            datadogRegion(other.getDatadogRegion());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -121,32 +123,28 @@ public final class LogStreamDatadogSink {
         @java.lang.Override
         @JsonSetter("datadogApiKey")
         public DatadogRegionStage datadogApiKey(@NotNull String datadogApiKey) {
-            this.datadogApiKey = Objects.requireNonNull(datadogApiKey, "datadogApiKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("datadogRegion")
         public _FinalStage datadogRegion(@NotNull LogStreamDatadogRegionEnum datadogRegion) {
-            this.datadogRegion = Objects.requireNonNull(datadogRegion, "datadogRegion must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamDatadogSink build() {
-            return new LogStreamDatadogSink(datadogApiKey, datadogRegion, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

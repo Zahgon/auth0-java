@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamWebhookCustomHeaderAuthMethodEnum {
-    public static final EventStreamWebhookCustomHeaderAuthMethodEnum CUSTOM_HEADER =
-            new EventStreamWebhookCustomHeaderAuthMethodEnum(Value.CUSTOM_HEADER, "custom_header");
+
+    public static final EventStreamWebhookCustomHeaderAuthMethodEnum CUSTOM_HEADER = new EventStreamWebhookCustomHeaderAuthMethodEnum(Value.CUSTOM_HEADER, "custom_header");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamWebhookCustomHeaderAuthMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamWebhookCustomHeaderAuthMethodEnum
-                        && this.string.equals(((EventStreamWebhookCustomHeaderAuthMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CUSTOM_HEADER:
-                return visitor.visitCustomHeader();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamWebhookCustomHeaderAuthMethodEnum valueOf(String value) {
-        switch (value) {
-            case "custom_header":
-                return CUSTOM_HEADER;
-            default:
-                return new EventStreamWebhookCustomHeaderAuthMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CUSTOM_HEADER,
 
-        UNKNOWN
+        CUSTOM_HEADER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCustomHeader();
 
         T visitUnknown(String unknownType);

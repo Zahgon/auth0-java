@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FederatedConnectionTokenSet.Builder.class)
 public final class FederatedConnectionTokenSet {
+
     private final Optional<String> id;
 
     private final Optional<String> connection;
@@ -38,14 +39,7 @@ public final class FederatedConnectionTokenSet {
 
     private final Map<String, Object> additionalProperties;
 
-    private FederatedConnectionTokenSet(
-            Optional<String> id,
-            Optional<String> connection,
-            Optional<String> scope,
-            OptionalNullable<OffsetDateTime> expiresAt,
-            Optional<OffsetDateTime> issuedAt,
-            OptionalNullable<OffsetDateTime> lastUsedAt,
-            Map<String, Object> additionalProperties) {
+    private FederatedConnectionTokenSet(Optional<String> id, Optional<String> connection, Optional<String> scope, OptionalNullable<OffsetDateTime> expiresAt, Optional<OffsetDateTime> issuedAt, OptionalNullable<OffsetDateTime> lastUsedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.connection = connection;
         this.scope = scope;
@@ -57,40 +51,34 @@ public final class FederatedConnectionTokenSet {
 
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection")
     public Optional<String> getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("expires_at")
     public OptionalNullable<OffsetDateTime> getExpiresAt() {
-        if (expiresAt == null) {
-            return OptionalNullable.absent();
-        }
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("issued_at")
     public Optional<OffsetDateTime> getIssuedAt() {
-        return issuedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("last_used_at")
     public OptionalNullable<OffsetDateTime> getLastUsedAt() {
-        if (lastUsedAt == null) {
-            return OptionalNullable.absent();
-        }
-        return lastUsedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -107,40 +95,35 @@ public final class FederatedConnectionTokenSet {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FederatedConnectionTokenSet && equalTo((FederatedConnectionTokenSet) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FederatedConnectionTokenSet other) {
-        return id.equals(other.id)
-                && connection.equals(other.connection)
-                && scope.equals(other.scope)
-                && expiresAt.equals(other.expiresAt)
-                && issuedAt.equals(other.issuedAt)
-                && lastUsedAt.equals(other.lastUsedAt);
+        return id.equals(other.id) && connection.equals(other.connection) && scope.equals(other.scope) && expiresAt.equals(other.expiresAt) && issuedAt.equals(other.issuedAt) && lastUsedAt.equals(other.lastUsedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.connection, this.scope, this.expiresAt, this.issuedAt, this.lastUsedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> connection = Optional.empty();
@@ -156,137 +139,93 @@ public final class FederatedConnectionTokenSet {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FederatedConnectionTokenSet other) {
-            id(other.getId());
-            connection(other.getConnection());
-            scope(other.getScope());
-            expiresAt(other.getExpiresAt());
-            issuedAt(other.getIssuedAt());
-            lastUsedAt(other.getLastUsedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connection", nulls = Nulls.SKIP)
         public Builder connection(Optional<String> connection) {
-            this.connection = connection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connection(String connection) {
-            this.connection = Optional.ofNullable(connection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public Builder expiresAt(@Nullable OptionalNullable<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = OptionalNullable.of(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(Optional<OffsetDateTime> expiresAt) {
-            if (expiresAt.isPresent()) {
-                this.expiresAt = OptionalNullable.of(expiresAt.get());
-            } else {
-                this.expiresAt = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder expiresAt(com.auth0.client.mgmt.core.Nullable<OffsetDateTime> expiresAt) {
-            if (expiresAt.isNull()) {
-                this.expiresAt = OptionalNullable.ofNull();
-            } else if (expiresAt.isEmpty()) {
-                this.expiresAt = OptionalNullable.absent();
-            } else {
-                this.expiresAt = OptionalNullable.of(expiresAt.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "issued_at", nulls = Nulls.SKIP)
         public Builder issuedAt(Optional<OffsetDateTime> issuedAt) {
-            this.issuedAt = issuedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder issuedAt(OffsetDateTime issuedAt) {
-            this.issuedAt = Optional.ofNullable(issuedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "last_used_at", nulls = Nulls.SKIP)
         public Builder lastUsedAt(@Nullable OptionalNullable<OffsetDateTime> lastUsedAt) {
-            this.lastUsedAt = lastUsedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUsedAt(OffsetDateTime lastUsedAt) {
-            this.lastUsedAt = OptionalNullable.of(lastUsedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUsedAt(Optional<OffsetDateTime> lastUsedAt) {
-            if (lastUsedAt.isPresent()) {
-                this.lastUsedAt = OptionalNullable.of(lastUsedAt.get());
-            } else {
-                this.lastUsedAt = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUsedAt(com.auth0.client.mgmt.core.Nullable<OffsetDateTime> lastUsedAt) {
-            if (lastUsedAt.isNull()) {
-                this.lastUsedAt = OptionalNullable.ofNull();
-            } else if (lastUsedAt.isEmpty()) {
-                this.lastUsedAt = OptionalNullable.absent();
-            } else {
-                this.lastUsedAt = OptionalNullable.of(lastUsedAt.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FederatedConnectionTokenSet build() {
-            return new FederatedConnectionTokenSet(
-                    id, connection, scope, expiresAt, issuedAt, lastUsedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

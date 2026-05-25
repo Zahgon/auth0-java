@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionFlowReturnJsonAction {
-    public static final FlowActionFlowReturnJsonAction RETURN_JSON =
-            new FlowActionFlowReturnJsonAction(Value.RETURN_JSON, "RETURN_JSON");
+
+    public static final FlowActionFlowReturnJsonAction RETURN_JSON = new FlowActionFlowReturnJsonAction(Value.RETURN_JSON, "RETURN_JSON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionFlowReturnJsonAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionFlowReturnJsonAction
-                        && this.string.equals(((FlowActionFlowReturnJsonAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RETURN_JSON:
-                return visitor.visitReturnJson();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionFlowReturnJsonAction valueOf(String value) {
-        switch (value) {
-            case "RETURN_JSON":
-                return RETURN_JSON;
-            default:
-                return new FlowActionFlowReturnJsonAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RETURN_JSON,
 
-        UNKNOWN
+        RETURN_JSON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitReturnJson();
 
         T visitUnknown(String unknownType);

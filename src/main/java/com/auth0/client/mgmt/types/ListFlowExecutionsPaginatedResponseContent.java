@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListFlowExecutionsPaginatedResponseContent.Builder.class)
 public final class ListFlowExecutionsPaginatedResponseContent {
+
     private final Optional<String> next;
 
     private final Optional<List<FlowExecutionSummary>> executions;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListFlowExecutionsPaginatedResponseContent(
-            Optional<String> next,
-            Optional<List<FlowExecutionSummary>> executions,
-            Map<String, Object> additionalProperties) {
+    private ListFlowExecutionsPaginatedResponseContent(Optional<String> next, Optional<List<FlowExecutionSummary>> executions, Map<String, Object> additionalProperties) {
         this.next = next;
         this.executions = executions;
         this.additionalProperties = additionalProperties;
@@ -41,24 +39,22 @@ public final class ListFlowExecutionsPaginatedResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("executions")
     public Optional<List<FlowExecutionSummary>> getExecutions() {
-        return executions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListFlowExecutionsPaginatedResponseContent
-                && equalTo((ListFlowExecutionsPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListFlowExecutionsPaginatedResponseContent other) {
@@ -67,20 +63,21 @@ public final class ListFlowExecutionsPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.executions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> next = Optional.empty();
 
         private Optional<List<FlowExecutionSummary>> executions = Optional.empty();
@@ -88,12 +85,11 @@ public final class ListFlowExecutionsPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListFlowExecutionsPaginatedResponseContent other) {
-            next(other.getNext());
-            executions(other.getExecutions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,38 +97,32 @@ public final class ListFlowExecutionsPaginatedResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "executions", nulls = Nulls.SKIP)
         public Builder executions(Optional<List<FlowExecutionSummary>> executions) {
-            this.executions = executions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder executions(List<FlowExecutionSummary> executions) {
-            this.executions = Optional.ofNullable(executions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListFlowExecutionsPaginatedResponseContent build() {
-            return new ListFlowExecutionsPaginatedResponseContent(next, executions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

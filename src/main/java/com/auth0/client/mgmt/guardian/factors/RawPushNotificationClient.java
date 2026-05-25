@@ -43,6 +43,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawPushNotificationClient {
+
     protected final ClientOptions clientOptions;
 
     public RawPushNotificationClient(ClientOptions clientOptions) {
@@ -53,979 +54,279 @@ public class RawPushNotificationClient {
      * Retrieve configuration details for the multi-factor authentication APNS provider associated with your tenant.
      */
     public ManagementApiHttpResponse<GetGuardianFactorsProviderApnsResponseContent> getApnsProvider() {
-        return getApnsProvider(null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<GetGuardianFactorsProviderApnsResponseContent> getApnsProvider(
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/apns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetGuardianFactorsProviderApnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<GetGuardianFactorsProviderApnsResponseContent> getApnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
     public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider() {
-        return setApnsProvider(SetGuardianFactorsProviderPushNotificationApnsRequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(
-            RequestOptions requestOptions) {
-        return setApnsProvider(
-                SetGuardianFactorsProviderPushNotificationApnsRequestContent.builder()
-                        .build(),
-                requestOptions);
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(
-            SetGuardianFactorsProviderPushNotificationApnsRequestContent request) {
-        return setApnsProvider(request, null);
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(SetGuardianFactorsProviderPushNotificationApnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(
-            SetGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/apns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PUT", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString,
-                                SetGuardianFactorsProviderPushNotificationApnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationApnsResponseContent> setApnsProvider(SetGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent>
-            updateApnsProvider() {
-        return updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent.builder()
-                .build());
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent> updateApnsProvider() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent>
-            updateApnsProvider(RequestOptions requestOptions) {
-        return updateApnsProvider(
-                UpdateGuardianFactorsProviderPushNotificationApnsRequestContent.builder()
-                        .build(),
-                requestOptions);
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent> updateApnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent>
-            updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request) {
-        return updateApnsProvider(request, null);
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent> updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication APNS provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent>
-            updateApnsProvider(
-                    UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request,
-                    RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/apns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString,
-                                UpdateGuardianFactorsProviderPushNotificationApnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationApnsResponseContent> updateApnsProvider(UpdateGuardianFactorsProviderPushNotificationApnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider() {
-        return setFcmProvider(SetGuardianFactorsProviderPushNotificationFcmRequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider(RequestOptions requestOptions) {
-        return setFcmProvider(
-                SetGuardianFactorsProviderPushNotificationFcmRequestContent.builder()
-                        .build(),
-                requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider(
-            SetGuardianFactorsProviderPushNotificationFcmRequestContent request) {
-        return setFcmProvider(request, null);
+    public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider(SetGuardianFactorsProviderPushNotificationFcmRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider(
-            SetGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/fcm");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PUT", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<Map<String, Object>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<Map<String, Object>> setFcmProvider(SetGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider() {
-        return updateFcmProvider(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider(RequestOptions requestOptions) {
-        return updateFcmProvider(
-                UpdateGuardianFactorsProviderPushNotificationFcmRequestContent.builder()
-                        .build(),
-                requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider(
-            UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request) {
-        return updateFcmProvider(request, null);
+    public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCM provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider(
-            UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/fcm");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<Map<String, Object>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<Map<String, Object>> updateFcmProvider(UpdateGuardianFactorsProviderPushNotificationFcmRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider() {
-        return setFcmv1Provider(SetGuardianFactorsProviderPushNotificationFcmv1RequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider(RequestOptions requestOptions) {
-        return setFcmv1Provider(
-                SetGuardianFactorsProviderPushNotificationFcmv1RequestContent.builder()
-                        .build(),
-                requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider(
-            SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
-        return setFcmv1Provider(request, null);
+    public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider(SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Overwrite all configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider(
-            SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/fcmv1");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PUT", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<Map<String, Object>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<Map<String, Object>> setFcmv1Provider(SetGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider() {
-        return updateFcmv1Provider(UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
     public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider(RequestOptions requestOptions) {
-        return updateFcmv1Provider(
-                UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent.builder()
-                        .build(),
-                requestOptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider(
-            UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
-        return updateFcmv1Provider(request, null);
+    public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider(UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify configuration details of the multi-factor authentication FCMV1 provider associated with your tenant.
      */
-    public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider(
-            UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/fcmv1");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, new TypeReference<Map<String, Object>>() {}),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<Map<String, Object>> updateFcmv1Provider(UpdateGuardianFactorsProviderPushNotificationFcmv1RequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for an AWS SNS push notification provider that has been enabled for MFA. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
     public ManagementApiHttpResponse<GetGuardianFactorsProviderSnsResponseContent> getSnsProvider() {
-        return getSnsProvider(null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve configuration details for an AWS SNS push notification provider that has been enabled for MFA. To learn more, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public ManagementApiHttpResponse<GetGuardianFactorsProviderSnsResponseContent> getSnsProvider(
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/sns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetGuardianFactorsProviderSnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<GetGuardianFactorsProviderSnsResponseContent> getSnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
     public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider() {
-        return setSnsProvider(SetGuardianFactorsProviderPushNotificationSnsRequestContent.builder()
-                .build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(
-            RequestOptions requestOptions) {
-        return setSnsProvider(
-                SetGuardianFactorsProviderPushNotificationSnsRequestContent.builder()
-                        .build(),
-                requestOptions);
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(
-            SetGuardianFactorsProviderPushNotificationSnsRequestContent request) {
-        return setSnsProvider(request, null);
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(SetGuardianFactorsProviderPushNotificationSnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(
-            SetGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/sns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PUT", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, SetGuardianFactorsProviderPushNotificationSnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationSnsResponseContent> setSnsProvider(SetGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent>
-            updateSnsProvider() {
-        return updateSnsProvider(UpdateGuardianFactorsProviderPushNotificationSnsRequestContent.builder()
-                .build());
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(
-            RequestOptions requestOptions) {
-        return updateSnsProvider(
-                UpdateGuardianFactorsProviderPushNotificationSnsRequestContent.builder()
-                        .build(),
-                requestOptions);
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request) {
-        return updateSnsProvider(request, null);
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure the <a href="https://auth0.com/docs/multifactor-authentication/developer/sns-configuration">AWS SNS push notification provider configuration</a> (subscription required).
      */
-    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(
-            UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/providers/sns");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PATCH", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString,
-                                UpdateGuardianFactorsProviderPushNotificationSnsResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<UpdateGuardianFactorsProviderPushNotificationSnsResponseContent> updateSnsProvider(UpdateGuardianFactorsProviderPushNotificationSnsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
     public ManagementApiHttpResponse<GetGuardianFactorsProviderPushNotificationResponseContent> getSelectedProvider() {
-        return getSelectedProvider(null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public ManagementApiHttpResponse<GetGuardianFactorsProviderPushNotificationResponseContent> getSelectedProvider(
-            RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/selected-provider");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, GetGuardianFactorsProviderPushNotificationResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<GetGuardianFactorsProviderPushNotificationResponseContent> getSelectedProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationResponseContent> setProvider(
-            SetGuardianFactorsProviderPushNotificationRequestContent request) {
-        return setProvider(request, null);
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationResponseContent> setProvider(SetGuardianFactorsProviderPushNotificationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the push notification provider configured for your tenant. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa">Configure Push Notifications for MFA</a>.
      */
-    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationResponseContent> setProvider(
-            SetGuardianFactorsProviderPushNotificationRequestContent request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("guardian/factors/push-notification/selected-provider");
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        RequestBody body;
-        try {
-            body = RequestBody.create(
-                    ObjectMappers.JSON_MAPPER.writeValueAsBytes(request), MediaTypes.APPLICATION_JSON);
-        } catch (JsonProcessingException e) {
-            throw new ManagementException("Failed to serialize request", e);
-        }
-        Request okhttpRequest = new Request.Builder()
-                .url(httpUrl.build())
-                .method("PUT", body)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Accept", "application/json")
-                .build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                return new ManagementApiHttpResponse<>(
-                        ObjectMappers.JSON_MAPPER.readValue(
-                                responseBodyString, SetGuardianFactorsProviderPushNotificationResponseContent.class),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SetGuardianFactorsProviderPushNotificationResponseContent> setProvider(SetGuardianFactorsProviderPushNotificationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

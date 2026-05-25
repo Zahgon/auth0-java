@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionMailjetSendEmailParams.Deserializer.class)
 public final class FlowActionMailjetSendEmailParams {
+
     private final Object value;
 
     private final int type;
@@ -27,23 +28,17 @@ public final class FlowActionMailjetSendEmailParams {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionMailjetSendEmailParamsContent) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionMailjetSendEmailParamsTemplateId) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionMailjetSendEmailParams && equalTo((FlowActionMailjetSendEmailParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionMailjetSendEmailParams other) {
@@ -52,52 +47,38 @@ public final class FlowActionMailjetSendEmailParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionMailjetSendEmailParams of(FlowActionMailjetSendEmailParamsContent value) {
-        return new FlowActionMailjetSendEmailParams(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionMailjetSendEmailParams of(FlowActionMailjetSendEmailParamsTemplateId value) {
-        return new FlowActionMailjetSendEmailParams(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionMailjetSendEmailParamsContent value);
 
         T visit(FlowActionMailjetSendEmailParamsTemplateId value);
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionMailjetSendEmailParams> {
+
         Deserializer() {
             super(FlowActionMailjetSendEmailParams.class);
         }
 
         @java.lang.Override
-        public FlowActionMailjetSendEmailParams deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("content")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, FlowActionMailjetSendEmailParamsContent.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("template_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, FlowActionMailjetSendEmailParamsTemplateId.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public FlowActionMailjetSendEmailParams deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

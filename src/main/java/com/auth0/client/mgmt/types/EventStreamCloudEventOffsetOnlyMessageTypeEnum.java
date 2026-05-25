@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventOffsetOnlyMessageTypeEnum {
-    public static final EventStreamCloudEventOffsetOnlyMessageTypeEnum OFFSET_ONLY =
-            new EventStreamCloudEventOffsetOnlyMessageTypeEnum(Value.OFFSET_ONLY, "offset-only");
+
+    public static final EventStreamCloudEventOffsetOnlyMessageTypeEnum OFFSET_ONLY = new EventStreamCloudEventOffsetOnlyMessageTypeEnum(Value.OFFSET_ONLY, "offset-only");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamCloudEventOffsetOnlyMessageTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventOffsetOnlyMessageTypeEnum
-                        && this.string.equals(((EventStreamCloudEventOffsetOnlyMessageTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OFFSET_ONLY:
-                return visitor.visitOffsetOnly();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventOffsetOnlyMessageTypeEnum valueOf(String value) {
-        switch (value) {
-            case "offset-only":
-                return OFFSET_ONLY;
-            default:
-                return new EventStreamCloudEventOffsetOnlyMessageTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OFFSET_ONLY,
 
-        UNKNOWN
+        OFFSET_ONLY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOffsetOnly();
 
         T visitUnknown(String unknownType);

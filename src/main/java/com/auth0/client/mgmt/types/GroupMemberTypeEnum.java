@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GroupMemberTypeEnum {
+
     public static final GroupMemberTypeEnum USER = new GroupMemberTypeEnum(Value.USER, "user");
 
     public static final GroupMemberTypeEnum GROUP = new GroupMemberTypeEnum(Value.GROUP, "group");
@@ -21,59 +22,41 @@ public final class GroupMemberTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GroupMemberTypeEnum && this.string.equals(((GroupMemberTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case USER:
-                return visitor.visitUser();
-            case GROUP:
-                return visitor.visitGroup();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GroupMemberTypeEnum valueOf(String value) {
-        switch (value) {
-            case "user":
-                return USER;
-            case "group":
-                return GROUP;
-            default:
-                return new GroupMemberTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        USER,
 
-        GROUP,
-
-        UNKNOWN
+        USER, GROUP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUser();
 
         T visitGroup();

@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.Role;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncRolesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawRolesClient rawClient;
@@ -26,7 +27,7 @@ public class AsyncRolesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawRolesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -34,7 +35,7 @@ public class AsyncRolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
     public CompletableFuture<SyncPagingIterable<Role>> list(String id, String userId) {
-        return this.rawClient.list(id, userId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,69 +43,54 @@ public class AsyncRolesClient {
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
     public CompletableFuture<SyncPagingIterable<Role>> list(String id, String userId, RequestOptions requestOptions) {
-        return this.rawClient.list(id, userId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of roles assigned to a given user within the context of a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Role>> list(
-            String id, String userId, ListOrganizationMemberRolesRequestParameters request) {
-        return this.rawClient.list(id, userId, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Role>> list(String id, String userId, ListOrganizationMemberRolesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list of roles assigned to a given user within the context of a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action only returns the roles associated with the specified Organization; any roles assigned to the user within other Organizations are not included.</p>
      */
-    public CompletableFuture<SyncPagingIterable<Role>> list(
-            String id,
-            String userId,
-            ListOrganizationMemberRolesRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.list(id, userId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<Role>> list(String id, String userId, ListOrganizationMemberRolesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign one or more <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> to a user to determine their access for a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action assigns roles to a user only for the specified Organization. Roles cannot be assigned to a user across multiple Organizations in the same call.</p>
      */
-    public CompletableFuture<Void> assign(
-            String id, String userId, AssignOrganizationMemberRolesRequestContent request) {
-        return this.rawClient.assign(id, userId, request).thenApply(response -> response.body());
+    public CompletableFuture<Void> assign(String id, String userId, AssignOrganizationMemberRolesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Assign one or more <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> to a user to determine their access for a specific Organization.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action assigns roles to a user only for the specified Organization. Roles cannot be assigned to a user across multiple Organizations in the same call.</p>
      */
-    public CompletableFuture<Void> assign(
-            String id,
-            String userId,
-            AssignOrganizationMemberRolesRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.assign(id, userId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> assign(String id, String userId, AssignOrganizationMemberRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more Organization-specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> from a given user.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action removes roles from a user in relation to the specified Organization. Roles assigned to the user within a different Organization cannot be managed in the same call.</p>
      */
-    public CompletableFuture<Void> delete(
-            String id, String userId, DeleteOrganizationMemberRolesRequestContent request) {
-        return this.rawClient.delete(id, userId, request).thenApply(response -> response.body());
+    public CompletableFuture<Void> delete(String id, String userId, DeleteOrganizationMemberRolesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more Organization-specific <a href="https://auth0.com/docs/manage-users/access-control/rbac">roles</a> from a given user.
      * <p>Users can be members of multiple Organizations with unique roles assigned for each membership. This action removes roles from a user in relation to the specified Organization. Roles assigned to the user within a different Organization cannot be managed in the same call.</p>
      */
-    public CompletableFuture<Void> delete(
-            String id,
-            String userId,
-            DeleteOrganizationMemberRolesRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.delete(id, userId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> delete(String id, String userId, DeleteOrganizationMemberRolesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

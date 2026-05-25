@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventGroupUpdatedObject2.Builder.class)
 public final class EventStreamCloudEventGroupUpdatedObject2 {
+
     private final String id;
 
     private final String name;
@@ -36,14 +37,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventGroupUpdatedObject2(
-            String id,
-            String name,
-            Optional<String> externalId,
-            OffsetDateTime createdAt,
-            EventStreamCloudEventGroupUpdatedObject2TypeEnum type,
-            OffsetDateTime updatedAt,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventGroupUpdatedObject2(String id, String name, Optional<String> externalId, OffsetDateTime createdAt, EventStreamCloudEventGroupUpdatedObject2TypeEnum type, OffsetDateTime updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.externalId = externalId;
@@ -58,7 +52,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,7 +60,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -74,7 +68,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
      */
     @JsonProperty("external_id")
     public Optional<String> getExternalId() {
-        return externalId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,12 +76,12 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public EventStreamCloudEventGroupUpdatedObject2TypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,45 +89,39 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventGroupUpdatedObject2
-                && equalTo((EventStreamCloudEventGroupUpdatedObject2) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventGroupUpdatedObject2 other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && externalId.equals(other.externalId)
-                && createdAt.equals(other.createdAt)
-                && type.equals(other.type)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && name.equals(other.name) && externalId.equals(other.externalId) && createdAt.equals(other.createdAt) && type.equals(other.type) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.name, this.externalId, this.createdAt, this.type, this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>The unique identifier for the group.</p>
          */
@@ -143,6 +131,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of the group.</p>
          */
@@ -150,6 +139,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>Date and time when this entity was created (ISO_8601 format).</p>
          */
@@ -157,10 +147,12 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
     }
 
     public interface TypeStage {
+
         UpdatedAtStage type(@NotNull EventStreamCloudEventGroupUpdatedObject2TypeEnum type);
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>Date and time when this entity was last updated/modified (ISO_8601 format).</p>
          */
@@ -168,6 +160,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventGroupUpdatedObject2 build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -183,8 +176,8 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements IdStage, NameStage, CreatedAtStage, TypeStage, UpdatedAtStage, _FinalStage {
+    public static final class Builder implements IdStage, NameStage, CreatedAtStage, TypeStage, UpdatedAtStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -200,17 +193,12 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventGroupUpdatedObject2 other) {
-            id(other.getId());
-            name(other.getName());
-            externalId(other.getExternalId());
-            createdAt(other.getCreatedAt());
-            type(other.getType());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,8 +209,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -233,8 +220,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @java.lang.Override
         @JsonSetter("name")
         public CreatedAtStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -245,15 +231,13 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @java.lang.Override
         @JsonSetter("created_at")
         public TypeStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public UpdatedAtStage type(@NotNull EventStreamCloudEventGroupUpdatedObject2TypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -264,8 +248,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -274,8 +257,7 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
          */
         @java.lang.Override
         public _FinalStage externalId(String externalId) {
-            this.externalId = Optional.ofNullable(externalId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -284,26 +266,22 @@ public final class EventStreamCloudEventGroupUpdatedObject2 {
         @java.lang.Override
         @JsonSetter(value = "external_id", nulls = Nulls.SKIP)
         public _FinalStage externalId(Optional<String> externalId) {
-            this.externalId = externalId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventGroupUpdatedObject2 build() {
-            return new EventStreamCloudEventGroupUpdatedObject2(
-                    id, name, externalId, createdAt, type, updatedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

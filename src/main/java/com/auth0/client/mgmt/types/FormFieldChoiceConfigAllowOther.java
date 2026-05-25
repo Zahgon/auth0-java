@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldChoiceConfigAllowOther.Builder.class)
 public final class FormFieldChoiceConfigAllowOther {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<String> label;
@@ -28,11 +29,7 @@ public final class FormFieldChoiceConfigAllowOther {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldChoiceConfigAllowOther(
-            Optional<Boolean> enabled,
-            Optional<String> label,
-            Optional<String> placeholder,
-            Map<String, Object> additionalProperties) {
+    private FormFieldChoiceConfigAllowOther(Optional<Boolean> enabled, Optional<String> label, Optional<String> placeholder, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.label = label;
         this.placeholder = placeholder;
@@ -41,28 +38,27 @@ public final class FormFieldChoiceConfigAllowOther {
 
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("label")
     public Optional<String> getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldChoiceConfigAllowOther && equalTo((FormFieldChoiceConfigAllowOther) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldChoiceConfigAllowOther other) {
@@ -71,20 +67,21 @@ public final class FormFieldChoiceConfigAllowOther {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.label, this.placeholder);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<String> label = Optional.empty();
@@ -94,60 +91,50 @@ public final class FormFieldChoiceConfigAllowOther {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldChoiceConfigAllowOther other) {
-            enabled(other.getEnabled());
-            label(other.getLabel());
-            placeholder(other.getPlaceholder());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "label", nulls = Nulls.SKIP)
         public Builder label(Optional<String> label) {
-            this.label = label;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder label(String label) {
-            this.label = Optional.ofNullable(label);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldChoiceConfigAllowOther build() {
-            return new FormFieldChoiceConfigAllowOther(enabled, label, placeholder, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

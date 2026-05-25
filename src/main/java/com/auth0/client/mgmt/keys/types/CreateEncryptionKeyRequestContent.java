@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEncryptionKeyRequestContent.Builder.class)
 public final class CreateEncryptionKeyRequestContent {
+
     private final CreateEncryptionKeyType type;
 
     private final Map<String, Object> additionalProperties;
@@ -31,18 +32,17 @@ public final class CreateEncryptionKeyRequestContent {
 
     @JsonProperty("type")
     public CreateEncryptionKeyType getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEncryptionKeyRequestContent && equalTo((CreateEncryptionKeyRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEncryptionKeyRequestContent other) {
@@ -51,25 +51,27 @@ public final class CreateEncryptionKeyRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull CreateEncryptionKeyType type);
 
         Builder from(CreateEncryptionKeyRequestContent other);
     }
 
     public interface _FinalStage {
+
         CreateEncryptionKeyRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +81,39 @@ public final class CreateEncryptionKeyRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, _FinalStage {
+
         private CreateEncryptionKeyType type;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateEncryptionKeyRequestContent other) {
-            type(other.getType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull CreateEncryptionKeyType type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateEncryptionKeyRequestContent build() {
-            return new CreateEncryptionKeyRequestContent(type, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

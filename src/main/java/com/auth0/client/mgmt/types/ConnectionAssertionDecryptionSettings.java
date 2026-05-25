@@ -22,16 +22,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionAssertionDecryptionSettings.Builder.class)
 public final class ConnectionAssertionDecryptionSettings {
+
     private final ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile;
 
     private final Optional<List<String>> algorithmExceptions;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionAssertionDecryptionSettings(
-            ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile,
-            Optional<List<String>> algorithmExceptions,
-            Map<String, Object> additionalProperties) {
+    private ConnectionAssertionDecryptionSettings(ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile, Optional<List<String>> algorithmExceptions, Map<String, Object> additionalProperties) {
         this.algorithmProfile = algorithmProfile;
         this.algorithmExceptions = algorithmExceptions;
         this.additionalProperties = additionalProperties;
@@ -39,7 +37,7 @@ public final class ConnectionAssertionDecryptionSettings {
 
     @JsonProperty("algorithm_profile")
     public ConnectionAssertionDecryptionAlgorithmProfileEnum getAlgorithmProfile() {
-        return algorithmProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,19 +45,17 @@ public final class ConnectionAssertionDecryptionSettings {
      */
     @JsonProperty("algorithm_exceptions")
     public Optional<List<String>> getAlgorithmExceptions() {
-        return algorithmExceptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionAssertionDecryptionSettings
-                && equalTo((ConnectionAssertionDecryptionSettings) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionAssertionDecryptionSettings other) {
@@ -68,25 +64,27 @@ public final class ConnectionAssertionDecryptionSettings {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.algorithmProfile, this.algorithmExceptions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AlgorithmProfileStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AlgorithmProfileStage {
+
         _FinalStage algorithmProfile(@NotNull ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile);
 
         Builder from(ConnectionAssertionDecryptionSettings other);
     }
 
     public interface _FinalStage {
+
         ConnectionAssertionDecryptionSettings build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -103,6 +101,7 @@ public final class ConnectionAssertionDecryptionSettings {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AlgorithmProfileStage, _FinalStage {
+
         private ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile;
 
         private Optional<List<String>> algorithmExceptions = Optional.empty();
@@ -110,21 +109,18 @@ public final class ConnectionAssertionDecryptionSettings {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionAssertionDecryptionSettings other) {
-            algorithmProfile(other.getAlgorithmProfile());
-            algorithmExceptions(other.getAlgorithmExceptions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("algorithm_profile")
-        public _FinalStage algorithmProfile(
-                @NotNull ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile) {
-            this.algorithmProfile = Objects.requireNonNull(algorithmProfile, "algorithmProfile must not be null");
-            return this;
+        public _FinalStage algorithmProfile(@NotNull ConnectionAssertionDecryptionAlgorithmProfileEnum algorithmProfile) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,8 +129,7 @@ public final class ConnectionAssertionDecryptionSettings {
          */
         @java.lang.Override
         public _FinalStage algorithmExceptions(List<String> algorithmExceptions) {
-            this.algorithmExceptions = Optional.ofNullable(algorithmExceptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,26 +138,22 @@ public final class ConnectionAssertionDecryptionSettings {
         @java.lang.Override
         @JsonSetter(value = "algorithm_exceptions", nulls = Nulls.SKIP)
         public _FinalStage algorithmExceptions(Optional<List<String>> algorithmExceptions) {
-            this.algorithmExceptions = algorithmExceptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionAssertionDecryptionSettings build() {
-            return new ConnectionAssertionDecryptionSettings(
-                    algorithmProfile, algorithmExceptions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

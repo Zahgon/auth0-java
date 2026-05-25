@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = BrandingPhoneDisplay.Builder.class)
 public final class BrandingPhoneDisplay {
+
     private final Optional<BrandingPhoneMaskingEnum> masking;
 
     private final Optional<BrandingPhoneFormattingEnum> formatting;
 
     private final Map<String, Object> additionalProperties;
 
-    private BrandingPhoneDisplay(
-            Optional<BrandingPhoneMaskingEnum> masking,
-            Optional<BrandingPhoneFormattingEnum> formatting,
-            Map<String, Object> additionalProperties) {
+    private BrandingPhoneDisplay(Optional<BrandingPhoneMaskingEnum> masking, Optional<BrandingPhoneFormattingEnum> formatting, Map<String, Object> additionalProperties) {
         this.masking = masking;
         this.formatting = formatting;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class BrandingPhoneDisplay {
 
     @JsonProperty("masking")
     public Optional<BrandingPhoneMaskingEnum> getMasking() {
-        return masking;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("formatting")
     public Optional<BrandingPhoneFormattingEnum> getFormatting() {
-        return formatting;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof BrandingPhoneDisplay && equalTo((BrandingPhoneDisplay) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(BrandingPhoneDisplay other) {
@@ -62,20 +59,21 @@ public final class BrandingPhoneDisplay {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.masking, this.formatting);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<BrandingPhoneMaskingEnum> masking = Optional.empty();
 
         private Optional<BrandingPhoneFormattingEnum> formatting = Optional.empty();
@@ -83,48 +81,41 @@ public final class BrandingPhoneDisplay {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(BrandingPhoneDisplay other) {
-            masking(other.getMasking());
-            formatting(other.getFormatting());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "masking", nulls = Nulls.SKIP)
         public Builder masking(Optional<BrandingPhoneMaskingEnum> masking) {
-            this.masking = masking;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder masking(BrandingPhoneMaskingEnum masking) {
-            this.masking = Optional.ofNullable(masking);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "formatting", nulls = Nulls.SKIP)
         public Builder formatting(Optional<BrandingPhoneFormattingEnum> formatting) {
-            this.formatting = formatting;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder formatting(BrandingPhoneFormattingEnum formatting) {
-            this.formatting = Optional.ofNullable(formatting);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public BrandingPhoneDisplay build() {
-            return new BrandingPhoneDisplay(masking, formatting, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

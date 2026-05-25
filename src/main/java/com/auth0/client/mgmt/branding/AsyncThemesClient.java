@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.UpdateBrandingThemeResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncThemesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawThemesClient rawClient;
@@ -27,79 +28,76 @@ public class AsyncThemesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawThemesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create branding theme.
      */
     public CompletableFuture<CreateBrandingThemeResponseContent> create(CreateBrandingThemeRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create branding theme.
      */
-    public CompletableFuture<CreateBrandingThemeResponseContent> create(
-            CreateBrandingThemeRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateBrandingThemeResponseContent> create(CreateBrandingThemeRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve default branding theme.
      */
     public CompletableFuture<GetBrandingDefaultThemeResponseContent> getDefault() {
-        return this.rawClient.getDefault().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve default branding theme.
      */
     public CompletableFuture<GetBrandingDefaultThemeResponseContent> getDefault(RequestOptions requestOptions) {
-        return this.rawClient.getDefault(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding theme.
      */
     public CompletableFuture<GetBrandingThemeResponseContent> get(String themeId) {
-        return this.rawClient.get(themeId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding theme.
      */
     public CompletableFuture<GetBrandingThemeResponseContent> get(String themeId, RequestOptions requestOptions) {
-        return this.rawClient.get(themeId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete branding theme.
      */
     public CompletableFuture<Void> delete(String themeId) {
-        return this.rawClient.delete(themeId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete branding theme.
      */
     public CompletableFuture<Void> delete(String themeId, RequestOptions requestOptions) {
-        return this.rawClient.delete(themeId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding theme.
      */
-    public CompletableFuture<UpdateBrandingThemeResponseContent> update(
-            String themeId, UpdateBrandingThemeRequestContent request) {
-        return this.rawClient.update(themeId, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBrandingThemeResponseContent> update(String themeId, UpdateBrandingThemeRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding theme.
      */
-    public CompletableFuture<UpdateBrandingThemeResponseContent> update(
-            String themeId, UpdateBrandingThemeRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(themeId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBrandingThemeResponseContent> update(String themeId, UpdateBrandingThemeRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

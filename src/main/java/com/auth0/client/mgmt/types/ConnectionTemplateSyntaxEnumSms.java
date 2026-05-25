@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionTemplateSyntaxEnumSms {
-    public static final ConnectionTemplateSyntaxEnumSms MD_WITH_MACROS =
-            new ConnectionTemplateSyntaxEnumSms(Value.MD_WITH_MACROS, "md_with_macros");
 
-    public static final ConnectionTemplateSyntaxEnumSms LIQUID =
-            new ConnectionTemplateSyntaxEnumSms(Value.LIQUID, "liquid");
+    public static final ConnectionTemplateSyntaxEnumSms MD_WITH_MACROS = new ConnectionTemplateSyntaxEnumSms(Value.MD_WITH_MACROS, "md_with_macros");
+
+    public static final ConnectionTemplateSyntaxEnumSms LIQUID = new ConnectionTemplateSyntaxEnumSms(Value.LIQUID, "liquid");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionTemplateSyntaxEnumSms {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionTemplateSyntaxEnumSms
-                        && this.string.equals(((ConnectionTemplateSyntaxEnumSms) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MD_WITH_MACROS:
-                return visitor.visitMdWithMacros();
-            case LIQUID:
-                return visitor.visitLiquid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionTemplateSyntaxEnumSms valueOf(String value) {
-        switch (value) {
-            case "md_with_macros":
-                return MD_WITH_MACROS;
-            case "liquid":
-                return LIQUID;
-            default:
-                return new ConnectionTemplateSyntaxEnumSms(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LIQUID,
 
-        MD_WITH_MACROS,
-
-        UNKNOWN
+        LIQUID, MD_WITH_MACROS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLiquid();
 
         T visitMdWithMacros();

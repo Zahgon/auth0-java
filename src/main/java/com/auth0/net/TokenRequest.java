@@ -11,7 +11,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 public class TokenRequest extends BaseRequest<TokenHolder> {
 
     public TokenRequest(Auth0HttpClient client, String url) {
-        super(client, null, url, HttpMethod.POST, new TypeReference<TokenHolder>() {});
+        super(client, null, url, HttpMethod.POST, new TypeReference<TokenHolder>() {
+        });
     }
 
     /**
@@ -21,8 +22,7 @@ public class TokenRequest extends BaseRequest<TokenHolder> {
      * @return this request instance.
      */
     public TokenRequest setRealm(String realm) {
-        super.addParameter("realm", realm);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -32,8 +32,7 @@ public class TokenRequest extends BaseRequest<TokenHolder> {
      * @return this request instance.
      */
     public TokenRequest setAudience(String audience) {
-        super.addParameter("audience", audience);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,7 +42,6 @@ public class TokenRequest extends BaseRequest<TokenHolder> {
      * @return this request instance.
      */
     public TokenRequest setScope(String scope) {
-        super.addParameter("scope", scope);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

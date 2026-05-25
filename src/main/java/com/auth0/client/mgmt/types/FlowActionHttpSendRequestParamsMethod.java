@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionHttpSendRequestParamsMethod {
-    public static final FlowActionHttpSendRequestParamsMethod GET =
-            new FlowActionHttpSendRequestParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionHttpSendRequestParamsMethod PUT =
-            new FlowActionHttpSendRequestParamsMethod(Value.PUT, "PUT");
+    public static final FlowActionHttpSendRequestParamsMethod GET = new FlowActionHttpSendRequestParamsMethod(Value.GET, "GET");
 
-    public static final FlowActionHttpSendRequestParamsMethod PATCH =
-            new FlowActionHttpSendRequestParamsMethod(Value.PATCH, "PATCH");
+    public static final FlowActionHttpSendRequestParamsMethod PUT = new FlowActionHttpSendRequestParamsMethod(Value.PUT, "PUT");
 
-    public static final FlowActionHttpSendRequestParamsMethod DELETE =
-            new FlowActionHttpSendRequestParamsMethod(Value.DELETE, "DELETE");
+    public static final FlowActionHttpSendRequestParamsMethod PATCH = new FlowActionHttpSendRequestParamsMethod(Value.PATCH, "PATCH");
 
-    public static final FlowActionHttpSendRequestParamsMethod POST =
-            new FlowActionHttpSendRequestParamsMethod(Value.POST, "POST");
+    public static final FlowActionHttpSendRequestParamsMethod DELETE = new FlowActionHttpSendRequestParamsMethod(Value.DELETE, "DELETE");
+
+    public static final FlowActionHttpSendRequestParamsMethod POST = new FlowActionHttpSendRequestParamsMethod(Value.POST, "POST");
 
     private final Value value;
 
@@ -32,78 +28,46 @@ public final class FlowActionHttpSendRequestParamsMethod {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionHttpSendRequestParamsMethod
-                        && this.string.equals(((FlowActionHttpSendRequestParamsMethod) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GET:
-                return visitor.visitGet();
-            case PUT:
-                return visitor.visitPut();
-            case PATCH:
-                return visitor.visitPatch();
-            case DELETE:
-                return visitor.visitDelete();
-            case POST:
-                return visitor.visitPost();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionHttpSendRequestParamsMethod valueOf(String value) {
-        switch (value) {
-            case "GET":
-                return GET;
-            case "PUT":
-                return PUT;
-            case "PATCH":
-                return PATCH;
-            case "DELETE":
-                return DELETE;
-            case "POST":
-                return POST;
-            default:
-                return new FlowActionHttpSendRequestParamsMethod(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         GET,
-
         POST,
-
         PUT,
-
         PATCH,
-
         DELETE,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGet();
 
         T visitPost();

@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.UpdateNetworkAclResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncNetworkAclsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawNetworkAclsClient rawClient;
@@ -30,123 +31,118 @@ public class AsyncNetworkAclsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawNetworkAclsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
     public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
     public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
-    public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list(
-            ListNetworkAclsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list(ListNetworkAclsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get all access control list entries for your client.
      */
-    public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list(
-            ListNetworkAclsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<NetworkAclsResponseContent>> list(ListNetworkAclsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new access control list for your client.
      */
     public CompletableFuture<Void> create(CreateNetworkAclRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new access control list for your client.
      */
     public CompletableFuture<Void> create(CreateNetworkAclRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a specific access control list entry for your client.
      */
     public CompletableFuture<GetNetworkAclsResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a specific access control list entry for your client.
      */
     public CompletableFuture<GetNetworkAclsResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public CompletableFuture<SetNetworkAclsResponseContent> set(String id, SetNetworkAclRequestContent request) {
-        return this.rawClient.set(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
-    public CompletableFuture<SetNetworkAclsResponseContent> set(
-            String id, SetNetworkAclRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetNetworkAclsResponseContent> set(String id, SetNetworkAclRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete existing access control list for your client.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete existing access control list for your client.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public CompletableFuture<UpdateNetworkAclResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
     public CompletableFuture<UpdateNetworkAclResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
-    public CompletableFuture<UpdateNetworkAclResponseContent> update(
-            String id, UpdateNetworkAclRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateNetworkAclResponseContent> update(String id, UpdateNetworkAclRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing access control list for your client.
      */
-    public CompletableFuture<UpdateNetworkAclResponseContent> update(
-            String id, UpdateNetworkAclRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateNetworkAclResponseContent> update(String id, UpdateNetworkAclRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

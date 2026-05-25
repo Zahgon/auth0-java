@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncMembersClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawMembersClient rawClient;
@@ -32,7 +33,7 @@ public class AsyncMembersClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawMembersClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +57,7 @@ public class AsyncMembersClient {
      * <p>To search by checkpoint, use the following parameters: - from: Optional id from which to start selection. - take: The total amount of entries to retrieve when using the from parameter. Defaults to 50. Note: The first time you call this endpoint using Checkpoint Pagination, you should omit the <code>from</code> parameter. If there are more results, a <code>next</code> value will be included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, this indicates there are no more pages remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +81,7 @@ public class AsyncMembersClient {
      * <p>To search by checkpoint, use the following parameters: - from: Optional id from which to start selection. - take: The total amount of entries to retrieve when using the from parameter. Defaults to 50. Note: The first time you call this endpoint using Checkpoint Pagination, you should omit the <code>from</code> parameter. If there are more results, a <code>next</code> value will be included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, this indicates there are no more pages remaining.</p>
      */
     public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,9 +104,8 @@ public class AsyncMembersClient {
      * <p><h2>Checkpoint Pagination</h2></p>
      * <p>To search by checkpoint, use the following parameters: - from: Optional id from which to start selection. - take: The total amount of entries to retrieve when using the from parameter. Defaults to 50. Note: The first time you call this endpoint using Checkpoint Pagination, you should omit the <code>from</code> parameter. If there are more results, a <code>next</code> value will be included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, this indicates there are no more pages remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(
-            String id, ListOrganizationMembersRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(String id, ListOrganizationMembersRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -128,9 +128,8 @@ public class AsyncMembersClient {
      * <p><h2>Checkpoint Pagination</h2></p>
      * <p>To search by checkpoint, use the following parameters: - from: Optional id from which to start selection. - take: The total amount of entries to retrieve when using the from parameter. Defaults to 50. Note: The first time you call this endpoint using Checkpoint Pagination, you should omit the <code>from</code> parameter. If there are more results, a <code>next</code> value will be included in the response. You can use this for subsequent API calls. When <code>next</code> is no longer included in the response, this indicates there are no more pages remaining.</p>
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(
-            String id, ListOrganizationMembersRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationMember>> list(String id, ListOrganizationMembersRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -138,28 +137,26 @@ public class AsyncMembersClient {
      * <p>To add a user to an Organization through this action, the user must already exist in your tenant. If a user does not yet exist, you can <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">invite them to create an account</a>, manually create them through the Auth0 Dashboard, or use the Management API.</p>
      */
     public CompletableFuture<Void> create(String id, CreateOrganizationMemberRequestContent request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Set one or more existing users as members of a specific <a href="https://auth0.com/docs/manage-users/organizations">Organization</a>.
      * <p>To add a user to an Organization through this action, the user must already exist in your tenant. If a user does not yet exist, you can <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">invite them to create an account</a>, manually create them through the Auth0 Dashboard, or use the Management API.</p>
      */
-    public CompletableFuture<Void> create(
-            String id, CreateOrganizationMemberRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> create(String id, CreateOrganizationMemberRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, DeleteOrganizationMembersRequestContent request) {
-        return this.rawClient.delete(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<Void> delete(
-            String id, DeleteOrganizationMembersRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> delete(String id, DeleteOrganizationMembersRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncRolesClient roles() {
-        return this.rolesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

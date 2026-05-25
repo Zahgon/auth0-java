@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class AculRenderingModeEnum {
+
     public static final AculRenderingModeEnum ADVANCED = new AculRenderingModeEnum(Value.ADVANCED, "advanced");
 
     public static final AculRenderingModeEnum STANDARD = new AculRenderingModeEnum(Value.STANDARD, "standard");
@@ -21,60 +22,41 @@ public final class AculRenderingModeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof AculRenderingModeEnum
-                        && this.string.equals(((AculRenderingModeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADVANCED:
-                return visitor.visitAdvanced();
-            case STANDARD:
-                return visitor.visitStandard();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static AculRenderingModeEnum valueOf(String value) {
-        switch (value) {
-            case "advanced":
-                return ADVANCED;
-            case "standard":
-                return STANDARD;
-            default:
-                return new AculRenderingModeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADVANCED,
 
-        STANDARD,
-
-        UNKNOWN
+        ADVANCED, STANDARD, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAdvanced();
 
         T visitStandard();

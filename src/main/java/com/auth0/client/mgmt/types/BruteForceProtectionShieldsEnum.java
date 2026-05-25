@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BruteForceProtectionShieldsEnum {
-    public static final BruteForceProtectionShieldsEnum BLOCK =
-            new BruteForceProtectionShieldsEnum(Value.BLOCK, "block");
 
-    public static final BruteForceProtectionShieldsEnum USER_NOTIFICATION =
-            new BruteForceProtectionShieldsEnum(Value.USER_NOTIFICATION, "user_notification");
+    public static final BruteForceProtectionShieldsEnum BLOCK = new BruteForceProtectionShieldsEnum(Value.BLOCK, "block");
+
+    public static final BruteForceProtectionShieldsEnum USER_NOTIFICATION = new BruteForceProtectionShieldsEnum(Value.USER_NOTIFICATION, "user_notification");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class BruteForceProtectionShieldsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BruteForceProtectionShieldsEnum
-                        && this.string.equals(((BruteForceProtectionShieldsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BLOCK:
-                return visitor.visitBlock();
-            case USER_NOTIFICATION:
-                return visitor.visitUserNotification();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BruteForceProtectionShieldsEnum valueOf(String value) {
-        switch (value) {
-            case "block":
-                return BLOCK;
-            case "user_notification":
-                return USER_NOTIFICATION;
-            default:
-                return new BruteForceProtectionShieldsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BLOCK,
 
-        USER_NOTIFICATION,
-
-        UNKNOWN
+        BLOCK, USER_NOTIFICATION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBlock();
 
         T visitUserNotification();

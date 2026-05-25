@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketProvisioningConfig.Builder.class)
 public final class SelfServiceProfileSsoTicketProvisioningConfig {
+
     private final Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> scopes;
 
     private final Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> googleWorkspace;
@@ -32,11 +33,7 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketProvisioningConfig(
-            Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> scopes,
-            Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> googleWorkspace,
-            OptionalNullable<Integer> tokenLifetime,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketProvisioningConfig(Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> scopes, Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> googleWorkspace, OptionalNullable<Integer> tokenLifetime, Map<String, Object> additionalProperties) {
         this.scopes = scopes;
         this.googleWorkspace = googleWorkspace;
         this.tokenLifetime = tokenLifetime;
@@ -48,12 +45,12 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
      */
     @JsonProperty("scopes")
     public Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("google_workspace")
     public Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> getGoogleWorkspace() {
-        return googleWorkspace;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,10 +59,7 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_lifetime")
     public OptionalNullable<Integer> getTokenLifetime() {
-        if (tokenLifetime == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -76,38 +70,35 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketProvisioningConfig
-                && equalTo((SelfServiceProfileSsoTicketProvisioningConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketProvisioningConfig other) {
-        return scopes.equals(other.scopes)
-                && googleWorkspace.equals(other.googleWorkspace)
-                && tokenLifetime.equals(other.tokenLifetime);
+        return scopes.equals(other.scopes) && googleWorkspace.equals(other.googleWorkspace) && tokenLifetime.equals(other.tokenLifetime);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.scopes, this.googleWorkspace, this.tokenLifetime);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> scopes = Optional.empty();
 
         private Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> googleWorkspace = Optional.empty();
@@ -117,13 +108,11 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SelfServiceProfileSsoTicketProvisioningConfig other) {
-            scopes(other.getScopes());
-            googleWorkspace(other.getGoogleWorkspace());
-            tokenLifetime(other.getTokenLifetime());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,24 +120,20 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
          */
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<List<SelfServiceProfileSsoTicketProvisioningScopeEnum>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(List<SelfServiceProfileSsoTicketProvisioningScopeEnum> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "google_workspace", nulls = Nulls.SKIP)
         public Builder googleWorkspace(Optional<SelfServiceProfileSsoTicketGoogleWorkspaceConfig> googleWorkspace) {
-            this.googleWorkspace = googleWorkspace;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder googleWorkspace(SelfServiceProfileSsoTicketGoogleWorkspaceConfig googleWorkspace) {
-            this.googleWorkspace = Optional.ofNullable(googleWorkspace);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -156,48 +141,31 @@ public final class SelfServiceProfileSsoTicketProvisioningConfig {
          */
         @JsonSetter(value = "token_lifetime", nulls = Nulls.SKIP)
         public Builder tokenLifetime(@Nullable OptionalNullable<Integer> tokenLifetime) {
-            this.tokenLifetime = tokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(Integer tokenLifetime) {
-            this.tokenLifetime = OptionalNullable.of(tokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(Optional<Integer> tokenLifetime) {
-            if (tokenLifetime.isPresent()) {
-                this.tokenLifetime = OptionalNullable.of(tokenLifetime.get());
-            } else {
-                this.tokenLifetime = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(com.auth0.client.mgmt.core.Nullable<Integer> tokenLifetime) {
-            if (tokenLifetime.isNull()) {
-                this.tokenLifetime = OptionalNullable.ofNull();
-            } else if (tokenLifetime.isEmpty()) {
-                this.tokenLifetime = OptionalNullable.absent();
-            } else {
-                this.tokenLifetime = OptionalNullable.of(tokenLifetime.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SelfServiceProfileSsoTicketProvisioningConfig build() {
-            return new SelfServiceProfileSsoTicketProvisioningConfig(
-                    scopes, googleWorkspace, tokenLifetime, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

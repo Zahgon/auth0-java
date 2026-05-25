@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GetFlowRequestParametersHydrateEnum {
-    public static final GetFlowRequestParametersHydrateEnum FORM_COUNT =
-            new GetFlowRequestParametersHydrateEnum(Value.FORM_COUNT, "form_count");
 
-    public static final GetFlowRequestParametersHydrateEnum FORMS =
-            new GetFlowRequestParametersHydrateEnum(Value.FORMS, "forms");
+    public static final GetFlowRequestParametersHydrateEnum FORM_COUNT = new GetFlowRequestParametersHydrateEnum(Value.FORM_COUNT, "form_count");
+
+    public static final GetFlowRequestParametersHydrateEnum FORMS = new GetFlowRequestParametersHydrateEnum(Value.FORMS, "forms");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class GetFlowRequestParametersHydrateEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GetFlowRequestParametersHydrateEnum
-                        && this.string.equals(((GetFlowRequestParametersHydrateEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FORM_COUNT:
-                return visitor.visitFormCount();
-            case FORMS:
-                return visitor.visitForms();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GetFlowRequestParametersHydrateEnum valueOf(String value) {
-        switch (value) {
-            case "form_count":
-                return FORM_COUNT;
-            case "forms":
-                return FORMS;
-            default:
-                return new GetFlowRequestParametersHydrateEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FORM_COUNT,
 
-        FORMS,
-
-        UNKNOWN
+        FORM_COUNT, FORMS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFormCount();
 
         T visitForms();

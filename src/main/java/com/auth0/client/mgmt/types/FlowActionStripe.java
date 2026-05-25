@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FlowActionStripe.Deserializer.class)
 public final class FlowActionStripe {
+
     private final Object value;
 
     private final int type;
@@ -27,33 +28,17 @@ public final class FlowActionStripe {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowActionStripeAddTaxId) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowActionStripeCreateCustomer) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowActionStripeCreatePortalSession) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowActionStripeDeleteTaxId) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FlowActionStripeFindCustomers) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FlowActionStripeGetCustomer) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FlowActionStripeUpdateCustomer) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionStripe && equalTo((FlowActionStripe) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionStripe other) {
@@ -62,43 +47,44 @@ public final class FlowActionStripe {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeAddTaxId value) {
-        return new FlowActionStripe(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeCreateCustomer value) {
-        return new FlowActionStripe(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeCreatePortalSession value) {
-        return new FlowActionStripe(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeDeleteTaxId value) {
-        return new FlowActionStripe(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeFindCustomers value) {
-        return new FlowActionStripe(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeGetCustomer value) {
-        return new FlowActionStripe(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowActionStripe of(FlowActionStripeUpdateCustomer value) {
-        return new FlowActionStripe(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowActionStripeAddTaxId value);
 
         T visit(FlowActionStripeCreateCustomer value);
@@ -115,84 +101,14 @@ public final class FlowActionStripe {
     }
 
     static final class Deserializer extends StdDeserializer<FlowActionStripe> {
+
         Deserializer() {
             super(FlowActionStripe.class);
         }
 
         @java.lang.Override
         public FlowActionStripe deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeAddTaxId.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeCreateCustomer.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeCreatePortalSession.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeDeleteTaxId.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeFindCustomers.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeGetCustomer.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("action")
-                    && ((Map<?, ?>) value).containsKey("params")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowActionStripeUpdateCustomer.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

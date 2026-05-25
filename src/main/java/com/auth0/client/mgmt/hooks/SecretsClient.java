@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SecretsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSecretsClient rawClient;
@@ -22,62 +23,62 @@ public class SecretsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSecretsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a hook's secrets by the ID of the hook.
      */
     public Map<String, String> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a hook's secrets by the ID of the hook.
      */
     public Map<String, String> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more secrets to an existing hook. Accepts an object of key-value pairs, where the key is the name of the secret. A hook can have a maximum of 20 secrets.
      */
     public void create(String id, Map<String, String> request) {
-        this.rawClient.create(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more secrets to an existing hook. Accepts an object of key-value pairs, where the key is the name of the secret. A hook can have a maximum of 20 secrets.
      */
     public void create(String id, Map<String, String> request, RequestOptions requestOptions) {
-        this.rawClient.create(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete one or more existing secrets for a given hook. Accepts an array of secret names to delete.
      */
     public void delete(String id, List<String> request) {
-        this.rawClient.delete(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete one or more existing secrets for a given hook. Accepts an array of secret names to delete.
      */
     public void delete(String id, List<String> request, RequestOptions requestOptions) {
-        this.rawClient.delete(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update one or more existing secrets for an existing hook. Accepts an object of key-value pairs, where the key is the name of the existing secret.
      */
     public void update(String id, Map<String, String> request) {
-        this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update one or more existing secrets for an existing hook. Accepts an object of key-value pairs, where the key is the name of the existing secret.
      */
     public void update(String id, Map<String, String> request, RequestOptions requestOptions) {
-        this.rawClient.update(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

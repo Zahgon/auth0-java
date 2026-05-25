@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomSigningKeyTypeEnum {
+
     public static final CustomSigningKeyTypeEnum EC = new CustomSigningKeyTypeEnum(Value.EC, "EC");
 
     public static final CustomSigningKeyTypeEnum RSA = new CustomSigningKeyTypeEnum(Value.RSA, "RSA");
@@ -21,60 +22,41 @@ public final class CustomSigningKeyTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomSigningKeyTypeEnum
-                        && this.string.equals(((CustomSigningKeyTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EC:
-                return visitor.visitEc();
-            case RSA:
-                return visitor.visitRsa();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomSigningKeyTypeEnum valueOf(String value) {
-        switch (value) {
-            case "EC":
-                return EC;
-            case "RSA":
-                return RSA;
-            default:
-                return new CustomSigningKeyTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EC,
 
-        RSA,
-
-        UNKNOWN
+        EC, RSA, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEc();
 
         T visitRsa();

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupBigqueryOauthJwt.Builder.class)
 public final class FlowsVaultConnectioSetupBigqueryOauthJwt {
+
     private final Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> type;
 
     private final Optional<String> projectId;
@@ -30,12 +31,7 @@ public final class FlowsVaultConnectioSetupBigqueryOauthJwt {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupBigqueryOauthJwt(
-            Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> type,
-            Optional<String> projectId,
-            Optional<String> privateKey,
-            Optional<String> clientEmail,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupBigqueryOauthJwt(Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> type, Optional<String> projectId, Optional<String> privateKey, Optional<String> clientEmail, Map<String, Object> additionalProperties) {
         this.type = type;
         this.projectId = projectId;
         this.privateKey = privateKey;
@@ -45,59 +41,55 @@ public final class FlowsVaultConnectioSetupBigqueryOauthJwt {
 
     @JsonProperty("type")
     public Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("project_id")
     public Optional<String> getProjectId() {
-        return projectId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("private_key")
     public Optional<String> getPrivateKey() {
-        return privateKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_email")
     public Optional<String> getClientEmail() {
-        return clientEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupBigqueryOauthJwt
-                && equalTo((FlowsVaultConnectioSetupBigqueryOauthJwt) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupBigqueryOauthJwt other) {
-        return type.equals(other.type)
-                && projectId.equals(other.projectId)
-                && privateKey.equals(other.privateKey)
-                && clientEmail.equals(other.clientEmail);
+        return type.equals(other.type) && projectId.equals(other.projectId) && privateKey.equals(other.privateKey) && clientEmail.equals(other.clientEmail);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.projectId, this.privateKey, this.clientEmail);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> type = Optional.empty();
 
         private Optional<String> projectId = Optional.empty();
@@ -109,73 +101,59 @@ public final class FlowsVaultConnectioSetupBigqueryOauthJwt {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowsVaultConnectioSetupBigqueryOauthJwt other) {
-            type(other.getType());
-            projectId(other.getProjectId());
-            privateKey(other.getPrivateKey());
-            clientEmail(other.getClientEmail());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<FlowsVaultConnectioSetupTypeOauthJwtEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(FlowsVaultConnectioSetupTypeOauthJwtEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "project_id", nulls = Nulls.SKIP)
         public Builder projectId(Optional<String> projectId) {
-            this.projectId = projectId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Optional.ofNullable(projectId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "private_key", nulls = Nulls.SKIP)
         public Builder privateKey(Optional<String> privateKey) {
-            this.privateKey = privateKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Optional.ofNullable(privateKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_email", nulls = Nulls.SKIP)
         public Builder clientEmail(Optional<String> clientEmail) {
-            this.clientEmail = clientEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientEmail(String clientEmail) {
-            this.clientEmail = Optional.ofNullable(clientEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowsVaultConnectioSetupBigqueryOauthJwt build() {
-            return new FlowsVaultConnectioSetupBigqueryOauthJwt(
-                    type, projectId, privateKey, clientEmail, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

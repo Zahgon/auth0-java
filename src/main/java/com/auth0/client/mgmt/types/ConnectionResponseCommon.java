@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionResponseCommon.Builder.class)
 public final class ConnectionResponseCommon implements IConnectionResponseCommon, ICreateConnectionCommon {
+
     private final String id;
 
     private final Optional<List<String>> realms;
@@ -39,15 +40,7 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionResponseCommon(
-            String id,
-            Optional<List<String>> realms,
-            String name,
-            Optional<List<String>> enabledClients,
-            Optional<String> displayName,
-            Optional<Boolean> isDomainConnection,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            Map<String, Object> additionalProperties) {
+    private ConnectionResponseCommon(String id, Optional<List<String>> realms, String name, Optional<List<String>> enabledClients, Optional<String> displayName, Optional<Boolean> isDomainConnection, Optional<Map<String, OptionalNullable<String>>> metadata, Map<String, Object> additionalProperties) {
         this.id = id;
         this.realms = realms;
         this.name = name;
@@ -61,19 +54,19 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
     @JsonProperty("id")
     @java.lang.Override
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("realms")
     @java.lang.Override
     public Optional<List<String>> getRealms() {
-        return realms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     @java.lang.Override
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,80 +75,69 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
     @JsonProperty("enabled_clients")
     @java.lang.Override
     public Optional<List<String>> getEnabledClients() {
-        return enabledClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("display_name")
     @java.lang.Override
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("is_domain_connection")
     @java.lang.Override
     public Optional<Boolean> getIsDomainConnection() {
-        return isDomainConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     @java.lang.Override
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionResponseCommon && equalTo((ConnectionResponseCommon) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionResponseCommon other) {
-        return id.equals(other.id)
-                && realms.equals(other.realms)
-                && name.equals(other.name)
-                && enabledClients.equals(other.enabledClients)
-                && displayName.equals(other.displayName)
-                && isDomainConnection.equals(other.isDomainConnection)
-                && metadata.equals(other.metadata);
+        return id.equals(other.id) && realms.equals(other.realms) && name.equals(other.name) && enabledClients.equals(other.enabledClients) && displayName.equals(other.displayName) && isDomainConnection.equals(other.isDomainConnection) && metadata.equals(other.metadata);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.realms,
-                this.name,
-                this.enabledClients,
-                this.displayName,
-                this.isDomainConnection,
-                this.metadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         NameStage id(@NotNull String id);
 
         Builder from(ConnectionResponseCommon other);
     }
 
     public interface NameStage {
+
         _FinalStage name(@NotNull String name);
     }
 
     public interface _FinalStage {
+
         ConnectionResponseCommon build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -188,6 +170,7 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, NameStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -205,71 +188,57 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionResponseCommon other) {
-            id(other.getId());
-            realms(other.getRealms());
-            name(other.getName());
-            enabledClients(other.getEnabledClients());
-            displayName(other.getDisplayName());
-            isDomainConnection(other.getIsDomainConnection());
-            metadata(other.getMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage isDomainConnection(Boolean isDomainConnection) {
-            this.isDomainConnection = Optional.ofNullable(isDomainConnection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "is_domain_connection", nulls = Nulls.SKIP)
         public _FinalStage isDomainConnection(Optional<Boolean> isDomainConnection) {
-            this.isDomainConnection = isDomainConnection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -278,8 +247,7 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
          */
         @java.lang.Override
         public _FinalStage enabledClients(List<String> enabledClients) {
-            this.enabledClients = Optional.ofNullable(enabledClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -288,39 +256,33 @@ public final class ConnectionResponseCommon implements IConnectionResponseCommon
         @java.lang.Override
         @JsonSetter(value = "enabled_clients", nulls = Nulls.SKIP)
         public _FinalStage enabledClients(Optional<List<String>> enabledClients) {
-            this.enabledClients = enabledClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage realms(List<String> realms) {
-            this.realms = Optional.ofNullable(realms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "realms", nulls = Nulls.SKIP)
         public _FinalStage realms(Optional<List<String>> realms) {
-            this.realms = realms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionResponseCommon build() {
-            return new ConnectionResponseCommon(
-                    id, realms, name, enabledClients, displayName, isDomainConnection, metadata, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

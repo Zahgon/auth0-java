@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigFieldProperties.Builder.class)
 public final class FormFieldPaymentConfigFieldProperties {
+
     private final Optional<String> label;
 
     private final Optional<String> placeholder;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigFieldProperties(
-            Optional<String> label, Optional<String> placeholder, Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigFieldProperties(Optional<String> label, Optional<String> placeholder, Map<String, Object> additionalProperties) {
         this.label = label;
         this.placeholder = placeholder;
         this.additionalProperties = additionalProperties;
@@ -35,24 +35,22 @@ public final class FormFieldPaymentConfigFieldProperties {
 
     @JsonProperty("label")
     public Optional<String> getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigFieldProperties
-                && equalTo((FormFieldPaymentConfigFieldProperties) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigFieldProperties other) {
@@ -61,20 +59,21 @@ public final class FormFieldPaymentConfigFieldProperties {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.label, this.placeholder);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> label = Optional.empty();
 
         private Optional<String> placeholder = Optional.empty();
@@ -82,48 +81,41 @@ public final class FormFieldPaymentConfigFieldProperties {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldPaymentConfigFieldProperties other) {
-            label(other.getLabel());
-            placeholder(other.getPlaceholder());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "label", nulls = Nulls.SKIP)
         public Builder label(Optional<String> label) {
-            this.label = label;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder label(String label) {
-            this.label = Optional.ofNullable(label);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldPaymentConfigFieldProperties build() {
-            return new FormFieldPaymentConfigFieldProperties(label, placeholder, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AculConfigsItem.Builder.class)
 public final class AculConfigsItem {
+
     private final PromptGroupNameEnum prompt;
 
     private final ScreenGroupNameEnum screen;
@@ -43,16 +44,7 @@ public final class AculConfigsItem {
 
     private final Map<String, Object> additionalProperties;
 
-    private AculConfigsItem(
-            PromptGroupNameEnum prompt,
-            ScreenGroupNameEnum screen,
-            Optional<AculRenderingModeEnum> renderingMode,
-            OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration,
-            OptionalNullable<Boolean> defaultHeadTagsDisabled,
-            OptionalNullable<Boolean> usePageTemplate,
-            OptionalNullable<List<AculHeadTag>> headTags,
-            OptionalNullable<AculFilters> filters,
-            Map<String, Object> additionalProperties) {
+    private AculConfigsItem(PromptGroupNameEnum prompt, ScreenGroupNameEnum screen, Optional<AculRenderingModeEnum> renderingMode, OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration, OptionalNullable<Boolean> defaultHeadTagsDisabled, OptionalNullable<Boolean> usePageTemplate, OptionalNullable<List<AculHeadTag>> headTags, OptionalNullable<AculFilters> filters, Map<String, Object> additionalProperties) {
         this.prompt = prompt;
         this.screen = screen;
         this.renderingMode = renderingMode;
@@ -66,12 +58,12 @@ public final class AculConfigsItem {
 
     @JsonProperty("prompt")
     public PromptGroupNameEnum getPrompt() {
-        return prompt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("screen")
     public ScreenGroupNameEnum getScreen() {
-        return screen;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,16 +71,13 @@ public final class AculConfigsItem {
      */
     @JsonProperty("rendering_mode")
     public Optional<AculRenderingModeEnum> getRenderingMode() {
-        return renderingMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("context_configuration")
     public OptionalNullable<List<AculContextConfigurationItem>> getContextConfiguration() {
-        if (contextConfiguration == null) {
-            return OptionalNullable.absent();
-        }
-        return contextConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,10 +86,7 @@ public final class AculConfigsItem {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("default_head_tags_disabled")
     public OptionalNullable<Boolean> getDefaultHeadTagsDisabled() {
-        if (defaultHeadTagsDisabled == null) {
-            return OptionalNullable.absent();
-        }
-        return defaultHeadTagsDisabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,10 +95,7 @@ public final class AculConfigsItem {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("use_page_template")
     public OptionalNullable<Boolean> getUsePageTemplate() {
-        if (usePageTemplate == null) {
-            return OptionalNullable.absent();
-        }
-        return usePageTemplate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,19 +104,13 @@ public final class AculConfigsItem {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("head_tags")
     public OptionalNullable<List<AculHeadTag>> getHeadTags() {
-        if (headTags == null) {
-            return OptionalNullable.absent();
-        }
-        return headTags;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("filters")
     public OptionalNullable<AculFilters> getFilters() {
-        if (filters == null) {
-            return OptionalNullable.absent();
-        }
-        return filters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -168,59 +145,46 @@ public final class AculConfigsItem {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AculConfigsItem && equalTo((AculConfigsItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AculConfigsItem other) {
-        return prompt.equals(other.prompt)
-                && screen.equals(other.screen)
-                && renderingMode.equals(other.renderingMode)
-                && contextConfiguration.equals(other.contextConfiguration)
-                && defaultHeadTagsDisabled.equals(other.defaultHeadTagsDisabled)
-                && usePageTemplate.equals(other.usePageTemplate)
-                && headTags.equals(other.headTags)
-                && filters.equals(other.filters);
+        return prompt.equals(other.prompt) && screen.equals(other.screen) && renderingMode.equals(other.renderingMode) && contextConfiguration.equals(other.contextConfiguration) && defaultHeadTagsDisabled.equals(other.defaultHeadTagsDisabled) && usePageTemplate.equals(other.usePageTemplate) && headTags.equals(other.headTags) && filters.equals(other.filters);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.prompt,
-                this.screen,
-                this.renderingMode,
-                this.contextConfiguration,
-                this.defaultHeadTagsDisabled,
-                this.usePageTemplate,
-                this.headTags,
-                this.filters);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PromptStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PromptStage {
+
         ScreenStage prompt(@NotNull PromptGroupNameEnum prompt);
 
         Builder from(AculConfigsItem other);
     }
 
     public interface ScreenStage {
+
         _FinalStage screen(@NotNull ScreenGroupNameEnum screen);
     }
 
     public interface _FinalStage {
+
         AculConfigsItem build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -234,15 +198,13 @@ public final class AculConfigsItem {
 
         _FinalStage renderingMode(AculRenderingModeEnum renderingMode);
 
-        _FinalStage contextConfiguration(
-                @Nullable OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration);
+        _FinalStage contextConfiguration(@Nullable OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration);
 
         _FinalStage contextConfiguration(List<AculContextConfigurationItem> contextConfiguration);
 
         _FinalStage contextConfiguration(Optional<List<AculContextConfigurationItem>> contextConfiguration);
 
-        _FinalStage contextConfiguration(
-                com.auth0.client.mgmt.core.Nullable<List<AculContextConfigurationItem>> contextConfiguration);
+        _FinalStage contextConfiguration(com.auth0.client.mgmt.core.Nullable<List<AculContextConfigurationItem>> contextConfiguration);
 
         /**
          * <p>Override Universal Login default head tags</p>
@@ -288,6 +250,7 @@ public final class AculConfigsItem {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PromptStage, ScreenStage, _FinalStage {
+
         private PromptGroupNameEnum prompt;
 
         private ScreenGroupNameEnum screen;
@@ -307,68 +270,45 @@ public final class AculConfigsItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(AculConfigsItem other) {
-            prompt(other.getPrompt());
-            screen(other.getScreen());
-            renderingMode(other.getRenderingMode());
-            contextConfiguration(other.getContextConfiguration());
-            defaultHeadTagsDisabled(other.getDefaultHeadTagsDisabled());
-            usePageTemplate(other.getUsePageTemplate());
-            headTags(other.getHeadTags());
-            filters(other.getFilters());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("prompt")
         public ScreenStage prompt(@NotNull PromptGroupNameEnum prompt) {
-            this.prompt = Objects.requireNonNull(prompt, "prompt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("screen")
         public _FinalStage screen(@NotNull ScreenGroupNameEnum screen) {
-            this.screen = Objects.requireNonNull(screen, "screen must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage filters(com.auth0.client.mgmt.core.Nullable<AculFilters> filters) {
-            if (filters.isNull()) {
-                this.filters = OptionalNullable.ofNull();
-            } else if (filters.isEmpty()) {
-                this.filters = OptionalNullable.absent();
-            } else {
-                this.filters = OptionalNullable.of(filters.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage filters(Optional<AculFilters> filters) {
-            if (filters.isPresent()) {
-                this.filters = OptionalNullable.of(filters.get());
-            } else {
-                this.filters = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage filters(AculFilters filters) {
-            this.filters = OptionalNullable.of(filters);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "filters", nulls = Nulls.SKIP)
         public _FinalStage filters(@Nullable OptionalNullable<AculFilters> filters) {
-            this.filters = filters;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -377,14 +317,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage headTags(com.auth0.client.mgmt.core.Nullable<List<AculHeadTag>> headTags) {
-            if (headTags.isNull()) {
-                this.headTags = OptionalNullable.ofNull();
-            } else if (headTags.isEmpty()) {
-                this.headTags = OptionalNullable.absent();
-            } else {
-                this.headTags = OptionalNullable.of(headTags.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -393,12 +326,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage headTags(Optional<List<AculHeadTag>> headTags) {
-            if (headTags.isPresent()) {
-                this.headTags = OptionalNullable.of(headTags.get());
-            } else {
-                this.headTags = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -407,8 +335,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage headTags(List<AculHeadTag> headTags) {
-            this.headTags = OptionalNullable.of(headTags);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -417,8 +344,7 @@ public final class AculConfigsItem {
         @java.lang.Override
         @JsonSetter(value = "head_tags", nulls = Nulls.SKIP)
         public _FinalStage headTags(@Nullable OptionalNullable<List<AculHeadTag>> headTags) {
-            this.headTags = headTags;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -427,14 +353,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage usePageTemplate(com.auth0.client.mgmt.core.Nullable<Boolean> usePageTemplate) {
-            if (usePageTemplate.isNull()) {
-                this.usePageTemplate = OptionalNullable.ofNull();
-            } else if (usePageTemplate.isEmpty()) {
-                this.usePageTemplate = OptionalNullable.absent();
-            } else {
-                this.usePageTemplate = OptionalNullable.of(usePageTemplate.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -443,12 +362,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage usePageTemplate(Optional<Boolean> usePageTemplate) {
-            if (usePageTemplate.isPresent()) {
-                this.usePageTemplate = OptionalNullable.of(usePageTemplate.get());
-            } else {
-                this.usePageTemplate = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -457,8 +371,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage usePageTemplate(Boolean usePageTemplate) {
-            this.usePageTemplate = OptionalNullable.of(usePageTemplate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -467,8 +380,7 @@ public final class AculConfigsItem {
         @java.lang.Override
         @JsonSetter(value = "use_page_template", nulls = Nulls.SKIP)
         public _FinalStage usePageTemplate(@Nullable OptionalNullable<Boolean> usePageTemplate) {
-            this.usePageTemplate = usePageTemplate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -476,16 +388,8 @@ public final class AculConfigsItem {
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @java.lang.Override
-        public _FinalStage defaultHeadTagsDisabled(
-                com.auth0.client.mgmt.core.Nullable<Boolean> defaultHeadTagsDisabled) {
-            if (defaultHeadTagsDisabled.isNull()) {
-                this.defaultHeadTagsDisabled = OptionalNullable.ofNull();
-            } else if (defaultHeadTagsDisabled.isEmpty()) {
-                this.defaultHeadTagsDisabled = OptionalNullable.absent();
-            } else {
-                this.defaultHeadTagsDisabled = OptionalNullable.of(defaultHeadTagsDisabled.get());
-            }
-            return this;
+        public _FinalStage defaultHeadTagsDisabled(com.auth0.client.mgmt.core.Nullable<Boolean> defaultHeadTagsDisabled) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -494,12 +398,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage defaultHeadTagsDisabled(Optional<Boolean> defaultHeadTagsDisabled) {
-            if (defaultHeadTagsDisabled.isPresent()) {
-                this.defaultHeadTagsDisabled = OptionalNullable.of(defaultHeadTagsDisabled.get());
-            } else {
-                this.defaultHeadTagsDisabled = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -508,8 +407,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage defaultHeadTagsDisabled(Boolean defaultHeadTagsDisabled) {
-            this.defaultHeadTagsDisabled = OptionalNullable.of(defaultHeadTagsDisabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -518,45 +416,28 @@ public final class AculConfigsItem {
         @java.lang.Override
         @JsonSetter(value = "default_head_tags_disabled", nulls = Nulls.SKIP)
         public _FinalStage defaultHeadTagsDisabled(@Nullable OptionalNullable<Boolean> defaultHeadTagsDisabled) {
-            this.defaultHeadTagsDisabled = defaultHeadTagsDisabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage contextConfiguration(
-                com.auth0.client.mgmt.core.Nullable<List<AculContextConfigurationItem>> contextConfiguration) {
-            if (contextConfiguration.isNull()) {
-                this.contextConfiguration = OptionalNullable.ofNull();
-            } else if (contextConfiguration.isEmpty()) {
-                this.contextConfiguration = OptionalNullable.absent();
-            } else {
-                this.contextConfiguration = OptionalNullable.of(contextConfiguration.get());
-            }
-            return this;
+        public _FinalStage contextConfiguration(com.auth0.client.mgmt.core.Nullable<List<AculContextConfigurationItem>> contextConfiguration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage contextConfiguration(Optional<List<AculContextConfigurationItem>> contextConfiguration) {
-            if (contextConfiguration.isPresent()) {
-                this.contextConfiguration = OptionalNullable.of(contextConfiguration.get());
-            } else {
-                this.contextConfiguration = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage contextConfiguration(List<AculContextConfigurationItem> contextConfiguration) {
-            this.contextConfiguration = OptionalNullable.of(contextConfiguration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "context_configuration", nulls = Nulls.SKIP)
-        public _FinalStage contextConfiguration(
-                @Nullable OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration) {
-            this.contextConfiguration = contextConfiguration;
-            return this;
+        public _FinalStage contextConfiguration(@Nullable OptionalNullable<List<AculContextConfigurationItem>> contextConfiguration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -565,8 +446,7 @@ public final class AculConfigsItem {
          */
         @java.lang.Override
         public _FinalStage renderingMode(AculRenderingModeEnum renderingMode) {
-            this.renderingMode = Optional.ofNullable(renderingMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -575,34 +455,22 @@ public final class AculConfigsItem {
         @java.lang.Override
         @JsonSetter(value = "rendering_mode", nulls = Nulls.SKIP)
         public _FinalStage renderingMode(Optional<AculRenderingModeEnum> renderingMode) {
-            this.renderingMode = renderingMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public AculConfigsItem build() {
-            return new AculConfigsItem(
-                    prompt,
-                    screen,
-                    renderingMode,
-                    contextConfiguration,
-                    defaultHeadTagsDisabled,
-                    usePageTemplate,
-                    headTags,
-                    filters,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

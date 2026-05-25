@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetResourceServerResponseContent.Builder.class)
 public final class GetResourceServerResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -70,30 +71,7 @@ public final class GetResourceServerResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetResourceServerResponseContent(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<Boolean> isSystem,
-            Optional<String> identifier,
-            Optional<List<ResourceServerScope>> scopes,
-            Optional<SigningAlgorithmEnum> signingAlg,
-            Optional<String> signingSecret,
-            Optional<Boolean> allowOfflineAccess,
-            Optional<Boolean> allowOnlineAccess,
-            Optional<Boolean> allowOnlineAccessWithEphemeralSessions,
-            Optional<Boolean> skipConsentForVerifiableFirstPartyClients,
-            Optional<Integer> tokenLifetime,
-            Optional<Integer> tokenLifetimeForWeb,
-            Optional<Boolean> enforcePolicies,
-            Optional<ResourceServerTokenDialectResponseEnum> tokenDialect,
-            OptionalNullable<ResourceServerTokenEncryption> tokenEncryption,
-            OptionalNullable<ResourceServerConsentPolicyEnum> consentPolicy,
-            OptionalNullable<List<Object>> authorizationDetails,
-            OptionalNullable<ResourceServerProofOfPossession> proofOfPossession,
-            Optional<ResourceServerSubjectTypeAuthorization> subjectTypeAuthorization,
-            OptionalNullable<ResourceServerAuthorizationPolicy> authorizationPolicy,
-            Optional<String> clientId,
-            Map<String, Object> additionalProperties) {
+    private GetResourceServerResponseContent(Optional<String> id, Optional<String> name, Optional<Boolean> isSystem, Optional<String> identifier, Optional<List<ResourceServerScope>> scopes, Optional<SigningAlgorithmEnum> signingAlg, Optional<String> signingSecret, Optional<Boolean> allowOfflineAccess, Optional<Boolean> allowOnlineAccess, Optional<Boolean> allowOnlineAccessWithEphemeralSessions, Optional<Boolean> skipConsentForVerifiableFirstPartyClients, Optional<Integer> tokenLifetime, Optional<Integer> tokenLifetimeForWeb, Optional<Boolean> enforcePolicies, Optional<ResourceServerTokenDialectResponseEnum> tokenDialect, OptionalNullable<ResourceServerTokenEncryption> tokenEncryption, OptionalNullable<ResourceServerConsentPolicyEnum> consentPolicy, OptionalNullable<List<Object>> authorizationDetails, OptionalNullable<ResourceServerProofOfPossession> proofOfPossession, Optional<ResourceServerSubjectTypeAuthorization> subjectTypeAuthorization, OptionalNullable<ResourceServerAuthorizationPolicy> authorizationPolicy, Optional<String> clientId, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.isSystem = isSystem;
@@ -124,7 +102,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,7 +110,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -140,7 +118,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("is_system")
     public Optional<Boolean> getIsSystem() {
-        return isSystem;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +126,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("identifier")
     public Optional<String> getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,12 +134,12 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("scopes")
     public Optional<List<ResourceServerScope>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signing_alg")
     public Optional<SigningAlgorithmEnum> getSigningAlg() {
-        return signingAlg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -169,7 +147,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("signing_secret")
     public Optional<String> getSigningSecret() {
-        return signingSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -177,7 +155,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("allow_offline_access")
     public Optional<Boolean> getAllowOfflineAccess() {
-        return allowOfflineAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -185,7 +163,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("allow_online_access")
     public Optional<Boolean> getAllowOnlineAccess() {
-        return allowOnlineAccess;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -193,7 +171,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("allow_online_access_with_ephemeral_sessions")
     public Optional<Boolean> getAllowOnlineAccessWithEphemeralSessions() {
-        return allowOnlineAccessWithEphemeralSessions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -201,7 +179,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("skip_consent_for_verifiable_first_party_clients")
     public Optional<Boolean> getSkipConsentForVerifiableFirstPartyClients() {
-        return skipConsentForVerifiableFirstPartyClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -209,7 +187,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("token_lifetime")
     public Optional<Integer> getTokenLifetime() {
-        return tokenLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -217,7 +195,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("token_lifetime_for_web")
     public Optional<Integer> getTokenLifetimeForWeb() {
-        return tokenLifetimeForWeb;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -225,62 +203,47 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("enforce_policies")
     public Optional<Boolean> getEnforcePolicies() {
-        return enforcePolicies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_dialect")
     public Optional<ResourceServerTokenDialectResponseEnum> getTokenDialect() {
-        return tokenDialect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("token_encryption")
     public OptionalNullable<ResourceServerTokenEncryption> getTokenEncryption() {
-        if (tokenEncryption == null) {
-            return OptionalNullable.absent();
-        }
-        return tokenEncryption;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("consent_policy")
     public OptionalNullable<ResourceServerConsentPolicyEnum> getConsentPolicy() {
-        if (consentPolicy == null) {
-            return OptionalNullable.absent();
-        }
-        return consentPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("authorization_details")
     public OptionalNullable<List<Object>> getAuthorizationDetails() {
-        if (authorizationDetails == null) {
-            return OptionalNullable.absent();
-        }
-        return authorizationDetails;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("proof_of_possession")
     public OptionalNullable<ResourceServerProofOfPossession> getProofOfPossession() {
-        if (proofOfPossession == null) {
-            return OptionalNullable.absent();
-        }
-        return proofOfPossession;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject_type_authorization")
     public Optional<ResourceServerSubjectTypeAuthorization> getSubjectTypeAuthorization() {
-        return subjectTypeAuthorization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("authorization_policy")
     public OptionalNullable<ResourceServerAuthorizationPolicy> getAuthorizationPolicy() {
-        if (authorizationPolicy == null) {
-            return OptionalNullable.absent();
-        }
-        return authorizationPolicy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -288,7 +251,7 @@ public final class GetResourceServerResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -323,78 +286,35 @@ public final class GetResourceServerResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetResourceServerResponseContent && equalTo((GetResourceServerResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetResourceServerResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && isSystem.equals(other.isSystem)
-                && identifier.equals(other.identifier)
-                && scopes.equals(other.scopes)
-                && signingAlg.equals(other.signingAlg)
-                && signingSecret.equals(other.signingSecret)
-                && allowOfflineAccess.equals(other.allowOfflineAccess)
-                && allowOnlineAccess.equals(other.allowOnlineAccess)
-                && allowOnlineAccessWithEphemeralSessions.equals(other.allowOnlineAccessWithEphemeralSessions)
-                && skipConsentForVerifiableFirstPartyClients.equals(other.skipConsentForVerifiableFirstPartyClients)
-                && tokenLifetime.equals(other.tokenLifetime)
-                && tokenLifetimeForWeb.equals(other.tokenLifetimeForWeb)
-                && enforcePolicies.equals(other.enforcePolicies)
-                && tokenDialect.equals(other.tokenDialect)
-                && tokenEncryption.equals(other.tokenEncryption)
-                && consentPolicy.equals(other.consentPolicy)
-                && authorizationDetails.equals(other.authorizationDetails)
-                && proofOfPossession.equals(other.proofOfPossession)
-                && subjectTypeAuthorization.equals(other.subjectTypeAuthorization)
-                && authorizationPolicy.equals(other.authorizationPolicy)
-                && clientId.equals(other.clientId);
+        return id.equals(other.id) && name.equals(other.name) && isSystem.equals(other.isSystem) && identifier.equals(other.identifier) && scopes.equals(other.scopes) && signingAlg.equals(other.signingAlg) && signingSecret.equals(other.signingSecret) && allowOfflineAccess.equals(other.allowOfflineAccess) && allowOnlineAccess.equals(other.allowOnlineAccess) && allowOnlineAccessWithEphemeralSessions.equals(other.allowOnlineAccessWithEphemeralSessions) && skipConsentForVerifiableFirstPartyClients.equals(other.skipConsentForVerifiableFirstPartyClients) && tokenLifetime.equals(other.tokenLifetime) && tokenLifetimeForWeb.equals(other.tokenLifetimeForWeb) && enforcePolicies.equals(other.enforcePolicies) && tokenDialect.equals(other.tokenDialect) && tokenEncryption.equals(other.tokenEncryption) && consentPolicy.equals(other.consentPolicy) && authorizationDetails.equals(other.authorizationDetails) && proofOfPossession.equals(other.proofOfPossession) && subjectTypeAuthorization.equals(other.subjectTypeAuthorization) && authorizationPolicy.equals(other.authorizationPolicy) && clientId.equals(other.clientId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.name,
-                this.isSystem,
-                this.identifier,
-                this.scopes,
-                this.signingAlg,
-                this.signingSecret,
-                this.allowOfflineAccess,
-                this.allowOnlineAccess,
-                this.allowOnlineAccessWithEphemeralSessions,
-                this.skipConsentForVerifiableFirstPartyClients,
-                this.tokenLifetime,
-                this.tokenLifetimeForWeb,
-                this.enforcePolicies,
-                this.tokenDialect,
-                this.tokenEncryption,
-                this.consentPolicy,
-                this.authorizationDetails,
-                this.proofOfPossession,
-                this.subjectTypeAuthorization,
-                this.authorizationPolicy,
-                this.clientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -442,32 +362,11 @@ public final class GetResourceServerResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetResourceServerResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            isSystem(other.getIsSystem());
-            identifier(other.getIdentifier());
-            scopes(other.getScopes());
-            signingAlg(other.getSigningAlg());
-            signingSecret(other.getSigningSecret());
-            allowOfflineAccess(other.getAllowOfflineAccess());
-            allowOnlineAccess(other.getAllowOnlineAccess());
-            allowOnlineAccessWithEphemeralSessions(other.getAllowOnlineAccessWithEphemeralSessions());
-            skipConsentForVerifiableFirstPartyClients(other.getSkipConsentForVerifiableFirstPartyClients());
-            tokenLifetime(other.getTokenLifetime());
-            tokenLifetimeForWeb(other.getTokenLifetimeForWeb());
-            enforcePolicies(other.getEnforcePolicies());
-            tokenDialect(other.getTokenDialect());
-            tokenEncryption(other.getTokenEncryption());
-            consentPolicy(other.getConsentPolicy());
-            authorizationDetails(other.getAuthorizationDetails());
-            proofOfPossession(other.getProofOfPossession());
-            subjectTypeAuthorization(other.getSubjectTypeAuthorization());
-            authorizationPolicy(other.getAuthorizationPolicy());
-            clientId(other.getClientId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -475,13 +374,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -489,13 +386,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -503,13 +398,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "is_system", nulls = Nulls.SKIP)
         public Builder isSystem(Optional<Boolean> isSystem) {
-            this.isSystem = isSystem;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isSystem(Boolean isSystem) {
-            this.isSystem = Optional.ofNullable(isSystem);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -517,13 +410,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "identifier", nulls = Nulls.SKIP)
         public Builder identifier(Optional<String> identifier) {
-            this.identifier = identifier;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Optional.ofNullable(identifier);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -531,24 +422,20 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public Builder scopes(Optional<List<ResourceServerScope>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scopes(List<ResourceServerScope> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signing_alg", nulls = Nulls.SKIP)
         public Builder signingAlg(Optional<SigningAlgorithmEnum> signingAlg) {
-            this.signingAlg = signingAlg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingAlg(SigningAlgorithmEnum signingAlg) {
-            this.signingAlg = Optional.ofNullable(signingAlg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -556,13 +443,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "signing_secret", nulls = Nulls.SKIP)
         public Builder signingSecret(Optional<String> signingSecret) {
-            this.signingSecret = signingSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingSecret(String signingSecret) {
-            this.signingSecret = Optional.ofNullable(signingSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -570,13 +455,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "allow_offline_access", nulls = Nulls.SKIP)
         public Builder allowOfflineAccess(Optional<Boolean> allowOfflineAccess) {
-            this.allowOfflineAccess = allowOfflineAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowOfflineAccess(Boolean allowOfflineAccess) {
-            this.allowOfflineAccess = Optional.ofNullable(allowOfflineAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -584,44 +467,35 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "allow_online_access", nulls = Nulls.SKIP)
         public Builder allowOnlineAccess(Optional<Boolean> allowOnlineAccess) {
-            this.allowOnlineAccess = allowOnlineAccess;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowOnlineAccess(Boolean allowOnlineAccess) {
-            this.allowOnlineAccess = Optional.ofNullable(allowOnlineAccess);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Whether Online Refresh Tokens can be issued even when sessions are configured as ephemeral (true) or not (false).</p>
          */
         @JsonSetter(value = "allow_online_access_with_ephemeral_sessions", nulls = Nulls.SKIP)
-        public Builder allowOnlineAccessWithEphemeralSessions(
-                Optional<Boolean> allowOnlineAccessWithEphemeralSessions) {
-            this.allowOnlineAccessWithEphemeralSessions = allowOnlineAccessWithEphemeralSessions;
-            return this;
+        public Builder allowOnlineAccessWithEphemeralSessions(Optional<Boolean> allowOnlineAccessWithEphemeralSessions) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowOnlineAccessWithEphemeralSessions(Boolean allowOnlineAccessWithEphemeralSessions) {
-            this.allowOnlineAccessWithEphemeralSessions = Optional.ofNullable(allowOnlineAccessWithEphemeralSessions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Whether to skip user consent for applications flagged as first party (true) or not (false).</p>
          */
         @JsonSetter(value = "skip_consent_for_verifiable_first_party_clients", nulls = Nulls.SKIP)
-        public Builder skipConsentForVerifiableFirstPartyClients(
-                Optional<Boolean> skipConsentForVerifiableFirstPartyClients) {
-            this.skipConsentForVerifiableFirstPartyClients = skipConsentForVerifiableFirstPartyClients;
-            return this;
+        public Builder skipConsentForVerifiableFirstPartyClients(Optional<Boolean> skipConsentForVerifiableFirstPartyClients) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder skipConsentForVerifiableFirstPartyClients(Boolean skipConsentForVerifiableFirstPartyClients) {
-            this.skipConsentForVerifiableFirstPartyClients =
-                    Optional.ofNullable(skipConsentForVerifiableFirstPartyClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -629,13 +503,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "token_lifetime", nulls = Nulls.SKIP)
         public Builder tokenLifetime(Optional<Integer> tokenLifetime) {
-            this.tokenLifetime = tokenLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetime(Integer tokenLifetime) {
-            this.tokenLifetime = Optional.ofNullable(tokenLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -643,13 +515,11 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "token_lifetime_for_web", nulls = Nulls.SKIP)
         public Builder tokenLifetimeForWeb(Optional<Integer> tokenLifetimeForWeb) {
-            this.tokenLifetimeForWeb = tokenLifetimeForWeb;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenLifetimeForWeb(Integer tokenLifetimeForWeb) {
-            this.tokenLifetimeForWeb = Optional.ofNullable(tokenLifetimeForWeb);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -657,197 +527,114 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "enforce_policies", nulls = Nulls.SKIP)
         public Builder enforcePolicies(Optional<Boolean> enforcePolicies) {
-            this.enforcePolicies = enforcePolicies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforcePolicies(Boolean enforcePolicies) {
-            this.enforcePolicies = Optional.ofNullable(enforcePolicies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_dialect", nulls = Nulls.SKIP)
         public Builder tokenDialect(Optional<ResourceServerTokenDialectResponseEnum> tokenDialect) {
-            this.tokenDialect = tokenDialect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenDialect(ResourceServerTokenDialectResponseEnum tokenDialect) {
-            this.tokenDialect = Optional.ofNullable(tokenDialect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "token_encryption", nulls = Nulls.SKIP)
         public Builder tokenEncryption(@Nullable OptionalNullable<ResourceServerTokenEncryption> tokenEncryption) {
-            this.tokenEncryption = tokenEncryption;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEncryption(ResourceServerTokenEncryption tokenEncryption) {
-            this.tokenEncryption = OptionalNullable.of(tokenEncryption);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEncryption(Optional<ResourceServerTokenEncryption> tokenEncryption) {
-            if (tokenEncryption.isPresent()) {
-                this.tokenEncryption = OptionalNullable.of(tokenEncryption.get());
-            } else {
-                this.tokenEncryption = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder tokenEncryption(
-                com.auth0.client.mgmt.core.Nullable<ResourceServerTokenEncryption> tokenEncryption) {
-            if (tokenEncryption.isNull()) {
-                this.tokenEncryption = OptionalNullable.ofNull();
-            } else if (tokenEncryption.isEmpty()) {
-                this.tokenEncryption = OptionalNullable.absent();
-            } else {
-                this.tokenEncryption = OptionalNullable.of(tokenEncryption.get());
-            }
-            return this;
+        public Builder tokenEncryption(com.auth0.client.mgmt.core.Nullable<ResourceServerTokenEncryption> tokenEncryption) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "consent_policy", nulls = Nulls.SKIP)
         public Builder consentPolicy(@Nullable OptionalNullable<ResourceServerConsentPolicyEnum> consentPolicy) {
-            this.consentPolicy = consentPolicy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder consentPolicy(ResourceServerConsentPolicyEnum consentPolicy) {
-            this.consentPolicy = OptionalNullable.of(consentPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder consentPolicy(Optional<ResourceServerConsentPolicyEnum> consentPolicy) {
-            if (consentPolicy.isPresent()) {
-                this.consentPolicy = OptionalNullable.of(consentPolicy.get());
-            } else {
-                this.consentPolicy = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder consentPolicy(
-                com.auth0.client.mgmt.core.Nullable<ResourceServerConsentPolicyEnum> consentPolicy) {
-            if (consentPolicy.isNull()) {
-                this.consentPolicy = OptionalNullable.ofNull();
-            } else if (consentPolicy.isEmpty()) {
-                this.consentPolicy = OptionalNullable.absent();
-            } else {
-                this.consentPolicy = OptionalNullable.of(consentPolicy.get());
-            }
-            return this;
+        public Builder consentPolicy(com.auth0.client.mgmt.core.Nullable<ResourceServerConsentPolicyEnum> consentPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authorization_details", nulls = Nulls.SKIP)
         public Builder authorizationDetails(@Nullable OptionalNullable<List<Object>> authorizationDetails) {
-            this.authorizationDetails = authorizationDetails;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationDetails(List<Object> authorizationDetails) {
-            this.authorizationDetails = OptionalNullable.of(authorizationDetails);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationDetails(Optional<List<Object>> authorizationDetails) {
-            if (authorizationDetails.isPresent()) {
-                this.authorizationDetails = OptionalNullable.of(authorizationDetails.get());
-            } else {
-                this.authorizationDetails = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationDetails(com.auth0.client.mgmt.core.Nullable<List<Object>> authorizationDetails) {
-            if (authorizationDetails.isNull()) {
-                this.authorizationDetails = OptionalNullable.ofNull();
-            } else if (authorizationDetails.isEmpty()) {
-                this.authorizationDetails = OptionalNullable.absent();
-            } else {
-                this.authorizationDetails = OptionalNullable.of(authorizationDetails.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "proof_of_possession", nulls = Nulls.SKIP)
-        public Builder proofOfPossession(
-                @Nullable OptionalNullable<ResourceServerProofOfPossession> proofOfPossession) {
-            this.proofOfPossession = proofOfPossession;
-            return this;
+        public Builder proofOfPossession(@Nullable OptionalNullable<ResourceServerProofOfPossession> proofOfPossession) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder proofOfPossession(ResourceServerProofOfPossession proofOfPossession) {
-            this.proofOfPossession = OptionalNullable.of(proofOfPossession);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder proofOfPossession(Optional<ResourceServerProofOfPossession> proofOfPossession) {
-            if (proofOfPossession.isPresent()) {
-                this.proofOfPossession = OptionalNullable.of(proofOfPossession.get());
-            } else {
-                this.proofOfPossession = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder proofOfPossession(
-                com.auth0.client.mgmt.core.Nullable<ResourceServerProofOfPossession> proofOfPossession) {
-            if (proofOfPossession.isNull()) {
-                this.proofOfPossession = OptionalNullable.ofNull();
-            } else if (proofOfPossession.isEmpty()) {
-                this.proofOfPossession = OptionalNullable.absent();
-            } else {
-                this.proofOfPossession = OptionalNullable.of(proofOfPossession.get());
-            }
-            return this;
+        public Builder proofOfPossession(com.auth0.client.mgmt.core.Nullable<ResourceServerProofOfPossession> proofOfPossession) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "subject_type_authorization", nulls = Nulls.SKIP)
-        public Builder subjectTypeAuthorization(
-                Optional<ResourceServerSubjectTypeAuthorization> subjectTypeAuthorization) {
-            this.subjectTypeAuthorization = subjectTypeAuthorization;
-            return this;
+        public Builder subjectTypeAuthorization(Optional<ResourceServerSubjectTypeAuthorization> subjectTypeAuthorization) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectTypeAuthorization(ResourceServerSubjectTypeAuthorization subjectTypeAuthorization) {
-            this.subjectTypeAuthorization = Optional.ofNullable(subjectTypeAuthorization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authorization_policy", nulls = Nulls.SKIP)
-        public Builder authorizationPolicy(
-                @Nullable OptionalNullable<ResourceServerAuthorizationPolicy> authorizationPolicy) {
-            this.authorizationPolicy = authorizationPolicy;
-            return this;
+        public Builder authorizationPolicy(@Nullable OptionalNullable<ResourceServerAuthorizationPolicy> authorizationPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationPolicy(ResourceServerAuthorizationPolicy authorizationPolicy) {
-            this.authorizationPolicy = OptionalNullable.of(authorizationPolicy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationPolicy(Optional<ResourceServerAuthorizationPolicy> authorizationPolicy) {
-            if (authorizationPolicy.isPresent()) {
-                this.authorizationPolicy = OptionalNullable.of(authorizationPolicy.get());
-            } else {
-                this.authorizationPolicy = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder authorizationPolicy(
-                com.auth0.client.mgmt.core.Nullable<ResourceServerAuthorizationPolicy> authorizationPolicy) {
-            if (authorizationPolicy.isNull()) {
-                this.authorizationPolicy = OptionalNullable.ofNull();
-            } else if (authorizationPolicy.isEmpty()) {
-                this.authorizationPolicy = OptionalNullable.absent();
-            } else {
-                this.authorizationPolicy = OptionalNullable.of(authorizationPolicy.get());
-            }
-            return this;
+        public Builder authorizationPolicy(com.auth0.client.mgmt.core.Nullable<ResourceServerAuthorizationPolicy> authorizationPolicy) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -855,50 +642,23 @@ public final class GetResourceServerResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetResourceServerResponseContent build() {
-            return new GetResourceServerResponseContent(
-                    id,
-                    name,
-                    isSystem,
-                    identifier,
-                    scopes,
-                    signingAlg,
-                    signingSecret,
-                    allowOfflineAccess,
-                    allowOnlineAccess,
-                    allowOnlineAccessWithEphemeralSessions,
-                    skipConsentForVerifiableFirstPartyClients,
-                    tokenLifetime,
-                    tokenLifetimeForWeb,
-                    enforcePolicies,
-                    tokenDialect,
-                    tokenEncryption,
-                    consentPolicy,
-                    authorizationDetails,
-                    proofOfPossession,
-                    subjectTypeAuthorization,
-                    authorizationPolicy,
-                    clientId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UsernameAllowedTypes.Builder.class)
 public final class UsernameAllowedTypes {
+
     private final Optional<Boolean> email;
 
     private final Optional<Boolean> phoneNumber;
 
     private final Map<String, Object> additionalProperties;
 
-    private UsernameAllowedTypes(
-            Optional<Boolean> email, Optional<Boolean> phoneNumber, Map<String, Object> additionalProperties) {
+    private UsernameAllowedTypes(Optional<Boolean> email, Optional<Boolean> phoneNumber, Map<String, Object> additionalProperties) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.additionalProperties = additionalProperties;
@@ -35,23 +35,22 @@ public final class UsernameAllowedTypes {
 
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("phone_number")
     public Optional<Boolean> getPhoneNumber() {
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UsernameAllowedTypes && equalTo((UsernameAllowedTypes) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UsernameAllowedTypes other) {
@@ -60,20 +59,21 @@ public final class UsernameAllowedTypes {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.email, this.phoneNumber);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> email = Optional.empty();
 
         private Optional<Boolean> phoneNumber = Optional.empty();
@@ -81,48 +81,41 @@ public final class UsernameAllowedTypes {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UsernameAllowedTypes other) {
-            email(other.getEmail());
-            phoneNumber(other.getPhoneNumber());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public Builder phoneNumber(Optional<Boolean> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(Boolean phoneNumber) {
-            this.phoneNumber = Optional.ofNullable(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UsernameAllowedTypes build() {
-            return new UsernameAllowedTypes(email, phoneNumber, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

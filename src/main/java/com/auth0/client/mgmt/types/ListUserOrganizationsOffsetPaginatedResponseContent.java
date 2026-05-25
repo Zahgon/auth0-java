@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListUserOrganizationsOffsetPaginatedResponseContent.Builder.class)
 public final class ListUserOrganizationsOffsetPaginatedResponseContent {
+
     private final Optional<Double> start;
 
     private final Optional<Double> limit;
@@ -31,12 +32,7 @@ public final class ListUserOrganizationsOffsetPaginatedResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListUserOrganizationsOffsetPaginatedResponseContent(
-            Optional<Double> start,
-            Optional<Double> limit,
-            Optional<Double> total,
-            Optional<List<Organization>> organizations,
-            Map<String, Object> additionalProperties) {
+    private ListUserOrganizationsOffsetPaginatedResponseContent(Optional<Double> start, Optional<Double> limit, Optional<Double> total, Optional<List<Organization>> organizations, Map<String, Object> additionalProperties) {
         this.start = start;
         this.limit = limit;
         this.total = total;
@@ -46,59 +42,55 @@ public final class ListUserOrganizationsOffsetPaginatedResponseContent {
 
     @JsonProperty("start")
     public Optional<Double> getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("limit")
     public Optional<Double> getLimit() {
-        return limit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("total")
     public Optional<Double> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organizations")
     public Optional<List<Organization>> getOrganizations() {
-        return organizations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListUserOrganizationsOffsetPaginatedResponseContent
-                && equalTo((ListUserOrganizationsOffsetPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListUserOrganizationsOffsetPaginatedResponseContent other) {
-        return start.equals(other.start)
-                && limit.equals(other.limit)
-                && total.equals(other.total)
-                && organizations.equals(other.organizations);
+        return start.equals(other.start) && limit.equals(other.limit) && total.equals(other.total) && organizations.equals(other.organizations);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.start, this.limit, this.total, this.organizations);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> start = Optional.empty();
 
         private Optional<Double> limit = Optional.empty();
@@ -110,73 +102,59 @@ public final class ListUserOrganizationsOffsetPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListUserOrganizationsOffsetPaginatedResponseContent other) {
-            start(other.getStart());
-            limit(other.getLimit());
-            total(other.getTotal());
-            organizations(other.getOrganizations());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "start", nulls = Nulls.SKIP)
         public Builder start(Optional<Double> start) {
-            this.start = start;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder start(Double start) {
-            this.start = Optional.ofNullable(start);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "limit", nulls = Nulls.SKIP)
         public Builder limit(Optional<Double> limit) {
-            this.limit = limit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder limit(Double limit) {
-            this.limit = Optional.ofNullable(limit);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Double> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Double total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organizations", nulls = Nulls.SKIP)
         public Builder organizations(Optional<List<Organization>> organizations) {
-            this.organizations = organizations;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizations(List<Organization> organizations) {
-            this.organizations = Optional.ofNullable(organizations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListUserOrganizationsOffsetPaginatedResponseContent build() {
-            return new ListUserOrganizationsOffsetPaginatedResponseContent(
-                    start, limit, total, organizations, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetActionModuleVersionResponseContent.Builder.class)
 public final class GetActionModuleVersionResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> moduleId;
@@ -38,15 +39,7 @@ public final class GetActionModuleVersionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetActionModuleVersionResponseContent(
-            Optional<String> id,
-            Optional<String> moduleId,
-            Optional<Integer> versionNumber,
-            Optional<String> code,
-            Optional<List<ActionModuleSecret>> secrets,
-            Optional<List<ActionModuleDependency>> dependencies,
-            Optional<OffsetDateTime> createdAt,
-            Map<String, Object> additionalProperties) {
+    private GetActionModuleVersionResponseContent(Optional<String> id, Optional<String> moduleId, Optional<Integer> versionNumber, Optional<String> code, Optional<List<ActionModuleSecret>> secrets, Optional<List<ActionModuleDependency>> dependencies, Optional<OffsetDateTime> createdAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.moduleId = moduleId;
         this.versionNumber = versionNumber;
@@ -62,7 +55,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +63,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("module_id")
     public Optional<String> getModuleId() {
-        return moduleId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +71,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("version_number")
     public Optional<Integer> getVersionNumber() {
-        return versionNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +79,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("code")
     public Optional<String> getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +87,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("secrets")
     public Optional<List<ActionModuleSecret>> getSecrets() {
-        return secrets;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,7 +95,7 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("dependencies")
     public Optional<List<ActionModuleDependency>> getDependencies() {
-        return dependencies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,48 +103,40 @@ public final class GetActionModuleVersionResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetActionModuleVersionResponseContent
-                && equalTo((GetActionModuleVersionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetActionModuleVersionResponseContent other) {
-        return id.equals(other.id)
-                && moduleId.equals(other.moduleId)
-                && versionNumber.equals(other.versionNumber)
-                && code.equals(other.code)
-                && secrets.equals(other.secrets)
-                && dependencies.equals(other.dependencies)
-                && createdAt.equals(other.createdAt);
+        return id.equals(other.id) && moduleId.equals(other.moduleId) && versionNumber.equals(other.versionNumber) && code.equals(other.code) && secrets.equals(other.secrets) && dependencies.equals(other.dependencies) && createdAt.equals(other.createdAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.moduleId, this.versionNumber, this.code, this.secrets, this.dependencies, this.createdAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> moduleId = Optional.empty();
@@ -169,17 +154,11 @@ public final class GetActionModuleVersionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetActionModuleVersionResponseContent other) {
-            id(other.getId());
-            moduleId(other.getModuleId());
-            versionNumber(other.getVersionNumber());
-            code(other.getCode());
-            secrets(other.getSecrets());
-            dependencies(other.getDependencies());
-            createdAt(other.getCreatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -187,13 +166,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -201,13 +178,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "module_id", nulls = Nulls.SKIP)
         public Builder moduleId(Optional<String> moduleId) {
-            this.moduleId = moduleId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder moduleId(String moduleId) {
-            this.moduleId = Optional.ofNullable(moduleId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -215,13 +190,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "version_number", nulls = Nulls.SKIP)
         public Builder versionNumber(Optional<Integer> versionNumber) {
-            this.versionNumber = versionNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder versionNumber(Integer versionNumber) {
-            this.versionNumber = Optional.ofNullable(versionNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -229,13 +202,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "code", nulls = Nulls.SKIP)
         public Builder code(Optional<String> code) {
-            this.code = code;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder code(String code) {
-            this.code = Optional.ofNullable(code);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -243,13 +214,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "secrets", nulls = Nulls.SKIP)
         public Builder secrets(Optional<List<ActionModuleSecret>> secrets) {
-            this.secrets = secrets;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder secrets(List<ActionModuleSecret> secrets) {
-            this.secrets = Optional.ofNullable(secrets);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -257,13 +226,11 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "dependencies", nulls = Nulls.SKIP)
         public Builder dependencies(Optional<List<ActionModuleDependency>> dependencies) {
-            this.dependencies = dependencies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dependencies(List<ActionModuleDependency> dependencies) {
-            this.dependencies = Optional.ofNullable(dependencies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -271,28 +238,23 @@ public final class GetActionModuleVersionResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetActionModuleVersionResponseContent build() {
-            return new GetActionModuleVersionResponseContent(
-                    id, moduleId, versionNumber, code, secrets, dependencies, createdAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

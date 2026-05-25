@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = TenantSettingsDeviceFlow.Builder.class)
 public final class TenantSettingsDeviceFlow {
+
     private final Optional<TenantSettingsDeviceFlowCharset> charset;
 
     private final Optional<String> mask;
 
     private final Map<String, Object> additionalProperties;
 
-    private TenantSettingsDeviceFlow(
-            Optional<TenantSettingsDeviceFlowCharset> charset,
-            Optional<String> mask,
-            Map<String, Object> additionalProperties) {
+    private TenantSettingsDeviceFlow(Optional<TenantSettingsDeviceFlowCharset> charset, Optional<String> mask, Map<String, Object> additionalProperties) {
         this.charset = charset;
         this.mask = mask;
         this.additionalProperties = additionalProperties;
@@ -37,7 +35,7 @@ public final class TenantSettingsDeviceFlow {
 
     @JsonProperty("charset")
     public Optional<TenantSettingsDeviceFlowCharset> getCharset() {
-        return charset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,18 +43,17 @@ public final class TenantSettingsDeviceFlow {
      */
     @JsonProperty("mask")
     public Optional<String> getMask() {
-        return mask;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof TenantSettingsDeviceFlow && equalTo((TenantSettingsDeviceFlow) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(TenantSettingsDeviceFlow other) {
@@ -65,20 +62,21 @@ public final class TenantSettingsDeviceFlow {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.charset, this.mask);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<TenantSettingsDeviceFlowCharset> charset = Optional.empty();
 
         private Optional<String> mask = Optional.empty();
@@ -86,23 +84,20 @@ public final class TenantSettingsDeviceFlow {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(TenantSettingsDeviceFlow other) {
-            charset(other.getCharset());
-            mask(other.getMask());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "charset", nulls = Nulls.SKIP)
         public Builder charset(Optional<TenantSettingsDeviceFlowCharset> charset) {
-            this.charset = charset;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder charset(TenantSettingsDeviceFlowCharset charset) {
-            this.charset = Optional.ofNullable(charset);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -110,27 +105,23 @@ public final class TenantSettingsDeviceFlow {
          */
         @JsonSetter(value = "mask", nulls = Nulls.SKIP)
         public Builder mask(Optional<String> mask) {
-            this.mask = mask;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mask(String mask) {
-            this.mask = Optional.ofNullable(mask);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public TenantSettingsDeviceFlow build() {
-            return new TenantSettingsDeviceFlow(charset, mask, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

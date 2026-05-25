@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.GetActionModuleVersionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncVersionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawVersionsClient rawClient;
@@ -26,66 +27,62 @@ public class AsyncVersionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawVersionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(
-            String id, GetActionModuleVersionsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(String id, GetActionModuleVersionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(
-            String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleVersion>> list(String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
     public CompletableFuture<CreateActionModuleVersionResponseContent> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
-    public CompletableFuture<CreateActionModuleVersionResponseContent> create(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateActionModuleVersionResponseContent> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
     public CompletableFuture<GetActionModuleVersionResponseContent> get(String id, String versionId) {
-        return this.rawClient.get(id, versionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
-    public CompletableFuture<GetActionModuleVersionResponseContent> get(
-            String id, String versionId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, versionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetActionModuleVersionResponseContent> get(String id, String versionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncFederatedConnectionsTokensetsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawFederatedConnectionsTokensetsClient rawClient;
@@ -23,28 +24,28 @@ public class AsyncFederatedConnectionsTokensetsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawFederatedConnectionsTokensetsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List active federated connections tokensets for a provided user
      */
     public CompletableFuture<List<FederatedConnectionTokenSet>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List active federated connections tokensets for a provided user
      */
     public CompletableFuture<List<FederatedConnectionTokenSet>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String tokensetId) {
-        return this.rawClient.delete(id, tokensetId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, String tokensetId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, tokensetId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum {
-    public static final EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum EMAIL =
-            new EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum(Value.EMAIL, "email");
 
-    public static final EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum SMS =
-            new EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum(Value.SMS, "sms");
+    public static final EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum EMAIL = new EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum(Value.EMAIL, "email");
+
+    public static final EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum SMS = new EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum(Value.SMS, "sms");
 
     private final Value value;
 
@@ -23,63 +22,41 @@ public final class EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordl
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum
-                        && this.string.equals(
-                                ((EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum) other)
-                                        .string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case SMS:
-                return visitor.visitSms();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "sms":
-                return SMS;
-            default:
-                return new EventStreamCloudEventUserUpdatedObjectIdentitiesItemPasswordlessProviderEnum(
-                        Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EMAIL,
 
-        SMS,
-
-        UNKNOWN
+        EMAIL, SMS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEmail();
 
         T visitSms();

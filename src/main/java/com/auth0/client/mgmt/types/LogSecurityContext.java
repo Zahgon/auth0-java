@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogSecurityContext.Builder.class)
 public final class LogSecurityContext {
+
     private final Optional<String> ja3;
 
     private final Optional<String> ja4;
@@ -37,7 +38,7 @@ public final class LogSecurityContext {
      */
     @JsonProperty("ja3")
     public Optional<String> getJa3() {
-        return ja3;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,18 +46,17 @@ public final class LogSecurityContext {
      */
     @JsonProperty("ja4")
     public Optional<String> getJa4() {
-        return ja4;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogSecurityContext && equalTo((LogSecurityContext) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogSecurityContext other) {
@@ -65,20 +65,21 @@ public final class LogSecurityContext {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.ja3, this.ja4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> ja3 = Optional.empty();
 
         private Optional<String> ja4 = Optional.empty();
@@ -86,12 +87,11 @@ public final class LogSecurityContext {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LogSecurityContext other) {
-            ja3(other.getJa3());
-            ja4(other.getJa4());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,13 +99,11 @@ public final class LogSecurityContext {
          */
         @JsonSetter(value = "ja3", nulls = Nulls.SKIP)
         public Builder ja3(Optional<String> ja3) {
-            this.ja3 = ja3;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ja3(String ja3) {
-            this.ja3 = Optional.ofNullable(ja3);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -113,27 +111,23 @@ public final class LogSecurityContext {
          */
         @JsonSetter(value = "ja4", nulls = Nulls.SKIP)
         public Builder ja4(Optional<String> ja4) {
-            this.ja4 = ja4;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ja4(String ja4) {
-            this.ja4 = Optional.ofNullable(ja4);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogSecurityContext build() {
-            return new LogSecurityContext(ja3, ja4, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

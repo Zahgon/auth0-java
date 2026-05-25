@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PhoneTemplate.Builder.class)
 public final class PhoneTemplate {
+
     private final String id;
 
     private final Optional<String> channel;
@@ -37,15 +38,7 @@ public final class PhoneTemplate {
 
     private final Map<String, Object> additionalProperties;
 
-    private PhoneTemplate(
-            String id,
-            Optional<String> channel,
-            Optional<Boolean> customizable,
-            Optional<String> tenant,
-            PhoneTemplateContent content,
-            PhoneTemplateNotificationTypeEnum type,
-            boolean disabled,
-            Map<String, Object> additionalProperties) {
+    private PhoneTemplate(String id, Optional<String> channel, Optional<Boolean> customizable, Optional<String> tenant, PhoneTemplateContent content, PhoneTemplateNotificationTypeEnum type, boolean disabled, Map<String, Object> additionalProperties) {
         this.id = id;
         this.channel = channel;
         this.customizable = customizable;
@@ -58,32 +51,32 @@ public final class PhoneTemplate {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("channel")
     public Optional<String> getChannel() {
-        return channel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("customizable")
     public Optional<Boolean> getCustomizable() {
-        return customizable;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant")
     public Optional<String> getTenant() {
-        return tenant;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("content")
     public PhoneTemplateContent getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public PhoneTemplateNotificationTypeEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,60 +84,56 @@ public final class PhoneTemplate {
      */
     @JsonProperty("disabled")
     public boolean getDisabled() {
-        return disabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PhoneTemplate && equalTo((PhoneTemplate) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PhoneTemplate other) {
-        return id.equals(other.id)
-                && channel.equals(other.channel)
-                && customizable.equals(other.customizable)
-                && tenant.equals(other.tenant)
-                && content.equals(other.content)
-                && type.equals(other.type)
-                && disabled == other.disabled;
+        return id.equals(other.id) && channel.equals(other.channel) && customizable.equals(other.customizable) && tenant.equals(other.tenant) && content.equals(other.content) && type.equals(other.type) && disabled == other.disabled;
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.channel, this.customizable, this.tenant, this.content, this.type, this.disabled);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         ContentStage id(@NotNull String id);
 
         Builder from(PhoneTemplate other);
     }
 
     public interface ContentStage {
+
         TypeStage content(@NotNull PhoneTemplateContent content);
     }
 
     public interface TypeStage {
+
         DisabledStage type(@NotNull PhoneTemplateNotificationTypeEnum type);
     }
 
     public interface DisabledStage {
+
         /**
          * <p>Whether the template is enabled (false) or disabled (true).</p>
          */
@@ -152,6 +141,7 @@ public final class PhoneTemplate {
     }
 
     public interface _FinalStage {
+
         PhoneTemplate build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -173,6 +163,7 @@ public final class PhoneTemplate {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, ContentStage, TypeStage, DisabledStage, _FinalStage {
+
         private String id;
 
         private PhoneTemplateContent content;
@@ -190,39 +181,30 @@ public final class PhoneTemplate {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(PhoneTemplate other) {
-            id(other.getId());
-            channel(other.getChannel());
-            customizable(other.getCustomizable());
-            tenant(other.getTenant());
-            content(other.getContent());
-            type(other.getType());
-            disabled(other.getDisabled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public ContentStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("content")
         public TypeStage content(@NotNull PhoneTemplateContent content) {
-            this.content = Objects.requireNonNull(content, "content must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public DisabledStage type(@NotNull PhoneTemplateNotificationTypeEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -233,64 +215,55 @@ public final class PhoneTemplate {
         @java.lang.Override
         @JsonSetter("disabled")
         public _FinalStage disabled(boolean disabled) {
-            this.disabled = disabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenant(String tenant) {
-            this.tenant = Optional.ofNullable(tenant);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenant", nulls = Nulls.SKIP)
         public _FinalStage tenant(Optional<String> tenant) {
-            this.tenant = tenant;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customizable(Boolean customizable) {
-            this.customizable = Optional.ofNullable(customizable);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "customizable", nulls = Nulls.SKIP)
         public _FinalStage customizable(Optional<Boolean> customizable) {
-            this.customizable = customizable;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage channel(String channel) {
-            this.channel = Optional.ofNullable(channel);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "channel", nulls = Nulls.SKIP)
         public _FinalStage channel(Optional<String> channel) {
-            this.channel = channel;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public PhoneTemplate build() {
-            return new PhoneTemplate(id, channel, customizable, tenant, content, type, disabled, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOrgGroupRoleDeletedObject.Builder.class)
 public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
+
     private final EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization;
 
     private final EventStreamCloudEventOrgGroupRoleDeletedObjectRole role;
@@ -30,12 +31,7 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventOrgGroupRoleDeletedObject(
-            EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization,
-            EventStreamCloudEventOrgGroupRoleDeletedObjectRole role,
-            EventStreamCloudEventOrgGroupRoleDeletedObjectGroup group,
-            OffsetDateTime deletedAt,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventOrgGroupRoleDeletedObject(EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization, EventStreamCloudEventOrgGroupRoleDeletedObjectRole role, EventStreamCloudEventOrgGroupRoleDeletedObjectGroup group, OffsetDateTime deletedAt, Map<String, Object> additionalProperties) {
         this.organization = organization;
         this.role = role;
         this.group = group;
@@ -45,17 +41,17 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
 
     @JsonProperty("organization")
     public EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization getOrganization() {
-        return organization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("role")
     public EventStreamCloudEventOrgGroupRoleDeletedObjectRole getRole() {
-        return role;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("group")
     public EventStreamCloudEventOrgGroupRoleDeletedObjectGroup getGroup() {
-        return group;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,57 +59,56 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
      */
     @JsonProperty("deleted_at")
     public OffsetDateTime getDeletedAt() {
-        return deletedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgGroupRoleDeletedObject
-                && equalTo((EventStreamCloudEventOrgGroupRoleDeletedObject) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgGroupRoleDeletedObject other) {
-        return organization.equals(other.organization)
-                && role.equals(other.role)
-                && group.equals(other.group)
-                && deletedAt.equals(other.deletedAt);
+        return organization.equals(other.organization) && role.equals(other.role) && group.equals(other.group) && deletedAt.equals(other.deletedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.organization, this.role, this.group, this.deletedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrganizationStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrganizationStage {
+
         RoleStage organization(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization);
 
         Builder from(EventStreamCloudEventOrgGroupRoleDeletedObject other);
     }
 
     public interface RoleStage {
+
         GroupStage role(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectRole role);
     }
 
     public interface GroupStage {
+
         DeletedAtStage group(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectGroup group);
     }
 
     public interface DeletedAtStage {
+
         /**
          * <p>The time at which the role was removed from the group in the organization.</p>
          */
@@ -121,6 +116,7 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventOrgGroupRoleDeletedObject build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -130,6 +126,7 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrganizationStage, RoleStage, GroupStage, DeletedAtStage, _FinalStage {
+
         private EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization;
 
         private EventStreamCloudEventOrgGroupRoleDeletedObjectRole role;
@@ -141,37 +138,30 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventOrgGroupRoleDeletedObject other) {
-            organization(other.getOrganization());
-            role(other.getRole());
-            group(other.getGroup());
-            deletedAt(other.getDeletedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("organization")
-        public RoleStage organization(
-                @NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization) {
-            this.organization = Objects.requireNonNull(organization, "organization must not be null");
-            return this;
+        public RoleStage organization(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectOrganization organization) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("role")
         public GroupStage role(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectRole role) {
-            this.role = Objects.requireNonNull(role, "role must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("group")
         public DeletedAtStage group(@NotNull EventStreamCloudEventOrgGroupRoleDeletedObjectGroup group) {
-            this.group = Objects.requireNonNull(group, "group must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,26 +172,22 @@ public final class EventStreamCloudEventOrgGroupRoleDeletedObject {
         @java.lang.Override
         @JsonSetter("deleted_at")
         public _FinalStage deletedAt(@NotNull OffsetDateTime deletedAt) {
-            this.deletedAt = Objects.requireNonNull(deletedAt, "deletedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventOrgGroupRoleDeletedObject build() {
-            return new EventStreamCloudEventOrgGroupRoleDeletedObject(
-                    organization, role, group, deletedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

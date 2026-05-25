@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypeImageConst {
+
     public static final FormBlockTypeImageConst IMAGE = new FormBlockTypeImageConst(Value.IMAGE, "IMAGE");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormBlockTypeImageConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypeImageConst
-                        && this.string.equals(((FormBlockTypeImageConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case IMAGE:
-                return visitor.visitImage();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypeImageConst valueOf(String value) {
-        switch (value) {
-            case "IMAGE":
-                return IMAGE;
-            default:
-                return new FormBlockTypeImageConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        IMAGE,
 
-        UNKNOWN
+        IMAGE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitImage();
 
         T visitUnknown(String unknownType);

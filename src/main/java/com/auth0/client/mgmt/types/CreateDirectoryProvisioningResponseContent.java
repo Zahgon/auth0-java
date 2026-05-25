@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateDirectoryProvisioningResponseContent.Builder.class)
 public final class CreateDirectoryProvisioningResponseContent {
+
     private final String connectionId;
 
     private final String connectionName;
@@ -48,19 +49,7 @@ public final class CreateDirectoryProvisioningResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateDirectoryProvisioningResponseContent(
-            String connectionId,
-            String connectionName,
-            String strategy,
-            List<DirectoryProvisioningMappingItem> mapping,
-            boolean synchronizeAutomatically,
-            Optional<SynchronizeGroupsEnum> synchronizeGroups,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            Optional<OffsetDateTime> lastSynchronizationAt,
-            Optional<String> lastSynchronizationStatus,
-            Optional<String> lastSynchronizationError,
-            Map<String, Object> additionalProperties) {
+    private CreateDirectoryProvisioningResponseContent(String connectionId, String connectionName, String strategy, List<DirectoryProvisioningMappingItem> mapping, boolean synchronizeAutomatically, Optional<SynchronizeGroupsEnum> synchronizeGroups, OffsetDateTime createdAt, OffsetDateTime updatedAt, Optional<OffsetDateTime> lastSynchronizationAt, Optional<String> lastSynchronizationStatus, Optional<String> lastSynchronizationError, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.connectionName = connectionName;
         this.strategy = strategy;
@@ -80,7 +69,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +77,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("connection_name")
     public String getConnectionName() {
-        return connectionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +85,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("strategy")
     public String getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,7 +93,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("mapping")
     public List<DirectoryProvisioningMappingItem> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,12 +101,12 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("synchronize_automatically")
     public boolean getSynchronizeAutomatically() {
-        return synchronizeAutomatically;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("synchronize_groups")
     public Optional<SynchronizeGroupsEnum> getSynchronizeGroups() {
-        return synchronizeGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,7 +114,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,7 +122,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +130,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("last_synchronization_at")
     public Optional<OffsetDateTime> getLastSynchronizationAt() {
-        return lastSynchronizationAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -149,7 +138,7 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("last_synchronization_status")
     public Optional<String> getLastSynchronizationStatus() {
-        return lastSynchronizationStatus;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -157,61 +146,39 @@ public final class CreateDirectoryProvisioningResponseContent {
      */
     @JsonProperty("last_synchronization_error")
     public Optional<String> getLastSynchronizationError() {
-        return lastSynchronizationError;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateDirectoryProvisioningResponseContent
-                && equalTo((CreateDirectoryProvisioningResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateDirectoryProvisioningResponseContent other) {
-        return connectionId.equals(other.connectionId)
-                && connectionName.equals(other.connectionName)
-                && strategy.equals(other.strategy)
-                && mapping.equals(other.mapping)
-                && synchronizeAutomatically == other.synchronizeAutomatically
-                && synchronizeGroups.equals(other.synchronizeGroups)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && lastSynchronizationAt.equals(other.lastSynchronizationAt)
-                && lastSynchronizationStatus.equals(other.lastSynchronizationStatus)
-                && lastSynchronizationError.equals(other.lastSynchronizationError);
+        return connectionId.equals(other.connectionId) && connectionName.equals(other.connectionName) && strategy.equals(other.strategy) && mapping.equals(other.mapping) && synchronizeAutomatically == other.synchronizeAutomatically && synchronizeGroups.equals(other.synchronizeGroups) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && lastSynchronizationAt.equals(other.lastSynchronizationAt) && lastSynchronizationStatus.equals(other.lastSynchronizationStatus) && lastSynchronizationError.equals(other.lastSynchronizationError);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionId,
-                this.connectionName,
-                this.strategy,
-                this.mapping,
-                this.synchronizeAutomatically,
-                this.synchronizeGroups,
-                this.createdAt,
-                this.updatedAt,
-                this.lastSynchronizationAt,
-                this.lastSynchronizationStatus,
-                this.lastSynchronizationError);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>The connection's identifier</p>
          */
@@ -221,6 +188,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface ConnectionNameStage {
+
         /**
          * <p>The connection's name</p>
          */
@@ -228,6 +196,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface StrategyStage {
+
         /**
          * <p>The connection's strategy</p>
          */
@@ -235,6 +204,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface SynchronizeAutomaticallyStage {
+
         /**
          * <p>Whether periodic automatic synchronization is enabled</p>
          */
@@ -242,6 +212,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>The timestamp at which the directory provisioning configuration was created</p>
          */
@@ -249,6 +220,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>The timestamp at which the directory provisioning configuration was last updated</p>
          */
@@ -256,6 +228,7 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     public interface _FinalStage {
+
         CreateDirectoryProvisioningResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -298,14 +271,8 @@ public final class CreateDirectoryProvisioningResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ConnectionIdStage,
-                    ConnectionNameStage,
-                    StrategyStage,
-                    SynchronizeAutomaticallyStage,
-                    CreatedAtStage,
-                    UpdatedAtStage,
-                    _FinalStage {
+    public static final class Builder implements ConnectionIdStage, ConnectionNameStage, StrategyStage, SynchronizeAutomaticallyStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+
         private String connectionId;
 
         private String connectionName;
@@ -331,22 +298,12 @@ public final class CreateDirectoryProvisioningResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateDirectoryProvisioningResponseContent other) {
-            connectionId(other.getConnectionId());
-            connectionName(other.getConnectionName());
-            strategy(other.getStrategy());
-            mapping(other.getMapping());
-            synchronizeAutomatically(other.getSynchronizeAutomatically());
-            synchronizeGroups(other.getSynchronizeGroups());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            lastSynchronizationAt(other.getLastSynchronizationAt());
-            lastSynchronizationStatus(other.getLastSynchronizationStatus());
-            lastSynchronizationError(other.getLastSynchronizationError());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -357,8 +314,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("connection_id")
         public ConnectionNameStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -369,8 +325,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("connection_name")
         public StrategyStage connectionName(@NotNull String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName, "connectionName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -381,8 +336,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("strategy")
         public SynchronizeAutomaticallyStage strategy(@NotNull String strategy) {
-            this.strategy = Objects.requireNonNull(strategy, "strategy must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -393,8 +347,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("synchronize_automatically")
         public CreatedAtStage synchronizeAutomatically(boolean synchronizeAutomatically) {
-            this.synchronizeAutomatically = synchronizeAutomatically;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -405,8 +358,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -417,8 +369,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -427,8 +378,7 @@ public final class CreateDirectoryProvisioningResponseContent {
          */
         @java.lang.Override
         public _FinalStage lastSynchronizationError(String lastSynchronizationError) {
-            this.lastSynchronizationError = Optional.ofNullable(lastSynchronizationError);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -437,8 +387,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter(value = "last_synchronization_error", nulls = Nulls.SKIP)
         public _FinalStage lastSynchronizationError(Optional<String> lastSynchronizationError) {
-            this.lastSynchronizationError = lastSynchronizationError;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -447,8 +396,7 @@ public final class CreateDirectoryProvisioningResponseContent {
          */
         @java.lang.Override
         public _FinalStage lastSynchronizationStatus(String lastSynchronizationStatus) {
-            this.lastSynchronizationStatus = Optional.ofNullable(lastSynchronizationStatus);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -457,8 +405,7 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter(value = "last_synchronization_status", nulls = Nulls.SKIP)
         public _FinalStage lastSynchronizationStatus(Optional<String> lastSynchronizationStatus) {
-            this.lastSynchronizationStatus = lastSynchronizationStatus;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -467,8 +414,7 @@ public final class CreateDirectoryProvisioningResponseContent {
          */
         @java.lang.Override
         public _FinalStage lastSynchronizationAt(OffsetDateTime lastSynchronizationAt) {
-            this.lastSynchronizationAt = Optional.ofNullable(lastSynchronizationAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -477,21 +423,18 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter(value = "last_synchronization_at", nulls = Nulls.SKIP)
         public _FinalStage lastSynchronizationAt(Optional<OffsetDateTime> lastSynchronizationAt) {
-            this.lastSynchronizationAt = lastSynchronizationAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage synchronizeGroups(SynchronizeGroupsEnum synchronizeGroups) {
-            this.synchronizeGroups = Optional.ofNullable(synchronizeGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "synchronize_groups", nulls = Nulls.SKIP)
         public _FinalStage synchronizeGroups(Optional<SynchronizeGroupsEnum> synchronizeGroups) {
-            this.synchronizeGroups = synchronizeGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -500,10 +443,7 @@ public final class CreateDirectoryProvisioningResponseContent {
          */
         @java.lang.Override
         public _FinalStage addAllMapping(List<DirectoryProvisioningMappingItem> mapping) {
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -512,8 +452,7 @@ public final class CreateDirectoryProvisioningResponseContent {
          */
         @java.lang.Override
         public _FinalStage addMapping(DirectoryProvisioningMappingItem mapping) {
-            this.mapping.add(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -522,40 +461,22 @@ public final class CreateDirectoryProvisioningResponseContent {
         @java.lang.Override
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public _FinalStage mapping(List<DirectoryProvisioningMappingItem> mapping) {
-            this.mapping.clear();
-            if (mapping != null) {
-                this.mapping.addAll(mapping);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateDirectoryProvisioningResponseContent build() {
-            return new CreateDirectoryProvisioningResponseContent(
-                    connectionId,
-                    connectionName,
-                    strategy,
-                    mapping,
-                    synchronizeAutomatically,
-                    synchronizeGroups,
-                    createdAt,
-                    updatedAt,
-                    lastSynchronizationAt,
-                    lastSynchronizationStatus,
-                    lastSynchronizationError,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

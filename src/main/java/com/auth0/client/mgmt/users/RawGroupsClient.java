@@ -30,6 +30,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class RawGroupsClient {
+
     protected final ClientOptions clientOptions;
 
     public RawGroupsClient(ClientOptions clientOptions) {
@@ -40,105 +41,27 @@ public class RawGroupsClient {
      * List all groups to which this user belongs.
      */
     public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(String id) {
-        return get(id, GetUserGroupsRequestParameters.builder().build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, RequestOptions requestOptions) {
-        return get(id, GetUserGroupsRequestParameters.builder().build(), requestOptions);
+    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, GetUserGroupsRequestParameters request) {
-        return get(id, request, null);
+    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, GetUserGroupsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups to which this user belongs.
      */
-    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(
-            String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
-        HttpUrl.Builder httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
-                .newBuilder()
-                .addPathSegments("users")
-                .addPathSegment(id)
-                .addPathSegments("groups");
-        if (!request.getFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "fields", request.getFields().orElse(null), false);
-        }
-        if (!request.getIncludeFields().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "include_fields", request.getIncludeFields().orElse(null), false);
-        }
-        if (!request.getFrom().isAbsent()) {
-            QueryStringMapper.addQueryParameter(
-                    httpUrl, "from", request.getFrom().orElse(null), false);
-        }
-        QueryStringMapper.addQueryParameter(httpUrl, "take", request.getTake().orElse(50), false);
-        if (requestOptions != null) {
-            requestOptions.getQueryParameters().forEach((_key, _value) -> {
-                httpUrl.addQueryParameter(_key, _value);
-            });
-        }
-        Request.Builder _requestBuilder = new Request.Builder()
-                .url(httpUrl.build())
-                .method("GET", null)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Accept", "application/json");
-        Request okhttpRequest = _requestBuilder.build();
-        OkHttpClient client = clientOptions.httpClient();
-        if (requestOptions != null && requestOptions.getTimeout().isPresent()) {
-            client = clientOptions.httpClientWithTimeout(requestOptions);
-        }
-        try (Response response = client.newCall(okhttpRequest).execute()) {
-            ResponseBody responseBody = response.body();
-            String responseBodyString = responseBody != null ? responseBody.string() : "{}";
-            if (response.isSuccessful()) {
-                GetUserGroupsPaginatedResponseContent parsedResponse = ObjectMappers.JSON_MAPPER.readValue(
-                        responseBodyString, GetUserGroupsPaginatedResponseContent.class);
-                Optional<String> startingAfter = parsedResponse.getNext();
-                GetUserGroupsRequestParameters nextRequest = GetUserGroupsRequestParameters.builder()
-                        .from(request)
-                        .from(startingAfter)
-                        .build();
-                List<UserGroupsResponseSchema> result = parsedResponse.getGroups();
-                return new ManagementApiHttpResponse<>(
-                        new SyncPagingIterable<UserGroupsResponseSchema>(
-                                startingAfter.isPresent(), result, parsedResponse, () -> get(
-                                                id, nextRequest, requestOptions)
-                                        .body()),
-                        response);
-            }
-            try {
-                switch (response.code()) {
-                    case 400:
-                        throw new BadRequestError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 401:
-                        throw new UnauthorizedError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 403:
-                        throw new ForbiddenError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                    case 429:
-                        throw new TooManyRequestsError(
-                                ObjectMappers.JSON_MAPPER.readValue(responseBodyString, Object.class), response);
-                }
-            } catch (JsonProcessingException ignored) {
-                // unable to map error response, throwing generic error
-            }
-            Object errorBody = ObjectMappers.parseErrorBody(responseBodyString);
-            throw new ManagementApiException(
-                    "Error with status code " + response.code(), response.code(), errorBody, response);
-        } catch (IOException e) {
-            throw new ManagementException("Network error executing HTTP request", e);
-        }
+    public ManagementApiHttpResponse<SyncPagingIterable<UserGroupsResponseSchema>> get(String id, GetUserGroupsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

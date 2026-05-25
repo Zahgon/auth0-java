@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentSalesforceCommunityStrategy {
-    public static final ConnectionResponseContentSalesforceCommunityStrategy SALESFORCE_COMMUNITY =
-            new ConnectionResponseContentSalesforceCommunityStrategy(
-                    Value.SALESFORCE_COMMUNITY, "salesforce-community");
+
+    public static final ConnectionResponseContentSalesforceCommunityStrategy SALESFORCE_COMMUNITY = new ConnectionResponseContentSalesforceCommunityStrategy(Value.SALESFORCE_COMMUNITY, "salesforce-community");
 
     private final Value value;
 
@@ -21,54 +20,41 @@ public final class ConnectionResponseContentSalesforceCommunityStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentSalesforceCommunityStrategy
-                        && this.string.equals(((ConnectionResponseContentSalesforceCommunityStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SALESFORCE_COMMUNITY:
-                return visitor.visitSalesforceCommunity();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentSalesforceCommunityStrategy valueOf(String value) {
-        switch (value) {
-            case "salesforce-community":
-                return SALESFORCE_COMMUNITY;
-            default:
-                return new ConnectionResponseContentSalesforceCommunityStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SALESFORCE_COMMUNITY,
 
-        UNKNOWN
+        SALESFORCE_COMMUNITY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSalesforceCommunity();
 
         T visitUnknown(String unknownType);

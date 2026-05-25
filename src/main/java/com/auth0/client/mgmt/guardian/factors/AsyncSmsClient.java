@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.SetGuardianFactorsProviderSmsTwilioResponseCo
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSmsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSmsClient rawClient;
@@ -30,7 +31,7 @@ public class AsyncSmsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSmsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -39,7 +40,7 @@ public class AsyncSmsClient {
      * </code></pre>
      */
     public CompletableFuture<GetGuardianFactorsProviderSmsTwilioResponseContent> getTwilioProvider() {
-        return this.rawClient.getTwilioProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,9 +48,8 @@ public class AsyncSmsClient {
      * <pre><code>A new endpoint is available to retrieve the Twilio configuration related to phone factors (<a href='https://auth0.com/docs/api/management/v2/#!/Guardian/get_twilio'>phone Twilio configuration</a>). It has the same payload as this one. Please use it instead.
      * </code></pre>
      */
-    public CompletableFuture<GetGuardianFactorsProviderSmsTwilioResponseContent> getTwilioProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.getTwilioProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorsProviderSmsTwilioResponseContent> getTwilioProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,7 +58,7 @@ public class AsyncSmsClient {
      * </code></pre>
      */
     public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider() {
-        return this.rawClient.setTwilioProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -66,9 +66,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Update the Twilio SMS provider configuration.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,9 +75,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Update the Twilio SMS provider configuration.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(
-            SetGuardianFactorsProviderSmsTwilioRequestContent request) {
-        return this.rawClient.setTwilioProvider(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(SetGuardianFactorsProviderSmsTwilioRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,9 +84,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Update the Twilio SMS provider configuration.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(
-            SetGuardianFactorsProviderSmsTwilioRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTwilioProvider(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderSmsTwilioResponseContent> setTwilioProvider(SetGuardianFactorsProviderSmsTwilioRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,7 +94,7 @@ public class AsyncSmsClient {
      * </code></pre>
      */
     public CompletableFuture<GetGuardianFactorsProviderSmsResponseContent> getSelectedProvider() {
-        return this.rawClient.getSelectedProvider().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,9 +102,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Retrieve details for the multi-factor authentication SMS provider configured for your tenant.
      * </code></pre>
      */
-    public CompletableFuture<GetGuardianFactorsProviderSmsResponseContent> getSelectedProvider(
-            RequestOptions requestOptions) {
-        return this.rawClient.getSelectedProvider(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetGuardianFactorsProviderSmsResponseContent> getSelectedProvider(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,9 +111,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Update the multi-factor authentication SMS provider configuration in your tenant.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorsProviderSmsResponseContent> setProvider(
-            SetGuardianFactorsProviderSmsRequestContent request) {
-        return this.rawClient.setProvider(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderSmsResponseContent> setProvider(SetGuardianFactorsProviderSmsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -125,9 +120,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Update the multi-factor authentication SMS provider configuration in your tenant.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorsProviderSmsResponseContent> setProvider(
-            SetGuardianFactorsProviderSmsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setProvider(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorsProviderSmsResponseContent> setProvider(SetGuardianFactorsProviderSmsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -136,7 +130,7 @@ public class AsyncSmsClient {
      * </code></pre>
      */
     public CompletableFuture<GetGuardianFactorSmsTemplatesResponseContent> getTemplates() {
-        return this.rawClient.getTemplates().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -145,7 +139,7 @@ public class AsyncSmsClient {
      * </code></pre>
      */
     public CompletableFuture<GetGuardianFactorSmsTemplatesResponseContent> getTemplates(RequestOptions requestOptions) {
-        return this.rawClient.getTemplates(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,9 +147,8 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Customize the messages sent to complete SMS enrollment and verification.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorSmsTemplatesResponseContent> setTemplates(
-            SetGuardianFactorSmsTemplatesRequestContent request) {
-        return this.rawClient.setTemplates(request).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorSmsTemplatesResponseContent> setTemplates(SetGuardianFactorSmsTemplatesRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -163,8 +156,7 @@ public class AsyncSmsClient {
      * <pre><code><b>Previous functionality</b>: Customize the messages sent to complete SMS enrollment and verification.
      * </code></pre>
      */
-    public CompletableFuture<SetGuardianFactorSmsTemplatesResponseContent> setTemplates(
-            SetGuardianFactorSmsTemplatesRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.setTemplates(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetGuardianFactorSmsTemplatesResponseContent> setTemplates(SetGuardianFactorSmsTemplatesRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

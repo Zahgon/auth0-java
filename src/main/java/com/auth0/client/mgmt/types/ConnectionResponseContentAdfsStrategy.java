@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentAdfsStrategy {
-    public static final ConnectionResponseContentAdfsStrategy ADFS =
-            new ConnectionResponseContentAdfsStrategy(Value.ADFS, "adfs");
+
+    public static final ConnectionResponseContentAdfsStrategy ADFS = new ConnectionResponseContentAdfsStrategy(Value.ADFS, "adfs");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentAdfsStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentAdfsStrategy
-                        && this.string.equals(((ConnectionResponseContentAdfsStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADFS:
-                return visitor.visitAdfs();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentAdfsStrategy valueOf(String value) {
-        switch (value) {
-            case "adfs":
-                return ADFS;
-            default:
-                return new ConnectionResponseContentAdfsStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADFS,
 
-        UNKNOWN
+        ADFS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAdfs();
 
         T visitUnknown(String unknownType);

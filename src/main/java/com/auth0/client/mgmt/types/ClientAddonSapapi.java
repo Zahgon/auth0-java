@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonSapapi.Builder.class)
 public final class ClientAddonSapapi {
+
     private final Optional<String> clientid;
 
     private final Optional<String> usernameAttribute;
@@ -34,14 +35,7 @@ public final class ClientAddonSapapi {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAddonSapapi(
-            Optional<String> clientid,
-            Optional<String> usernameAttribute,
-            Optional<String> tokenEndpointUrl,
-            Optional<String> scope,
-            Optional<String> servicePassword,
-            Optional<String> nameIdentifierFormat,
-            Map<String, Object> additionalProperties) {
+    private ClientAddonSapapi(Optional<String> clientid, Optional<String> usernameAttribute, Optional<String> tokenEndpointUrl, Optional<String> scope, Optional<String> servicePassword, Optional<String> nameIdentifierFormat, Map<String, Object> additionalProperties) {
         this.clientid = clientid;
         this.usernameAttribute = usernameAttribute;
         this.tokenEndpointUrl = tokenEndpointUrl;
@@ -56,7 +50,7 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("clientid")
     public Optional<String> getClientid() {
-        return clientid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +58,7 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("usernameAttribute")
     public Optional<String> getUsernameAttribute() {
-        return usernameAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +66,7 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("tokenEndpointUrl")
     public Optional<String> getTokenEndpointUrl() {
-        return tokenEndpointUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +74,7 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +82,7 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("servicePassword")
     public Optional<String> getServicePassword() {
-        return servicePassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,51 +90,40 @@ public final class ClientAddonSapapi {
      */
     @JsonProperty("nameIdentifierFormat")
     public Optional<String> getNameIdentifierFormat() {
-        return nameIdentifierFormat;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonSapapi && equalTo((ClientAddonSapapi) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonSapapi other) {
-        return clientid.equals(other.clientid)
-                && usernameAttribute.equals(other.usernameAttribute)
-                && tokenEndpointUrl.equals(other.tokenEndpointUrl)
-                && scope.equals(other.scope)
-                && servicePassword.equals(other.servicePassword)
-                && nameIdentifierFormat.equals(other.nameIdentifierFormat);
+        return clientid.equals(other.clientid) && usernameAttribute.equals(other.usernameAttribute) && tokenEndpointUrl.equals(other.tokenEndpointUrl) && scope.equals(other.scope) && servicePassword.equals(other.servicePassword) && nameIdentifierFormat.equals(other.nameIdentifierFormat);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.clientid,
-                this.usernameAttribute,
-                this.tokenEndpointUrl,
-                this.scope,
-                this.servicePassword,
-                this.nameIdentifierFormat);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> clientid = Optional.empty();
 
         private Optional<String> usernameAttribute = Optional.empty();
@@ -156,16 +139,11 @@ public final class ClientAddonSapapi {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonSapapi other) {
-            clientid(other.getClientid());
-            usernameAttribute(other.getUsernameAttribute());
-            tokenEndpointUrl(other.getTokenEndpointUrl());
-            scope(other.getScope());
-            servicePassword(other.getServicePassword());
-            nameIdentifierFormat(other.getNameIdentifierFormat());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -173,13 +151,11 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "clientid", nulls = Nulls.SKIP)
         public Builder clientid(Optional<String> clientid) {
-            this.clientid = clientid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientid(String clientid) {
-            this.clientid = Optional.ofNullable(clientid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -187,13 +163,11 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "usernameAttribute", nulls = Nulls.SKIP)
         public Builder usernameAttribute(Optional<String> usernameAttribute) {
-            this.usernameAttribute = usernameAttribute;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder usernameAttribute(String usernameAttribute) {
-            this.usernameAttribute = Optional.ofNullable(usernameAttribute);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -201,13 +175,11 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "tokenEndpointUrl", nulls = Nulls.SKIP)
         public Builder tokenEndpointUrl(Optional<String> tokenEndpointUrl) {
-            this.tokenEndpointUrl = tokenEndpointUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEndpointUrl(String tokenEndpointUrl) {
-            this.tokenEndpointUrl = Optional.ofNullable(tokenEndpointUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -215,13 +187,11 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -229,13 +199,11 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "servicePassword", nulls = Nulls.SKIP)
         public Builder servicePassword(Optional<String> servicePassword) {
-            this.servicePassword = servicePassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder servicePassword(String servicePassword) {
-            this.servicePassword = Optional.ofNullable(servicePassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -243,34 +211,23 @@ public final class ClientAddonSapapi {
          */
         @JsonSetter(value = "nameIdentifierFormat", nulls = Nulls.SKIP)
         public Builder nameIdentifierFormat(Optional<String> nameIdentifierFormat) {
-            this.nameIdentifierFormat = nameIdentifierFormat;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nameIdentifierFormat(String nameIdentifierFormat) {
-            this.nameIdentifierFormat = Optional.ofNullable(nameIdentifierFormat);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonSapapi build() {
-            return new ClientAddonSapapi(
-                    clientid,
-                    usernameAttribute,
-                    tokenEndpointUrl,
-                    scope,
-                    servicePassword,
-                    nameIdentifierFormat,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

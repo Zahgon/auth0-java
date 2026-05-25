@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetTenantSettingsResponseContent.Builder.class)
 public final class GetTenantSettingsResponseContent {
+
     private final OptionalNullable<TenantSettingsPasswordPage> changePassword;
 
     private final OptionalNullable<TenantSettingsGuardianPage> guardianMfaPage;
@@ -100,45 +101,7 @@ public final class GetTenantSettingsResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetTenantSettingsResponseContent(
-            OptionalNullable<TenantSettingsPasswordPage> changePassword,
-            OptionalNullable<TenantSettingsGuardianPage> guardianMfaPage,
-            Optional<String> defaultAudience,
-            Optional<String> defaultDirectory,
-            OptionalNullable<TenantSettingsErrorPage> errorPage,
-            OptionalNullable<TenantSettingsDeviceFlow> deviceFlow,
-            OptionalNullable<DefaultTokenQuota> defaultTokenQuota,
-            Optional<TenantSettingsFlags> flags,
-            Optional<String> friendlyName,
-            Optional<String> pictureUrl,
-            Optional<String> supportEmail,
-            Optional<String> supportUrl,
-            Optional<List<String>> allowedLogoutUrls,
-            Optional<Double> sessionLifetime,
-            Optional<Double> idleSessionLifetime,
-            Optional<Double> ephemeralSessionLifetime,
-            Optional<Double> idleEphemeralSessionLifetime,
-            Optional<String> sandboxVersion,
-            Optional<String> legacySandboxVersion,
-            Optional<List<String>> sandboxVersionsAvailable,
-            Optional<String> defaultRedirectionUri,
-            Optional<List<SupportedLocales>> enabledLocales,
-            OptionalNullable<SessionCookieSchema> sessionCookie,
-            OptionalNullable<TenantSettingsSessions> sessions,
-            Optional<TenantOidcLogoutSettings> oidcLogout,
-            Optional<Boolean> allowOrganizationNameInAuthenticationApi,
-            Optional<Boolean> customizeMfaInPostloginAction,
-            OptionalNullable<List<String>> acrValuesSupported,
-            OptionalNullable<TenantSettingsMtls> mtls,
-            Optional<Boolean> pushedAuthorizationRequestsSupported,
-            OptionalNullable<Boolean> authorizationResponseIssParameterSupported,
-            OptionalNullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt,
-            Optional<TenantSettingsResourceParameterProfile> resourceParameterProfile,
-            Optional<Boolean> clientIdMetadataDocumentSupported,
-            Optional<Boolean> phoneConsolidatedExperience,
-            Optional<Boolean> enableAiGuide,
-            Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode,
-            Map<String, Object> additionalProperties) {
+    private GetTenantSettingsResponseContent(OptionalNullable<TenantSettingsPasswordPage> changePassword, OptionalNullable<TenantSettingsGuardianPage> guardianMfaPage, Optional<String> defaultAudience, Optional<String> defaultDirectory, OptionalNullable<TenantSettingsErrorPage> errorPage, OptionalNullable<TenantSettingsDeviceFlow> deviceFlow, OptionalNullable<DefaultTokenQuota> defaultTokenQuota, Optional<TenantSettingsFlags> flags, Optional<String> friendlyName, Optional<String> pictureUrl, Optional<String> supportEmail, Optional<String> supportUrl, Optional<List<String>> allowedLogoutUrls, Optional<Double> sessionLifetime, Optional<Double> idleSessionLifetime, Optional<Double> ephemeralSessionLifetime, Optional<Double> idleEphemeralSessionLifetime, Optional<String> sandboxVersion, Optional<String> legacySandboxVersion, Optional<List<String>> sandboxVersionsAvailable, Optional<String> defaultRedirectionUri, Optional<List<SupportedLocales>> enabledLocales, OptionalNullable<SessionCookieSchema> sessionCookie, OptionalNullable<TenantSettingsSessions> sessions, Optional<TenantOidcLogoutSettings> oidcLogout, Optional<Boolean> allowOrganizationNameInAuthenticationApi, Optional<Boolean> customizeMfaInPostloginAction, OptionalNullable<List<String>> acrValuesSupported, OptionalNullable<TenantSettingsMtls> mtls, Optional<Boolean> pushedAuthorizationRequestsSupported, OptionalNullable<Boolean> authorizationResponseIssParameterSupported, OptionalNullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt, Optional<TenantSettingsResourceParameterProfile> resourceParameterProfile, Optional<Boolean> clientIdMetadataDocumentSupported, Optional<Boolean> phoneConsolidatedExperience, Optional<Boolean> enableAiGuide, Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode, Map<String, Object> additionalProperties) {
         this.changePassword = changePassword;
         this.guardianMfaPage = guardianMfaPage;
         this.defaultAudience = defaultAudience;
@@ -182,19 +145,13 @@ public final class GetTenantSettingsResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("change_password")
     public OptionalNullable<TenantSettingsPasswordPage> getChangePassword() {
-        if (changePassword == null) {
-            return OptionalNullable.absent();
-        }
-        return changePassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("guardian_mfa_page")
     public OptionalNullable<TenantSettingsGuardianPage> getGuardianMfaPage() {
-        if (guardianMfaPage == null) {
-            return OptionalNullable.absent();
-        }
-        return guardianMfaPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -202,7 +159,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("default_audience")
     public Optional<String> getDefaultAudience() {
-        return defaultAudience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -210,39 +167,30 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("default_directory")
     public Optional<String> getDefaultDirectory() {
-        return defaultDirectory;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("error_page")
     public OptionalNullable<TenantSettingsErrorPage> getErrorPage() {
-        if (errorPage == null) {
-            return OptionalNullable.absent();
-        }
-        return errorPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("device_flow")
     public OptionalNullable<TenantSettingsDeviceFlow> getDeviceFlow() {
-        if (deviceFlow == null) {
-            return OptionalNullable.absent();
-        }
-        return deviceFlow;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("default_token_quota")
     public OptionalNullable<DefaultTokenQuota> getDefaultTokenQuota() {
-        if (defaultTokenQuota == null) {
-            return OptionalNullable.absent();
-        }
-        return defaultTokenQuota;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("flags")
     public Optional<TenantSettingsFlags> getFlags() {
-        return flags;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -250,7 +198,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("friendly_name")
     public Optional<String> getFriendlyName() {
-        return friendlyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -258,7 +206,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("picture_url")
     public Optional<String> getPictureUrl() {
-        return pictureUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -266,7 +214,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("support_email")
     public Optional<String> getSupportEmail() {
-        return supportEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -274,7 +222,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("support_url")
     public Optional<String> getSupportUrl() {
-        return supportUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -282,7 +230,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("allowed_logout_urls")
     public Optional<List<String>> getAllowedLogoutUrls() {
-        return allowedLogoutUrls;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -290,7 +238,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("session_lifetime")
     public Optional<Double> getSessionLifetime() {
-        return sessionLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -298,7 +246,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("idle_session_lifetime")
     public Optional<Double> getIdleSessionLifetime() {
-        return idleSessionLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -306,7 +254,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("ephemeral_session_lifetime")
     public Optional<Double> getEphemeralSessionLifetime() {
-        return ephemeralSessionLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -314,7 +262,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("idle_ephemeral_session_lifetime")
     public Optional<Double> getIdleEphemeralSessionLifetime() {
-        return idleEphemeralSessionLifetime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -322,7 +270,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("sandbox_version")
     public Optional<String> getSandboxVersion() {
-        return sandboxVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -330,7 +278,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("legacy_sandbox_version")
     public Optional<String> getLegacySandboxVersion() {
-        return legacySandboxVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -338,7 +286,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("sandbox_versions_available")
     public Optional<List<String>> getSandboxVersionsAvailable() {
-        return sandboxVersionsAvailable;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -346,7 +294,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("default_redirection_uri")
     public Optional<String> getDefaultRedirectionUri() {
-        return defaultRedirectionUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -354,30 +302,24 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("enabled_locales")
     public Optional<List<SupportedLocales>> getEnabledLocales() {
-        return enabledLocales;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("session_cookie")
     public OptionalNullable<SessionCookieSchema> getSessionCookie() {
-        if (sessionCookie == null) {
-            return OptionalNullable.absent();
-        }
-        return sessionCookie;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("sessions")
     public OptionalNullable<TenantSettingsSessions> getSessions() {
-        if (sessions == null) {
-            return OptionalNullable.absent();
-        }
-        return sessions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("oidc_logout")
     public Optional<TenantOidcLogoutSettings> getOidcLogout() {
-        return oidcLogout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -385,7 +327,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("allow_organization_name_in_authentication_api")
     public Optional<Boolean> getAllowOrganizationNameInAuthenticationApi() {
-        return allowOrganizationNameInAuthenticationApi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -393,7 +335,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("customize_mfa_in_postlogin_action")
     public Optional<Boolean> getCustomizeMfaInPostloginAction() {
-        return customizeMfaInPostloginAction;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -402,19 +344,13 @@ public final class GetTenantSettingsResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("acr_values_supported")
     public OptionalNullable<List<String>> getAcrValuesSupported() {
-        if (acrValuesSupported == null) {
-            return OptionalNullable.absent();
-        }
-        return acrValuesSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("mtls")
     public OptionalNullable<TenantSettingsMtls> getMtls() {
-        if (mtls == null) {
-            return OptionalNullable.absent();
-        }
-        return mtls;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -422,7 +358,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("pushed_authorization_requests_supported")
     public Optional<Boolean> getPushedAuthorizationRequestsSupported() {
-        return pushedAuthorizationRequestsSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -431,10 +367,7 @@ public final class GetTenantSettingsResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("authorization_response_iss_parameter_supported")
     public OptionalNullable<Boolean> getAuthorizationResponseIssParameterSupported() {
-        if (authorizationResponseIssParameterSupported == null) {
-            return OptionalNullable.absent();
-        }
-        return authorizationResponseIssParameterSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -445,15 +378,12 @@ public final class GetTenantSettingsResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("skip_non_verifiable_callback_uri_confirmation_prompt")
     public OptionalNullable<Boolean> getSkipNonVerifiableCallbackUriConfirmationPrompt() {
-        if (skipNonVerifiableCallbackUriConfirmationPrompt == null) {
-            return OptionalNullable.absent();
-        }
-        return skipNonVerifiableCallbackUriConfirmationPrompt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("resource_parameter_profile")
     public Optional<TenantSettingsResourceParameterProfile> getResourceParameterProfile() {
-        return resourceParameterProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -461,7 +391,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("client_id_metadata_document_supported")
     public Optional<Boolean> getClientIdMetadataDocumentSupported() {
-        return clientIdMetadataDocumentSupported;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -469,7 +399,7 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("phone_consolidated_experience")
     public Optional<Boolean> getPhoneConsolidatedExperience() {
-        return phoneConsolidatedExperience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -477,12 +407,12 @@ public final class GetTenantSettingsResponseContent {
      */
     @JsonProperty("enable_ai_guide")
     public Optional<Boolean> getEnableAiGuide() {
-        return enableAiGuide;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dynamic_client_registration_security_mode")
     public Optional<TenantSettingsDynamicClientRegistrationSecurityMode> getDynamicClientRegistrationSecurityMode() {
-        return dynamicClientRegistrationSecurityMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -553,109 +483,35 @@ public final class GetTenantSettingsResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetTenantSettingsResponseContent && equalTo((GetTenantSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetTenantSettingsResponseContent other) {
-        return changePassword.equals(other.changePassword)
-                && guardianMfaPage.equals(other.guardianMfaPage)
-                && defaultAudience.equals(other.defaultAudience)
-                && defaultDirectory.equals(other.defaultDirectory)
-                && errorPage.equals(other.errorPage)
-                && deviceFlow.equals(other.deviceFlow)
-                && defaultTokenQuota.equals(other.defaultTokenQuota)
-                && flags.equals(other.flags)
-                && friendlyName.equals(other.friendlyName)
-                && pictureUrl.equals(other.pictureUrl)
-                && supportEmail.equals(other.supportEmail)
-                && supportUrl.equals(other.supportUrl)
-                && allowedLogoutUrls.equals(other.allowedLogoutUrls)
-                && sessionLifetime.equals(other.sessionLifetime)
-                && idleSessionLifetime.equals(other.idleSessionLifetime)
-                && ephemeralSessionLifetime.equals(other.ephemeralSessionLifetime)
-                && idleEphemeralSessionLifetime.equals(other.idleEphemeralSessionLifetime)
-                && sandboxVersion.equals(other.sandboxVersion)
-                && legacySandboxVersion.equals(other.legacySandboxVersion)
-                && sandboxVersionsAvailable.equals(other.sandboxVersionsAvailable)
-                && defaultRedirectionUri.equals(other.defaultRedirectionUri)
-                && enabledLocales.equals(other.enabledLocales)
-                && sessionCookie.equals(other.sessionCookie)
-                && sessions.equals(other.sessions)
-                && oidcLogout.equals(other.oidcLogout)
-                && allowOrganizationNameInAuthenticationApi.equals(other.allowOrganizationNameInAuthenticationApi)
-                && customizeMfaInPostloginAction.equals(other.customizeMfaInPostloginAction)
-                && acrValuesSupported.equals(other.acrValuesSupported)
-                && mtls.equals(other.mtls)
-                && pushedAuthorizationRequestsSupported.equals(other.pushedAuthorizationRequestsSupported)
-                && authorizationResponseIssParameterSupported.equals(other.authorizationResponseIssParameterSupported)
-                && skipNonVerifiableCallbackUriConfirmationPrompt.equals(
-                        other.skipNonVerifiableCallbackUriConfirmationPrompt)
-                && resourceParameterProfile.equals(other.resourceParameterProfile)
-                && clientIdMetadataDocumentSupported.equals(other.clientIdMetadataDocumentSupported)
-                && phoneConsolidatedExperience.equals(other.phoneConsolidatedExperience)
-                && enableAiGuide.equals(other.enableAiGuide)
-                && dynamicClientRegistrationSecurityMode.equals(other.dynamicClientRegistrationSecurityMode);
+        return changePassword.equals(other.changePassword) && guardianMfaPage.equals(other.guardianMfaPage) && defaultAudience.equals(other.defaultAudience) && defaultDirectory.equals(other.defaultDirectory) && errorPage.equals(other.errorPage) && deviceFlow.equals(other.deviceFlow) && defaultTokenQuota.equals(other.defaultTokenQuota) && flags.equals(other.flags) && friendlyName.equals(other.friendlyName) && pictureUrl.equals(other.pictureUrl) && supportEmail.equals(other.supportEmail) && supportUrl.equals(other.supportUrl) && allowedLogoutUrls.equals(other.allowedLogoutUrls) && sessionLifetime.equals(other.sessionLifetime) && idleSessionLifetime.equals(other.idleSessionLifetime) && ephemeralSessionLifetime.equals(other.ephemeralSessionLifetime) && idleEphemeralSessionLifetime.equals(other.idleEphemeralSessionLifetime) && sandboxVersion.equals(other.sandboxVersion) && legacySandboxVersion.equals(other.legacySandboxVersion) && sandboxVersionsAvailable.equals(other.sandboxVersionsAvailable) && defaultRedirectionUri.equals(other.defaultRedirectionUri) && enabledLocales.equals(other.enabledLocales) && sessionCookie.equals(other.sessionCookie) && sessions.equals(other.sessions) && oidcLogout.equals(other.oidcLogout) && allowOrganizationNameInAuthenticationApi.equals(other.allowOrganizationNameInAuthenticationApi) && customizeMfaInPostloginAction.equals(other.customizeMfaInPostloginAction) && acrValuesSupported.equals(other.acrValuesSupported) && mtls.equals(other.mtls) && pushedAuthorizationRequestsSupported.equals(other.pushedAuthorizationRequestsSupported) && authorizationResponseIssParameterSupported.equals(other.authorizationResponseIssParameterSupported) && skipNonVerifiableCallbackUriConfirmationPrompt.equals(other.skipNonVerifiableCallbackUriConfirmationPrompt) && resourceParameterProfile.equals(other.resourceParameterProfile) && clientIdMetadataDocumentSupported.equals(other.clientIdMetadataDocumentSupported) && phoneConsolidatedExperience.equals(other.phoneConsolidatedExperience) && enableAiGuide.equals(other.enableAiGuide) && dynamicClientRegistrationSecurityMode.equals(other.dynamicClientRegistrationSecurityMode);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.changePassword,
-                this.guardianMfaPage,
-                this.defaultAudience,
-                this.defaultDirectory,
-                this.errorPage,
-                this.deviceFlow,
-                this.defaultTokenQuota,
-                this.flags,
-                this.friendlyName,
-                this.pictureUrl,
-                this.supportEmail,
-                this.supportUrl,
-                this.allowedLogoutUrls,
-                this.sessionLifetime,
-                this.idleSessionLifetime,
-                this.ephemeralSessionLifetime,
-                this.idleEphemeralSessionLifetime,
-                this.sandboxVersion,
-                this.legacySandboxVersion,
-                this.sandboxVersionsAvailable,
-                this.defaultRedirectionUri,
-                this.enabledLocales,
-                this.sessionCookie,
-                this.sessions,
-                this.oidcLogout,
-                this.allowOrganizationNameInAuthenticationApi,
-                this.customizeMfaInPostloginAction,
-                this.acrValuesSupported,
-                this.mtls,
-                this.pushedAuthorizationRequestsSupported,
-                this.authorizationResponseIssParameterSupported,
-                this.skipNonVerifiableCallbackUriConfirmationPrompt,
-                this.resourceParameterProfile,
-                this.clientIdMetadataDocumentSupported,
-                this.phoneConsolidatedExperience,
-                this.enableAiGuide,
-                this.dynamicClientRegistrationSecurityMode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<TenantSettingsPasswordPage> changePassword = OptionalNullable.absent();
 
         private OptionalNullable<TenantSettingsGuardianPage> guardianMfaPage = OptionalNullable.absent();
@@ -728,116 +584,50 @@ public final class GetTenantSettingsResponseContent {
 
         private Optional<Boolean> enableAiGuide = Optional.empty();
 
-        private Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode =
-                Optional.empty();
+        private Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetTenantSettingsResponseContent other) {
-            changePassword(other.getChangePassword());
-            guardianMfaPage(other.getGuardianMfaPage());
-            defaultAudience(other.getDefaultAudience());
-            defaultDirectory(other.getDefaultDirectory());
-            errorPage(other.getErrorPage());
-            deviceFlow(other.getDeviceFlow());
-            defaultTokenQuota(other.getDefaultTokenQuota());
-            flags(other.getFlags());
-            friendlyName(other.getFriendlyName());
-            pictureUrl(other.getPictureUrl());
-            supportEmail(other.getSupportEmail());
-            supportUrl(other.getSupportUrl());
-            allowedLogoutUrls(other.getAllowedLogoutUrls());
-            sessionLifetime(other.getSessionLifetime());
-            idleSessionLifetime(other.getIdleSessionLifetime());
-            ephemeralSessionLifetime(other.getEphemeralSessionLifetime());
-            idleEphemeralSessionLifetime(other.getIdleEphemeralSessionLifetime());
-            sandboxVersion(other.getSandboxVersion());
-            legacySandboxVersion(other.getLegacySandboxVersion());
-            sandboxVersionsAvailable(other.getSandboxVersionsAvailable());
-            defaultRedirectionUri(other.getDefaultRedirectionUri());
-            enabledLocales(other.getEnabledLocales());
-            sessionCookie(other.getSessionCookie());
-            sessions(other.getSessions());
-            oidcLogout(other.getOidcLogout());
-            allowOrganizationNameInAuthenticationApi(other.getAllowOrganizationNameInAuthenticationApi());
-            customizeMfaInPostloginAction(other.getCustomizeMfaInPostloginAction());
-            acrValuesSupported(other.getAcrValuesSupported());
-            mtls(other.getMtls());
-            pushedAuthorizationRequestsSupported(other.getPushedAuthorizationRequestsSupported());
-            authorizationResponseIssParameterSupported(other.getAuthorizationResponseIssParameterSupported());
-            skipNonVerifiableCallbackUriConfirmationPrompt(other.getSkipNonVerifiableCallbackUriConfirmationPrompt());
-            resourceParameterProfile(other.getResourceParameterProfile());
-            clientIdMetadataDocumentSupported(other.getClientIdMetadataDocumentSupported());
-            phoneConsolidatedExperience(other.getPhoneConsolidatedExperience());
-            enableAiGuide(other.getEnableAiGuide());
-            dynamicClientRegistrationSecurityMode(other.getDynamicClientRegistrationSecurityMode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "change_password", nulls = Nulls.SKIP)
         public Builder changePassword(@Nullable OptionalNullable<TenantSettingsPasswordPage> changePassword) {
-            this.changePassword = changePassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePassword(TenantSettingsPasswordPage changePassword) {
-            this.changePassword = OptionalNullable.of(changePassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePassword(Optional<TenantSettingsPasswordPage> changePassword) {
-            if (changePassword.isPresent()) {
-                this.changePassword = OptionalNullable.of(changePassword.get());
-            } else {
-                this.changePassword = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder changePassword(com.auth0.client.mgmt.core.Nullable<TenantSettingsPasswordPage> changePassword) {
-            if (changePassword.isNull()) {
-                this.changePassword = OptionalNullable.ofNull();
-            } else if (changePassword.isEmpty()) {
-                this.changePassword = OptionalNullable.absent();
-            } else {
-                this.changePassword = OptionalNullable.of(changePassword.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "guardian_mfa_page", nulls = Nulls.SKIP)
         public Builder guardianMfaPage(@Nullable OptionalNullable<TenantSettingsGuardianPage> guardianMfaPage) {
-            this.guardianMfaPage = guardianMfaPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder guardianMfaPage(TenantSettingsGuardianPage guardianMfaPage) {
-            this.guardianMfaPage = OptionalNullable.of(guardianMfaPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder guardianMfaPage(Optional<TenantSettingsGuardianPage> guardianMfaPage) {
-            if (guardianMfaPage.isPresent()) {
-                this.guardianMfaPage = OptionalNullable.of(guardianMfaPage.get());
-            } else {
-                this.guardianMfaPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder guardianMfaPage(
-                com.auth0.client.mgmt.core.Nullable<TenantSettingsGuardianPage> guardianMfaPage) {
-            if (guardianMfaPage.isNull()) {
-                this.guardianMfaPage = OptionalNullable.ofNull();
-            } else if (guardianMfaPage.isEmpty()) {
-                this.guardianMfaPage = OptionalNullable.absent();
-            } else {
-                this.guardianMfaPage = OptionalNullable.of(guardianMfaPage.get());
-            }
-            return this;
+        public Builder guardianMfaPage(com.auth0.client.mgmt.core.Nullable<TenantSettingsGuardianPage> guardianMfaPage) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -845,13 +635,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "default_audience", nulls = Nulls.SKIP)
         public Builder defaultAudience(Optional<String> defaultAudience) {
-            this.defaultAudience = defaultAudience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultAudience(String defaultAudience) {
-            this.defaultAudience = Optional.ofNullable(defaultAudience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -859,117 +647,71 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "default_directory", nulls = Nulls.SKIP)
         public Builder defaultDirectory(Optional<String> defaultDirectory) {
-            this.defaultDirectory = defaultDirectory;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultDirectory(String defaultDirectory) {
-            this.defaultDirectory = Optional.ofNullable(defaultDirectory);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "error_page", nulls = Nulls.SKIP)
         public Builder errorPage(@Nullable OptionalNullable<TenantSettingsErrorPage> errorPage) {
-            this.errorPage = errorPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errorPage(TenantSettingsErrorPage errorPage) {
-            this.errorPage = OptionalNullable.of(errorPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errorPage(Optional<TenantSettingsErrorPage> errorPage) {
-            if (errorPage.isPresent()) {
-                this.errorPage = OptionalNullable.of(errorPage.get());
-            } else {
-                this.errorPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errorPage(com.auth0.client.mgmt.core.Nullable<TenantSettingsErrorPage> errorPage) {
-            if (errorPage.isNull()) {
-                this.errorPage = OptionalNullable.ofNull();
-            } else if (errorPage.isEmpty()) {
-                this.errorPage = OptionalNullable.absent();
-            } else {
-                this.errorPage = OptionalNullable.of(errorPage.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "device_flow", nulls = Nulls.SKIP)
         public Builder deviceFlow(@Nullable OptionalNullable<TenantSettingsDeviceFlow> deviceFlow) {
-            this.deviceFlow = deviceFlow;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deviceFlow(TenantSettingsDeviceFlow deviceFlow) {
-            this.deviceFlow = OptionalNullable.of(deviceFlow);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deviceFlow(Optional<TenantSettingsDeviceFlow> deviceFlow) {
-            if (deviceFlow.isPresent()) {
-                this.deviceFlow = OptionalNullable.of(deviceFlow.get());
-            } else {
-                this.deviceFlow = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deviceFlow(com.auth0.client.mgmt.core.Nullable<TenantSettingsDeviceFlow> deviceFlow) {
-            if (deviceFlow.isNull()) {
-                this.deviceFlow = OptionalNullable.ofNull();
-            } else if (deviceFlow.isEmpty()) {
-                this.deviceFlow = OptionalNullable.absent();
-            } else {
-                this.deviceFlow = OptionalNullable.of(deviceFlow.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_token_quota", nulls = Nulls.SKIP)
         public Builder defaultTokenQuota(@Nullable OptionalNullable<DefaultTokenQuota> defaultTokenQuota) {
-            this.defaultTokenQuota = defaultTokenQuota;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultTokenQuota(DefaultTokenQuota defaultTokenQuota) {
-            this.defaultTokenQuota = OptionalNullable.of(defaultTokenQuota);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultTokenQuota(Optional<DefaultTokenQuota> defaultTokenQuota) {
-            if (defaultTokenQuota.isPresent()) {
-                this.defaultTokenQuota = OptionalNullable.of(defaultTokenQuota.get());
-            } else {
-                this.defaultTokenQuota = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultTokenQuota(com.auth0.client.mgmt.core.Nullable<DefaultTokenQuota> defaultTokenQuota) {
-            if (defaultTokenQuota.isNull()) {
-                this.defaultTokenQuota = OptionalNullable.ofNull();
-            } else if (defaultTokenQuota.isEmpty()) {
-                this.defaultTokenQuota = OptionalNullable.absent();
-            } else {
-                this.defaultTokenQuota = OptionalNullable.of(defaultTokenQuota.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "flags", nulls = Nulls.SKIP)
         public Builder flags(Optional<TenantSettingsFlags> flags) {
-            this.flags = flags;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder flags(TenantSettingsFlags flags) {
-            this.flags = Optional.ofNullable(flags);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -977,13 +719,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "friendly_name", nulls = Nulls.SKIP)
         public Builder friendlyName(Optional<String> friendlyName) {
-            this.friendlyName = friendlyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Optional.ofNullable(friendlyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -991,13 +731,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "picture_url", nulls = Nulls.SKIP)
         public Builder pictureUrl(Optional<String> pictureUrl) {
-            this.pictureUrl = pictureUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pictureUrl(String pictureUrl) {
-            this.pictureUrl = Optional.ofNullable(pictureUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1005,13 +743,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "support_email", nulls = Nulls.SKIP)
         public Builder supportEmail(Optional<String> supportEmail) {
-            this.supportEmail = supportEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder supportEmail(String supportEmail) {
-            this.supportEmail = Optional.ofNullable(supportEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1019,13 +755,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "support_url", nulls = Nulls.SKIP)
         public Builder supportUrl(Optional<String> supportUrl) {
-            this.supportUrl = supportUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder supportUrl(String supportUrl) {
-            this.supportUrl = Optional.ofNullable(supportUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1033,13 +767,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "allowed_logout_urls", nulls = Nulls.SKIP)
         public Builder allowedLogoutUrls(Optional<List<String>> allowedLogoutUrls) {
-            this.allowedLogoutUrls = allowedLogoutUrls;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowedLogoutUrls(List<String> allowedLogoutUrls) {
-            this.allowedLogoutUrls = Optional.ofNullable(allowedLogoutUrls);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1047,13 +779,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "session_lifetime", nulls = Nulls.SKIP)
         public Builder sessionLifetime(Optional<Double> sessionLifetime) {
-            this.sessionLifetime = sessionLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionLifetime(Double sessionLifetime) {
-            this.sessionLifetime = Optional.ofNullable(sessionLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1061,13 +791,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "idle_session_lifetime", nulls = Nulls.SKIP)
         public Builder idleSessionLifetime(Optional<Double> idleSessionLifetime) {
-            this.idleSessionLifetime = idleSessionLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idleSessionLifetime(Double idleSessionLifetime) {
-            this.idleSessionLifetime = Optional.ofNullable(idleSessionLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1075,13 +803,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "ephemeral_session_lifetime", nulls = Nulls.SKIP)
         public Builder ephemeralSessionLifetime(Optional<Double> ephemeralSessionLifetime) {
-            this.ephemeralSessionLifetime = ephemeralSessionLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ephemeralSessionLifetime(Double ephemeralSessionLifetime) {
-            this.ephemeralSessionLifetime = Optional.ofNullable(ephemeralSessionLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1089,13 +815,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "idle_ephemeral_session_lifetime", nulls = Nulls.SKIP)
         public Builder idleEphemeralSessionLifetime(Optional<Double> idleEphemeralSessionLifetime) {
-            this.idleEphemeralSessionLifetime = idleEphemeralSessionLifetime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idleEphemeralSessionLifetime(Double idleEphemeralSessionLifetime) {
-            this.idleEphemeralSessionLifetime = Optional.ofNullable(idleEphemeralSessionLifetime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1103,13 +827,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "sandbox_version", nulls = Nulls.SKIP)
         public Builder sandboxVersion(Optional<String> sandboxVersion) {
-            this.sandboxVersion = sandboxVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sandboxVersion(String sandboxVersion) {
-            this.sandboxVersion = Optional.ofNullable(sandboxVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1117,13 +839,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "legacy_sandbox_version", nulls = Nulls.SKIP)
         public Builder legacySandboxVersion(Optional<String> legacySandboxVersion) {
-            this.legacySandboxVersion = legacySandboxVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder legacySandboxVersion(String legacySandboxVersion) {
-            this.legacySandboxVersion = Optional.ofNullable(legacySandboxVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1131,13 +851,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "sandbox_versions_available", nulls = Nulls.SKIP)
         public Builder sandboxVersionsAvailable(Optional<List<String>> sandboxVersionsAvailable) {
-            this.sandboxVersionsAvailable = sandboxVersionsAvailable;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sandboxVersionsAvailable(List<String> sandboxVersionsAvailable) {
-            this.sandboxVersionsAvailable = Optional.ofNullable(sandboxVersionsAvailable);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1145,13 +863,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "default_redirection_uri", nulls = Nulls.SKIP)
         public Builder defaultRedirectionUri(Optional<String> defaultRedirectionUri) {
-            this.defaultRedirectionUri = defaultRedirectionUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultRedirectionUri(String defaultRedirectionUri) {
-            this.defaultRedirectionUri = Optional.ofNullable(defaultRedirectionUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1159,102 +875,66 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "enabled_locales", nulls = Nulls.SKIP)
         public Builder enabledLocales(Optional<List<SupportedLocales>> enabledLocales) {
-            this.enabledLocales = enabledLocales;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledLocales(List<SupportedLocales> enabledLocales) {
-            this.enabledLocales = Optional.ofNullable(enabledLocales);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "session_cookie", nulls = Nulls.SKIP)
         public Builder sessionCookie(@Nullable OptionalNullable<SessionCookieSchema> sessionCookie) {
-            this.sessionCookie = sessionCookie;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionCookie(SessionCookieSchema sessionCookie) {
-            this.sessionCookie = OptionalNullable.of(sessionCookie);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionCookie(Optional<SessionCookieSchema> sessionCookie) {
-            if (sessionCookie.isPresent()) {
-                this.sessionCookie = OptionalNullable.of(sessionCookie.get());
-            } else {
-                this.sessionCookie = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessionCookie(com.auth0.client.mgmt.core.Nullable<SessionCookieSchema> sessionCookie) {
-            if (sessionCookie.isNull()) {
-                this.sessionCookie = OptionalNullable.ofNull();
-            } else if (sessionCookie.isEmpty()) {
-                this.sessionCookie = OptionalNullable.absent();
-            } else {
-                this.sessionCookie = OptionalNullable.of(sessionCookie.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sessions", nulls = Nulls.SKIP)
         public Builder sessions(@Nullable OptionalNullable<TenantSettingsSessions> sessions) {
-            this.sessions = sessions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessions(TenantSettingsSessions sessions) {
-            this.sessions = OptionalNullable.of(sessions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessions(Optional<TenantSettingsSessions> sessions) {
-            if (sessions.isPresent()) {
-                this.sessions = OptionalNullable.of(sessions.get());
-            } else {
-                this.sessions = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sessions(com.auth0.client.mgmt.core.Nullable<TenantSettingsSessions> sessions) {
-            if (sessions.isNull()) {
-                this.sessions = OptionalNullable.ofNull();
-            } else if (sessions.isEmpty()) {
-                this.sessions = OptionalNullable.absent();
-            } else {
-                this.sessions = OptionalNullable.of(sessions.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oidc_logout", nulls = Nulls.SKIP)
         public Builder oidcLogout(Optional<TenantOidcLogoutSettings> oidcLogout) {
-            this.oidcLogout = oidcLogout;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidcLogout(TenantOidcLogoutSettings oidcLogout) {
-            this.oidcLogout = Optional.ofNullable(oidcLogout);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Whether to accept an organization name instead of an ID on auth endpoints</p>
          */
         @JsonSetter(value = "allow_organization_name_in_authentication_api", nulls = Nulls.SKIP)
-        public Builder allowOrganizationNameInAuthenticationApi(
-                Optional<Boolean> allowOrganizationNameInAuthenticationApi) {
-            this.allowOrganizationNameInAuthenticationApi = allowOrganizationNameInAuthenticationApi;
-            return this;
+        public Builder allowOrganizationNameInAuthenticationApi(Optional<Boolean> allowOrganizationNameInAuthenticationApi) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowOrganizationNameInAuthenticationApi(Boolean allowOrganizationNameInAuthenticationApi) {
-            this.allowOrganizationNameInAuthenticationApi =
-                    Optional.ofNullable(allowOrganizationNameInAuthenticationApi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1262,13 +942,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "customize_mfa_in_postlogin_action", nulls = Nulls.SKIP)
         public Builder customizeMfaInPostloginAction(Optional<Boolean> customizeMfaInPostloginAction) {
-            this.customizeMfaInPostloginAction = customizeMfaInPostloginAction;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customizeMfaInPostloginAction(Boolean customizeMfaInPostloginAction) {
-            this.customizeMfaInPostloginAction = Optional.ofNullable(customizeMfaInPostloginAction);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1276,64 +954,36 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "acr_values_supported", nulls = Nulls.SKIP)
         public Builder acrValuesSupported(@Nullable OptionalNullable<List<String>> acrValuesSupported) {
-            this.acrValuesSupported = acrValuesSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder acrValuesSupported(List<String> acrValuesSupported) {
-            this.acrValuesSupported = OptionalNullable.of(acrValuesSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder acrValuesSupported(Optional<List<String>> acrValuesSupported) {
-            if (acrValuesSupported.isPresent()) {
-                this.acrValuesSupported = OptionalNullable.of(acrValuesSupported.get());
-            } else {
-                this.acrValuesSupported = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder acrValuesSupported(com.auth0.client.mgmt.core.Nullable<List<String>> acrValuesSupported) {
-            if (acrValuesSupported.isNull()) {
-                this.acrValuesSupported = OptionalNullable.ofNull();
-            } else if (acrValuesSupported.isEmpty()) {
-                this.acrValuesSupported = OptionalNullable.absent();
-            } else {
-                this.acrValuesSupported = OptionalNullable.of(acrValuesSupported.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mtls", nulls = Nulls.SKIP)
         public Builder mtls(@Nullable OptionalNullable<TenantSettingsMtls> mtls) {
-            this.mtls = mtls;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mtls(TenantSettingsMtls mtls) {
-            this.mtls = OptionalNullable.of(mtls);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mtls(Optional<TenantSettingsMtls> mtls) {
-            if (mtls.isPresent()) {
-                this.mtls = OptionalNullable.of(mtls.get());
-            } else {
-                this.mtls = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mtls(com.auth0.client.mgmt.core.Nullable<TenantSettingsMtls> mtls) {
-            if (mtls.isNull()) {
-                this.mtls = OptionalNullable.ofNull();
-            } else if (mtls.isEmpty()) {
-                this.mtls = OptionalNullable.absent();
-            } else {
-                this.mtls = OptionalNullable.of(mtls.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1341,53 +991,31 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "pushed_authorization_requests_supported", nulls = Nulls.SKIP)
         public Builder pushedAuthorizationRequestsSupported(Optional<Boolean> pushedAuthorizationRequestsSupported) {
-            this.pushedAuthorizationRequestsSupported = pushedAuthorizationRequestsSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder pushedAuthorizationRequestsSupported(Boolean pushedAuthorizationRequestsSupported) {
-            this.pushedAuthorizationRequestsSupported = Optional.ofNullable(pushedAuthorizationRequestsSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Supports iss parameter in authorization responses</p>
          */
         @JsonSetter(value = "authorization_response_iss_parameter_supported", nulls = Nulls.SKIP)
-        public Builder authorizationResponseIssParameterSupported(
-                @Nullable OptionalNullable<Boolean> authorizationResponseIssParameterSupported) {
-            this.authorizationResponseIssParameterSupported = authorizationResponseIssParameterSupported;
-            return this;
+        public Builder authorizationResponseIssParameterSupported(@Nullable OptionalNullable<Boolean> authorizationResponseIssParameterSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authorizationResponseIssParameterSupported(Boolean authorizationResponseIssParameterSupported) {
-            this.authorizationResponseIssParameterSupported =
-                    OptionalNullable.of(authorizationResponseIssParameterSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder authorizationResponseIssParameterSupported(
-                Optional<Boolean> authorizationResponseIssParameterSupported) {
-            if (authorizationResponseIssParameterSupported.isPresent()) {
-                this.authorizationResponseIssParameterSupported =
-                        OptionalNullable.of(authorizationResponseIssParameterSupported.get());
-            } else {
-                this.authorizationResponseIssParameterSupported = OptionalNullable.absent();
-            }
-            return this;
+        public Builder authorizationResponseIssParameterSupported(Optional<Boolean> authorizationResponseIssParameterSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder authorizationResponseIssParameterSupported(
-                com.auth0.client.mgmt.core.Nullable<Boolean> authorizationResponseIssParameterSupported) {
-            if (authorizationResponseIssParameterSupported.isNull()) {
-                this.authorizationResponseIssParameterSupported = OptionalNullable.ofNull();
-            } else if (authorizationResponseIssParameterSupported.isEmpty()) {
-                this.authorizationResponseIssParameterSupported = OptionalNullable.absent();
-            } else {
-                this.authorizationResponseIssParameterSupported =
-                        OptionalNullable.of(authorizationResponseIssParameterSupported.get());
-            }
-            return this;
+        public Builder authorizationResponseIssParameterSupported(com.auth0.client.mgmt.core.Nullable<Boolean> authorizationResponseIssParameterSupported) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1396,53 +1024,29 @@ public final class GetTenantSettingsResponseContent {
          * See https://auth0.com/docs/secure/security-guidance/measures-against-app-impersonation for more information.</p>
          */
         @JsonSetter(value = "skip_non_verifiable_callback_uri_confirmation_prompt", nulls = Nulls.SKIP)
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                @Nullable OptionalNullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
-            this.skipNonVerifiableCallbackUriConfirmationPrompt = skipNonVerifiableCallbackUriConfirmationPrompt;
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(@Nullable OptionalNullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                Boolean skipNonVerifiableCallbackUriConfirmationPrompt) {
-            this.skipNonVerifiableCallbackUriConfirmationPrompt =
-                    OptionalNullable.of(skipNonVerifiableCallbackUriConfirmationPrompt);
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(Boolean skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
-            if (skipNonVerifiableCallbackUriConfirmationPrompt.isPresent()) {
-                this.skipNonVerifiableCallbackUriConfirmationPrompt =
-                        OptionalNullable.of(skipNonVerifiableCallbackUriConfirmationPrompt.get());
-            } else {
-                this.skipNonVerifiableCallbackUriConfirmationPrompt = OptionalNullable.absent();
-            }
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(Optional<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(
-                com.auth0.client.mgmt.core.Nullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
-            if (skipNonVerifiableCallbackUriConfirmationPrompt.isNull()) {
-                this.skipNonVerifiableCallbackUriConfirmationPrompt = OptionalNullable.ofNull();
-            } else if (skipNonVerifiableCallbackUriConfirmationPrompt.isEmpty()) {
-                this.skipNonVerifiableCallbackUriConfirmationPrompt = OptionalNullable.absent();
-            } else {
-                this.skipNonVerifiableCallbackUriConfirmationPrompt =
-                        OptionalNullable.of(skipNonVerifiableCallbackUriConfirmationPrompt.get());
-            }
-            return this;
+        public Builder skipNonVerifiableCallbackUriConfirmationPrompt(com.auth0.client.mgmt.core.Nullable<Boolean> skipNonVerifiableCallbackUriConfirmationPrompt) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "resource_parameter_profile", nulls = Nulls.SKIP)
-        public Builder resourceParameterProfile(
-                Optional<TenantSettingsResourceParameterProfile> resourceParameterProfile) {
-            this.resourceParameterProfile = resourceParameterProfile;
-            return this;
+        public Builder resourceParameterProfile(Optional<TenantSettingsResourceParameterProfile> resourceParameterProfile) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resourceParameterProfile(TenantSettingsResourceParameterProfile resourceParameterProfile) {
-            this.resourceParameterProfile = Optional.ofNullable(resourceParameterProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1450,13 +1054,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "client_id_metadata_document_supported", nulls = Nulls.SKIP)
         public Builder clientIdMetadataDocumentSupported(Optional<Boolean> clientIdMetadataDocumentSupported) {
-            this.clientIdMetadataDocumentSupported = clientIdMetadataDocumentSupported;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientIdMetadataDocumentSupported(Boolean clientIdMetadataDocumentSupported) {
-            this.clientIdMetadataDocumentSupported = Optional.ofNullable(clientIdMetadataDocumentSupported);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1464,13 +1066,11 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "phone_consolidated_experience", nulls = Nulls.SKIP)
         public Builder phoneConsolidatedExperience(Optional<Boolean> phoneConsolidatedExperience) {
-            this.phoneConsolidatedExperience = phoneConsolidatedExperience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneConsolidatedExperience(Boolean phoneConsolidatedExperience) {
-            this.phoneConsolidatedExperience = Optional.ofNullable(phoneConsolidatedExperience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1478,78 +1078,32 @@ public final class GetTenantSettingsResponseContent {
          */
         @JsonSetter(value = "enable_ai_guide", nulls = Nulls.SKIP)
         public Builder enableAiGuide(Optional<Boolean> enableAiGuide) {
-            this.enableAiGuide = enableAiGuide;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enableAiGuide(Boolean enableAiGuide) {
-            this.enableAiGuide = Optional.ofNullable(enableAiGuide);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "dynamic_client_registration_security_mode", nulls = Nulls.SKIP)
-        public Builder dynamicClientRegistrationSecurityMode(
-                Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode) {
-            this.dynamicClientRegistrationSecurityMode = dynamicClientRegistrationSecurityMode;
-            return this;
+        public Builder dynamicClientRegistrationSecurityMode(Optional<TenantSettingsDynamicClientRegistrationSecurityMode> dynamicClientRegistrationSecurityMode) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder dynamicClientRegistrationSecurityMode(
-                TenantSettingsDynamicClientRegistrationSecurityMode dynamicClientRegistrationSecurityMode) {
-            this.dynamicClientRegistrationSecurityMode = Optional.ofNullable(dynamicClientRegistrationSecurityMode);
-            return this;
+        public Builder dynamicClientRegistrationSecurityMode(TenantSettingsDynamicClientRegistrationSecurityMode dynamicClientRegistrationSecurityMode) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetTenantSettingsResponseContent build() {
-            return new GetTenantSettingsResponseContent(
-                    changePassword,
-                    guardianMfaPage,
-                    defaultAudience,
-                    defaultDirectory,
-                    errorPage,
-                    deviceFlow,
-                    defaultTokenQuota,
-                    flags,
-                    friendlyName,
-                    pictureUrl,
-                    supportEmail,
-                    supportUrl,
-                    allowedLogoutUrls,
-                    sessionLifetime,
-                    idleSessionLifetime,
-                    ephemeralSessionLifetime,
-                    idleEphemeralSessionLifetime,
-                    sandboxVersion,
-                    legacySandboxVersion,
-                    sandboxVersionsAvailable,
-                    defaultRedirectionUri,
-                    enabledLocales,
-                    sessionCookie,
-                    sessions,
-                    oidcLogout,
-                    allowOrganizationNameInAuthenticationApi,
-                    customizeMfaInPostloginAction,
-                    acrValuesSupported,
-                    mtls,
-                    pushedAuthorizationRequestsSupported,
-                    authorizationResponseIssParameterSupported,
-                    skipNonVerifiableCallbackUriConfirmationPrompt,
-                    resourceParameterProfile,
-                    clientIdMetadataDocumentSupported,
-                    phoneConsolidatedExperience,
-                    enableAiGuide,
-                    dynamicClientRegistrationSecurityMode,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

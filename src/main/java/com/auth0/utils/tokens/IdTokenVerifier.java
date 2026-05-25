@@ -16,17 +16,25 @@ import java.util.List;
  */
 public final class IdTokenVerifier {
 
-    private static final Integer DEFAULT_LEEWAY = 60; // 1 min = 60 sec
+    // 1 min = 60 sec
+    private static final Integer DEFAULT_LEEWAY = 60;
 
     private static final String NONCE_CLAIM = "nonce";
+
     private static final String AZP_CLAIM = "azp";
+
     private static final String AUTH_TIME_CLAIM = "auth_time";
 
     private final String issuer;
+
     private final String audience;
+
     private final Integer leeway;
+
     private final Date clock;
+
     private final SignatureVerifier signatureVerifier;
+
     private final String organization;
 
     private IdTokenVerifier(Builder builder) {
@@ -47,7 +55,7 @@ public final class IdTokenVerifier {
      * @return a {@linkplain Builder} for further configuration.
      */
     public static Builder init(String issuer, String audience, SignatureVerifier signatureVerifier) {
-        return new Builder(issuer, audience, signatureVerifier);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +73,7 @@ public final class IdTokenVerifier {
      * @see IdTokenVerifier#verify(String, String, Integer)
      */
     public void verify(String token) throws IdTokenValidationException {
-        verify(token, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,7 +93,7 @@ public final class IdTokenVerifier {
      * @see IdTokenVerifier#verify(String, String, Integer)
      */
     public void verify(String token, String nonce) throws IdTokenValidationException {
-        verify(token, nonce, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,136 +117,7 @@ public final class IdTokenVerifier {
      * @see IdTokenVerifier#verify(String, String)
      */
     public void verify(String token, String nonce, Integer maxAuthenticationAge) throws IdTokenValidationException {
-
-        if (isEmpty(token)) {
-            throw new IdTokenValidationException("ID token is required but missing");
-        }
-
-        DecodedJWT decoded = this.signatureVerifier.verifySignature(token);
-
-        if (isEmpty(decoded.getIssuer())) {
-            throw new IdTokenValidationException("Issuer (iss) claim must be a string present in the ID token");
-        }
-        if (!decoded.getIssuer().equals(this.issuer)) {
-            throw new IdTokenValidationException(String.format(
-                    "Issuer (iss) claim mismatch in the ID token, expected \"%s\", found \"%s\"",
-                    this.issuer, decoded.getIssuer()));
-        }
-
-        if (isEmpty(decoded.getSubject())) {
-            throw new IdTokenValidationException("Subject (sub) claim must be a string present in the ID token");
-        }
-
-        final List<String> audience = decoded.getAudience();
-        if (audience == null) {
-            throw new IdTokenValidationException(
-                    "Audience (aud) claim must be a string or array of strings present in the ID token");
-        }
-        if (!audience.contains(this.audience)) {
-            throw new IdTokenValidationException(String.format(
-                    "Audience (aud) claim mismatch in the ID token; expected \"%s\" but found \"%s\"",
-                    this.audience, decoded.getAudience()));
-        }
-
-        // Org verification
-        if (this.organization != null) {
-            String org = this.organization.trim();
-            if (org.startsWith("org_")) {
-                // org ID
-                String orgClaim = decoded.getClaim("org_id").asString();
-                if (isEmpty(orgClaim)) {
-                    throw new IdTokenValidationException(
-                            "Organization Id (org_id) claim must be a string present in the ID token");
-                }
-                if (!this.organization.equals(orgClaim)) {
-                    throw new IdTokenValidationException(String.format(
-                            "Organization (org_id) claim mismatch in the ID token; expected \"%s\" but found \"%s\"",
-                            this.organization, orgClaim));
-                }
-            } else {
-                // org name
-                String orgNameClaim = decoded.getClaim("org_name").asString();
-                if (isEmpty(orgNameClaim)) {
-                    throw new IdTokenValidationException(
-                            "Organization name (org_name) claim must be a string present in the ID token");
-                }
-                if (!org.toLowerCase().equals(orgNameClaim)) {
-                    throw new IdTokenValidationException(String.format(
-                            "Organization (org_name) claim mismatch in the ID token; expected \"%s\" but found \"%s\"",
-                            this.organization, orgNameClaim));
-                }
-            }
-        }
-
-        final Calendar cal = Calendar.getInstance();
-        final Date now = this.clock != null ? this.clock : cal.getTime();
-        final int clockSkew = this.leeway != null ? this.leeway : DEFAULT_LEEWAY;
-
-        if (decoded.getExpiresAt() == null) {
-            throw new IdTokenValidationException(
-                    "Expiration Time (exp) claim must be a number present in the ID token");
-        }
-
-        cal.setTime(decoded.getExpiresAt());
-        cal.add(Calendar.SECOND, clockSkew);
-        Date expDate = cal.getTime();
-
-        if (now.after(expDate)) {
-            throw new IdTokenValidationException(String.format(
-                    "Expiration Time (exp) claim error in the ID token; current time (%d) is after expiration time (%d)",
-                    now.getTime() / 1000, expDate.getTime() / 1000));
-        }
-
-        if (decoded.getIssuedAt() == null) {
-            throw new IdTokenValidationException("Issued At (iat) claim must be a number present in the ID token");
-        }
-
-        cal.setTime(decoded.getIssuedAt());
-        cal.add(Calendar.SECOND, -1 * clockSkew);
-
-        if (nonce != null) {
-            String nonceClaim = decoded.getClaim(NONCE_CLAIM).asString();
-            if (isEmpty(nonceClaim)) {
-                throw new IdTokenValidationException("Nonce (nonce) claim must be a string present in the ID token");
-            }
-            if (!nonce.equals(nonceClaim)) {
-                throw new IdTokenValidationException(String.format(
-                        "Nonce (nonce) claim mismatch in the ID token; expected \"%s\", found \"%s\"",
-                        nonce, nonceClaim));
-            }
-        }
-
-        if (audience.size() > 1) {
-            String azpClaim = decoded.getClaim(AZP_CLAIM).asString();
-            if (isEmpty(azpClaim)) {
-                throw new IdTokenValidationException(
-                        "Authorized Party (azp) claim must be a string present in the ID token when Audience (aud) claim has multiple values");
-            }
-            if (!this.audience.equals(azpClaim)) {
-                throw new IdTokenValidationException(String.format(
-                        "Authorized Party (azp) claim mismatch in the ID token; expected \"%s\", found \"%s\"",
-                        this.audience, azpClaim));
-            }
-        }
-
-        if (maxAuthenticationAge != null) {
-            Date authTime = decoded.getClaim(AUTH_TIME_CLAIM).asDate();
-            if (authTime == null) {
-                throw new IdTokenValidationException(
-                        "Authentication Time (auth_time) claim must be a number present in the ID token when Max Age (max_age) is specified");
-            }
-
-            cal.setTime(authTime);
-            cal.add(Calendar.SECOND, maxAuthenticationAge);
-            cal.add(Calendar.SECOND, clockSkew);
-            Date authTimeDate = cal.getTime();
-
-            if (now.after(authTimeDate)) {
-                throw new IdTokenValidationException(String.format(
-                        "Authentication Time (auth_time) claim in the ID token indicates that too much time has passed since the last end-user authentication. Current time (%d) is after last auth at (%d)",
-                        now.getTime() / 1000, authTimeDate.getTime() / 1000));
-            }
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean isEmpty(String value) {
@@ -251,11 +130,15 @@ public final class IdTokenVerifier {
     public static class Builder {
 
         private final String issuer;
+
         private final String audience;
+
         private final SignatureVerifier signatureVerifier;
 
         private Integer leeway;
+
         private Date clock;
+
         private String organization;
 
         /**
@@ -269,7 +152,6 @@ public final class IdTokenVerifier {
             Asserts.assertNotNull(issuer, "issuer");
             Asserts.assertNotNull(audience, "audience");
             Asserts.assertNotNull(signatureVerifier, "signatureVerifier");
-
             this.issuer = issuer;
             this.audience = audience;
             this.signatureVerifier = signatureVerifier;
@@ -283,8 +165,7 @@ public final class IdTokenVerifier {
          * @return this Builder instance.
          */
         public Builder withLeeway(Integer leeway) {
-            this.leeway = leeway;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,8 +176,7 @@ public final class IdTokenVerifier {
          * @return this Builder instance.
          */
         public Builder withOrganization(String organization) {
-            this.organization = organization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,8 +187,7 @@ public final class IdTokenVerifier {
          * @return this Builder instance.
          */
         Builder withClock(Date clock) {
-            this.clock = clock;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -317,7 +196,7 @@ public final class IdTokenVerifier {
          * @return an initialized instance of {@code IdTokenVerifier}.
          */
         public IdTokenVerifier build() {
-            return new IdTokenVerifier(this);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

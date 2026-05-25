@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionAuth0SendRequestParams.Builder.class)
 public final class FlowActionAuth0SendRequestParams {
+
     private final String connectionId;
 
     private final String pathname;
@@ -36,14 +37,7 @@ public final class FlowActionAuth0SendRequestParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionAuth0SendRequestParams(
-            String connectionId,
-            String pathname,
-            Optional<FlowActionAuth0SendRequestParamsMethod> method,
-            Optional<Map<String, Object>> headers,
-            Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params,
-            Optional<FlowActionAuth0SendRequestParamsPayload> payload,
-            Map<String, Object> additionalProperties) {
+    private FlowActionAuth0SendRequestParams(String connectionId, String pathname, Optional<FlowActionAuth0SendRequestParamsMethod> method, Optional<Map<String, Object>> headers, Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params, Optional<FlowActionAuth0SendRequestParamsPayload> payload, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.pathname = pathname;
         this.method = method;
@@ -55,79 +49,76 @@ public final class FlowActionAuth0SendRequestParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pathname")
     public String getPathname() {
-        return pathname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("method")
     public Optional<FlowActionAuth0SendRequestParamsMethod> getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("headers")
     public Optional<Map<String, Object>> getHeaders() {
-        return headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("params")
     public Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> getParams() {
-        return params;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("payload")
     public Optional<FlowActionAuth0SendRequestParamsPayload> getPayload() {
-        return payload;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionAuth0SendRequestParams && equalTo((FlowActionAuth0SendRequestParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionAuth0SendRequestParams other) {
-        return connectionId.equals(other.connectionId)
-                && pathname.equals(other.pathname)
-                && method.equals(other.method)
-                && headers.equals(other.headers)
-                && params.equals(other.params)
-                && payload.equals(other.payload);
+        return connectionId.equals(other.connectionId) && pathname.equals(other.pathname) && method.equals(other.method) && headers.equals(other.headers) && params.equals(other.params) && payload.equals(other.payload);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.pathname, this.method, this.headers, this.params, this.payload);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         PathnameStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionAuth0SendRequestParams other);
     }
 
     public interface PathnameStage {
+
         _FinalStage pathname(@NotNull String pathname);
     }
 
     public interface _FinalStage {
+
         FlowActionAuth0SendRequestParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -142,8 +133,7 @@ public final class FlowActionAuth0SendRequestParams {
 
         _FinalStage headers(Map<String, Object> headers);
 
-        _FinalStage params(
-                Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params);
+        _FinalStage params(Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params);
 
         _FinalStage params(Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>> params);
 
@@ -154,14 +144,14 @@ public final class FlowActionAuth0SendRequestParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, PathnameStage, _FinalStage {
+
         private String connectionId;
 
         private String pathname;
 
         private Optional<FlowActionAuth0SendRequestParamsPayload> payload = Optional.empty();
 
-        private Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params =
-                Optional.empty();
+        private Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params = Optional.empty();
 
         private Optional<Map<String, Object>> headers = Optional.empty();
 
@@ -170,103 +160,83 @@ public final class FlowActionAuth0SendRequestParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionAuth0SendRequestParams other) {
-            connectionId(other.getConnectionId());
-            pathname(other.getPathname());
-            method(other.getMethod());
-            headers(other.getHeaders());
-            params(other.getParams());
-            payload(other.getPayload());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public PathnameStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("pathname")
         public _FinalStage pathname(@NotNull String pathname) {
-            this.pathname = Objects.requireNonNull(pathname, "pathname must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage payload(FlowActionAuth0SendRequestParamsPayload payload) {
-            this.payload = Optional.ofNullable(payload);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "payload", nulls = Nulls.SKIP)
         public _FinalStage payload(Optional<FlowActionAuth0SendRequestParamsPayload> payload) {
-            this.payload = payload;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage params(
-                Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>> params) {
-            this.params = Optional.ofNullable(params);
-            return this;
+        public _FinalStage params(Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>> params) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "params", nulls = Nulls.SKIP)
-        public _FinalStage params(
-                Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params) {
-            this.params = params;
-            return this;
+        public _FinalStage params(Optional<Map<String, OptionalNullable<FlowActionAuth0SendRequestParamsQueryParamsValue>>> params) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage headers(Map<String, Object> headers) {
-            this.headers = Optional.ofNullable(headers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "headers", nulls = Nulls.SKIP)
         public _FinalStage headers(Optional<Map<String, Object>> headers) {
-            this.headers = headers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage method(FlowActionAuth0SendRequestParamsMethod method) {
-            this.method = Optional.ofNullable(method);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "method", nulls = Nulls.SKIP)
         public _FinalStage method(Optional<FlowActionAuth0SendRequestParamsMethod> method) {
-            this.method = method;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionAuth0SendRequestParams build() {
-            return new FlowActionAuth0SendRequestParams(
-                    connectionId, pathname, method, headers, params, payload, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

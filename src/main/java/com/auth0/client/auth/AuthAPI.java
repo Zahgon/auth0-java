@@ -1,7 +1,6 @@
 package com.auth0.client.auth;
 
 import static com.auth0.json.ObjectMapperProvider.getMapper;
-
 import com.auth0.json.auth.*;
 import com.auth0.net.*;
 import com.auth0.net.client.Auth0HttpClient;
@@ -43,33 +42,59 @@ import org.jetbrains.annotations.TestOnly;
 public class AuthAPI {
 
     private static final String KEY_CLIENT_ID = "client_id";
+
     private static final String KEY_CLIENT_SECRET = "client_secret";
+
     private static final String KEY_GRANT_TYPE = "grant_type";
+
     private static final String KEY_USERNAME = "username";
+
     private static final String KEY_PASSWORD = "password";
+
     private static final String KEY_AUDIENCE = "audience";
+
     private static final String KEY_EMAIL = "email";
+
     private static final String KEY_CONNECTION = "connection";
+
     private static final String KEY_TOKEN = "token";
+
     private static final String KEY_REFRESH_TOKEN = "refresh_token";
+
     private static final String KEY_OTP = "otp";
+
     private static final String KEY_REALM = "realm";
+
     private static final String KEY_MFA_TOKEN = "mfa_token";
+
     private static final String KEY_CLIENT_ASSERTION = "client_assertion";
+
     private static final String KEY_CLIENT_ASSERTION_TYPE = "client_assertion_type";
+
     private static final String PATH_OAUTH = "oauth";
+
     private static final String PATH_TOKEN = "token";
+
     private static final String PATH_DBCONNECTIONS = "dbconnections";
+
     private static final String PATH_REVOKE = "revoke";
+
     private static final String PATH_PASSWORDLESS = "passwordless";
+
     private static final String PATH_START = "start";
+
     private static final String KEY_ORGANIZATION = "organization";
+
     private static final String KEY_PHONE_NUMBER = "phone_number";
 
     private final Auth0HttpClient client;
+
     private final String clientId;
+
     private final String clientSecret;
+
     private final ClientAssertionSigner clientAssertionSigner;
+
     private final HttpUrl baseUrl;
 
     /**
@@ -81,7 +106,7 @@ public class AuthAPI {
      * @return a Builder for further configuration.
      */
     public static Builder newBuilder(String domain, String clientId, String clientSecret) {
-        return new Builder(domain, clientId).withClientSecret(clientSecret);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,7 +119,7 @@ public class AuthAPI {
      * @return a Builder for further configuration.
      */
     public static Builder newBuilder(String domain, String clientId, ClientAssertionSigner clientAssertionSigner) {
-        return new Builder(domain, clientId).withClientAssertionSigner(clientAssertionSigner);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,19 +130,13 @@ public class AuthAPI {
      * @return a Builder for further configuration.
      */
     public static Builder newBuilder(String domain, String clientId) {
-        return new Builder(domain, clientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    private AuthAPI(
-            String domain,
-            String clientId,
-            String clientSecret,
-            ClientAssertionSigner clientAssertionSigner,
-            Auth0HttpClient httpClient) {
+    private AuthAPI(String domain, String clientId, String clientSecret, ClientAssertionSigner clientAssertionSigner, Auth0HttpClient httpClient) {
         Asserts.assertNotNull(domain, "domain");
         Asserts.assertNotNull(clientId, "client id");
         Asserts.assertNotNull(httpClient, "Http client");
-
         this.baseUrl = createBaseUrl(domain);
         if (baseUrl == null) {
             throw new IllegalArgumentException("The domain had an invalid format and couldn't be parsed as an URL.");
@@ -130,12 +149,12 @@ public class AuthAPI {
 
     @TestOnly
     Auth0HttpClient getHttpClient() {
-        return this.client;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @TestOnly
     HttpUrl getBaseUrl() {
-        return baseUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private HttpUrl createBaseUrl(String domain) {
@@ -165,67 +184,19 @@ public class AuthAPI {
      * @return a new instance of the {@link AuthorizeUrlBuilder} to configure.
      */
     public AuthorizeUrlBuilder authorizeUrl(String redirectUri) {
-        Asserts.assertValidUrl(redirectUri, "redirect uri");
-
-        return AuthorizeUrlBuilder.newInstance(baseUrl, clientId, redirectUri);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Request<BackChannelAuthorizeResponse> authorizeBackChannel(
-            String scope, String bindingMessage, Map<String, Object> loginHint) {
-        return authorizeBackChannel(scope, bindingMessage, loginHint, null, null);
+    public Request<BackChannelAuthorizeResponse> authorizeBackChannel(String scope, String bindingMessage, Map<String, Object> loginHint) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Request<BackChannelAuthorizeResponse> authorizeBackChannel(
-            String scope,
-            String bindingMessage,
-            Map<String, Object> loginHint,
-            String audience,
-            Integer requestExpiry) {
-        Asserts.assertNotNull(scope, "scope");
-        Asserts.assertNotNull(bindingMessage, "binding message");
-        Asserts.assertNotNull(loginHint, "login hint");
-
-        String url = baseUrl.newBuilder().addPathSegment("bc-authorize").build().toString();
-
-        FormBodyRequest<BackChannelAuthorizeResponse> request = new FormBodyRequest<>(
-                client, null, url, HttpMethod.POST, new TypeReference<BackChannelAuthorizeResponse>() {});
-
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        addClientAuthentication(request, false);
-        request.addParameter("scope", scope);
-        request.addParameter("binding_message", bindingMessage);
-
-        if (Objects.nonNull(audience)) {
-            request.addParameter(KEY_AUDIENCE, audience);
-        }
-        if (Objects.nonNull(requestExpiry)) {
-            request.addParameter("requested_expiry", requestExpiry);
-        }
-
-        try {
-            String loginHintJson = getMapper().writeValueAsString(loginHint);
-            request.addParameter("login_hint", loginHintJson);
-        } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException("'loginHint' must be a map that can be serialized to JSON", e);
-        }
-        return request;
+    public Request<BackChannelAuthorizeResponse> authorizeBackChannel(String scope, String bindingMessage, Map<String, Object> loginHint, String audience, Integer requestExpiry) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Request<BackChannelTokenResponse> getBackChannelLoginStatus(String authReqId, String grantType) {
-        Asserts.assertNotNull(authReqId, "auth req id");
-        Asserts.assertNotNull(grantType, "grant type");
-
-        String url = getTokenUrl();
-
-        FormBodyRequest<BackChannelTokenResponse> request = new FormBodyRequest<>(
-                client, null, url, HttpMethod.POST, new TypeReference<BackChannelTokenResponse>() {});
-
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        addClientAuthentication(request, false);
-        request.addParameter("auth_req_id", authReqId);
-        request.addParameter(KEY_GRANT_TYPE, grantType);
-
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -236,13 +207,7 @@ public class AuthAPI {
      * @return the {@code request_uri} from a successful pushed authorization request.
      */
     public String authorizeUrlWithPAR(String requestUri) {
-        Asserts.assertNotNull(requestUri, "request uri");
-        return baseUrl.newBuilder()
-                .addPathSegment("authorize")
-                .addQueryParameter("client_id", clientId)
-                .addQueryParameter("request_uri", requestUri)
-                .build()
-                .toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -254,13 +219,7 @@ public class AuthAPI {
      * @return the authorization URL to redirect users to for authentication.
      */
     public String authorizeUrlWithJAR(String request) {
-        Asserts.assertNotNull(request, "request");
-        return baseUrl.newBuilder()
-                .addPathSegment("authorize")
-                .addQueryParameter("client_id", clientId)
-                .addQueryParameter("request", request)
-                .build()
-                .toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -272,9 +231,8 @@ public class AuthAPI {
      * @see <a href="https://www.rfc-editor.org/rfc/rfc9126.html">RFC 9126</a>
      * @return a request to execute.
      */
-    public Request<PushedAuthorizationResponse> pushedAuthorizationRequest(
-            String redirectUri, String responseType, Map<String, String> params) {
-        return pushedAuthorizationRequest(redirectUri, responseType, params, null);
+    public Request<PushedAuthorizationResponse> pushedAuthorizationRequest(String redirectUri, String responseType, Map<String, String> params) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -290,37 +248,8 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar">Authorization Code Flow with Rich Authorization Requests (RAR)</a>
      * @return a request to execute.
      */
-    public Request<PushedAuthorizationResponse> pushedAuthorizationRequest(
-            String redirectUri,
-            String responseType,
-            Map<String, String> params,
-            List<Map<String, Object>> authorizationDetails) {
-        Asserts.assertValidUrl(redirectUri, "redirect uri");
-        Asserts.assertNotNull(responseType, "response type");
-
-        String url = baseUrl.newBuilder().addPathSegments("oauth/par").build().toString();
-
-        FormBodyRequest<PushedAuthorizationResponse> request = new FormBodyRequest<>(
-                client, null, url, HttpMethod.POST, new TypeReference<PushedAuthorizationResponse>() {});
-        request.addParameter("client_id", clientId);
-        request.addParameter("redirect_uri", redirectUri);
-        request.addParameter("response_type", responseType);
-        if (Objects.nonNull(this.clientSecret)) {
-            request.addParameter("client_secret", clientSecret);
-        }
-        if (params != null) {
-            params.forEach(request::addParameter);
-        }
-        try {
-            if (Objects.nonNull(authorizationDetails)) {
-                String authDetailsJson = getMapper().writeValueAsString(authorizationDetails);
-                request.addParameter("authorization_details", authDetailsJson);
-            }
-        } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException(
-                    "'authorizationDetails' must be a list that can be serialized to JSON", e);
-        }
-        return request;
+    public Request<PushedAuthorizationResponse> pushedAuthorizationRequest(String redirectUri, String responseType, Map<String, String> params, List<Map<String, Object>> authorizationDetails) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -333,7 +262,7 @@ public class AuthAPI {
      * @return a request to execute.
      */
     public Request<PushedAuthorizationResponse> pushedAuthorizationRequestWithJAR(String request) {
-        return pushedAuthorizationRequestWithJAR(request, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -348,30 +277,8 @@ public class AuthAPI {
      * @see <a href="https://datatracker.ietf.org/doc/html/rfc9396">RFC 9396</a>
      * @return a request to execute.
      */
-    public Request<PushedAuthorizationResponse> pushedAuthorizationRequestWithJAR(
-            String request, List<Map<String, Object>> authorizationDetails) {
-        Asserts.assertNotNull(request, "request");
-
-        String url = baseUrl.newBuilder().addPathSegments("oauth/par").build().toString();
-
-        FormBodyRequest<PushedAuthorizationResponse> req = new FormBodyRequest<>(
-                client, null, url, HttpMethod.POST, new TypeReference<PushedAuthorizationResponse>() {});
-        req.addParameter("client_id", clientId);
-        req.addParameter("request", request);
-        if (Objects.nonNull(this.clientSecret)) {
-            req.addParameter("client_secret", clientSecret);
-        }
-
-        try {
-            if (Objects.nonNull(authorizationDetails)) {
-                String authDetailsJson = getMapper().writeValueAsString(authorizationDetails);
-                req.addParameter("authorization_details", authDetailsJson);
-            }
-        } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException(
-                    "'authorizationDetails' must be a list that can be serialized to JSON", e);
-        }
-        return req;
+    public Request<PushedAuthorizationResponse> pushedAuthorizationRequestWithJAR(String request, List<Map<String, Object>> authorizationDetails) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -392,9 +299,7 @@ public class AuthAPI {
      * @return a new instance of the {@link LogoutUrlBuilder} to configure.
      */
     public LogoutUrlBuilder logoutUrl(String returnToUrl, boolean setClientId) {
-        Asserts.assertValidUrl(returnToUrl, "return to url");
-
-        return LogoutUrlBuilder.newInstance(baseUrl, clientId, returnToUrl, setClientId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -415,13 +320,7 @@ public class AuthAPI {
      * @return a Request to execute.
      */
     public Request<UserInfo> userInfo(String accessToken) {
-        Asserts.assertNotNull(accessToken, "access token");
-
-        String url = baseUrl.newBuilder().addPathSegment("userinfo").build().toString();
-        BaseRequest<UserInfo> request =
-                new BaseRequest<>(client, null, url, HttpMethod.GET, new TypeReference<UserInfo>() {});
-        request.addHeader("Authorization", "Bearer " + accessToken);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -444,7 +343,7 @@ public class AuthAPI {
      * @return a Request to execute.
      */
     public Request<Void> resetPassword(String email, String connection) {
-        return resetPassword(this.clientId, email, connection);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -468,7 +367,7 @@ public class AuthAPI {
      * @return a Request to execute.
      */
     public Request<Void> resetPassword(String clientId, String email, String connection) {
-        return resetPassword(clientId, email, connection, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -493,20 +392,7 @@ public class AuthAPI {
      * @return a Request to execute.
      */
     public Request<Void> resetPassword(String clientId, String email, String connection, String organization) {
-        Asserts.assertNotNull(email, "email");
-        Asserts.assertNotNull(connection, "connection");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment(PATH_DBCONNECTIONS)
-                .addPathSegment("change_password")
-                .build()
-                .toString();
-        VoidRequest request = new VoidRequest(client, null, url, HttpMethod.POST);
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_EMAIL, email);
-        request.addParameter(KEY_CONNECTION, connection);
-        request.addParameter(KEY_ORGANIZATION, organization);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -537,11 +423,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public SignUpRequest signUp(String email, String username, char[] password, String connection, String phoneNumber) {
-        Asserts.assertNotNull(phoneNumber, "phone number");
-
-        SignUpRequest request = this.signUp(email, username, password, connection);
-        request.addParameter(KEY_PHONE_NUMBER, phoneNumber);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -571,11 +453,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public SignUpRequest signUp(String email, String username, char[] password, String connection) {
-        Asserts.assertNotNull(username, "username");
-
-        SignUpRequest request = this.signUp(email, password, connection);
-        request.addParameter(KEY_USERNAME, username);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -602,21 +480,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public SignUpRequest signUp(String email, char[] password, String connection) {
-        Asserts.assertNotNull(email, "email");
-        Asserts.assertNotNull(password, "password");
-        Asserts.assertNotNull(connection, "connection");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment(PATH_DBCONNECTIONS)
-                .addPathSegment("signup")
-                .build()
-                .toString();
-        SignUpRequest request = new SignUpRequest(client, url);
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_EMAIL, email);
-        request.addParameter(KEY_PASSWORD, password);
-        request.addParameter(KEY_CONNECTION, connection);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -645,16 +509,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest login(String emailOrUsername, char[] password) {
-        Asserts.assertNotNull(emailOrUsername, "email or username");
-        Asserts.assertNotNull(password, "password");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "password");
-        request.addParameter(KEY_USERNAME, emailOrUsername);
-        request.addParameter(KEY_PASSWORD, password);
-        addClientAuthentication(request, true);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -684,18 +539,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#client-credentials-flow">Resource Owner Password API docs</a>.
      */
     public TokenRequest login(String emailOrUsername, char[] password, String realm) {
-        Asserts.assertNotNull(emailOrUsername, "email or username");
-        Asserts.assertNotNull(password, "password");
-        Asserts.assertNotNull(realm, "realm");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "http://auth0.com/oauth/grant-type/password-realm");
-        request.addParameter(KEY_USERNAME, emailOrUsername);
-        request.addParameter(KEY_PASSWORD, password);
-        request.addParameter(KEY_REALM, realm);
-        addClientAuthentication(request, true);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -726,18 +570,7 @@ public class AuthAPI {
      * @see AuthAPI#startPasswordlessSmsFlow(String)
      */
     public TokenRequest exchangePasswordlessOtp(String emailOrPhone, String realm, char[] otp) {
-        Asserts.assertNotNull(emailOrPhone, "emailOrPhone");
-        Asserts.assertNotNull(realm, "realm");
-        Asserts.assertNotNull(otp, "otp");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "http://auth0.com/oauth/grant-type/passwordless/otp");
-        request.addParameter(KEY_USERNAME, emailOrPhone);
-        request.addParameter(KEY_REALM, realm);
-        request.addParameter(KEY_OTP, otp);
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -762,7 +595,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest requestToken(String audience) {
-        return requestToken(audience, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -787,17 +620,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest requestToken(String audience, String org) {
-        Asserts.assertNotNull(audience, "audience");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "client_credentials");
-        request.addParameter(KEY_AUDIENCE, audience);
-        if (org != null && !org.trim().isEmpty()) {
-            request.addParameter(KEY_ORGANIZATION, org);
-        }
-        addClientAuthentication(request, true);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -819,18 +642,7 @@ public class AuthAPI {
      * @return a Request to execute.
      */
     public Request<Void> revokeToken(String refreshToken) {
-        Asserts.assertNotNull(refreshToken, "refresh token");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment(PATH_OAUTH)
-                .addPathSegment(PATH_REVOKE)
-                .build()
-                .toString();
-        VoidRequest request = new VoidRequest(client, null, url, HttpMethod.POST);
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_TOKEN, refreshToken);
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -855,14 +667,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest renewAuth(String refreshToken) {
-        Asserts.assertNotNull(refreshToken, "refresh token");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "refresh_token");
-        request.addParameter(KEY_REFRESH_TOKEN, refreshToken);
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -887,7 +692,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest exchangeCode(String code, String redirectUri) {
-        return exchangeCode(code, redirectUri, true);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -932,13 +737,7 @@ public class AuthAPI {
      * @return a Request to configure and execute.
      */
     public TokenRequest exchangeCodeWithVerifier(String code, String verifier, String redirectUri) {
-        Asserts.assertNotNull(code, "code");
-        Asserts.assertNotNull(redirectUri, "redirect uri");
-        Asserts.assertNotNull(verifier, "verifier");
-
-        TokenRequest request = exchangeCode(code, redirectUri, false);
-        request.addParameter("code_verifier", verifier);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -965,23 +764,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#get-code-or-link">Get code or link API reference documentation</a>
      */
     public BaseRequest<PasswordlessEmailResponse> startPasswordlessEmailFlow(String email, PasswordlessEmailType type) {
-        Asserts.assertNotNull(email, "email");
-        Asserts.assertNotNull(type, "type");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment(PATH_PASSWORDLESS)
-                .addPathSegment(PATH_START)
-                .build()
-                .toString();
-
-        BaseRequest<PasswordlessEmailResponse> request = new BaseRequest<>(
-                client, null, url, HttpMethod.POST, new TypeReference<PasswordlessEmailResponse>() {});
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_CONNECTION, "email");
-        request.addParameter(KEY_EMAIL, email);
-        request.addParameter("send", type.getType());
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1007,21 +790,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#get-code-or-link">Get code or link API reference documentation</a>
      */
     public BaseRequest<PasswordlessSmsResponse> startPasswordlessSmsFlow(String phoneNumber) {
-        Asserts.assertNotNull(phoneNumber, "phoneNumber");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment(PATH_PASSWORDLESS)
-                .addPathSegment(PATH_START)
-                .build()
-                .toString();
-
-        BaseRequest<PasswordlessSmsResponse> request =
-                new BaseRequest<>(client, null, url, HttpMethod.POST, new TypeReference<PasswordlessSmsResponse>() {});
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_CONNECTION, "sms");
-        request.addParameter("phone_number", phoneNumber);
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1047,16 +816,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#verify-with-one-time-password-otp-">Verify with one-time password (OTP) API documentation</a>
      */
     public TokenRequest exchangeMfaOtp(String mfaToken, char[] otp) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-        Asserts.assertNotNull(otp, "otp");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "http://auth0.com/oauth/grant-type/mfa-otp");
-        request.addParameter(KEY_MFA_TOKEN, mfaToken);
-        request.addParameter(KEY_OTP, otp);
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1083,21 +843,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#verify-with-out-of-band-oob-">Verify with Out-of-band (OOB) API documentation</a>
      */
     public TokenRequest exchangeMfaOob(String mfaToken, char[] oobCode, char[] bindingCode) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-        Asserts.assertNotNull(oobCode, "OOB code");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "http://auth0.com/oauth/grant-type/mfa-oob");
-        request.addParameter(KEY_MFA_TOKEN, mfaToken);
-        request.addParameter("oob_code", oobCode);
-
-        if (Objects.nonNull(bindingCode) && bindingCode.length > 0) {
-            request.addParameter("binding_code", bindingCode);
-        }
-
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1122,17 +868,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#verify-with-recovery-code">Verify with a recovery code API documentation</a>
      */
     public TokenRequest exchangeMfaRecoveryCode(String mfaToken, char[] recoveryCode) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-        Asserts.assertNotNull(recoveryCode, "recovery code");
-
-        TokenRequest request = new TokenRequest(client, getTokenUrl());
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        request.addParameter(KEY_GRANT_TYPE, "http://auth0.com/oauth/grant-type/mfa-recovery-code");
-        request.addParameter(KEY_MFA_TOKEN, mfaToken);
-        request.addParameter("recovery_code", recoveryCode);
-
-        addClientAuthentication(request, false);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1156,29 +892,8 @@ public class AuthAPI {
      * @return a Request to execute.
      * @see <a href="https://auth0.com/docs/api/authentication#challenge-request">Challenge Request API documentation</a>
      */
-    public Request<MfaChallengeResponse> mfaChallengeRequest(
-            String mfaToken, String challengeType, String authenticatorId) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment("mfa")
-                .addPathSegment("challenge")
-                .build()
-                .toString();
-
-        BaseRequest<MfaChallengeResponse> request =
-                new BaseRequest<>(client, null, url, HttpMethod.POST, new TypeReference<MfaChallengeResponse>() {});
-
-        request.addParameter(KEY_MFA_TOKEN, mfaToken);
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        addClientAuthentication(request, false);
-        if (Objects.nonNull(challengeType)) {
-            request.addParameter("challenge_type", challengeType);
-        }
-        if (Objects.nonNull(authenticatorId)) {
-            request.addParameter("authenticator_id", authenticatorId);
-        }
-        return request;
+    public Request<MfaChallengeResponse> mfaChallengeRequest(String mfaToken, String challengeType, String authenticatorId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1201,40 +916,18 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#add-an-authenticator">Add an Authenticator API documentation</a>
      */
     public Request<CreatedOtpResponse> addOtpAuthenticator(String mfaToken) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment("mfa")
-                .addPathSegment("associate")
-                .build()
-                .toString();
-
-        BaseRequest<CreatedOtpResponse> request =
-                new BaseRequest<>(client, null, url, HttpMethod.POST, new TypeReference<CreatedOtpResponse>() {});
-
-        request.addParameter("authenticator_types", Collections.singletonList("otp"));
-        request.addParameter(KEY_CLIENT_ID, clientId);
-        addClientAuthentication(request, false);
-        request.addHeader("Authorization", "Bearer " + mfaToken);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private BaseRequest<CreatedOobResponse> createBaseOobRequest(String mfaToken, List<String> oobChannels) {
-        String url = baseUrl.newBuilder()
-                .addPathSegment("mfa")
-                .addPathSegment("associate")
-                .build()
-                .toString();
-
-        BaseRequest<CreatedOobResponse> request =
-                new BaseRequest<>(client, null, url, HttpMethod.POST, new TypeReference<CreatedOobResponse>() {});
-
+        String url = baseUrl.newBuilder().addPathSegment("mfa").addPathSegment("associate").build().toString();
+        BaseRequest<CreatedOobResponse> request = new BaseRequest<>(client, null, url, HttpMethod.POST, new TypeReference<CreatedOobResponse>() {
+        });
         request.addParameter("authenticator_types", Collections.singletonList("oob"));
         request.addParameter("oob_channels", oobChannels);
         request.addParameter(KEY_CLIENT_ID, clientId);
         addClientAuthentication(request, false);
         request.addHeader("Authorization", "Bearer " + mfaToken);
-
         return request;
     }
 
@@ -1260,26 +953,8 @@ public class AuthAPI {
      * @return a Request to execute.
      * @see <a href="https://auth0.com/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-challenge-sms-voice-authenticators#enroll-with-sms-or-voice">Enroll with SMS or voice</a>
      */
-    public Request<CreatedOobResponse> addOobAuthenticator(
-            String mfaToken, List<String> oobChannels, String phoneNumber, String emailAddress) {
-        Asserts.assertNotNull(mfaToken, "mfa token");
-        Asserts.assertNotNull(oobChannels, "OOB channels");
-        if (oobChannels.contains("sms") || oobChannels.contains("voice")) {
-            Asserts.assertNotNull(phoneNumber, "phone number");
-        }
-        if (oobChannels.contains("email")) {
-            Asserts.assertNotNull(emailAddress, "email address");
-        }
-
-        BaseRequest<CreatedOobResponse> request = createBaseOobRequest(mfaToken, oobChannels);
-        if (phoneNumber != null) {
-            request.addParameter("phone_number", phoneNumber);
-        }
-        if (emailAddress != null) {
-            request.addParameter("email", emailAddress);
-        }
-
-        return request;
+    public Request<CreatedOobResponse> addOobAuthenticator(String mfaToken, List<String> oobChannels, String phoneNumber, String emailAddress) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1302,19 +977,7 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#list-authenticators">List authenticators API documentation</a>
      */
     public Request<List<MfaAuthenticator>> listAuthenticators(String accessToken) {
-        Asserts.assertNotNull(accessToken, "access token");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment("mfa")
-                .addPathSegment("authenticators")
-                .build()
-                .toString();
-
-        BaseRequest<List<MfaAuthenticator>> request =
-                new BaseRequest<>(client, null, url, HttpMethod.GET, new TypeReference<List<MfaAuthenticator>>() {});
-
-        request.addHeader("Authorization", "Bearer " + accessToken);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -1339,25 +1002,12 @@ public class AuthAPI {
      * @see <a href="https://auth0.com/docs/api/authentication#delete-an-authenticator">Delete authenticators API documentation</a>
      */
     public Request<Void> deleteAuthenticator(String accessToken, String authenticatorId) {
-        Asserts.assertNotNull(accessToken, "access token");
-        Asserts.assertNotNull(authenticatorId, "authenticator id");
-
-        String url = baseUrl.newBuilder()
-                .addPathSegment("mfa")
-                .addPathSegment("authenticators")
-                .addPathSegment(authenticatorId)
-                .build()
-                .toString();
-
-        VoidRequest request = new VoidRequest(client, null, url, HttpMethod.DELETE);
-        request.addHeader("Authorization", "Bearer " + accessToken);
-        return request;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private TokenRequest exchangeCode(String code, String redirectUri, boolean secretRequired) {
         Asserts.assertNotNull(code, "code");
         Asserts.assertNotNull(redirectUri, "redirect uri");
-
         TokenRequest request = new TokenRequest(client, getTokenUrl());
         request.addParameter(KEY_CLIENT_ID, clientId);
         request.addParameter(KEY_GRANT_TYPE, "authorization_code");
@@ -1368,23 +1018,15 @@ public class AuthAPI {
     }
 
     private String getTokenUrl() {
-        return baseUrl.newBuilder()
-                .addPathSegment(PATH_OAUTH)
-                .addPathSegment(PATH_TOKEN)
-                .build()
-                .toString();
+        return baseUrl.newBuilder().addPathSegment(PATH_OAUTH).addPathSegment(PATH_TOKEN).build().toString();
     }
 
     private void addClientAuthentication(BaseRequest<?> request, boolean required) {
         if (required && (this.clientSecret == null && this.clientAssertionSigner == null)) {
-            throw new IllegalStateException(
-                    "A client secret or client assertion signing key is required for this operation");
+            throw new IllegalStateException("A client secret or client assertion signing key is required for this operation");
         }
-
         if (Objects.nonNull(this.clientAssertionSigner)) {
-            request.addParameter(
-                    KEY_CLIENT_ASSERTION,
-                    this.clientAssertionSigner.createSignedClientAssertion(clientId, baseUrl.toString(), clientId));
+            request.addParameter(KEY_CLIENT_ASSERTION, this.clientAssertionSigner.createSignedClientAssertion(clientId, baseUrl.toString(), clientId));
             request.addParameter(KEY_CLIENT_ASSERTION_TYPE, "urn:ietf:params:oauth:client-assertion-type:jwt-bearer");
         } else if (Objects.nonNull(this.clientSecret)) {
             request.addParameter(KEY_CLIENT_SECRET, clientSecret);
@@ -1395,10 +1037,15 @@ public class AuthAPI {
      * Builder for {@link AuthAPI} API client instances.
      */
     public static class Builder {
+
         private final String domain;
+
         private final String clientId;
+
         private String clientSecret;
+
         private ClientAssertionSigner clientAssertionSigner;
+
         private Auth0HttpClient httpClient;
 
         public Builder(String domain, String clientId) {
@@ -1413,8 +1060,7 @@ public class AuthAPI {
          * @return the builder instance.
          */
         public Builder withClientSecret(String clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1423,8 +1069,7 @@ public class AuthAPI {
          * @return the builder instance.
          */
         public Builder withClientAssertionSigner(ClientAssertionSigner clientAssertionSigner) {
-            this.clientAssertionSigner = clientAssertionSigner;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1434,8 +1079,7 @@ public class AuthAPI {
          * @see DefaultHttpClient
          */
         public Builder withHttpClient(Auth0HttpClient httpClient) {
-            this.httpClient = httpClient;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1443,14 +1087,7 @@ public class AuthAPI {
          * @return the configured {@code AuthAPI} instance.
          */
         public AuthAPI build() {
-            return new AuthAPI(
-                    domain,
-                    clientId,
-                    clientSecret,
-                    clientAssertionSigner,
-                    Objects.nonNull(httpClient)
-                            ? httpClient
-                            : DefaultHttpClient.newBuilder().build());
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

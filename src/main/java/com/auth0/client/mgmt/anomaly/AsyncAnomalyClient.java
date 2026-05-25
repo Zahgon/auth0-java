@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AsyncAnomalyClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncBlocksClient> blocksClient;
@@ -18,6 +19,6 @@ public class AsyncAnomalyClient {
     }
 
     public AsyncBlocksClient blocks() {
-        return this.blocksClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

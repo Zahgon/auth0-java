@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAuthenticationMethod.Builder.class)
 public final class ClientAuthenticationMethod {
+
     private final Optional<ClientAuthenticationMethodPrivateKeyJwt> privateKeyJwt;
 
     private final Optional<ClientAuthenticationMethodTlsClientAuth> tlsClientAuth;
@@ -28,11 +29,7 @@ public final class ClientAuthenticationMethod {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAuthenticationMethod(
-            Optional<ClientAuthenticationMethodPrivateKeyJwt> privateKeyJwt,
-            Optional<ClientAuthenticationMethodTlsClientAuth> tlsClientAuth,
-            Optional<ClientAuthenticationMethodSelfSignedTlsClientAuth> selfSignedTlsClientAuth,
-            Map<String, Object> additionalProperties) {
+    private ClientAuthenticationMethod(Optional<ClientAuthenticationMethodPrivateKeyJwt> privateKeyJwt, Optional<ClientAuthenticationMethodTlsClientAuth> tlsClientAuth, Optional<ClientAuthenticationMethodSelfSignedTlsClientAuth> selfSignedTlsClientAuth, Map<String, Object> additionalProperties) {
         this.privateKeyJwt = privateKeyJwt;
         this.tlsClientAuth = tlsClientAuth;
         this.selfSignedTlsClientAuth = selfSignedTlsClientAuth;
@@ -41,52 +38,50 @@ public final class ClientAuthenticationMethod {
 
     @JsonProperty("private_key_jwt")
     public Optional<ClientAuthenticationMethodPrivateKeyJwt> getPrivateKeyJwt() {
-        return privateKeyJwt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tls_client_auth")
     public Optional<ClientAuthenticationMethodTlsClientAuth> getTlsClientAuth() {
-        return tlsClientAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("self_signed_tls_client_auth")
     public Optional<ClientAuthenticationMethodSelfSignedTlsClientAuth> getSelfSignedTlsClientAuth() {
-        return selfSignedTlsClientAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAuthenticationMethod && equalTo((ClientAuthenticationMethod) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAuthenticationMethod other) {
-        return privateKeyJwt.equals(other.privateKeyJwt)
-                && tlsClientAuth.equals(other.tlsClientAuth)
-                && selfSignedTlsClientAuth.equals(other.selfSignedTlsClientAuth);
+        return privateKeyJwt.equals(other.privateKeyJwt) && tlsClientAuth.equals(other.tlsClientAuth) && selfSignedTlsClientAuth.equals(other.selfSignedTlsClientAuth);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.privateKeyJwt, this.tlsClientAuth, this.selfSignedTlsClientAuth);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ClientAuthenticationMethodPrivateKeyJwt> privateKeyJwt = Optional.empty();
 
         private Optional<ClientAuthenticationMethodTlsClientAuth> tlsClientAuth = Optional.empty();
@@ -96,63 +91,50 @@ public final class ClientAuthenticationMethod {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAuthenticationMethod other) {
-            privateKeyJwt(other.getPrivateKeyJwt());
-            tlsClientAuth(other.getTlsClientAuth());
-            selfSignedTlsClientAuth(other.getSelfSignedTlsClientAuth());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "private_key_jwt", nulls = Nulls.SKIP)
         public Builder privateKeyJwt(Optional<ClientAuthenticationMethodPrivateKeyJwt> privateKeyJwt) {
-            this.privateKeyJwt = privateKeyJwt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder privateKeyJwt(ClientAuthenticationMethodPrivateKeyJwt privateKeyJwt) {
-            this.privateKeyJwt = Optional.ofNullable(privateKeyJwt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "tls_client_auth", nulls = Nulls.SKIP)
         public Builder tlsClientAuth(Optional<ClientAuthenticationMethodTlsClientAuth> tlsClientAuth) {
-            this.tlsClientAuth = tlsClientAuth;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tlsClientAuth(ClientAuthenticationMethodTlsClientAuth tlsClientAuth) {
-            this.tlsClientAuth = Optional.ofNullable(tlsClientAuth);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "self_signed_tls_client_auth", nulls = Nulls.SKIP)
-        public Builder selfSignedTlsClientAuth(
-                Optional<ClientAuthenticationMethodSelfSignedTlsClientAuth> selfSignedTlsClientAuth) {
-            this.selfSignedTlsClientAuth = selfSignedTlsClientAuth;
-            return this;
+        public Builder selfSignedTlsClientAuth(Optional<ClientAuthenticationMethodSelfSignedTlsClientAuth> selfSignedTlsClientAuth) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder selfSignedTlsClientAuth(
-                ClientAuthenticationMethodSelfSignedTlsClientAuth selfSignedTlsClientAuth) {
-            this.selfSignedTlsClientAuth = Optional.ofNullable(selfSignedTlsClientAuth);
-            return this;
+        public Builder selfSignedTlsClientAuth(ClientAuthenticationMethodSelfSignedTlsClientAuth selfSignedTlsClientAuth) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAuthenticationMethod build() {
-            return new ClientAuthenticationMethod(
-                    privateKeyJwt, tlsClientAuth, selfSignedTlsClientAuth, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

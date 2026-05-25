@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockNextButtonConfig.Builder.class)
 public final class FormBlockNextButtonConfig {
+
     private final String text;
 
     private final Map<String, Object> additionalProperties;
@@ -30,18 +31,17 @@ public final class FormBlockNextButtonConfig {
 
     @JsonProperty("text")
     public String getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockNextButtonConfig && equalTo((FormBlockNextButtonConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockNextButtonConfig other) {
@@ -50,25 +50,27 @@ public final class FormBlockNextButtonConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.text);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TextStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TextStage {
+
         _FinalStage text(@NotNull String text);
 
         Builder from(FormBlockNextButtonConfig other);
     }
 
     public interface _FinalStage {
+
         FormBlockNextButtonConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -78,41 +80,39 @@ public final class FormBlockNextButtonConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TextStage, _FinalStage {
+
         private String text;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockNextButtonConfig other) {
-            text(other.getText());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("text")
         public _FinalStage text(@NotNull String text) {
-            this.text = Objects.requireNonNull(text, "text must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockNextButtonConfig build() {
-            return new FormBlockNextButtonConfig(text, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

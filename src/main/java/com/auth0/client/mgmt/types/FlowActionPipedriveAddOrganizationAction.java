@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionPipedriveAddOrganizationAction {
-    public static final FlowActionPipedriveAddOrganizationAction ADD_ORGANIZATION =
-            new FlowActionPipedriveAddOrganizationAction(Value.ADD_ORGANIZATION, "ADD_ORGANIZATION");
+
+    public static final FlowActionPipedriveAddOrganizationAction ADD_ORGANIZATION = new FlowActionPipedriveAddOrganizationAction(Value.ADD_ORGANIZATION, "ADD_ORGANIZATION");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionPipedriveAddOrganizationAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionPipedriveAddOrganizationAction
-                        && this.string.equals(((FlowActionPipedriveAddOrganizationAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADD_ORGANIZATION:
-                return visitor.visitAddOrganization();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionPipedriveAddOrganizationAction valueOf(String value) {
-        switch (value) {
-            case "ADD_ORGANIZATION":
-                return ADD_ORGANIZATION;
-            default:
-                return new FlowActionPipedriveAddOrganizationAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADD_ORGANIZATION,
 
-        UNKNOWN
+        ADD_ORGANIZATION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAddOrganization();
 
         T visitUnknown(String unknownType);

@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.eventstreams.types.CreateEventStreamRedeliveryReque
 import com.auth0.client.mgmt.types.CreateEventStreamRedeliveryResponseContent;
 
 public class RedeliveriesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawRedeliveriesClient rawClient;
@@ -22,32 +23,30 @@ public class RedeliveriesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawRedeliveriesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateEventStreamRedeliveryResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateEventStreamRedeliveryResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateEventStreamRedeliveryResponseContent create(
-            String id, CreateEventStreamRedeliveryRequestContent request) {
-        return this.rawClient.create(id, request).body();
+    public CreateEventStreamRedeliveryResponseContent create(String id, CreateEventStreamRedeliveryRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateEventStreamRedeliveryResponseContent create(
-            String id, CreateEventStreamRedeliveryRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateEventStreamRedeliveryResponseContent create(String id, CreateEventStreamRedeliveryRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void createById(String id, String eventId) {
-        this.rawClient.createById(id, eventId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void createById(String id, String eventId, RequestOptions requestOptions) {
-        this.rawClient.createById(id, eventId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

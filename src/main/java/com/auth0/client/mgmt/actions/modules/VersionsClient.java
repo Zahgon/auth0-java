@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.CreateActionModuleVersionResponseContent;
 import com.auth0.client.mgmt.types.GetActionModuleVersionResponseContent;
 
 public class VersionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawVersionsClient rawClient;
@@ -25,63 +26,62 @@ public class VersionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawVersionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
     public SyncPagingIterable<ActionModuleVersion> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
     public SyncPagingIterable<ActionModuleVersion> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
     public SyncPagingIterable<ActionModuleVersion> list(String id, GetActionModuleVersionsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all published versions of a specific Actions Module.
      */
-    public SyncPagingIterable<ActionModuleVersion> list(
-            String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<ActionModuleVersion> list(String id, GetActionModuleVersionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
     public CreateActionModuleVersionResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a new immutable version of an Actions Module from the current draft version. This publishes the draft as a new version that can be referenced by actions, while maintaining the existing draft for continued development.
      */
     public CreateActionModuleVersionResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
     public GetActionModuleVersionResponseContent get(String id, String versionId) {
-        return this.rawClient.get(id, versionId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the details of a specific, immutable version of an Actions Module.
      */
     public GetActionModuleVersionResponseContent get(String id, String versionId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, versionId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

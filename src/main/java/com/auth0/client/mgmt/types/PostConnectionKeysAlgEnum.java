@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PostConnectionKeysAlgEnum {
+
     public static final PostConnectionKeysAlgEnum RS512 = new PostConnectionKeysAlgEnum(Value.RS512, "RS512");
 
     public static final PostConnectionKeysAlgEnum PS384 = new PostConnectionKeysAlgEnum(Value.PS384, "PS384");
@@ -31,90 +32,48 @@ public final class PostConnectionKeysAlgEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PostConnectionKeysAlgEnum
-                        && this.string.equals(((PostConnectionKeysAlgEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RS512:
-                return visitor.visitRs512();
-            case PS384:
-                return visitor.visitPs384();
-            case ES384:
-                return visitor.visitEs384();
-            case PS256:
-                return visitor.visitPs256();
-            case ES256:
-                return visitor.visitEs256();
-            case RS384:
-                return visitor.visitRs384();
-            case RS256:
-                return visitor.visitRs256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PostConnectionKeysAlgEnum valueOf(String value) {
-        switch (value) {
-            case "RS512":
-                return RS512;
-            case "PS384":
-                return PS384;
-            case "ES384":
-                return ES384;
-            case "PS256":
-                return PS256;
-            case "ES256":
-                return ES256;
-            case "RS384":
-                return RS384;
-            case "RS256":
-                return RS256;
-            default:
-                return new PostConnectionKeysAlgEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         RS256,
-
         RS384,
-
         RS512,
-
         PS256,
-
         PS384,
-
         ES256,
-
         ES384,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRs256();
 
         T visitRs384();

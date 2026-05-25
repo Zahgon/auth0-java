@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientOrganizationUsageEnum {
+
     public static final ClientOrganizationUsageEnum ALLOW = new ClientOrganizationUsageEnum(Value.ALLOW, "allow");
 
     public static final ClientOrganizationUsageEnum REQUIRE = new ClientOrganizationUsageEnum(Value.REQUIRE, "require");
@@ -23,66 +24,41 @@ public final class ClientOrganizationUsageEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientOrganizationUsageEnum
-                        && this.string.equals(((ClientOrganizationUsageEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALLOW:
-                return visitor.visitAllow();
-            case REQUIRE:
-                return visitor.visitRequire();
-            case DENY:
-                return visitor.visitDeny();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientOrganizationUsageEnum valueOf(String value) {
-        switch (value) {
-            case "allow":
-                return ALLOW;
-            case "require":
-                return REQUIRE;
-            case "deny":
-                return DENY;
-            default:
-                return new ClientOrganizationUsageEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DENY,
 
-        ALLOW,
-
-        REQUIRE,
-
-        UNKNOWN
+        DENY, ALLOW, REQUIRE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDeny();
 
         T visitAllow();

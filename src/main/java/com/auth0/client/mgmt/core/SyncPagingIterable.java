@@ -14,50 +14,20 @@ import java.util.stream.StreamSupport;
 
 public class SyncPagingIterable<T> extends SyncPage<T> implements Iterable<T> {
 
-    public SyncPagingIterable(
-            boolean hasNext, List<T> items, Object response, Supplier<? extends SyncPage<T>> getNext) {
+    public SyncPagingIterable(boolean hasNext, List<T> items, Object response, Supplier<? extends SyncPage<T>> getNext) {
         super(hasNext, items, response, getNext);
     }
 
-    public SyncPagingIterable(
-            boolean hasNext, Optional<List<T>> items, Object response, Supplier<? extends SyncPage<T>> getNext) {
+    public SyncPagingIterable(boolean hasNext, Optional<List<T>> items, Object response, Supplier<? extends SyncPage<T>> getNext) {
         super(hasNext, items.orElse(new ArrayList<>()), response, getNext);
     }
 
     public Stream<T> streamItems() {
-        return StreamSupport.stream(this.spliterator(), false);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            private Iterator<T> itemsIterator = getItems().iterator();
-            private SyncPage<T> currentPage = SyncPagingIterable.this;
-
-            @Override
-            public boolean hasNext() {
-                if (itemsIterator.hasNext()) {
-                    return true;
-                }
-                if (currentPage.hasNext()) {
-                    advancePage();
-                    return itemsIterator.hasNext();
-                }
-                return false;
-            }
-
-            @Override
-            public T next() {
-                if (!hasNext()) {
-                    throw new NoSuchElementException();
-                }
-                return itemsIterator.next();
-            }
-
-            private void advancePage() {
-                currentPage = currentPage.nextPage();
-                itemsIterator = currentPage.getItems().iterator();
-            }
-        };
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

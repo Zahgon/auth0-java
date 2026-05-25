@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateFormRequestContent.Builder.class)
 public final class CreateFormRequestContent {
+
     private final String name;
 
     private final Optional<FormMessages> messages;
@@ -40,16 +41,7 @@ public final class CreateFormRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateFormRequestContent(
-            String name,
-            Optional<FormMessages> messages,
-            Optional<FormLanguages> languages,
-            Optional<Map<String, Map<String, Object>>> translations,
-            Optional<List<FormNode>> nodes,
-            Optional<FormStartNode> start,
-            Optional<FormEndingNode> ending,
-            Optional<FormStyle> style,
-            Map<String, Object> additionalProperties) {
+    private CreateFormRequestContent(String name, Optional<FormMessages> messages, Optional<FormLanguages> languages, Optional<Map<String, Map<String, Object>>> translations, Optional<List<FormNode>> nodes, Optional<FormStartNode> start, Optional<FormEndingNode> ending, Optional<FormStyle> style, Map<String, Object> additionalProperties) {
         this.name = name;
         this.messages = messages;
         this.languages = languages;
@@ -63,95 +55,81 @@ public final class CreateFormRequestContent {
 
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("messages")
     public Optional<FormMessages> getMessages() {
-        return messages;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("languages")
     public Optional<FormLanguages> getLanguages() {
-        return languages;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("translations")
     public Optional<Map<String, Map<String, Object>>> getTranslations() {
-        return translations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("nodes")
     public Optional<List<FormNode>> getNodes() {
-        return nodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("start")
     public Optional<FormStartNode> getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ending")
     public Optional<FormEndingNode> getEnding() {
-        return ending;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("style")
     public Optional<FormStyle> getStyle() {
-        return style;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFormRequestContent && equalTo((CreateFormRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFormRequestContent other) {
-        return name.equals(other.name)
-                && messages.equals(other.messages)
-                && languages.equals(other.languages)
-                && translations.equals(other.translations)
-                && nodes.equals(other.nodes)
-                && start.equals(other.start)
-                && ending.equals(other.ending)
-                && style.equals(other.style);
+        return name.equals(other.name) && messages.equals(other.messages) && languages.equals(other.languages) && translations.equals(other.translations) && nodes.equals(other.nodes) && start.equals(other.start) && ending.equals(other.ending) && style.equals(other.style);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.messages,
-                this.languages,
-                this.translations,
-                this.nodes,
-                this.start,
-                this.ending,
-                this.style);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         _FinalStage name(@NotNull String name);
 
         Builder from(CreateFormRequestContent other);
     }
 
     public interface _FinalStage {
+
         CreateFormRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -189,6 +167,7 @@ public final class CreateFormRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<FormStyle> style = Optional.empty();
@@ -208,135 +187,110 @@ public final class CreateFormRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateFormRequestContent other) {
-            name(other.getName());
-            messages(other.getMessages());
-            languages(other.getLanguages());
-            translations(other.getTranslations());
-            nodes(other.getNodes());
-            start(other.getStart());
-            ending(other.getEnding());
-            style(other.getStyle());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage style(FormStyle style) {
-            this.style = Optional.ofNullable(style);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "style", nulls = Nulls.SKIP)
         public _FinalStage style(Optional<FormStyle> style) {
-            this.style = style;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage ending(FormEndingNode ending) {
-            this.ending = Optional.ofNullable(ending);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ending", nulls = Nulls.SKIP)
         public _FinalStage ending(Optional<FormEndingNode> ending) {
-            this.ending = ending;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage start(FormStartNode start) {
-            this.start = Optional.ofNullable(start);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "start", nulls = Nulls.SKIP)
         public _FinalStage start(Optional<FormStartNode> start) {
-            this.start = start;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nodes(List<FormNode> nodes) {
-            this.nodes = Optional.ofNullable(nodes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "nodes", nulls = Nulls.SKIP)
         public _FinalStage nodes(Optional<List<FormNode>> nodes) {
-            this.nodes = nodes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage translations(Map<String, Map<String, Object>> translations) {
-            this.translations = Optional.ofNullable(translations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "translations", nulls = Nulls.SKIP)
         public _FinalStage translations(Optional<Map<String, Map<String, Object>>> translations) {
-            this.translations = translations;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage languages(FormLanguages languages) {
-            this.languages = Optional.ofNullable(languages);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "languages", nulls = Nulls.SKIP)
         public _FinalStage languages(Optional<FormLanguages> languages) {
-            this.languages = languages;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage messages(FormMessages messages) {
-            this.messages = Optional.ofNullable(messages);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "messages", nulls = Nulls.SKIP)
         public _FinalStage messages(Optional<FormMessages> messages) {
-            this.messages = messages;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateFormRequestContent build() {
-            return new CreateFormRequestContent(
-                    name, messages, languages, translations, nodes, start, ending, style, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

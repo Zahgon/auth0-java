@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldTextConfig.Builder.class)
 public final class FormFieldTextConfig {
+
     private final Optional<Boolean> multiline;
 
     private final Optional<String> defaultValue;
@@ -32,13 +33,7 @@ public final class FormFieldTextConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldTextConfig(
-            Optional<Boolean> multiline,
-            Optional<String> defaultValue,
-            Optional<String> placeholder,
-            Optional<Integer> minLength,
-            Optional<Integer> maxLength,
-            Map<String, Object> additionalProperties) {
+    private FormFieldTextConfig(Optional<Boolean> multiline, Optional<String> defaultValue, Optional<String> placeholder, Optional<Integer> minLength, Optional<Integer> maxLength, Map<String, Object> additionalProperties) {
         this.multiline = multiline;
         this.defaultValue = defaultValue;
         this.placeholder = placeholder;
@@ -49,64 +44,60 @@ public final class FormFieldTextConfig {
 
     @JsonProperty("multiline")
     public Optional<Boolean> getMultiline() {
-        return multiline;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("default_value")
     public Optional<String> getDefaultValue() {
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("min_length")
     public Optional<Integer> getMinLength() {
-        return minLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_length")
     public Optional<Integer> getMaxLength() {
-        return maxLength;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldTextConfig && equalTo((FormFieldTextConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldTextConfig other) {
-        return multiline.equals(other.multiline)
-                && defaultValue.equals(other.defaultValue)
-                && placeholder.equals(other.placeholder)
-                && minLength.equals(other.minLength)
-                && maxLength.equals(other.maxLength);
+        return multiline.equals(other.multiline) && defaultValue.equals(other.defaultValue) && placeholder.equals(other.placeholder) && minLength.equals(other.minLength) && maxLength.equals(other.maxLength);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.multiline, this.defaultValue, this.placeholder, this.minLength, this.maxLength);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> multiline = Optional.empty();
 
         private Optional<String> defaultValue = Optional.empty();
@@ -120,85 +111,68 @@ public final class FormFieldTextConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldTextConfig other) {
-            multiline(other.getMultiline());
-            defaultValue(other.getDefaultValue());
-            placeholder(other.getPlaceholder());
-            minLength(other.getMinLength());
-            maxLength(other.getMaxLength());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "multiline", nulls = Nulls.SKIP)
         public Builder multiline(Optional<Boolean> multiline) {
-            this.multiline = multiline;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder multiline(Boolean multiline) {
-            this.multiline = Optional.ofNullable(multiline);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_value", nulls = Nulls.SKIP)
         public Builder defaultValue(Optional<String> defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "min_length", nulls = Nulls.SKIP)
         public Builder minLength(Optional<Integer> minLength) {
-            this.minLength = minLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minLength(Integer minLength) {
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "max_length", nulls = Nulls.SKIP)
         public Builder maxLength(Optional<Integer> maxLength) {
-            this.maxLength = maxLength;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxLength(Integer maxLength) {
-            this.maxLength = Optional.ofNullable(maxLength);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldTextConfig build() {
-            return new FormFieldTextConfig(
-                    multiline, defaultValue, placeholder, minLength, maxLength, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

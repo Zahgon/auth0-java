@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BrandingThemePageBackgroundPageLayoutEnum {
-    public static final BrandingThemePageBackgroundPageLayoutEnum LEFT =
-            new BrandingThemePageBackgroundPageLayoutEnum(Value.LEFT, "left");
 
-    public static final BrandingThemePageBackgroundPageLayoutEnum RIGHT =
-            new BrandingThemePageBackgroundPageLayoutEnum(Value.RIGHT, "right");
+    public static final BrandingThemePageBackgroundPageLayoutEnum LEFT = new BrandingThemePageBackgroundPageLayoutEnum(Value.LEFT, "left");
 
-    public static final BrandingThemePageBackgroundPageLayoutEnum CENTER =
-            new BrandingThemePageBackgroundPageLayoutEnum(Value.CENTER, "center");
+    public static final BrandingThemePageBackgroundPageLayoutEnum RIGHT = new BrandingThemePageBackgroundPageLayoutEnum(Value.RIGHT, "right");
+
+    public static final BrandingThemePageBackgroundPageLayoutEnum CENTER = new BrandingThemePageBackgroundPageLayoutEnum(Value.CENTER, "center");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class BrandingThemePageBackgroundPageLayoutEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BrandingThemePageBackgroundPageLayoutEnum
-                        && this.string.equals(((BrandingThemePageBackgroundPageLayoutEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case LEFT:
-                return visitor.visitLeft();
-            case RIGHT:
-                return visitor.visitRight();
-            case CENTER:
-                return visitor.visitCenter();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BrandingThemePageBackgroundPageLayoutEnum valueOf(String value) {
-        switch (value) {
-            case "left":
-                return LEFT;
-            case "right":
-                return RIGHT;
-            case "center":
-                return CENTER;
-            default:
-                return new BrandingThemePageBackgroundPageLayoutEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CENTER,
 
-        LEFT,
-
-        RIGHT,
-
-        UNKNOWN
+        CENTER, LEFT, RIGHT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCenter();
 
         T visitLeft();

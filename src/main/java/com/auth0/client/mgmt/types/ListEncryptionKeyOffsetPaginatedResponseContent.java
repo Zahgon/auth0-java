@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListEncryptionKeyOffsetPaginatedResponseContent.Builder.class)
 public final class ListEncryptionKeyOffsetPaginatedResponseContent {
+
     private final Optional<Integer> start;
 
     private final Optional<Integer> limit;
@@ -31,12 +32,7 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListEncryptionKeyOffsetPaginatedResponseContent(
-            Optional<Integer> start,
-            Optional<Integer> limit,
-            Optional<Integer> total,
-            Optional<List<EncryptionKey>> keys,
-            Map<String, Object> additionalProperties) {
+    private ListEncryptionKeyOffsetPaginatedResponseContent(Optional<Integer> start, Optional<Integer> limit, Optional<Integer> total, Optional<List<EncryptionKey>> keys, Map<String, Object> additionalProperties) {
         this.start = start;
         this.limit = limit;
         this.total = total;
@@ -49,7 +45,7 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
      */
     @JsonProperty("start")
     public Optional<Integer> getStart() {
-        return start;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +53,7 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
      */
     @JsonProperty("limit")
     public Optional<Integer> getLimit() {
-        return limit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +61,7 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
      */
     @JsonProperty("total")
     public Optional<Integer> getTotal() {
-        return total;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,44 +69,40 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
      */
     @JsonProperty("keys")
     public Optional<List<EncryptionKey>> getKeys() {
-        return keys;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListEncryptionKeyOffsetPaginatedResponseContent
-                && equalTo((ListEncryptionKeyOffsetPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListEncryptionKeyOffsetPaginatedResponseContent other) {
-        return start.equals(other.start)
-                && limit.equals(other.limit)
-                && total.equals(other.total)
-                && keys.equals(other.keys);
+        return start.equals(other.start) && limit.equals(other.limit) && total.equals(other.total) && keys.equals(other.keys);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.start, this.limit, this.total, this.keys);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> start = Optional.empty();
 
         private Optional<Integer> limit = Optional.empty();
@@ -122,14 +114,11 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListEncryptionKeyOffsetPaginatedResponseContent other) {
-            start(other.getStart());
-            limit(other.getLimit());
-            total(other.getTotal());
-            keys(other.getKeys());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -137,13 +126,11 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "start", nulls = Nulls.SKIP)
         public Builder start(Optional<Integer> start) {
-            this.start = start;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder start(Integer start) {
-            this.start = Optional.ofNullable(start);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,13 +138,11 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "limit", nulls = Nulls.SKIP)
         public Builder limit(Optional<Integer> limit) {
-            this.limit = limit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder limit(Integer limit) {
-            this.limit = Optional.ofNullable(limit);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +150,11 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "total", nulls = Nulls.SKIP)
         public Builder total(Optional<Integer> total) {
-            this.total = total;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder total(Integer total) {
-            this.total = Optional.ofNullable(total);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,27 +162,23 @@ public final class ListEncryptionKeyOffsetPaginatedResponseContent {
          */
         @JsonSetter(value = "keys", nulls = Nulls.SKIP)
         public Builder keys(Optional<List<EncryptionKey>> keys) {
-            this.keys = keys;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder keys(List<EncryptionKey> keys) {
-            this.keys = Optional.ofNullable(keys);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListEncryptionKeyOffsetPaginatedResponseContent build() {
-            return new ListEncryptionKeyOffsetPaginatedResponseContent(start, limit, total, keys, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

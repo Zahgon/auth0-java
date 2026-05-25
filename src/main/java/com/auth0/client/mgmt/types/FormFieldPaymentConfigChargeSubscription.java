@@ -21,16 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigChargeSubscription.Builder.class)
 public final class FormFieldPaymentConfigChargeSubscription {
+
     private final FormFieldPaymentConfigChargeTypeSubscriptionConst type;
 
     private final Map<String, Object> subscription;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigChargeSubscription(
-            FormFieldPaymentConfigChargeTypeSubscriptionConst type,
-            Map<String, Object> subscription,
-            Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigChargeSubscription(FormFieldPaymentConfigChargeTypeSubscriptionConst type, Map<String, Object> subscription, Map<String, Object> additionalProperties) {
         this.type = type;
         this.subscription = subscription;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class FormFieldPaymentConfigChargeSubscription {
 
     @JsonProperty("type")
     public FormFieldPaymentConfigChargeTypeSubscriptionConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subscription")
     public Map<String, Object> getSubscription() {
-        return subscription;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigChargeSubscription
-                && equalTo((FormFieldPaymentConfigChargeSubscription) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigChargeSubscription other) {
@@ -64,25 +60,27 @@ public final class FormFieldPaymentConfigChargeSubscription {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.subscription);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         _FinalStage type(@NotNull FormFieldPaymentConfigChargeTypeSubscriptionConst type);
 
         Builder from(FormFieldPaymentConfigChargeSubscription other);
     }
 
     public interface _FinalStage {
+
         FormFieldPaymentConfigChargeSubscription build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -98,6 +96,7 @@ public final class FormFieldPaymentConfigChargeSubscription {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, _FinalStage {
+
         private FormFieldPaymentConfigChargeTypeSubscriptionConst type;
 
         private Map<String, Object> subscription = new LinkedHashMap<>();
@@ -105,61 +104,49 @@ public final class FormFieldPaymentConfigChargeSubscription {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldPaymentConfigChargeSubscription other) {
-            type(other.getType());
-            subscription(other.getSubscription());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public _FinalStage type(@NotNull FormFieldPaymentConfigChargeTypeSubscriptionConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage subscription(String key, Object value) {
-            this.subscription.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage putAllSubscription(Map<String, Object> subscription) {
-            if (subscription != null) {
-                this.subscription.putAll(subscription);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "subscription", nulls = Nulls.SKIP)
         public _FinalStage subscription(Map<String, Object> subscription) {
-            this.subscription.clear();
-            if (subscription != null) {
-                this.subscription.putAll(subscription);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldPaymentConfigChargeSubscription build() {
-            return new FormFieldPaymentConfigChargeSubscription(type, subscription, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

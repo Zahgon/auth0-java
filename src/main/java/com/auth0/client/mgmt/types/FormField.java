@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = FormField.Deserializer.class)
 public final class FormField {
+
     private final Object value;
 
     private final int type;
@@ -27,51 +28,17 @@ public final class FormField {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FormFieldBoolean) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FormFieldCards) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FormFieldChoice) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FormFieldCustom) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FormFieldDate) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FormFieldDropdown) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FormFieldEmail) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((FormFieldFile) this.value);
-        } else if (this.type == 8) {
-            return visitor.visit((FormFieldLegal) this.value);
-        } else if (this.type == 9) {
-            return visitor.visit((FormFieldNumber) this.value);
-        } else if (this.type == 10) {
-            return visitor.visit((FormFieldPassword) this.value);
-        } else if (this.type == 11) {
-            return visitor.visit((FormFieldPayment) this.value);
-        } else if (this.type == 12) {
-            return visitor.visit((FormFieldSocial) this.value);
-        } else if (this.type == 13) {
-            return visitor.visit((FormFieldTel) this.value);
-        } else if (this.type == 14) {
-            return visitor.visit((FormFieldText) this.value);
-        } else if (this.type == 15) {
-            return visitor.visit((FormFieldUrl) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormField && equalTo((FormField) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormField other) {
@@ -80,79 +47,80 @@ public final class FormField {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldBoolean value) {
-        return new FormField(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldCards value) {
-        return new FormField(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldChoice value) {
-        return new FormField(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldCustom value) {
-        return new FormField(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldDate value) {
-        return new FormField(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldDropdown value) {
-        return new FormField(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldEmail value) {
-        return new FormField(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldFile value) {
-        return new FormField(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldLegal value) {
-        return new FormField(value, 8);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldNumber value) {
-        return new FormField(value, 9);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldPassword value) {
-        return new FormField(value, 10);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldPayment value) {
-        return new FormField(value, 11);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldSocial value) {
-        return new FormField(value, 12);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldTel value) {
-        return new FormField(value, 13);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldText value) {
-        return new FormField(value, 14);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormField of(FormFieldUrl value) {
-        return new FormField(value, 15);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FormFieldBoolean value);
 
         T visit(FormFieldCards value);
@@ -187,163 +155,14 @@ public final class FormField {
     }
 
     static final class Deserializer extends StdDeserializer<FormField> {
+
         Deserializer() {
             super(FormField.class);
         }
 
         @java.lang.Override
         public FormField deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldBoolean.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldCards.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldChoice.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldCustom.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldDate.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldDropdown.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldEmail.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldFile.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldLegal.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldNumber.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldPassword.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("config")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldPayment.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldSocial.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldTel.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldText.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("id")
-                    && ((Map<?, ?>) value).containsKey("category")
-                    && ((Map<?, ?>) value).containsKey("type")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FormFieldUrl.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

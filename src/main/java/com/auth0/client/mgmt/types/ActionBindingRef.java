@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionBindingRef.Builder.class)
 public final class ActionBindingRef {
+
     private final Optional<ActionBindingRefTypeEnum> type;
 
     private final Optional<String> value;
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionBindingRef(
-            Optional<ActionBindingRefTypeEnum> type, Optional<String> value, Map<String, Object> additionalProperties) {
+    private ActionBindingRef(Optional<ActionBindingRefTypeEnum> type, Optional<String> value, Map<String, Object> additionalProperties) {
         this.type = type;
         this.value = value;
         this.additionalProperties = additionalProperties;
@@ -35,7 +35,7 @@ public final class ActionBindingRef {
 
     @JsonProperty("type")
     public Optional<ActionBindingRefTypeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,18 +43,17 @@ public final class ActionBindingRef {
      */
     @JsonProperty("value")
     public Optional<String> getValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionBindingRef && equalTo((ActionBindingRef) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionBindingRef other) {
@@ -63,20 +62,21 @@ public final class ActionBindingRef {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ActionBindingRefTypeEnum> type = Optional.empty();
 
         private Optional<String> value = Optional.empty();
@@ -84,23 +84,20 @@ public final class ActionBindingRef {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ActionBindingRef other) {
-            type(other.getType());
-            value(other.getValue());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<ActionBindingRefTypeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(ActionBindingRefTypeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -108,27 +105,23 @@ public final class ActionBindingRef {
          */
         @JsonSetter(value = "value", nulls = Nulls.SKIP)
         public Builder value(Optional<String> value) {
-            this.value = value;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder value(String value) {
-            this.value = Optional.ofNullable(value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ActionBindingRef build() {
-            return new ActionBindingRef(type, value, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

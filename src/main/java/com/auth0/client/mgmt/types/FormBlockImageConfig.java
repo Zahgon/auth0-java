@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormBlockImageConfig.Builder.class)
 public final class FormBlockImageConfig {
+
     private final String src;
 
     private final Optional<FormBlockImageConfigPositionEnum> position;
@@ -29,11 +30,7 @@ public final class FormBlockImageConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormBlockImageConfig(
-            String src,
-            Optional<FormBlockImageConfigPositionEnum> position,
-            Optional<Double> height,
-            Map<String, Object> additionalProperties) {
+    private FormBlockImageConfig(String src, Optional<FormBlockImageConfigPositionEnum> position, Optional<Double> height, Map<String, Object> additionalProperties) {
         this.src = src;
         this.position = position;
         this.height = height;
@@ -42,28 +39,27 @@ public final class FormBlockImageConfig {
 
     @JsonProperty("src")
     public String getSrc() {
-        return src;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("position")
     public Optional<FormBlockImageConfigPositionEnum> getPosition() {
-        return position;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("height")
     public Optional<Double> getHeight() {
-        return height;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormBlockImageConfig && equalTo((FormBlockImageConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormBlockImageConfig other) {
@@ -72,25 +68,27 @@ public final class FormBlockImageConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.src, this.position, this.height);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SrcStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SrcStage {
+
         _FinalStage src(@NotNull String src);
 
         Builder from(FormBlockImageConfig other);
     }
 
     public interface _FinalStage {
+
         FormBlockImageConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -108,6 +106,7 @@ public final class FormBlockImageConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SrcStage, _FinalStage {
+
         private String src;
 
         private Optional<Double> height = Optional.empty();
@@ -117,64 +116,55 @@ public final class FormBlockImageConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormBlockImageConfig other) {
-            src(other.getSrc());
-            position(other.getPosition());
-            height(other.getHeight());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("src")
         public _FinalStage src(@NotNull String src) {
-            this.src = Objects.requireNonNull(src, "src must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage height(Double height) {
-            this.height = Optional.ofNullable(height);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "height", nulls = Nulls.SKIP)
         public _FinalStage height(Optional<Double> height) {
-            this.height = height;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage position(FormBlockImageConfigPositionEnum position) {
-            this.position = Optional.ofNullable(position);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "position", nulls = Nulls.SKIP)
         public _FinalStage position(Optional<FormBlockImageConfigPositionEnum> position) {
-            this.position = position;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormBlockImageConfig build() {
-            return new FormBlockImageConfig(src, position, height, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

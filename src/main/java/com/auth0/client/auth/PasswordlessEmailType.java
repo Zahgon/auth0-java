@@ -9,7 +9,6 @@ public enum PasswordlessEmailType {
      * Send a link.
      */
     LINK("link"),
-
     /**
      * Send a code.
      */
@@ -27,6 +26,6 @@ public enum PasswordlessEmailType {
      * @return the type of Passwordless email request.
      */
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

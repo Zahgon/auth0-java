@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientSessionTransferDelegationDeviceBindingEnum {
-    public static final ClientSessionTransferDelegationDeviceBindingEnum ASN =
-            new ClientSessionTransferDelegationDeviceBindingEnum(Value.ASN, "asn");
 
-    public static final ClientSessionTransferDelegationDeviceBindingEnum IP =
-            new ClientSessionTransferDelegationDeviceBindingEnum(Value.IP, "ip");
+    public static final ClientSessionTransferDelegationDeviceBindingEnum ASN = new ClientSessionTransferDelegationDeviceBindingEnum(Value.ASN, "asn");
+
+    public static final ClientSessionTransferDelegationDeviceBindingEnum IP = new ClientSessionTransferDelegationDeviceBindingEnum(Value.IP, "ip");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientSessionTransferDelegationDeviceBindingEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientSessionTransferDelegationDeviceBindingEnum
-                        && this.string.equals(((ClientSessionTransferDelegationDeviceBindingEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ASN:
-                return visitor.visitAsn();
-            case IP:
-                return visitor.visitIp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientSessionTransferDelegationDeviceBindingEnum valueOf(String value) {
-        switch (value) {
-            case "asn":
-                return ASN;
-            case "ip":
-                return IP;
-            default:
-                return new ClientSessionTransferDelegationDeviceBindingEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        IP,
 
-        ASN,
-
-        UNKNOWN
+        IP, ASN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitIp();
 
         T visitAsn();

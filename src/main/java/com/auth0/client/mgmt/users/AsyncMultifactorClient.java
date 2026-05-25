@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.types.UserMultifactorProviderEnum;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncMultifactorClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawMultifactorClient rawClient;
@@ -22,35 +23,34 @@ public class AsyncMultifactorClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawMultifactorClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Invalidate all remembered browsers across all <a href="https://auth0.com/docs/multifactor-authentication">authentication factors</a> for a user.
      */
     public CompletableFuture<Void> invalidateRememberBrowser(String id) {
-        return this.rawClient.invalidateRememberBrowser(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Invalidate all remembered browsers across all <a href="https://auth0.com/docs/multifactor-authentication">authentication factors</a> for a user.
      */
     public CompletableFuture<Void> invalidateRememberBrowser(String id, RequestOptions requestOptions) {
-        return this.rawClient.invalidateRememberBrowser(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a <a href="https://auth0.com/docs/multifactor-authentication">multifactor</a> authentication configuration from a user's account. This forces the user to manually reconfigure the multi-factor provider.
      */
     public CompletableFuture<Void> deleteProvider(String id, UserMultifactorProviderEnum provider) {
-        return this.rawClient.deleteProvider(id, provider).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a <a href="https://auth0.com/docs/multifactor-authentication">multifactor</a> authentication configuration from a user's account. This forces the user to manually reconfigure the multi-factor provider.
      */
-    public CompletableFuture<Void> deleteProvider(
-            String id, UserMultifactorProviderEnum provider, RequestOptions requestOptions) {
-        return this.rawClient.deleteProvider(id, provider, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Void> deleteProvider(String id, UserMultifactorProviderEnum provider, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

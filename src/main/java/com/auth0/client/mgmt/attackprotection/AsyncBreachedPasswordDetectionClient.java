@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateBreachedPasswordDetectionSettingsRespon
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncBreachedPasswordDetectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawBreachedPasswordDetectionClient rawClient;
@@ -24,51 +25,48 @@ public class AsyncBreachedPasswordDetectionClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawBreachedPasswordDetectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Breached Password Detection configuration of your tenant.
      */
     public CompletableFuture<GetBreachedPasswordDetectionSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Breached Password Detection configuration of your tenant.
      */
     public CompletableFuture<GetBreachedPasswordDetectionSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
     public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(
-            RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(
-            UpdateBreachedPasswordDetectionSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(UpdateBreachedPasswordDetectionSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(
-            UpdateBreachedPasswordDetectionSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBreachedPasswordDetectionSettingsResponseContent> update(UpdateBreachedPasswordDetectionSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

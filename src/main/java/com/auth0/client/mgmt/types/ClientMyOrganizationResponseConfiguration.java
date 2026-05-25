@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientMyOrganizationResponseConfiguration.Builder.class)
 public final class ClientMyOrganizationResponseConfiguration {
+
     private final Optional<String> connectionProfileId;
 
     private final Optional<String> userAttributeProfileId;
@@ -33,12 +34,7 @@ public final class ClientMyOrganizationResponseConfiguration {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientMyOrganizationResponseConfiguration(
-            Optional<String> connectionProfileId,
-            Optional<String> userAttributeProfileId,
-            List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies,
-            ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior,
-            Map<String, Object> additionalProperties) {
+    private ClientMyOrganizationResponseConfiguration(Optional<String> connectionProfileId, Optional<String> userAttributeProfileId, List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies, ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior, Map<String, Object> additionalProperties) {
         this.connectionProfileId = connectionProfileId;
         this.userAttributeProfileId = userAttributeProfileId;
         this.allowedStrategies = allowedStrategies;
@@ -51,7 +47,7 @@ public final class ClientMyOrganizationResponseConfiguration {
      */
     @JsonProperty("connection_profile_id")
     public Optional<String> getConnectionProfileId() {
-        return connectionProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,7 +55,7 @@ public final class ClientMyOrganizationResponseConfiguration {
      */
     @JsonProperty("user_attribute_profile_id")
     public Optional<String> getUserAttributeProfileId() {
-        return userAttributeProfileId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,59 +63,51 @@ public final class ClientMyOrganizationResponseConfiguration {
      */
     @JsonProperty("allowed_strategies")
     public List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> getAllowedStrategies() {
-        return allowedStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection_deletion_behavior")
     public ClientMyOrganizationDeletionBehaviorEnum getConnectionDeletionBehavior() {
-        return connectionDeletionBehavior;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientMyOrganizationResponseConfiguration
-                && equalTo((ClientMyOrganizationResponseConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientMyOrganizationResponseConfiguration other) {
-        return connectionProfileId.equals(other.connectionProfileId)
-                && userAttributeProfileId.equals(other.userAttributeProfileId)
-                && allowedStrategies.equals(other.allowedStrategies)
-                && connectionDeletionBehavior.equals(other.connectionDeletionBehavior);
+        return connectionProfileId.equals(other.connectionProfileId) && userAttributeProfileId.equals(other.userAttributeProfileId) && allowedStrategies.equals(other.allowedStrategies) && connectionDeletionBehavior.equals(other.connectionDeletionBehavior);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.connectionProfileId,
-                this.userAttributeProfileId,
-                this.allowedStrategies,
-                this.connectionDeletionBehavior);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionDeletionBehaviorStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionDeletionBehaviorStage {
-        _FinalStage connectionDeletionBehavior(
-                @NotNull ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior);
+
+        _FinalStage connectionDeletionBehavior(@NotNull ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior);
 
         Builder from(ClientMyOrganizationResponseConfiguration other);
     }
 
     public interface _FinalStage {
+
         ClientMyOrganizationResponseConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -147,12 +135,12 @@ public final class ClientMyOrganizationResponseConfiguration {
 
         _FinalStage addAllowedStrategies(ClientMyOrganizationConfigurationAllowedStrategiesEnum allowedStrategies);
 
-        _FinalStage addAllAllowedStrategies(
-                List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies);
+        _FinalStage addAllAllowedStrategies(List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies);
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionDeletionBehaviorStage, _FinalStage {
+
         private ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior;
 
         private List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies = new ArrayList<>();
@@ -164,24 +152,18 @@ public final class ClientMyOrganizationResponseConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientMyOrganizationResponseConfiguration other) {
-            connectionProfileId(other.getConnectionProfileId());
-            userAttributeProfileId(other.getUserAttributeProfileId());
-            allowedStrategies(other.getAllowedStrategies());
-            connectionDeletionBehavior(other.getConnectionDeletionBehavior());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_deletion_behavior")
-        public _FinalStage connectionDeletionBehavior(
-                @NotNull ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior) {
-            this.connectionDeletionBehavior =
-                    Objects.requireNonNull(connectionDeletionBehavior, "connectionDeletionBehavior must not be null");
-            return this;
+        public _FinalStage connectionDeletionBehavior(@NotNull ClientMyOrganizationDeletionBehaviorEnum connectionDeletionBehavior) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -189,12 +171,8 @@ public final class ClientMyOrganizationResponseConfiguration {
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @java.lang.Override
-        public _FinalStage addAllAllowedStrategies(
-                List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies) {
-            if (allowedStrategies != null) {
-                this.allowedStrategies.addAll(allowedStrategies);
-            }
-            return this;
+        public _FinalStage addAllAllowedStrategies(List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -202,10 +180,8 @@ public final class ClientMyOrganizationResponseConfiguration {
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @java.lang.Override
-        public _FinalStage addAllowedStrategies(
-                ClientMyOrganizationConfigurationAllowedStrategiesEnum allowedStrategies) {
-            this.allowedStrategies.add(allowedStrategies);
-            return this;
+        public _FinalStage addAllowedStrategies(ClientMyOrganizationConfigurationAllowedStrategiesEnum allowedStrategies) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,13 +189,8 @@ public final class ClientMyOrganizationResponseConfiguration {
          */
         @java.lang.Override
         @JsonSetter(value = "allowed_strategies", nulls = Nulls.SKIP)
-        public _FinalStage allowedStrategies(
-                List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies) {
-            this.allowedStrategies.clear();
-            if (allowedStrategies != null) {
-                this.allowedStrategies.addAll(allowedStrategies);
-            }
-            return this;
+        public _FinalStage allowedStrategies(List<ClientMyOrganizationConfigurationAllowedStrategiesEnum> allowedStrategies) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -228,8 +199,7 @@ public final class ClientMyOrganizationResponseConfiguration {
          */
         @java.lang.Override
         public _FinalStage userAttributeProfileId(String userAttributeProfileId) {
-            this.userAttributeProfileId = Optional.ofNullable(userAttributeProfileId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -238,8 +208,7 @@ public final class ClientMyOrganizationResponseConfiguration {
         @java.lang.Override
         @JsonSetter(value = "user_attribute_profile_id", nulls = Nulls.SKIP)
         public _FinalStage userAttributeProfileId(Optional<String> userAttributeProfileId) {
-            this.userAttributeProfileId = userAttributeProfileId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -248,8 +217,7 @@ public final class ClientMyOrganizationResponseConfiguration {
          */
         @java.lang.Override
         public _FinalStage connectionProfileId(String connectionProfileId) {
-            this.connectionProfileId = Optional.ofNullable(connectionProfileId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -258,30 +226,22 @@ public final class ClientMyOrganizationResponseConfiguration {
         @java.lang.Override
         @JsonSetter(value = "connection_profile_id", nulls = Nulls.SKIP)
         public _FinalStage connectionProfileId(Optional<String> connectionProfileId) {
-            this.connectionProfileId = connectionProfileId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientMyOrganizationResponseConfiguration build() {
-            return new ClientMyOrganizationResponseConfiguration(
-                    connectionProfileId,
-                    userAttributeProfileId,
-                    allowedStrategies,
-                    connectionDeletionBehavior,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

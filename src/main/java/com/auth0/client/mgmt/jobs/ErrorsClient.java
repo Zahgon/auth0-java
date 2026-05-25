@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import com.auth0.client.mgmt.jobs.types.ErrorsGetResponse;
 
 public class ErrorsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawErrorsClient rawClient;
@@ -21,20 +22,20 @@ public class ErrorsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawErrorsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve error details of a failed job.
      */
     public ErrorsGetResponse get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve error details of a failed job.
      */
     public ErrorsGetResponse get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

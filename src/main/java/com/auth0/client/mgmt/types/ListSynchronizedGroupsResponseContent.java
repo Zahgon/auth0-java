@@ -22,14 +22,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListSynchronizedGroupsResponseContent.Builder.class)
 public final class ListSynchronizedGroupsResponseContent {
+
     private final List<SynchronizedGroupPayload> groups;
 
     private final Optional<String> next;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListSynchronizedGroupsResponseContent(
-            List<SynchronizedGroupPayload> groups, Optional<String> next, Map<String, Object> additionalProperties) {
+    private ListSynchronizedGroupsResponseContent(List<SynchronizedGroupPayload> groups, Optional<String> next, Map<String, Object> additionalProperties) {
         this.groups = groups;
         this.next = next;
         this.additionalProperties = additionalProperties;
@@ -40,7 +40,7 @@ public final class ListSynchronizedGroupsResponseContent {
      */
     @JsonProperty("groups")
     public List<SynchronizedGroupPayload> getGroups() {
-        return groups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,19 +48,17 @@ public final class ListSynchronizedGroupsResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListSynchronizedGroupsResponseContent
-                && equalTo((ListSynchronizedGroupsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListSynchronizedGroupsResponseContent other) {
@@ -69,20 +67,21 @@ public final class ListSynchronizedGroupsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.groups, this.next);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<SynchronizedGroupPayload> groups = new ArrayList<>();
 
         private Optional<String> next = Optional.empty();
@@ -90,12 +89,11 @@ public final class ListSynchronizedGroupsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListSynchronizedGroupsResponseContent other) {
-            groups(other.getGroups());
-            next(other.getNext());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -103,23 +101,15 @@ public final class ListSynchronizedGroupsResponseContent {
          */
         @JsonSetter(value = "groups", nulls = Nulls.SKIP)
         public Builder groups(List<SynchronizedGroupPayload> groups) {
-            this.groups.clear();
-            if (groups != null) {
-                this.groups.addAll(groups);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addGroups(SynchronizedGroupPayload groups) {
-            this.groups.add(groups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllGroups(List<SynchronizedGroupPayload> groups) {
-            if (groups != null) {
-                this.groups.addAll(groups);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -127,27 +117,23 @@ public final class ListSynchronizedGroupsResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListSynchronizedGroupsResponseContent build() {
-            return new ListSynchronizedGroupsResponseContent(groups, next, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

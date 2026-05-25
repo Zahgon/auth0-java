@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionHubspotUpsertContactParamsProperty.Builder.class)
 public final class FlowActionHubspotUpsertContactParamsProperty {
+
     private final String property;
 
     private final Map<String, Object> additionalProperties;
@@ -30,19 +31,17 @@ public final class FlowActionHubspotUpsertContactParamsProperty {
 
     @JsonProperty("property")
     public String getProperty() {
-        return property;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionHubspotUpsertContactParamsProperty
-                && equalTo((FlowActionHubspotUpsertContactParamsProperty) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionHubspotUpsertContactParamsProperty other) {
@@ -51,25 +50,27 @@ public final class FlowActionHubspotUpsertContactParamsProperty {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.property);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PropertyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PropertyStage {
+
         _FinalStage property(@NotNull String property);
 
         Builder from(FlowActionHubspotUpsertContactParamsProperty other);
     }
 
     public interface _FinalStage {
+
         FlowActionHubspotUpsertContactParamsProperty build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -79,41 +80,39 @@ public final class FlowActionHubspotUpsertContactParamsProperty {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PropertyStage, _FinalStage {
+
         private String property;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionHubspotUpsertContactParamsProperty other) {
-            property(other.getProperty());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("property")
         public _FinalStage property(@NotNull String property) {
-            this.property = Objects.requireNonNull(property, "property must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionHubspotUpsertContactParamsProperty build() {
-            return new FlowActionHubspotUpsertContactParamsProperty(property, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

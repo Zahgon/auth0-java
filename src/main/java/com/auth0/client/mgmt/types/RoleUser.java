@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RoleUser.Builder.class)
 public final class RoleUser {
+
     private final Optional<String> userId;
 
     private final Optional<String> picture;
@@ -30,12 +31,7 @@ public final class RoleUser {
 
     private final Map<String, Object> additionalProperties;
 
-    private RoleUser(
-            Optional<String> userId,
-            Optional<String> picture,
-            Optional<String> name,
-            Optional<String> email,
-            Map<String, Object> additionalProperties) {
+    private RoleUser(Optional<String> userId, Optional<String> picture, Optional<String> name, Optional<String> email, Map<String, Object> additionalProperties) {
         this.userId = userId;
         this.picture = picture;
         this.name = name;
@@ -48,7 +44,7 @@ public final class RoleUser {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class RoleUser {
      */
     @JsonProperty("picture")
     public Optional<String> getPicture() {
-        return picture;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +60,7 @@ public final class RoleUser {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,43 +68,40 @@ public final class RoleUser {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RoleUser && equalTo((RoleUser) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RoleUser other) {
-        return userId.equals(other.userId)
-                && picture.equals(other.picture)
-                && name.equals(other.name)
-                && email.equals(other.email);
+        return userId.equals(other.userId) && picture.equals(other.picture) && name.equals(other.name) && email.equals(other.email);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.userId, this.picture, this.name, this.email);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> userId = Optional.empty();
 
         private Optional<String> picture = Optional.empty();
@@ -120,14 +113,11 @@ public final class RoleUser {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RoleUser other) {
-            userId(other.getUserId());
-            picture(other.getPicture());
-            name(other.getName());
-            email(other.getEmail());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -135,13 +125,11 @@ public final class RoleUser {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,13 +137,11 @@ public final class RoleUser {
          */
         @JsonSetter(value = "picture", nulls = Nulls.SKIP)
         public Builder picture(Optional<String> picture) {
-            this.picture = picture;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picture(String picture) {
-            this.picture = Optional.ofNullable(picture);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,13 +149,11 @@ public final class RoleUser {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,27 +161,23 @@ public final class RoleUser {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RoleUser build() {
-            return new RoleUser(userId, picture, name, email, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

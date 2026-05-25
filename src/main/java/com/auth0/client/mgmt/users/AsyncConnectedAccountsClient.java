@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.users.types.GetUserConnectedAccountsRequestParamete
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncConnectedAccountsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawConnectedAccountsClient rawClient;
@@ -24,36 +25,34 @@ public class AsyncConnectedAccountsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawConnectedAccountsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
     public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
     public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
-    public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(
-            String id, GetUserConnectedAccountsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(String id, GetUserConnectedAccountsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve all connected accounts associated with the user.
      */
-    public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(
-            String id, GetUserConnectedAccountsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ConnectedAccount>> list(String id, GetUserConnectedAccountsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

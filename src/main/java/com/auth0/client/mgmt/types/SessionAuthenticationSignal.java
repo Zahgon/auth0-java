@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SessionAuthenticationSignal.Builder.class)
 public final class SessionAuthenticationSignal {
+
     private final Optional<String> name;
 
     private final Optional<SessionDate> timestamp;
@@ -28,11 +29,7 @@ public final class SessionAuthenticationSignal {
 
     private final Map<String, Object> additionalProperties;
 
-    private SessionAuthenticationSignal(
-            Optional<String> name,
-            Optional<SessionDate> timestamp,
-            Optional<String> type,
-            Map<String, Object> additionalProperties) {
+    private SessionAuthenticationSignal(Optional<String> name, Optional<SessionDate> timestamp, Optional<String> type, Map<String, Object> additionalProperties) {
         this.name = name;
         this.timestamp = timestamp;
         this.type = type;
@@ -44,12 +41,12 @@ public final class SessionAuthenticationSignal {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("timestamp")
     public Optional<SessionDate> getTimestamp() {
-        return timestamp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,18 +54,17 @@ public final class SessionAuthenticationSignal {
      */
     @JsonProperty("type")
     public Optional<String> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SessionAuthenticationSignal && equalTo((SessionAuthenticationSignal) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SessionAuthenticationSignal other) {
@@ -77,20 +73,21 @@ public final class SessionAuthenticationSignal {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.timestamp, this.type);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private Optional<SessionDate> timestamp = Optional.empty();
@@ -100,13 +97,11 @@ public final class SessionAuthenticationSignal {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SessionAuthenticationSignal other) {
-            name(other.getName());
-            timestamp(other.getTimestamp());
-            type(other.getType());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,24 +109,20 @@ public final class SessionAuthenticationSignal {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "timestamp", nulls = Nulls.SKIP)
         public Builder timestamp(Optional<SessionDate> timestamp) {
-            this.timestamp = timestamp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder timestamp(SessionDate timestamp) {
-            this.timestamp = Optional.ofNullable(timestamp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -139,27 +130,23 @@ public final class SessionAuthenticationSignal {
          */
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<String> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(String type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SessionAuthenticationSignal build() {
-            return new SessionAuthenticationSignal(name, timestamp, type, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

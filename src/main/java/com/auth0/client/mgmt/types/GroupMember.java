@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GroupMember.Builder.class)
 public final class GroupMember {
+
     private final Optional<String> id;
 
     private final Optional<GroupMemberTypeEnum> memberType;
@@ -33,13 +34,7 @@ public final class GroupMember {
 
     private final Map<String, Object> additionalProperties;
 
-    private GroupMember(
-            Optional<String> id,
-            Optional<GroupMemberTypeEnum> memberType,
-            Optional<GroupTypeEnum> type,
-            Optional<String> connectionId,
-            Optional<OffsetDateTime> createdAt,
-            Map<String, Object> additionalProperties) {
+    private GroupMember(Optional<String> id, Optional<GroupMemberTypeEnum> memberType, Optional<GroupTypeEnum> type, Optional<String> connectionId, Optional<OffsetDateTime> createdAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.memberType = memberType;
         this.type = type;
@@ -53,17 +48,17 @@ public final class GroupMember {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("member_type")
     public Optional<GroupMemberTypeEnum> getMemberType() {
-        return memberType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public Optional<GroupTypeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,7 +66,7 @@ public final class GroupMember {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,44 +74,40 @@ public final class GroupMember {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GroupMember && equalTo((GroupMember) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GroupMember other) {
-        return id.equals(other.id)
-                && memberType.equals(other.memberType)
-                && type.equals(other.type)
-                && connectionId.equals(other.connectionId)
-                && createdAt.equals(other.createdAt);
+        return id.equals(other.id) && memberType.equals(other.memberType) && type.equals(other.type) && connectionId.equals(other.connectionId) && createdAt.equals(other.createdAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.memberType, this.type, this.connectionId, this.createdAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<GroupMemberTypeEnum> memberType = Optional.empty();
@@ -130,15 +121,11 @@ public final class GroupMember {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GroupMember other) {
-            id(other.getId());
-            memberType(other.getMemberType());
-            type(other.getType());
-            connectionId(other.getConnectionId());
-            createdAt(other.getCreatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -146,35 +133,29 @@ public final class GroupMember {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "member_type", nulls = Nulls.SKIP)
         public Builder memberType(Optional<GroupMemberTypeEnum> memberType) {
-            this.memberType = memberType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder memberType(GroupMemberTypeEnum memberType) {
-            this.memberType = Optional.ofNullable(memberType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<GroupTypeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(GroupTypeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,13 +163,11 @@ public final class GroupMember {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,27 +175,23 @@ public final class GroupMember {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GroupMember build() {
-            return new GroupMember(id, memberType, type, connectionId, createdAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

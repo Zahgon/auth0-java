@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SuspiciousIpThrottlingPreLoginStage.Builder.class)
 public final class SuspiciousIpThrottlingPreLoginStage {
+
     private final Optional<Integer> maxAttempts;
 
     private final Optional<Integer> rate;
 
     private final Map<String, Object> additionalProperties;
 
-    private SuspiciousIpThrottlingPreLoginStage(
-            Optional<Integer> maxAttempts, Optional<Integer> rate, Map<String, Object> additionalProperties) {
+    private SuspiciousIpThrottlingPreLoginStage(Optional<Integer> maxAttempts, Optional<Integer> rate, Map<String, Object> additionalProperties) {
         this.maxAttempts = maxAttempts;
         this.rate = rate;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class SuspiciousIpThrottlingPreLoginStage {
      */
     @JsonProperty("max_attempts")
     public Optional<Integer> getMaxAttempts() {
-        return maxAttempts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +46,17 @@ public final class SuspiciousIpThrottlingPreLoginStage {
      */
     @JsonProperty("rate")
     public Optional<Integer> getRate() {
-        return rate;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SuspiciousIpThrottlingPreLoginStage
-                && equalTo((SuspiciousIpThrottlingPreLoginStage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SuspiciousIpThrottlingPreLoginStage other) {
@@ -67,20 +65,21 @@ public final class SuspiciousIpThrottlingPreLoginStage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.maxAttempts, this.rate);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Integer> maxAttempts = Optional.empty();
 
         private Optional<Integer> rate = Optional.empty();
@@ -88,12 +87,11 @@ public final class SuspiciousIpThrottlingPreLoginStage {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SuspiciousIpThrottlingPreLoginStage other) {
-            maxAttempts(other.getMaxAttempts());
-            rate(other.getRate());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,13 +99,11 @@ public final class SuspiciousIpThrottlingPreLoginStage {
          */
         @JsonSetter(value = "max_attempts", nulls = Nulls.SKIP)
         public Builder maxAttempts(Optional<Integer> maxAttempts) {
-            this.maxAttempts = maxAttempts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Optional.ofNullable(maxAttempts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,27 +111,23 @@ public final class SuspiciousIpThrottlingPreLoginStage {
          */
         @JsonSetter(value = "rate", nulls = Nulls.SKIP)
         public Builder rate(Optional<Integer> rate) {
-            this.rate = rate;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rate(Integer rate) {
-            this.rate = Optional.ofNullable(rate);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SuspiciousIpThrottlingPreLoginStage build() {
-            return new SuspiciousIpThrottlingPreLoginStage(maxAttempts, rate, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

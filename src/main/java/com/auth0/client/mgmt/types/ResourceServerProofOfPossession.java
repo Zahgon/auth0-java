@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ResourceServerProofOfPossession.Builder.class)
 public final class ResourceServerProofOfPossession {
+
     private final ResourceServerProofOfPossessionMechanismEnum mechanism;
 
     private final boolean required;
@@ -29,11 +30,7 @@ public final class ResourceServerProofOfPossession {
 
     private final Map<String, Object> additionalProperties;
 
-    private ResourceServerProofOfPossession(
-            ResourceServerProofOfPossessionMechanismEnum mechanism,
-            boolean required,
-            Optional<ResourceServerProofOfPossessionRequiredForEnum> requiredFor,
-            Map<String, Object> additionalProperties) {
+    private ResourceServerProofOfPossession(ResourceServerProofOfPossessionMechanismEnum mechanism, boolean required, Optional<ResourceServerProofOfPossessionRequiredForEnum> requiredFor, Map<String, Object> additionalProperties) {
         this.mechanism = mechanism;
         this.required = required;
         this.requiredFor = requiredFor;
@@ -42,7 +39,7 @@ public final class ResourceServerProofOfPossession {
 
     @JsonProperty("mechanism")
     public ResourceServerProofOfPossessionMechanismEnum getMechanism() {
-        return mechanism;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,23 +47,22 @@ public final class ResourceServerProofOfPossession {
      */
     @JsonProperty("required")
     public boolean getRequired() {
-        return required;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("required_for")
     public Optional<ResourceServerProofOfPossessionRequiredForEnum> getRequiredFor() {
-        return requiredFor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ResourceServerProofOfPossession && equalTo((ResourceServerProofOfPossession) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ResourceServerProofOfPossession other) {
@@ -75,25 +71,27 @@ public final class ResourceServerProofOfPossession {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mechanism, this.required, this.requiredFor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MechanismStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MechanismStage {
+
         RequiredStage mechanism(@NotNull ResourceServerProofOfPossessionMechanismEnum mechanism);
 
         Builder from(ResourceServerProofOfPossession other);
     }
 
     public interface RequiredStage {
+
         /**
          * <p>Whether the use of Proof-of-Possession is required for the resource server</p>
          */
@@ -101,6 +99,7 @@ public final class ResourceServerProofOfPossession {
     }
 
     public interface _FinalStage {
+
         ResourceServerProofOfPossession build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -114,6 +113,7 @@ public final class ResourceServerProofOfPossession {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MechanismStage, RequiredStage, _FinalStage {
+
         private ResourceServerProofOfPossessionMechanismEnum mechanism;
 
         private boolean required;
@@ -123,21 +123,18 @@ public final class ResourceServerProofOfPossession {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ResourceServerProofOfPossession other) {
-            mechanism(other.getMechanism());
-            required(other.getRequired());
-            requiredFor(other.getRequiredFor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("mechanism")
         public RequiredStage mechanism(@NotNull ResourceServerProofOfPossessionMechanismEnum mechanism) {
-            this.mechanism = Objects.requireNonNull(mechanism, "mechanism must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,38 +145,33 @@ public final class ResourceServerProofOfPossession {
         @java.lang.Override
         @JsonSetter("required")
         public _FinalStage required(boolean required) {
-            this.required = required;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage requiredFor(ResourceServerProofOfPossessionRequiredForEnum requiredFor) {
-            this.requiredFor = Optional.ofNullable(requiredFor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "required_for", nulls = Nulls.SKIP)
         public _FinalStage requiredFor(Optional<ResourceServerProofOfPossessionRequiredForEnum> requiredFor) {
-            this.requiredFor = requiredFor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ResourceServerProofOfPossession build() {
-            return new ResourceServerProofOfPossession(mechanism, required, requiredFor, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

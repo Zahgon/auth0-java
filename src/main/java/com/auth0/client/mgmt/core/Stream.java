@@ -24,21 +24,28 @@ import java.util.Scanner;
 public final class Stream<T> implements Iterable<T>, Closeable {
 
     private static final String NEWLINE = "\n";
+
     private static final String DATA_PREFIX = "data:";
 
     public enum StreamType {
-        JSON,
-        SSE,
-        SSE_EVENT_DISCRIMINATED
+
+        JSON, SSE, SSE_EVENT_DISCRIMINATED
     }
 
     private final Class<T> valueType;
+
     private final Scanner scanner;
+
     private final StreamType streamType;
+
     private final String messageTerminator;
+
     private final String streamTerminator;
+
     private final Reader sseReader;
+
     private final String discriminatorProperty;
+
     private boolean isClosed = false;
 
     /**
@@ -62,8 +69,7 @@ public final class Stream<T> implements Iterable<T>, Closeable {
         this(valueType, type, reader, terminator, null);
     }
 
-    private Stream(
-            Class<T> valueType, StreamType type, Reader reader, String terminator, String discriminatorProperty) {
+    private Stream(Class<T> valueType, StreamType type, Reader reader, String terminator, String discriminatorProperty) {
         this.valueType = valueType;
         this.streamType = type;
         this.discriminatorProperty = discriminatorProperty;
@@ -81,19 +87,19 @@ public final class Stream<T> implements Iterable<T>, Closeable {
     }
 
     public static <T> Stream<T> fromJson(Class<T> valueType, Reader reader, String delimiter) {
-        return new Stream<>(valueType, reader, delimiter);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Stream<T> fromJson(Class<T> valueType, Reader reader) {
-        return new Stream<>(valueType, reader, NEWLINE);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Stream<T> fromSse(Class<T> valueType, Reader sseReader) {
-        return new Stream<>(valueType, StreamType.SSE, sseReader, null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Stream<T> fromSse(Class<T> valueType, Reader sseReader, String streamTerminator) {
-        return new Stream<>(valueType, StreamType.SSE, sseReader, streamTerminator);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,9 +113,8 @@ public final class Stream<T> implements Iterable<T>, Closeable {
      * @param <T>                   The type of objects in the stream.
      * @return A new Stream instance configured for SSE with event-level discrimination.
      */
-    public static <T> Stream<T> fromSseWithEventDiscrimination(
-            Class<T> valueType, Reader sseReader, String discriminatorProperty) {
-        return new Stream<>(valueType, StreamType.SSE_EVENT_DISCRIMINATED, sseReader, null, discriminatorProperty);
+    public static <T> Stream<T> fromSseWithEventDiscrimination(Class<T> valueType, Reader sseReader, String discriminatorProperty) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,23 +127,13 @@ public final class Stream<T> implements Iterable<T>, Closeable {
      * @param <T>                   The type of objects in the stream.
      * @return A new Stream instance configured for SSE with event-level discrimination.
      */
-    public static <T> Stream<T> fromSseWithEventDiscrimination(
-            Class<T> valueType, Reader sseReader, String discriminatorProperty, String streamTerminator) {
-        return new Stream<>(
-                valueType, StreamType.SSE_EVENT_DISCRIMINATED, sseReader, streamTerminator, discriminatorProperty);
+    public static <T> Stream<T> fromSseWithEventDiscrimination(Class<T> valueType, Reader sseReader, String discriminatorProperty, String streamTerminator) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void close() throws IOException {
-        if (!isClosed) {
-            isClosed = true;
-            if (scanner != null) {
-                scanner.close();
-            }
-            if (sseReader != null) {
-                sseReader.close();
-            }
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean isStreamClosed() {
@@ -153,15 +148,7 @@ public final class Stream<T> implements Iterable<T>, Closeable {
      */
     @Override
     public Iterator<T> iterator() {
-        switch (streamType) {
-            case SSE:
-                return new SSEIterator();
-            case SSE_EVENT_DISCRIMINATED:
-                return new SSEEventDiscriminatedIterator();
-            case JSON:
-            default:
-                return new JsonIterator();
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final class JsonIterator implements Iterator<T> {
@@ -175,10 +162,7 @@ public final class Stream<T> implements Iterable<T>, Closeable {
          */
         @Override
         public boolean hasNext() {
-            if (isStreamClosed()) {
-                return false;
-            }
-            return scanner.hasNext();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -191,35 +175,27 @@ public final class Stream<T> implements Iterable<T>, Closeable {
          */
         @Override
         public T next() {
-            if (isStreamClosed()) {
-                throw new NoSuchElementException("Stream is closed");
-            }
-
-            if (!scanner.hasNext()) {
-                throw new NoSuchElementException();
-            } else {
-                try {
-                    T parsedResponse =
-                            ObjectMappers.JSON_MAPPER.readValue(scanner.next().trim(), valueType);
-                    return parsedResponse;
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public void remove() {
-            throw new UnsupportedOperationException();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     private final class SSEIterator implements Iterator<T> {
+
         private Scanner sseScanner;
+
         private T nextItem;
+
         private boolean hasNextItem = false;
+
         private boolean endOfStream = false;
+
         private StringBuilder eventDataBuffer = new StringBuilder();
+
         private String currentEventType = null;
 
         private SSEIterator() {
@@ -232,32 +208,17 @@ public final class Stream<T> implements Iterable<T>, Closeable {
 
         @Override
         public boolean hasNext() {
-            if (isStreamClosed() || endOfStream) {
-                return false;
-            }
-
-            if (hasNextItem) {
-                return true;
-            }
-
-            return readNextMessage();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public T next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException("No more elements in stream");
-            }
-
-            T result = nextItem;
-            nextItem = null;
-            hasNextItem = false;
-            return result;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public void remove() {
-            throw new UnsupportedOperationException();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean readNextMessage() {
@@ -265,11 +226,9 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                 endOfStream = true;
                 return false;
             }
-
             try {
                 while (sseScanner.hasNextLine()) {
                     String line = sseScanner.nextLine();
-
                     if (line.trim().isEmpty()) {
                         if (eventDataBuffer.length() > 0) {
                             try {
@@ -287,20 +246,15 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         }
                         continue;
                     }
-
                     if (line.startsWith(DATA_PREFIX)) {
                         String dataContent = line.substring(DATA_PREFIX.length());
                         if (dataContent.startsWith(" ")) {
                             dataContent = dataContent.substring(1);
                         }
-
-                        if (eventDataBuffer.length() == 0
-                                && streamTerminator != null
-                                && dataContent.trim().equals(streamTerminator)) {
+                        if (eventDataBuffer.length() == 0 && streamTerminator != null && dataContent.trim().equals(streamTerminator)) {
                             endOfStream = true;
                             return false;
                         }
-
                         if (eventDataBuffer.length() > 0) {
                             eventDataBuffer.append('\n');
                         }
@@ -319,7 +273,6 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         // Comment line (ignored)
                     }
                 }
-
                 if (eventDataBuffer.length() > 0) {
                     try {
                         nextItem = ObjectMappers.JSON_MAPPER.readValue(eventDataBuffer.toString(), valueType);
@@ -333,10 +286,8 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         currentEventType = null;
                     }
                 }
-
                 endOfStream = true;
                 return false;
-
             } catch (Exception e) {
                 System.err.println("Failed to parse SSE stream: " + e.getMessage());
                 endOfStream = true;
@@ -350,13 +301,21 @@ public final class Stream<T> implements Iterable<T>, Closeable {
      * Uses SseEventParser to construct the full SSE envelope for Jackson deserialization.
      */
     private final class SSEEventDiscriminatedIterator implements Iterator<T> {
+
         private Scanner sseScanner;
+
         private T nextItem;
+
         private boolean hasNextItem = false;
+
         private boolean endOfStream = false;
+
         private StringBuilder eventDataBuffer = new StringBuilder();
+
         private String currentEventType = null;
+
         private String currentEventId = null;
+
         private Long currentRetry = null;
 
         private SSEEventDiscriminatedIterator() {
@@ -369,32 +328,17 @@ public final class Stream<T> implements Iterable<T>, Closeable {
 
         @Override
         public boolean hasNext() {
-            if (isStreamClosed() || endOfStream) {
-                return false;
-            }
-
-            if (hasNextItem) {
-                return true;
-            }
-
-            return readNextMessage();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public T next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException("No more elements in stream");
-            }
-
-            T result = nextItem;
-            nextItem = null;
-            hasNextItem = false;
-            return result;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public void remove() {
-            throw new UnsupportedOperationException();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean readNextMessage() {
@@ -402,22 +346,14 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                 endOfStream = true;
                 return false;
             }
-
             try {
                 while (sseScanner.hasNextLine()) {
                     String line = sseScanner.nextLine();
-
                     if (line.trim().isEmpty()) {
                         if (eventDataBuffer.length() > 0 || currentEventType != null) {
                             try {
                                 // Use SseEventParser for event-level discrimination
-                                nextItem = SseEventParser.parseEventLevelUnion(
-                                        currentEventType,
-                                        eventDataBuffer.toString(),
-                                        currentEventId,
-                                        currentRetry,
-                                        valueType,
-                                        discriminatorProperty);
+                                nextItem = SseEventParser.parseEventLevelUnion(currentEventType, eventDataBuffer.toString(), currentEventId, currentRetry, valueType, discriminatorProperty);
                                 hasNextItem = true;
                                 resetEventState();
                                 return true;
@@ -429,20 +365,15 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         }
                         continue;
                     }
-
                     if (line.startsWith(DATA_PREFIX)) {
                         String dataContent = line.substring(DATA_PREFIX.length());
                         if (dataContent.startsWith(" ")) {
                             dataContent = dataContent.substring(1);
                         }
-
-                        if (eventDataBuffer.length() == 0
-                                && streamTerminator != null
-                                && dataContent.trim().equals(streamTerminator)) {
+                        if (eventDataBuffer.length() == 0 && streamTerminator != null && dataContent.trim().equals(streamTerminator)) {
                             endOfStream = true;
                             return false;
                         }
-
                         if (eventDataBuffer.length() > 0) {
                             eventDataBuffer.append('\n');
                         }
@@ -473,17 +404,10 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         // Comment line (ignored)
                     }
                 }
-
                 // Handle any remaining buffered data at end of stream
                 if (eventDataBuffer.length() > 0 || currentEventType != null) {
                     try {
-                        nextItem = SseEventParser.parseEventLevelUnion(
-                                currentEventType,
-                                eventDataBuffer.toString(),
-                                currentEventId,
-                                currentRetry,
-                                valueType,
-                                discriminatorProperty);
+                        nextItem = SseEventParser.parseEventLevelUnion(currentEventType, eventDataBuffer.toString(), currentEventId, currentRetry, valueType, discriminatorProperty);
                         hasNextItem = true;
                         resetEventState();
                         return true;
@@ -492,10 +416,8 @@ public final class Stream<T> implements Iterable<T>, Closeable {
                         resetEventState();
                     }
                 }
-
                 endOfStream = true;
                 return false;
-
             } catch (Exception e) {
                 System.err.println("Failed to parse SSE stream: " + e.getMessage());
                 endOfStream = true;

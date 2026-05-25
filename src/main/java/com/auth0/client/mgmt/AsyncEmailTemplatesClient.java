@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateEmailTemplateResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEmailTemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEmailTemplatesClient rawClient;
@@ -29,85 +30,76 @@ public class AsyncEmailTemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEmailTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email template.
      */
     public CompletableFuture<CreateEmailTemplateResponseContent> create(CreateEmailTemplateRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email template.
      */
-    public CompletableFuture<CreateEmailTemplateResponseContent> create(
-            CreateEmailTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateEmailTemplateResponseContent> create(CreateEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an email template by pre-defined name. These names are <code>verify_email</code>, <code>verify_email_by_code</code>, <code>reset_email</code>, <code>reset_email_by_code</code>, <code>welcome_email</code>, <code>blocked_account</code>, <code>stolen_credentials</code>, <code>enrollment_email</code>, <code>mfa_oob_code</code>, <code>user_invitation</code>, and <code>async_approval</code>. The names <code>change_password</code>, and <code>password_reset</code> are also supported for legacy scenarios.
      */
     public CompletableFuture<GetEmailTemplateResponseContent> get(EmailTemplateNameEnum templateName) {
-        return this.rawClient.get(templateName).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve an email template by pre-defined name. These names are <code>verify_email</code>, <code>verify_email_by_code</code>, <code>reset_email</code>, <code>reset_email_by_code</code>, <code>welcome_email</code>, <code>blocked_account</code>, <code>stolen_credentials</code>, <code>enrollment_email</code>, <code>mfa_oob_code</code>, <code>user_invitation</code>, and <code>async_approval</code>. The names <code>change_password</code>, and <code>password_reset</code> are also supported for legacy scenarios.
      */
-    public CompletableFuture<GetEmailTemplateResponseContent> get(
-            EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
-        return this.rawClient.get(templateName, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetEmailTemplateResponseContent> get(EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an email template.
      */
-    public CompletableFuture<SetEmailTemplateResponseContent> set(
-            EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request) {
-        return this.rawClient.set(templateName, request).thenApply(response -> response.body());
+    public CompletableFuture<SetEmailTemplateResponseContent> set(EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update an email template.
      */
-    public CompletableFuture<SetEmailTemplateResponseContent> set(
-            EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.set(templateName, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SetEmailTemplateResponseContent> set(EmailTemplateNameEnum templateName, SetEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
     public CompletableFuture<UpdateEmailTemplateResponseContent> update(EmailTemplateNameEnum templateName) {
-        return this.rawClient.update(templateName).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public CompletableFuture<UpdateEmailTemplateResponseContent> update(
-            EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
-        return this.rawClient.update(templateName, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateEmailTemplateResponseContent> update(EmailTemplateNameEnum templateName, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public CompletableFuture<UpdateEmailTemplateResponseContent> update(
-            EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request) {
-        return this.rawClient.update(templateName, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateEmailTemplateResponseContent> update(EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify an email template.
      */
-    public CompletableFuture<UpdateEmailTemplateResponseContent> update(
-            EmailTemplateNameEnum templateName,
-            UpdateEmailTemplateRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(templateName, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateEmailTemplateResponseContent> update(EmailTemplateNameEnum templateName, UpdateEmailTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsAd.Builder.class)
 public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> agentIp;
@@ -58,31 +59,11 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
 
     private final Optional<List<String>> thumbprints;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsAd(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> agentIp,
-            Optional<Boolean> agentMode,
-            Optional<String> agentVersion,
-            Optional<Boolean> bruteForceProtection,
-            Optional<Boolean> certAuth,
-            Optional<List<String>> certs,
-            Optional<Boolean> disableCache,
-            Optional<Boolean> disableSelfServiceChangePassword,
-            Optional<List<String>> domainAliases,
-            Optional<String> iconUrl,
-            Optional<List<String>> ips,
-            Optional<Boolean> kerberos,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<String> signInEndpoint,
-            Optional<String> tenantDomain,
-            Optional<List<String>> thumbprints,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsAd(Optional<List<String>> nonPersistentAttrs, Optional<String> agentIp, Optional<Boolean> agentMode, Optional<String> agentVersion, Optional<Boolean> bruteForceProtection, Optional<Boolean> certAuth, Optional<List<String>> certs, Optional<Boolean> disableCache, Optional<Boolean> disableSelfServiceChangePassword, Optional<List<String>> domainAliases, Optional<String> iconUrl, Optional<List<String>> ips, Optional<Boolean> kerberos, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<String> signInEndpoint, Optional<String> tenantDomain, Optional<List<String>> thumbprints, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.agentIp = agentIp;
         this.agentMode = agentMode;
@@ -107,27 +88,27 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("agentIP")
     public Optional<String> getAgentIp() {
-        return agentIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("agentMode")
     public Optional<Boolean> getAgentMode() {
-        return agentMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("agentVersion")
     public Optional<String> getAgentVersion() {
-        return agentVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("brute_force_protection")
     public Optional<Boolean> getBruteForceProtection() {
-        return bruteForceProtection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -135,12 +116,12 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
      */
     @JsonProperty("certAuth")
     public Optional<Boolean> getCertAuth() {
-        return certAuth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("certs")
     public Optional<List<String>> getCerts() {
-        return certs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -148,7 +129,7 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
      */
     @JsonProperty("disable_cache")
     public Optional<Boolean> getDisableCache() {
-        return disableCache;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -156,22 +137,22 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
      */
     @JsonProperty("disable_self_service_change_password")
     public Optional<Boolean> getDisableSelfServiceChangePassword() {
-        return disableSelfServiceChangePassword;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ips")
     public Optional<List<String>> getIps() {
-        return ips;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -179,111 +160,72 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
      */
     @JsonProperty("kerberos")
     public Optional<Boolean> getKerberos() {
-        return kerberos;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("signInEndpoint")
     public Optional<String> getSignInEndpoint() {
-        return signInEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("thumbprints")
     public Optional<List<String>> getThumbprints() {
-        return thumbprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsAd && equalTo((ConnectionOptionsAd) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsAd other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && agentIp.equals(other.agentIp)
-                && agentMode.equals(other.agentMode)
-                && agentVersion.equals(other.agentVersion)
-                && bruteForceProtection.equals(other.bruteForceProtection)
-                && certAuth.equals(other.certAuth)
-                && certs.equals(other.certs)
-                && disableCache.equals(other.disableCache)
-                && disableSelfServiceChangePassword.equals(other.disableSelfServiceChangePassword)
-                && domainAliases.equals(other.domainAliases)
-                && iconUrl.equals(other.iconUrl)
-                && ips.equals(other.ips)
-                && kerberos.equals(other.kerberos)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && signInEndpoint.equals(other.signInEndpoint)
-                && tenantDomain.equals(other.tenantDomain)
-                && thumbprints.equals(other.thumbprints)
-                && upstreamParams.equals(other.upstreamParams);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && agentIp.equals(other.agentIp) && agentMode.equals(other.agentMode) && agentVersion.equals(other.agentVersion) && bruteForceProtection.equals(other.bruteForceProtection) && certAuth.equals(other.certAuth) && certs.equals(other.certs) && disableCache.equals(other.disableCache) && disableSelfServiceChangePassword.equals(other.disableSelfServiceChangePassword) && domainAliases.equals(other.domainAliases) && iconUrl.equals(other.iconUrl) && ips.equals(other.ips) && kerberos.equals(other.kerberos) && setUserRootAttributes.equals(other.setUserRootAttributes) && signInEndpoint.equals(other.signInEndpoint) && tenantDomain.equals(other.tenantDomain) && thumbprints.equals(other.thumbprints) && upstreamParams.equals(other.upstreamParams);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.agentIp,
-                this.agentMode,
-                this.agentVersion,
-                this.bruteForceProtection,
-                this.certAuth,
-                this.certs,
-                this.disableCache,
-                this.disableSelfServiceChangePassword,
-                this.domainAliases,
-                this.iconUrl,
-                this.ips,
-                this.kerberos,
-                this.setUserRootAttributes,
-                this.signInEndpoint,
-                this.tenantDomain,
-                this.thumbprints,
-                this.upstreamParams);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> agentIp = Optional.empty();
@@ -318,89 +260,61 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
 
         private Optional<List<String>> thumbprints = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsAd other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            agentIp(other.getAgentIp());
-            agentMode(other.getAgentMode());
-            agentVersion(other.getAgentVersion());
-            bruteForceProtection(other.getBruteForceProtection());
-            certAuth(other.getCertAuth());
-            certs(other.getCerts());
-            disableCache(other.getDisableCache());
-            disableSelfServiceChangePassword(other.getDisableSelfServiceChangePassword());
-            domainAliases(other.getDomainAliases());
-            iconUrl(other.getIconUrl());
-            ips(other.getIps());
-            kerberos(other.getKerberos());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            signInEndpoint(other.getSignInEndpoint());
-            tenantDomain(other.getTenantDomain());
-            thumbprints(other.getThumbprints());
-            upstreamParams(other.getUpstreamParams());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "agentIP", nulls = Nulls.SKIP)
         public Builder agentIp(Optional<String> agentIp) {
-            this.agentIp = agentIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder agentIp(String agentIp) {
-            this.agentIp = Optional.ofNullable(agentIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "agentMode", nulls = Nulls.SKIP)
         public Builder agentMode(Optional<Boolean> agentMode) {
-            this.agentMode = agentMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder agentMode(Boolean agentMode) {
-            this.agentMode = Optional.ofNullable(agentMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "agentVersion", nulls = Nulls.SKIP)
         public Builder agentVersion(Optional<String> agentVersion) {
-            this.agentVersion = agentVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder agentVersion(String agentVersion) {
-            this.agentVersion = Optional.ofNullable(agentVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "brute_force_protection", nulls = Nulls.SKIP)
         public Builder bruteForceProtection(Optional<Boolean> bruteForceProtection) {
-            this.bruteForceProtection = bruteForceProtection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder bruteForceProtection(Boolean bruteForceProtection) {
-            this.bruteForceProtection = Optional.ofNullable(bruteForceProtection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -408,24 +322,20 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "certAuth", nulls = Nulls.SKIP)
         public Builder certAuth(Optional<Boolean> certAuth) {
-            this.certAuth = certAuth;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder certAuth(Boolean certAuth) {
-            this.certAuth = Optional.ofNullable(certAuth);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "certs", nulls = Nulls.SKIP)
         public Builder certs(Optional<List<String>> certs) {
-            this.certs = certs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder certs(List<String> certs) {
-            this.certs = Optional.ofNullable(certs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -433,13 +343,11 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "disable_cache", nulls = Nulls.SKIP)
         public Builder disableCache(Optional<Boolean> disableCache) {
-            this.disableCache = disableCache;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableCache(Boolean disableCache) {
-            this.disableCache = Optional.ofNullable(disableCache);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -447,46 +355,38 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "disable_self_service_change_password", nulls = Nulls.SKIP)
         public Builder disableSelfServiceChangePassword(Optional<Boolean> disableSelfServiceChangePassword) {
-            this.disableSelfServiceChangePassword = disableSelfServiceChangePassword;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableSelfServiceChangePassword(Boolean disableSelfServiceChangePassword) {
-            this.disableSelfServiceChangePassword = Optional.ofNullable(disableSelfServiceChangePassword);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public Builder domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public Builder iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "ips", nulls = Nulls.SKIP)
         public Builder ips(Optional<List<String>> ips) {
-            this.ips = ips;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ips(List<String> ips) {
-            this.ips = Optional.ofNullable(ips);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -494,129 +394,76 @@ public final class ConnectionOptionsAd implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "kerberos", nulls = Nulls.SKIP)
         public Builder kerberos(Optional<Boolean> kerberos) {
-            this.kerberos = kerberos;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder kerberos(Boolean kerberos) {
-            this.kerberos = Optional.ofNullable(kerberos);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signInEndpoint", nulls = Nulls.SKIP)
         public Builder signInEndpoint(Optional<String> signInEndpoint) {
-            this.signInEndpoint = signInEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signInEndpoint(String signInEndpoint) {
-            this.signInEndpoint = Optional.ofNullable(signInEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public Builder tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "thumbprints", nulls = Nulls.SKIP)
         public Builder thumbprints(Optional<List<String>> thumbprints) {
-            this.thumbprints = thumbprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder thumbprints(List<String> thumbprints) {
-            this.thumbprints = Optional.ofNullable(thumbprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsAd build() {
-            return new ConnectionOptionsAd(
-                    nonPersistentAttrs,
-                    agentIp,
-                    agentMode,
-                    agentVersion,
-                    bruteForceProtection,
-                    certAuth,
-                    certs,
-                    disableCache,
-                    disableSelfServiceChangePassword,
-                    domainAliases,
-                    iconUrl,
-                    ips,
-                    kerberos,
-                    setUserRootAttributes,
-                    signInEndpoint,
-                    tenantDomain,
-                    thumbprints,
-                    upstreamParams,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsEmail.Builder.class)
 public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> authParams;
@@ -38,15 +39,7 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsEmail(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> authParams,
-            boolean bruteForceProtection,
-            Optional<Boolean> disableSignup,
-            ConnectionEmailEmail email,
-            String name,
-            Optional<ConnectionTotpEmail> totp,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsEmail(Optional<List<String>> nonPersistentAttrs, Optional<String> authParams, boolean bruteForceProtection, Optional<Boolean> disableSignup, ConnectionEmailEmail email, String name, Optional<ConnectionTotpEmail> totp, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.authParams = authParams;
         this.bruteForceProtection = bruteForceProtection;
@@ -60,27 +53,27 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("authParams")
     public Optional<String> getAuthParams() {
-        return authParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("brute_force_protection")
     public boolean getBruteForceProtection() {
-        return bruteForceProtection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("disable_signup")
     public Optional<Boolean> getDisableSignup() {
-        return disableSignup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("email")
     public ConnectionEmailEmail getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,67 +81,56 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("totp")
     public Optional<ConnectionTotpEmail> getTotp() {
-        return totp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsEmail && equalTo((ConnectionOptionsEmail) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsEmail other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && authParams.equals(other.authParams)
-                && bruteForceProtection == other.bruteForceProtection
-                && disableSignup.equals(other.disableSignup)
-                && email.equals(other.email)
-                && name.equals(other.name)
-                && totp.equals(other.totp);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && authParams.equals(other.authParams) && bruteForceProtection == other.bruteForceProtection && disableSignup.equals(other.disableSignup) && email.equals(other.email) && name.equals(other.name) && totp.equals(other.totp);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.authParams,
-                this.bruteForceProtection,
-                this.disableSignup,
-                this.email,
-                this.name,
-                this.totp);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static BruteForceProtectionStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface BruteForceProtectionStage {
+
         EmailStage bruteForceProtection(boolean bruteForceProtection);
 
         Builder from(ConnectionOptionsEmail other);
     }
 
     public interface EmailStage {
+
         NameStage email(@NotNull ConnectionEmailEmail email);
     }
 
     public interface NameStage {
+
         /**
          * <p>Connection name</p>
          */
@@ -156,6 +138,7 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsEmail build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -181,6 +164,7 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements BruteForceProtectionStage, EmailStage, NameStage, _FinalStage {
+
         private boolean bruteForceProtection;
 
         private ConnectionEmailEmail email;
@@ -198,32 +182,24 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsEmail other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            authParams(other.getAuthParams());
-            bruteForceProtection(other.getBruteForceProtection());
-            disableSignup(other.getDisableSignup());
-            email(other.getEmail());
-            name(other.getName());
-            totp(other.getTotp());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("brute_force_protection")
         public EmailStage bruteForceProtection(boolean bruteForceProtection) {
-            this.bruteForceProtection = bruteForceProtection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("email")
         public NameStage email(@NotNull ConnectionEmailEmail email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -234,85 +210,66 @@ public final class ConnectionOptionsEmail implements IConnectionOptionsCommon {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage totp(ConnectionTotpEmail totp) {
-            this.totp = Optional.ofNullable(totp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "totp", nulls = Nulls.SKIP)
         public _FinalStage totp(Optional<ConnectionTotpEmail> totp) {
-            this.totp = totp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage disableSignup(Boolean disableSignup) {
-            this.disableSignup = Optional.ofNullable(disableSignup);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "disable_signup", nulls = Nulls.SKIP)
         public _FinalStage disableSignup(Optional<Boolean> disableSignup) {
-            this.disableSignup = disableSignup;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage authParams(String authParams) {
-            this.authParams = Optional.ofNullable(authParams);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "authParams", nulls = Nulls.SKIP)
         public _FinalStage authParams(Optional<String> authParams) {
-            this.authParams = authParams;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsEmail build() {
-            return new ConnectionOptionsEmail(
-                    nonPersistentAttrs,
-                    authParams,
-                    bruteForceProtection,
-                    disableSignup,
-                    email,
-                    name,
-                    totp,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

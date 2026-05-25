@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListCustomDomainsRequestParameters.Builder.class)
 public final class ListCustomDomainsRequestParameters {
+
     private final OptionalNullable<String> q;
 
     private final OptionalNullable<String> fields;
@@ -32,12 +33,7 @@ public final class ListCustomDomainsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListCustomDomainsRequestParameters(
-            OptionalNullable<String> q,
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            OptionalNullable<String> sort,
-            Map<String, Object> additionalProperties) {
+    private ListCustomDomainsRequestParameters(OptionalNullable<String> q, OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, OptionalNullable<String> sort, Map<String, Object> additionalProperties) {
         this.q = q;
         this.fields = fields;
         this.includeFields = includeFields;
@@ -50,10 +46,7 @@ public final class ListCustomDomainsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getQ() {
-        if (q == null) {
-            return OptionalNullable.absent();
-        }
-        return q;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,10 +54,7 @@ public final class ListCustomDomainsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,10 +62,7 @@ public final class ListCustomDomainsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,47 +70,40 @@ public final class ListCustomDomainsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getSort() {
-        if (sort == null) {
-            return OptionalNullable.absent();
-        }
-        return sort;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListCustomDomainsRequestParameters
-                && equalTo((ListCustomDomainsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListCustomDomainsRequestParameters other) {
-        return q.equals(other.q)
-                && fields.equals(other.fields)
-                && includeFields.equals(other.includeFields)
-                && sort.equals(other.sort);
+        return q.equals(other.q) && fields.equals(other.fields) && includeFields.equals(other.includeFields) && sort.equals(other.sort);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.q, this.fields, this.includeFields, this.sort);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> q = OptionalNullable.absent();
 
         private OptionalNullable<String> fields = OptionalNullable.absent();
@@ -135,14 +115,11 @@ public final class ListCustomDomainsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListCustomDomainsRequestParameters other) {
-            q(other.getQ());
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            sort(other.getSort());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,33 +127,19 @@ public final class ListCustomDomainsRequestParameters {
          */
         @JsonSetter(value = "q", nulls = Nulls.SKIP)
         public Builder q(@Nullable OptionalNullable<String> q) {
-            this.q = q;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(String q) {
-            this.q = OptionalNullable.of(q);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(Optional<String> q) {
-            if (q.isPresent()) {
-                this.q = OptionalNullable.of(q.get());
-            } else {
-                this.q = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder q(com.auth0.client.mgmt.core.Nullable<String> q) {
-            if (q.isNull()) {
-                this.q = OptionalNullable.ofNull();
-            } else if (q.isEmpty()) {
-                this.q = OptionalNullable.absent();
-            } else {
-                this.q = OptionalNullable.of(q.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,33 +147,19 @@ public final class ListCustomDomainsRequestParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -218,33 +167,19 @@ public final class ListCustomDomainsRequestParameters {
          */
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public Builder includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -252,47 +187,31 @@ public final class ListCustomDomainsRequestParameters {
          */
         @JsonSetter(value = "sort", nulls = Nulls.SKIP)
         public Builder sort(@Nullable OptionalNullable<String> sort) {
-            this.sort = sort;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sort(String sort) {
-            this.sort = OptionalNullable.of(sort);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sort(Optional<String> sort) {
-            if (sort.isPresent()) {
-                this.sort = OptionalNullable.of(sort.get());
-            } else {
-                this.sort = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sort(com.auth0.client.mgmt.core.Nullable<String> sort) {
-            if (sort.isNull()) {
-                this.sort = OptionalNullable.ofNull();
-            } else if (sort.isEmpty()) {
-                this.sort = OptionalNullable.absent();
-            } else {
-                this.sort = OptionalNullable.of(sort.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListCustomDomainsRequestParameters build() {
-            return new ListCustomDomainsRequestParameters(q, fields, includeFields, sort, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

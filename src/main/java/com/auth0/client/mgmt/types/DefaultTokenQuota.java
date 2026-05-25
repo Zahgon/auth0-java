@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DefaultTokenQuota.Builder.class)
 public final class DefaultTokenQuota {
+
     private final Optional<TokenQuotaConfiguration> clients;
 
     private final Optional<TokenQuotaConfiguration> organizations;
 
     private final Map<String, Object> additionalProperties;
 
-    private DefaultTokenQuota(
-            Optional<TokenQuotaConfiguration> clients,
-            Optional<TokenQuotaConfiguration> organizations,
-            Map<String, Object> additionalProperties) {
+    private DefaultTokenQuota(Optional<TokenQuotaConfiguration> clients, Optional<TokenQuotaConfiguration> organizations, Map<String, Object> additionalProperties) {
         this.clients = clients;
         this.organizations = organizations;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class DefaultTokenQuota {
 
     @JsonProperty("clients")
     public Optional<TokenQuotaConfiguration> getClients() {
-        return clients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organizations")
     public Optional<TokenQuotaConfiguration> getOrganizations() {
-        return organizations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DefaultTokenQuota && equalTo((DefaultTokenQuota) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DefaultTokenQuota other) {
@@ -62,20 +59,21 @@ public final class DefaultTokenQuota {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clients, this.organizations);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<TokenQuotaConfiguration> clients = Optional.empty();
 
         private Optional<TokenQuotaConfiguration> organizations = Optional.empty();
@@ -83,48 +81,41 @@ public final class DefaultTokenQuota {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(DefaultTokenQuota other) {
-            clients(other.getClients());
-            organizations(other.getOrganizations());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "clients", nulls = Nulls.SKIP)
         public Builder clients(Optional<TokenQuotaConfiguration> clients) {
-            this.clients = clients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clients(TokenQuotaConfiguration clients) {
-            this.clients = Optional.ofNullable(clients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organizations", nulls = Nulls.SKIP)
         public Builder organizations(Optional<TokenQuotaConfiguration> organizations) {
-            this.organizations = organizations;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizations(TokenQuotaConfiguration organizations) {
-            this.organizations = Optional.ofNullable(organizations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public DefaultTokenQuota build() {
-            return new DefaultTokenQuota(clients, organizations, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

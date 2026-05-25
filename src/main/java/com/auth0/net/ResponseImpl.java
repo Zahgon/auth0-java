@@ -6,7 +6,9 @@ import java.util.Map;
 class ResponseImpl<T> implements Response<T> {
 
     private final Map<String, String> headers;
+
     private final T body;
+
     private final int statusCode;
 
     ResponseImpl(Map<String, String> headers, T body, int statusCode) {
@@ -17,16 +19,16 @@ class ResponseImpl<T> implements Response<T> {
 
     @Override
     public Map<String, String> getHeaders() {
-        return headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T getBody() {
-        return body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int getStatusCode() {
-        return statusCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

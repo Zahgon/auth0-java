@@ -19,17 +19,16 @@ public class PushedAuthorizationResponse {
     private Integer expiresIn;
 
     @JsonCreator
-    public PushedAuthorizationResponse(
-            @JsonProperty("request_uri") String requestURI, @JsonProperty("expires_in") Integer expiresIn) {
+    public PushedAuthorizationResponse(@JsonProperty("request_uri") String requestURI, @JsonProperty("expires_in") Integer expiresIn) {
         this.requestURI = requestURI;
         this.expiresIn = expiresIn;
     }
 
     public String getRequestURI() {
-        return requestURI;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Integer getExpiresIn() {
-        return expiresIn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

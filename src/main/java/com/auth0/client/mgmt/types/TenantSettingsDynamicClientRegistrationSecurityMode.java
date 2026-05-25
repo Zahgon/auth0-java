@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class TenantSettingsDynamicClientRegistrationSecurityMode {
-    public static final TenantSettingsDynamicClientRegistrationSecurityMode PERMISSIVE =
-            new TenantSettingsDynamicClientRegistrationSecurityMode(Value.PERMISSIVE, "permissive");
 
-    public static final TenantSettingsDynamicClientRegistrationSecurityMode STRICT =
-            new TenantSettingsDynamicClientRegistrationSecurityMode(Value.STRICT, "strict");
+    public static final TenantSettingsDynamicClientRegistrationSecurityMode PERMISSIVE = new TenantSettingsDynamicClientRegistrationSecurityMode(Value.PERMISSIVE, "permissive");
+
+    public static final TenantSettingsDynamicClientRegistrationSecurityMode STRICT = new TenantSettingsDynamicClientRegistrationSecurityMode(Value.STRICT, "strict");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class TenantSettingsDynamicClientRegistrationSecurityMode {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof TenantSettingsDynamicClientRegistrationSecurityMode
-                        && this.string.equals(((TenantSettingsDynamicClientRegistrationSecurityMode) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PERMISSIVE:
-                return visitor.visitPermissive();
-            case STRICT:
-                return visitor.visitStrict();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static TenantSettingsDynamicClientRegistrationSecurityMode valueOf(String value) {
-        switch (value) {
-            case "permissive":
-                return PERMISSIVE;
-            case "strict":
-                return STRICT;
-            default:
-                return new TenantSettingsDynamicClientRegistrationSecurityMode(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        STRICT,
 
-        PERMISSIVE,
-
-        UNKNOWN
+        STRICT, PERMISSIVE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitStrict();
 
         T visitPermissive();

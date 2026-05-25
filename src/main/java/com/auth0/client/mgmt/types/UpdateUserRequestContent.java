@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateUserRequestContent.Builder.class)
 public final class UpdateUserRequestContent {
+
     private final Optional<Boolean> blocked;
 
     private final Optional<Boolean> emailVerified;
@@ -61,26 +62,7 @@ public final class UpdateUserRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateUserRequestContent(
-            Optional<Boolean> blocked,
-            Optional<Boolean> emailVerified,
-            OptionalNullable<String> email,
-            OptionalNullable<String> phoneNumber,
-            Optional<Boolean> phoneVerified,
-            Optional<Map<String, Object>> userMetadata,
-            Optional<Map<String, Object>> appMetadata,
-            OptionalNullable<String> givenName,
-            OptionalNullable<String> familyName,
-            OptionalNullable<String> name,
-            OptionalNullable<String> nickname,
-            OptionalNullable<String> picture,
-            Optional<Boolean> verifyEmail,
-            Optional<Boolean> verifyPhoneNumber,
-            OptionalNullable<String> password,
-            Optional<String> connection,
-            Optional<String> clientId,
-            OptionalNullable<String> username,
-            Map<String, Object> additionalProperties) {
+    private UpdateUserRequestContent(Optional<Boolean> blocked, Optional<Boolean> emailVerified, OptionalNullable<String> email, OptionalNullable<String> phoneNumber, Optional<Boolean> phoneVerified, Optional<Map<String, Object>> userMetadata, Optional<Map<String, Object>> appMetadata, OptionalNullable<String> givenName, OptionalNullable<String> familyName, OptionalNullable<String> name, OptionalNullable<String> nickname, OptionalNullable<String> picture, Optional<Boolean> verifyEmail, Optional<Boolean> verifyPhoneNumber, OptionalNullable<String> password, Optional<String> connection, Optional<String> clientId, OptionalNullable<String> username, Map<String, Object> additionalProperties) {
         this.blocked = blocked;
         this.emailVerified = emailVerified;
         this.email = email;
@@ -107,7 +89,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("blocked")
     public Optional<Boolean> getBlocked() {
-        return blocked;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +97,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("email_verified")
     public Optional<Boolean> getEmailVerified() {
-        return emailVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,10 +106,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("email")
     public OptionalNullable<String> getEmail() {
-        if (email == null) {
-            return OptionalNullable.absent();
-        }
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -136,10 +115,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("phone_number")
     public OptionalNullable<String> getPhoneNumber() {
-        if (phoneNumber == null) {
-            return OptionalNullable.absent();
-        }
-        return phoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -147,7 +123,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("phone_verified")
     public Optional<Boolean> getPhoneVerified() {
-        return phoneVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -155,7 +131,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("user_metadata")
     public Optional<Map<String, Object>> getUserMetadata() {
-        return userMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -163,7 +139,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("app_metadata")
     public Optional<Map<String, Object>> getAppMetadata() {
-        return appMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -172,10 +148,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("given_name")
     public OptionalNullable<String> getGivenName() {
-        if (givenName == null) {
-            return OptionalNullable.absent();
-        }
-        return givenName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -184,10 +157,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("family_name")
     public OptionalNullable<String> getFamilyName() {
-        if (familyName == null) {
-            return OptionalNullable.absent();
-        }
-        return familyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -196,10 +166,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("name")
     public OptionalNullable<String> getName() {
-        if (name == null) {
-            return OptionalNullable.absent();
-        }
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -208,10 +175,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("nickname")
     public OptionalNullable<String> getNickname() {
-        if (nickname == null) {
-            return OptionalNullable.absent();
-        }
-        return nickname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -220,10 +184,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("picture")
     public OptionalNullable<String> getPicture() {
-        if (picture == null) {
-            return OptionalNullable.absent();
-        }
-        return picture;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -231,7 +192,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("verify_email")
     public Optional<Boolean> getVerifyEmail() {
-        return verifyEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -239,7 +200,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("verify_phone_number")
     public Optional<Boolean> getVerifyPhoneNumber() {
-        return verifyPhoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -248,10 +209,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("password")
     public OptionalNullable<String> getPassword() {
-        if (password == null) {
-            return OptionalNullable.absent();
-        }
-        return password;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -259,7 +217,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("connection")
     public Optional<String> getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -267,7 +225,7 @@ public final class UpdateUserRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -276,10 +234,7 @@ public final class UpdateUserRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("username")
     public OptionalNullable<String> getUsername() {
-        if (username == null) {
-            return OptionalNullable.absent();
-        }
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -338,70 +293,35 @@ public final class UpdateUserRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateUserRequestContent && equalTo((UpdateUserRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateUserRequestContent other) {
-        return blocked.equals(other.blocked)
-                && emailVerified.equals(other.emailVerified)
-                && email.equals(other.email)
-                && phoneNumber.equals(other.phoneNumber)
-                && phoneVerified.equals(other.phoneVerified)
-                && userMetadata.equals(other.userMetadata)
-                && appMetadata.equals(other.appMetadata)
-                && givenName.equals(other.givenName)
-                && familyName.equals(other.familyName)
-                && name.equals(other.name)
-                && nickname.equals(other.nickname)
-                && picture.equals(other.picture)
-                && verifyEmail.equals(other.verifyEmail)
-                && verifyPhoneNumber.equals(other.verifyPhoneNumber)
-                && password.equals(other.password)
-                && connection.equals(other.connection)
-                && clientId.equals(other.clientId)
-                && username.equals(other.username);
+        return blocked.equals(other.blocked) && emailVerified.equals(other.emailVerified) && email.equals(other.email) && phoneNumber.equals(other.phoneNumber) && phoneVerified.equals(other.phoneVerified) && userMetadata.equals(other.userMetadata) && appMetadata.equals(other.appMetadata) && givenName.equals(other.givenName) && familyName.equals(other.familyName) && name.equals(other.name) && nickname.equals(other.nickname) && picture.equals(other.picture) && verifyEmail.equals(other.verifyEmail) && verifyPhoneNumber.equals(other.verifyPhoneNumber) && password.equals(other.password) && connection.equals(other.connection) && clientId.equals(other.clientId) && username.equals(other.username);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.blocked,
-                this.emailVerified,
-                this.email,
-                this.phoneNumber,
-                this.phoneVerified,
-                this.userMetadata,
-                this.appMetadata,
-                this.givenName,
-                this.familyName,
-                this.name,
-                this.nickname,
-                this.picture,
-                this.verifyEmail,
-                this.verifyPhoneNumber,
-                this.password,
-                this.connection,
-                this.clientId,
-                this.username);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> blocked = Optional.empty();
 
         private Optional<Boolean> emailVerified = Optional.empty();
@@ -441,28 +361,11 @@ public final class UpdateUserRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateUserRequestContent other) {
-            blocked(other.getBlocked());
-            emailVerified(other.getEmailVerified());
-            email(other.getEmail());
-            phoneNumber(other.getPhoneNumber());
-            phoneVerified(other.getPhoneVerified());
-            userMetadata(other.getUserMetadata());
-            appMetadata(other.getAppMetadata());
-            givenName(other.getGivenName());
-            familyName(other.getFamilyName());
-            name(other.getName());
-            nickname(other.getNickname());
-            picture(other.getPicture());
-            verifyEmail(other.getVerifyEmail());
-            verifyPhoneNumber(other.getVerifyPhoneNumber());
-            password(other.getPassword());
-            connection(other.getConnection());
-            clientId(other.getClientId());
-            username(other.getUsername());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -470,13 +373,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "blocked", nulls = Nulls.SKIP)
         public Builder blocked(Optional<Boolean> blocked) {
-            this.blocked = blocked;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder blocked(Boolean blocked) {
-            this.blocked = Optional.ofNullable(blocked);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -484,13 +385,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "email_verified", nulls = Nulls.SKIP)
         public Builder emailVerified(Optional<Boolean> emailVerified) {
-            this.emailVerified = emailVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder emailVerified(Boolean emailVerified) {
-            this.emailVerified = Optional.ofNullable(emailVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -498,33 +397,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(@Nullable OptionalNullable<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(String email) {
-            this.email = OptionalNullable.of(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Optional<String> email) {
-            if (email.isPresent()) {
-                this.email = OptionalNullable.of(email.get());
-            } else {
-                this.email = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(com.auth0.client.mgmt.core.Nullable<String> email) {
-            if (email.isNull()) {
-                this.email = OptionalNullable.ofNull();
-            } else if (email.isEmpty()) {
-                this.email = OptionalNullable.absent();
-            } else {
-                this.email = OptionalNullable.of(email.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -532,33 +417,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "phone_number", nulls = Nulls.SKIP)
         public Builder phoneNumber(@Nullable OptionalNullable<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = OptionalNullable.of(phoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(Optional<String> phoneNumber) {
-            if (phoneNumber.isPresent()) {
-                this.phoneNumber = OptionalNullable.of(phoneNumber.get());
-            } else {
-                this.phoneNumber = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneNumber(com.auth0.client.mgmt.core.Nullable<String> phoneNumber) {
-            if (phoneNumber.isNull()) {
-                this.phoneNumber = OptionalNullable.ofNull();
-            } else if (phoneNumber.isEmpty()) {
-                this.phoneNumber = OptionalNullable.absent();
-            } else {
-                this.phoneNumber = OptionalNullable.of(phoneNumber.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -566,13 +437,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "phone_verified", nulls = Nulls.SKIP)
         public Builder phoneVerified(Optional<Boolean> phoneVerified) {
-            this.phoneVerified = phoneVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneVerified(Boolean phoneVerified) {
-            this.phoneVerified = Optional.ofNullable(phoneVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -580,13 +449,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "user_metadata", nulls = Nulls.SKIP)
         public Builder userMetadata(Optional<Map<String, Object>> userMetadata) {
-            this.userMetadata = userMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userMetadata(Map<String, Object> userMetadata) {
-            this.userMetadata = Optional.ofNullable(userMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -594,13 +461,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "app_metadata", nulls = Nulls.SKIP)
         public Builder appMetadata(Optional<Map<String, Object>> appMetadata) {
-            this.appMetadata = appMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appMetadata(Map<String, Object> appMetadata) {
-            this.appMetadata = Optional.ofNullable(appMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -608,33 +473,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "given_name", nulls = Nulls.SKIP)
         public Builder givenName(@Nullable OptionalNullable<String> givenName) {
-            this.givenName = givenName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenName(String givenName) {
-            this.givenName = OptionalNullable.of(givenName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenName(Optional<String> givenName) {
-            if (givenName.isPresent()) {
-                this.givenName = OptionalNullable.of(givenName.get());
-            } else {
-                this.givenName = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder givenName(com.auth0.client.mgmt.core.Nullable<String> givenName) {
-            if (givenName.isNull()) {
-                this.givenName = OptionalNullable.ofNull();
-            } else if (givenName.isEmpty()) {
-                this.givenName = OptionalNullable.absent();
-            } else {
-                this.givenName = OptionalNullable.of(givenName.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -642,33 +493,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "family_name", nulls = Nulls.SKIP)
         public Builder familyName(@Nullable OptionalNullable<String> familyName) {
-            this.familyName = familyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyName(String familyName) {
-            this.familyName = OptionalNullable.of(familyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyName(Optional<String> familyName) {
-            if (familyName.isPresent()) {
-                this.familyName = OptionalNullable.of(familyName.get());
-            } else {
-                this.familyName = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder familyName(com.auth0.client.mgmt.core.Nullable<String> familyName) {
-            if (familyName.isNull()) {
-                this.familyName = OptionalNullable.ofNull();
-            } else if (familyName.isEmpty()) {
-                this.familyName = OptionalNullable.absent();
-            } else {
-                this.familyName = OptionalNullable.of(familyName.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -676,33 +513,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(@Nullable OptionalNullable<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = OptionalNullable.of(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(Optional<String> name) {
-            if (name.isPresent()) {
-                this.name = OptionalNullable.of(name.get());
-            } else {
-                this.name = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(com.auth0.client.mgmt.core.Nullable<String> name) {
-            if (name.isNull()) {
-                this.name = OptionalNullable.ofNull();
-            } else if (name.isEmpty()) {
-                this.name = OptionalNullable.absent();
-            } else {
-                this.name = OptionalNullable.of(name.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -710,33 +533,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "nickname", nulls = Nulls.SKIP)
         public Builder nickname(@Nullable OptionalNullable<String> nickname) {
-            this.nickname = nickname;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nickname(String nickname) {
-            this.nickname = OptionalNullable.of(nickname);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nickname(Optional<String> nickname) {
-            if (nickname.isPresent()) {
-                this.nickname = OptionalNullable.of(nickname.get());
-            } else {
-                this.nickname = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nickname(com.auth0.client.mgmt.core.Nullable<String> nickname) {
-            if (nickname.isNull()) {
-                this.nickname = OptionalNullable.ofNull();
-            } else if (nickname.isEmpty()) {
-                this.nickname = OptionalNullable.absent();
-            } else {
-                this.nickname = OptionalNullable.of(nickname.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -744,33 +553,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "picture", nulls = Nulls.SKIP)
         public Builder picture(@Nullable OptionalNullable<String> picture) {
-            this.picture = picture;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picture(String picture) {
-            this.picture = OptionalNullable.of(picture);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picture(Optional<String> picture) {
-            if (picture.isPresent()) {
-                this.picture = OptionalNullable.of(picture.get());
-            } else {
-                this.picture = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder picture(com.auth0.client.mgmt.core.Nullable<String> picture) {
-            if (picture.isNull()) {
-                this.picture = OptionalNullable.ofNull();
-            } else if (picture.isEmpty()) {
-                this.picture = OptionalNullable.absent();
-            } else {
-                this.picture = OptionalNullable.of(picture.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -778,13 +573,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "verify_email", nulls = Nulls.SKIP)
         public Builder verifyEmail(Optional<Boolean> verifyEmail) {
-            this.verifyEmail = verifyEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verifyEmail(Boolean verifyEmail) {
-            this.verifyEmail = Optional.ofNullable(verifyEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -792,13 +585,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "verify_phone_number", nulls = Nulls.SKIP)
         public Builder verifyPhoneNumber(Optional<Boolean> verifyPhoneNumber) {
-            this.verifyPhoneNumber = verifyPhoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder verifyPhoneNumber(Boolean verifyPhoneNumber) {
-            this.verifyPhoneNumber = Optional.ofNullable(verifyPhoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -806,33 +597,19 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "password", nulls = Nulls.SKIP)
         public Builder password(@Nullable OptionalNullable<String> password) {
-            this.password = password;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder password(String password) {
-            this.password = OptionalNullable.of(password);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder password(Optional<String> password) {
-            if (password.isPresent()) {
-                this.password = OptionalNullable.of(password.get());
-            } else {
-                this.password = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder password(com.auth0.client.mgmt.core.Nullable<String> password) {
-            if (password.isNull()) {
-                this.password = OptionalNullable.ofNull();
-            } else if (password.isEmpty()) {
-                this.password = OptionalNullable.absent();
-            } else {
-                this.password = OptionalNullable.of(password.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -840,13 +617,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "connection", nulls = Nulls.SKIP)
         public Builder connection(Optional<String> connection) {
-            this.connection = connection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connection(String connection) {
-            this.connection = Optional.ofNullable(connection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -854,13 +629,11 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -868,66 +641,31 @@ public final class UpdateUserRequestContent {
          */
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public Builder username(@Nullable OptionalNullable<String> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(String username) {
-            this.username = OptionalNullable.of(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(Optional<String> username) {
-            if (username.isPresent()) {
-                this.username = OptionalNullable.of(username.get());
-            } else {
-                this.username = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(com.auth0.client.mgmt.core.Nullable<String> username) {
-            if (username.isNull()) {
-                this.username = OptionalNullable.ofNull();
-            } else if (username.isEmpty()) {
-                this.username = OptionalNullable.absent();
-            } else {
-                this.username = OptionalNullable.of(username.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateUserRequestContent build() {
-            return new UpdateUserRequestContent(
-                    blocked,
-                    emailVerified,
-                    email,
-                    phoneNumber,
-                    phoneVerified,
-                    userMetadata,
-                    appMetadata,
-                    givenName,
-                    familyName,
-                    name,
-                    nickname,
-                    picture,
-                    verifyEmail,
-                    verifyPhoneNumber,
-                    password,
-                    connection,
-                    clientId,
-                    username,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SuspiciousIpThrottlingStage.Builder.class)
 public final class SuspiciousIpThrottlingStage {
+
     private final Optional<SuspiciousIpThrottlingPreLoginStage> preLogin;
 
     private final Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration;
 
     private final Map<String, Object> additionalProperties;
 
-    private SuspiciousIpThrottlingStage(
-            Optional<SuspiciousIpThrottlingPreLoginStage> preLogin,
-            Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration,
-            Map<String, Object> additionalProperties) {
+    private SuspiciousIpThrottlingStage(Optional<SuspiciousIpThrottlingPreLoginStage> preLogin, Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration, Map<String, Object> additionalProperties) {
         this.preLogin = preLogin;
         this.preUserRegistration = preUserRegistration;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class SuspiciousIpThrottlingStage {
 
     @JsonProperty("pre-login")
     public Optional<SuspiciousIpThrottlingPreLoginStage> getPreLogin() {
-        return preLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pre-user-registration")
     public Optional<SuspiciousIpThrottlingPreUserRegistrationStage> getPreUserRegistration() {
-        return preUserRegistration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SuspiciousIpThrottlingStage && equalTo((SuspiciousIpThrottlingStage) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SuspiciousIpThrottlingStage other) {
@@ -62,20 +59,21 @@ public final class SuspiciousIpThrottlingStage {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.preLogin, this.preUserRegistration);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<SuspiciousIpThrottlingPreLoginStage> preLogin = Optional.empty();
 
         private Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration = Optional.empty();
@@ -83,49 +81,41 @@ public final class SuspiciousIpThrottlingStage {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SuspiciousIpThrottlingStage other) {
-            preLogin(other.getPreLogin());
-            preUserRegistration(other.getPreUserRegistration());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pre-login", nulls = Nulls.SKIP)
         public Builder preLogin(Optional<SuspiciousIpThrottlingPreLoginStage> preLogin) {
-            this.preLogin = preLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder preLogin(SuspiciousIpThrottlingPreLoginStage preLogin) {
-            this.preLogin = Optional.ofNullable(preLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pre-user-registration", nulls = Nulls.SKIP)
-        public Builder preUserRegistration(
-                Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration) {
-            this.preUserRegistration = preUserRegistration;
-            return this;
+        public Builder preUserRegistration(Optional<SuspiciousIpThrottlingPreUserRegistrationStage> preUserRegistration) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder preUserRegistration(SuspiciousIpThrottlingPreUserRegistrationStage preUserRegistration) {
-            this.preUserRegistration = Optional.ofNullable(preUserRegistration);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SuspiciousIpThrottlingStage build() {
-            return new SuspiciousIpThrottlingStage(preLogin, preUserRegistration, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

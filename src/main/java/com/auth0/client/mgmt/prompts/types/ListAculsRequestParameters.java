@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListAculsRequestParameters.Builder.class)
 public final class ListAculsRequestParameters {
+
     private final OptionalNullable<String> fields;
 
     private final OptionalNullable<Boolean> includeFields;
@@ -41,16 +42,7 @@ public final class ListAculsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListAculsRequestParameters(
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            OptionalNullable<Integer> page,
-            OptionalNullable<Integer> perPage,
-            OptionalNullable<Boolean> includeTotals,
-            OptionalNullable<String> prompt,
-            OptionalNullable<String> screen,
-            OptionalNullable<AculRenderingModeEnum> renderingMode,
-            Map<String, Object> additionalProperties) {
+    private ListAculsRequestParameters(OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, OptionalNullable<Integer> page, OptionalNullable<Integer> perPage, OptionalNullable<Boolean> includeTotals, OptionalNullable<String> prompt, OptionalNullable<String> screen, OptionalNullable<AculRenderingModeEnum> renderingMode, Map<String, Object> additionalProperties) {
         this.fields = fields;
         this.includeFields = includeFields;
         this.page = page;
@@ -67,10 +59,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,10 +67,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,10 +75,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPage() {
-        if (page == null) {
-            return OptionalNullable.absent();
-        }
-        return page;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,10 +83,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPerPage() {
-        if (perPage == null) {
-            return OptionalNullable.absent();
-        }
-        return perPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,10 +91,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeTotals() {
-        if (includeTotals == null) {
-            return OptionalNullable.absent();
-        }
-        return includeTotals;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,10 +99,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getPrompt() {
-        if (prompt == null) {
-            return OptionalNullable.absent();
-        }
-        return prompt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,10 +107,7 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getScreen() {
-        if (screen == null) {
-            return OptionalNullable.absent();
-        }
-        return screen;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -144,58 +115,40 @@ public final class ListAculsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<AculRenderingModeEnum> getRenderingMode() {
-        if (renderingMode == null) {
-            return OptionalNullable.absent();
-        }
-        return renderingMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListAculsRequestParameters && equalTo((ListAculsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListAculsRequestParameters other) {
-        return fields.equals(other.fields)
-                && includeFields.equals(other.includeFields)
-                && page.equals(other.page)
-                && perPage.equals(other.perPage)
-                && includeTotals.equals(other.includeTotals)
-                && prompt.equals(other.prompt)
-                && screen.equals(other.screen)
-                && renderingMode.equals(other.renderingMode);
+        return fields.equals(other.fields) && includeFields.equals(other.includeFields) && page.equals(other.page) && perPage.equals(other.perPage) && includeTotals.equals(other.includeTotals) && prompt.equals(other.prompt) && screen.equals(other.screen) && renderingMode.equals(other.renderingMode);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.fields,
-                this.includeFields,
-                this.page,
-                this.perPage,
-                this.includeTotals,
-                this.prompt,
-                this.screen,
-                this.renderingMode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> fields = OptionalNullable.absent();
 
         private OptionalNullable<Boolean> includeFields = OptionalNullable.absent();
@@ -215,18 +168,11 @@ public final class ListAculsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListAculsRequestParameters other) {
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            page(other.getPage());
-            perPage(other.getPerPage());
-            includeTotals(other.getIncludeTotals());
-            prompt(other.getPrompt());
-            screen(other.getScreen());
-            renderingMode(other.getRenderingMode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -234,33 +180,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -268,33 +200,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public Builder includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -302,33 +220,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "page", nulls = Nulls.SKIP)
         public Builder page(@Nullable OptionalNullable<Integer> page) {
-            this.page = page;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Integer page) {
-            this.page = OptionalNullable.of(page);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Optional<Integer> page) {
-            if (page.isPresent()) {
-                this.page = OptionalNullable.of(page.get());
-            } else {
-                this.page = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(com.auth0.client.mgmt.core.Nullable<Integer> page) {
-            if (page.isNull()) {
-                this.page = OptionalNullable.ofNull();
-            } else if (page.isEmpty()) {
-                this.page = OptionalNullable.absent();
-            } else {
-                this.page = OptionalNullable.of(page.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -336,33 +240,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "per_page", nulls = Nulls.SKIP)
         public Builder perPage(@Nullable OptionalNullable<Integer> perPage) {
-            this.perPage = perPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Integer perPage) {
-            this.perPage = OptionalNullable.of(perPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Optional<Integer> perPage) {
-            if (perPage.isPresent()) {
-                this.perPage = OptionalNullable.of(perPage.get());
-            } else {
-                this.perPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(com.auth0.client.mgmt.core.Nullable<Integer> perPage) {
-            if (perPage.isNull()) {
-                this.perPage = OptionalNullable.ofNull();
-            } else if (perPage.isEmpty()) {
-                this.perPage = OptionalNullable.absent();
-            } else {
-                this.perPage = OptionalNullable.of(perPage.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -370,33 +260,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "include_totals", nulls = Nulls.SKIP)
         public Builder includeTotals(@Nullable OptionalNullable<Boolean> includeTotals) {
-            this.includeTotals = includeTotals;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Boolean includeTotals) {
-            this.includeTotals = OptionalNullable.of(includeTotals);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(Optional<Boolean> includeTotals) {
-            if (includeTotals.isPresent()) {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            } else {
-                this.includeTotals = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeTotals(com.auth0.client.mgmt.core.Nullable<Boolean> includeTotals) {
-            if (includeTotals.isNull()) {
-                this.includeTotals = OptionalNullable.ofNull();
-            } else if (includeTotals.isEmpty()) {
-                this.includeTotals = OptionalNullable.absent();
-            } else {
-                this.includeTotals = OptionalNullable.of(includeTotals.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -404,33 +280,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "prompt", nulls = Nulls.SKIP)
         public Builder prompt(@Nullable OptionalNullable<String> prompt) {
-            this.prompt = prompt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder prompt(String prompt) {
-            this.prompt = OptionalNullable.of(prompt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder prompt(Optional<String> prompt) {
-            if (prompt.isPresent()) {
-                this.prompt = OptionalNullable.of(prompt.get());
-            } else {
-                this.prompt = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder prompt(com.auth0.client.mgmt.core.Nullable<String> prompt) {
-            if (prompt.isNull()) {
-                this.prompt = OptionalNullable.ofNull();
-            } else if (prompt.isEmpty()) {
-                this.prompt = OptionalNullable.absent();
-            } else {
-                this.prompt = OptionalNullable.of(prompt.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -438,33 +300,19 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "screen", nulls = Nulls.SKIP)
         public Builder screen(@Nullable OptionalNullable<String> screen) {
-            this.screen = screen;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder screen(String screen) {
-            this.screen = OptionalNullable.of(screen);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder screen(Optional<String> screen) {
-            if (screen.isPresent()) {
-                this.screen = OptionalNullable.of(screen.get());
-            } else {
-                this.screen = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder screen(com.auth0.client.mgmt.core.Nullable<String> screen) {
-            if (screen.isNull()) {
-                this.screen = OptionalNullable.ofNull();
-            } else if (screen.isEmpty()) {
-                this.screen = OptionalNullable.absent();
-            } else {
-                this.screen = OptionalNullable.of(screen.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -472,56 +320,31 @@ public final class ListAculsRequestParameters {
          */
         @JsonSetter(value = "rendering_mode", nulls = Nulls.SKIP)
         public Builder renderingMode(@Nullable OptionalNullable<AculRenderingModeEnum> renderingMode) {
-            this.renderingMode = renderingMode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder renderingMode(AculRenderingModeEnum renderingMode) {
-            this.renderingMode = OptionalNullable.of(renderingMode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder renderingMode(Optional<AculRenderingModeEnum> renderingMode) {
-            if (renderingMode.isPresent()) {
-                this.renderingMode = OptionalNullable.of(renderingMode.get());
-            } else {
-                this.renderingMode = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder renderingMode(com.auth0.client.mgmt.core.Nullable<AculRenderingModeEnum> renderingMode) {
-            if (renderingMode.isNull()) {
-                this.renderingMode = OptionalNullable.ofNull();
-            } else if (renderingMode.isEmpty()) {
-                this.renderingMode = OptionalNullable.absent();
-            } else {
-                this.renderingMode = OptionalNullable.of(renderingMode.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListAculsRequestParameters build() {
-            return new ListAculsRequestParameters(
-                    fields,
-                    includeFields,
-                    page,
-                    perPage,
-                    includeTotals,
-                    prompt,
-                    screen,
-                    renderingMode,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

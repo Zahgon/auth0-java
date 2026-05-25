@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.RequestOptions;
 import com.auth0.client.mgmt.types.CreateDirectorySynchronizationResponseContent;
 
 public class SynchronizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSynchronizationsClient rawClient;
@@ -21,20 +22,20 @@ public class SynchronizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSynchronizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Request an on-demand synchronization of the directory.
      */
     public CreateDirectorySynchronizationResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Request an on-demand synchronization of the directory.
      */
     public CreateDirectorySynchronizationResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

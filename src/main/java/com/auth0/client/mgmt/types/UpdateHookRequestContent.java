@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateHookRequestContent.Builder.class)
 public final class UpdateHookRequestContent {
+
     private final Optional<String> name;
 
     private final Optional<String> script;
@@ -30,12 +31,7 @@ public final class UpdateHookRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateHookRequestContent(
-            Optional<String> name,
-            Optional<String> script,
-            Optional<Boolean> enabled,
-            Optional<Map<String, String>> dependencies,
-            Map<String, Object> additionalProperties) {
+    private UpdateHookRequestContent(Optional<String> name, Optional<String> script, Optional<Boolean> enabled, Optional<Map<String, String>> dependencies, Map<String, Object> additionalProperties) {
         this.name = name;
         this.script = script;
         this.enabled = enabled;
@@ -48,7 +44,7 @@ public final class UpdateHookRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,7 +52,7 @@ public final class UpdateHookRequestContent {
      */
     @JsonProperty("script")
     public Optional<String> getScript() {
-        return script;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,48 +60,45 @@ public final class UpdateHookRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dependencies")
     public Optional<Map<String, String>> getDependencies() {
-        return dependencies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateHookRequestContent && equalTo((UpdateHookRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateHookRequestContent other) {
-        return name.equals(other.name)
-                && script.equals(other.script)
-                && enabled.equals(other.enabled)
-                && dependencies.equals(other.dependencies);
+        return name.equals(other.name) && script.equals(other.script) && enabled.equals(other.enabled) && dependencies.equals(other.dependencies);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.script, this.enabled, this.dependencies);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private Optional<String> script = Optional.empty();
@@ -117,14 +110,11 @@ public final class UpdateHookRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateHookRequestContent other) {
-            name(other.getName());
-            script(other.getScript());
-            enabled(other.getEnabled());
-            dependencies(other.getDependencies());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -132,13 +122,11 @@ public final class UpdateHookRequestContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -146,13 +134,11 @@ public final class UpdateHookRequestContent {
          */
         @JsonSetter(value = "script", nulls = Nulls.SKIP)
         public Builder script(Optional<String> script) {
-            this.script = script;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder script(String script) {
-            this.script = Optional.ofNullable(script);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -160,38 +146,32 @@ public final class UpdateHookRequestContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "dependencies", nulls = Nulls.SKIP)
         public Builder dependencies(Optional<Map<String, String>> dependencies) {
-            this.dependencies = dependencies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dependencies(Map<String, String> dependencies) {
-            this.dependencies = Optional.ofNullable(dependencies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateHookRequestContent build() {
-            return new UpdateHookRequestContent(name, script, enabled, dependencies, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -33,7 +33,9 @@ package com.auth0.client.mgmt.core;
 public final class LogConfig {
 
     private final LogLevel level;
+
     private final ILogger logger;
+
     private final boolean silent;
 
     private LogConfig(LogLevel level, ILogger logger, boolean silent) {
@@ -43,43 +45,45 @@ public final class LogConfig {
     }
 
     public LogLevel level() {
-        return level;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ILogger logger() {
-        return logger;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean silent() {
-        return silent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static final class Builder {
+
         private LogLevel level = LogLevel.INFO;
+
         private ILogger logger = new ConsoleLogger();
+
         private boolean silent = true;
 
-        private Builder() {}
+        private Builder() {
+        }
 
         /**
          * Set the minimum log level. Only messages at this level or above will be logged.
          * Defaults to {@link LogLevel#INFO}.
          */
         public Builder level(LogLevel level) {
-            this.level = level;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * Set a custom logger implementation. Defaults to {@link ConsoleLogger}.
          */
         public Builder logger(ILogger logger) {
-            this.logger = logger;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,12 +91,11 @@ public final class LogConfig {
          * Set to {@code false} to enable log output.
          */
         public Builder silent(boolean silent) {
-            this.silent = silent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogConfig build() {
-            return new LogConfig(level, logger, silent);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

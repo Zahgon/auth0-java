@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBreachedPasswordDetectionSettingsResponseContent.Builder.class)
 public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<List<BreachedPasswordDetectionShieldsEnum>> shields;
@@ -33,13 +34,7 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBreachedPasswordDetectionSettingsResponseContent(
-            Optional<Boolean> enabled,
-            Optional<List<BreachedPasswordDetectionShieldsEnum>> shields,
-            Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency,
-            Optional<BreachedPasswordDetectionMethodEnum> method,
-            Optional<BreachedPasswordDetectionStage> stage,
-            Map<String, Object> additionalProperties) {
+    private UpdateBreachedPasswordDetectionSettingsResponseContent(Optional<Boolean> enabled, Optional<List<BreachedPasswordDetectionShieldsEnum>> shields, Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency, Optional<BreachedPasswordDetectionMethodEnum> method, Optional<BreachedPasswordDetectionStage> stage, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.shields = shields;
         this.adminNotificationFrequency = adminNotificationFrequency;
@@ -53,7 +48,7 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +57,7 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
      */
     @JsonProperty("shields")
     public Optional<List<BreachedPasswordDetectionShieldsEnum>> getShields() {
-        return shields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,61 +66,55 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
      */
     @JsonProperty("admin_notification_frequency")
     public Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> getAdminNotificationFrequency() {
-        return adminNotificationFrequency;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("method")
     public Optional<BreachedPasswordDetectionMethodEnum> getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("stage")
     public Optional<BreachedPasswordDetectionStage> getStage() {
-        return stage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBreachedPasswordDetectionSettingsResponseContent
-                && equalTo((UpdateBreachedPasswordDetectionSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBreachedPasswordDetectionSettingsResponseContent other) {
-        return enabled.equals(other.enabled)
-                && shields.equals(other.shields)
-                && adminNotificationFrequency.equals(other.adminNotificationFrequency)
-                && method.equals(other.method)
-                && stage.equals(other.stage);
+        return enabled.equals(other.enabled) && shields.equals(other.shields) && adminNotificationFrequency.equals(other.adminNotificationFrequency) && method.equals(other.method) && stage.equals(other.stage);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.shields, this.adminNotificationFrequency, this.method, this.stage);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<List<BreachedPasswordDetectionShieldsEnum>> shields = Optional.empty();
 
-        private Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency =
-                Optional.empty();
+        private Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency = Optional.empty();
 
         private Optional<BreachedPasswordDetectionMethodEnum> method = Optional.empty();
 
@@ -134,15 +123,11 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBreachedPasswordDetectionSettingsResponseContent other) {
-            enabled(other.getEnabled());
-            shields(other.getShields());
-            adminNotificationFrequency(other.getAdminNotificationFrequency());
-            method(other.getMethod());
-            stage(other.getStage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,13 +135,11 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -165,13 +148,11 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
          */
         @JsonSetter(value = "shields", nulls = Nulls.SKIP)
         public Builder shields(Optional<List<BreachedPasswordDetectionShieldsEnum>> shields) {
-            this.shields = shields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder shields(List<BreachedPasswordDetectionShieldsEnum> shields) {
-            this.shields = Optional.ofNullable(shields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -179,53 +160,42 @@ public final class UpdateBreachedPasswordDetectionSettingsResponseContent {
          * Possible values: <code>immediately</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>.</p>
          */
         @JsonSetter(value = "admin_notification_frequency", nulls = Nulls.SKIP)
-        public Builder adminNotificationFrequency(
-                Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency) {
-            this.adminNotificationFrequency = adminNotificationFrequency;
-            return this;
+        public Builder adminNotificationFrequency(Optional<List<BreachedPasswordDetectionAdminNotificationFrequencyEnum>> adminNotificationFrequency) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder adminNotificationFrequency(
-                List<BreachedPasswordDetectionAdminNotificationFrequencyEnum> adminNotificationFrequency) {
-            this.adminNotificationFrequency = Optional.ofNullable(adminNotificationFrequency);
-            return this;
+        public Builder adminNotificationFrequency(List<BreachedPasswordDetectionAdminNotificationFrequencyEnum> adminNotificationFrequency) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "method", nulls = Nulls.SKIP)
         public Builder method(Optional<BreachedPasswordDetectionMethodEnum> method) {
-            this.method = method;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder method(BreachedPasswordDetectionMethodEnum method) {
-            this.method = Optional.ofNullable(method);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "stage", nulls = Nulls.SKIP)
         public Builder stage(Optional<BreachedPasswordDetectionStage> stage) {
-            this.stage = stage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder stage(BreachedPasswordDetectionStage stage) {
-            this.stage = Optional.ofNullable(stage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBreachedPasswordDetectionSettingsResponseContent build() {
-            return new UpdateBreachedPasswordDetectionSettingsResponseContent(
-                    enabled, shields, adminNotificationFrequency, method, stage, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

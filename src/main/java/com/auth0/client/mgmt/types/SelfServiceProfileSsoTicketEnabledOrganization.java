@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketEnabledOrganization.Builder.class)
 public final class SelfServiceProfileSsoTicketEnabledOrganization {
+
     private final String organizationId;
 
     private final Optional<Boolean> assignMembershipOnLogin;
@@ -29,11 +30,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketEnabledOrganization(
-            String organizationId,
-            Optional<Boolean> assignMembershipOnLogin,
-            Optional<Boolean> showAsButton,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketEnabledOrganization(String organizationId, Optional<Boolean> assignMembershipOnLogin, Optional<Boolean> showAsButton, Map<String, Object> additionalProperties) {
         this.organizationId = organizationId;
         this.assignMembershipOnLogin = assignMembershipOnLogin;
         this.showAsButton = showAsButton;
@@ -45,7 +42,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
      */
     @JsonProperty("organization_id")
     public String getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,7 +50,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
      */
     @JsonProperty("assign_membership_on_login")
     public Optional<Boolean> getAssignMembershipOnLogin() {
-        return assignMembershipOnLogin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,42 +58,39 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
      */
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketEnabledOrganization
-                && equalTo((SelfServiceProfileSsoTicketEnabledOrganization) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketEnabledOrganization other) {
-        return organizationId.equals(other.organizationId)
-                && assignMembershipOnLogin.equals(other.assignMembershipOnLogin)
-                && showAsButton.equals(other.showAsButton);
+        return organizationId.equals(other.organizationId) && assignMembershipOnLogin.equals(other.assignMembershipOnLogin) && showAsButton.equals(other.showAsButton);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.organizationId, this.assignMembershipOnLogin, this.showAsButton);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrganizationIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrganizationIdStage {
+
         /**
          * <p>Organization identifier.</p>
          */
@@ -106,6 +100,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
     }
 
     public interface _FinalStage {
+
         SelfServiceProfileSsoTicketEnabledOrganization build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -129,6 +124,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrganizationIdStage, _FinalStage {
+
         private String organizationId;
 
         private Optional<Boolean> showAsButton = Optional.empty();
@@ -138,14 +134,12 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SelfServiceProfileSsoTicketEnabledOrganization other) {
-            organizationId(other.getOrganizationId());
-            assignMembershipOnLogin(other.getAssignMembershipOnLogin());
-            showAsButton(other.getShowAsButton());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -156,8 +150,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
         @java.lang.Override
         @JsonSetter("organization_id")
         public _FinalStage organizationId(@NotNull String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId, "organizationId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,8 +159,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
          */
         @java.lang.Override
         public _FinalStage showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -176,8 +168,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
         @java.lang.Override
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public _FinalStage showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -186,8 +177,7 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
          */
         @java.lang.Override
         public _FinalStage assignMembershipOnLogin(Boolean assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = Optional.ofNullable(assignMembershipOnLogin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,26 +186,22 @@ public final class SelfServiceProfileSsoTicketEnabledOrganization {
         @java.lang.Override
         @JsonSetter(value = "assign_membership_on_login", nulls = Nulls.SKIP)
         public _FinalStage assignMembershipOnLogin(Optional<Boolean> assignMembershipOnLogin) {
-            this.assignMembershipOnLogin = assignMembershipOnLogin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SelfServiceProfileSsoTicketEnabledOrganization build() {
-            return new SelfServiceProfileSsoTicketEnabledOrganization(
-                    organizationId, assignMembershipOnLogin, showAsButton, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

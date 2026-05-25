@@ -24,16 +24,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateFlowRequestContent.Builder.class)
 public final class UpdateFlowRequestContent {
+
     private final Optional<String> name;
 
     private final OptionalNullable<List<FlowAction>> actions;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateFlowRequestContent(
-            Optional<String> name,
-            OptionalNullable<List<FlowAction>> actions,
-            Map<String, Object> additionalProperties) {
+    private UpdateFlowRequestContent(Optional<String> name, OptionalNullable<List<FlowAction>> actions, Map<String, Object> additionalProperties) {
         this.name = name;
         this.actions = actions;
         this.additionalProperties = additionalProperties;
@@ -41,16 +39,13 @@ public final class UpdateFlowRequestContent {
 
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("actions")
     public OptionalNullable<List<FlowAction>> getActions() {
-        if (actions == null) {
-            return OptionalNullable.absent();
-        }
-        return actions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -61,13 +56,12 @@ public final class UpdateFlowRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateFlowRequestContent && equalTo((UpdateFlowRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateFlowRequestContent other) {
@@ -76,20 +70,21 @@ public final class UpdateFlowRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.actions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> name = Optional.empty();
 
         private OptionalNullable<List<FlowAction>> actions = OptionalNullable.absent();
@@ -97,68 +92,49 @@ public final class UpdateFlowRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateFlowRequestContent other) {
-            name(other.getName());
-            actions(other.getActions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "actions", nulls = Nulls.SKIP)
         public Builder actions(@Nullable OptionalNullable<List<FlowAction>> actions) {
-            this.actions = actions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actions(List<FlowAction> actions) {
-            this.actions = OptionalNullable.of(actions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actions(Optional<List<FlowAction>> actions) {
-            if (actions.isPresent()) {
-                this.actions = OptionalNullable.of(actions.get());
-            } else {
-                this.actions = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actions(com.auth0.client.mgmt.core.Nullable<List<FlowAction>> actions) {
-            if (actions.isNull()) {
-                this.actions = OptionalNullable.ofNull();
-            } else if (actions.isEmpty()) {
-                this.actions = OptionalNullable.absent();
-            } else {
-                this.actions = OptionalNullable.of(actions.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateFlowRequestContent build() {
-            return new UpdateFlowRequestContent(name, actions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

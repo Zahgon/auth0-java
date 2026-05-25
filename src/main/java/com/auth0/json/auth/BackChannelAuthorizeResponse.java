@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BackChannelAuthorizeResponse {
+
     @JsonProperty("auth_req_id")
     private String authReqId;
 
@@ -15,10 +16,7 @@ public class BackChannelAuthorizeResponse {
     private Integer interval;
 
     @JsonCreator
-    public BackChannelAuthorizeResponse(
-            @JsonProperty("auth_req_id") String authReqId,
-            @JsonProperty("expires_in") Long expiresIn,
-            @JsonProperty("interval") Integer interval) {
+    public BackChannelAuthorizeResponse(@JsonProperty("auth_req_id") String authReqId, @JsonProperty("expires_in") Long expiresIn, @JsonProperty("interval") Integer interval) {
         this.authReqId = authReqId;
         this.expiresIn = expiresIn;
         this.interval = interval;
@@ -29,7 +27,7 @@ public class BackChannelAuthorizeResponse {
      * @return the Auth Request ID.
      */
     public String getAuthReqId() {
-        return authReqId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -37,7 +35,7 @@ public class BackChannelAuthorizeResponse {
      * @return the Expires In value.
      */
     public Long getExpiresIn() {
-        return expiresIn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,6 +43,6 @@ public class BackChannelAuthorizeResponse {
      * @return the Interval value.
      */
     public Integer getInterval() {
-        return interval;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

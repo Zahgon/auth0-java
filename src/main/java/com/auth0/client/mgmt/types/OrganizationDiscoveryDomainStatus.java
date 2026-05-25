@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class OrganizationDiscoveryDomainStatus {
-    public static final OrganizationDiscoveryDomainStatus PENDING =
-            new OrganizationDiscoveryDomainStatus(Value.PENDING, "pending");
 
-    public static final OrganizationDiscoveryDomainStatus VERIFIED =
-            new OrganizationDiscoveryDomainStatus(Value.VERIFIED, "verified");
+    public static final OrganizationDiscoveryDomainStatus PENDING = new OrganizationDiscoveryDomainStatus(Value.PENDING, "pending");
+
+    public static final OrganizationDiscoveryDomainStatus VERIFIED = new OrganizationDiscoveryDomainStatus(Value.VERIFIED, "verified");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class OrganizationDiscoveryDomainStatus {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof OrganizationDiscoveryDomainStatus
-                        && this.string.equals(((OrganizationDiscoveryDomainStatus) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PENDING:
-                return visitor.visitPending();
-            case VERIFIED:
-                return visitor.visitVerified();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static OrganizationDiscoveryDomainStatus valueOf(String value) {
-        switch (value) {
-            case "pending":
-                return PENDING;
-            case "verified":
-                return VERIFIED;
-            default:
-                return new OrganizationDiscoveryDomainStatus(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PENDING,
 
-        VERIFIED,
-
-        UNKNOWN
+        PENDING, VERIFIED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPending();
 
         T visitVerified();

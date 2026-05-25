@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.core.SyncPagingIterable;
 import com.auth0.client.mgmt.types.Organization;
 
 public class OrganizationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawOrganizationsClient rawClient;
@@ -23,23 +24,22 @@ public class OrganizationsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawOrganizationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<Organization> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<Organization> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<Organization> list(String id, ListClientGrantOrganizationsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<Organization> list(
-            String id, ListClientGrantOrganizationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<Organization> list(String id, ListClientGrantOrganizationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

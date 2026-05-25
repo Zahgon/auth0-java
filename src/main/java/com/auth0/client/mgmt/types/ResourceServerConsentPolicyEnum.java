@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ResourceServerConsentPolicyEnum {
-    public static final ResourceServerConsentPolicyEnum TRANSACTIONAL_AUTHORIZATION_WITH_MFA =
-            new ResourceServerConsentPolicyEnum(
-                    Value.TRANSACTIONAL_AUTHORIZATION_WITH_MFA, "transactional-authorization-with-mfa");
+
+    public static final ResourceServerConsentPolicyEnum TRANSACTIONAL_AUTHORIZATION_WITH_MFA = new ResourceServerConsentPolicyEnum(Value.TRANSACTIONAL_AUTHORIZATION_WITH_MFA, "transactional-authorization-with-mfa");
 
     private final Value value;
 
@@ -21,54 +20,41 @@ public final class ResourceServerConsentPolicyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ResourceServerConsentPolicyEnum
-                        && this.string.equals(((ResourceServerConsentPolicyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TRANSACTIONAL_AUTHORIZATION_WITH_MFA:
-                return visitor.visitTransactionalAuthorizationWithMfa();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ResourceServerConsentPolicyEnum valueOf(String value) {
-        switch (value) {
-            case "transactional-authorization-with-mfa":
-                return TRANSACTIONAL_AUTHORIZATION_WITH_MFA;
-            default:
-                return new ResourceServerConsentPolicyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TRANSACTIONAL_AUTHORIZATION_WITH_MFA,
 
-        UNKNOWN
+        TRANSACTIONAL_AUTHORIZATION_WITH_MFA, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTransactionalAuthorizationWithMfa();
 
         T visitUnknown(String unknownType);

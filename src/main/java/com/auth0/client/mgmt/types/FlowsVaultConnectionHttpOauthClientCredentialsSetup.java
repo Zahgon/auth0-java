@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectionHttpOauthClientCredentialsSetup.Builder.class)
 public final class FlowsVaultConnectionHttpOauthClientCredentialsSetup {
+
     private final FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type;
 
     private final String clientId;
@@ -37,15 +38,7 @@ public final class FlowsVaultConnectionHttpOauthClientCredentialsSetup {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectionHttpOauthClientCredentialsSetup(
-            FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type,
-            String clientId,
-            String clientSecret,
-            String tokenEndpoint,
-            Optional<String> audience,
-            Optional<String> resource,
-            Optional<String> scope,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectionHttpOauthClientCredentialsSetup(FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type, String clientId, String clientSecret, String tokenEndpoint, Optional<String> audience, Optional<String> resource, Optional<String> scope, Map<String, Object> additionalProperties) {
         this.type = type;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -58,101 +51,91 @@ public final class FlowsVaultConnectionHttpOauthClientCredentialsSetup {
 
     @JsonProperty("type")
     public FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public String getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_endpoint")
     public String getTokenEndpoint() {
-        return tokenEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("resource")
     public Optional<String> getResource() {
-        return resource;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectionHttpOauthClientCredentialsSetup
-                && equalTo((FlowsVaultConnectionHttpOauthClientCredentialsSetup) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectionHttpOauthClientCredentialsSetup other) {
-        return type.equals(other.type)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && tokenEndpoint.equals(other.tokenEndpoint)
-                && audience.equals(other.audience)
-                && resource.equals(other.resource)
-                && scope.equals(other.scope);
+        return type.equals(other.type) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && tokenEndpoint.equals(other.tokenEndpoint) && audience.equals(other.audience) && resource.equals(other.resource) && scope.equals(other.scope);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.type,
-                this.clientId,
-                this.clientSecret,
-                this.tokenEndpoint,
-                this.audience,
-                this.resource,
-                this.scope);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         ClientIdStage type(@NotNull FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type);
 
         Builder from(FlowsVaultConnectionHttpOauthClientCredentialsSetup other);
     }
 
     public interface ClientIdStage {
+
         ClientSecretStage clientId(@NotNull String clientId);
     }
 
     public interface ClientSecretStage {
+
         TokenEndpointStage clientSecret(@NotNull String clientSecret);
     }
 
     public interface TokenEndpointStage {
+
         _FinalStage tokenEndpoint(@NotNull String tokenEndpoint);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectionHttpOauthClientCredentialsSetup build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -173,8 +156,8 @@ public final class FlowsVaultConnectionHttpOauthClientCredentialsSetup {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements TypeStage, ClientIdStage, ClientSecretStage, TokenEndpointStage, _FinalStage {
+    public static final class Builder implements TypeStage, ClientIdStage, ClientSecretStage, TokenEndpointStage, _FinalStage {
+
         private FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type;
 
         private String clientId;
@@ -192,103 +175,84 @@ public final class FlowsVaultConnectionHttpOauthClientCredentialsSetup {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectionHttpOauthClientCredentialsSetup other) {
-            type(other.getType());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            tokenEndpoint(other.getTokenEndpoint());
-            audience(other.getAudience());
-            resource(other.getResource());
-            scope(other.getScope());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ClientIdStage type(@NotNull FlowsVaultConnectionSetupTypeOauthClientCredentialsEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_id")
         public ClientSecretStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_secret")
         public TokenEndpointStage clientSecret(@NotNull String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret, "clientSecret must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("token_endpoint")
         public _FinalStage tokenEndpoint(@NotNull String tokenEndpoint) {
-            this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint, "tokenEndpoint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage resource(String resource) {
-            this.resource = Optional.ofNullable(resource);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "resource", nulls = Nulls.SKIP)
         public _FinalStage resource(Optional<String> resource) {
-            this.resource = resource;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public _FinalStage audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectionHttpOauthClientCredentialsSetup build() {
-            return new FlowsVaultConnectionHttpOauthClientCredentialsSetup(
-                    type, clientId, clientSecret, tokenEndpoint, audience, resource, scope, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

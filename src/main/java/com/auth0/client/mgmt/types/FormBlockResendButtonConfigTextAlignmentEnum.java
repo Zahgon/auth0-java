@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockResendButtonConfigTextAlignmentEnum {
-    public static final FormBlockResendButtonConfigTextAlignmentEnum RIGHT =
-            new FormBlockResendButtonConfigTextAlignmentEnum(Value.RIGHT, "RIGHT");
 
-    public static final FormBlockResendButtonConfigTextAlignmentEnum LEFT =
-            new FormBlockResendButtonConfigTextAlignmentEnum(Value.LEFT, "LEFT");
+    public static final FormBlockResendButtonConfigTextAlignmentEnum RIGHT = new FormBlockResendButtonConfigTextAlignmentEnum(Value.RIGHT, "RIGHT");
 
-    public static final FormBlockResendButtonConfigTextAlignmentEnum CENTER =
-            new FormBlockResendButtonConfigTextAlignmentEnum(Value.CENTER, "CENTER");
+    public static final FormBlockResendButtonConfigTextAlignmentEnum LEFT = new FormBlockResendButtonConfigTextAlignmentEnum(Value.LEFT, "LEFT");
+
+    public static final FormBlockResendButtonConfigTextAlignmentEnum CENTER = new FormBlockResendButtonConfigTextAlignmentEnum(Value.CENTER, "CENTER");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class FormBlockResendButtonConfigTextAlignmentEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockResendButtonConfigTextAlignmentEnum
-                        && this.string.equals(((FormBlockResendButtonConfigTextAlignmentEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RIGHT:
-                return visitor.visitRight();
-            case LEFT:
-                return visitor.visitLeft();
-            case CENTER:
-                return visitor.visitCenter();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockResendButtonConfigTextAlignmentEnum valueOf(String value) {
-        switch (value) {
-            case "RIGHT":
-                return RIGHT;
-            case "LEFT":
-                return LEFT;
-            case "CENTER":
-                return CENTER;
-            default:
-                return new FormBlockResendButtonConfigTextAlignmentEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LEFT,
 
-        CENTER,
-
-        RIGHT,
-
-        UNKNOWN
+        LEFT, CENTER, RIGHT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLeft();
 
         T visitCenter();

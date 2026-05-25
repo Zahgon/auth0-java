@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.GetFlowsVaultConnectionResponseContent;
 import com.auth0.client.mgmt.types.UpdateFlowsVaultConnectionResponseContent;
 
 public class ConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectionsClient rawClient;
@@ -28,66 +29,62 @@ public class ConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowsVaultConnectionSummary> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowsVaultConnectionSummary> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<FlowsVaultConnectionSummary> list(ListFlowsVaultConnectionsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<FlowsVaultConnectionSummary> list(
-            ListFlowsVaultConnectionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<FlowsVaultConnectionSummary> list(ListFlowsVaultConnectionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CreateFlowsVaultConnectionResponseContent create(CreateFlowsVaultConnectionRequestContent request) {
-        return this.rawClient.create(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateFlowsVaultConnectionResponseContent create(
-            CreateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateFlowsVaultConnectionResponseContent create(CreateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowsVaultConnectionResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetFlowsVaultConnectionResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFlowsVaultConnectionResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateFlowsVaultConnectionResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateFlowsVaultConnectionResponseContent update(
-            String id, UpdateFlowsVaultConnectionRequestContent request) {
-        return this.rawClient.update(id, request).body();
+    public UpdateFlowsVaultConnectionResponseContent update(String id, UpdateFlowsVaultConnectionRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateFlowsVaultConnectionResponseContent update(
-            String id, UpdateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateFlowsVaultConnectionResponseContent update(String id, UpdateFlowsVaultConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

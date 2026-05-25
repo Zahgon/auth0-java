@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateVerifiableCredentialTemplateRequestContent.Builder.class)
 public final class UpdateVerifiableCredentialTemplateRequestContent {
+
     private final OptionalNullable<String> name;
 
     private final OptionalNullable<String> type;
@@ -38,14 +39,7 @@ public final class UpdateVerifiableCredentialTemplateRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateVerifiableCredentialTemplateRequestContent(
-            OptionalNullable<String> name,
-            OptionalNullable<String> type,
-            OptionalNullable<String> dialect,
-            Optional<MdlPresentationRequest> presentation,
-            OptionalNullable<String> wellKnownTrustedIssuers,
-            OptionalNullable<Double> version,
-            Map<String, Object> additionalProperties) {
+    private UpdateVerifiableCredentialTemplateRequestContent(OptionalNullable<String> name, OptionalNullable<String> type, OptionalNullable<String> dialect, Optional<MdlPresentationRequest> presentation, OptionalNullable<String> wellKnownTrustedIssuers, OptionalNullable<Double> version, Map<String, Object> additionalProperties) {
         this.name = name;
         this.type = type;
         this.dialect = dialect;
@@ -58,51 +52,36 @@ public final class UpdateVerifiableCredentialTemplateRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("name")
     public OptionalNullable<String> getName() {
-        if (name == null) {
-            return OptionalNullable.absent();
-        }
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("type")
     public OptionalNullable<String> getType() {
-        if (type == null) {
-            return OptionalNullable.absent();
-        }
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("dialect")
     public OptionalNullable<String> getDialect() {
-        if (dialect == null) {
-            return OptionalNullable.absent();
-        }
-        return dialect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("presentation")
     public Optional<MdlPresentationRequest> getPresentation() {
-        return presentation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("well_known_trusted_issuers")
     public OptionalNullable<String> getWellKnownTrustedIssuers() {
-        if (wellKnownTrustedIssuers == null) {
-            return OptionalNullable.absent();
-        }
-        return wellKnownTrustedIssuers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("version")
     public OptionalNullable<Double> getVersion() {
-        if (version == null) {
-            return OptionalNullable.absent();
-        }
-        return version;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -137,42 +116,35 @@ public final class UpdateVerifiableCredentialTemplateRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateVerifiableCredentialTemplateRequestContent
-                && equalTo((UpdateVerifiableCredentialTemplateRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateVerifiableCredentialTemplateRequestContent other) {
-        return name.equals(other.name)
-                && type.equals(other.type)
-                && dialect.equals(other.dialect)
-                && presentation.equals(other.presentation)
-                && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers)
-                && version.equals(other.version);
+        return name.equals(other.name) && type.equals(other.type) && dialect.equals(other.dialect) && presentation.equals(other.presentation) && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers) && version.equals(other.version);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name, this.type, this.dialect, this.presentation, this.wellKnownTrustedIssuers, this.version);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> name = OptionalNullable.absent();
 
         private OptionalNullable<String> type = OptionalNullable.absent();
@@ -188,197 +160,117 @@ public final class UpdateVerifiableCredentialTemplateRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateVerifiableCredentialTemplateRequestContent other) {
-            name(other.getName());
-            type(other.getType());
-            dialect(other.getDialect());
-            presentation(other.getPresentation());
-            wellKnownTrustedIssuers(other.getWellKnownTrustedIssuers());
-            version(other.getVersion());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(@Nullable OptionalNullable<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = OptionalNullable.of(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(Optional<String> name) {
-            if (name.isPresent()) {
-                this.name = OptionalNullable.of(name.get());
-            } else {
-                this.name = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(com.auth0.client.mgmt.core.Nullable<String> name) {
-            if (name.isNull()) {
-                this.name = OptionalNullable.ofNull();
-            } else if (name.isEmpty()) {
-                this.name = OptionalNullable.absent();
-            } else {
-                this.name = OptionalNullable.of(name.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(@Nullable OptionalNullable<String> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(String type) {
-            this.type = OptionalNullable.of(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(Optional<String> type) {
-            if (type.isPresent()) {
-                this.type = OptionalNullable.of(type.get());
-            } else {
-                this.type = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(com.auth0.client.mgmt.core.Nullable<String> type) {
-            if (type.isNull()) {
-                this.type = OptionalNullable.ofNull();
-            } else if (type.isEmpty()) {
-                this.type = OptionalNullable.absent();
-            } else {
-                this.type = OptionalNullable.of(type.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "dialect", nulls = Nulls.SKIP)
         public Builder dialect(@Nullable OptionalNullable<String> dialect) {
-            this.dialect = dialect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dialect(String dialect) {
-            this.dialect = OptionalNullable.of(dialect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dialect(Optional<String> dialect) {
-            if (dialect.isPresent()) {
-                this.dialect = OptionalNullable.of(dialect.get());
-            } else {
-                this.dialect = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dialect(com.auth0.client.mgmt.core.Nullable<String> dialect) {
-            if (dialect.isNull()) {
-                this.dialect = OptionalNullable.ofNull();
-            } else if (dialect.isEmpty()) {
-                this.dialect = OptionalNullable.absent();
-            } else {
-                this.dialect = OptionalNullable.of(dialect.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "presentation", nulls = Nulls.SKIP)
         public Builder presentation(Optional<MdlPresentationRequest> presentation) {
-            this.presentation = presentation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder presentation(MdlPresentationRequest presentation) {
-            this.presentation = Optional.ofNullable(presentation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "well_known_trusted_issuers", nulls = Nulls.SKIP)
         public Builder wellKnownTrustedIssuers(@Nullable OptionalNullable<String> wellKnownTrustedIssuers) {
-            this.wellKnownTrustedIssuers = wellKnownTrustedIssuers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(String wellKnownTrustedIssuers) {
-            this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(Optional<String> wellKnownTrustedIssuers) {
-            if (wellKnownTrustedIssuers.isPresent()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers.get());
-            } else {
-                this.wellKnownTrustedIssuers = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(com.auth0.client.mgmt.core.Nullable<String> wellKnownTrustedIssuers) {
-            if (wellKnownTrustedIssuers.isNull()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.ofNull();
-            } else if (wellKnownTrustedIssuers.isEmpty()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.absent();
-            } else {
-                this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "version", nulls = Nulls.SKIP)
         public Builder version(@Nullable OptionalNullable<Double> version) {
-            this.version = version;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder version(Double version) {
-            this.version = OptionalNullable.of(version);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder version(Optional<Double> version) {
-            if (version.isPresent()) {
-                this.version = OptionalNullable.of(version.get());
-            } else {
-                this.version = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder version(com.auth0.client.mgmt.core.Nullable<Double> version) {
-            if (version.isNull()) {
-                this.version = OptionalNullable.ofNull();
-            } else if (version.isEmpty()) {
-                this.version = OptionalNullable.absent();
-            } else {
-                this.version = OptionalNullable.of(version.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateVerifiableCredentialTemplateRequestContent build() {
-            return new UpdateVerifiableCredentialTemplateRequestContent(
-                    name, type, dialect, presentation, wellKnownTrustedIssuers, version, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

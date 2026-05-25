@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = OrganizationBrandingColors.Builder.class)
 public final class OrganizationBrandingColors {
+
     private final String primary;
 
     private final String pageBackground;
 
     private final Map<String, Object> additionalProperties;
 
-    private OrganizationBrandingColors(
-            String primary, String pageBackground, Map<String, Object> additionalProperties) {
+    private OrganizationBrandingColors(String primary, String pageBackground, Map<String, Object> additionalProperties) {
         this.primary = primary;
         this.pageBackground = pageBackground;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class OrganizationBrandingColors {
      */
     @JsonProperty("primary")
     public String getPrimary() {
-        return primary;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,18 +45,17 @@ public final class OrganizationBrandingColors {
      */
     @JsonProperty("page_background")
     public String getPageBackground() {
-        return pageBackground;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof OrganizationBrandingColors && equalTo((OrganizationBrandingColors) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(OrganizationBrandingColors other) {
@@ -65,19 +64,20 @@ public final class OrganizationBrandingColors {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.primary, this.pageBackground);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PrimaryStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PrimaryStage {
+
         /**
          * <p>HEX Color for primary elements.</p>
          */
@@ -87,6 +87,7 @@ public final class OrganizationBrandingColors {
     }
 
     public interface PageBackgroundStage {
+
         /**
          * <p>HEX Color for background.</p>
          */
@@ -94,6 +95,7 @@ public final class OrganizationBrandingColors {
     }
 
     public interface _FinalStage {
+
         OrganizationBrandingColors build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -103,6 +105,7 @@ public final class OrganizationBrandingColors {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PrimaryStage, PageBackgroundStage, _FinalStage {
+
         private String primary;
 
         private String pageBackground;
@@ -110,13 +113,12 @@ public final class OrganizationBrandingColors {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(OrganizationBrandingColors other) {
-            primary(other.getPrimary());
-            pageBackground(other.getPageBackground());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -127,8 +129,7 @@ public final class OrganizationBrandingColors {
         @java.lang.Override
         @JsonSetter("primary")
         public PageBackgroundStage primary(@NotNull String primary) {
-            this.primary = Objects.requireNonNull(primary, "primary must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -139,25 +140,22 @@ public final class OrganizationBrandingColors {
         @java.lang.Override
         @JsonSetter("page_background")
         public _FinalStage pageBackground(@NotNull String pageBackground) {
-            this.pageBackground = Objects.requireNonNull(pageBackground, "pageBackground must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public OrganizationBrandingColors build() {
-            return new OrganizationBrandingColors(primary, pageBackground, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

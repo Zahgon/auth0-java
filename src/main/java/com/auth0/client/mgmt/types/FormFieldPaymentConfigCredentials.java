@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldPaymentConfigCredentials.Builder.class)
 public final class FormFieldPaymentConfigCredentials {
+
     private final String publicKey;
 
     private final String privateKey;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldPaymentConfigCredentials(
-            String publicKey, String privateKey, Map<String, Object> additionalProperties) {
+    private FormFieldPaymentConfigCredentials(String publicKey, String privateKey, Map<String, Object> additionalProperties) {
         this.publicKey = publicKey;
         this.privateKey = privateKey;
         this.additionalProperties = additionalProperties;
@@ -34,23 +34,22 @@ public final class FormFieldPaymentConfigCredentials {
 
     @JsonProperty("public_key")
     public String getPublicKey() {
-        return publicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("private_key")
     public String getPrivateKey() {
-        return privateKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldPaymentConfigCredentials && equalTo((FormFieldPaymentConfigCredentials) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldPaymentConfigCredentials other) {
@@ -59,29 +58,32 @@ public final class FormFieldPaymentConfigCredentials {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.publicKey, this.privateKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static PublicKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface PublicKeyStage {
+
         PrivateKeyStage publicKey(@NotNull String publicKey);
 
         Builder from(FormFieldPaymentConfigCredentials other);
     }
 
     public interface PrivateKeyStage {
+
         _FinalStage privateKey(@NotNull String privateKey);
     }
 
     public interface _FinalStage {
+
         FormFieldPaymentConfigCredentials build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -91,6 +93,7 @@ public final class FormFieldPaymentConfigCredentials {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements PublicKeyStage, PrivateKeyStage, _FinalStage {
+
         private String publicKey;
 
         private String privateKey;
@@ -98,44 +101,39 @@ public final class FormFieldPaymentConfigCredentials {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFieldPaymentConfigCredentials other) {
-            publicKey(other.getPublicKey());
-            privateKey(other.getPrivateKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("public_key")
         public PrivateKeyStage publicKey(@NotNull String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey, "publicKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("private_key")
         public _FinalStage privateKey(@NotNull String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey, "privateKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFieldPaymentConfigCredentials build() {
-            return new FormFieldPaymentConfigCredentials(publicKey, privateKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

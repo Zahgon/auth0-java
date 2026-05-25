@@ -11,6 +11,7 @@ import java.util.function.Supplier;
 import okhttp3.OkHttpClient;
 
 public class ManagementApiBuilder {
+
     private Optional<Integer> timeout = Optional.empty();
 
     private Optional<Integer> maxRetries = Optional.empty();
@@ -29,26 +30,26 @@ public class ManagementApiBuilder {
 
     // Domain-based initialization fields
     private String domain = null;
+
     private String clientId = null;
+
     private String clientSecret = null;
+
     private String audience = null;
 
     /**
      * Sets token
      */
     public ManagementApiBuilder token(String token) {
-        this.token = token;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ManagementApiBuilder environment(Environment environment) {
-        this.environment = environment;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ManagementApiBuilder url(String url) {
-        this.environment = Environment.custom(url);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,8 +68,7 @@ public class ManagementApiBuilder {
      * @return This builder for method chaining
      */
     public ManagementApiBuilder domain(String domain) {
-        this.domain = domain;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,9 +92,7 @@ public class ManagementApiBuilder {
      * @return This builder for method chaining
      */
     public ManagementApiBuilder clientCredentials(String clientId, String clientSecret) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,8 +103,7 @@ public class ManagementApiBuilder {
      * @return This builder for method chaining
      */
     public ManagementApiBuilder audience(String audience) {
-        this.audience = audience;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,40 +136,35 @@ public class ManagementApiBuilder {
      * @see CustomDomainHeader#of(String) for per-request custom domain overrides
      */
     public ManagementApiBuilder customDomain(String customDomain) {
-        this.customDomain = customDomain;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the timeout (in seconds) for the client. Defaults to 60 seconds.
      */
     public ManagementApiBuilder timeout(int timeout) {
-        this.timeout = Optional.of(timeout);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the maximum number of retries for the client. Defaults to 2 retries.
      */
     public ManagementApiBuilder maxRetries(int maxRetries) {
-        this.maxRetries = Optional.of(maxRetries);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Sets the underlying OkHttp client
      */
     public ManagementApiBuilder httpClient(OkHttpClient httpClient) {
-        this.httpClient = httpClient;
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Configure logging for the SDK. Silent by default — no log output unless explicitly configured.
      */
     public ManagementApiBuilder logging(LogConfig logging) {
-        this.logging = Optional.of(logging);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -184,27 +176,11 @@ public class ManagementApiBuilder {
      * @return This builder for method chaining
      */
     public ManagementApiBuilder addHeader(String name, String value) {
-        this.customHeaders.put(name, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected ClientOptions buildClientOptions() {
-        ClientOptions.Builder builder = ClientOptions.builder();
-        setEnvironment(builder);
-        setAuthentication(builder);
-        setHttpClient(builder);
-        setTimeouts(builder);
-        setRetries(builder);
-        setLogging(builder);
-        for (Map.Entry<String, String> header : this.customHeaders.entrySet()) {
-            builder.addHeader(header.getKey(), header.getValue());
-        }
-        if (this.customDomain != null) {
-            builder.addHeader(CustomDomainInterceptor.HEADER_NAME, this.customDomain);
-            builder.addInterceptor(new CustomDomainInterceptor());
-        }
-        setAdditional(builder);
-        return builder.build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -215,12 +191,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setEnvironment(ClientOptions.Builder builder) {
-        if (this.domain != null) {
-            String url = "https://" + this.domain + "/api/v2";
-            builder.environment(Environment.custom(url));
-        } else {
-            builder.environment(this.environment);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -230,15 +201,7 @@ public class ManagementApiBuilder {
      * @return The base URL (e.g., "https://your-tenant.auth0.com")
      */
     protected String getBaseUrl() {
-        if (this.domain != null) {
-            return "https://" + this.domain;
-        }
-        // Extract base URL from environment URL by removing /api/v2 suffix
-        String envUrl = this.environment.getUrl();
-        if (envUrl.endsWith("/api/v2")) {
-            return envUrl.substring(0, envUrl.length() - 7);
-        }
-        return envUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -251,18 +214,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setAuthentication(ClientOptions.Builder builder) {
-        if (this.clientId != null && this.clientSecret != null) {
-            // OAuth client credentials flow with automatic token management
-            String baseUrl = getBaseUrl();
-            String aud = this.audience != null ? this.audience : baseUrl + "/api/v2/";
-
-            OAuthTokenSupplier tokenSupplier = new OAuthTokenSupplier(this.clientId, this.clientSecret, baseUrl, aud);
-
-            builder.addHeader("Authorization", (Supplier<String>) () -> "Bearer " + tokenSupplier.get());
-        } else if (this.token != null) {
-            // Static token authentication
-            builder.addHeader("Authorization", "Bearer " + this.token);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -272,9 +224,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setTimeouts(ClientOptions.Builder builder) {
-        if (this.timeout.isPresent()) {
-            builder.timeout(this.timeout.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -284,9 +234,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setRetries(ClientOptions.Builder builder) {
-        if (this.maxRetries.isPresent()) {
-            builder.maxRetries(this.maxRetries.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -296,9 +244,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setHttpClient(ClientOptions.Builder builder) {
-        if (this.httpClient != null) {
-            builder.httpClient(this.httpClient);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -308,9 +254,7 @@ public class ManagementApiBuilder {
      * @param builder The ClientOptions.Builder to configure
      */
     protected void setLogging(ClientOptions.Builder builder) {
-        if (this.logging.isPresent()) {
-            builder.logging(this.logging.get());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -329,7 +273,9 @@ public class ManagementApiBuilder {
      * }
      * }</pre>
      */
-    protected void setAdditional(ClientOptions.Builder builder) {}
+    protected void setAdditional(ClientOptions.Builder builder) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     /**
      * Override this method to add custom validation logic before the client is built.
@@ -347,7 +293,9 @@ public class ManagementApiBuilder {
      * }
      * }</pre>
      */
-    protected void validateConfiguration() {}
+    protected void validateConfiguration() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     /**
      * Builds the ManagementApi client with the configured options.
@@ -369,21 +317,6 @@ public class ManagementApiBuilder {
      * @throws RuntimeException if authentication is not configured
      */
     public ManagementApi build() {
-        // Validate authentication: require either token OR clientCredentials
-        boolean hasToken = this.token != null;
-        boolean hasClientCredentials = this.clientId != null && this.clientSecret != null;
-
-        if (!hasToken && !hasClientCredentials) {
-            throw new RuntimeException(
-                    "Please provide authentication: either token() or clientCredentials(clientId, clientSecret)");
-        }
-
-        // Validate that if clientId is provided, clientSecret is also provided
-        if (this.clientId != null && this.clientSecret == null) {
-            throw new RuntimeException("clientSecret is required when using clientCredentials");
-        }
-
-        validateConfiguration();
-        return new ManagementApi(buildClientOptions());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

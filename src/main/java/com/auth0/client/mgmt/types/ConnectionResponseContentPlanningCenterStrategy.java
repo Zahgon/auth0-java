@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentPlanningCenterStrategy {
-    public static final ConnectionResponseContentPlanningCenterStrategy PLANNINGCENTER =
-            new ConnectionResponseContentPlanningCenterStrategy(Value.PLANNINGCENTER, "planningcenter");
+
+    public static final ConnectionResponseContentPlanningCenterStrategy PLANNINGCENTER = new ConnectionResponseContentPlanningCenterStrategy(Value.PLANNINGCENTER, "planningcenter");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentPlanningCenterStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentPlanningCenterStrategy
-                        && this.string.equals(((ConnectionResponseContentPlanningCenterStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PLANNINGCENTER:
-                return visitor.visitPlanningcenter();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentPlanningCenterStrategy valueOf(String value) {
-        switch (value) {
-            case "planningcenter":
-                return PLANNINGCENTER;
-            default:
-                return new ConnectionResponseContentPlanningCenterStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PLANNINGCENTER,
 
-        UNKNOWN
+        PLANNINGCENTER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPlanningcenter();
 
         T visitUnknown(String unknownType);

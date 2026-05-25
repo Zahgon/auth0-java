@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileUserAttribute.Builder.class)
 public final class SelfServiceProfileUserAttribute {
+
     private final String name;
 
     private final String description;
@@ -27,8 +28,7 @@ public final class SelfServiceProfileUserAttribute {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileUserAttribute(
-            String name, String description, boolean isOptional, Map<String, Object> additionalProperties) {
+    private SelfServiceProfileUserAttribute(String name, String description, boolean isOptional, Map<String, Object> additionalProperties) {
         this.name = name;
         this.description = description;
         this.isOptional = isOptional;
@@ -40,7 +40,7 @@ public final class SelfServiceProfileUserAttribute {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,7 +48,7 @@ public final class SelfServiceProfileUserAttribute {
      */
     @JsonProperty("description")
     public String getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,18 +56,17 @@ public final class SelfServiceProfileUserAttribute {
      */
     @JsonProperty("is_optional")
     public boolean getIsOptional() {
-        return isOptional;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileUserAttribute && equalTo((SelfServiceProfileUserAttribute) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileUserAttribute other) {
@@ -76,19 +75,20 @@ public final class SelfServiceProfileUserAttribute {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.description, this.isOptional);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Identifier of this attribute.</p>
          */
@@ -98,6 +98,7 @@ public final class SelfServiceProfileUserAttribute {
     }
 
     public interface DescriptionStage {
+
         /**
          * <p>Description of this attribute.</p>
          */
@@ -105,6 +106,7 @@ public final class SelfServiceProfileUserAttribute {
     }
 
     public interface IsOptionalStage {
+
         /**
          * <p>Determines if this attribute is required</p>
          */
@@ -112,6 +114,7 @@ public final class SelfServiceProfileUserAttribute {
     }
 
     public interface _FinalStage {
+
         SelfServiceProfileUserAttribute build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -121,6 +124,7 @@ public final class SelfServiceProfileUserAttribute {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, DescriptionStage, IsOptionalStage, _FinalStage {
+
         private String name;
 
         private String description;
@@ -130,14 +134,12 @@ public final class SelfServiceProfileUserAttribute {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SelfServiceProfileUserAttribute other) {
-            name(other.getName());
-            description(other.getDescription());
-            isOptional(other.getIsOptional());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,8 +150,7 @@ public final class SelfServiceProfileUserAttribute {
         @java.lang.Override
         @JsonSetter("name")
         public DescriptionStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -160,8 +161,7 @@ public final class SelfServiceProfileUserAttribute {
         @java.lang.Override
         @JsonSetter("description")
         public IsOptionalStage description(@NotNull String description) {
-            this.description = Objects.requireNonNull(description, "description must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,25 +172,22 @@ public final class SelfServiceProfileUserAttribute {
         @java.lang.Override
         @JsonSetter("is_optional")
         public _FinalStage isOptional(boolean isOptional) {
-            this.isOptional = isOptional;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SelfServiceProfileUserAttribute build() {
-            return new SelfServiceProfileUserAttribute(name, description, isOptional, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

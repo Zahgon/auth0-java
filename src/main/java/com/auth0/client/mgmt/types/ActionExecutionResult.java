@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ActionExecutionResult.Builder.class)
 public final class ActionExecutionResult {
+
     private final Optional<String> actionName;
 
     private final Optional<ActionError> error;
@@ -31,12 +32,7 @@ public final class ActionExecutionResult {
 
     private final Map<String, Object> additionalProperties;
 
-    private ActionExecutionResult(
-            Optional<String> actionName,
-            Optional<ActionError> error,
-            Optional<OffsetDateTime> startedAt,
-            Optional<OffsetDateTime> endedAt,
-            Map<String, Object> additionalProperties) {
+    private ActionExecutionResult(Optional<String> actionName, Optional<ActionError> error, Optional<OffsetDateTime> startedAt, Optional<OffsetDateTime> endedAt, Map<String, Object> additionalProperties) {
         this.actionName = actionName;
         this.error = error;
         this.startedAt = startedAt;
@@ -49,12 +45,12 @@ public final class ActionExecutionResult {
      */
     @JsonProperty("action_name")
     public Optional<String> getActionName() {
-        return actionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("error")
     public Optional<ActionError> getError() {
-        return error;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class ActionExecutionResult {
      */
     @JsonProperty("started_at")
     public Optional<OffsetDateTime> getStartedAt() {
-        return startedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,43 +66,40 @@ public final class ActionExecutionResult {
      */
     @JsonProperty("ended_at")
     public Optional<OffsetDateTime> getEndedAt() {
-        return endedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ActionExecutionResult && equalTo((ActionExecutionResult) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ActionExecutionResult other) {
-        return actionName.equals(other.actionName)
-                && error.equals(other.error)
-                && startedAt.equals(other.startedAt)
-                && endedAt.equals(other.endedAt);
+        return actionName.equals(other.actionName) && error.equals(other.error) && startedAt.equals(other.startedAt) && endedAt.equals(other.endedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.actionName, this.error, this.startedAt, this.endedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> actionName = Optional.empty();
 
         private Optional<ActionError> error = Optional.empty();
@@ -118,14 +111,11 @@ public final class ActionExecutionResult {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ActionExecutionResult other) {
-            actionName(other.getActionName());
-            error(other.getError());
-            startedAt(other.getStartedAt());
-            endedAt(other.getEndedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,24 +123,20 @@ public final class ActionExecutionResult {
          */
         @JsonSetter(value = "action_name", nulls = Nulls.SKIP)
         public Builder actionName(Optional<String> actionName) {
-            this.actionName = actionName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Optional.ofNullable(actionName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "error", nulls = Nulls.SKIP)
         public Builder error(Optional<ActionError> error) {
-            this.error = error;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder error(ActionError error) {
-            this.error = Optional.ofNullable(error);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -158,13 +144,11 @@ public final class ActionExecutionResult {
          */
         @JsonSetter(value = "started_at", nulls = Nulls.SKIP)
         public Builder startedAt(Optional<OffsetDateTime> startedAt) {
-            this.startedAt = startedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder startedAt(OffsetDateTime startedAt) {
-            this.startedAt = Optional.ofNullable(startedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,27 +156,23 @@ public final class ActionExecutionResult {
          */
         @JsonSetter(value = "ended_at", nulls = Nulls.SKIP)
         public Builder endedAt(Optional<OffsetDateTime> endedAt) {
-            this.endedAt = endedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder endedAt(OffsetDateTime endedAt) {
-            this.endedAt = Optional.ofNullable(endedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ActionExecutionResult build() {
-            return new ActionExecutionResult(actionName, error, startedAt, endedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.GetGuardianEnrollmentResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEnrollmentsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEnrollmentsClient rawClient;
@@ -24,7 +25,7 @@ public class AsyncEnrollmentsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEnrollmentsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -32,9 +33,8 @@ public class AsyncEnrollmentsClient {
      * Create a <a href="https://auth0.com/docs/secure/multi-factor-authentication/auth0-guardian/create-custom-enrollment-tickets">multi-factor authentication (MFA) enrollment ticket</a>, and optionally send an email with the created ticket to a given user. Enrollment tickets can specify which factor users must enroll with or allow existing MFA users to enroll in additional factors.<br/>
      * <p>Note: Users cannot enroll in Email as a factor through custom enrollment tickets.</p>
      */
-    public CompletableFuture<CreateGuardianEnrollmentTicketResponseContent> createTicket(
-            CreateGuardianEnrollmentTicketRequestContent request) {
-        return this.rawClient.createTicket(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateGuardianEnrollmentTicketResponseContent> createTicket(CreateGuardianEnrollmentTicketRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -42,36 +42,35 @@ public class AsyncEnrollmentsClient {
      * Create a <a href="https://auth0.com/docs/secure/multi-factor-authentication/auth0-guardian/create-custom-enrollment-tickets">multi-factor authentication (MFA) enrollment ticket</a>, and optionally send an email with the created ticket to a given user. Enrollment tickets can specify which factor users must enroll with or allow existing MFA users to enroll in additional factors.<br/>
      * <p>Note: Users cannot enroll in Email as a factor through custom enrollment tickets.</p>
      */
-    public CompletableFuture<CreateGuardianEnrollmentTicketResponseContent> createTicket(
-            CreateGuardianEnrollmentTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.createTicket(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateGuardianEnrollmentTicketResponseContent> createTicket(CreateGuardianEnrollmentTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details, such as status and type, for a specific multi-factor authentication enrollment registered to a user account.
      */
     public CompletableFuture<GetGuardianEnrollmentResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details, such as status and type, for a specific multi-factor authentication enrollment registered to a user account.
      */
     public CompletableFuture<GetGuardianEnrollmentResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a specific multi-factor authentication (MFA) enrollment from a user's account. This allows the user to re-enroll with MFA. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/reset-user-mfa">Reset User Multi-Factor Authentication and Recovery Codes</a>.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove a specific multi-factor authentication (MFA) enrollment from a user's account. This allows the user to re-enroll with MFA. For more information, review <a href="https://auth0.com/docs/secure/multi-factor-authentication/reset-user-mfa">Reset User Multi-Factor Authentication and Recovery Codes</a>.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

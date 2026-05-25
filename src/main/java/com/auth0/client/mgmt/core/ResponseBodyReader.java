@@ -17,6 +17,7 @@ import okhttp3.Response;
  * premature closure of the underlying HTTP connection.
  */
 public class ResponseBodyReader extends FilterReader {
+
     private final Response response;
 
     /**
@@ -38,7 +39,6 @@ public class ResponseBodyReader extends FilterReader {
      */
     @Override
     public void close() throws IOException {
-        super.close();
-        response.close(); // Ensure the response is closed when the reader is closed
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

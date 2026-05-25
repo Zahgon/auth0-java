@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionMailchimp.Deserializer.class)
 public final class CreateFlowsVaultConnectionMailchimp {
+
     private final Object value;
 
     private final int type;
@@ -27,26 +28,17 @@ public final class CreateFlowsVaultConnectionMailchimp {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionMailchimpApiKey) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionMailchimpOauthCode) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((CreateFlowsVaultConnectionMailchimpUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionMailchimp
-                && equalTo((CreateFlowsVaultConnectionMailchimp) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionMailchimp other) {
@@ -55,27 +47,28 @@ public final class CreateFlowsVaultConnectionMailchimp {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionMailchimp of(CreateFlowsVaultConnectionMailchimpApiKey value) {
-        return new CreateFlowsVaultConnectionMailchimp(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionMailchimp of(CreateFlowsVaultConnectionMailchimpOauthCode value) {
-        return new CreateFlowsVaultConnectionMailchimp(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionMailchimp of(CreateFlowsVaultConnectionMailchimpUninitialized value) {
-        return new CreateFlowsVaultConnectionMailchimp(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionMailchimpApiKey value);
 
         T visit(CreateFlowsVaultConnectionMailchimpOauthCode value);
@@ -84,44 +77,14 @@ public final class CreateFlowsVaultConnectionMailchimp {
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionMailchimp> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionMailchimp.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionMailchimp deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionMailchimpApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionMailchimpOauthCode.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionMailchimpUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionMailchimp deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

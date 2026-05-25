@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = UpdateFlowsVaultConnectionSetup.Deserializer.class)
 public final class UpdateFlowsVaultConnectionSetup {
+
     private final Object value;
 
     private final int type;
@@ -27,51 +28,17 @@ public final class UpdateFlowsVaultConnectionSetup {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((FlowsVaultConnectioSetupApiKeyWithBaseUrl) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((FlowsVaultConnectioSetupApiKey) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((FlowsVaultConnectioSetupOauthApp) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((FlowsVaultConnectioSetupBigqueryOauthJwt) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((FlowsVaultConnectioSetupSecretApiKey) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((FlowsVaultConnectioSetupHttpBearer) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((FlowsVaultConnectionHttpBasicAuthSetup) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((FlowsVaultConnectionHttpApiKeySetup) this.value);
-        } else if (this.type == 8) {
-            return visitor.visit((FlowsVaultConnectionHttpOauthClientCredentialsSetup) this.value);
-        } else if (this.type == 9) {
-            return visitor.visit((FlowsVaultConnectioSetupJwt) this.value);
-        } else if (this.type == 10) {
-            return visitor.visit((FlowsVaultConnectioSetupMailjetApiKey) this.value);
-        } else if (this.type == 11) {
-            return visitor.visit((FlowsVaultConnectioSetupToken) this.value);
-        } else if (this.type == 12) {
-            return visitor.visit((FlowsVaultConnectioSetupWebhook) this.value);
-        } else if (this.type == 13) {
-            return visitor.visit((FlowsVaultConnectioSetupStripeKeyPair) this.value);
-        } else if (this.type == 14) {
-            return visitor.visit((FlowsVaultConnectioSetupOauthCode) this.value);
-        } else if (this.type == 15) {
-            return visitor.visit((FlowsVaultConnectioSetupTwilioApiKey) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateFlowsVaultConnectionSetup && equalTo((UpdateFlowsVaultConnectionSetup) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateFlowsVaultConnectionSetup other) {
@@ -80,79 +47,80 @@ public final class UpdateFlowsVaultConnectionSetup {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupApiKeyWithBaseUrl value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupApiKey value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupOauthApp value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupBigqueryOauthJwt value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupSecretApiKey value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupHttpBearer value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectionHttpBasicAuthSetup value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectionHttpApiKeySetup value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectionHttpOauthClientCredentialsSetup value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 8);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupJwt value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 9);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupMailjetApiKey value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 10);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupToken value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 11);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupWebhook value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 12);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupStripeKeyPair value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 13);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupOauthCode value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 14);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static UpdateFlowsVaultConnectionSetup of(FlowsVaultConnectioSetupTwilioApiKey value) {
-        return new UpdateFlowsVaultConnectionSetup(value, 15);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(FlowsVaultConnectioSetupApiKeyWithBaseUrl value);
 
         T visit(FlowsVaultConnectioSetupApiKey value);
@@ -187,153 +155,14 @@ public final class UpdateFlowsVaultConnectionSetup {
     }
 
     static final class Deserializer extends StdDeserializer<UpdateFlowsVaultConnectionSetup> {
+
         Deserializer() {
             super(UpdateFlowsVaultConnectionSetup.class);
         }
 
         @java.lang.Override
-        public UpdateFlowsVaultConnectionSetup deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("api_key")
-                    && ((Map<?, ?>) value).containsKey("base_url")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, FlowsVaultConnectioSetupApiKeyWithBaseUrl.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("api_key")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("client_id")
-                    && ((Map<?, ?>) value).containsKey("client_secret")
-                    && ((Map<?, ?>) value).containsKey("domain")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupOauthApp.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(
-                        ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupBigqueryOauthJwt.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("secret_key")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupSecretApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("token")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupHttpBearer.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("username")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, FlowsVaultConnectionHttpBasicAuthSetup.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("value")
-                    && ((Map<?, ?>) value).containsKey("in")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectionHttpApiKeySetup.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("client_id")
-                    && ((Map<?, ?>) value).containsKey("client_secret")
-                    && ((Map<?, ?>) value).containsKey("token_endpoint")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, FlowsVaultConnectionHttpOauthClientCredentialsSetup.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("algorithm")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupJwt.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("api_key")
-                    && ((Map<?, ?>) value).containsKey("secret_key")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupMailjetApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("token")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupToken.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("url")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupWebhook.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("private_key")
-                    && ((Map<?, ?>) value).containsKey("public_key")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupStripeKeyPair.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupOauthCode.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("account_id")
-                    && ((Map<?, ?>) value).containsKey("api_key")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, FlowsVaultConnectioSetupTwilioApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public UpdateFlowsVaultConnectionSetup deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

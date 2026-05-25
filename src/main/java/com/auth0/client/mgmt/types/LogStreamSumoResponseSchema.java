@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamSumoResponseSchema.Builder.class)
 public final class LogStreamSumoResponseSchema {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -39,16 +40,7 @@ public final class LogStreamSumoResponseSchema {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamSumoResponseSchema(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<LogStreamStatusEnum> status,
-            Optional<LogStreamSumoEnum> type,
-            Optional<Boolean> isPriority,
-            Optional<List<LogStreamFilter>> filters,
-            Optional<LogStreamPiiConfig> piiConfig,
-            Optional<LogStreamSumoSink> sink,
-            Map<String, Object> additionalProperties) {
+    private LogStreamSumoResponseSchema(Optional<String> id, Optional<String> name, Optional<LogStreamStatusEnum> status, Optional<LogStreamSumoEnum> type, Optional<Boolean> isPriority, Optional<List<LogStreamFilter>> filters, Optional<LogStreamPiiConfig> piiConfig, Optional<LogStreamSumoSink> sink, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.status = status;
@@ -65,7 +57,7 @@ public final class LogStreamSumoResponseSchema {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,17 +65,17 @@ public final class LogStreamSumoResponseSchema {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<LogStreamStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public Optional<LogStreamSumoEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +83,7 @@ public final class LogStreamSumoResponseSchema {
      */
     @JsonProperty("isPriority")
     public Optional<Boolean> getIsPriority() {
-        return isPriority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,58 +91,50 @@ public final class LogStreamSumoResponseSchema {
      */
     @JsonProperty("filters")
     public Optional<List<LogStreamFilter>> getFilters() {
-        return filters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("pii_config")
     public Optional<LogStreamPiiConfig> getPiiConfig() {
-        return piiConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sink")
     public Optional<LogStreamSumoSink> getSink() {
-        return sink;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamSumoResponseSchema && equalTo((LogStreamSumoResponseSchema) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamSumoResponseSchema other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && status.equals(other.status)
-                && type.equals(other.type)
-                && isPriority.equals(other.isPriority)
-                && filters.equals(other.filters)
-                && piiConfig.equals(other.piiConfig)
-                && sink.equals(other.sink);
+        return id.equals(other.id) && name.equals(other.name) && status.equals(other.status) && type.equals(other.type) && isPriority.equals(other.isPriority) && filters.equals(other.filters) && piiConfig.equals(other.piiConfig) && sink.equals(other.sink);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.name, this.status, this.type, this.isPriority, this.filters, this.piiConfig, this.sink);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -170,18 +154,11 @@ public final class LogStreamSumoResponseSchema {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LogStreamSumoResponseSchema other) {
-            id(other.getId());
-            name(other.getName());
-            status(other.getStatus());
-            type(other.getType());
-            isPriority(other.getIsPriority());
-            filters(other.getFilters());
-            piiConfig(other.getPiiConfig());
-            sink(other.getSink());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -189,13 +166,11 @@ public final class LogStreamSumoResponseSchema {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -203,35 +178,29 @@ public final class LogStreamSumoResponseSchema {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<LogStreamStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(LogStreamStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<LogStreamSumoEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(LogStreamSumoEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,13 +208,11 @@ public final class LogStreamSumoResponseSchema {
          */
         @JsonSetter(value = "isPriority", nulls = Nulls.SKIP)
         public Builder isPriority(Optional<Boolean> isPriority) {
-            this.isPriority = isPriority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isPriority(Boolean isPriority) {
-            this.isPriority = Optional.ofNullable(isPriority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -253,50 +220,41 @@ public final class LogStreamSumoResponseSchema {
          */
         @JsonSetter(value = "filters", nulls = Nulls.SKIP)
         public Builder filters(Optional<List<LogStreamFilter>> filters) {
-            this.filters = filters;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder filters(List<LogStreamFilter> filters) {
-            this.filters = Optional.ofNullable(filters);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "pii_config", nulls = Nulls.SKIP)
         public Builder piiConfig(Optional<LogStreamPiiConfig> piiConfig) {
-            this.piiConfig = piiConfig;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder piiConfig(LogStreamPiiConfig piiConfig) {
-            this.piiConfig = Optional.ofNullable(piiConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "sink", nulls = Nulls.SKIP)
         public Builder sink(Optional<LogStreamSumoSink> sink) {
-            this.sink = sink;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder sink(LogStreamSumoSink sink) {
-            this.sink = Optional.ofNullable(sink);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LogStreamSumoResponseSchema build() {
-            return new LogStreamSumoResponseSchema(
-                    id, name, status, type, isPriority, filters, piiConfig, sink, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

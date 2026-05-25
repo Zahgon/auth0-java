@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionGoogleSheetsAddRowAction {
-    public static final FlowActionGoogleSheetsAddRowAction ADD_ROW =
-            new FlowActionGoogleSheetsAddRowAction(Value.ADD_ROW, "ADD_ROW");
+
+    public static final FlowActionGoogleSheetsAddRowAction ADD_ROW = new FlowActionGoogleSheetsAddRowAction(Value.ADD_ROW, "ADD_ROW");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionGoogleSheetsAddRowAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionGoogleSheetsAddRowAction
-                        && this.string.equals(((FlowActionGoogleSheetsAddRowAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ADD_ROW:
-                return visitor.visitAddRow();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionGoogleSheetsAddRowAction valueOf(String value) {
-        switch (value) {
-            case "ADD_ROW":
-                return ADD_ROW;
-            default:
-                return new FlowActionGoogleSheetsAddRowAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ADD_ROW,
 
-        UNKNOWN
+        ADD_ROW, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAddRow();
 
         T visitUnknown(String unknownType);

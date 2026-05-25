@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentTwitterStrategy {
-    public static final ConnectionResponseContentTwitterStrategy TWITTER =
-            new ConnectionResponseContentTwitterStrategy(Value.TWITTER, "twitter");
+
+    public static final ConnectionResponseContentTwitterStrategy TWITTER = new ConnectionResponseContentTwitterStrategy(Value.TWITTER, "twitter");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentTwitterStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentTwitterStrategy
-                        && this.string.equals(((ConnectionResponseContentTwitterStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TWITTER:
-                return visitor.visitTwitter();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentTwitterStrategy valueOf(String value) {
-        switch (value) {
-            case "twitter":
-                return TWITTER;
-            default:
-                return new ConnectionResponseContentTwitterStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TWITTER,
 
-        UNKNOWN
+        TWITTER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTwitter();
 
         T visitUnknown(String unknownType);

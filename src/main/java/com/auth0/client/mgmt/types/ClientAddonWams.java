@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAddonWams.Builder.class)
 public final class ClientAddonWams {
+
     private final Optional<String> masterkey;
 
     private final Map<String, Object> additionalProperties;
@@ -34,18 +35,17 @@ public final class ClientAddonWams {
      */
     @JsonProperty("masterkey")
     public Optional<String> getMasterkey() {
-        return masterkey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAddonWams && equalTo((ClientAddonWams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAddonWams other) {
@@ -54,30 +54,31 @@ public final class ClientAddonWams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.masterkey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> masterkey = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAddonWams other) {
-            masterkey(other.getMasterkey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -85,27 +86,23 @@ public final class ClientAddonWams {
          */
         @JsonSetter(value = "masterkey", nulls = Nulls.SKIP)
         public Builder masterkey(Optional<String> masterkey) {
-            this.masterkey = masterkey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder masterkey(String masterkey) {
-            this.masterkey = Optional.ofNullable(masterkey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAddonWams build() {
-            return new ClientAddonWams(masterkey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.users.types.LinkUserIdentityRequestContent;
 import java.util.List;
 
 public class IdentitiesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawIdentitiesClient rawClient;
@@ -25,7 +26,7 @@ public class IdentitiesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawIdentitiesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -57,7 +58,7 @@ public class IdentitiesClient {
      * </ul></p>
      */
     public List<UserIdentity> link(String id) {
-        return this.rawClient.link(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +90,7 @@ public class IdentitiesClient {
      * </ul></p>
      */
     public List<UserIdentity> link(String id, RequestOptions requestOptions) {
-        return this.rawClient.link(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +122,7 @@ public class IdentitiesClient {
      * </ul></p>
      */
     public List<UserIdentity> link(String id, LinkUserIdentityRequestContent request) {
-        return this.rawClient.link(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -153,24 +154,22 @@ public class IdentitiesClient {
      * </ul></p>
      */
     public List<UserIdentity> link(String id, LinkUserIdentityRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.link(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Unlink a specific secondary account from a target user. This action requires the ID of both the target user and the secondary account.
      * <p>Unlinking the secondary account removes it from the identities array of the target user and creates a new standalone profile for the secondary account. To learn more, review <a href="https://auth0.com/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts">Unlink User Accounts</a>.</p>
      */
-    public List<DeleteUserIdentityResponseContentItem> delete(
-            String id, UserIdentityProviderEnum provider, String userId) {
-        return this.rawClient.delete(id, provider, userId).body();
+    public List<DeleteUserIdentityResponseContentItem> delete(String id, UserIdentityProviderEnum provider, String userId) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Unlink a specific secondary account from a target user. This action requires the ID of both the target user and the secondary account.
      * <p>Unlinking the secondary account removes it from the identities array of the target user and creates a new standalone profile for the secondary account. To learn more, review <a href="https://auth0.com/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts">Unlink User Accounts</a>.</p>
      */
-    public List<DeleteUserIdentityResponseContentItem> delete(
-            String id, UserIdentityProviderEnum provider, String userId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, provider, userId, requestOptions).body();
+    public List<DeleteUserIdentityResponseContentItem> delete(String id, UserIdentityProviderEnum provider, String userId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

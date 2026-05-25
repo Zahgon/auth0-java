@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.OrganizationAllConnectionPost;
 import com.auth0.client.mgmt.types.UpdateOrganizationAllConnectionResponseContent;
 
 public class ConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectionsClient rawClient;
@@ -28,73 +29,62 @@ public class ConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<OrganizationAllConnectionPost> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SyncPagingIterable<OrganizationAllConnectionPost> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<OrganizationAllConnectionPost> list(
-            String id, ListOrganizationAllConnectionsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<OrganizationAllConnectionPost> list(String id, ListOrganizationAllConnectionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public SyncPagingIterable<OrganizationAllConnectionPost> list(
-            String id, ListOrganizationAllConnectionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<OrganizationAllConnectionPost> list(String id, ListOrganizationAllConnectionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateOrganizationAllConnectionResponseContent create(
-            String id, CreateOrganizationAllConnectionRequestParameters request) {
-        return this.rawClient.create(id, request).body();
+    public CreateOrganizationAllConnectionResponseContent create(String id, CreateOrganizationAllConnectionRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CreateOrganizationAllConnectionResponseContent create(
-            String id, CreateOrganizationAllConnectionRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateOrganizationAllConnectionResponseContent create(String id, CreateOrganizationAllConnectionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetOrganizationAllConnectionResponseContent get(String id, String connectionId) {
-        return this.rawClient.get(id, connectionId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public GetOrganizationAllConnectionResponseContent get(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, connectionId, requestOptions).body();
+    public GetOrganizationAllConnectionResponseContent get(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String connectionId) {
-        this.rawClient.delete(id, connectionId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String connectionId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, connectionId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UpdateOrganizationAllConnectionResponseContent update(String id, String connectionId) {
-        return this.rawClient.update(id, connectionId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateOrganizationAllConnectionResponseContent update(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, requestOptions).body();
+    public UpdateOrganizationAllConnectionResponseContent update(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateOrganizationAllConnectionResponseContent update(
-            String id, String connectionId, UpdateOrganizationConnectionRequestParameters request) {
-        return this.rawClient.update(id, connectionId, request).body();
+    public UpdateOrganizationAllConnectionResponseContent update(String id, String connectionId, UpdateOrganizationConnectionRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public UpdateOrganizationAllConnectionResponseContent update(
-            String id,
-            String connectionId,
-            UpdateOrganizationConnectionRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, request, requestOptions).body();
+    public UpdateOrganizationAllConnectionResponseContent update(String id, String connectionId, UpdateOrganizationConnectionRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

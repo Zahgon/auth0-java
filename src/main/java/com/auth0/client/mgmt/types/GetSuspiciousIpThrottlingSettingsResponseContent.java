@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetSuspiciousIpThrottlingSettingsResponseContent.Builder.class)
 public final class GetSuspiciousIpThrottlingSettingsResponseContent {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<List<SuspiciousIpThrottlingShieldsEnum>> shields;
@@ -31,12 +32,7 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetSuspiciousIpThrottlingSettingsResponseContent(
-            Optional<Boolean> enabled,
-            Optional<List<SuspiciousIpThrottlingShieldsEnum>> shields,
-            Optional<List<String>> allowlist,
-            Optional<SuspiciousIpThrottlingStage> stage,
-            Map<String, Object> additionalProperties) {
+    private GetSuspiciousIpThrottlingSettingsResponseContent(Optional<Boolean> enabled, Optional<List<SuspiciousIpThrottlingShieldsEnum>> shields, Optional<List<String>> allowlist, Optional<SuspiciousIpThrottlingStage> stage, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.shields = shields;
         this.allowlist = allowlist;
@@ -49,7 +45,7 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,54 +54,50 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
      */
     @JsonProperty("shields")
     public Optional<List<SuspiciousIpThrottlingShieldsEnum>> getShields() {
-        return shields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("allowlist")
     public Optional<List<String>> getAllowlist() {
-        return allowlist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("stage")
     public Optional<SuspiciousIpThrottlingStage> getStage() {
-        return stage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetSuspiciousIpThrottlingSettingsResponseContent
-                && equalTo((GetSuspiciousIpThrottlingSettingsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetSuspiciousIpThrottlingSettingsResponseContent other) {
-        return enabled.equals(other.enabled)
-                && shields.equals(other.shields)
-                && allowlist.equals(other.allowlist)
-                && stage.equals(other.stage);
+        return enabled.equals(other.enabled) && shields.equals(other.shields) && allowlist.equals(other.allowlist) && stage.equals(other.stage);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.shields, this.allowlist, this.stage);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<List<SuspiciousIpThrottlingShieldsEnum>> shields = Optional.empty();
@@ -117,14 +109,11 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetSuspiciousIpThrottlingSettingsResponseContent other) {
-            enabled(other.getEnabled());
-            shields(other.getShields());
-            allowlist(other.getAllowlist());
-            stage(other.getStage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -132,13 +121,11 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -147,50 +134,41 @@ public final class GetSuspiciousIpThrottlingSettingsResponseContent {
          */
         @JsonSetter(value = "shields", nulls = Nulls.SKIP)
         public Builder shields(Optional<List<SuspiciousIpThrottlingShieldsEnum>> shields) {
-            this.shields = shields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder shields(List<SuspiciousIpThrottlingShieldsEnum> shields) {
-            this.shields = Optional.ofNullable(shields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "allowlist", nulls = Nulls.SKIP)
         public Builder allowlist(Optional<List<String>> allowlist) {
-            this.allowlist = allowlist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowlist(List<String> allowlist) {
-            this.allowlist = Optional.ofNullable(allowlist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "stage", nulls = Nulls.SKIP)
         public Builder stage(Optional<SuspiciousIpThrottlingStage> stage) {
-            this.stage = stage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder stage(SuspiciousIpThrottlingStage stage) {
-            this.stage = Optional.ofNullable(stage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetSuspiciousIpThrottlingSettingsResponseContent build() {
-            return new GetSuspiciousIpThrottlingSettingsResponseContent(
-                    enabled, shields, allowlist, stage, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

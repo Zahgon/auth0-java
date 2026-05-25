@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentOidcStrategy {
-    public static final ConnectionResponseContentOidcStrategy OIDC =
-            new ConnectionResponseContentOidcStrategy(Value.OIDC, "oidc");
+
+    public static final ConnectionResponseContentOidcStrategy OIDC = new ConnectionResponseContentOidcStrategy(Value.OIDC, "oidc");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentOidcStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentOidcStrategy
-                        && this.string.equals(((ConnectionResponseContentOidcStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OIDC:
-                return visitor.visitOidc();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentOidcStrategy valueOf(String value) {
-        switch (value) {
-            case "oidc":
-                return OIDC;
-            default:
-                return new ConnectionResponseContentOidcStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OIDC,
 
-        UNKNOWN
+        OIDC, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOidc();
 
         T visitUnknown(String unknownType);

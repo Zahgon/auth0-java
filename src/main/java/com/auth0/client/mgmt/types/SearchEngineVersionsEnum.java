@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SearchEngineVersionsEnum {
+
     public static final SearchEngineVersionsEnum V2 = new SearchEngineVersionsEnum(Value.V2, "v2");
 
     public static final SearchEngineVersionsEnum V1 = new SearchEngineVersionsEnum(Value.V1, "v1");
@@ -23,66 +24,41 @@ public final class SearchEngineVersionsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SearchEngineVersionsEnum
-                        && this.string.equals(((SearchEngineVersionsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case V2:
-                return visitor.visitV2();
-            case V1:
-                return visitor.visitV1();
-            case V3:
-                return visitor.visitV3();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SearchEngineVersionsEnum valueOf(String value) {
-        switch (value) {
-            case "v2":
-                return V2;
-            case "v1":
-                return V1;
-            case "v3":
-                return V3;
-            default:
-                return new SearchEngineVersionsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        V1,
 
-        V2,
-
-        V3,
-
-        UNKNOWN
+        V1, V2, V3, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitV1();
 
         T visitV2();

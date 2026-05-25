@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ActionBindingTypeEnum {
-    public static final ActionBindingTypeEnum ENTITY_BOUND =
-            new ActionBindingTypeEnum(Value.ENTITY_BOUND, "entity-bound");
 
-    public static final ActionBindingTypeEnum TRIGGER_BOUND =
-            new ActionBindingTypeEnum(Value.TRIGGER_BOUND, "trigger-bound");
+    public static final ActionBindingTypeEnum ENTITY_BOUND = new ActionBindingTypeEnum(Value.ENTITY_BOUND, "entity-bound");
+
+    public static final ActionBindingTypeEnum TRIGGER_BOUND = new ActionBindingTypeEnum(Value.TRIGGER_BOUND, "trigger-bound");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ActionBindingTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ActionBindingTypeEnum
-                        && this.string.equals(((ActionBindingTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ENTITY_BOUND:
-                return visitor.visitEntityBound();
-            case TRIGGER_BOUND:
-                return visitor.visitTriggerBound();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ActionBindingTypeEnum valueOf(String value) {
-        switch (value) {
-            case "entity-bound":
-                return ENTITY_BOUND;
-            case "trigger-bound":
-                return TRIGGER_BOUND;
-            default:
-                return new ActionBindingTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TRIGGER_BOUND,
 
-        ENTITY_BOUND,
-
-        UNKNOWN
+        TRIGGER_BOUND, ENTITY_BOUND, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTriggerBound();
 
         T visitEntityBound();

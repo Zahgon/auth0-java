@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LogStreamEventBridgeSink.Builder.class)
 public final class LogStreamEventBridgeSink {
+
     private final String awsAccountId;
 
     private final LogStreamEventBridgeSinkRegionEnum awsRegion;
@@ -29,11 +30,7 @@ public final class LogStreamEventBridgeSink {
 
     private final Map<String, Object> additionalProperties;
 
-    private LogStreamEventBridgeSink(
-            String awsAccountId,
-            LogStreamEventBridgeSinkRegionEnum awsRegion,
-            Optional<String> awsPartnerEventSource,
-            Map<String, Object> additionalProperties) {
+    private LogStreamEventBridgeSink(String awsAccountId, LogStreamEventBridgeSinkRegionEnum awsRegion, Optional<String> awsPartnerEventSource, Map<String, Object> additionalProperties) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
         this.awsPartnerEventSource = awsPartnerEventSource;
@@ -45,12 +42,12 @@ public final class LogStreamEventBridgeSink {
      */
     @JsonProperty("awsAccountId")
     public String getAwsAccountId() {
-        return awsAccountId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("awsRegion")
     public LogStreamEventBridgeSinkRegionEnum getAwsRegion() {
-        return awsRegion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,41 +55,39 @@ public final class LogStreamEventBridgeSink {
      */
     @JsonProperty("awsPartnerEventSource")
     public Optional<String> getAwsPartnerEventSource() {
-        return awsPartnerEventSource;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamEventBridgeSink && equalTo((LogStreamEventBridgeSink) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamEventBridgeSink other) {
-        return awsAccountId.equals(other.awsAccountId)
-                && awsRegion.equals(other.awsRegion)
-                && awsPartnerEventSource.equals(other.awsPartnerEventSource);
+        return awsAccountId.equals(other.awsAccountId) && awsRegion.equals(other.awsRegion) && awsPartnerEventSource.equals(other.awsPartnerEventSource);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.awsAccountId, this.awsRegion, this.awsPartnerEventSource);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AwsAccountIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AwsAccountIdStage {
+
         /**
          * <p>AWS account ID</p>
          */
@@ -102,10 +97,12 @@ public final class LogStreamEventBridgeSink {
     }
 
     public interface AwsRegionStage {
+
         _FinalStage awsRegion(@NotNull LogStreamEventBridgeSinkRegionEnum awsRegion);
     }
 
     public interface _FinalStage {
+
         LogStreamEventBridgeSink build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -122,6 +119,7 @@ public final class LogStreamEventBridgeSink {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AwsAccountIdStage, AwsRegionStage, _FinalStage {
+
         private String awsAccountId;
 
         private LogStreamEventBridgeSinkRegionEnum awsRegion;
@@ -131,14 +129,12 @@ public final class LogStreamEventBridgeSink {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(LogStreamEventBridgeSink other) {
-            awsAccountId(other.getAwsAccountId());
-            awsRegion(other.getAwsRegion());
-            awsPartnerEventSource(other.getAwsPartnerEventSource());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,15 +145,13 @@ public final class LogStreamEventBridgeSink {
         @java.lang.Override
         @JsonSetter("awsAccountId")
         public AwsRegionStage awsAccountId(@NotNull String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId, "awsAccountId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("awsRegion")
         public _FinalStage awsRegion(@NotNull LogStreamEventBridgeSinkRegionEnum awsRegion) {
-            this.awsRegion = Objects.requireNonNull(awsRegion, "awsRegion must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -166,8 +160,7 @@ public final class LogStreamEventBridgeSink {
          */
         @java.lang.Override
         public _FinalStage awsPartnerEventSource(String awsPartnerEventSource) {
-            this.awsPartnerEventSource = Optional.ofNullable(awsPartnerEventSource);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -176,25 +169,22 @@ public final class LogStreamEventBridgeSink {
         @java.lang.Override
         @JsonSetter(value = "awsPartnerEventSource", nulls = Nulls.SKIP)
         public _FinalStage awsPartnerEventSource(Optional<String> awsPartnerEventSource) {
-            this.awsPartnerEventSource = awsPartnerEventSource;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public LogStreamEventBridgeSink build() {
-            return new LogStreamEventBridgeSink(awsAccountId, awsRegion, awsPartnerEventSource, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

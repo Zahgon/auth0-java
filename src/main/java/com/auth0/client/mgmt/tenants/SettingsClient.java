@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.GetTenantSettingsResponseContent;
 import com.auth0.client.mgmt.types.UpdateTenantSettingsResponseContent;
 
 public class SettingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSettingsClient rawClient;
@@ -24,64 +25,62 @@ public class SettingsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSettingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public GetTenantSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public GetTenantSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
     public GetTenantSettingsResponseContent get(GetTenantSettingsRequestParameters request) {
-        return this.rawClient.get(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve tenant settings. A list of fields to include or exclude may also be specified.
      */
-    public GetTenantSettingsResponseContent get(
-            GetTenantSettingsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.get(request, requestOptions).body();
+    public GetTenantSettingsResponseContent get(GetTenantSettingsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public UpdateTenantSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public UpdateTenantSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
     public UpdateTenantSettingsResponseContent update(UpdateTenantSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update settings for a tenant.
      */
-    public UpdateTenantSettingsResponseContent update(
-            UpdateTenantSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateTenantSettingsResponseContent update(UpdateTenantSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

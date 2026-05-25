@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomSigningKeyCurveEnum {
+
     public static final CustomSigningKeyCurveEnum P521 = new CustomSigningKeyCurveEnum(Value.P521, "P-521");
 
     public static final CustomSigningKeyCurveEnum P384 = new CustomSigningKeyCurveEnum(Value.P384, "P-384");
@@ -23,66 +24,41 @@ public final class CustomSigningKeyCurveEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomSigningKeyCurveEnum
-                        && this.string.equals(((CustomSigningKeyCurveEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case P521:
-                return visitor.visitP521();
-            case P384:
-                return visitor.visitP384();
-            case P256:
-                return visitor.visitP256();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomSigningKeyCurveEnum valueOf(String value) {
-        switch (value) {
-            case "P-521":
-                return P521;
-            case "P-384":
-                return P384;
-            case "P-256":
-                return P256;
-            default:
-                return new CustomSigningKeyCurveEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        P256,
 
-        P384,
-
-        P521,
-
-        UNKNOWN
+        P256, P384, P521, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitP256();
 
         T visitP384();

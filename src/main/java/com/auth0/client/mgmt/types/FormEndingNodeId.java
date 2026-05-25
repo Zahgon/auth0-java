@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormEndingNodeId {
+
     public static final FormEndingNodeId ENDING = new FormEndingNodeId(Value.ENDING, "$ending");
 
     private final Value value;
@@ -19,53 +20,41 @@ public final class FormEndingNodeId {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormEndingNodeId && this.string.equals(((FormEndingNodeId) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ENDING:
-                return visitor.visitEnding();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormEndingNodeId valueOf(String value) {
-        switch (value) {
-            case "$ending":
-                return ENDING;
-            default:
-                return new FormEndingNodeId(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ENDING,
 
-        UNKNOWN
+        ENDING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEnding();
 
         T visitUnknown(String unknownType);

@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldNumberConfig.Builder.class)
 public final class FormFieldNumberConfig {
+
     private final Optional<Double> defaultValue;
 
     private final Optional<String> placeholder;
@@ -30,12 +31,7 @@ public final class FormFieldNumberConfig {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldNumberConfig(
-            Optional<Double> defaultValue,
-            Optional<String> placeholder,
-            Optional<Double> minValue,
-            Optional<Double> maxValue,
-            Map<String, Object> additionalProperties) {
+    private FormFieldNumberConfig(Optional<Double> defaultValue, Optional<String> placeholder, Optional<Double> minValue, Optional<Double> maxValue, Map<String, Object> additionalProperties) {
         this.defaultValue = defaultValue;
         this.placeholder = placeholder;
         this.minValue = minValue;
@@ -45,58 +41,55 @@ public final class FormFieldNumberConfig {
 
     @JsonProperty("default_value")
     public Optional<Double> getDefaultValue() {
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("placeholder")
     public Optional<String> getPlaceholder() {
-        return placeholder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("min_value")
     public Optional<Double> getMinValue() {
-        return minValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_value")
     public Optional<Double> getMaxValue() {
-        return maxValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldNumberConfig && equalTo((FormFieldNumberConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldNumberConfig other) {
-        return defaultValue.equals(other.defaultValue)
-                && placeholder.equals(other.placeholder)
-                && minValue.equals(other.minValue)
-                && maxValue.equals(other.maxValue);
+        return defaultValue.equals(other.defaultValue) && placeholder.equals(other.placeholder) && minValue.equals(other.minValue) && maxValue.equals(other.maxValue);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.defaultValue, this.placeholder, this.minValue, this.maxValue);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> defaultValue = Optional.empty();
 
         private Optional<String> placeholder = Optional.empty();
@@ -108,72 +101,59 @@ public final class FormFieldNumberConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldNumberConfig other) {
-            defaultValue(other.getDefaultValue());
-            placeholder(other.getPlaceholder());
-            minValue(other.getMinValue());
-            maxValue(other.getMaxValue());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_value", nulls = Nulls.SKIP)
         public Builder defaultValue(Optional<Double> defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultValue(Double defaultValue) {
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "placeholder", nulls = Nulls.SKIP)
         public Builder placeholder(Optional<String> placeholder) {
-            this.placeholder = placeholder;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder placeholder(String placeholder) {
-            this.placeholder = Optional.ofNullable(placeholder);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "min_value", nulls = Nulls.SKIP)
         public Builder minValue(Optional<Double> minValue) {
-            this.minValue = minValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder minValue(Double minValue) {
-            this.minValue = Optional.ofNullable(minValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "max_value", nulls = Nulls.SKIP)
         public Builder maxValue(Optional<Double> maxValue) {
-            this.maxValue = maxValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxValue(Double maxValue) {
-            this.maxValue = Optional.ofNullable(maxValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldNumberConfig build() {
-            return new FormFieldNumberConfig(defaultValue, placeholder, minValue, maxValue, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

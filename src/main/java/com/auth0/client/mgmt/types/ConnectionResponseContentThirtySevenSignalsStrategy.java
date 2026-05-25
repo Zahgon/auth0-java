@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentThirtySevenSignalsStrategy {
-    public static final ConnectionResponseContentThirtySevenSignalsStrategy THIRTYSEVENSIGNALS =
-            new ConnectionResponseContentThirtySevenSignalsStrategy(Value.THIRTYSEVENSIGNALS, "thirtysevensignals");
+
+    public static final ConnectionResponseContentThirtySevenSignalsStrategy THIRTYSEVENSIGNALS = new ConnectionResponseContentThirtySevenSignalsStrategy(Value.THIRTYSEVENSIGNALS, "thirtysevensignals");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentThirtySevenSignalsStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentThirtySevenSignalsStrategy
-                        && this.string.equals(((ConnectionResponseContentThirtySevenSignalsStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case THIRTYSEVENSIGNALS:
-                return visitor.visitThirtysevensignals();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentThirtySevenSignalsStrategy valueOf(String value) {
-        switch (value) {
-            case "thirtysevensignals":
-                return THIRTYSEVENSIGNALS;
-            default:
-                return new ConnectionResponseContentThirtySevenSignalsStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        THIRTYSEVENSIGNALS,
 
-        UNKNOWN
+        THIRTYSEVENSIGNALS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitThirtysevensignals();
 
         T visitUnknown(String unknownType);

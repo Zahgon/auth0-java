@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionAuth0UpdateUserAction {
-    public static final FlowActionAuth0UpdateUserAction UPDATE_USER =
-            new FlowActionAuth0UpdateUserAction(Value.UPDATE_USER, "UPDATE_USER");
+
+    public static final FlowActionAuth0UpdateUserAction UPDATE_USER = new FlowActionAuth0UpdateUserAction(Value.UPDATE_USER, "UPDATE_USER");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionAuth0UpdateUserAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionAuth0UpdateUserAction
-                        && this.string.equals(((FlowActionAuth0UpdateUserAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UPDATE_USER:
-                return visitor.visitUpdateUser();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionAuth0UpdateUserAction valueOf(String value) {
-        switch (value) {
-            case "UPDATE_USER":
-                return UPDATE_USER;
-            default:
-                return new FlowActionAuth0UpdateUserAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UPDATE_USER,
 
-        UNKNOWN
+        UPDATE_USER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUpdateUser();
 
         T visitUnknown(String unknownType);

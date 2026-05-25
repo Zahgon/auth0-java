@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EmailProviderNameEnum {
+
     public static final EmailProviderNameEnum MAILGUN = new EmailProviderNameEnum(Value.MAILGUN, "mailgun");
 
     public static final EmailProviderNameEnum SES = new EmailProviderNameEnum(Value.SES, "ses");
@@ -37,108 +38,51 @@ public final class EmailProviderNameEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EmailProviderNameEnum
-                        && this.string.equals(((EmailProviderNameEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MAILGUN:
-                return visitor.visitMailgun();
-            case SES:
-                return visitor.visitSes();
-            case MS365:
-                return visitor.visitMs365();
-            case SPARKPOST:
-                return visitor.visitSparkpost();
-            case CUSTOM:
-                return visitor.visitCustom();
-            case RESEND:
-                return visitor.visitResend();
-            case AZURE_CS:
-                return visitor.visitAzureCs();
-            case SMTP:
-                return visitor.visitSmtp();
-            case MANDRILL:
-                return visitor.visitMandrill();
-            case SENDGRID:
-                return visitor.visitSendgrid();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EmailProviderNameEnum valueOf(String value) {
-        switch (value) {
-            case "mailgun":
-                return MAILGUN;
-            case "ses":
-                return SES;
-            case "ms365":
-                return MS365;
-            case "sparkpost":
-                return SPARKPOST;
-            case "custom":
-                return CUSTOM;
-            case "resend":
-                return RESEND;
-            case "azure_cs":
-                return AZURE_CS;
-            case "smtp":
-                return SMTP;
-            case "mandrill":
-                return MANDRILL;
-            case "sendgrid":
-                return SENDGRID;
-            default:
-                return new EmailProviderNameEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         MAILGUN,
-
         MANDRILL,
-
         SENDGRID,
-
         RESEND,
-
         SES,
-
         SPARKPOST,
-
         SMTP,
-
         AZURE_CS,
-
         MS365,
-
         CUSTOM,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMailgun();
 
         T visitMandrill();

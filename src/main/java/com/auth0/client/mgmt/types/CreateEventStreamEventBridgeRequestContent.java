@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEventStreamEventBridgeRequestContent.Builder.class)
 public final class CreateEventStreamEventBridgeRequestContent {
+
     private final Optional<String> name;
 
     private final Optional<List<EventStreamSubscription>> subscriptions;
@@ -32,12 +33,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateEventStreamEventBridgeRequestContent(
-            Optional<String> name,
-            Optional<List<EventStreamSubscription>> subscriptions,
-            EventStreamEventBridgeDestination destination,
-            Optional<EventStreamStatusEnum> status,
-            Map<String, Object> additionalProperties) {
+    private CreateEventStreamEventBridgeRequestContent(Optional<String> name, Optional<List<EventStreamSubscription>> subscriptions, EventStreamEventBridgeDestination destination, Optional<EventStreamStatusEnum> status, Map<String, Object> additionalProperties) {
         this.name = name;
         this.subscriptions = subscriptions;
         this.destination = destination;
@@ -50,7 +46,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,59 +54,56 @@ public final class CreateEventStreamEventBridgeRequestContent {
      */
     @JsonProperty("subscriptions")
     public Optional<List<EventStreamSubscription>> getSubscriptions() {
-        return subscriptions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("destination")
     public EventStreamEventBridgeDestination getDestination() {
-        return destination;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<EventStreamStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEventStreamEventBridgeRequestContent
-                && equalTo((CreateEventStreamEventBridgeRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEventStreamEventBridgeRequestContent other) {
-        return name.equals(other.name)
-                && subscriptions.equals(other.subscriptions)
-                && destination.equals(other.destination)
-                && status.equals(other.status);
+        return name.equals(other.name) && subscriptions.equals(other.subscriptions) && destination.equals(other.destination) && status.equals(other.status);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.subscriptions, this.destination, this.status);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DestinationStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DestinationStage {
+
         _FinalStage destination(@NotNull EventStreamEventBridgeDestination destination);
 
         Builder from(CreateEventStreamEventBridgeRequestContent other);
     }
 
     public interface _FinalStage {
+
         CreateEventStreamEventBridgeRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -138,6 +131,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DestinationStage, _FinalStage {
+
         private EventStreamEventBridgeDestination destination;
 
         private Optional<EventStreamStatusEnum> status = Optional.empty();
@@ -149,35 +143,29 @@ public final class CreateEventStreamEventBridgeRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateEventStreamEventBridgeRequestContent other) {
-            name(other.getName());
-            subscriptions(other.getSubscriptions());
-            destination(other.getDestination());
-            status(other.getStatus());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("destination")
         public _FinalStage destination(@NotNull EventStreamEventBridgeDestination destination) {
-            this.destination = Objects.requireNonNull(destination, "destination must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage status(EventStreamStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public _FinalStage status(Optional<EventStreamStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -186,8 +174,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
          */
         @java.lang.Override
         public _FinalStage subscriptions(List<EventStreamSubscription> subscriptions) {
-            this.subscriptions = Optional.ofNullable(subscriptions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,8 +183,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
         @java.lang.Override
         @JsonSetter(value = "subscriptions", nulls = Nulls.SKIP)
         public _FinalStage subscriptions(Optional<List<EventStreamSubscription>> subscriptions) {
-            this.subscriptions = subscriptions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -206,8 +192,7 @@ public final class CreateEventStreamEventBridgeRequestContent {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -216,26 +201,22 @@ public final class CreateEventStreamEventBridgeRequestContent {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateEventStreamEventBridgeRequestContent build() {
-            return new CreateEventStreamEventBridgeRequestContent(
-                    name, subscriptions, destination, status, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

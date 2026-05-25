@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateSessionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncSessionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSessionsClient rawClient;
@@ -24,77 +25,76 @@ public class AsyncSessionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSessionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve session information.
      */
     public CompletableFuture<GetSessionResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve session information.
      */
     public CompletableFuture<GetSessionResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a session by ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a session by ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public CompletableFuture<UpdateSessionResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public CompletableFuture<UpdateSessionResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
     public CompletableFuture<UpdateSessionResponseContent> update(String id, UpdateSessionRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update session information.
      */
-    public CompletableFuture<UpdateSessionResponseContent> update(
-            String id, UpdateSessionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateSessionResponseContent> update(String id, UpdateSessionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes a session by ID and all associated refresh tokens.
      */
     public CompletableFuture<Void> revoke(String id) {
-        return this.rawClient.revoke(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revokes a session by ID and all associated refresh tokens.
      */
     public CompletableFuture<Void> revoke(String id, RequestOptions requestOptions) {
-        return this.rawClient.revoke(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

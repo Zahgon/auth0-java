@@ -7,17 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamPiiLogFieldsEnum {
+
     public static final LogStreamPiiLogFieldsEnum EMAIL = new LogStreamPiiLogFieldsEnum(Value.EMAIL, "email");
 
-    public static final LogStreamPiiLogFieldsEnum LAST_NAME =
-            new LogStreamPiiLogFieldsEnum(Value.LAST_NAME, "last_name");
+    public static final LogStreamPiiLogFieldsEnum LAST_NAME = new LogStreamPiiLogFieldsEnum(Value.LAST_NAME, "last_name");
 
     public static final LogStreamPiiLogFieldsEnum PHONE = new LogStreamPiiLogFieldsEnum(Value.PHONE, "phone");
 
     public static final LogStreamPiiLogFieldsEnum USERNAME = new LogStreamPiiLogFieldsEnum(Value.USERNAME, "username");
 
-    public static final LogStreamPiiLogFieldsEnum FIRST_NAME =
-            new LogStreamPiiLogFieldsEnum(Value.FIRST_NAME, "first_name");
+    public static final LogStreamPiiLogFieldsEnum FIRST_NAME = new LogStreamPiiLogFieldsEnum(Value.FIRST_NAME, "first_name");
 
     public static final LogStreamPiiLogFieldsEnum ADDRESS = new LogStreamPiiLogFieldsEnum(Value.ADDRESS, "address");
 
@@ -31,84 +30,47 @@ public final class LogStreamPiiLogFieldsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamPiiLogFieldsEnum
-                        && this.string.equals(((LogStreamPiiLogFieldsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case LAST_NAME:
-                return visitor.visitLastName();
-            case PHONE:
-                return visitor.visitPhone();
-            case USERNAME:
-                return visitor.visitUsername();
-            case FIRST_NAME:
-                return visitor.visitFirstName();
-            case ADDRESS:
-                return visitor.visitAddress();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamPiiLogFieldsEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "last_name":
-                return LAST_NAME;
-            case "phone":
-                return PHONE;
-            case "username":
-                return USERNAME;
-            case "first_name":
-                return FIRST_NAME;
-            case "address":
-                return ADDRESS;
-            default:
-                return new LogStreamPiiLogFieldsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         FIRST_NAME,
-
         LAST_NAME,
-
         USERNAME,
-
         EMAIL,
-
         PHONE,
-
         ADDRESS,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFirstName();
 
         T visitLastName();

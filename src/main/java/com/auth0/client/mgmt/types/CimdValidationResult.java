@@ -21,6 +21,7 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CimdValidationResult.Builder.class)
 public final class CimdValidationResult {
+
     private final boolean valid;
 
     private final List<String> violations;
@@ -29,8 +30,7 @@ public final class CimdValidationResult {
 
     private final Map<String, Object> additionalProperties;
 
-    private CimdValidationResult(
-            boolean valid, List<String> violations, List<String> warnings, Map<String, Object> additionalProperties) {
+    private CimdValidationResult(boolean valid, List<String> violations, List<String> warnings, Map<String, Object> additionalProperties) {
         this.valid = valid;
         this.violations = violations;
         this.warnings = warnings;
@@ -42,7 +42,7 @@ public final class CimdValidationResult {
      */
     @JsonProperty("valid")
     public boolean getValid() {
-        return valid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,7 +50,7 @@ public final class CimdValidationResult {
      */
     @JsonProperty("violations")
     public List<String> getViolations() {
-        return violations;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,18 +58,17 @@ public final class CimdValidationResult {
      */
     @JsonProperty("warnings")
     public List<String> getWarnings() {
-        return warnings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CimdValidationResult && equalTo((CimdValidationResult) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CimdValidationResult other) {
@@ -78,19 +77,20 @@ public final class CimdValidationResult {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.valid, this.violations, this.warnings);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ValidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ValidStage {
+
         /**
          * <p>Whether the metadata document passed validation</p>
          */
@@ -100,6 +100,7 @@ public final class CimdValidationResult {
     }
 
     public interface _FinalStage {
+
         CimdValidationResult build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -127,6 +128,7 @@ public final class CimdValidationResult {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ValidStage, _FinalStage {
+
         private boolean valid;
 
         private List<String> warnings = new ArrayList<>();
@@ -136,14 +138,12 @@ public final class CimdValidationResult {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CimdValidationResult other) {
-            valid(other.getValid());
-            violations(other.getViolations());
-            warnings(other.getWarnings());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -154,8 +154,7 @@ public final class CimdValidationResult {
         @java.lang.Override
         @JsonSetter("valid")
         public _FinalStage valid(boolean valid) {
-            this.valid = valid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -164,10 +163,7 @@ public final class CimdValidationResult {
          */
         @java.lang.Override
         public _FinalStage addAllWarnings(List<String> warnings) {
-            if (warnings != null) {
-                this.warnings.addAll(warnings);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -176,8 +172,7 @@ public final class CimdValidationResult {
          */
         @java.lang.Override
         public _FinalStage addWarnings(String warnings) {
-            this.warnings.add(warnings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -186,11 +181,7 @@ public final class CimdValidationResult {
         @java.lang.Override
         @JsonSetter(value = "warnings", nulls = Nulls.SKIP)
         public _FinalStage warnings(List<String> warnings) {
-            this.warnings.clear();
-            if (warnings != null) {
-                this.warnings.addAll(warnings);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -199,10 +190,7 @@ public final class CimdValidationResult {
          */
         @java.lang.Override
         public _FinalStage addAllViolations(List<String> violations) {
-            if (violations != null) {
-                this.violations.addAll(violations);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -211,8 +199,7 @@ public final class CimdValidationResult {
          */
         @java.lang.Override
         public _FinalStage addViolations(String violations) {
-            this.violations.add(violations);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,28 +208,22 @@ public final class CimdValidationResult {
         @java.lang.Override
         @JsonSetter(value = "violations", nulls = Nulls.SKIP)
         public _FinalStage violations(List<String> violations) {
-            this.violations.clear();
-            if (violations != null) {
-                this.violations.addAll(violations);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CimdValidationResult build() {
-            return new CimdValidationResult(valid, violations, warnings, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

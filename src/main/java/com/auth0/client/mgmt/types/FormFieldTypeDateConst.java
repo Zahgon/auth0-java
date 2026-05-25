@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeDateConst {
+
     public static final FormFieldTypeDateConst DATE = new FormFieldTypeDateConst(Value.DATE, "DATE");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeDateConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeDateConst
-                        && this.string.equals(((FormFieldTypeDateConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case DATE:
-                return visitor.visitDate();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeDateConst valueOf(String value) {
-        switch (value) {
-            case "DATE":
-                return DATE;
-            default:
-                return new FormFieldTypeDateConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        DATE,
 
-        UNKNOWN
+        DATE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitDate();
 
         T visitUnknown(String unknownType);

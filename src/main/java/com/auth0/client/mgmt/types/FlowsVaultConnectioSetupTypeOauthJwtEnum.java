@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectioSetupTypeOauthJwtEnum {
-    public static final FlowsVaultConnectioSetupTypeOauthJwtEnum OAUTH_JWT =
-            new FlowsVaultConnectioSetupTypeOauthJwtEnum(Value.OAUTH_JWT, "OAUTH_JWT");
+
+    public static final FlowsVaultConnectioSetupTypeOauthJwtEnum OAUTH_JWT = new FlowsVaultConnectioSetupTypeOauthJwtEnum(Value.OAUTH_JWT, "OAUTH_JWT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectioSetupTypeOauthJwtEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectioSetupTypeOauthJwtEnum
-                        && this.string.equals(((FlowsVaultConnectioSetupTypeOauthJwtEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OAUTH_JWT:
-                return visitor.visitOauthJwt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectioSetupTypeOauthJwtEnum valueOf(String value) {
-        switch (value) {
-            case "OAUTH_JWT":
-                return OAUTH_JWT;
-            default:
-                return new FlowsVaultConnectioSetupTypeOauthJwtEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OAUTH_JWT,
 
-        UNKNOWN
+        OAUTH_JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOauthJwt();
 
         T visitUnknown(String unknownType);

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventContextClient.Builder.class)
 public final class EventStreamCloudEventContextClient {
+
     private final String id;
 
     private final String name;
@@ -29,8 +30,7 @@ public final class EventStreamCloudEventContextClient {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventContextClient(
-            String id, String name, Map<String, Object> metadata, Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventContextClient(String id, String name, Map<String, Object> metadata, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.metadata = metadata;
@@ -42,7 +42,7 @@ public final class EventStreamCloudEventContextClient {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -50,24 +50,22 @@ public final class EventStreamCloudEventContextClient {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     public Map<String, Object> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventContextClient
-                && equalTo((EventStreamCloudEventContextClient) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventContextClient other) {
@@ -76,19 +74,20 @@ public final class EventStreamCloudEventContextClient {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.id, this.name, this.metadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>The client identifier.</p>
          */
@@ -98,6 +97,7 @@ public final class EventStreamCloudEventContextClient {
     }
 
     public interface NameStage {
+
         /**
          * <p>The client name.</p>
          */
@@ -105,6 +105,7 @@ public final class EventStreamCloudEventContextClient {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventContextClient build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -120,6 +121,7 @@ public final class EventStreamCloudEventContextClient {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, NameStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -129,14 +131,12 @@ public final class EventStreamCloudEventContextClient {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventContextClient other) {
-            id(other.getId());
-            name(other.getName());
-            metadata(other.getMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -147,8 +147,7 @@ public final class EventStreamCloudEventContextClient {
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -159,49 +158,38 @@ public final class EventStreamCloudEventContextClient {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(String key, Object value) {
-            this.metadata.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage putAllMetadata(Map<String, Object> metadata) {
-            if (metadata != null) {
-                this.metadata.putAll(metadata);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Map<String, Object> metadata) {
-            this.metadata.clear();
-            if (metadata != null) {
-                this.metadata.putAll(metadata);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventContextClient build() {
-            return new EventStreamCloudEventContextClient(id, name, metadata, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

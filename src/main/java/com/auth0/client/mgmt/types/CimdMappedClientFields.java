@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CimdMappedClientFields.Builder.class)
 public final class CimdMappedClientFields {
+
     private final Optional<String> externalClientId;
 
     private final Optional<String> name;
@@ -43,18 +44,7 @@ public final class CimdMappedClientFields {
 
     private final Map<String, Object> additionalProperties;
 
-    private CimdMappedClientFields(
-            Optional<String> externalClientId,
-            Optional<String> name,
-            Optional<String> appType,
-            Optional<List<String>> callbacks,
-            Optional<String> logoUri,
-            Optional<String> description,
-            Optional<List<String>> grantTypes,
-            Optional<String> tokenEndpointAuthMethod,
-            Optional<String> jwksUri,
-            Optional<CimdMappedClientAuthenticationMethods> clientAuthenticationMethods,
-            Map<String, Object> additionalProperties) {
+    private CimdMappedClientFields(Optional<String> externalClientId, Optional<String> name, Optional<String> appType, Optional<List<String>> callbacks, Optional<String> logoUri, Optional<String> description, Optional<List<String>> grantTypes, Optional<String> tokenEndpointAuthMethod, Optional<String> jwksUri, Optional<CimdMappedClientAuthenticationMethods> clientAuthenticationMethods, Map<String, Object> additionalProperties) {
         this.externalClientId = externalClientId;
         this.name = name;
         this.appType = appType;
@@ -73,7 +63,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("external_client_id")
     public Optional<String> getExternalClientId() {
-        return externalClientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,7 +71,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +79,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("app_type")
     public Optional<String> getAppType() {
-        return appType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,7 +87,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("callbacks")
     public Optional<List<String>> getCallbacks() {
-        return callbacks;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,7 +95,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("logo_uri")
     public Optional<String> getLogoUri() {
-        return logoUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,7 +103,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("description")
     public Optional<String> getDescription() {
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,7 +111,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("grant_types")
     public Optional<List<String>> getGrantTypes() {
-        return grantTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -129,7 +119,7 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("token_endpoint_auth_method")
     public Optional<String> getTokenEndpointAuthMethod() {
-        return tokenEndpointAuthMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -137,64 +127,45 @@ public final class CimdMappedClientFields {
      */
     @JsonProperty("jwks_uri")
     public Optional<String> getJwksUri() {
-        return jwksUri;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_authentication_methods")
     public Optional<CimdMappedClientAuthenticationMethods> getClientAuthenticationMethods() {
-        return clientAuthenticationMethods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CimdMappedClientFields && equalTo((CimdMappedClientFields) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CimdMappedClientFields other) {
-        return externalClientId.equals(other.externalClientId)
-                && name.equals(other.name)
-                && appType.equals(other.appType)
-                && callbacks.equals(other.callbacks)
-                && logoUri.equals(other.logoUri)
-                && description.equals(other.description)
-                && grantTypes.equals(other.grantTypes)
-                && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod)
-                && jwksUri.equals(other.jwksUri)
-                && clientAuthenticationMethods.equals(other.clientAuthenticationMethods);
+        return externalClientId.equals(other.externalClientId) && name.equals(other.name) && appType.equals(other.appType) && callbacks.equals(other.callbacks) && logoUri.equals(other.logoUri) && description.equals(other.description) && grantTypes.equals(other.grantTypes) && tokenEndpointAuthMethod.equals(other.tokenEndpointAuthMethod) && jwksUri.equals(other.jwksUri) && clientAuthenticationMethods.equals(other.clientAuthenticationMethods);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.externalClientId,
-                this.name,
-                this.appType,
-                this.callbacks,
-                this.logoUri,
-                this.description,
-                this.grantTypes,
-                this.tokenEndpointAuthMethod,
-                this.jwksUri,
-                this.clientAuthenticationMethods);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> externalClientId = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -218,20 +189,11 @@ public final class CimdMappedClientFields {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CimdMappedClientFields other) {
-            externalClientId(other.getExternalClientId());
-            name(other.getName());
-            appType(other.getAppType());
-            callbacks(other.getCallbacks());
-            logoUri(other.getLogoUri());
-            description(other.getDescription());
-            grantTypes(other.getGrantTypes());
-            tokenEndpointAuthMethod(other.getTokenEndpointAuthMethod());
-            jwksUri(other.getJwksUri());
-            clientAuthenticationMethods(other.getClientAuthenticationMethods());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,13 +201,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "external_client_id", nulls = Nulls.SKIP)
         public Builder externalClientId(Optional<String> externalClientId) {
-            this.externalClientId = externalClientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder externalClientId(String externalClientId) {
-            this.externalClientId = Optional.ofNullable(externalClientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -253,13 +213,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -267,13 +225,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "app_type", nulls = Nulls.SKIP)
         public Builder appType(Optional<String> appType) {
-            this.appType = appType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder appType(String appType) {
-            this.appType = Optional.ofNullable(appType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,13 +237,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "callbacks", nulls = Nulls.SKIP)
         public Builder callbacks(Optional<List<String>> callbacks) {
-            this.callbacks = callbacks;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder callbacks(List<String> callbacks) {
-            this.callbacks = Optional.ofNullable(callbacks);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,13 +249,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "logo_uri", nulls = Nulls.SKIP)
         public Builder logoUri(Optional<String> logoUri) {
-            this.logoUri = logoUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logoUri(String logoUri) {
-            this.logoUri = Optional.ofNullable(logoUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -309,13 +261,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(Optional<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = Optional.ofNullable(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,13 +273,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "grant_types", nulls = Nulls.SKIP)
         public Builder grantTypes(Optional<List<String>> grantTypes) {
-            this.grantTypes = grantTypes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder grantTypes(List<String> grantTypes) {
-            this.grantTypes = Optional.ofNullable(grantTypes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -337,13 +285,11 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "token_endpoint_auth_method", nulls = Nulls.SKIP)
         public Builder tokenEndpointAuthMethod(Optional<String> tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = tokenEndpointAuthMethod;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder tokenEndpointAuthMethod(String tokenEndpointAuthMethod) {
-            this.tokenEndpointAuthMethod = Optional.ofNullable(tokenEndpointAuthMethod);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,50 +297,32 @@ public final class CimdMappedClientFields {
          */
         @JsonSetter(value = "jwks_uri", nulls = Nulls.SKIP)
         public Builder jwksUri(Optional<String> jwksUri) {
-            this.jwksUri = jwksUri;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder jwksUri(String jwksUri) {
-            this.jwksUri = Optional.ofNullable(jwksUri);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_authentication_methods", nulls = Nulls.SKIP)
-        public Builder clientAuthenticationMethods(
-                Optional<CimdMappedClientAuthenticationMethods> clientAuthenticationMethods) {
-            this.clientAuthenticationMethods = clientAuthenticationMethods;
-            return this;
+        public Builder clientAuthenticationMethods(Optional<CimdMappedClientAuthenticationMethods> clientAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAuthenticationMethods(CimdMappedClientAuthenticationMethods clientAuthenticationMethods) {
-            this.clientAuthenticationMethods = Optional.ofNullable(clientAuthenticationMethods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CimdMappedClientFields build() {
-            return new CimdMappedClientFields(
-                    externalClientId,
-                    name,
-                    appType,
-                    callbacks,
-                    logoUri,
-                    description,
-                    grantTypes,
-                    tokenEndpointAuthMethod,
-                    jwksUri,
-                    clientAuthenticationMethods,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

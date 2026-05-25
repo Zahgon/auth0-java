@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncCustomTextClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawCustomTextClient rawClient;
@@ -24,48 +25,34 @@ public class AsyncCustomTextClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawCustomTextClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public CompletableFuture<Map<String, String>> list(
-            String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page) {
-        return this.rawClient.list(id, language, page).thenApply(response -> response.body());
+    public CompletableFuture<Map<String, String>> list(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public CompletableFuture<Map<String, String>> list(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            RequestOptions requestOptions) {
-        return this.rawClient.list(id, language, page, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Map<String, String>> list(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public CompletableFuture<Map<String, String>> set(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            Map<String, String> request) {
-        return this.rawClient.set(id, language, page, request).thenApply(response -> response.body());
+    public CompletableFuture<Map<String, String>> set(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, Map<String, String> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public CompletableFuture<Map<String, String>> set(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            Map<String, String> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.set(id, language, page, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Map<String, String>> set(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, Map<String, String> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

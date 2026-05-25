@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateFlowsVaultConnectionGoogleSheetsUninitialized.Builder.class)
 public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
+
     private final String name;
 
     private final FlowsVaultConnectionAppIdGoogleSheetsEnum appId;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateFlowsVaultConnectionGoogleSheetsUninitialized(
-            String name, FlowsVaultConnectionAppIdGoogleSheetsEnum appId, Map<String, Object> additionalProperties) {
+    private CreateFlowsVaultConnectionGoogleSheetsUninitialized(String name, FlowsVaultConnectionAppIdGoogleSheetsEnum appId, Map<String, Object> additionalProperties) {
         this.name = name;
         this.appId = appId;
         this.additionalProperties = additionalProperties;
@@ -37,24 +37,22 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_id")
     public FlowsVaultConnectionAppIdGoogleSheetsEnum getAppId() {
-        return appId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionGoogleSheetsUninitialized
-                && equalTo((CreateFlowsVaultConnectionGoogleSheetsUninitialized) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionGoogleSheetsUninitialized other) {
@@ -63,19 +61,20 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.appId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>Flows Vault Connection name.</p>
          */
@@ -85,10 +84,12 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
     }
 
     public interface AppIdStage {
+
         _FinalStage appId(@NotNull FlowsVaultConnectionAppIdGoogleSheetsEnum appId);
     }
 
     public interface _FinalStage {
+
         CreateFlowsVaultConnectionGoogleSheetsUninitialized build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -98,6 +99,7 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, AppIdStage, _FinalStage {
+
         private String name;
 
         private FlowsVaultConnectionAppIdGoogleSheetsEnum appId;
@@ -105,13 +107,12 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateFlowsVaultConnectionGoogleSheetsUninitialized other) {
-            name(other.getName());
-            appId(other.getAppId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -122,32 +123,28 @@ public final class CreateFlowsVaultConnectionGoogleSheetsUninitialized {
         @java.lang.Override
         @JsonSetter("name")
         public AppIdStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("app_id")
         public _FinalStage appId(@NotNull FlowsVaultConnectionAppIdGoogleSheetsEnum appId) {
-            this.appId = Objects.requireNonNull(appId, "appId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateFlowsVaultConnectionGoogleSheetsUninitialized build() {
-            return new CreateFlowsVaultConnectionGoogleSheetsUninitialized(name, appId, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

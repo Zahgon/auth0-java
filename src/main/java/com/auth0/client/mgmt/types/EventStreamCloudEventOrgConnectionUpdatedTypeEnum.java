@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamCloudEventOrgConnectionUpdatedTypeEnum {
-    public static final EventStreamCloudEventOrgConnectionUpdatedTypeEnum ORGANIZATION_CONNECTION_UPDATED =
-            new EventStreamCloudEventOrgConnectionUpdatedTypeEnum(
-                    Value.ORGANIZATION_CONNECTION_UPDATED, "organization.connection.updated");
+
+    public static final EventStreamCloudEventOrgConnectionUpdatedTypeEnum ORGANIZATION_CONNECTION_UPDATED = new EventStreamCloudEventOrgConnectionUpdatedTypeEnum(Value.ORGANIZATION_CONNECTION_UPDATED, "organization.connection.updated");
 
     private final Value value;
 
@@ -21,54 +20,41 @@ public final class EventStreamCloudEventOrgConnectionUpdatedTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamCloudEventOrgConnectionUpdatedTypeEnum
-                        && this.string.equals(((EventStreamCloudEventOrgConnectionUpdatedTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ORGANIZATION_CONNECTION_UPDATED:
-                return visitor.visitOrganizationConnectionUpdated();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamCloudEventOrgConnectionUpdatedTypeEnum valueOf(String value) {
-        switch (value) {
-            case "organization.connection.updated":
-                return ORGANIZATION_CONNECTION_UPDATED;
-            default:
-                return new EventStreamCloudEventOrgConnectionUpdatedTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ORGANIZATION_CONNECTION_UPDATED,
 
-        UNKNOWN
+        ORGANIZATION_CONNECTION_UPDATED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOrganizationConnectionUpdated();
 
         T visitUnknown(String unknownType);

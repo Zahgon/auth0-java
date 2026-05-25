@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = LogStreamSinkPatch.Deserializer.class)
 public final class LogStreamSinkPatch {
+
     private final Object value;
 
     private final int type;
@@ -27,31 +28,17 @@ public final class LogStreamSinkPatch {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((LogStreamHttpSink) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((LogStreamDatadogSink) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((LogStreamSplunkSink) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((LogStreamSumoSink) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((LogStreamSegmentSink) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((LogStreamMixpanelSinkPatch) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LogStreamSinkPatch && equalTo((LogStreamSinkPatch) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LogStreamSinkPatch other) {
@@ -60,39 +47,40 @@ public final class LogStreamSinkPatch {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamHttpSink value) {
-        return new LogStreamSinkPatch(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamDatadogSink value) {
-        return new LogStreamSinkPatch(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamSplunkSink value) {
-        return new LogStreamSinkPatch(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamSumoSink value) {
-        return new LogStreamSinkPatch(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamSegmentSink value) {
-        return new LogStreamSinkPatch(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static LogStreamSinkPatch of(LogStreamMixpanelSinkPatch value) {
-        return new LogStreamSinkPatch(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(LogStreamHttpSink value);
 
         T visit(LogStreamDatadogSink value);
@@ -107,57 +95,14 @@ public final class LogStreamSinkPatch {
     }
 
     static final class Deserializer extends StdDeserializer<LogStreamSinkPatch> {
+
         Deserializer() {
             super(LogStreamSinkPatch.class);
         }
 
         @java.lang.Override
         public LogStreamSinkPatch deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("httpEndpoint")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamHttpSink.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("datadogApiKey")
-                    && ((Map<?, ?>) value).containsKey("datadogRegion")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamDatadogSink.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("splunkDomain")
-                    && ((Map<?, ?>) value).containsKey("splunkPort")
-                    && ((Map<?, ?>) value).containsKey("splunkToken")
-                    && ((Map<?, ?>) value).containsKey("splunkSecure")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSplunkSink.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?> && ((Map<?, ?>) value).containsKey("sumoSourceAddress")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSumoSink.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamSegmentSink.class));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("mixpanelRegion")
-                    && ((Map<?, ?>) value).containsKey("mixpanelProjectId")
-                    && ((Map<?, ?>) value).containsKey("mixpanelServiceAccountUsername")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, LogStreamMixpanelSinkPatch.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

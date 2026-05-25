@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventGroupRoleAssignedObject.Builder.class)
 public final class EventStreamCloudEventGroupRoleAssignedObject {
+
     private final EventStreamCloudEventGroupRoleAssignedObjectGroup group;
 
     private final EventStreamCloudEventGroupRoleAssignedObjectRole role;
@@ -28,11 +29,7 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventGroupRoleAssignedObject(
-            EventStreamCloudEventGroupRoleAssignedObjectGroup group,
-            EventStreamCloudEventGroupRoleAssignedObjectRole role,
-            OffsetDateTime createdAt,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventGroupRoleAssignedObject(EventStreamCloudEventGroupRoleAssignedObjectGroup group, EventStreamCloudEventGroupRoleAssignedObjectRole role, OffsetDateTime createdAt, Map<String, Object> additionalProperties) {
         this.group = group;
         this.role = role;
         this.createdAt = createdAt;
@@ -41,12 +38,12 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
 
     @JsonProperty("group")
     public EventStreamCloudEventGroupRoleAssignedObjectGroup getGroup() {
-        return group;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("role")
     public EventStreamCloudEventGroupRoleAssignedObjectRole getRole() {
-        return role;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,19 +51,17 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventGroupRoleAssignedObject
-                && equalTo((EventStreamCloudEventGroupRoleAssignedObject) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventGroupRoleAssignedObject other) {
@@ -75,29 +70,32 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.group, this.role, this.createdAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static GroupStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface GroupStage {
+
         RoleStage group(@NotNull EventStreamCloudEventGroupRoleAssignedObjectGroup group);
 
         Builder from(EventStreamCloudEventGroupRoleAssignedObject other);
     }
 
     public interface RoleStage {
+
         CreatedAtStage role(@NotNull EventStreamCloudEventGroupRoleAssignedObjectRole role);
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>The time at which the role was assigned to the group.</p>
          */
@@ -105,6 +103,7 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventGroupRoleAssignedObject build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -114,6 +113,7 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements GroupStage, RoleStage, CreatedAtStage, _FinalStage {
+
         private EventStreamCloudEventGroupRoleAssignedObjectGroup group;
 
         private EventStreamCloudEventGroupRoleAssignedObjectRole role;
@@ -123,28 +123,24 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventGroupRoleAssignedObject other) {
-            group(other.getGroup());
-            role(other.getRole());
-            createdAt(other.getCreatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("group")
         public RoleStage group(@NotNull EventStreamCloudEventGroupRoleAssignedObjectGroup group) {
-            this.group = Objects.requireNonNull(group, "group must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("role")
         public CreatedAtStage role(@NotNull EventStreamCloudEventGroupRoleAssignedObjectRole role) {
-            this.role = Objects.requireNonNull(role, "role must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -155,25 +151,22 @@ public final class EventStreamCloudEventGroupRoleAssignedObject {
         @java.lang.Override
         @JsonSetter("created_at")
         public _FinalStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventGroupRoleAssignedObject build() {
-            return new EventStreamCloudEventGroupRoleAssignedObject(group, role, createdAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

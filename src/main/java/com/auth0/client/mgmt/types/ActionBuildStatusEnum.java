@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ActionBuildStatusEnum {
+
     public static final ActionBuildStatusEnum FAILED = new ActionBuildStatusEnum(Value.FAILED, "failed");
 
     public static final ActionBuildStatusEnum PENDING = new ActionBuildStatusEnum(Value.PENDING, "pending");
@@ -29,84 +30,47 @@ public final class ActionBuildStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ActionBuildStatusEnum
-                        && this.string.equals(((ActionBuildStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FAILED:
-                return visitor.visitFailed();
-            case PENDING:
-                return visitor.visitPending();
-            case BUILT:
-                return visitor.visitBuilt();
-            case BUILDING:
-                return visitor.visitBuilding();
-            case PACKAGED:
-                return visitor.visitPackaged();
-            case RETRYING:
-                return visitor.visitRetrying();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ActionBuildStatusEnum valueOf(String value) {
-        switch (value) {
-            case "failed":
-                return FAILED;
-            case "pending":
-                return PENDING;
-            case "built":
-                return BUILT;
-            case "building":
-                return BUILDING;
-            case "packaged":
-                return PACKAGED;
-            case "retrying":
-                return RETRYING;
-            default:
-                return new ActionBuildStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         PENDING,
-
         BUILDING,
-
         PACKAGED,
-
         BUILT,
-
         RETRYING,
-
         FAILED,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPending();
 
         T visitBuilding();

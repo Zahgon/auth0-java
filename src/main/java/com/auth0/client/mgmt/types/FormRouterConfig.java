@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormRouterConfig.Builder.class)
 public final class FormRouterConfig {
+
     private final Optional<List<FormRouterRule>> rules;
 
     private final Optional<FormNodePointer> fallback;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormRouterConfig(
-            Optional<List<FormRouterRule>> rules,
-            Optional<FormNodePointer> fallback,
-            Map<String, Object> additionalProperties) {
+    private FormRouterConfig(Optional<List<FormRouterRule>> rules, Optional<FormNodePointer> fallback, Map<String, Object> additionalProperties) {
         this.rules = rules;
         this.fallback = fallback;
         this.additionalProperties = additionalProperties;
@@ -38,23 +36,22 @@ public final class FormRouterConfig {
 
     @JsonProperty("rules")
     public Optional<List<FormRouterRule>> getRules() {
-        return rules;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fallback")
     public Optional<FormNodePointer> getFallback() {
-        return fallback;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormRouterConfig && equalTo((FormRouterConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormRouterConfig other) {
@@ -63,20 +60,21 @@ public final class FormRouterConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.rules, this.fallback);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<FormRouterRule>> rules = Optional.empty();
 
         private Optional<FormNodePointer> fallback = Optional.empty();
@@ -84,48 +82,41 @@ public final class FormRouterConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormRouterConfig other) {
-            rules(other.getRules());
-            fallback(other.getFallback());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "rules", nulls = Nulls.SKIP)
         public Builder rules(Optional<List<FormRouterRule>> rules) {
-            this.rules = rules;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder rules(List<FormRouterRule> rules) {
-            this.rules = Optional.ofNullable(rules);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "fallback", nulls = Nulls.SKIP)
         public Builder fallback(Optional<FormNodePointer> fallback) {
-            this.fallback = fallback;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fallback(FormNodePointer fallback) {
-            this.fallback = Optional.ofNullable(fallback);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormRouterConfig build() {
-            return new FormRouterConfig(rules, fallback, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

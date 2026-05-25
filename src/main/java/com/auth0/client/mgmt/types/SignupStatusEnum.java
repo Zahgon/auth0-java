@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SignupStatusEnum {
+
     public static final SignupStatusEnum REQUIRED = new SignupStatusEnum(Value.REQUIRED, "required");
 
     public static final SignupStatusEnum INACTIVE = new SignupStatusEnum(Value.INACTIVE, "inactive");
@@ -23,65 +24,41 @@ public final class SignupStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SignupStatusEnum && this.string.equals(((SignupStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case REQUIRED:
-                return visitor.visitRequired();
-            case INACTIVE:
-                return visitor.visitInactive();
-            case OPTIONAL:
-                return visitor.visitOptional();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SignupStatusEnum valueOf(String value) {
-        switch (value) {
-            case "required":
-                return REQUIRED;
-            case "inactive":
-                return INACTIVE;
-            case "optional":
-                return OPTIONAL;
-            default:
-                return new SignupStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        REQUIRED,
 
-        OPTIONAL,
-
-        INACTIVE,
-
-        UNKNOWN
+        REQUIRED, OPTIONAL, INACTIVE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRequired();
 
         T visitOptional();

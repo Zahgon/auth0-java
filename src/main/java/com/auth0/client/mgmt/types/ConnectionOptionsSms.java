@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsSms.Builder.class)
 public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<Boolean> bruteForceProtection;
@@ -56,23 +57,7 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsSms(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<Boolean> bruteForceProtection,
-            Optional<Boolean> disableSignup,
-            Optional<Boolean> forwardReqInfo,
-            Optional<String> from,
-            OptionalNullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication,
-            Optional<String> gatewayUrl,
-            Optional<String> messagingServiceSid,
-            Optional<String> name,
-            Optional<ConnectionProviderEnumSms> provider,
-            Optional<ConnectionTemplateSyntaxEnumSms> syntax,
-            Optional<String> template,
-            Optional<ConnectionTotpSms> totp,
-            Optional<String> twilioSid,
-            Optional<String> twilioToken,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsSms(Optional<List<String>> nonPersistentAttrs, Optional<Boolean> bruteForceProtection, Optional<Boolean> disableSignup, Optional<Boolean> forwardReqInfo, Optional<String> from, OptionalNullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication, Optional<String> gatewayUrl, Optional<String> messagingServiceSid, Optional<String> name, Optional<ConnectionProviderEnumSms> provider, Optional<ConnectionTemplateSyntaxEnumSms> syntax, Optional<String> template, Optional<ConnectionTotpSms> totp, Optional<String> twilioSid, Optional<String> twilioToken, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.bruteForceProtection = bruteForceProtection;
         this.disableSignup = disableSignup;
@@ -94,7 +79,7 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,41 +87,38 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
      */
     @JsonProperty("brute_force_protection")
     public Optional<Boolean> getBruteForceProtection() {
-        return bruteForceProtection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("disable_signup")
     public Optional<Boolean> getDisableSignup() {
-        return disableSignup;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("forward_req_info")
     public Optional<Boolean> getForwardReqInfo() {
-        return forwardReqInfo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("from")
     public Optional<String> getFrom() {
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("gateway_authentication")
     public OptionalNullable<ConnectionGatewayAuthenticationSms> getGatewayAuthentication() {
-        if (gatewayAuthentication == null) {
-            return OptionalNullable.absent();
-        }
-        return gatewayAuthentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("gateway_url")
     public Optional<String> getGatewayUrl() {
-        return gatewayUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("messaging_service_sid")
     public Optional<String> getMessagingServiceSid() {
-        return messagingServiceSid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -144,37 +126,37 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("provider")
     public Optional<ConnectionProviderEnumSms> getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("syntax")
     public Optional<ConnectionTemplateSyntaxEnumSms> getSyntax() {
-        return syntax;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("template")
     public Optional<String> getTemplate() {
-        return template;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("totp")
     public Optional<ConnectionTotpSms> getTotp() {
-        return totp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("twilio_sid")
     public Optional<String> getTwilioSid() {
-        return twilioSid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("twilio_token")
     public Optional<String> getTwilioToken() {
-        return twilioToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -185,64 +167,35 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsSms && equalTo((ConnectionOptionsSms) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsSms other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && bruteForceProtection.equals(other.bruteForceProtection)
-                && disableSignup.equals(other.disableSignup)
-                && forwardReqInfo.equals(other.forwardReqInfo)
-                && from.equals(other.from)
-                && gatewayAuthentication.equals(other.gatewayAuthentication)
-                && gatewayUrl.equals(other.gatewayUrl)
-                && messagingServiceSid.equals(other.messagingServiceSid)
-                && name.equals(other.name)
-                && provider.equals(other.provider)
-                && syntax.equals(other.syntax)
-                && template.equals(other.template)
-                && totp.equals(other.totp)
-                && twilioSid.equals(other.twilioSid)
-                && twilioToken.equals(other.twilioToken);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && bruteForceProtection.equals(other.bruteForceProtection) && disableSignup.equals(other.disableSignup) && forwardReqInfo.equals(other.forwardReqInfo) && from.equals(other.from) && gatewayAuthentication.equals(other.gatewayAuthentication) && gatewayUrl.equals(other.gatewayUrl) && messagingServiceSid.equals(other.messagingServiceSid) && name.equals(other.name) && provider.equals(other.provider) && syntax.equals(other.syntax) && template.equals(other.template) && totp.equals(other.totp) && twilioSid.equals(other.twilioSid) && twilioToken.equals(other.twilioToken);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.bruteForceProtection,
-                this.disableSignup,
-                this.forwardReqInfo,
-                this.from,
-                this.gatewayAuthentication,
-                this.gatewayUrl,
-                this.messagingServiceSid,
-                this.name,
-                this.provider,
-                this.syntax,
-                this.template,
-                this.totp,
-                this.twilioSid,
-                this.twilioToken);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<Boolean> bruteForceProtection = Optional.empty();
@@ -276,36 +229,20 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsSms other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            bruteForceProtection(other.getBruteForceProtection());
-            disableSignup(other.getDisableSignup());
-            forwardReqInfo(other.getForwardReqInfo());
-            from(other.getFrom());
-            gatewayAuthentication(other.getGatewayAuthentication());
-            gatewayUrl(other.getGatewayUrl());
-            messagingServiceSid(other.getMessagingServiceSid());
-            name(other.getName());
-            provider(other.getProvider());
-            syntax(other.getSyntax());
-            template(other.getTemplate());
-            totp(other.getTotp());
-            twilioSid(other.getTwilioSid());
-            twilioToken(other.getTwilioToken());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -313,101 +250,73 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "brute_force_protection", nulls = Nulls.SKIP)
         public Builder bruteForceProtection(Optional<Boolean> bruteForceProtection) {
-            this.bruteForceProtection = bruteForceProtection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder bruteForceProtection(Boolean bruteForceProtection) {
-            this.bruteForceProtection = Optional.ofNullable(bruteForceProtection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "disable_signup", nulls = Nulls.SKIP)
         public Builder disableSignup(Optional<Boolean> disableSignup) {
-            this.disableSignup = disableSignup;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder disableSignup(Boolean disableSignup) {
-            this.disableSignup = Optional.ofNullable(disableSignup);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "forward_req_info", nulls = Nulls.SKIP)
         public Builder forwardReqInfo(Optional<Boolean> forwardReqInfo) {
-            this.forwardReqInfo = forwardReqInfo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder forwardReqInfo(Boolean forwardReqInfo) {
-            this.forwardReqInfo = Optional.ofNullable(forwardReqInfo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(Optional<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = Optional.ofNullable(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "gateway_authentication", nulls = Nulls.SKIP)
-        public Builder gatewayAuthentication(
-                @Nullable OptionalNullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication) {
-            this.gatewayAuthentication = gatewayAuthentication;
-            return this;
+        public Builder gatewayAuthentication(@Nullable OptionalNullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gatewayAuthentication(ConnectionGatewayAuthenticationSms gatewayAuthentication) {
-            this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gatewayAuthentication(Optional<ConnectionGatewayAuthenticationSms> gatewayAuthentication) {
-            if (gatewayAuthentication.isPresent()) {
-                this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication.get());
-            } else {
-                this.gatewayAuthentication = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder gatewayAuthentication(
-                com.auth0.client.mgmt.core.Nullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication) {
-            if (gatewayAuthentication.isNull()) {
-                this.gatewayAuthentication = OptionalNullable.ofNull();
-            } else if (gatewayAuthentication.isEmpty()) {
-                this.gatewayAuthentication = OptionalNullable.absent();
-            } else {
-                this.gatewayAuthentication = OptionalNullable.of(gatewayAuthentication.get());
-            }
-            return this;
+        public Builder gatewayAuthentication(com.auth0.client.mgmt.core.Nullable<ConnectionGatewayAuthenticationSms> gatewayAuthentication) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "gateway_url", nulls = Nulls.SKIP)
         public Builder gatewayUrl(Optional<String> gatewayUrl) {
-            this.gatewayUrl = gatewayUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder gatewayUrl(String gatewayUrl) {
-            this.gatewayUrl = Optional.ofNullable(gatewayUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "messaging_service_sid", nulls = Nulls.SKIP)
         public Builder messagingServiceSid(Optional<String> messagingServiceSid) {
-            this.messagingServiceSid = messagingServiceSid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder messagingServiceSid(String messagingServiceSid) {
-            this.messagingServiceSid = Optional.ofNullable(messagingServiceSid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -415,109 +324,77 @@ public final class ConnectionOptionsSms implements IConnectionOptionsCommon {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "provider", nulls = Nulls.SKIP)
         public Builder provider(Optional<ConnectionProviderEnumSms> provider) {
-            this.provider = provider;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder provider(ConnectionProviderEnumSms provider) {
-            this.provider = Optional.ofNullable(provider);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "syntax", nulls = Nulls.SKIP)
         public Builder syntax(Optional<ConnectionTemplateSyntaxEnumSms> syntax) {
-            this.syntax = syntax;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder syntax(ConnectionTemplateSyntaxEnumSms syntax) {
-            this.syntax = Optional.ofNullable(syntax);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "template", nulls = Nulls.SKIP)
         public Builder template(Optional<String> template) {
-            this.template = template;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder template(String template) {
-            this.template = Optional.ofNullable(template);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "totp", nulls = Nulls.SKIP)
         public Builder totp(Optional<ConnectionTotpSms> totp) {
-            this.totp = totp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder totp(ConnectionTotpSms totp) {
-            this.totp = Optional.ofNullable(totp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "twilio_sid", nulls = Nulls.SKIP)
         public Builder twilioSid(Optional<String> twilioSid) {
-            this.twilioSid = twilioSid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder twilioSid(String twilioSid) {
-            this.twilioSid = Optional.ofNullable(twilioSid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "twilio_token", nulls = Nulls.SKIP)
         public Builder twilioToken(Optional<String> twilioToken) {
-            this.twilioToken = twilioToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder twilioToken(String twilioToken) {
-            this.twilioToken = Optional.ofNullable(twilioToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsSms build() {
-            return new ConnectionOptionsSms(
-                    nonPersistentAttrs,
-                    bruteForceProtection,
-                    disableSignup,
-                    forwardReqInfo,
-                    from,
-                    gatewayAuthentication,
-                    gatewayUrl,
-                    messagingServiceSid,
-                    name,
-                    provider,
-                    syntax,
-                    template,
-                    totp,
-                    twilioSid,
-                    twilioToken,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

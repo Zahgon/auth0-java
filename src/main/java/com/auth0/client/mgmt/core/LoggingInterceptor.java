@@ -20,23 +20,7 @@ import okhttp3.Response;
  */
 public final class LoggingInterceptor implements Interceptor {
 
-    private static final Set<String> SENSITIVE_HEADERS = new HashSet<>(Arrays.asList(
-            "authorization",
-            "www-authenticate",
-            "x-api-key",
-            "api-key",
-            "apikey",
-            "x-api-token",
-            "x-auth-token",
-            "auth-token",
-            "proxy-authenticate",
-            "proxy-authorization",
-            "cookie",
-            "set-cookie",
-            "x-csrf-token",
-            "x-xsrf-token",
-            "x-session-token",
-            "x-access-token"));
+    private static final Set<String> SENSITIVE_HEADERS = new HashSet<>(Arrays.asList("authorization", "www-authenticate", "x-api-key", "api-key", "apikey", "x-api-token", "x-auth-token", "auth-token", "proxy-authenticate", "proxy-authorization", "cookie", "set-cookie", "x-csrf-token", "x-xsrf-token", "x-session-token", "x-access-token"));
 
     private final Logger logger;
 
@@ -46,59 +30,6 @@ public final class LoggingInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Request request = chain.request();
-
-        if (logger.isDebug()) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("HTTP Request: ").append(request.method()).append(" ").append(request.url());
-            sb.append(" headers={");
-            boolean first = true;
-            for (String name : request.headers().names()) {
-                if (!first) {
-                    sb.append(", ");
-                }
-                sb.append(name).append("=");
-                if (SENSITIVE_HEADERS.contains(name.toLowerCase())) {
-                    sb.append("[REDACTED]");
-                } else {
-                    sb.append(request.header(name));
-                }
-                first = false;
-            }
-            sb.append("}");
-            sb.append(" has_body=").append(request.body() != null);
-            logger.debug(sb.toString());
-        }
-
-        Response response = chain.proceed(request);
-
-        if (logger.isDebug()) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("HTTP Response: status=").append(response.code());
-            sb.append(" url=").append(response.request().url());
-            sb.append(" headers={");
-            boolean first = true;
-            for (String name : response.headers().names()) {
-                if (!first) {
-                    sb.append(", ");
-                }
-                sb.append(name).append("=");
-                if (SENSITIVE_HEADERS.contains(name.toLowerCase())) {
-                    sb.append("[REDACTED]");
-                } else {
-                    sb.append(response.header(name));
-                }
-                first = false;
-            }
-            sb.append("}");
-            logger.debug(sb.toString());
-        }
-
-        if (response.code() >= 400 && logger.isError()) {
-            logger.error("HTTP Error: status=" + response.code() + " url="
-                    + response.request().url());
-        }
-
-        return response;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

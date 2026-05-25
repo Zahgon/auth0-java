@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreatedUserAuthenticationMethodTypeEnum {
-    public static final CreatedUserAuthenticationMethodTypeEnum EMAIL =
-            new CreatedUserAuthenticationMethodTypeEnum(Value.EMAIL, "email");
 
-    public static final CreatedUserAuthenticationMethodTypeEnum TOTP =
-            new CreatedUserAuthenticationMethodTypeEnum(Value.TOTP, "totp");
+    public static final CreatedUserAuthenticationMethodTypeEnum EMAIL = new CreatedUserAuthenticationMethodTypeEnum(Value.EMAIL, "email");
 
-    public static final CreatedUserAuthenticationMethodTypeEnum WEBAUTHN_ROAMING =
-            new CreatedUserAuthenticationMethodTypeEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
+    public static final CreatedUserAuthenticationMethodTypeEnum TOTP = new CreatedUserAuthenticationMethodTypeEnum(Value.TOTP, "totp");
 
-    public static final CreatedUserAuthenticationMethodTypeEnum PASSKEY =
-            new CreatedUserAuthenticationMethodTypeEnum(Value.PASSKEY, "passkey");
+    public static final CreatedUserAuthenticationMethodTypeEnum WEBAUTHN_ROAMING = new CreatedUserAuthenticationMethodTypeEnum(Value.WEBAUTHN_ROAMING, "webauthn-roaming");
 
-    public static final CreatedUserAuthenticationMethodTypeEnum PHONE =
-            new CreatedUserAuthenticationMethodTypeEnum(Value.PHONE, "phone");
+    public static final CreatedUserAuthenticationMethodTypeEnum PASSKEY = new CreatedUserAuthenticationMethodTypeEnum(Value.PASSKEY, "passkey");
+
+    public static final CreatedUserAuthenticationMethodTypeEnum PHONE = new CreatedUserAuthenticationMethodTypeEnum(Value.PHONE, "phone");
 
     private final Value value;
 
@@ -32,78 +28,46 @@ public final class CreatedUserAuthenticationMethodTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreatedUserAuthenticationMethodTypeEnum
-                        && this.string.equals(((CreatedUserAuthenticationMethodTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case TOTP:
-                return visitor.visitTotp();
-            case WEBAUTHN_ROAMING:
-                return visitor.visitWebauthnRoaming();
-            case PASSKEY:
-                return visitor.visitPasskey();
-            case PHONE:
-                return visitor.visitPhone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreatedUserAuthenticationMethodTypeEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "totp":
-                return TOTP;
-            case "webauthn-roaming":
-                return WEBAUTHN_ROAMING;
-            case "passkey":
-                return PASSKEY;
-            case "phone":
-                return PHONE;
-            default:
-                return new CreatedUserAuthenticationMethodTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         PHONE,
-
         EMAIL,
-
         TOTP,
-
         WEBAUTHN_ROAMING,
-
         PASSKEY,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPhone();
 
         T visitEmail();

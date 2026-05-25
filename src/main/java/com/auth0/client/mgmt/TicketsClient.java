@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.VerifyEmailTicketRequestContent;
 import com.auth0.client.mgmt.types.VerifyEmailTicketResponseContent;
 
 public class TicketsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTicketsClient rawClient;
@@ -24,22 +25,21 @@ public class TicketsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTicketsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email verification ticket for a given user. An email verification ticket is a generated URL that the user can consume to verify their email address.
      */
     public VerifyEmailTicketResponseContent verifyEmail(VerifyEmailTicketRequestContent request) {
-        return this.rawClient.verifyEmail(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email verification ticket for a given user. An email verification ticket is a generated URL that the user can consume to verify their email address.
      */
-    public VerifyEmailTicketResponseContent verifyEmail(
-            VerifyEmailTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.verifyEmail(request, requestOptions).body();
+    public VerifyEmailTicketResponseContent verifyEmail(VerifyEmailTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,7 +47,7 @@ public class TicketsClient {
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
     public ChangePasswordTicketResponseContent changePassword() {
-        return this.rawClient.changePassword().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +55,7 @@ public class TicketsClient {
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
     public ChangePasswordTicketResponseContent changePassword(RequestOptions requestOptions) {
-        return this.rawClient.changePassword(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,15 +63,14 @@ public class TicketsClient {
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
     public ChangePasswordTicketResponseContent changePassword(ChangePasswordTicketRequestContent request) {
-        return this.rawClient.changePassword(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a password change ticket for a given user. A password change ticket is a generated URL that the user can consume to start a reset password flow.
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
-    public ChangePasswordTicketResponseContent changePassword(
-            ChangePasswordTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.changePassword(request, requestOptions).body();
+    public ChangePasswordTicketResponseContent changePassword(ChangePasswordTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

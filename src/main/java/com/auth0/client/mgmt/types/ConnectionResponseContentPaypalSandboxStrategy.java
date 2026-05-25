@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentPaypalSandboxStrategy {
-    public static final ConnectionResponseContentPaypalSandboxStrategy PAYPAL_SANDBOX =
-            new ConnectionResponseContentPaypalSandboxStrategy(Value.PAYPAL_SANDBOX, "paypal-sandbox");
+
+    public static final ConnectionResponseContentPaypalSandboxStrategy PAYPAL_SANDBOX = new ConnectionResponseContentPaypalSandboxStrategy(Value.PAYPAL_SANDBOX, "paypal-sandbox");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentPaypalSandboxStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentPaypalSandboxStrategy
-                        && this.string.equals(((ConnectionResponseContentPaypalSandboxStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PAYPAL_SANDBOX:
-                return visitor.visitPaypalSandbox();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentPaypalSandboxStrategy valueOf(String value) {
-        switch (value) {
-            case "paypal-sandbox":
-                return PAYPAL_SANDBOX;
-            default:
-                return new ConnectionResponseContentPaypalSandboxStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PAYPAL_SANDBOX,
 
-        UNKNOWN
+        PAYPAL_SANDBOX, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPaypalSandbox();
 
         T visitUnknown(String unknownType);

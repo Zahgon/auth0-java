@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserAttributeProfileUserId.Builder.class)
 public final class UserAttributeProfileUserId {
+
     private final Optional<UserAttributeProfileUserIdOidcMappingEnum> oidcMapping;
 
     private final Optional<List<String>> samlMapping;
@@ -31,12 +32,7 @@ public final class UserAttributeProfileUserId {
 
     private final Map<String, Object> additionalProperties;
 
-    private UserAttributeProfileUserId(
-            Optional<UserAttributeProfileUserIdOidcMappingEnum> oidcMapping,
-            Optional<List<String>> samlMapping,
-            Optional<String> scimMapping,
-            Optional<UserAttributeProfileStrategyOverridesUserId> strategyOverrides,
-            Map<String, Object> additionalProperties) {
+    private UserAttributeProfileUserId(Optional<UserAttributeProfileUserIdOidcMappingEnum> oidcMapping, Optional<List<String>> samlMapping, Optional<String> scimMapping, Optional<UserAttributeProfileStrategyOverridesUserId> strategyOverrides, Map<String, Object> additionalProperties) {
         this.oidcMapping = oidcMapping;
         this.samlMapping = samlMapping;
         this.scimMapping = scimMapping;
@@ -46,12 +42,12 @@ public final class UserAttributeProfileUserId {
 
     @JsonProperty("oidc_mapping")
     public Optional<UserAttributeProfileUserIdOidcMappingEnum> getOidcMapping() {
-        return oidcMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("saml_mapping")
     public Optional<List<String>> getSamlMapping() {
-        return samlMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,48 +55,45 @@ public final class UserAttributeProfileUserId {
      */
     @JsonProperty("scim_mapping")
     public Optional<String> getScimMapping() {
-        return scimMapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strategy_overrides")
     public Optional<UserAttributeProfileStrategyOverridesUserId> getStrategyOverrides() {
-        return strategyOverrides;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserAttributeProfileUserId && equalTo((UserAttributeProfileUserId) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserAttributeProfileUserId other) {
-        return oidcMapping.equals(other.oidcMapping)
-                && samlMapping.equals(other.samlMapping)
-                && scimMapping.equals(other.scimMapping)
-                && strategyOverrides.equals(other.strategyOverrides);
+        return oidcMapping.equals(other.oidcMapping) && samlMapping.equals(other.samlMapping) && scimMapping.equals(other.scimMapping) && strategyOverrides.equals(other.strategyOverrides);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.oidcMapping, this.samlMapping, this.scimMapping, this.strategyOverrides);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UserAttributeProfileUserIdOidcMappingEnum> oidcMapping = Optional.empty();
 
         private Optional<List<String>> samlMapping = Optional.empty();
@@ -112,36 +105,29 @@ public final class UserAttributeProfileUserId {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UserAttributeProfileUserId other) {
-            oidcMapping(other.getOidcMapping());
-            samlMapping(other.getSamlMapping());
-            scimMapping(other.getScimMapping());
-            strategyOverrides(other.getStrategyOverrides());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "oidc_mapping", nulls = Nulls.SKIP)
         public Builder oidcMapping(Optional<UserAttributeProfileUserIdOidcMappingEnum> oidcMapping) {
-            this.oidcMapping = oidcMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder oidcMapping(UserAttributeProfileUserIdOidcMappingEnum oidcMapping) {
-            this.oidcMapping = Optional.ofNullable(oidcMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "saml_mapping", nulls = Nulls.SKIP)
         public Builder samlMapping(Optional<List<String>> samlMapping) {
-            this.samlMapping = samlMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder samlMapping(List<String> samlMapping) {
-            this.samlMapping = Optional.ofNullable(samlMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,39 +135,32 @@ public final class UserAttributeProfileUserId {
          */
         @JsonSetter(value = "scim_mapping", nulls = Nulls.SKIP)
         public Builder scimMapping(Optional<String> scimMapping) {
-            this.scimMapping = scimMapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scimMapping(String scimMapping) {
-            this.scimMapping = Optional.ofNullable(scimMapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "strategy_overrides", nulls = Nulls.SKIP)
         public Builder strategyOverrides(Optional<UserAttributeProfileStrategyOverridesUserId> strategyOverrides) {
-            this.strategyOverrides = strategyOverrides;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategyOverrides(UserAttributeProfileStrategyOverridesUserId strategyOverrides) {
-            this.strategyOverrides = Optional.ofNullable(strategyOverrides);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UserAttributeProfileUserId build() {
-            return new UserAttributeProfileUserId(
-                    oidcMapping, samlMapping, scimMapping, strategyOverrides, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

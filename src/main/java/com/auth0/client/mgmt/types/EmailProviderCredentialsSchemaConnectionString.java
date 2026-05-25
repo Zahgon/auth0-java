@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentialsSchemaConnectionString.Builder.class)
 public final class EmailProviderCredentialsSchemaConnectionString {
+
     private final Optional<String> connectionString;
 
     private final Map<String, Object> additionalProperties;
 
-    private EmailProviderCredentialsSchemaConnectionString(
-            Optional<String> connectionString, Map<String, Object> additionalProperties) {
+    private EmailProviderCredentialsSchemaConnectionString(Optional<String> connectionString, Map<String, Object> additionalProperties) {
         this.connectionString = connectionString;
         this.additionalProperties = additionalProperties;
     }
@@ -35,19 +35,17 @@ public final class EmailProviderCredentialsSchemaConnectionString {
      */
     @JsonProperty("connectionString")
     public Optional<String> getConnectionString() {
-        return connectionString;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchemaConnectionString
-                && equalTo((EmailProviderCredentialsSchemaConnectionString) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchemaConnectionString other) {
@@ -56,30 +54,31 @@ public final class EmailProviderCredentialsSchemaConnectionString {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionString);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> connectionString = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(EmailProviderCredentialsSchemaConnectionString other) {
-            connectionString(other.getConnectionString());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +86,23 @@ public final class EmailProviderCredentialsSchemaConnectionString {
          */
         @JsonSetter(value = "connectionString", nulls = Nulls.SKIP)
         public Builder connectionString(Optional<String> connectionString) {
-            this.connectionString = connectionString;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Optional.ofNullable(connectionString);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public EmailProviderCredentialsSchemaConnectionString build() {
-            return new EmailProviderCredentialsSchemaConnectionString(connectionString, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

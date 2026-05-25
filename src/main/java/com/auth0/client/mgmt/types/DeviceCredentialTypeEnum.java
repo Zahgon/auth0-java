@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class DeviceCredentialTypeEnum {
-    public static final DeviceCredentialTypeEnum ROTATING_REFRESH_TOKEN =
-            new DeviceCredentialTypeEnum(Value.ROTATING_REFRESH_TOKEN, "rotating_refresh_token");
 
-    public static final DeviceCredentialTypeEnum REFRESH_TOKEN =
-            new DeviceCredentialTypeEnum(Value.REFRESH_TOKEN, "refresh_token");
+    public static final DeviceCredentialTypeEnum ROTATING_REFRESH_TOKEN = new DeviceCredentialTypeEnum(Value.ROTATING_REFRESH_TOKEN, "rotating_refresh_token");
 
-    public static final DeviceCredentialTypeEnum PUBLIC_KEY =
-            new DeviceCredentialTypeEnum(Value.PUBLIC_KEY, "public_key");
+    public static final DeviceCredentialTypeEnum REFRESH_TOKEN = new DeviceCredentialTypeEnum(Value.REFRESH_TOKEN, "refresh_token");
+
+    public static final DeviceCredentialTypeEnum PUBLIC_KEY = new DeviceCredentialTypeEnum(Value.PUBLIC_KEY, "public_key");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class DeviceCredentialTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof DeviceCredentialTypeEnum
-                        && this.string.equals(((DeviceCredentialTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ROTATING_REFRESH_TOKEN:
-                return visitor.visitRotatingRefreshToken();
-            case REFRESH_TOKEN:
-                return visitor.visitRefreshToken();
-            case PUBLIC_KEY:
-                return visitor.visitPublicKey();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static DeviceCredentialTypeEnum valueOf(String value) {
-        switch (value) {
-            case "rotating_refresh_token":
-                return ROTATING_REFRESH_TOKEN;
-            case "refresh_token":
-                return REFRESH_TOKEN;
-            case "public_key":
-                return PUBLIC_KEY;
-            default:
-                return new DeviceCredentialTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PUBLIC_KEY,
 
-        REFRESH_TOKEN,
-
-        ROTATING_REFRESH_TOKEN,
-
-        UNKNOWN
+        PUBLIC_KEY, REFRESH_TOKEN, ROTATING_REFRESH_TOKEN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPublicKey();
 
         T visitRefreshToken();

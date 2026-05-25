@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.GetOrganizationInvitationResponseContent;
 import com.auth0.client.mgmt.types.OrganizationInvitation;
 
 public class InvitationsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawInvitationsClient rawClient;
@@ -27,81 +28,72 @@ public class InvitationsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawInvitationsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a detailed list of invitations sent to users for a specific Organization. The list includes details such as inviter and invitee information, invitation URLs, and dates of creation and expiration. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
     public SyncPagingIterable<OrganizationInvitation> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a detailed list of invitations sent to users for a specific Organization. The list includes details such as inviter and invitee information, invitation URLs, and dates of creation and expiration. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
     public SyncPagingIterable<OrganizationInvitation> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a detailed list of invitations sent to users for a specific Organization. The list includes details such as inviter and invitee information, invitation URLs, and dates of creation and expiration. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
-    public SyncPagingIterable<OrganizationInvitation> list(
-            String id, ListOrganizationInvitationsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<OrganizationInvitation> list(String id, ListOrganizationInvitationsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a detailed list of invitations sent to users for a specific Organization. The list includes details such as inviter and invitee information, invitation URLs, and dates of creation and expiration. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
-    public SyncPagingIterable<OrganizationInvitation> list(
-            String id, ListOrganizationInvitationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<OrganizationInvitation> list(String id, ListOrganizationInvitationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a user invitation for a specific Organization. Upon creation, the listed user receives an email inviting them to join the Organization. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
-    public CreateOrganizationInvitationResponseContent create(
-            String id, CreateOrganizationInvitationRequestContent request) {
-        return this.rawClient.create(id, request).body();
+    public CreateOrganizationInvitationResponseContent create(String id, CreateOrganizationInvitationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a user invitation for a specific Organization. Upon creation, the listed user receives an email inviting them to join the Organization. To learn more about Organization invitations, review <a href="https://auth0.com/docs/manage-users/organizations/configure-organizations/invite-members">Invite Organization Members</a>.
      */
-    public CreateOrganizationInvitationResponseContent create(
-            String id, CreateOrganizationInvitationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateOrganizationInvitationResponseContent create(String id, CreateOrganizationInvitationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetOrganizationInvitationResponseContent get(String id, String invitationId) {
-        return this.rawClient.get(id, invitationId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public GetOrganizationInvitationResponseContent get(String id, String invitationId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, invitationId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public GetOrganizationInvitationResponseContent get(
-            String id, String invitationId, GetOrganizationInvitationRequestParameters request) {
-        return this.rawClient.get(id, invitationId, request).body();
+    public GetOrganizationInvitationResponseContent get(String id, String invitationId, GetOrganizationInvitationRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public GetOrganizationInvitationResponseContent get(
-            String id,
-            String invitationId,
-            GetOrganizationInvitationRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.get(id, invitationId, request, requestOptions).body();
+    public GetOrganizationInvitationResponseContent get(String id, String invitationId, GetOrganizationInvitationRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String invitationId) {
-        this.rawClient.delete(id, invitationId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void delete(String id, String invitationId, RequestOptions requestOptions) {
-        this.rawClient.delete(id, invitationId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

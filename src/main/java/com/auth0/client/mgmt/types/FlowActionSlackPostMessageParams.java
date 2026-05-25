@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionSlackPostMessageParams.Builder.class)
 public final class FlowActionSlackPostMessageParams {
+
     private final String connectionId;
 
     private final Optional<String> text;
@@ -30,11 +31,7 @@ public final class FlowActionSlackPostMessageParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionSlackPostMessageParams(
-            String connectionId,
-            Optional<String> text,
-            Optional<List<FlowActionSlackPostMessageParamsAttachment>> attachments,
-            Map<String, Object> additionalProperties) {
+    private FlowActionSlackPostMessageParams(String connectionId, Optional<String> text, Optional<List<FlowActionSlackPostMessageParamsAttachment>> attachments, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.text = text;
         this.attachments = attachments;
@@ -43,57 +40,56 @@ public final class FlowActionSlackPostMessageParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("text")
     public Optional<String> getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("attachments")
     public Optional<List<FlowActionSlackPostMessageParamsAttachment>> getAttachments() {
-        return attachments;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionSlackPostMessageParams && equalTo((FlowActionSlackPostMessageParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionSlackPostMessageParams other) {
-        return connectionId.equals(other.connectionId)
-                && text.equals(other.text)
-                && attachments.equals(other.attachments);
+        return connectionId.equals(other.connectionId) && text.equals(other.text) && attachments.equals(other.attachments);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.text, this.attachments);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         _FinalStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionSlackPostMessageParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionSlackPostMessageParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -111,6 +107,7 @@ public final class FlowActionSlackPostMessageParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, _FinalStage {
+
         private String connectionId;
 
         private Optional<List<FlowActionSlackPostMessageParamsAttachment>> attachments = Optional.empty();
@@ -120,64 +117,55 @@ public final class FlowActionSlackPostMessageParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionSlackPostMessageParams other) {
-            connectionId(other.getConnectionId());
-            text(other.getText());
-            attachments(other.getAttachments());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public _FinalStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage attachments(List<FlowActionSlackPostMessageParamsAttachment> attachments) {
-            this.attachments = Optional.ofNullable(attachments);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "attachments", nulls = Nulls.SKIP)
         public _FinalStage attachments(Optional<List<FlowActionSlackPostMessageParamsAttachment>> attachments) {
-            this.attachments = attachments;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage text(String text) {
-            this.text = Optional.ofNullable(text);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "text", nulls = Nulls.SKIP)
         public _FinalStage text(Optional<String> text) {
-            this.text = text;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionSlackPostMessageParams build() {
-            return new FlowActionSlackPostMessageParams(connectionId, text, attachments, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

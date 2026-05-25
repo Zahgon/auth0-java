@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.verifiablecredentials.verification.types.ListVerifi
 import com.auth0.client.mgmt.verifiablecredentials.verification.types.UpdateVerifiableCredentialTemplateRequestContent;
 
 public class TemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawTemplatesClient rawClient;
@@ -28,110 +29,104 @@ public class TemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public RawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
     public SyncPagingIterable<VerifiableCredentialTemplateResponse> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
     public SyncPagingIterable<VerifiableCredentialTemplateResponse> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
-    public SyncPagingIterable<VerifiableCredentialTemplateResponse> list(
-            ListVerifiableCredentialTemplatesRequestParameters request) {
-        return this.rawClient.list(request).body();
+    public SyncPagingIterable<VerifiableCredentialTemplateResponse> list(ListVerifiableCredentialTemplatesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
-    public SyncPagingIterable<VerifiableCredentialTemplateResponse> list(
-            ListVerifiableCredentialTemplatesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<VerifiableCredentialTemplateResponse> list(ListVerifiableCredentialTemplatesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a verifiable credential template.
      */
-    public CreateVerifiableCredentialTemplateResponseContent create(
-            CreateVerifiableCredentialTemplateRequestContent request) {
-        return this.rawClient.create(request).body();
+    public CreateVerifiableCredentialTemplateResponseContent create(CreateVerifiableCredentialTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a verifiable credential template.
      */
-    public CreateVerifiableCredentialTemplateResponseContent create(
-            CreateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).body();
+    public CreateVerifiableCredentialTemplateResponseContent create(CreateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a verifiable credential template.
      */
     public GetVerifiableCredentialTemplateResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a verifiable credential template.
      */
     public GetVerifiableCredentialTemplateResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a verifiable credential template.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a verifiable credential template.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
     public UpdateVerifiableCredentialTemplateResponseContent update(String id) {
-        return this.rawClient.update(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
     public UpdateVerifiableCredentialTemplateResponseContent update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
-    public UpdateVerifiableCredentialTemplateResponseContent update(
-            String id, UpdateVerifiableCredentialTemplateRequestContent request) {
-        return this.rawClient.update(id, request).body();
+    public UpdateVerifiableCredentialTemplateResponseContent update(String id, UpdateVerifiableCredentialTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
-    public UpdateVerifiableCredentialTemplateResponseContent update(
-            String id, UpdateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateVerifiableCredentialTemplateResponseContent update(String id, UpdateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

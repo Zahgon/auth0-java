@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientOidcBackchannelLogoutInitiatorsModeEnum {
-    public static final ClientOidcBackchannelLogoutInitiatorsModeEnum ALL =
-            new ClientOidcBackchannelLogoutInitiatorsModeEnum(Value.ALL, "all");
 
-    public static final ClientOidcBackchannelLogoutInitiatorsModeEnum CUSTOM =
-            new ClientOidcBackchannelLogoutInitiatorsModeEnum(Value.CUSTOM, "custom");
+    public static final ClientOidcBackchannelLogoutInitiatorsModeEnum ALL = new ClientOidcBackchannelLogoutInitiatorsModeEnum(Value.ALL, "all");
+
+    public static final ClientOidcBackchannelLogoutInitiatorsModeEnum CUSTOM = new ClientOidcBackchannelLogoutInitiatorsModeEnum(Value.CUSTOM, "custom");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientOidcBackchannelLogoutInitiatorsModeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientOidcBackchannelLogoutInitiatorsModeEnum
-                        && this.string.equals(((ClientOidcBackchannelLogoutInitiatorsModeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALL:
-                return visitor.visitAll();
-            case CUSTOM:
-                return visitor.visitCustom();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientOidcBackchannelLogoutInitiatorsModeEnum valueOf(String value) {
-        switch (value) {
-            case "all":
-                return ALL;
-            case "custom":
-                return CUSTOM;
-            default:
-                return new ClientOidcBackchannelLogoutInitiatorsModeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CUSTOM,
 
-        ALL,
-
-        UNKNOWN
+        CUSTOM, ALL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCustom();
 
         T visitAll();

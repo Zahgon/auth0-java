@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectedAccount.Builder.class)
 public final class ConnectedAccount {
+
     private final String id;
 
     private final String connection;
@@ -43,17 +44,7 @@ public final class ConnectedAccount {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectedAccount(
-            String id,
-            String connection,
-            String connectionId,
-            String strategy,
-            ConnectedAccountAccessTypeEnum accessType,
-            Optional<List<String>> scopes,
-            OffsetDateTime createdAt,
-            Optional<OffsetDateTime> expiresAt,
-            Optional<String> organizationId,
-            Map<String, Object> additionalProperties) {
+    private ConnectedAccount(String id, String connection, String connectionId, String strategy, ConnectedAccountAccessTypeEnum accessType, Optional<List<String>> scopes, OffsetDateTime createdAt, Optional<OffsetDateTime> expiresAt, Optional<String> organizationId, Map<String, Object> additionalProperties) {
         this.id = id;
         this.connection = connection;
         this.connectionId = connectionId;
@@ -71,7 +62,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,7 +70,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("connection")
     public String getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,7 +78,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,12 +86,12 @@ public final class ConnectedAccount {
      */
     @JsonProperty("strategy")
     public String getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("access_type")
     public ConnectedAccountAccessTypeEnum getAccessType() {
-        return accessType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -108,7 +99,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("scopes")
     public Optional<List<String>> getScopes() {
-        return scopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,7 +107,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,7 +115,7 @@ public final class ConnectedAccount {
      */
     @JsonProperty("expires_at")
     public Optional<OffsetDateTime> getExpiresAt() {
-        return expiresAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -132,56 +123,39 @@ public final class ConnectedAccount {
      */
     @JsonProperty("organization_id")
     public Optional<String> getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectedAccount && equalTo((ConnectedAccount) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectedAccount other) {
-        return id.equals(other.id)
-                && connection.equals(other.connection)
-                && connectionId.equals(other.connectionId)
-                && strategy.equals(other.strategy)
-                && accessType.equals(other.accessType)
-                && scopes.equals(other.scopes)
-                && createdAt.equals(other.createdAt)
-                && expiresAt.equals(other.expiresAt)
-                && organizationId.equals(other.organizationId);
+        return id.equals(other.id) && connection.equals(other.connection) && connectionId.equals(other.connectionId) && strategy.equals(other.strategy) && accessType.equals(other.accessType) && scopes.equals(other.scopes) && createdAt.equals(other.createdAt) && expiresAt.equals(other.expiresAt) && organizationId.equals(other.organizationId);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.connection,
-                this.connectionId,
-                this.strategy,
-                this.accessType,
-                this.scopes,
-                this.createdAt,
-                this.expiresAt,
-                this.organizationId);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>The unique identifier for the connected account.</p>
          */
@@ -191,6 +165,7 @@ public final class ConnectedAccount {
     }
 
     public interface ConnectionStage {
+
         /**
          * <p>The name of the connection associated with the account.</p>
          */
@@ -198,6 +173,7 @@ public final class ConnectedAccount {
     }
 
     public interface ConnectionIdStage {
+
         /**
          * <p>The unique identifier of the connection associated with the account.</p>
          */
@@ -205,6 +181,7 @@ public final class ConnectedAccount {
     }
 
     public interface StrategyStage {
+
         /**
          * <p>The authentication strategy used by the connection.</p>
          */
@@ -212,10 +189,12 @@ public final class ConnectedAccount {
     }
 
     public interface AccessTypeStage {
+
         CreatedAtStage accessType(@NotNull ConnectedAccountAccessTypeEnum accessType);
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>ISO 8601 timestamp when the connected account was created.</p>
          */
@@ -223,6 +202,7 @@ public final class ConnectedAccount {
     }
 
     public interface _FinalStage {
+
         ConnectedAccount build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -252,14 +232,8 @@ public final class ConnectedAccount {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements IdStage,
-                    ConnectionStage,
-                    ConnectionIdStage,
-                    StrategyStage,
-                    AccessTypeStage,
-                    CreatedAtStage,
-                    _FinalStage {
+    public static final class Builder implements IdStage, ConnectionStage, ConnectionIdStage, StrategyStage, AccessTypeStage, CreatedAtStage, _FinalStage {
+
         private String id;
 
         private String connection;
@@ -281,20 +255,12 @@ public final class ConnectedAccount {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectedAccount other) {
-            id(other.getId());
-            connection(other.getConnection());
-            connectionId(other.getConnectionId());
-            strategy(other.getStrategy());
-            accessType(other.getAccessType());
-            scopes(other.getScopes());
-            createdAt(other.getCreatedAt());
-            expiresAt(other.getExpiresAt());
-            organizationId(other.getOrganizationId());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -305,8 +271,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter("id")
         public ConnectionStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -317,8 +282,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter("connection")
         public ConnectionIdStage connection(@NotNull String connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -329,8 +293,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter("connection_id")
         public StrategyStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -341,15 +304,13 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter("strategy")
         public AccessTypeStage strategy(@NotNull String strategy) {
-            this.strategy = Objects.requireNonNull(strategy, "strategy must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("access_type")
         public CreatedAtStage accessType(@NotNull ConnectedAccountAccessTypeEnum accessType) {
-            this.accessType = Objects.requireNonNull(accessType, "accessType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -360,8 +321,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter("created_at")
         public _FinalStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -370,8 +330,7 @@ public final class ConnectedAccount {
          */
         @java.lang.Override
         public _FinalStage organizationId(String organizationId) {
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -380,8 +339,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter(value = "organization_id", nulls = Nulls.SKIP)
         public _FinalStage organizationId(Optional<String> organizationId) {
-            this.organizationId = organizationId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -390,8 +348,7 @@ public final class ConnectedAccount {
          */
         @java.lang.Override
         public _FinalStage expiresAt(OffsetDateTime expiresAt) {
-            this.expiresAt = Optional.ofNullable(expiresAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -400,8 +357,7 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter(value = "expires_at", nulls = Nulls.SKIP)
         public _FinalStage expiresAt(Optional<OffsetDateTime> expiresAt) {
-            this.expiresAt = expiresAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -410,8 +366,7 @@ public final class ConnectedAccount {
          */
         @java.lang.Override
         public _FinalStage scopes(List<String> scopes) {
-            this.scopes = Optional.ofNullable(scopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -420,35 +375,22 @@ public final class ConnectedAccount {
         @java.lang.Override
         @JsonSetter(value = "scopes", nulls = Nulls.SKIP)
         public _FinalStage scopes(Optional<List<String>> scopes) {
-            this.scopes = scopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectedAccount build() {
-            return new ConnectedAccount(
-                    id,
-                    connection,
-                    connectionId,
-                    strategy,
-                    accessType,
-                    scopes,
-                    createdAt,
-                    expiresAt,
-                    organizationId,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

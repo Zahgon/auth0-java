@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateEnabledClientConnectionsRequestContentItem.Builder.class)
 public final class UpdateEnabledClientConnectionsRequestContentItem {
+
     private final String clientId;
 
     private final boolean status;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateEnabledClientConnectionsRequestContentItem(
-            String clientId, boolean status, Map<String, Object> additionalProperties) {
+    private UpdateEnabledClientConnectionsRequestContentItem(String clientId, boolean status, Map<String, Object> additionalProperties) {
         this.clientId = clientId;
         this.status = status;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
      */
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,19 +45,17 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
      */
     @JsonProperty("status")
     public boolean getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateEnabledClientConnectionsRequestContentItem
-                && equalTo((UpdateEnabledClientConnectionsRequestContentItem) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateEnabledClientConnectionsRequestContentItem other) {
@@ -66,19 +64,20 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clientId, this.status);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         /**
          * <p>The client_id of the client whose status will be changed. Note that the limit per PATCH request is 50 clients.</p>
          */
@@ -88,6 +87,7 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
     }
 
     public interface StatusStage {
+
         /**
          * <p>Whether the connection is enabled or not for this client_id</p>
          */
@@ -95,6 +95,7 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
     }
 
     public interface _FinalStage {
+
         UpdateEnabledClientConnectionsRequestContentItem build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +105,7 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, StatusStage, _FinalStage {
+
         private String clientId;
 
         private boolean status;
@@ -111,13 +113,12 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateEnabledClientConnectionsRequestContentItem other) {
-            clientId(other.getClientId());
-            status(other.getStatus());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,8 +129,7 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
         @java.lang.Override
         @JsonSetter("client_id")
         public StatusStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -140,25 +140,22 @@ public final class UpdateEnabledClientConnectionsRequestContentItem {
         @java.lang.Override
         @JsonSetter("status")
         public _FinalStage status(boolean status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateEnabledClientConnectionsRequestContentItem build() {
-            return new UpdateEnabledClientConnectionsRequestContentItem(clientId, status, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

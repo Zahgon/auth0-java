@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetBreachedPasswordDetectionSettingsResponseC
 import com.auth0.client.mgmt.types.UpdateBreachedPasswordDetectionSettingsResponseContent;
 
 public class BreachedPasswordDetectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawBreachedPasswordDetectionClient rawClient;
@@ -23,50 +24,48 @@ public class BreachedPasswordDetectionClient {
      * Get responses with HTTP metadata like headers
      */
     public RawBreachedPasswordDetectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Breached Password Detection configuration of your tenant.
      */
     public GetBreachedPasswordDetectionSettingsResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the Breached Password Detection configuration of your tenant.
      */
     public GetBreachedPasswordDetectionSettingsResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
     public UpdateBreachedPasswordDetectionSettingsResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
     public UpdateBreachedPasswordDetectionSettingsResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
-    public UpdateBreachedPasswordDetectionSettingsResponseContent update(
-            UpdateBreachedPasswordDetectionSettingsRequestContent request) {
-        return this.rawClient.update(request).body();
+    public UpdateBreachedPasswordDetectionSettingsResponseContent update(UpdateBreachedPasswordDetectionSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update details of the Breached Password Detection configuration of your tenant.
      */
-    public UpdateBreachedPasswordDetectionSettingsResponseContent update(
-            UpdateBreachedPasswordDetectionSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateBreachedPasswordDetectionSettingsResponseContent update(UpdateBreachedPasswordDetectionSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

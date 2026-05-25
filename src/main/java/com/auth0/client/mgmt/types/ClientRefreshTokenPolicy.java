@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientRefreshTokenPolicy.Builder.class)
 public final class ClientRefreshTokenPolicy {
+
     private final String audience;
 
     private final List<String> scope;
@@ -39,7 +40,7 @@ public final class ClientRefreshTokenPolicy {
      */
     @JsonProperty("audience")
     public String getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,18 +48,17 @@ public final class ClientRefreshTokenPolicy {
      */
     @JsonProperty("scope")
     public List<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientRefreshTokenPolicy && equalTo((ClientRefreshTokenPolicy) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientRefreshTokenPolicy other) {
@@ -67,19 +67,20 @@ public final class ClientRefreshTokenPolicy {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.audience, this.scope);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AudienceStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AudienceStage {
+
         /**
          * <p>The identifier of the resource server to which the Multi Resource Refresh Token Policy applies</p>
          */
@@ -89,6 +90,7 @@ public final class ClientRefreshTokenPolicy {
     }
 
     public interface _FinalStage {
+
         ClientRefreshTokenPolicy build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -107,6 +109,7 @@ public final class ClientRefreshTokenPolicy {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AudienceStage, _FinalStage {
+
         private String audience;
 
         private List<String> scope = new ArrayList<>();
@@ -114,13 +117,12 @@ public final class ClientRefreshTokenPolicy {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ClientRefreshTokenPolicy other) {
-            audience(other.getAudience());
-            scope(other.getScope());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -131,8 +133,7 @@ public final class ClientRefreshTokenPolicy {
         @java.lang.Override
         @JsonSetter("audience")
         public _FinalStage audience(@NotNull String audience) {
-            this.audience = Objects.requireNonNull(audience, "audience must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -141,10 +142,7 @@ public final class ClientRefreshTokenPolicy {
          */
         @java.lang.Override
         public _FinalStage addAllScope(List<String> scope) {
-            if (scope != null) {
-                this.scope.addAll(scope);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,8 +151,7 @@ public final class ClientRefreshTokenPolicy {
          */
         @java.lang.Override
         public _FinalStage addScope(String scope) {
-            this.scope.add(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -163,28 +160,22 @@ public final class ClientRefreshTokenPolicy {
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(List<String> scope) {
-            this.scope.clear();
-            if (scope != null) {
-                this.scope.addAll(scope);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ClientRefreshTokenPolicy build() {
-            return new ClientRefreshTokenPolicy(audience, scope, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

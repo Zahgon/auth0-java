@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPurposes.Builder.class)
 public final class ConnectionPurposes implements IConnectionPurposes {
+
     private final Optional<ConnectionAuthenticationPurpose> authentication;
 
     private final Optional<ConnectionConnectedAccountsPurpose> connectedAccounts;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPurposes(
-            Optional<ConnectionAuthenticationPurpose> authentication,
-            Optional<ConnectionConnectedAccountsPurpose> connectedAccounts,
-            Map<String, Object> additionalProperties) {
+    private ConnectionPurposes(Optional<ConnectionAuthenticationPurpose> authentication, Optional<ConnectionConnectedAccountsPurpose> connectedAccounts, Map<String, Object> additionalProperties) {
         this.authentication = authentication;
         this.connectedAccounts = connectedAccounts;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,23 @@ public final class ConnectionPurposes implements IConnectionPurposes {
     @JsonProperty("authentication")
     @java.lang.Override
     public Optional<ConnectionAuthenticationPurpose> getAuthentication() {
-        return authentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connected_accounts")
     @java.lang.Override
     public Optional<ConnectionConnectedAccountsPurpose> getConnectedAccounts() {
-        return connectedAccounts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPurposes && equalTo((ConnectionPurposes) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPurposes other) {
@@ -64,20 +61,21 @@ public final class ConnectionPurposes implements IConnectionPurposes {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.authentication, this.connectedAccounts);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<ConnectionAuthenticationPurpose> authentication = Optional.empty();
 
         private Optional<ConnectionConnectedAccountsPurpose> connectedAccounts = Optional.empty();
@@ -85,48 +83,41 @@ public final class ConnectionPurposes implements IConnectionPurposes {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionPurposes other) {
-            authentication(other.getAuthentication());
-            connectedAccounts(other.getConnectedAccounts());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "authentication", nulls = Nulls.SKIP)
         public Builder authentication(Optional<ConnectionAuthenticationPurpose> authentication) {
-            this.authentication = authentication;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder authentication(ConnectionAuthenticationPurpose authentication) {
-            this.authentication = Optional.ofNullable(authentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connected_accounts", nulls = Nulls.SKIP)
         public Builder connectedAccounts(Optional<ConnectionConnectedAccountsPurpose> connectedAccounts) {
-            this.connectedAccounts = connectedAccounts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectedAccounts(ConnectionConnectedAccountsPurpose connectedAccounts) {
-            this.connectedAccounts = Optional.ofNullable(connectedAccounts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionPurposes build() {
-            return new ConnectionPurposes(authentication, connectedAccounts, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

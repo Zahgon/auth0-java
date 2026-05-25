@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BotDetectionLevelEnum {
+
     public static final BotDetectionLevelEnum MEDIUM = new BotDetectionLevelEnum(Value.MEDIUM, "medium");
 
     public static final BotDetectionLevelEnum LOW = new BotDetectionLevelEnum(Value.LOW, "low");
@@ -23,66 +24,41 @@ public final class BotDetectionLevelEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BotDetectionLevelEnum
-                        && this.string.equals(((BotDetectionLevelEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MEDIUM:
-                return visitor.visitMedium();
-            case LOW:
-                return visitor.visitLow();
-            case HIGH:
-                return visitor.visitHigh();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BotDetectionLevelEnum valueOf(String value) {
-        switch (value) {
-            case "medium":
-                return MEDIUM;
-            case "low":
-                return LOW;
-            case "high":
-                return HIGH;
-            default:
-                return new BotDetectionLevelEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        LOW,
 
-        MEDIUM,
-
-        HIGH,
-
-        UNKNOWN
+        LOW, MEDIUM, HIGH, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitLow();
 
         T visitMedium();

@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CustomDomainTypeEnum {
-    public static final CustomDomainTypeEnum SELF_MANAGED_CERTS =
-            new CustomDomainTypeEnum(Value.SELF_MANAGED_CERTS, "self_managed_certs");
 
-    public static final CustomDomainTypeEnum AUTH0MANAGED_CERTS =
-            new CustomDomainTypeEnum(Value.AUTH0MANAGED_CERTS, "auth0_managed_certs");
+    public static final CustomDomainTypeEnum SELF_MANAGED_CERTS = new CustomDomainTypeEnum(Value.SELF_MANAGED_CERTS, "self_managed_certs");
+
+    public static final CustomDomainTypeEnum AUTH0MANAGED_CERTS = new CustomDomainTypeEnum(Value.AUTH0MANAGED_CERTS, "auth0_managed_certs");
 
     private final Value value;
 
@@ -23,59 +22,41 @@ public final class CustomDomainTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CustomDomainTypeEnum && this.string.equals(((CustomDomainTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SELF_MANAGED_CERTS:
-                return visitor.visitSelfManagedCerts();
-            case AUTH0MANAGED_CERTS:
-                return visitor.visitAuth0ManagedCerts();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CustomDomainTypeEnum valueOf(String value) {
-        switch (value) {
-            case "self_managed_certs":
-                return SELF_MANAGED_CERTS;
-            case "auth0_managed_certs":
-                return AUTH0MANAGED_CERTS;
-            default:
-                return new CustomDomainTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUTH0MANAGED_CERTS,
 
-        SELF_MANAGED_CERTS,
-
-        UNKNOWN
+        AUTH0MANAGED_CERTS, SELF_MANAGED_CERTS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAuth0ManagedCerts();
 
         T visitSelfManagedCerts();

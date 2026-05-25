@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SetDefaultCustomDomainRequestContent.Builder.class)
 public final class SetDefaultCustomDomainRequestContent {
+
     private final String domain;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class SetDefaultCustomDomainRequestContent {
      */
     @JsonProperty("domain")
     public String getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SetDefaultCustomDomainRequestContent
-                && equalTo((SetDefaultCustomDomainRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SetDefaultCustomDomainRequestContent other) {
@@ -54,19 +53,20 @@ public final class SetDefaultCustomDomainRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.domain);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DomainStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DomainStage {
+
         /**
          * <p>The domain to set as the default custom domain. Must be a verified custom domain or the canonical domain.</p>
          */
@@ -76,6 +76,7 @@ public final class SetDefaultCustomDomainRequestContent {
     }
 
     public interface _FinalStage {
+
         SetDefaultCustomDomainRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class SetDefaultCustomDomainRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DomainStage, _FinalStage {
+
         private String domain;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SetDefaultCustomDomainRequestContent other) {
-            domain(other.getDomain());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class SetDefaultCustomDomainRequestContent {
         @java.lang.Override
         @JsonSetter("domain")
         public _FinalStage domain(@NotNull String domain) {
-            this.domain = Objects.requireNonNull(domain, "domain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SetDefaultCustomDomainRequestContent build() {
-            return new SetDefaultCustomDomainRequestContent(domain, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

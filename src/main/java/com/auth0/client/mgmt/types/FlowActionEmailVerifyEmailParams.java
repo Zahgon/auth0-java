@@ -21,16 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionEmailVerifyEmailParams.Builder.class)
 public final class FlowActionEmailVerifyEmailParams {
+
     private final String email;
 
     private final Optional<FlowActionEmailVerifyEmailParamsRules> rules;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionEmailVerifyEmailParams(
-            String email,
-            Optional<FlowActionEmailVerifyEmailParamsRules> rules,
-            Map<String, Object> additionalProperties) {
+    private FlowActionEmailVerifyEmailParams(String email, Optional<FlowActionEmailVerifyEmailParamsRules> rules, Map<String, Object> additionalProperties) {
         this.email = email;
         this.rules = rules;
         this.additionalProperties = additionalProperties;
@@ -38,23 +36,22 @@ public final class FlowActionEmailVerifyEmailParams {
 
     @JsonProperty("email")
     public String getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("rules")
     public Optional<FlowActionEmailVerifyEmailParamsRules> getRules() {
-        return rules;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionEmailVerifyEmailParams && equalTo((FlowActionEmailVerifyEmailParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionEmailVerifyEmailParams other) {
@@ -63,25 +60,27 @@ public final class FlowActionEmailVerifyEmailParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.email, this.rules);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EmailStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EmailStage {
+
         _FinalStage email(@NotNull String email);
 
         Builder from(FlowActionEmailVerifyEmailParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionEmailVerifyEmailParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -95,6 +94,7 @@ public final class FlowActionEmailVerifyEmailParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EmailStage, _FinalStage {
+
         private String email;
 
         private Optional<FlowActionEmailVerifyEmailParamsRules> rules = Optional.empty();
@@ -102,50 +102,44 @@ public final class FlowActionEmailVerifyEmailParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionEmailVerifyEmailParams other) {
-            email(other.getEmail());
-            rules(other.getRules());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("email")
         public _FinalStage email(@NotNull String email) {
-            this.email = Objects.requireNonNull(email, "email must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage rules(FlowActionEmailVerifyEmailParamsRules rules) {
-            this.rules = Optional.ofNullable(rules);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "rules", nulls = Nulls.SKIP)
         public _FinalStage rules(Optional<FlowActionEmailVerifyEmailParamsRules> rules) {
-            this.rules = rules;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionEmailVerifyEmailParams build() {
-            return new FlowActionEmailVerifyEmailParams(email, rules, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

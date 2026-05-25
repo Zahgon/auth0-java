@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncKeysClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawKeysClient rawClient;
@@ -28,81 +29,76 @@ public class AsyncKeysClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawKeysClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the connection keys for the Okta or OIDC connection strategy.
      */
     public CompletableFuture<List<ConnectionKey>> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the connection keys for the Okta or OIDC connection strategy.
      */
     public CompletableFuture<List<ConnectionKey>> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
     public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(String id) {
-        return this.rawClient.create(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
-    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
-    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(
-            String id, OptionalNullable<PostConnectionKeysRequestContent> request) {
-        return this.rawClient.create(id, request).thenApply(response -> response.body());
+    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(String id, OptionalNullable<PostConnectionKeysRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Provision initial connection keys for Okta or OIDC connection strategies. This endpoint allows you to create keys before configuring the connection to use Private Key JWT authentication, enabling zero-downtime transitions.
      */
-    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(
-            String id, OptionalNullable<PostConnectionKeysRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<PostConnectionsKeysResponseContentItem>> create(String id, OptionalNullable<PostConnectionKeysRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
     public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(String id) {
-        return this.rawClient.rotate(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
     public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(String id, RequestOptions requestOptions) {
-        return this.rawClient.rotate(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
-    public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(
-            String id, OptionalNullable<RotateConnectionKeysRequestContent> request) {
-        return this.rawClient.rotate(id, request).thenApply(response -> response.body());
+    public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(String id, OptionalNullable<RotateConnectionKeysRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotates the connection keys for the Okta or OIDC connection strategies.
      */
-    public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(
-            String id, OptionalNullable<RotateConnectionKeysRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.rotate(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<RotateConnectionsKeysResponseContent> rotate(String id, OptionalNullable<RotateConnectionKeysRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

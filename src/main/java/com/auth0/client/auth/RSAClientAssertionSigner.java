@@ -17,6 +17,7 @@ import org.jetbrains.annotations.TestOnly;
 public class RSAClientAssertionSigner implements ClientAssertionSigner {
 
     private final RSAPrivateKey assertionSigningKey;
+
     private final RSASigningAlgorithm assertionSigningAlgorithm;
 
     /**
@@ -30,7 +31,6 @@ public class RSAClientAssertionSigner implements ClientAssertionSigner {
     public RSAClientAssertionSigner(RSAPrivateKey assertionSigningKey, RSASigningAlgorithm assertionSigningAlgorithm) {
         Asserts.assertNotNull(assertionSigningKey, "assertion signing key");
         Asserts.assertNotNull(assertionSigningAlgorithm, "assertion signing algorithm");
-
         this.assertionSigningKey = assertionSigningKey;
         this.assertionSigningAlgorithm = assertionSigningAlgorithm;
     }
@@ -48,36 +48,7 @@ public class RSAClientAssertionSigner implements ClientAssertionSigner {
 
     @Override
     public String createSignedClientAssertion(String issuer, String audience, String subject) {
-        Instant now = Instant.now();
-        JWTCreator.Builder builder = JWT.create()
-                .withIssuer(issuer)
-                .withAudience(audience)
-                .withSubject(subject)
-                .withIssuedAt(now)
-                .withExpiresAt(now.plusSeconds(180))
-                .withClaim("jti", UUID.randomUUID().toString());
-
-        switch (assertionSigningAlgorithm) {
-            case RSA256:
-                try {
-                    return builder.sign(Algorithm.RSA256(null, assertionSigningKey));
-                } catch (JWTCreationException exception) {
-                    throw new ClientAssertionSigningException(
-                            "Error creating the JWT used for client assertion using the RSA256 signing algorithm",
-                            exception);
-                }
-            case RSA384:
-                try {
-                    return builder.sign(Algorithm.RSA384(null, assertionSigningKey));
-                } catch (JWTCreationException exception) {
-                    throw new ClientAssertionSigningException(
-                            "Error creating the JWT used for client assertion using the RSA384 signing algorithm",
-                            exception);
-                }
-            default:
-                throw new ClientAssertionSigningException(
-                        "Error creating the JWT used for client assertion. Unknown algorithm.");
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,18 +56,18 @@ public class RSAClientAssertionSigner implements ClientAssertionSigner {
      */
     @TestOnly
     RSASigningAlgorithm getAssertionSigningAlgorithm() {
-        return this.assertionSigningAlgorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Represents the RSA algorithms available to sign the client assertion.
      */
     public enum RSASigningAlgorithm {
+
         /**
          * The RSA 256 algorithm
          */
         RSA256,
-
         /**
          * The RSA 384 algorithm
          */

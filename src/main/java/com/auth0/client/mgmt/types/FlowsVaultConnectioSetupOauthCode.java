@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupOauthCode.Builder.class)
 public final class FlowsVaultConnectioSetupOauthCode {
+
     private final Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> type;
 
     private final Optional<String> code;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupOauthCode(
-            Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> type,
-            Optional<String> code,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupOauthCode(Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> type, Optional<String> code, Map<String, Object> additionalProperties) {
         this.type = type;
         this.code = code;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class FlowsVaultConnectioSetupOauthCode {
 
     @JsonProperty("type")
     public Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("code")
     public Optional<String> getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupOauthCode && equalTo((FlowsVaultConnectioSetupOauthCode) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupOauthCode other) {
@@ -62,20 +59,21 @@ public final class FlowsVaultConnectioSetupOauthCode {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.code);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> type = Optional.empty();
 
         private Optional<String> code = Optional.empty();
@@ -83,48 +81,41 @@ public final class FlowsVaultConnectioSetupOauthCode {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FlowsVaultConnectioSetupOauthCode other) {
-            type(other.getType());
-            code(other.getCode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<FlowsVaultConnectioSetupTypeOauthCodeEnum> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(FlowsVaultConnectioSetupTypeOauthCodeEnum type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "code", nulls = Nulls.SKIP)
         public Builder code(Optional<String> code) {
-            this.code = code;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder code(String code) {
-            this.code = Optional.ofNullable(code);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FlowsVaultConnectioSetupOauthCode build() {
-            return new FlowsVaultConnectioSetupOauthCode(type, code, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

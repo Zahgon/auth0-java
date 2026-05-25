@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionSlackPostMessageParamsAttachmentColor {
-    public static final FlowActionSlackPostMessageParamsAttachmentColor GOOD =
-            new FlowActionSlackPostMessageParamsAttachmentColor(Value.GOOD, "GOOD");
 
-    public static final FlowActionSlackPostMessageParamsAttachmentColor DANGER =
-            new FlowActionSlackPostMessageParamsAttachmentColor(Value.DANGER, "DANGER");
+    public static final FlowActionSlackPostMessageParamsAttachmentColor GOOD = new FlowActionSlackPostMessageParamsAttachmentColor(Value.GOOD, "GOOD");
 
-    public static final FlowActionSlackPostMessageParamsAttachmentColor WARNING =
-            new FlowActionSlackPostMessageParamsAttachmentColor(Value.WARNING, "WARNING");
+    public static final FlowActionSlackPostMessageParamsAttachmentColor DANGER = new FlowActionSlackPostMessageParamsAttachmentColor(Value.DANGER, "DANGER");
+
+    public static final FlowActionSlackPostMessageParamsAttachmentColor WARNING = new FlowActionSlackPostMessageParamsAttachmentColor(Value.WARNING, "WARNING");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class FlowActionSlackPostMessageParamsAttachmentColor {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionSlackPostMessageParamsAttachmentColor
-                        && this.string.equals(((FlowActionSlackPostMessageParamsAttachmentColor) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GOOD:
-                return visitor.visitGood();
-            case DANGER:
-                return visitor.visitDanger();
-            case WARNING:
-                return visitor.visitWarning();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionSlackPostMessageParamsAttachmentColor valueOf(String value) {
-        switch (value) {
-            case "GOOD":
-                return GOOD;
-            case "DANGER":
-                return DANGER;
-            case "WARNING":
-                return WARNING;
-            default:
-                return new FlowActionSlackPostMessageParamsAttachmentColor(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GOOD,
 
-        WARNING,
-
-        DANGER,
-
-        UNKNOWN
+        GOOD, WARNING, DANGER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGood();
 
         T visitWarning();

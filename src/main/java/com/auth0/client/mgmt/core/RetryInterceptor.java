@@ -16,10 +16,13 @@ import okhttp3.Response;
 public class RetryInterceptor implements Interceptor {
 
     private static final Duration INITIAL_RETRY_DELAY = Duration.ofMillis(1000);
+
     private static final Duration MAX_RETRY_DELAY = Duration.ofMillis(60000);
+
     private static final double JITTER_FACTOR = 0.2;
 
     private final int maxRetries;
+
     private final Random random = new Random();
 
     public RetryInterceptor(int maxRetries) {
@@ -28,13 +31,7 @@ public class RetryInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Response response = chain.proceed(chain.request());
-
-        if (shouldRetry(response.code())) {
-            return retryChain(response, chain);
-        }
-
-        return response;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Response retryChain(Response response, Chain chain) throws IOException {
@@ -54,7 +51,6 @@ public class RetryInterceptor implements Interceptor {
                 return response;
             }
         }
-
         return response;
     }
 
@@ -67,43 +63,28 @@ public class RetryInterceptor implements Interceptor {
         String retryAfter = response.header("Retry-After");
         if (retryAfter != null) {
             // Parse as number of seconds...
-            Optional<Duration> secondsDelay = tryParseLong(retryAfter)
-                    .map(seconds -> seconds * 1000)
-                    .filter(delayMs -> delayMs > 0)
-                    .map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis()))
-                    .map(Duration::ofMillis);
+            Optional<Duration> secondsDelay = tryParseLong(retryAfter).map(seconds -> seconds * 1000).filter(delayMs -> delayMs > 0).map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis())).map(Duration::ofMillis);
             if (secondsDelay.isPresent()) {
                 return secondsDelay.get();
             }
-
             // ...or as an HTTP date; both are valid
-            Optional<Duration> dateDelay = tryParseHttpDate(retryAfter)
-                    .map(resetTime -> resetTime.toInstant().toEpochMilli() - System.currentTimeMillis())
-                    .filter(delayMs -> delayMs > 0)
-                    .map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis()))
-                    .map(Duration::ofMillis);
+            Optional<Duration> dateDelay = tryParseHttpDate(retryAfter).map(resetTime -> resetTime.toInstant().toEpochMilli() - System.currentTimeMillis()).filter(delayMs -> delayMs > 0).map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis())).map(Duration::ofMillis);
             if (dateDelay.isPresent()) {
                 return dateDelay.get();
             }
         }
-
         // Then check for industry-standard X-RateLimit-Reset header, with positive jitter
         String rateLimitReset = response.header("X-RateLimit-Reset");
         if (rateLimitReset != null) {
             // Assume Unix timestamp in epoch seconds
-            Optional<Duration> rateLimitDelay = tryParseLong(rateLimitReset)
-                    .map(resetTimeSeconds -> (resetTimeSeconds * 1000) - System.currentTimeMillis())
-                    .filter(delayMs -> delayMs > 0)
-                    .map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis()))
-                    .map(this::addPositiveJitter)
-                    .map(Duration::ofMillis);
+            Optional<Duration> rateLimitDelay = tryParseLong(rateLimitReset).map(resetTimeSeconds -> (resetTimeSeconds * 1000) - System.currentTimeMillis()).filter(delayMs -> delayMs > 0).map(delayMs -> Math.min(delayMs, MAX_RETRY_DELAY.toMillis())).map(this::addPositiveJitter).map(Duration::ofMillis);
             if (rateLimitDelay.isPresent()) {
                 return rateLimitDelay.get();
             }
         }
-
         // Fall back to exponential backoff, with symmetric jitter
-        long baseDelay = INITIAL_RETRY_DELAY.toMillis() * (1L << retryAttempt); // 2^retryAttempt
+        // 2^retryAttempt
+        long baseDelay = INITIAL_RETRY_DELAY.toMillis() * (1L << retryAttempt);
         long cappedDelay = Math.min(baseDelay, MAX_RETRY_DELAY.toMillis());
         return Duration.ofMillis(addSymmetricJitter(cappedDelay));
     }
@@ -169,13 +150,7 @@ public class RetryInterceptor implements Interceptor {
         }
 
         public Optional<Duration> nextBackoff(Response response) {
-            if (retryNumber >= maxNumRetries) {
-                return Optional.empty();
-            }
-
-            Duration delay = getRetryDelayFromHeaders(response, retryNumber);
-            retryNumber += 1;
-            return Optional.of(delay);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamDeliveryAttempt.Builder.class)
 public final class EventStreamDeliveryAttempt {
+
     private final EventStreamDeliveryStatusEnum status;
 
     private final OffsetDateTime timestamp;
@@ -30,11 +31,7 @@ public final class EventStreamDeliveryAttempt {
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamDeliveryAttempt(
-            EventStreamDeliveryStatusEnum status,
-            OffsetDateTime timestamp,
-            Optional<String> errorMessage,
-            Map<String, Object> additionalProperties) {
+    private EventStreamDeliveryAttempt(EventStreamDeliveryStatusEnum status, OffsetDateTime timestamp, Optional<String> errorMessage, Map<String, Object> additionalProperties) {
         this.status = status;
         this.timestamp = timestamp;
         this.errorMessage = errorMessage;
@@ -43,7 +40,7 @@ public final class EventStreamDeliveryAttempt {
 
     @JsonProperty("status")
     public EventStreamDeliveryStatusEnum getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -51,7 +48,7 @@ public final class EventStreamDeliveryAttempt {
      */
     @JsonProperty("timestamp")
     public OffsetDateTime getTimestamp() {
-        return timestamp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,47 +56,46 @@ public final class EventStreamDeliveryAttempt {
      */
     @JsonProperty("error_message")
     public Optional<String> getErrorMessage() {
-        return errorMessage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamDeliveryAttempt && equalTo((EventStreamDeliveryAttempt) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamDeliveryAttempt other) {
-        return status.equals(other.status)
-                && timestamp.equals(other.timestamp)
-                && errorMessage.equals(other.errorMessage);
+        return status.equals(other.status) && timestamp.equals(other.timestamp) && errorMessage.equals(other.errorMessage);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.status, this.timestamp, this.errorMessage);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static StatusStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface StatusStage {
+
         TimestampStage status(@NotNull EventStreamDeliveryStatusEnum status);
 
         Builder from(EventStreamDeliveryAttempt other);
     }
 
     public interface TimestampStage {
+
         /**
          * <p>Timestamp of delivery attempt</p>
          */
@@ -107,6 +103,7 @@ public final class EventStreamDeliveryAttempt {
     }
 
     public interface _FinalStage {
+
         EventStreamDeliveryAttempt build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -123,6 +120,7 @@ public final class EventStreamDeliveryAttempt {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements StatusStage, TimestampStage, _FinalStage {
+
         private EventStreamDeliveryStatusEnum status;
 
         private OffsetDateTime timestamp;
@@ -132,21 +130,18 @@ public final class EventStreamDeliveryAttempt {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamDeliveryAttempt other) {
-            status(other.getStatus());
-            timestamp(other.getTimestamp());
-            errorMessage(other.getErrorMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("status")
         public TimestampStage status(@NotNull EventStreamDeliveryStatusEnum status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -157,8 +152,7 @@ public final class EventStreamDeliveryAttempt {
         @java.lang.Override
         @JsonSetter("timestamp")
         public _FinalStage timestamp(@NotNull OffsetDateTime timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp, "timestamp must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,8 +161,7 @@ public final class EventStreamDeliveryAttempt {
          */
         @java.lang.Override
         public _FinalStage errorMessage(String errorMessage) {
-            this.errorMessage = Optional.ofNullable(errorMessage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,25 +170,22 @@ public final class EventStreamDeliveryAttempt {
         @java.lang.Override
         @JsonSetter(value = "error_message", nulls = Nulls.SKIP)
         public _FinalStage errorMessage(Optional<String> errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamDeliveryAttempt build() {
-            return new EventStreamDeliveryAttempt(status, timestamp, errorMessage, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

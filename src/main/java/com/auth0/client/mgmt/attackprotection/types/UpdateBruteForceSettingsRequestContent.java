@@ -23,6 +23,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBruteForceSettingsRequestContent.Builder.class)
 public final class UpdateBruteForceSettingsRequestContent {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<List<BruteForceProtectionShieldsEnum>> shields;
@@ -35,13 +36,7 @@ public final class UpdateBruteForceSettingsRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBruteForceSettingsRequestContent(
-            Optional<Boolean> enabled,
-            Optional<List<BruteForceProtectionShieldsEnum>> shields,
-            Optional<List<String>> allowlist,
-            Optional<BruteForceProtectionModeEnum> mode,
-            Optional<Integer> maxAttempts,
-            Map<String, Object> additionalProperties) {
+    private UpdateBruteForceSettingsRequestContent(Optional<Boolean> enabled, Optional<List<BruteForceProtectionShieldsEnum>> shields, Optional<List<String>> allowlist, Optional<BruteForceProtectionModeEnum> mode, Optional<Integer> maxAttempts, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.shields = shields;
         this.allowlist = allowlist;
@@ -55,7 +50,7 @@ public final class UpdateBruteForceSettingsRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +59,7 @@ public final class UpdateBruteForceSettingsRequestContent {
      */
     @JsonProperty("shields")
     public Optional<List<BruteForceProtectionShieldsEnum>> getShields() {
-        return shields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,12 +67,12 @@ public final class UpdateBruteForceSettingsRequestContent {
      */
     @JsonProperty("allowlist")
     public Optional<List<String>> getAllowlist() {
-        return allowlist;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("mode")
     public Optional<BruteForceProtectionModeEnum> getMode() {
-        return mode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,45 +80,40 @@ public final class UpdateBruteForceSettingsRequestContent {
      */
     @JsonProperty("max_attempts")
     public Optional<Integer> getMaxAttempts() {
-        return maxAttempts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBruteForceSettingsRequestContent
-                && equalTo((UpdateBruteForceSettingsRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBruteForceSettingsRequestContent other) {
-        return enabled.equals(other.enabled)
-                && shields.equals(other.shields)
-                && allowlist.equals(other.allowlist)
-                && mode.equals(other.mode)
-                && maxAttempts.equals(other.maxAttempts);
+        return enabled.equals(other.enabled) && shields.equals(other.shields) && allowlist.equals(other.allowlist) && mode.equals(other.mode) && maxAttempts.equals(other.maxAttempts);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.shields, this.allowlist, this.mode, this.maxAttempts);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<List<BruteForceProtectionShieldsEnum>> shields = Optional.empty();
@@ -137,15 +127,11 @@ public final class UpdateBruteForceSettingsRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBruteForceSettingsRequestContent other) {
-            enabled(other.getEnabled());
-            shields(other.getShields());
-            allowlist(other.getAllowlist());
-            mode(other.getMode());
-            maxAttempts(other.getMaxAttempts());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -153,13 +139,11 @@ public final class UpdateBruteForceSettingsRequestContent {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -168,13 +152,11 @@ public final class UpdateBruteForceSettingsRequestContent {
          */
         @JsonSetter(value = "shields", nulls = Nulls.SKIP)
         public Builder shields(Optional<List<BruteForceProtectionShieldsEnum>> shields) {
-            this.shields = shields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder shields(List<BruteForceProtectionShieldsEnum> shields) {
-            this.shields = Optional.ofNullable(shields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,24 +164,20 @@ public final class UpdateBruteForceSettingsRequestContent {
          */
         @JsonSetter(value = "allowlist", nulls = Nulls.SKIP)
         public Builder allowlist(Optional<List<String>> allowlist) {
-            this.allowlist = allowlist;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowlist(List<String> allowlist) {
-            this.allowlist = Optional.ofNullable(allowlist);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "mode", nulls = Nulls.SKIP)
         public Builder mode(Optional<BruteForceProtectionModeEnum> mode) {
-            this.mode = mode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mode(BruteForceProtectionModeEnum mode) {
-            this.mode = Optional.ofNullable(mode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,28 +185,23 @@ public final class UpdateBruteForceSettingsRequestContent {
          */
         @JsonSetter(value = "max_attempts", nulls = Nulls.SKIP)
         public Builder maxAttempts(Optional<Integer> maxAttempts) {
-            this.maxAttempts = maxAttempts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Optional.ofNullable(maxAttempts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBruteForceSettingsRequestContent build() {
-            return new UpdateBruteForceSettingsRequestContent(
-                    enabled, shields, allowlist, mode, maxAttempts, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

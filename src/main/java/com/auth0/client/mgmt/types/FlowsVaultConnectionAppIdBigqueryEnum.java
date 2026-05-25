@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdBigqueryEnum {
-    public static final FlowsVaultConnectionAppIdBigqueryEnum BIGQUERY =
-            new FlowsVaultConnectionAppIdBigqueryEnum(Value.BIGQUERY, "BIGQUERY");
+
+    public static final FlowsVaultConnectionAppIdBigqueryEnum BIGQUERY = new FlowsVaultConnectionAppIdBigqueryEnum(Value.BIGQUERY, "BIGQUERY");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdBigqueryEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdBigqueryEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdBigqueryEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BIGQUERY:
-                return visitor.visitBigquery();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdBigqueryEnum valueOf(String value) {
-        switch (value) {
-            case "BIGQUERY":
-                return BIGQUERY;
-            default:
-                return new FlowsVaultConnectionAppIdBigqueryEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BIGQUERY,
 
-        UNKNOWN
+        BIGQUERY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBigquery();
 
         T visitUnknown(String unknownType);

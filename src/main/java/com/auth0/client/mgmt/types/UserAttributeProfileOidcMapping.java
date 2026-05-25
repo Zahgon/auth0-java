@@ -21,14 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UserAttributeProfileOidcMapping.Builder.class)
 public final class UserAttributeProfileOidcMapping {
+
     private final String mapping;
 
     private final Optional<String> displayName;
 
     private final Map<String, Object> additionalProperties;
 
-    private UserAttributeProfileOidcMapping(
-            String mapping, Optional<String> displayName, Map<String, Object> additionalProperties) {
+    private UserAttributeProfileOidcMapping(String mapping, Optional<String> displayName, Map<String, Object> additionalProperties) {
         this.mapping = mapping;
         this.displayName = displayName;
         this.additionalProperties = additionalProperties;
@@ -39,7 +39,7 @@ public final class UserAttributeProfileOidcMapping {
      */
     @JsonProperty("mapping")
     public String getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,18 +47,17 @@ public final class UserAttributeProfileOidcMapping {
      */
     @JsonProperty("display_name")
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UserAttributeProfileOidcMapping && equalTo((UserAttributeProfileOidcMapping) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UserAttributeProfileOidcMapping other) {
@@ -67,19 +66,20 @@ public final class UserAttributeProfileOidcMapping {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mapping, this.displayName);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static MappingStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface MappingStage {
+
         /**
          * <p>OIDC mapping field</p>
          */
@@ -89,6 +89,7 @@ public final class UserAttributeProfileOidcMapping {
     }
 
     public interface _FinalStage {
+
         UserAttributeProfileOidcMapping build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -105,6 +106,7 @@ public final class UserAttributeProfileOidcMapping {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements MappingStage, _FinalStage {
+
         private String mapping;
 
         private Optional<String> displayName = Optional.empty();
@@ -112,13 +114,12 @@ public final class UserAttributeProfileOidcMapping {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UserAttributeProfileOidcMapping other) {
-            mapping(other.getMapping());
-            displayName(other.getDisplayName());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -129,8 +130,7 @@ public final class UserAttributeProfileOidcMapping {
         @java.lang.Override
         @JsonSetter("mapping")
         public _FinalStage mapping(@NotNull String mapping) {
-            this.mapping = Objects.requireNonNull(mapping, "mapping must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -139,8 +139,7 @@ public final class UserAttributeProfileOidcMapping {
          */
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -149,25 +148,22 @@ public final class UserAttributeProfileOidcMapping {
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UserAttributeProfileOidcMapping build() {
-            return new UserAttributeProfileOidcMapping(mapping, displayName, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

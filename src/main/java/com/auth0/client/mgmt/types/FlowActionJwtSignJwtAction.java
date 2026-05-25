@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJwtSignJwtAction {
-    public static final FlowActionJwtSignJwtAction SIGN_JWT =
-            new FlowActionJwtSignJwtAction(Value.SIGN_JWT, "SIGN_JWT");
+
+    public static final FlowActionJwtSignJwtAction SIGN_JWT = new FlowActionJwtSignJwtAction(Value.SIGN_JWT, "SIGN_JWT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionJwtSignJwtAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJwtSignJwtAction
-                        && this.string.equals(((FlowActionJwtSignJwtAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SIGN_JWT:
-                return visitor.visitSignJwt();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJwtSignJwtAction valueOf(String value) {
-        switch (value) {
-            case "SIGN_JWT":
-                return SIGN_JWT;
-            default:
-                return new FlowActionJwtSignJwtAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SIGN_JWT,
 
-        UNKNOWN
+        SIGN_JWT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSignJwt();
 
         T visitUnknown(String unknownType);

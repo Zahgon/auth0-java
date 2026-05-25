@@ -22,14 +22,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateFlowRequestContent.Builder.class)
 public final class CreateFlowRequestContent {
+
     private final String name;
 
     private final Optional<List<FlowAction>> actions;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateFlowRequestContent(
-            String name, Optional<List<FlowAction>> actions, Map<String, Object> additionalProperties) {
+    private CreateFlowRequestContent(String name, Optional<List<FlowAction>> actions, Map<String, Object> additionalProperties) {
         this.name = name;
         this.actions = actions;
         this.additionalProperties = additionalProperties;
@@ -37,23 +37,22 @@ public final class CreateFlowRequestContent {
 
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("actions")
     public Optional<List<FlowAction>> getActions() {
-        return actions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowRequestContent && equalTo((CreateFlowRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowRequestContent other) {
@@ -62,25 +61,27 @@ public final class CreateFlowRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.actions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         _FinalStage name(@NotNull String name);
 
         Builder from(CreateFlowRequestContent other);
     }
 
     public interface _FinalStage {
+
         CreateFlowRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -94,6 +95,7 @@ public final class CreateFlowRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<List<FlowAction>> actions = Optional.empty();
@@ -101,50 +103,44 @@ public final class CreateFlowRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateFlowRequestContent other) {
-            name(other.getName());
-            actions(other.getActions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage actions(List<FlowAction> actions) {
-            this.actions = Optional.ofNullable(actions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "actions", nulls = Nulls.SKIP)
         public _FinalStage actions(Optional<List<FlowAction>> actions) {
-            this.actions = actions;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateFlowRequestContent build() {
-            return new CreateFlowRequestContent(name, actions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

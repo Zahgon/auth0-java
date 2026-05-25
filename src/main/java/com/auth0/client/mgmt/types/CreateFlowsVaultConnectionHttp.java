@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionHttp.Deserializer.class)
 public final class CreateFlowsVaultConnectionHttp {
+
     private final Object value;
 
     private final int type;
@@ -27,29 +28,17 @@ public final class CreateFlowsVaultConnectionHttp {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionHttpBearer) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionHttpBasicAuth) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((CreateFlowsVaultConnectionHttpApiKey) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((CreateFlowsVaultConnectionHttpOauthClientCredentials) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((CreateFlowsVaultConnectionHttpUninitialized) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionHttp && equalTo((CreateFlowsVaultConnectionHttp) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionHttp other) {
@@ -58,35 +47,36 @@ public final class CreateFlowsVaultConnectionHttp {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionHttp of(CreateFlowsVaultConnectionHttpBearer value) {
-        return new CreateFlowsVaultConnectionHttp(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionHttp of(CreateFlowsVaultConnectionHttpBasicAuth value) {
-        return new CreateFlowsVaultConnectionHttp(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionHttp of(CreateFlowsVaultConnectionHttpApiKey value) {
-        return new CreateFlowsVaultConnectionHttp(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionHttp of(CreateFlowsVaultConnectionHttpOauthClientCredentials value) {
-        return new CreateFlowsVaultConnectionHttp(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionHttp of(CreateFlowsVaultConnectionHttpUninitialized value) {
-        return new CreateFlowsVaultConnectionHttp(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionHttpBearer value);
 
         T visit(CreateFlowsVaultConnectionHttpBasicAuth value);
@@ -99,64 +89,14 @@ public final class CreateFlowsVaultConnectionHttp {
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionHttp> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionHttp.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionHttp deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionHttpBearer.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionHttpBasicAuth.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(
-                            ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionHttpApiKey.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")
-                    && ((Map<?, ?>) value).containsKey("setup")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionHttpOauthClientCredentials.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("name")
-                    && ((Map<?, ?>) value).containsKey("app_id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(
-                            value, CreateFlowsVaultConnectionHttpUninitialized.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionHttp deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

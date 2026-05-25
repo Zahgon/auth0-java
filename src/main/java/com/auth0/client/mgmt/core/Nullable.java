@@ -23,118 +23,93 @@ public final class Nullable<T> {
     }
 
     public static <T> Nullable<T> ofNull() {
-        return new Nullable<>(null);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Nullable<T> of(T value) {
-        return new Nullable<>(value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Nullable<T> empty() {
-        return new Nullable<>();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static <T> Nullable<T> ofOptional(Optional<T> value) {
-        if (value.isPresent()) {
-            return of(value.get());
-        } else {
-            return empty();
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isNull() {
-        return this.value.isRight();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isEmpty() {
-        return this.value.isLeft() && !this.value.getLeft().isPresent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public T get() {
-        if (this.isNull()) {
-            return null;
-        }
-
-        return this.value.getLeft().get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <U> Nullable<U> map(Function<? super T, ? extends U> mapper) {
-        if (this.isNull()) {
-            return Nullable.ofNull();
-        }
-
-        return Nullable.ofOptional(this.value.getLeft().map(mapper));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object other) {
-        if (!(other instanceof Nullable)) {
-            return false;
-        }
-
-        if (((Nullable<?>) other).isNull() && this.isNull()) {
-            return true;
-        }
-
-        return this.value.getLeft().equals(((Nullable<?>) other).value.getLeft());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private static final class Either<L, R> {
+
         private L left = null;
+
         private R right = null;
 
         private Either(L left, R right) {
             if (left != null && right != null) {
                 throw new IllegalArgumentException("Left and right argument cannot both be non-null.");
             }
-
             if (left == null && right == null) {
                 throw new IllegalArgumentException("Left and right argument cannot both be null.");
             }
-
             if (left != null) {
                 this.left = left;
             }
-
             if (right != null) {
                 this.right = right;
             }
         }
 
         public static <L, R> Either<L, R> left(L left) {
-            return new Either<>(left, null);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public static <L, R> Either<L, R> right(R right) {
-            return new Either<>(null, right);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public boolean isLeft() {
-            return this.left != null;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public boolean isRight() {
-            return this.right != null;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public L getLeft() {
-            if (!this.isLeft()) {
-                throw new IllegalArgumentException("Cannot get left from right Either.");
-            }
-            return this.left;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public R getRight() {
-            if (!this.isRight()) {
-                throw new IllegalArgumentException("Cannot get right from left Either.");
-            }
-            return this.right;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     private static final class Null {
+
         private static final Null INSTANCE = new Null();
 
-        private Null() {}
+        private Null() {
+        }
     }
 }

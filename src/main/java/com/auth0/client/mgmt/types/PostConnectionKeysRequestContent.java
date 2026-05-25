@@ -20,30 +20,29 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = PostConnectionKeysRequestContent.Builder.class)
 public final class PostConnectionKeysRequestContent {
+
     private final Optional<PostConnectionKeysAlgEnum> signingAlg;
 
     private final Map<String, Object> additionalProperties;
 
-    private PostConnectionKeysRequestContent(
-            Optional<PostConnectionKeysAlgEnum> signingAlg, Map<String, Object> additionalProperties) {
+    private PostConnectionKeysRequestContent(Optional<PostConnectionKeysAlgEnum> signingAlg, Map<String, Object> additionalProperties) {
         this.signingAlg = signingAlg;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("signing_alg")
     public Optional<PostConnectionKeysAlgEnum> getSigningAlg() {
-        return signingAlg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof PostConnectionKeysRequestContent && equalTo((PostConnectionKeysRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(PostConnectionKeysRequestContent other) {
@@ -52,55 +51,52 @@ public final class PostConnectionKeysRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.signingAlg);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<PostConnectionKeysAlgEnum> signingAlg = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(PostConnectionKeysRequestContent other) {
-            signingAlg(other.getSigningAlg());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "signing_alg", nulls = Nulls.SKIP)
         public Builder signingAlg(Optional<PostConnectionKeysAlgEnum> signingAlg) {
-            this.signingAlg = signingAlg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signingAlg(PostConnectionKeysAlgEnum signingAlg) {
-            this.signingAlg = Optional.ofNullable(signingAlg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public PostConnectionKeysRequestContent build() {
-            return new PostConnectionKeysRequestContent(signingAlg, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

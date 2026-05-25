@@ -22,12 +22,12 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateUserPermissionsRequestContent.Builder.class)
 public final class CreateUserPermissionsRequestContent {
+
     private final List<PermissionRequestPayload> permissions;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateUserPermissionsRequestContent(
-            List<PermissionRequestPayload> permissions, Map<String, Object> additionalProperties) {
+    private CreateUserPermissionsRequestContent(List<PermissionRequestPayload> permissions, Map<String, Object> additionalProperties) {
         this.permissions = permissions;
         this.additionalProperties = additionalProperties;
     }
@@ -37,19 +37,17 @@ public final class CreateUserPermissionsRequestContent {
      */
     @JsonProperty("permissions")
     public List<PermissionRequestPayload> getPermissions() {
-        return permissions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateUserPermissionsRequestContent
-                && equalTo((CreateUserPermissionsRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateUserPermissionsRequestContent other) {
@@ -58,30 +56,31 @@ public final class CreateUserPermissionsRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.permissions);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<PermissionRequestPayload> permissions = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreateUserPermissionsRequestContent other) {
-            permissions(other.getPermissions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -89,37 +88,27 @@ public final class CreateUserPermissionsRequestContent {
          */
         @JsonSetter(value = "permissions", nulls = Nulls.SKIP)
         public Builder permissions(List<PermissionRequestPayload> permissions) {
-            this.permissions.clear();
-            if (permissions != null) {
-                this.permissions.addAll(permissions);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addPermissions(PermissionRequestPayload permissions) {
-            this.permissions.add(permissions);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllPermissions(List<PermissionRequestPayload> permissions) {
-            if (permissions != null) {
-                this.permissions.addAll(permissions);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreateUserPermissionsRequestContent build() {
-            return new CreateUserPermissionsRequestContent(permissions, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

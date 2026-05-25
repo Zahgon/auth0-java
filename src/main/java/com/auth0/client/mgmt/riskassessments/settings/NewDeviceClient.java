@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetRiskAssessmentsSettingsNewDeviceResponseCo
 import com.auth0.client.mgmt.types.UpdateRiskAssessmentsSettingsNewDeviceResponseContent;
 
 public class NewDeviceClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawNewDeviceClient rawClient;
@@ -23,36 +24,34 @@ public class NewDeviceClient {
      * Get responses with HTTP metadata like headers
      */
     public RawNewDeviceClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the risk assessment settings for the new device assessor
      */
     public GetRiskAssessmentsSettingsNewDeviceResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the risk assessment settings for the new device assessor
      */
     public GetRiskAssessmentsSettingsNewDeviceResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the risk assessment settings for the new device assessor
      */
-    public UpdateRiskAssessmentsSettingsNewDeviceResponseContent update(
-            UpdateRiskAssessmentsSettingsNewDeviceRequestContent request) {
-        return this.rawClient.update(request).body();
+    public UpdateRiskAssessmentsSettingsNewDeviceResponseContent update(UpdateRiskAssessmentsSettingsNewDeviceRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates the risk assessment settings for the new device assessor
      */
-    public UpdateRiskAssessmentsSettingsNewDeviceResponseContent update(
-            UpdateRiskAssessmentsSettingsNewDeviceRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+    public UpdateRiskAssessmentsSettingsNewDeviceResponseContent update(UpdateRiskAssessmentsSettingsNewDeviceRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

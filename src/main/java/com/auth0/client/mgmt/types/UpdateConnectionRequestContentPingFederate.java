@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateConnectionRequestContentPingFederate.Builder.class)
 public final class UpdateConnectionRequestContentPingFederate implements IConnectionCommon {
+
     private final Optional<String> displayName;
 
     private final Optional<List<String>> enabledClients;
@@ -36,14 +37,7 @@ public final class UpdateConnectionRequestContentPingFederate implements IConnec
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateConnectionRequestContentPingFederate(
-            Optional<String> displayName,
-            Optional<List<String>> enabledClients,
-            Optional<Boolean> isDomainConnection,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            Optional<ConnectionOptionsPingFederate> options,
-            Optional<Boolean> showAsButton,
-            Map<String, Object> additionalProperties) {
+    private UpdateConnectionRequestContentPingFederate(Optional<String> displayName, Optional<List<String>> enabledClients, Optional<Boolean> isDomainConnection, Optional<Map<String, OptionalNullable<String>>> metadata, Optional<ConnectionOptionsPingFederate> options, Optional<Boolean> showAsButton, Map<String, Object> additionalProperties) {
         this.displayName = displayName;
         this.enabledClients = enabledClients;
         this.isDomainConnection = isDomainConnection;
@@ -56,80 +50,68 @@ public final class UpdateConnectionRequestContentPingFederate implements IConnec
     @JsonProperty("display_name")
     @java.lang.Override
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("enabled_clients")
     @java.lang.Override
     public Optional<List<String>> getEnabledClients() {
-        return enabledClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("is_domain_connection")
     @java.lang.Override
     public Optional<Boolean> getIsDomainConnection() {
-        return isDomainConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     @java.lang.Override
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<ConnectionOptionsPingFederate> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateConnectionRequestContentPingFederate
-                && equalTo((UpdateConnectionRequestContentPingFederate) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateConnectionRequestContentPingFederate other) {
-        return displayName.equals(other.displayName)
-                && enabledClients.equals(other.enabledClients)
-                && isDomainConnection.equals(other.isDomainConnection)
-                && metadata.equals(other.metadata)
-                && options.equals(other.options)
-                && showAsButton.equals(other.showAsButton);
+        return displayName.equals(other.displayName) && enabledClients.equals(other.enabledClients) && isDomainConnection.equals(other.isDomainConnection) && metadata.equals(other.metadata) && options.equals(other.options) && showAsButton.equals(other.showAsButton);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.displayName,
-                this.enabledClients,
-                this.isDomainConnection,
-                this.metadata,
-                this.options,
-                this.showAsButton);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> displayName = Optional.empty();
 
         private Optional<List<String>> enabledClients = Optional.empty();
@@ -145,103 +127,77 @@ public final class UpdateConnectionRequestContentPingFederate implements IConnec
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateConnectionRequestContentPingFederate other) {
-            displayName(other.getDisplayName());
-            enabledClients(other.getEnabledClients());
-            isDomainConnection(other.getIsDomainConnection());
-            metadata(other.getMetadata());
-            options(other.getOptions());
-            showAsButton(other.getShowAsButton());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public Builder displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enabled_clients", nulls = Nulls.SKIP)
         public Builder enabledClients(Optional<List<String>> enabledClients) {
-            this.enabledClients = enabledClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledClients(List<String> enabledClients) {
-            this.enabledClients = Optional.ofNullable(enabledClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "is_domain_connection", nulls = Nulls.SKIP)
         public Builder isDomainConnection(Optional<Boolean> isDomainConnection) {
-            this.isDomainConnection = isDomainConnection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isDomainConnection(Boolean isDomainConnection) {
-            this.isDomainConnection = Optional.ofNullable(isDomainConnection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public Builder metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public Builder options(Optional<ConnectionOptionsPingFederate> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder options(ConnectionOptionsPingFederate options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public Builder showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateConnectionRequestContentPingFederate build() {
-            return new UpdateConnectionRequestContentPingFederate(
-                    displayName,
-                    enabledClients,
-                    isDomainConnection,
-                    metadata,
-                    options,
-                    showAsButton,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

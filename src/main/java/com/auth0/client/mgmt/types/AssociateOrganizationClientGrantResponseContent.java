@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AssociateOrganizationClientGrantResponseContent.Builder.class)
 public final class AssociateOrganizationClientGrantResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> clientId;
@@ -35,14 +36,7 @@ public final class AssociateOrganizationClientGrantResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private AssociateOrganizationClientGrantResponseContent(
-            Optional<String> id,
-            Optional<String> clientId,
-            Optional<String> audience,
-            Optional<List<String>> scope,
-            Optional<OrganizationUsageEnum> organizationUsage,
-            Optional<Boolean> allowAnyOrganization,
-            Map<String, Object> additionalProperties) {
+    private AssociateOrganizationClientGrantResponseContent(Optional<String> id, Optional<String> clientId, Optional<String> audience, Optional<List<String>> scope, Optional<OrganizationUsageEnum> organizationUsage, Optional<Boolean> allowAnyOrganization, Map<String, Object> additionalProperties) {
         this.id = id;
         this.clientId = clientId;
         this.audience = audience;
@@ -57,7 +51,7 @@ public final class AssociateOrganizationClientGrantResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,7 +59,7 @@ public final class AssociateOrganizationClientGrantResponseContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +67,7 @@ public final class AssociateOrganizationClientGrantResponseContent {
      */
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,12 +75,12 @@ public final class AssociateOrganizationClientGrantResponseContent {
      */
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("organization_usage")
     public Optional<OrganizationUsageEnum> getOrganizationUsage() {
-        return organizationUsage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,47 +88,40 @@ public final class AssociateOrganizationClientGrantResponseContent {
      */
     @JsonProperty("allow_any_organization")
     public Optional<Boolean> getAllowAnyOrganization() {
-        return allowAnyOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AssociateOrganizationClientGrantResponseContent
-                && equalTo((AssociateOrganizationClientGrantResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AssociateOrganizationClientGrantResponseContent other) {
-        return id.equals(other.id)
-                && clientId.equals(other.clientId)
-                && audience.equals(other.audience)
-                && scope.equals(other.scope)
-                && organizationUsage.equals(other.organizationUsage)
-                && allowAnyOrganization.equals(other.allowAnyOrganization);
+        return id.equals(other.id) && clientId.equals(other.clientId) && audience.equals(other.audience) && scope.equals(other.scope) && organizationUsage.equals(other.organizationUsage) && allowAnyOrganization.equals(other.allowAnyOrganization);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.clientId, this.audience, this.scope, this.organizationUsage, this.allowAnyOrganization);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -150,16 +137,11 @@ public final class AssociateOrganizationClientGrantResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(AssociateOrganizationClientGrantResponseContent other) {
-            id(other.getId());
-            clientId(other.getClientId());
-            audience(other.getAudience());
-            scope(other.getScope());
-            organizationUsage(other.getOrganizationUsage());
-            allowAnyOrganization(other.getAllowAnyOrganization());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,13 +149,11 @@ public final class AssociateOrganizationClientGrantResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -181,13 +161,11 @@ public final class AssociateOrganizationClientGrantResponseContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,13 +173,11 @@ public final class AssociateOrganizationClientGrantResponseContent {
          */
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,24 +185,20 @@ public final class AssociateOrganizationClientGrantResponseContent {
          */
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "organization_usage", nulls = Nulls.SKIP)
         public Builder organizationUsage(Optional<OrganizationUsageEnum> organizationUsage) {
-            this.organizationUsage = organizationUsage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationUsage(OrganizationUsageEnum organizationUsage) {
-            this.organizationUsage = Optional.ofNullable(organizationUsage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -234,28 +206,23 @@ public final class AssociateOrganizationClientGrantResponseContent {
          */
         @JsonSetter(value = "allow_any_organization", nulls = Nulls.SKIP)
         public Builder allowAnyOrganization(Optional<Boolean> allowAnyOrganization) {
-            this.allowAnyOrganization = allowAnyOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(Boolean allowAnyOrganization) {
-            this.allowAnyOrganization = Optional.ofNullable(allowAnyOrganization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public AssociateOrganizationClientGrantResponseContent build() {
-            return new AssociateOrganizationClientGrantResponseContent(
-                    id, clientId, audience, scope, organizationUsage, allowAnyOrganization, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

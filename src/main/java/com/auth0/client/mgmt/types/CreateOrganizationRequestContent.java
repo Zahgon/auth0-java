@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateOrganizationRequestContent.Builder.class)
 public final class CreateOrganizationRequestContent {
+
     private final String name;
 
     private final Optional<String> displayName;
@@ -37,14 +38,7 @@ public final class CreateOrganizationRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateOrganizationRequestContent(
-            String name,
-            Optional<String> displayName,
-            Optional<OrganizationBranding> branding,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            Optional<List<ConnectionForOrganization>> enabledConnections,
-            Optional<CreateTokenQuota> tokenQuota,
-            Map<String, Object> additionalProperties) {
+    private CreateOrganizationRequestContent(String name, Optional<String> displayName, Optional<OrganizationBranding> branding, Optional<Map<String, OptionalNullable<String>>> metadata, Optional<List<ConnectionForOrganization>> enabledConnections, Optional<CreateTokenQuota> tokenQuota, Map<String, Object> additionalProperties) {
         this.name = name;
         this.displayName = displayName;
         this.branding = branding;
@@ -59,7 +53,7 @@ public final class CreateOrganizationRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -67,17 +61,17 @@ public final class CreateOrganizationRequestContent {
      */
     @JsonProperty("display_name")
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("branding")
     public Optional<OrganizationBranding> getBranding() {
-        return branding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,50 +79,44 @@ public final class CreateOrganizationRequestContent {
      */
     @JsonProperty("enabled_connections")
     public Optional<List<ConnectionForOrganization>> getEnabledConnections() {
-        return enabledConnections;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token_quota")
     public Optional<CreateTokenQuota> getTokenQuota() {
-        return tokenQuota;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateOrganizationRequestContent && equalTo((CreateOrganizationRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateOrganizationRequestContent other) {
-        return name.equals(other.name)
-                && displayName.equals(other.displayName)
-                && branding.equals(other.branding)
-                && metadata.equals(other.metadata)
-                && enabledConnections.equals(other.enabledConnections)
-                && tokenQuota.equals(other.tokenQuota);
+        return name.equals(other.name) && displayName.equals(other.displayName) && branding.equals(other.branding) && metadata.equals(other.metadata) && enabledConnections.equals(other.enabledConnections) && tokenQuota.equals(other.tokenQuota);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name, this.displayName, this.branding, this.metadata, this.enabledConnections, this.tokenQuota);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of this organization.</p>
          */
@@ -138,6 +126,7 @@ public final class CreateOrganizationRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateOrganizationRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -173,6 +162,7 @@ public final class CreateOrganizationRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<CreateTokenQuota> tokenQuota = Optional.empty();
@@ -188,17 +178,12 @@ public final class CreateOrganizationRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateOrganizationRequestContent other) {
-            name(other.getName());
-            displayName(other.getDisplayName());
-            branding(other.getBranding());
-            metadata(other.getMetadata());
-            enabledConnections(other.getEnabledConnections());
-            tokenQuota(other.getTokenQuota());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,21 +194,18 @@ public final class CreateOrganizationRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tokenQuota(CreateTokenQuota tokenQuota) {
-            this.tokenQuota = Optional.ofNullable(tokenQuota);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "token_quota", nulls = Nulls.SKIP)
         public _FinalStage tokenQuota(Optional<CreateTokenQuota> tokenQuota) {
-            this.tokenQuota = tokenQuota;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -232,8 +214,7 @@ public final class CreateOrganizationRequestContent {
          */
         @java.lang.Override
         public _FinalStage enabledConnections(List<ConnectionForOrganization> enabledConnections) {
-            this.enabledConnections = Optional.ofNullable(enabledConnections);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -242,34 +223,29 @@ public final class CreateOrganizationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "enabled_connections", nulls = Nulls.SKIP)
         public _FinalStage enabledConnections(Optional<List<ConnectionForOrganization>> enabledConnections) {
-            this.enabledConnections = enabledConnections;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage branding(OrganizationBranding branding) {
-            this.branding = Optional.ofNullable(branding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "branding", nulls = Nulls.SKIP)
         public _FinalStage branding(Optional<OrganizationBranding> branding) {
-            this.branding = branding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -278,8 +254,7 @@ public final class CreateOrganizationRequestContent {
          */
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -288,26 +263,22 @@ public final class CreateOrganizationRequestContent {
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateOrganizationRequestContent build() {
-            return new CreateOrganizationRequestContent(
-                    name, displayName, branding, metadata, enabledConnections, tokenQuota, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -19,6 +19,7 @@ import com.auth0.client.mgmt.types.UpdatePhoneTemplateResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTemplatesClient rawClient;
@@ -32,94 +33,86 @@ public class AsyncTemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<ListPhoneTemplatesResponseContent> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<ListPhoneTemplatesResponseContent> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<ListPhoneTemplatesResponseContent> list(ListPhoneTemplatesRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<ListPhoneTemplatesResponseContent> list(
-            ListPhoneTemplatesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ListPhoneTemplatesResponseContent> list(ListPhoneTemplatesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<CreatePhoneTemplateResponseContent> create() {
-        return this.rawClient.create().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<CreatePhoneTemplateResponseContent> create(RequestOptions requestOptions) {
-        return this.rawClient.create(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<CreatePhoneTemplateResponseContent> create(CreatePhoneTemplateRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreatePhoneTemplateResponseContent> create(
-            CreatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreatePhoneTemplateResponseContent> create(CreatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetPhoneTemplateResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<GetPhoneTemplateResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdatePhoneTemplateResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CompletableFuture<UpdatePhoneTemplateResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdatePhoneTemplateResponseContent> update(
-            String id, UpdatePhoneTemplateRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdatePhoneTemplateResponseContent> update(String id, UpdatePhoneTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<UpdatePhoneTemplateResponseContent> update(
-            String id, UpdatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdatePhoneTemplateResponseContent> update(String id, UpdatePhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<ResetPhoneTemplateResponseContent> reset(
-            String id, ResetPhoneTemplateRequestContent request) {
-        return this.rawClient.reset(id, request).thenApply(response -> response.body());
+    public CompletableFuture<ResetPhoneTemplateResponseContent> reset(String id, ResetPhoneTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<ResetPhoneTemplateResponseContent> reset(
-            String id, ResetPhoneTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.reset(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ResetPhoneTemplateResponseContent> reset(String id, ResetPhoneTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreatePhoneTemplateTestNotificationResponseContent> test(
-            String id, CreatePhoneTemplateTestNotificationRequestContent request) {
-        return this.rawClient.test(id, request).thenApply(response -> response.body());
+    public CompletableFuture<CreatePhoneTemplateTestNotificationResponseContent> test(String id, CreatePhoneTemplateTestNotificationRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public CompletableFuture<CreatePhoneTemplateTestNotificationResponseContent> test(
-            String id, CreatePhoneTemplateTestNotificationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.test(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreatePhoneTemplateTestNotificationResponseContent> test(String id, CreatePhoneTemplateTestNotificationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.CreateVerificationEmailResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncVerificationEmailClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawVerificationEmailClient rawClient;
@@ -23,24 +24,22 @@ public class AsyncVerificationEmailClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawVerificationEmailClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Send an email to the specified user that asks them to click a link to <a href="https://auth0.com/docs/email/custom#verification-email">verify their email address</a>.
      * <p>Note: You must have the <code>Status</code> toggle enabled for the verification email template for the email to be sent.</p>
      */
-    public CompletableFuture<CreateVerificationEmailResponseContent> create(
-            CreateVerificationEmailRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateVerificationEmailResponseContent> create(CreateVerificationEmailRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Send an email to the specified user that asks them to click a link to <a href="https://auth0.com/docs/email/custom#verification-email">verify their email address</a>.
      * <p>Note: You must have the <code>Status</code> toggle enabled for the verification email template for the email to be sent.</p>
      */
-    public CompletableFuture<CreateVerificationEmailResponseContent> create(
-            CreateVerificationEmailRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateVerificationEmailResponseContent> create(CreateVerificationEmailRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

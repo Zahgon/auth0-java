@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionBigqueryInsertRowsParams.Builder.class)
 public final class FlowActionBigqueryInsertRowsParams {
+
     private final String connectionId;
 
     private final String datasetId;
@@ -31,12 +32,7 @@ public final class FlowActionBigqueryInsertRowsParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionBigqueryInsertRowsParams(
-            String connectionId,
-            String datasetId,
-            String tableId,
-            Optional<Map<String, Object>> data,
-            Map<String, Object> additionalProperties) {
+    private FlowActionBigqueryInsertRowsParams(String connectionId, String datasetId, String tableId, Optional<Map<String, Object>> data, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.datasetId = datasetId;
         this.tableId = tableId;
@@ -46,72 +42,71 @@ public final class FlowActionBigqueryInsertRowsParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dataset_id")
     public String getDatasetId() {
-        return datasetId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("table_id")
     public String getTableId() {
-        return tableId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("data")
     public Optional<Map<String, Object>> getData() {
-        return data;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionBigqueryInsertRowsParams
-                && equalTo((FlowActionBigqueryInsertRowsParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionBigqueryInsertRowsParams other) {
-        return connectionId.equals(other.connectionId)
-                && datasetId.equals(other.datasetId)
-                && tableId.equals(other.tableId)
-                && data.equals(other.data);
+        return connectionId.equals(other.connectionId) && datasetId.equals(other.datasetId) && tableId.equals(other.tableId) && data.equals(other.data);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.datasetId, this.tableId, this.data);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         DatasetIdStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionBigqueryInsertRowsParams other);
     }
 
     public interface DatasetIdStage {
+
         TableIdStage datasetId(@NotNull String datasetId);
     }
 
     public interface TableIdStage {
+
         _FinalStage tableId(@NotNull String tableId);
     }
 
     public interface _FinalStage {
+
         FlowActionBigqueryInsertRowsParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -125,6 +120,7 @@ public final class FlowActionBigqueryInsertRowsParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, DatasetIdStage, TableIdStage, _FinalStage {
+
         private String connectionId;
 
         private String datasetId;
@@ -136,66 +132,56 @@ public final class FlowActionBigqueryInsertRowsParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionBigqueryInsertRowsParams other) {
-            connectionId(other.getConnectionId());
-            datasetId(other.getDatasetId());
-            tableId(other.getTableId());
-            data(other.getData());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public DatasetIdStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("dataset_id")
         public TableIdStage datasetId(@NotNull String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId, "datasetId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("table_id")
         public _FinalStage tableId(@NotNull String tableId) {
-            this.tableId = Objects.requireNonNull(tableId, "tableId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage data(Map<String, Object> data) {
-            this.data = Optional.ofNullable(data);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "data", nulls = Nulls.SKIP)
         public _FinalStage data(Optional<Map<String, Object>> data) {
-            this.data = data;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionBigqueryInsertRowsParams build() {
-            return new FlowActionBigqueryInsertRowsParams(connectionId, datasetId, tableId, data, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

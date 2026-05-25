@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = RefreshTokenDevice.Builder.class)
 public final class RefreshTokenDevice {
+
     private final Optional<String> initialIp;
 
     private final Optional<String> initialAsn;
@@ -34,14 +35,7 @@ public final class RefreshTokenDevice {
 
     private final Map<String, Object> additionalProperties;
 
-    private RefreshTokenDevice(
-            Optional<String> initialIp,
-            Optional<String> initialAsn,
-            Optional<String> initialUserAgent,
-            Optional<String> lastIp,
-            Optional<String> lastAsn,
-            Optional<String> lastUserAgent,
-            Map<String, Object> additionalProperties) {
+    private RefreshTokenDevice(Optional<String> initialIp, Optional<String> initialAsn, Optional<String> initialUserAgent, Optional<String> lastIp, Optional<String> lastAsn, Optional<String> lastUserAgent, Map<String, Object> additionalProperties) {
         this.initialIp = initialIp;
         this.initialAsn = initialAsn;
         this.initialUserAgent = initialUserAgent;
@@ -56,7 +50,7 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("initial_ip")
     public Optional<String> getInitialIp() {
-        return initialIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +58,7 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("initial_asn")
     public Optional<String> getInitialAsn() {
-        return initialAsn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +66,7 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("initial_user_agent")
     public Optional<String> getInitialUserAgent() {
-        return initialUserAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +74,7 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("last_ip")
     public Optional<String> getLastIp() {
-        return lastIp;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +82,7 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("last_asn")
     public Optional<String> getLastAsn() {
-        return lastAsn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,46 +90,40 @@ public final class RefreshTokenDevice {
      */
     @JsonProperty("last_user_agent")
     public Optional<String> getLastUserAgent() {
-        return lastUserAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof RefreshTokenDevice && equalTo((RefreshTokenDevice) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(RefreshTokenDevice other) {
-        return initialIp.equals(other.initialIp)
-                && initialAsn.equals(other.initialAsn)
-                && initialUserAgent.equals(other.initialUserAgent)
-                && lastIp.equals(other.lastIp)
-                && lastAsn.equals(other.lastAsn)
-                && lastUserAgent.equals(other.lastUserAgent);
+        return initialIp.equals(other.initialIp) && initialAsn.equals(other.initialAsn) && initialUserAgent.equals(other.initialUserAgent) && lastIp.equals(other.lastIp) && lastAsn.equals(other.lastAsn) && lastUserAgent.equals(other.lastUserAgent);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.initialIp, this.initialAsn, this.initialUserAgent, this.lastIp, this.lastAsn, this.lastUserAgent);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> initialIp = Optional.empty();
 
         private Optional<String> initialAsn = Optional.empty();
@@ -151,16 +139,11 @@ public final class RefreshTokenDevice {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(RefreshTokenDevice other) {
-            initialIp(other.getInitialIp());
-            initialAsn(other.getInitialAsn());
-            initialUserAgent(other.getInitialUserAgent());
-            lastIp(other.getLastIp());
-            lastAsn(other.getLastAsn());
-            lastUserAgent(other.getLastUserAgent());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -168,13 +151,11 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "initial_ip", nulls = Nulls.SKIP)
         public Builder initialIp(Optional<String> initialIp) {
-            this.initialIp = initialIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialIp(String initialIp) {
-            this.initialIp = Optional.ofNullable(initialIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -182,13 +163,11 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "initial_asn", nulls = Nulls.SKIP)
         public Builder initialAsn(Optional<String> initialAsn) {
-            this.initialAsn = initialAsn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialAsn(String initialAsn) {
-            this.initialAsn = Optional.ofNullable(initialAsn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,13 +175,11 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "initial_user_agent", nulls = Nulls.SKIP)
         public Builder initialUserAgent(Optional<String> initialUserAgent) {
-            this.initialUserAgent = initialUserAgent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder initialUserAgent(String initialUserAgent) {
-            this.initialUserAgent = Optional.ofNullable(initialUserAgent);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -210,13 +187,11 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "last_ip", nulls = Nulls.SKIP)
         public Builder lastIp(Optional<String> lastIp) {
-            this.lastIp = lastIp;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastIp(String lastIp) {
-            this.lastIp = Optional.ofNullable(lastIp);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -224,13 +199,11 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "last_asn", nulls = Nulls.SKIP)
         public Builder lastAsn(Optional<String> lastAsn) {
-            this.lastAsn = lastAsn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastAsn(String lastAsn) {
-            this.lastAsn = Optional.ofNullable(lastAsn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -238,28 +211,23 @@ public final class RefreshTokenDevice {
          */
         @JsonSetter(value = "last_user_agent", nulls = Nulls.SKIP)
         public Builder lastUserAgent(Optional<String> lastUserAgent) {
-            this.lastUserAgent = lastUserAgent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastUserAgent(String lastUserAgent) {
-            this.lastUserAgent = Optional.ofNullable(lastUserAgent);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RefreshTokenDevice build() {
-            return new RefreshTokenDevice(
-                    initialIp, initialAsn, initialUserAgent, lastIp, lastAsn, lastUserAgent, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

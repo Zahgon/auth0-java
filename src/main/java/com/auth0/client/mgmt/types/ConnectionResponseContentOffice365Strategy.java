@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentOffice365Strategy {
-    public static final ConnectionResponseContentOffice365Strategy OFFICE365 =
-            new ConnectionResponseContentOffice365Strategy(Value.OFFICE365, "office365");
+
+    public static final ConnectionResponseContentOffice365Strategy OFFICE365 = new ConnectionResponseContentOffice365Strategy(Value.OFFICE365, "office365");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentOffice365Strategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentOffice365Strategy
-                        && this.string.equals(((ConnectionResponseContentOffice365Strategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OFFICE365:
-                return visitor.visitOffice365();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentOffice365Strategy valueOf(String value) {
-        switch (value) {
-            case "office365":
-                return OFFICE365;
-            default:
-                return new ConnectionResponseContentOffice365Strategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OFFICE365,
 
-        UNKNOWN
+        OFFICE365, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOffice365();
 
         T visitUnknown(String unknownType);

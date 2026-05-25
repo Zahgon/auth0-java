@@ -20,6 +20,7 @@ import com.auth0.client.mgmt.types.UpdateScimConfigurationResponseContent;
 import java.util.function.Supplier;
 
 public class ScimConfigurationClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawScimConfigurationClient rawClient;
@@ -36,127 +37,122 @@ public class ScimConfigurationClient {
      * Get responses with HTTP metadata like headers
      */
     public RawScimConfigurationClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
     public SyncPagingIterable<ScimConfiguration> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
     public SyncPagingIterable<ScimConfiguration> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
     public SyncPagingIterable<ScimConfiguration> list(ListScimConfigurationsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a list of SCIM configurations of a tenant.
      */
-    public SyncPagingIterable<ScimConfiguration> list(
-            ListScimConfigurationsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<ScimConfiguration> list(ListScimConfigurationsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration by its <code>connectionId</code>.
      */
     public GetScimConfigurationResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration by its <code>connectionId</code>.
      */
     public GetScimConfigurationResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
     public CreateScimConfigurationResponseContent create(String id) {
-        return this.rawClient.create(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
     public CreateScimConfigurationResponseContent create(String id, RequestOptions requestOptions) {
-        return this.rawClient.create(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
-    public CreateScimConfigurationResponseContent create(
-            String id, OptionalNullable<CreateScimConfigurationRequestContent> request) {
-        return this.rawClient.create(id, request).body();
+    public CreateScimConfigurationResponseContent create(String id, OptionalNullable<CreateScimConfigurationRequestContent> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a scim configuration for a connection.
      */
-    public CreateScimConfigurationResponseContent create(
-            String id, OptionalNullable<CreateScimConfigurationRequestContent> request, RequestOptions requestOptions) {
-        return this.rawClient.create(id, request, requestOptions).body();
+    public CreateScimConfigurationResponseContent create(String id, OptionalNullable<CreateScimConfigurationRequestContent> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim configuration by its <code>connectionId</code>.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a scim configuration by its <code>connectionId</code>.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a scim configuration by its <code>connectionId</code>.
      */
     public UpdateScimConfigurationResponseContent update(String id, UpdateScimConfigurationRequestContent request) {
-        return this.rawClient.update(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a scim configuration by its <code>connectionId</code>.
      */
-    public UpdateScimConfigurationResponseContent update(
-            String id, UpdateScimConfigurationRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).body();
+    public UpdateScimConfigurationResponseContent update(String id, UpdateScimConfigurationRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration's default mapping by its <code>connectionId</code>.
      */
     public GetScimConfigurationDefaultMappingResponseContent getDefaultMapping(String id) {
-        return this.rawClient.getDefaultMapping(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a scim configuration's default mapping by its <code>connectionId</code>.
      */
-    public GetScimConfigurationDefaultMappingResponseContent getDefaultMapping(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.getDefaultMapping(id, requestOptions).body();
+    public GetScimConfigurationDefaultMappingResponseContent getDefaultMapping(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TokensClient tokens() {
-        return this.tokensClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncStatsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawStatsClient rawClient;
@@ -24,49 +25,48 @@ public class AsyncStatsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawStatsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of active users that logged in during the last 30 days.
      */
     public CompletableFuture<Double> getActiveUsersCount() {
-        return this.rawClient.getActiveUsersCount().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of active users that logged in during the last 30 days.
      */
     public CompletableFuture<Double> getActiveUsersCount(RequestOptions requestOptions) {
-        return this.rawClient.getActiveUsersCount(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public CompletableFuture<List<DailyStats>> getDaily() {
-        return this.rawClient.getDaily().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public CompletableFuture<List<DailyStats>> getDaily(RequestOptions requestOptions) {
-        return this.rawClient.getDaily(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public CompletableFuture<List<DailyStats>> getDaily(GetDailyStatsRequestParameters request) {
-        return this.rawClient.getDaily(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
-    public CompletableFuture<List<DailyStats>> getDaily(
-            GetDailyStatsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.getDaily(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<List<DailyStats>> getDaily(GetDailyStatsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentSalesforceStrategy {
-    public static final ConnectionResponseContentSalesforceStrategy SALESFORCE =
-            new ConnectionResponseContentSalesforceStrategy(Value.SALESFORCE, "salesforce");
+
+    public static final ConnectionResponseContentSalesforceStrategy SALESFORCE = new ConnectionResponseContentSalesforceStrategy(Value.SALESFORCE, "salesforce");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentSalesforceStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentSalesforceStrategy
-                        && this.string.equals(((ConnectionResponseContentSalesforceStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SALESFORCE:
-                return visitor.visitSalesforce();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentSalesforceStrategy valueOf(String value) {
-        switch (value) {
-            case "salesforce":
-                return SALESFORCE;
-            default:
-                return new ConnectionResponseContentSalesforceStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SALESFORCE,
 
-        UNKNOWN
+        SALESFORCE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSalesforce();
 
         T visitUnknown(String unknownType);

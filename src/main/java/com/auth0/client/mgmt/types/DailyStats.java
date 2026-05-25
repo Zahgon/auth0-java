@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DailyStats.Builder.class)
 public final class DailyStats {
+
     private final Optional<String> date;
 
     private final Optional<Integer> logins;
@@ -34,14 +35,7 @@ public final class DailyStats {
 
     private final Map<String, Object> additionalProperties;
 
-    private DailyStats(
-            Optional<String> date,
-            Optional<Integer> logins,
-            Optional<Integer> signups,
-            Optional<Integer> leakedPasswords,
-            Optional<String> updatedAt,
-            Optional<String> createdAt,
-            Map<String, Object> additionalProperties) {
+    private DailyStats(Optional<String> date, Optional<Integer> logins, Optional<Integer> signups, Optional<Integer> leakedPasswords, Optional<String> updatedAt, Optional<String> createdAt, Map<String, Object> additionalProperties) {
         this.date = date;
         this.logins = logins;
         this.signups = signups;
@@ -56,7 +50,7 @@ public final class DailyStats {
      */
     @JsonProperty("date")
     public Optional<String> getDate() {
-        return date;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -64,7 +58,7 @@ public final class DailyStats {
      */
     @JsonProperty("logins")
     public Optional<Integer> getLogins() {
-        return logins;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,7 +66,7 @@ public final class DailyStats {
      */
     @JsonProperty("signups")
     public Optional<Integer> getSignups() {
-        return signups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +74,7 @@ public final class DailyStats {
      */
     @JsonProperty("leaked_passwords")
     public Optional<Integer> getLeakedPasswords() {
-        return leakedPasswords;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +82,7 @@ public final class DailyStats {
      */
     @JsonProperty("updated_at")
     public Optional<String> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,45 +90,40 @@ public final class DailyStats {
      */
     @JsonProperty("created_at")
     public Optional<String> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DailyStats && equalTo((DailyStats) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DailyStats other) {
-        return date.equals(other.date)
-                && logins.equals(other.logins)
-                && signups.equals(other.signups)
-                && leakedPasswords.equals(other.leakedPasswords)
-                && updatedAt.equals(other.updatedAt)
-                && createdAt.equals(other.createdAt);
+        return date.equals(other.date) && logins.equals(other.logins) && signups.equals(other.signups) && leakedPasswords.equals(other.leakedPasswords) && updatedAt.equals(other.updatedAt) && createdAt.equals(other.createdAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.date, this.logins, this.signups, this.leakedPasswords, this.updatedAt, this.createdAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> date = Optional.empty();
 
         private Optional<Integer> logins = Optional.empty();
@@ -150,16 +139,11 @@ public final class DailyStats {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(DailyStats other) {
-            date(other.getDate());
-            logins(other.getLogins());
-            signups(other.getSignups());
-            leakedPasswords(other.getLeakedPasswords());
-            updatedAt(other.getUpdatedAt());
-            createdAt(other.getCreatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -167,13 +151,11 @@ public final class DailyStats {
          */
         @JsonSetter(value = "date", nulls = Nulls.SKIP)
         public Builder date(Optional<String> date) {
-            this.date = date;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder date(String date) {
-            this.date = Optional.ofNullable(date);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -181,13 +163,11 @@ public final class DailyStats {
          */
         @JsonSetter(value = "logins", nulls = Nulls.SKIP)
         public Builder logins(Optional<Integer> logins) {
-            this.logins = logins;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logins(Integer logins) {
-            this.logins = Optional.ofNullable(logins);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -195,13 +175,11 @@ public final class DailyStats {
          */
         @JsonSetter(value = "signups", nulls = Nulls.SKIP)
         public Builder signups(Optional<Integer> signups) {
-            this.signups = signups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder signups(Integer signups) {
-            this.signups = Optional.ofNullable(signups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -209,13 +187,11 @@ public final class DailyStats {
          */
         @JsonSetter(value = "leaked_passwords", nulls = Nulls.SKIP)
         public Builder leakedPasswords(Optional<Integer> leakedPasswords) {
-            this.leakedPasswords = leakedPasswords;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder leakedPasswords(Integer leakedPasswords) {
-            this.leakedPasswords = Optional.ofNullable(leakedPasswords);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -223,13 +199,11 @@ public final class DailyStats {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<String> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(String updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -237,27 +211,23 @@ public final class DailyStats {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<String> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(String createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public DailyStats build() {
-            return new DailyStats(date, logins, signups, leakedPasswords, updatedAt, createdAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

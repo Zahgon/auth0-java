@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupToken.Builder.class)
 public final class FlowsVaultConnectioSetupToken {
+
     private final FlowsVaultConnectioSetupTypeTokenEnum type;
 
     private final String token;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupToken(
-            FlowsVaultConnectioSetupTypeTokenEnum type, String token, Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupToken(FlowsVaultConnectioSetupTypeTokenEnum type, String token, Map<String, Object> additionalProperties) {
         this.type = type;
         this.token = token;
         this.additionalProperties = additionalProperties;
@@ -34,23 +34,22 @@ public final class FlowsVaultConnectioSetupToken {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeTokenEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token")
     public String getToken() {
-        return token;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupToken && equalTo((FlowsVaultConnectioSetupToken) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupToken other) {
@@ -59,29 +58,32 @@ public final class FlowsVaultConnectioSetupToken {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.token);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         TokenStage type(@NotNull FlowsVaultConnectioSetupTypeTokenEnum type);
 
         Builder from(FlowsVaultConnectioSetupToken other);
     }
 
     public interface TokenStage {
+
         _FinalStage token(@NotNull String token);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupToken build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -91,6 +93,7 @@ public final class FlowsVaultConnectioSetupToken {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, TokenStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeTokenEnum type;
 
         private String token;
@@ -98,44 +101,39 @@ public final class FlowsVaultConnectioSetupToken {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupToken other) {
-            type(other.getType());
-            token(other.getToken());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public TokenStage type(@NotNull FlowsVaultConnectioSetupTypeTokenEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("token")
         public _FinalStage token(@NotNull String token) {
-            this.token = Objects.requireNonNull(token, "token must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupToken build() {
-            return new FlowsVaultConnectioSetupToken(type, token, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

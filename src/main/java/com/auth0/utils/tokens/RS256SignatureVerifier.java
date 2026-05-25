@@ -20,26 +20,20 @@ class RS256SignatureVerifier extends SignatureVerifier {
 
     private static Algorithm getAlgorithm(final PublicKeyProvider publicKeyProvider) {
         return Algorithm.RSA256(new RSAKeyProvider() {
+
             @Override
             public RSAPublicKey getPublicKeyById(String keyId) {
-                try {
-                    return publicKeyProvider.getPublicKeyById(keyId);
-                } catch (PublicKeyProviderException pke) {
-                    throw new IdTokenValidationException(
-                            String.format("Could not find a public key for Key ID (kid) \"%s\"", keyId), pke);
-                }
+                throw new UnsupportedOperationException("STUB: not implemented");
             }
 
             @Override
             public RSAPrivateKey getPrivateKey() {
-                // no-op
-                return null;
+                throw new UnsupportedOperationException("STUB: not implemented");
             }
 
             @Override
             public String getPrivateKeyId() {
-                // no-op
-                return null;
+                throw new UnsupportedOperationException("STUB: not implemented");
             }
         });
     }

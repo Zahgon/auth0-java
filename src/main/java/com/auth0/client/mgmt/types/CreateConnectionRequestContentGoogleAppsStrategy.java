@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentGoogleAppsStrategy {
-    public static final CreateConnectionRequestContentGoogleAppsStrategy GOOGLE_APPS =
-            new CreateConnectionRequestContentGoogleAppsStrategy(Value.GOOGLE_APPS, "google-apps");
+
+    public static final CreateConnectionRequestContentGoogleAppsStrategy GOOGLE_APPS = new CreateConnectionRequestContentGoogleAppsStrategy(Value.GOOGLE_APPS, "google-apps");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentGoogleAppsStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentGoogleAppsStrategy
-                        && this.string.equals(((CreateConnectionRequestContentGoogleAppsStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GOOGLE_APPS:
-                return visitor.visitGoogleApps();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentGoogleAppsStrategy valueOf(String value) {
-        switch (value) {
-            case "google-apps":
-                return GOOGLE_APPS;
-            default:
-                return new CreateConnectionRequestContentGoogleAppsStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        GOOGLE_APPS,
 
-        UNKNOWN
+        GOOGLE_APPS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGoogleApps();
 
         T visitUnknown(String unknownType);

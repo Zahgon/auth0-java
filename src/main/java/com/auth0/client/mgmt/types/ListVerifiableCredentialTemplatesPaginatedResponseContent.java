@@ -24,16 +24,14 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListVerifiableCredentialTemplatesPaginatedResponseContent.Builder.class)
 public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
+
     private final OptionalNullable<String> next;
 
     private final Optional<List<VerifiableCredentialTemplateResponse>> templates;
 
     private final Map<String, Object> additionalProperties;
 
-    private ListVerifiableCredentialTemplatesPaginatedResponseContent(
-            OptionalNullable<String> next,
-            Optional<List<VerifiableCredentialTemplateResponse>> templates,
-            Map<String, Object> additionalProperties) {
+    private ListVerifiableCredentialTemplatesPaginatedResponseContent(OptionalNullable<String> next, Optional<List<VerifiableCredentialTemplateResponse>> templates, Map<String, Object> additionalProperties) {
         this.next = next;
         this.templates = templates;
         this.additionalProperties = additionalProperties;
@@ -45,15 +43,12 @@ public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("next")
     public OptionalNullable<String> getNext() {
-        if (next == null) {
-            return OptionalNullable.absent();
-        }
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("templates")
     public Optional<List<VerifiableCredentialTemplateResponse>> getTemplates() {
-        return templates;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -64,14 +59,12 @@ public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListVerifiableCredentialTemplatesPaginatedResponseContent
-                && equalTo((ListVerifiableCredentialTemplatesPaginatedResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListVerifiableCredentialTemplatesPaginatedResponseContent other) {
@@ -80,20 +73,21 @@ public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.next, this.templates);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> next = OptionalNullable.absent();
 
         private Optional<List<VerifiableCredentialTemplateResponse>> templates = Optional.empty();
@@ -101,12 +95,11 @@ public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListVerifiableCredentialTemplatesPaginatedResponseContent other) {
-            next(other.getNext());
-            templates(other.getTemplates());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -114,58 +107,40 @@ public final class ListVerifiableCredentialTemplatesPaginatedResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(@Nullable OptionalNullable<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = OptionalNullable.of(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(Optional<String> next) {
-            if (next.isPresent()) {
-                this.next = OptionalNullable.of(next.get());
-            } else {
-                this.next = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(com.auth0.client.mgmt.core.Nullable<String> next) {
-            if (next.isNull()) {
-                this.next = OptionalNullable.ofNull();
-            } else if (next.isEmpty()) {
-                this.next = OptionalNullable.absent();
-            } else {
-                this.next = OptionalNullable.of(next.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "templates", nulls = Nulls.SKIP)
         public Builder templates(Optional<List<VerifiableCredentialTemplateResponse>> templates) {
-            this.templates = templates;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder templates(List<VerifiableCredentialTemplateResponse> templates) {
-            this.templates = Optional.ofNullable(templates);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListVerifiableCredentialTemplatesPaginatedResponseContent build() {
-            return new ListVerifiableCredentialTemplatesPaginatedResponseContent(next, templates, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

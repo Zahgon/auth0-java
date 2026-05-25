@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = AttackProtectionUpdateCaptchaRecaptchaV2.Builder.class)
 public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
+
     private final String siteKey;
 
     private final String secret;
 
     private final Map<String, Object> additionalProperties;
 
-    private AttackProtectionUpdateCaptchaRecaptchaV2(
-            String siteKey, String secret, Map<String, Object> additionalProperties) {
+    private AttackProtectionUpdateCaptchaRecaptchaV2(String siteKey, String secret, Map<String, Object> additionalProperties) {
         this.siteKey = siteKey;
         this.secret = secret;
         this.additionalProperties = additionalProperties;
@@ -37,7 +37,7 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
      */
     @JsonProperty("site_key")
     public String getSiteKey() {
-        return siteKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -45,19 +45,17 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
      */
     @JsonProperty("secret")
     public String getSecret() {
-        return secret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof AttackProtectionUpdateCaptchaRecaptchaV2
-                && equalTo((AttackProtectionUpdateCaptchaRecaptchaV2) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(AttackProtectionUpdateCaptchaRecaptchaV2 other) {
@@ -66,19 +64,20 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.siteKey, this.secret);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SiteKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface SiteKeyStage {
+
         /**
          * <p>The site key for the reCAPTCHA v2 provider.</p>
          */
@@ -88,6 +87,7 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
     }
 
     public interface SecretStage {
+
         /**
          * <p>The secret key for the reCAPTCHA v2 provider.</p>
          */
@@ -95,6 +95,7 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
     }
 
     public interface _FinalStage {
+
         AttackProtectionUpdateCaptchaRecaptchaV2 build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -104,6 +105,7 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements SiteKeyStage, SecretStage, _FinalStage {
+
         private String siteKey;
 
         private String secret;
@@ -111,13 +113,12 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(AttackProtectionUpdateCaptchaRecaptchaV2 other) {
-            siteKey(other.getSiteKey());
-            secret(other.getSecret());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -128,8 +129,7 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
         @java.lang.Override
         @JsonSetter("site_key")
         public SecretStage siteKey(@NotNull String siteKey) {
-            this.siteKey = Objects.requireNonNull(siteKey, "siteKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -140,25 +140,22 @@ public final class AttackProtectionUpdateCaptchaRecaptchaV2 {
         @java.lang.Override
         @JsonSetter("secret")
         public _FinalStage secret(@NotNull String secret) {
-            this.secret = Objects.requireNonNull(secret, "secret must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public AttackProtectionUpdateCaptchaRecaptchaV2 build() {
-            return new AttackProtectionUpdateCaptchaRecaptchaV2(siteKey, secret, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

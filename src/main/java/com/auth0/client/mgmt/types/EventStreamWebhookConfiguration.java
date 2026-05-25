@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamWebhookConfiguration.Builder.class)
 public final class EventStreamWebhookConfiguration {
+
     private final String webhookEndpoint;
 
     private final EventStreamWebhookAuthorizationResponse webhookAuthorization;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamWebhookConfiguration(
-            String webhookEndpoint,
-            EventStreamWebhookAuthorizationResponse webhookAuthorization,
-            Map<String, Object> additionalProperties) {
+    private EventStreamWebhookConfiguration(String webhookEndpoint, EventStreamWebhookAuthorizationResponse webhookAuthorization, Map<String, Object> additionalProperties) {
         this.webhookEndpoint = webhookEndpoint;
         this.webhookAuthorization = webhookAuthorization;
         this.additionalProperties = additionalProperties;
@@ -39,23 +37,22 @@ public final class EventStreamWebhookConfiguration {
      */
     @JsonProperty("webhook_endpoint")
     public String getWebhookEndpoint() {
-        return webhookEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("webhook_authorization")
     public EventStreamWebhookAuthorizationResponse getWebhookAuthorization() {
-        return webhookAuthorization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamWebhookConfiguration && equalTo((EventStreamWebhookConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamWebhookConfiguration other) {
@@ -64,19 +61,20 @@ public final class EventStreamWebhookConfiguration {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.webhookEndpoint, this.webhookAuthorization);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static WebhookEndpointStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface WebhookEndpointStage {
+
         /**
          * <p>Target HTTP endpoint URL.</p>
          */
@@ -86,10 +84,12 @@ public final class EventStreamWebhookConfiguration {
     }
 
     public interface WebhookAuthorizationStage {
+
         _FinalStage webhookAuthorization(@NotNull EventStreamWebhookAuthorizationResponse webhookAuthorization);
     }
 
     public interface _FinalStage {
+
         EventStreamWebhookConfiguration build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -99,6 +99,7 @@ public final class EventStreamWebhookConfiguration {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements WebhookEndpointStage, WebhookAuthorizationStage, _FinalStage {
+
         private String webhookEndpoint;
 
         private EventStreamWebhookAuthorizationResponse webhookAuthorization;
@@ -106,13 +107,12 @@ public final class EventStreamWebhookConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamWebhookConfiguration other) {
-            webhookEndpoint(other.getWebhookEndpoint());
-            webhookAuthorization(other.getWebhookAuthorization());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -123,33 +123,28 @@ public final class EventStreamWebhookConfiguration {
         @java.lang.Override
         @JsonSetter("webhook_endpoint")
         public WebhookAuthorizationStage webhookEndpoint(@NotNull String webhookEndpoint) {
-            this.webhookEndpoint = Objects.requireNonNull(webhookEndpoint, "webhookEndpoint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("webhook_authorization")
         public _FinalStage webhookAuthorization(@NotNull EventStreamWebhookAuthorizationResponse webhookAuthorization) {
-            this.webhookAuthorization =
-                    Objects.requireNonNull(webhookAuthorization, "webhookAuthorization must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamWebhookConfiguration build() {
-            return new EventStreamWebhookConfiguration(webhookEndpoint, webhookAuthorization, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

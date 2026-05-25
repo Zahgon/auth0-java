@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormWidgetGMapsAddress.Builder.class)
 public final class FormWidgetGMapsAddress {
+
     private final String id;
 
     private final FormComponentCategoryWidgetConst category;
@@ -39,16 +40,7 @@ public final class FormWidgetGMapsAddress {
 
     private final Map<String, Object> additionalProperties;
 
-    private FormWidgetGMapsAddress(
-            String id,
-            FormComponentCategoryWidgetConst category,
-            FormWidgetTypeGMapsAddressConst type,
-            FormWidgetGMapsAddressConfig config,
-            Optional<String> label,
-            Optional<String> hint,
-            Optional<Boolean> required,
-            Optional<Boolean> sensitive,
-            Map<String, Object> additionalProperties) {
+    private FormWidgetGMapsAddress(String id, FormComponentCategoryWidgetConst category, FormWidgetTypeGMapsAddressConst type, FormWidgetGMapsAddressConfig config, Optional<String> label, Optional<String> hint, Optional<Boolean> required, Optional<Boolean> sensitive, Map<String, Object> additionalProperties) {
         this.id = id;
         this.category = category;
         this.type = type;
@@ -62,100 +54,96 @@ public final class FormWidgetGMapsAddress {
 
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("category")
     public FormComponentCategoryWidgetConst getCategory() {
-        return category;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public FormWidgetTypeGMapsAddressConst getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("config")
     public FormWidgetGMapsAddressConfig getConfig() {
-        return config;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("label")
     public Optional<String> getLabel() {
-        return label;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("hint")
     public Optional<String> getHint() {
-        return hint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("required")
     public Optional<Boolean> getRequired() {
-        return required;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("sensitive")
     public Optional<Boolean> getSensitive() {
-        return sensitive;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormWidgetGMapsAddress && equalTo((FormWidgetGMapsAddress) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormWidgetGMapsAddress other) {
-        return id.equals(other.id)
-                && category.equals(other.category)
-                && type.equals(other.type)
-                && config.equals(other.config)
-                && label.equals(other.label)
-                && hint.equals(other.hint)
-                && required.equals(other.required)
-                && sensitive.equals(other.sensitive);
+        return id.equals(other.id) && category.equals(other.category) && type.equals(other.type) && config.equals(other.config) && label.equals(other.label) && hint.equals(other.hint) && required.equals(other.required) && sensitive.equals(other.sensitive);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id, this.category, this.type, this.config, this.label, this.hint, this.required, this.sensitive);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         CategoryStage id(@NotNull String id);
 
         Builder from(FormWidgetGMapsAddress other);
     }
 
     public interface CategoryStage {
+
         TypeStage category(@NotNull FormComponentCategoryWidgetConst category);
     }
 
     public interface TypeStage {
+
         ConfigStage type(@NotNull FormWidgetTypeGMapsAddressConst type);
     }
 
     public interface ConfigStage {
+
         _FinalStage config(@NotNull FormWidgetGMapsAddressConfig config);
     }
 
     public interface _FinalStage {
+
         FormWidgetGMapsAddress build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -181,6 +169,7 @@ public final class FormWidgetGMapsAddress {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, CategoryStage, TypeStage, ConfigStage, _FinalStage {
+
         private String id;
 
         private FormComponentCategoryWidgetConst category;
@@ -200,117 +189,95 @@ public final class FormWidgetGMapsAddress {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormWidgetGMapsAddress other) {
-            id(other.getId());
-            category(other.getCategory());
-            type(other.getType());
-            config(other.getConfig());
-            label(other.getLabel());
-            hint(other.getHint());
-            required(other.getRequired());
-            sensitive(other.getSensitive());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public CategoryStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("category")
         public TypeStage category(@NotNull FormComponentCategoryWidgetConst category) {
-            this.category = Objects.requireNonNull(category, "category must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public ConfigStage type(@NotNull FormWidgetTypeGMapsAddressConst type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("config")
         public _FinalStage config(@NotNull FormWidgetGMapsAddressConfig config) {
-            this.config = Objects.requireNonNull(config, "config must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage sensitive(Boolean sensitive) {
-            this.sensitive = Optional.ofNullable(sensitive);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "sensitive", nulls = Nulls.SKIP)
         public _FinalStage sensitive(Optional<Boolean> sensitive) {
-            this.sensitive = sensitive;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage required(Boolean required) {
-            this.required = Optional.ofNullable(required);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "required", nulls = Nulls.SKIP)
         public _FinalStage required(Optional<Boolean> required) {
-            this.required = required;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage hint(String hint) {
-            this.hint = Optional.ofNullable(hint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "hint", nulls = Nulls.SKIP)
         public _FinalStage hint(Optional<String> hint) {
-            this.hint = hint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage label(String label) {
-            this.label = Optional.ofNullable(label);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "label", nulls = Nulls.SKIP)
         public _FinalStage label(Optional<String> label) {
-            this.label = label;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormWidgetGMapsAddress build() {
-            return new FormWidgetGMapsAddress(
-                    id, category, type, config, label, hint, required, sensitive, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

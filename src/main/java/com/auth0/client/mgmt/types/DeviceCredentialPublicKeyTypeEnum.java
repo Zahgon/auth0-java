@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class DeviceCredentialPublicKeyTypeEnum {
-    public static final DeviceCredentialPublicKeyTypeEnum PUBLIC_KEY =
-            new DeviceCredentialPublicKeyTypeEnum(Value.PUBLIC_KEY, "public_key");
+
+    public static final DeviceCredentialPublicKeyTypeEnum PUBLIC_KEY = new DeviceCredentialPublicKeyTypeEnum(Value.PUBLIC_KEY, "public_key");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class DeviceCredentialPublicKeyTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof DeviceCredentialPublicKeyTypeEnum
-                        && this.string.equals(((DeviceCredentialPublicKeyTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case PUBLIC_KEY:
-                return visitor.visitPublicKey();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static DeviceCredentialPublicKeyTypeEnum valueOf(String value) {
-        switch (value) {
-            case "public_key":
-                return PUBLIC_KEY;
-            default:
-                return new DeviceCredentialPublicKeyTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        PUBLIC_KEY,
 
-        UNKNOWN
+        PUBLIC_KEY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitPublicKey();
 
         T visitUnknown(String unknownType);

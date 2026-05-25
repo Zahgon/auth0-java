@@ -15,6 +15,7 @@ import com.auth0.client.mgmt.types.UpdateBrandingResponseContent;
 import java.util.function.Supplier;
 
 public class BrandingClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawBrandingClient rawClient;
@@ -37,60 +38,60 @@ public class BrandingClient {
      * Get responses with HTTP metadata like headers
      */
     public RawBrandingClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding settings.
      */
     public GetBrandingResponseContent get() {
-        return this.rawClient.get().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve branding settings.
      */
     public GetBrandingResponseContent get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public UpdateBrandingResponseContent update() {
-        return this.rawClient.update().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public UpdateBrandingResponseContent update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public UpdateBrandingResponseContent update(UpdateBrandingRequestContent request) {
-        return this.rawClient.update(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update branding settings.
      */
     public UpdateBrandingResponseContent update(UpdateBrandingRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TemplatesClient templates() {
-        return this.templatesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ThemesClient themes() {
-        return this.themesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PhoneClient phone() {
-        return this.phoneClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

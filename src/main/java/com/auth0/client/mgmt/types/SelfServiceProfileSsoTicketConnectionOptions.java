@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketConnectionOptions.Builder.class)
 public final class SelfServiceProfileSsoTicketConnectionOptions {
+
     private final OptionalNullable<String> iconUrl;
 
     private final OptionalNullable<List<String>> domainAliases;
@@ -32,11 +33,7 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketConnectionOptions(
-            OptionalNullable<String> iconUrl,
-            OptionalNullable<List<String>> domainAliases,
-            OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketConnectionOptions(OptionalNullable<String> iconUrl, OptionalNullable<List<String>> domainAliases, OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated, Map<String, Object> additionalProperties) {
         this.iconUrl = iconUrl;
         this.domainAliases = domainAliases;
         this.idpinitiated = idpinitiated;
@@ -49,10 +46,7 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("icon_url")
     public OptionalNullable<String> getIconUrl() {
-        if (iconUrl == null) {
-            return OptionalNullable.absent();
-        }
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,19 +55,13 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("domain_aliases")
     public OptionalNullable<List<String>> getDomainAliases() {
-        if (domainAliases == null) {
-            return OptionalNullable.absent();
-        }
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("idpinitiated")
     public OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> getIdpinitiated() {
-        if (idpinitiated == null) {
-            return OptionalNullable.absent();
-        }
-        return idpinitiated;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -96,55 +84,49 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketConnectionOptions
-                && equalTo((SelfServiceProfileSsoTicketConnectionOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketConnectionOptions other) {
-        return iconUrl.equals(other.iconUrl)
-                && domainAliases.equals(other.domainAliases)
-                && idpinitiated.equals(other.idpinitiated);
+        return iconUrl.equals(other.iconUrl) && domainAliases.equals(other.domainAliases) && idpinitiated.equals(other.idpinitiated);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.iconUrl, this.domainAliases, this.idpinitiated);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> iconUrl = OptionalNullable.absent();
 
         private OptionalNullable<List<String>> domainAliases = OptionalNullable.absent();
 
-        private OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated =
-                OptionalNullable.absent();
+        private OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SelfServiceProfileSsoTicketConnectionOptions other) {
-            iconUrl(other.getIconUrl());
-            domainAliases(other.getDomainAliases());
-            idpinitiated(other.getIdpinitiated());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -152,33 +134,19 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
          */
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public Builder iconUrl(@Nullable OptionalNullable<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = OptionalNullable.of(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(Optional<String> iconUrl) {
-            if (iconUrl.isPresent()) {
-                this.iconUrl = OptionalNullable.of(iconUrl.get());
-            } else {
-                this.iconUrl = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder iconUrl(com.auth0.client.mgmt.core.Nullable<String> iconUrl) {
-            if (iconUrl.isNull()) {
-                this.iconUrl = OptionalNullable.ofNull();
-            } else if (iconUrl.isEmpty()) {
-                this.iconUrl = OptionalNullable.absent();
-            } else {
-                this.iconUrl = OptionalNullable.of(iconUrl.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -186,81 +154,48 @@ public final class SelfServiceProfileSsoTicketConnectionOptions {
          */
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public Builder domainAliases(@Nullable OptionalNullable<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliases(List<String> domainAliases) {
-            this.domainAliases = OptionalNullable.of(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliases(Optional<List<String>> domainAliases) {
-            if (domainAliases.isPresent()) {
-                this.domainAliases = OptionalNullable.of(domainAliases.get());
-            } else {
-                this.domainAliases = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder domainAliases(com.auth0.client.mgmt.core.Nullable<List<String>> domainAliases) {
-            if (domainAliases.isNull()) {
-                this.domainAliases = OptionalNullable.ofNull();
-            } else if (domainAliases.isEmpty()) {
-                this.domainAliases = OptionalNullable.absent();
-            } else {
-                this.domainAliases = OptionalNullable.of(domainAliases.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "idpinitiated", nulls = Nulls.SKIP)
-        public Builder idpinitiated(
-                @Nullable OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated) {
-            this.idpinitiated = idpinitiated;
-            return this;
+        public Builder idpinitiated(@Nullable OptionalNullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idpinitiated(SelfServiceProfileSsoTicketIdpInitiatedOptions idpinitiated) {
-            this.idpinitiated = OptionalNullable.of(idpinitiated);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder idpinitiated(Optional<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated) {
-            if (idpinitiated.isPresent()) {
-                this.idpinitiated = OptionalNullable.of(idpinitiated.get());
-            } else {
-                this.idpinitiated = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder idpinitiated(
-                com.auth0.client.mgmt.core.Nullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated) {
-            if (idpinitiated.isNull()) {
-                this.idpinitiated = OptionalNullable.ofNull();
-            } else if (idpinitiated.isEmpty()) {
-                this.idpinitiated = OptionalNullable.absent();
-            } else {
-                this.idpinitiated = OptionalNullable.of(idpinitiated.get());
-            }
-            return this;
+        public Builder idpinitiated(com.auth0.client.mgmt.core.Nullable<SelfServiceProfileSsoTicketIdpInitiatedOptions> idpinitiated) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SelfServiceProfileSsoTicketConnectionOptions build() {
-            return new SelfServiceProfileSsoTicketConnectionOptions(
-                    iconUrl, domainAliases, idpinitiated, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

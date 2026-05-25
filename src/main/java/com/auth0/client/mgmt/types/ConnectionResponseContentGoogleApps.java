@@ -22,8 +22,8 @@ import org.jetbrains.annotations.NotNull;
 
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionResponseContentGoogleApps.Builder.class)
-public final class ConnectionResponseContentGoogleApps
-        implements IConnectionPurposes, IConnectionResponseCommon, ICreateConnectionCommon {
+public final class ConnectionResponseContentGoogleApps implements IConnectionPurposes, IConnectionResponseCommon, ICreateConnectionCommon {
+
     private final Optional<ConnectionAuthenticationPurpose> authentication;
 
     private final Optional<ConnectionConnectedAccountsPurpose> connectedAccounts;
@@ -52,21 +52,7 @@ public final class ConnectionResponseContentGoogleApps
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionResponseContentGoogleApps(
-            Optional<ConnectionAuthenticationPurpose> authentication,
-            Optional<ConnectionConnectedAccountsPurpose> connectedAccounts,
-            String id,
-            Optional<List<String>> realms,
-            String name,
-            Optional<List<String>> enabledClients,
-            Optional<String> displayName,
-            Optional<Boolean> isDomainConnection,
-            Optional<Map<String, OptionalNullable<String>>> metadata,
-            ConnectionResponseContentGoogleAppsStrategy strategy,
-            Optional<ConnectionOptionsGoogleApps> options,
-            Optional<String> provisioningTicketUrl,
-            Optional<Boolean> showAsButton,
-            Map<String, Object> additionalProperties) {
+    private ConnectionResponseContentGoogleApps(Optional<ConnectionAuthenticationPurpose> authentication, Optional<ConnectionConnectedAccountsPurpose> connectedAccounts, String id, Optional<List<String>> realms, String name, Optional<List<String>> enabledClients, Optional<String> displayName, Optional<Boolean> isDomainConnection, Optional<Map<String, OptionalNullable<String>>> metadata, ConnectionResponseContentGoogleAppsStrategy strategy, Optional<ConnectionOptionsGoogleApps> options, Optional<String> provisioningTicketUrl, Optional<Boolean> showAsButton, Map<String, Object> additionalProperties) {
         this.authentication = authentication;
         this.connectedAccounts = connectedAccounts;
         this.id = id;
@@ -86,31 +72,31 @@ public final class ConnectionResponseContentGoogleApps
     @JsonProperty("authentication")
     @java.lang.Override
     public Optional<ConnectionAuthenticationPurpose> getAuthentication() {
-        return authentication;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connected_accounts")
     @java.lang.Override
     public Optional<ConnectionConnectedAccountsPurpose> getConnectedAccounts() {
-        return connectedAccounts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("id")
     @java.lang.Override
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("realms")
     @java.lang.Override
     public Optional<List<String>> getRealms() {
-        return realms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("name")
     @java.lang.Override
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,117 +105,94 @@ public final class ConnectionResponseContentGoogleApps
     @JsonProperty("enabled_clients")
     @java.lang.Override
     public Optional<List<String>> getEnabledClients() {
-        return enabledClients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("display_name")
     @java.lang.Override
     public Optional<String> getDisplayName() {
-        return displayName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("is_domain_connection")
     @java.lang.Override
     public Optional<Boolean> getIsDomainConnection() {
-        return isDomainConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("metadata")
     @java.lang.Override
     public Optional<Map<String, OptionalNullable<String>>> getMetadata() {
-        return metadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("strategy")
     public ConnectionResponseContentGoogleAppsStrategy getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<ConnectionOptionsGoogleApps> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("provisioning_ticket_url")
     public Optional<String> getProvisioningTicketUrl() {
-        return provisioningTicketUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("show_as_button")
     public Optional<Boolean> getShowAsButton() {
-        return showAsButton;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionResponseContentGoogleApps
-                && equalTo((ConnectionResponseContentGoogleApps) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionResponseContentGoogleApps other) {
-        return authentication.equals(other.authentication)
-                && connectedAccounts.equals(other.connectedAccounts)
-                && id.equals(other.id)
-                && realms.equals(other.realms)
-                && name.equals(other.name)
-                && enabledClients.equals(other.enabledClients)
-                && displayName.equals(other.displayName)
-                && isDomainConnection.equals(other.isDomainConnection)
-                && metadata.equals(other.metadata)
-                && strategy.equals(other.strategy)
-                && options.equals(other.options)
-                && provisioningTicketUrl.equals(other.provisioningTicketUrl)
-                && showAsButton.equals(other.showAsButton);
+        return authentication.equals(other.authentication) && connectedAccounts.equals(other.connectedAccounts) && id.equals(other.id) && realms.equals(other.realms) && name.equals(other.name) && enabledClients.equals(other.enabledClients) && displayName.equals(other.displayName) && isDomainConnection.equals(other.isDomainConnection) && metadata.equals(other.metadata) && strategy.equals(other.strategy) && options.equals(other.options) && provisioningTicketUrl.equals(other.provisioningTicketUrl) && showAsButton.equals(other.showAsButton);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.authentication,
-                this.connectedAccounts,
-                this.id,
-                this.realms,
-                this.name,
-                this.enabledClients,
-                this.displayName,
-                this.isDomainConnection,
-                this.metadata,
-                this.strategy,
-                this.options,
-                this.provisioningTicketUrl,
-                this.showAsButton);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         NameStage id(@NotNull String id);
 
         Builder from(ConnectionResponseContentGoogleApps other);
     }
 
     public interface NameStage {
+
         StrategyStage name(@NotNull String name);
     }
 
     public interface StrategyStage {
+
         _FinalStage strategy(@NotNull ConnectionResponseContentGoogleAppsStrategy strategy);
     }
 
     public interface _FinalStage {
+
         ConnectionResponseContentGoogleApps build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -282,6 +245,7 @@ public final class ConnectionResponseContentGoogleApps
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements IdStage, NameStage, StrategyStage, _FinalStage {
+
         private String id;
 
         private String name;
@@ -311,123 +275,96 @@ public final class ConnectionResponseContentGoogleApps
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionResponseContentGoogleApps other) {
-            authentication(other.getAuthentication());
-            connectedAccounts(other.getConnectedAccounts());
-            id(other.getId());
-            realms(other.getRealms());
-            name(other.getName());
-            enabledClients(other.getEnabledClients());
-            displayName(other.getDisplayName());
-            isDomainConnection(other.getIsDomainConnection());
-            metadata(other.getMetadata());
-            strategy(other.getStrategy());
-            options(other.getOptions());
-            provisioningTicketUrl(other.getProvisioningTicketUrl());
-            showAsButton(other.getShowAsButton());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("id")
         public NameStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public StrategyStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("strategy")
         public _FinalStage strategy(@NotNull ConnectionResponseContentGoogleAppsStrategy strategy) {
-            this.strategy = Objects.requireNonNull(strategy, "strategy must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage showAsButton(Boolean showAsButton) {
-            this.showAsButton = Optional.ofNullable(showAsButton);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "show_as_button", nulls = Nulls.SKIP)
         public _FinalStage showAsButton(Optional<Boolean> showAsButton) {
-            this.showAsButton = showAsButton;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage provisioningTicketUrl(String provisioningTicketUrl) {
-            this.provisioningTicketUrl = Optional.ofNullable(provisioningTicketUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "provisioning_ticket_url", nulls = Nulls.SKIP)
         public _FinalStage provisioningTicketUrl(Optional<String> provisioningTicketUrl) {
-            this.provisioningTicketUrl = provisioningTicketUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage options(ConnectionOptionsGoogleApps options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public _FinalStage options(Optional<ConnectionOptionsGoogleApps> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage metadata(Map<String, OptionalNullable<String>> metadata) {
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "metadata", nulls = Nulls.SKIP)
         public _FinalStage metadata(Optional<Map<String, OptionalNullable<String>>> metadata) {
-            this.metadata = metadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage isDomainConnection(Boolean isDomainConnection) {
-            this.isDomainConnection = Optional.ofNullable(isDomainConnection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "is_domain_connection", nulls = Nulls.SKIP)
         public _FinalStage isDomainConnection(Optional<Boolean> isDomainConnection) {
-            this.isDomainConnection = isDomainConnection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage displayName(String displayName) {
-            this.displayName = Optional.ofNullable(displayName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "display_name", nulls = Nulls.SKIP)
         public _FinalStage displayName(Optional<String> displayName) {
-            this.displayName = displayName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -436,8 +373,7 @@ public final class ConnectionResponseContentGoogleApps
          */
         @java.lang.Override
         public _FinalStage enabledClients(List<String> enabledClients) {
-            this.enabledClients = Optional.ofNullable(enabledClients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -446,78 +382,55 @@ public final class ConnectionResponseContentGoogleApps
         @java.lang.Override
         @JsonSetter(value = "enabled_clients", nulls = Nulls.SKIP)
         public _FinalStage enabledClients(Optional<List<String>> enabledClients) {
-            this.enabledClients = enabledClients;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage realms(List<String> realms) {
-            this.realms = Optional.ofNullable(realms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "realms", nulls = Nulls.SKIP)
         public _FinalStage realms(Optional<List<String>> realms) {
-            this.realms = realms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage connectedAccounts(ConnectionConnectedAccountsPurpose connectedAccounts) {
-            this.connectedAccounts = Optional.ofNullable(connectedAccounts);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "connected_accounts", nulls = Nulls.SKIP)
         public _FinalStage connectedAccounts(Optional<ConnectionConnectedAccountsPurpose> connectedAccounts) {
-            this.connectedAccounts = connectedAccounts;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage authentication(ConnectionAuthenticationPurpose authentication) {
-            this.authentication = Optional.ofNullable(authentication);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "authentication", nulls = Nulls.SKIP)
         public _FinalStage authentication(Optional<ConnectionAuthenticationPurpose> authentication) {
-            this.authentication = authentication;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionResponseContentGoogleApps build() {
-            return new ConnectionResponseContentGoogleApps(
-                    authentication,
-                    connectedAccounts,
-                    id,
-                    realms,
-                    name,
-                    enabledClients,
-                    displayName,
-                    isDomainConnection,
-                    metadata,
-                    strategy,
-                    options,
-                    provisioningTicketUrl,
-                    showAsButton,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

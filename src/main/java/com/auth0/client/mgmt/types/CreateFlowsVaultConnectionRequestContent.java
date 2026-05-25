@@ -15,6 +15,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = CreateFlowsVaultConnectionRequestContent.Deserializer.class)
 public final class CreateFlowsVaultConnectionRequestContent {
+
     private final Object value;
 
     private final int type;
@@ -26,62 +27,17 @@ public final class CreateFlowsVaultConnectionRequestContent {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((CreateFlowsVaultConnectionActivecampaign) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((CreateFlowsVaultConnectionAirtable) this.value);
-        } else if (this.type == 2) {
-            return visitor.visit((CreateFlowsVaultConnectionAuth0) this.value);
-        } else if (this.type == 3) {
-            return visitor.visit((CreateFlowsVaultConnectionBigquery) this.value);
-        } else if (this.type == 4) {
-            return visitor.visit((CreateFlowsVaultConnectionClearbit) this.value);
-        } else if (this.type == 5) {
-            return visitor.visit((CreateFlowsVaultConnectionDocusign) this.value);
-        } else if (this.type == 6) {
-            return visitor.visit((CreateFlowsVaultConnectionGoogleSheets) this.value);
-        } else if (this.type == 7) {
-            return visitor.visit((CreateFlowsVaultConnectionHttp) this.value);
-        } else if (this.type == 8) {
-            return visitor.visit((CreateFlowsVaultConnectionHubspot) this.value);
-        } else if (this.type == 9) {
-            return visitor.visit((CreateFlowsVaultConnectionJwt) this.value);
-        } else if (this.type == 10) {
-            return visitor.visit((CreateFlowsVaultConnectionMailchimp) this.value);
-        } else if (this.type == 11) {
-            return visitor.visit((CreateFlowsVaultConnectionMailjet) this.value);
-        } else if (this.type == 12) {
-            return visitor.visit((CreateFlowsVaultConnectionPipedrive) this.value);
-        } else if (this.type == 13) {
-            return visitor.visit((CreateFlowsVaultConnectionSalesforce) this.value);
-        } else if (this.type == 14) {
-            return visitor.visit((CreateFlowsVaultConnectionSendgrid) this.value);
-        } else if (this.type == 15) {
-            return visitor.visit((CreateFlowsVaultConnectionSlack) this.value);
-        } else if (this.type == 16) {
-            return visitor.visit((CreateFlowsVaultConnectionStripe) this.value);
-        } else if (this.type == 17) {
-            return visitor.visit((CreateFlowsVaultConnectionTelegram) this.value);
-        } else if (this.type == 18) {
-            return visitor.visit((CreateFlowsVaultConnectionTwilio) this.value);
-        } else if (this.type == 19) {
-            return visitor.visit((CreateFlowsVaultConnectionWhatsapp) this.value);
-        } else if (this.type == 20) {
-            return visitor.visit((CreateFlowsVaultConnectionZapier) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateFlowsVaultConnectionRequestContent
-                && equalTo((CreateFlowsVaultConnectionRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateFlowsVaultConnectionRequestContent other) {
@@ -90,99 +46,100 @@ public final class CreateFlowsVaultConnectionRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionActivecampaign value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionAirtable value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionAuth0 value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionBigquery value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 3);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionClearbit value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 4);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionDocusign value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 5);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionGoogleSheets value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 6);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionHttp value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 7);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionHubspot value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 8);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionJwt value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 9);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionMailchimp value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 10);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionMailjet value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 11);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionPipedrive value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 12);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionSalesforce value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 13);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionSendgrid value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 14);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionSlack value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 15);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionStripe value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 16);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionTelegram value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 17);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionTwilio value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 18);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionWhatsapp value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 19);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CreateFlowsVaultConnectionRequestContent of(CreateFlowsVaultConnectionZapier value) {
-        return new CreateFlowsVaultConnectionRequestContent(value, 20);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(CreateFlowsVaultConnectionActivecampaign value);
 
         T visit(CreateFlowsVaultConnectionAirtable value);
@@ -227,100 +184,14 @@ public final class CreateFlowsVaultConnectionRequestContent {
     }
 
     static final class Deserializer extends StdDeserializer<CreateFlowsVaultConnectionRequestContent> {
+
         Deserializer() {
             super(CreateFlowsVaultConnectionRequestContent.class);
         }
 
         @java.lang.Override
-        public CreateFlowsVaultConnectionRequestContent deserialize(JsonParser p, DeserializationContext context)
-                throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(
-                        ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionActivecampaign.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionAirtable.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionAuth0.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionBigquery.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionClearbit.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionDocusign.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionGoogleSheets.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionHttp.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionHubspot.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionJwt.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionMailchimp.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionMailjet.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionPipedrive.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionSalesforce.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionSendgrid.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionSlack.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionStripe.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionTelegram.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionTwilio.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionWhatsapp.class));
-            } catch (RuntimeException e) {
-            }
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(value, CreateFlowsVaultConnectionZapier.class));
-            } catch (RuntimeException e) {
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+        public CreateFlowsVaultConnectionRequestContent deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

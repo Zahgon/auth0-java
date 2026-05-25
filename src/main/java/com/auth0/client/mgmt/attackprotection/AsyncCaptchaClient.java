@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateAttackProtectionCaptchaResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncCaptchaClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawCaptchaClient rawClient;
@@ -24,50 +25,48 @@ public class AsyncCaptchaClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawCaptchaClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the CAPTCHA configuration for your client.
      */
     public CompletableFuture<GetAttackProtectionCaptchaResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the CAPTCHA configuration for your client.
      */
     public CompletableFuture<GetAttackProtectionCaptchaResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
     public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
     public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
-    public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update(
-            UpdateAttackProtectionCaptchaRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update(UpdateAttackProtectionCaptchaRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update existing CAPTCHA configuration for your client.
      */
-    public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update(
-            UpdateAttackProtectionCaptchaRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateAttackProtectionCaptchaResponseContent> update(UpdateAttackProtectionCaptchaRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

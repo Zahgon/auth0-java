@@ -20,12 +20,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionFederatedConnectionsAccessTokens.Builder.class)
 public final class ConnectionFederatedConnectionsAccessTokens {
+
     private final Optional<Boolean> active;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionFederatedConnectionsAccessTokens(
-            Optional<Boolean> active, Map<String, Object> additionalProperties) {
+    private ConnectionFederatedConnectionsAccessTokens(Optional<Boolean> active, Map<String, Object> additionalProperties) {
         this.active = active;
         this.additionalProperties = additionalProperties;
     }
@@ -35,19 +35,17 @@ public final class ConnectionFederatedConnectionsAccessTokens {
      */
     @JsonProperty("active")
     public Optional<Boolean> getActive() {
-        return active;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionFederatedConnectionsAccessTokens
-                && equalTo((ConnectionFederatedConnectionsAccessTokens) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionFederatedConnectionsAccessTokens other) {
@@ -56,30 +54,31 @@ public final class ConnectionFederatedConnectionsAccessTokens {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.active);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> active = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionFederatedConnectionsAccessTokens other) {
-            active(other.getActive());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -87,27 +86,23 @@ public final class ConnectionFederatedConnectionsAccessTokens {
          */
         @JsonSetter(value = "active", nulls = Nulls.SKIP)
         public Builder active(Optional<Boolean> active) {
-            this.active = active;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder active(Boolean active) {
-            this.active = Optional.ofNullable(active);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionFederatedConnectionsAccessTokens build() {
-            return new ConnectionFederatedConnectionsAccessTokens(active, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CertificateSubjectDnCredential.Builder.class)
 public final class CertificateSubjectDnCredential {
+
     private final CertificateSubjectDnCredentialTypeEnum credentialType;
 
     private final Optional<String> name;
@@ -31,12 +32,7 @@ public final class CertificateSubjectDnCredential {
 
     private final Map<String, Object> additionalProperties;
 
-    private CertificateSubjectDnCredential(
-            CertificateSubjectDnCredentialTypeEnum credentialType,
-            Optional<String> name,
-            Optional<String> subjectDn,
-            Optional<String> pem,
-            Map<String, Object> additionalProperties) {
+    private CertificateSubjectDnCredential(CertificateSubjectDnCredentialTypeEnum credentialType, Optional<String> name, Optional<String> subjectDn, Optional<String> pem, Map<String, Object> additionalProperties) {
         this.credentialType = credentialType;
         this.name = name;
         this.subjectDn = subjectDn;
@@ -46,7 +42,7 @@ public final class CertificateSubjectDnCredential {
 
     @JsonProperty("credential_type")
     public CertificateSubjectDnCredentialTypeEnum getCredentialType() {
-        return credentialType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -54,7 +50,7 @@ public final class CertificateSubjectDnCredential {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class CertificateSubjectDnCredential {
      */
     @JsonProperty("subject_dn")
     public Optional<String> getSubjectDn() {
-        return subjectDn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,48 +66,46 @@ public final class CertificateSubjectDnCredential {
      */
     @JsonProperty("pem")
     public Optional<String> getPem() {
-        return pem;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CertificateSubjectDnCredential && equalTo((CertificateSubjectDnCredential) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CertificateSubjectDnCredential other) {
-        return credentialType.equals(other.credentialType)
-                && name.equals(other.name)
-                && subjectDn.equals(other.subjectDn)
-                && pem.equals(other.pem);
+        return credentialType.equals(other.credentialType) && name.equals(other.name) && subjectDn.equals(other.subjectDn) && pem.equals(other.pem);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.credentialType, this.name, this.subjectDn, this.pem);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static CredentialTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface CredentialTypeStage {
+
         _FinalStage credentialType(@NotNull CertificateSubjectDnCredentialTypeEnum credentialType);
 
         Builder from(CertificateSubjectDnCredential other);
     }
 
     public interface _FinalStage {
+
         CertificateSubjectDnCredential build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -142,6 +136,7 @@ public final class CertificateSubjectDnCredential {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements CredentialTypeStage, _FinalStage {
+
         private CertificateSubjectDnCredentialTypeEnum credentialType;
 
         private Optional<String> pem = Optional.empty();
@@ -153,22 +148,18 @@ public final class CertificateSubjectDnCredential {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CertificateSubjectDnCredential other) {
-            credentialType(other.getCredentialType());
-            name(other.getName());
-            subjectDn(other.getSubjectDn());
-            pem(other.getPem());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("credential_type")
         public _FinalStage credentialType(@NotNull CertificateSubjectDnCredentialTypeEnum credentialType) {
-            this.credentialType = Objects.requireNonNull(credentialType, "credentialType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -177,8 +168,7 @@ public final class CertificateSubjectDnCredential {
          */
         @java.lang.Override
         public _FinalStage pem(String pem) {
-            this.pem = Optional.ofNullable(pem);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -187,8 +177,7 @@ public final class CertificateSubjectDnCredential {
         @java.lang.Override
         @JsonSetter(value = "pem", nulls = Nulls.SKIP)
         public _FinalStage pem(Optional<String> pem) {
-            this.pem = pem;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -197,8 +186,7 @@ public final class CertificateSubjectDnCredential {
          */
         @java.lang.Override
         public _FinalStage subjectDn(String subjectDn) {
-            this.subjectDn = Optional.ofNullable(subjectDn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -207,8 +195,7 @@ public final class CertificateSubjectDnCredential {
         @java.lang.Override
         @JsonSetter(value = "subject_dn", nulls = Nulls.SKIP)
         public _FinalStage subjectDn(Optional<String> subjectDn) {
-            this.subjectDn = subjectDn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -217,8 +204,7 @@ public final class CertificateSubjectDnCredential {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -227,25 +213,22 @@ public final class CertificateSubjectDnCredential {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CertificateSubjectDnCredential build() {
-            return new CertificateSubjectDnCredential(credentialType, name, subjectDn, pem, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class PreferredAuthenticationMethodEnum {
-    public static final PreferredAuthenticationMethodEnum VOICE =
-            new PreferredAuthenticationMethodEnum(Value.VOICE, "voice");
+
+    public static final PreferredAuthenticationMethodEnum VOICE = new PreferredAuthenticationMethodEnum(Value.VOICE, "voice");
 
     public static final PreferredAuthenticationMethodEnum SMS = new PreferredAuthenticationMethodEnum(Value.SMS, "sms");
 
@@ -22,60 +22,41 @@ public final class PreferredAuthenticationMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof PreferredAuthenticationMethodEnum
-                        && this.string.equals(((PreferredAuthenticationMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case VOICE:
-                return visitor.visitVoice();
-            case SMS:
-                return visitor.visitSms();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static PreferredAuthenticationMethodEnum valueOf(String value) {
-        switch (value) {
-            case "voice":
-                return VOICE;
-            case "sms":
-                return SMS;
-            default:
-                return new PreferredAuthenticationMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        VOICE,
 
-        SMS,
-
-        UNKNOWN
+        VOICE, SMS, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitVoice();
 
         T visitSms();

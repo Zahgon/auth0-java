@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.GetDailyStatsRequestParameters;
 import java.util.List;
 
 public class StatsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawStatsClient rawClient;
@@ -23,48 +24,48 @@ public class StatsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawStatsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of active users that logged in during the last 30 days.
      */
     public double getActiveUsersCount() {
-        return this.rawClient.getActiveUsersCount().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of active users that logged in during the last 30 days.
      */
     public double getActiveUsersCount(RequestOptions requestOptions) {
-        return this.rawClient.getActiveUsersCount(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public List<DailyStats> getDaily() {
-        return this.rawClient.getDaily().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public List<DailyStats> getDaily(RequestOptions requestOptions) {
-        return this.rawClient.getDaily(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public List<DailyStats> getDaily(GetDailyStatsRequestParameters request) {
-        return this.rawClient.getDaily(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the number of logins, signups and breached-password detections (subscription required) that occurred each day within a specified date range.
      */
     public List<DailyStats> getDaily(GetDailyStatsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.getDaily(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

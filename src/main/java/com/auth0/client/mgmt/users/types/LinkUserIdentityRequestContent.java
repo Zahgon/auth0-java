@@ -22,6 +22,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = LinkUserIdentityRequestContent.Builder.class)
 public final class LinkUserIdentityRequestContent {
+
     private final Optional<UserIdentityProviderEnum> provider;
 
     private final Optional<String> connectionId;
@@ -32,12 +33,7 @@ public final class LinkUserIdentityRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private LinkUserIdentityRequestContent(
-            Optional<UserIdentityProviderEnum> provider,
-            Optional<String> connectionId,
-            Optional<UserId> userId,
-            Optional<String> linkWith,
-            Map<String, Object> additionalProperties) {
+    private LinkUserIdentityRequestContent(Optional<UserIdentityProviderEnum> provider, Optional<String> connectionId, Optional<UserId> userId, Optional<String> linkWith, Map<String, Object> additionalProperties) {
         this.provider = provider;
         this.connectionId = connectionId;
         this.userId = userId;
@@ -50,7 +46,7 @@ public final class LinkUserIdentityRequestContent {
      */
     @JsonProperty("provider")
     public Optional<UserIdentityProviderEnum> getProvider() {
-        return provider;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -58,12 +54,12 @@ public final class LinkUserIdentityRequestContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("user_id")
     public Optional<UserId> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,43 +67,40 @@ public final class LinkUserIdentityRequestContent {
      */
     @JsonProperty("link_with")
     public Optional<String> getLinkWith() {
-        return linkWith;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof LinkUserIdentityRequestContent && equalTo((LinkUserIdentityRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(LinkUserIdentityRequestContent other) {
-        return provider.equals(other.provider)
-                && connectionId.equals(other.connectionId)
-                && userId.equals(other.userId)
-                && linkWith.equals(other.linkWith);
+        return provider.equals(other.provider) && connectionId.equals(other.connectionId) && userId.equals(other.userId) && linkWith.equals(other.linkWith);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.provider, this.connectionId, this.userId, this.linkWith);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UserIdentityProviderEnum> provider = Optional.empty();
 
         private Optional<String> connectionId = Optional.empty();
@@ -119,14 +112,11 @@ public final class LinkUserIdentityRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(LinkUserIdentityRequestContent other) {
-            provider(other.getProvider());
-            connectionId(other.getConnectionId());
-            userId(other.getUserId());
-            linkWith(other.getLinkWith());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -134,13 +124,11 @@ public final class LinkUserIdentityRequestContent {
          */
         @JsonSetter(value = "provider", nulls = Nulls.SKIP)
         public Builder provider(Optional<UserIdentityProviderEnum> provider) {
-            this.provider = provider;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder provider(UserIdentityProviderEnum provider) {
-            this.provider = Optional.ofNullable(provider);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -148,24 +136,20 @@ public final class LinkUserIdentityRequestContent {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<UserId> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(UserId userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -173,27 +157,23 @@ public final class LinkUserIdentityRequestContent {
          */
         @JsonSetter(value = "link_with", nulls = Nulls.SKIP)
         public Builder linkWith(Optional<String> linkWith) {
-            this.linkWith = linkWith;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder linkWith(String linkWith) {
-            this.linkWith = Optional.ofNullable(linkWith);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public LinkUserIdentityRequestContent build() {
-            return new LinkUserIdentityRequestContent(provider, connectionId, userId, linkWith, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

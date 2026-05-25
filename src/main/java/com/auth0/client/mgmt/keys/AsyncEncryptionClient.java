@@ -17,6 +17,7 @@ import com.auth0.client.mgmt.types.ImportEncryptionKeyResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEncryptionClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEncryptionClient rawClient;
@@ -30,123 +31,118 @@ public class AsyncEncryptionClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEncryptionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<EncryptionKey>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<EncryptionKey>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
     public CompletableFuture<SyncPagingIterable<EncryptionKey>> list(ListEncryptionKeysRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the encryption keys associated with your tenant.
      */
-    public CompletableFuture<SyncPagingIterable<EncryptionKey>> list(
-            ListEncryptionKeysRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<EncryptionKey>> list(ListEncryptionKeysRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the new, pre-activated encryption key, without the key material.
      */
     public CompletableFuture<CreateEncryptionKeyResponseContent> create(CreateEncryptionKeyRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the new, pre-activated encryption key, without the key material.
      */
-    public CompletableFuture<CreateEncryptionKeyResponseContent> create(
-            CreateEncryptionKeyRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateEncryptionKeyResponseContent> create(CreateEncryptionKeyRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Perform rekeying operation on the key hierarchy.
      */
     public CompletableFuture<Void> rekey() {
-        return this.rawClient.rekey().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Perform rekeying operation on the key hierarchy.
      */
     public CompletableFuture<Void> rekey(RequestOptions requestOptions) {
-        return this.rawClient.rekey(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the encryption key with the given ID.
      */
     public CompletableFuture<GetEncryptionKeyResponseContent> get(String kid) {
-        return this.rawClient.get(kid).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the encryption key with the given ID.
      */
     public CompletableFuture<GetEncryptionKeyResponseContent> get(String kid, RequestOptions requestOptions) {
-        return this.rawClient.get(kid, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import wrapped key material and activate encryption key.
      */
-    public CompletableFuture<ImportEncryptionKeyResponseContent> import_(
-            String kid, ImportEncryptionKeyRequestContent request) {
-        return this.rawClient.import_(kid, request).thenApply(response -> response.body());
+    public CompletableFuture<ImportEncryptionKeyResponseContent> import_(String kid, ImportEncryptionKeyRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Import wrapped key material and activate encryption key.
      */
-    public CompletableFuture<ImportEncryptionKeyResponseContent> import_(
-            String kid, ImportEncryptionKeyRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.import_(kid, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ImportEncryptionKeyResponseContent> import_(String kid, ImportEncryptionKeyRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the custom provided encryption key with the given ID and move back to using native encryption key.
      */
     public CompletableFuture<Void> delete(String kid) {
-        return this.rawClient.delete(kid).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete the custom provided encryption key with the given ID and move back to using native encryption key.
      */
     public CompletableFuture<Void> delete(String kid, RequestOptions requestOptions) {
-        return this.rawClient.delete(kid, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the public wrapping key to wrap your own encryption key material.
      */
     public CompletableFuture<CreateEncryptionKeyPublicWrappingResponseContent> createPublicWrappingKey(String kid) {
-        return this.rawClient.createPublicWrappingKey(kid).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create the public wrapping key to wrap your own encryption key material.
      */
-    public CompletableFuture<CreateEncryptionKeyPublicWrappingResponseContent> createPublicWrappingKey(
-            String kid, RequestOptions requestOptions) {
-        return this.rawClient.createPublicWrappingKey(kid, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateEncryptionKeyPublicWrappingResponseContent> createPublicWrappingKey(String kid, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentEmailStrategy {
-    public static final ConnectionResponseContentEmailStrategy EMAIL =
-            new ConnectionResponseContentEmailStrategy(Value.EMAIL, "email");
+
+    public static final ConnectionResponseContentEmailStrategy EMAIL = new ConnectionResponseContentEmailStrategy(Value.EMAIL, "email");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentEmailStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentEmailStrategy
-                        && this.string.equals(((ConnectionResponseContentEmailStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentEmailStrategy valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            default:
-                return new ConnectionResponseContentEmailStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EMAIL,
 
-        UNKNOWN
+        EMAIL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEmail();
 
         T visitUnknown(String unknownType);

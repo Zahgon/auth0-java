@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SynchronizeGroupsEnum {
+
     public static final SynchronizeGroupsEnum ALL = new SynchronizeGroupsEnum(Value.ALL, "all");
 
     public static final SynchronizeGroupsEnum SELECTED = new SynchronizeGroupsEnum(Value.SELECTED, "selected");
@@ -23,66 +24,41 @@ public final class SynchronizeGroupsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SynchronizeGroupsEnum
-                        && this.string.equals(((SynchronizeGroupsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ALL:
-                return visitor.visitAll();
-            case SELECTED:
-                return visitor.visitSelected();
-            case OFF:
-                return visitor.visitOff();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SynchronizeGroupsEnum valueOf(String value) {
-        switch (value) {
-            case "all":
-                return ALL;
-            case "selected":
-                return SELECTED;
-            case "off":
-                return OFF;
-            default:
-                return new SynchronizeGroupsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ALL,
 
-        OFF,
-
-        SELECTED,
-
-        UNKNOWN
+        ALL, OFF, SELECTED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAll();
 
         T visitOff();

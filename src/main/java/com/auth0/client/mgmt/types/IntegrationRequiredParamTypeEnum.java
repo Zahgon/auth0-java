@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class IntegrationRequiredParamTypeEnum {
-    public static final IntegrationRequiredParamTypeEnum UNSPECIFIED =
-            new IntegrationRequiredParamTypeEnum(Value.UNSPECIFIED, "UNSPECIFIED");
 
-    public static final IntegrationRequiredParamTypeEnum STRING =
-            new IntegrationRequiredParamTypeEnum(Value.STRING, "STRING");
+    public static final IntegrationRequiredParamTypeEnum UNSPECIFIED = new IntegrationRequiredParamTypeEnum(Value.UNSPECIFIED, "UNSPECIFIED");
+
+    public static final IntegrationRequiredParamTypeEnum STRING = new IntegrationRequiredParamTypeEnum(Value.STRING, "STRING");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class IntegrationRequiredParamTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof IntegrationRequiredParamTypeEnum
-                        && this.string.equals(((IntegrationRequiredParamTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UNSPECIFIED:
-                return visitor.visitUnspecified();
-            case STRING:
-                return visitor.visitString();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static IntegrationRequiredParamTypeEnum valueOf(String value) {
-        switch (value) {
-            case "UNSPECIFIED":
-                return UNSPECIFIED;
-            case "STRING":
-                return STRING;
-            default:
-                return new IntegrationRequiredParamTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UNSPECIFIED,
 
-        STRING,
-
-        UNKNOWN
+        UNSPECIFIED, STRING, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUnspecified();
 
         T visitString();

@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AttackProtectionClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<BotDetectionClient> botDetectionClient;
@@ -23,30 +24,29 @@ public class AttackProtectionClient {
     public AttackProtectionClient(ClientOptions clientOptions) {
         this.clientOptions = clientOptions;
         this.botDetectionClient = Suppliers.memoize(() -> new BotDetectionClient(clientOptions));
-        this.breachedPasswordDetectionClient =
-                Suppliers.memoize(() -> new BreachedPasswordDetectionClient(clientOptions));
+        this.breachedPasswordDetectionClient = Suppliers.memoize(() -> new BreachedPasswordDetectionClient(clientOptions));
         this.bruteForceProtectionClient = Suppliers.memoize(() -> new BruteForceProtectionClient(clientOptions));
         this.captchaClient = Suppliers.memoize(() -> new CaptchaClient(clientOptions));
         this.suspiciousIpThrottlingClient = Suppliers.memoize(() -> new SuspiciousIpThrottlingClient(clientOptions));
     }
 
     public BotDetectionClient botDetection() {
-        return this.botDetectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BreachedPasswordDetectionClient breachedPasswordDetection() {
-        return this.breachedPasswordDetectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BruteForceProtectionClient bruteForceProtection() {
-        return this.bruteForceProtectionClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CaptchaClient captcha() {
-        return this.captchaClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public SuspiciousIpThrottlingClient suspiciousIpThrottling() {
-        return this.suspiciousIpThrottlingClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

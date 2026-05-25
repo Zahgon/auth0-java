@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreatePhoneProviderSendTestResponseContent.Builder.class)
 public final class CreatePhoneProviderSendTestResponseContent {
+
     private final Optional<Double> code;
 
     private final Optional<String> message;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreatePhoneProviderSendTestResponseContent(
-            Optional<Double> code, Optional<String> message, Map<String, Object> additionalProperties) {
+    private CreatePhoneProviderSendTestResponseContent(Optional<Double> code, Optional<String> message, Map<String, Object> additionalProperties) {
         this.code = code;
         this.message = message;
         this.additionalProperties = additionalProperties;
@@ -38,7 +38,7 @@ public final class CreatePhoneProviderSendTestResponseContent {
      */
     @JsonProperty("code")
     public Optional<Double> getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -46,19 +46,17 @@ public final class CreatePhoneProviderSendTestResponseContent {
      */
     @JsonProperty("message")
     public Optional<String> getMessage() {
-        return message;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreatePhoneProviderSendTestResponseContent
-                && equalTo((CreatePhoneProviderSendTestResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreatePhoneProviderSendTestResponseContent other) {
@@ -67,20 +65,21 @@ public final class CreatePhoneProviderSendTestResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.code, this.message);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Double> code = Optional.empty();
 
         private Optional<String> message = Optional.empty();
@@ -88,12 +87,11 @@ public final class CreatePhoneProviderSendTestResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(CreatePhoneProviderSendTestResponseContent other) {
-            code(other.getCode());
-            message(other.getMessage());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -101,13 +99,11 @@ public final class CreatePhoneProviderSendTestResponseContent {
          */
         @JsonSetter(value = "code", nulls = Nulls.SKIP)
         public Builder code(Optional<Double> code) {
-            this.code = code;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder code(Double code) {
-            this.code = Optional.ofNullable(code);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -115,27 +111,23 @@ public final class CreatePhoneProviderSendTestResponseContent {
          */
         @JsonSetter(value = "message", nulls = Nulls.SKIP)
         public Builder message(Optional<String> message) {
-            this.message = message;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder message(String message) {
-            this.message = Optional.ofNullable(message);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public CreatePhoneProviderSendTestResponseContent build() {
-            return new CreatePhoneProviderSendTestResponseContent(code, message, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,6 +21,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = DomainVerification.Builder.class)
 public final class DomainVerification {
+
     private final Optional<List<DomainVerificationMethod>> methods;
 
     private final Optional<DomainVerificationStatusEnum> status;
@@ -31,12 +32,7 @@ public final class DomainVerification {
 
     private final Map<String, Object> additionalProperties;
 
-    private DomainVerification(
-            Optional<List<DomainVerificationMethod>> methods,
-            Optional<DomainVerificationStatusEnum> status,
-            Optional<String> errorMsg,
-            Optional<String> lastVerifiedAt,
-            Map<String, Object> additionalProperties) {
+    private DomainVerification(Optional<List<DomainVerificationMethod>> methods, Optional<DomainVerificationStatusEnum> status, Optional<String> errorMsg, Optional<String> lastVerifiedAt, Map<String, Object> additionalProperties) {
         this.methods = methods;
         this.status = status;
         this.errorMsg = errorMsg;
@@ -49,12 +45,12 @@ public final class DomainVerification {
      */
     @JsonProperty("methods")
     public Optional<List<DomainVerificationMethod>> getMethods() {
-        return methods;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<DomainVerificationStatusEnum> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class DomainVerification {
      */
     @JsonProperty("error_msg")
     public Optional<String> getErrorMsg() {
-        return errorMsg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,43 +66,40 @@ public final class DomainVerification {
      */
     @JsonProperty("last_verified_at")
     public Optional<String> getLastVerifiedAt() {
-        return lastVerifiedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof DomainVerification && equalTo((DomainVerification) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(DomainVerification other) {
-        return methods.equals(other.methods)
-                && status.equals(other.status)
-                && errorMsg.equals(other.errorMsg)
-                && lastVerifiedAt.equals(other.lastVerifiedAt);
+        return methods.equals(other.methods) && status.equals(other.status) && errorMsg.equals(other.errorMsg) && lastVerifiedAt.equals(other.lastVerifiedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.methods, this.status, this.errorMsg, this.lastVerifiedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<DomainVerificationMethod>> methods = Optional.empty();
 
         private Optional<DomainVerificationStatusEnum> status = Optional.empty();
@@ -118,14 +111,11 @@ public final class DomainVerification {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(DomainVerification other) {
-            methods(other.getMethods());
-            status(other.getStatus());
-            errorMsg(other.getErrorMsg());
-            lastVerifiedAt(other.getLastVerifiedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,24 +123,20 @@ public final class DomainVerification {
          */
         @JsonSetter(value = "methods", nulls = Nulls.SKIP)
         public Builder methods(Optional<List<DomainVerificationMethod>> methods) {
-            this.methods = methods;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder methods(List<DomainVerificationMethod> methods) {
-            this.methods = Optional.ofNullable(methods);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public Builder status(Optional<DomainVerificationStatusEnum> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder status(DomainVerificationStatusEnum status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -158,13 +144,11 @@ public final class DomainVerification {
          */
         @JsonSetter(value = "error_msg", nulls = Nulls.SKIP)
         public Builder errorMsg(Optional<String> errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder errorMsg(String errorMsg) {
-            this.errorMsg = Optional.ofNullable(errorMsg);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -172,27 +156,23 @@ public final class DomainVerification {
          */
         @JsonSetter(value = "last_verified_at", nulls = Nulls.SKIP)
         public Builder lastVerifiedAt(Optional<String> lastVerifiedAt) {
-            this.lastVerifiedAt = lastVerifiedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder lastVerifiedAt(String lastVerifiedAt) {
-            this.lastVerifiedAt = Optional.ofNullable(lastVerifiedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public DomainVerification build() {
-            return new DomainVerification(methods, status, errorMsg, lastVerifiedAt, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

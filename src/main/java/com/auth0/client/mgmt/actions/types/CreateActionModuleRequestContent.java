@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateActionModuleRequestContent.Builder.class)
 public final class CreateActionModuleRequestContent {
+
     private final String name;
 
     private final String code;
@@ -38,14 +39,7 @@ public final class CreateActionModuleRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateActionModuleRequestContent(
-            String name,
-            String code,
-            Optional<List<ActionModuleSecretRequest>> secrets,
-            Optional<List<ActionModuleDependencyRequest>> dependencies,
-            Optional<String> apiVersion,
-            Optional<Boolean> publish,
-            Map<String, Object> additionalProperties) {
+    private CreateActionModuleRequestContent(String name, String code, Optional<List<ActionModuleSecretRequest>> secrets, Optional<List<ActionModuleDependencyRequest>> dependencies, Optional<String> apiVersion, Optional<Boolean> publish, Map<String, Object> additionalProperties) {
         this.name = name;
         this.code = code;
         this.secrets = secrets;
@@ -60,7 +54,7 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +62,7 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("code")
     public String getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,7 +70,7 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("secrets")
     public Optional<List<ActionModuleSecretRequest>> getSecrets() {
-        return secrets;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,7 +78,7 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("dependencies")
     public Optional<List<ActionModuleDependencyRequest>> getDependencies() {
-        return dependencies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,7 +86,7 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("api_version")
     public Optional<String> getApiVersion() {
-        return apiVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,44 +94,39 @@ public final class CreateActionModuleRequestContent {
      */
     @JsonProperty("publish")
     public Optional<Boolean> getPublish() {
-        return publish;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateActionModuleRequestContent && equalTo((CreateActionModuleRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateActionModuleRequestContent other) {
-        return name.equals(other.name)
-                && code.equals(other.code)
-                && secrets.equals(other.secrets)
-                && dependencies.equals(other.dependencies)
-                && apiVersion.equals(other.apiVersion)
-                && publish.equals(other.publish);
+        return name.equals(other.name) && code.equals(other.code) && secrets.equals(other.secrets) && dependencies.equals(other.dependencies) && apiVersion.equals(other.apiVersion) && publish.equals(other.publish);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.code, this.secrets, this.dependencies, this.apiVersion, this.publish);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of the action module.</p>
          */
@@ -147,6 +136,7 @@ public final class CreateActionModuleRequestContent {
     }
 
     public interface CodeStage {
+
         /**
          * <p>The source code of the action module.</p>
          */
@@ -154,6 +144,7 @@ public final class CreateActionModuleRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateActionModuleRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -191,6 +182,7 @@ public final class CreateActionModuleRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, CodeStage, _FinalStage {
+
         private String name;
 
         private String code;
@@ -206,17 +198,12 @@ public final class CreateActionModuleRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateActionModuleRequestContent other) {
-            name(other.getName());
-            code(other.getCode());
-            secrets(other.getSecrets());
-            dependencies(other.getDependencies());
-            apiVersion(other.getApiVersion());
-            publish(other.getPublish());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -227,8 +214,7 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public CodeStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,8 +225,7 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter("code")
         public _FinalStage code(@NotNull String code) {
-            this.code = Objects.requireNonNull(code, "code must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -249,8 +234,7 @@ public final class CreateActionModuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage publish(Boolean publish) {
-            this.publish = Optional.ofNullable(publish);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -259,8 +243,7 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "publish", nulls = Nulls.SKIP)
         public _FinalStage publish(Optional<Boolean> publish) {
-            this.publish = publish;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -269,8 +252,7 @@ public final class CreateActionModuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage apiVersion(String apiVersion) {
-            this.apiVersion = Optional.ofNullable(apiVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -279,8 +261,7 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "api_version", nulls = Nulls.SKIP)
         public _FinalStage apiVersion(Optional<String> apiVersion) {
-            this.apiVersion = apiVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -289,8 +270,7 @@ public final class CreateActionModuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage dependencies(List<ActionModuleDependencyRequest> dependencies) {
-            this.dependencies = Optional.ofNullable(dependencies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -299,8 +279,7 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "dependencies", nulls = Nulls.SKIP)
         public _FinalStage dependencies(Optional<List<ActionModuleDependencyRequest>> dependencies) {
-            this.dependencies = dependencies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -309,8 +288,7 @@ public final class CreateActionModuleRequestContent {
          */
         @java.lang.Override
         public _FinalStage secrets(List<ActionModuleSecretRequest> secrets) {
-            this.secrets = Optional.ofNullable(secrets);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -319,26 +297,22 @@ public final class CreateActionModuleRequestContent {
         @java.lang.Override
         @JsonSetter(value = "secrets", nulls = Nulls.SKIP)
         public _FinalStage secrets(Optional<List<ActionModuleSecretRequest>> secrets) {
-            this.secrets = secrets;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateActionModuleRequestContent build() {
-            return new CreateActionModuleRequestContent(
-                    name, code, secrets, dependencies, apiVersion, publish, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

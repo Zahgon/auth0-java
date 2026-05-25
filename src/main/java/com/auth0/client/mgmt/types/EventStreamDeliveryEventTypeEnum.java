@@ -7,77 +7,50 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamDeliveryEventTypeEnum {
-    public static final EventStreamDeliveryEventTypeEnum GROUP_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_DELETED, "group.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_UPDATED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_CONNECTION_UPDATED, "organization.connection.updated");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_DELETED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_DELETED, "group.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_ADDED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CONNECTION_ADDED, "organization.connection.added");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_UPDATED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CONNECTION_UPDATED, "organization.connection.updated");
 
-    public static final EventStreamDeliveryEventTypeEnum USER_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.USER_DELETED, "user.deleted");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_ADDED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CONNECTION_ADDED, "organization.connection.added");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_ROLE_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_ROLE_DELETED, "group.role.deleted");
+    public static final EventStreamDeliveryEventTypeEnum USER_DELETED = new EventStreamDeliveryEventTypeEnum(Value.USER_DELETED, "user.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CREATED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CREATED, "organization.created");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_ROLE_DELETED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_ROLE_DELETED, "group.role.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_DELETED, "organization.member.deleted");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CREATED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CREATED, "organization.created");
 
-    public static final EventStreamDeliveryEventTypeEnum USER_UPDATED =
-            new EventStreamDeliveryEventTypeEnum(Value.USER_UPDATED, "user.updated");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_DELETED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_DELETED, "organization.member.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_UPDATED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_UPDATED, "organization.updated");
+    public static final EventStreamDeliveryEventTypeEnum USER_UPDATED = new EventStreamDeliveryEventTypeEnum(Value.USER_UPDATED, "user.updated");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_MEMBER_ADDED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_MEMBER_ADDED, "group.member.added");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_UPDATED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_UPDATED, "organization.updated");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_GROUP_ROLE_ASSIGNED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_GROUP_ROLE_ASSIGNED, "organization.group.role.assigned");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_MEMBER_ADDED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_MEMBER_ADDED, "group.member.added");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_CREATED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_CREATED, "group.created");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_GROUP_ROLE_ASSIGNED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_GROUP_ROLE_ASSIGNED, "organization.group.role.assigned");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_REMOVED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_CONNECTION_REMOVED, "organization.connection.removed");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_CREATED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_CREATED, "group.created");
 
-    public static final EventStreamDeliveryEventTypeEnum USER_CREATED =
-            new EventStreamDeliveryEventTypeEnum(Value.USER_CREATED, "user.created");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_CONNECTION_REMOVED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_CONNECTION_REMOVED, "organization.connection.removed");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_MEMBER_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_MEMBER_DELETED, "group.member.deleted");
+    public static final EventStreamDeliveryEventTypeEnum USER_CREATED = new EventStreamDeliveryEventTypeEnum(Value.USER_CREATED, "user.created");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_UPDATED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_UPDATED, "group.updated");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_MEMBER_DELETED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_MEMBER_DELETED, "group.member.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum GROUP_ROLE_ASSIGNED =
-            new EventStreamDeliveryEventTypeEnum(Value.GROUP_ROLE_ASSIGNED, "group.role.assigned");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_UPDATED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_UPDATED, "group.updated");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_DELETED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_DELETED, "organization.deleted");
+    public static final EventStreamDeliveryEventTypeEnum GROUP_ROLE_ASSIGNED = new EventStreamDeliveryEventTypeEnum(Value.GROUP_ROLE_ASSIGNED, "group.role.assigned");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ADDED =
-            new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_ADDED, "organization.member.added");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_DELETED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_DELETED, "organization.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_GROUP_ROLE_DELETED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_GROUP_ROLE_DELETED, "organization.group.role.deleted");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ADDED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_ADDED, "organization.member.added");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ROLE_ASSIGNED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_MEMBER_ROLE_ASSIGNED, "organization.member.role.assigned");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_GROUP_ROLE_DELETED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_GROUP_ROLE_DELETED, "organization.group.role.deleted");
 
-    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ROLE_DELETED =
-            new EventStreamDeliveryEventTypeEnum(
-                    Value.ORGANIZATION_MEMBER_ROLE_DELETED, "organization.member.role.deleted");
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ROLE_ASSIGNED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_ROLE_ASSIGNED, "organization.member.role.assigned");
+
+    public static final EventStreamDeliveryEventTypeEnum ORGANIZATION_MEMBER_ROLE_DELETED = new EventStreamDeliveryEventTypeEnum(Value.ORGANIZATION_MEMBER_ROLE_DELETED, "organization.member.role.deleted");
 
     private final Value value;
 
@@ -89,180 +62,63 @@ public final class EventStreamDeliveryEventTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamDeliveryEventTypeEnum
-                        && this.string.equals(((EventStreamDeliveryEventTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case GROUP_DELETED:
-                return visitor.visitGroupDeleted();
-            case ORGANIZATION_CONNECTION_UPDATED:
-                return visitor.visitOrganizationConnectionUpdated();
-            case ORGANIZATION_CONNECTION_ADDED:
-                return visitor.visitOrganizationConnectionAdded();
-            case USER_DELETED:
-                return visitor.visitUserDeleted();
-            case GROUP_ROLE_DELETED:
-                return visitor.visitGroupRoleDeleted();
-            case ORGANIZATION_CREATED:
-                return visitor.visitOrganizationCreated();
-            case ORGANIZATION_MEMBER_DELETED:
-                return visitor.visitOrganizationMemberDeleted();
-            case USER_UPDATED:
-                return visitor.visitUserUpdated();
-            case ORGANIZATION_UPDATED:
-                return visitor.visitOrganizationUpdated();
-            case GROUP_MEMBER_ADDED:
-                return visitor.visitGroupMemberAdded();
-            case ORGANIZATION_GROUP_ROLE_ASSIGNED:
-                return visitor.visitOrganizationGroupRoleAssigned();
-            case GROUP_CREATED:
-                return visitor.visitGroupCreated();
-            case ORGANIZATION_CONNECTION_REMOVED:
-                return visitor.visitOrganizationConnectionRemoved();
-            case USER_CREATED:
-                return visitor.visitUserCreated();
-            case GROUP_MEMBER_DELETED:
-                return visitor.visitGroupMemberDeleted();
-            case GROUP_UPDATED:
-                return visitor.visitGroupUpdated();
-            case GROUP_ROLE_ASSIGNED:
-                return visitor.visitGroupRoleAssigned();
-            case ORGANIZATION_DELETED:
-                return visitor.visitOrganizationDeleted();
-            case ORGANIZATION_MEMBER_ADDED:
-                return visitor.visitOrganizationMemberAdded();
-            case ORGANIZATION_GROUP_ROLE_DELETED:
-                return visitor.visitOrganizationGroupRoleDeleted();
-            case ORGANIZATION_MEMBER_ROLE_ASSIGNED:
-                return visitor.visitOrganizationMemberRoleAssigned();
-            case ORGANIZATION_MEMBER_ROLE_DELETED:
-                return visitor.visitOrganizationMemberRoleDeleted();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamDeliveryEventTypeEnum valueOf(String value) {
-        switch (value) {
-            case "group.deleted":
-                return GROUP_DELETED;
-            case "organization.connection.updated":
-                return ORGANIZATION_CONNECTION_UPDATED;
-            case "organization.connection.added":
-                return ORGANIZATION_CONNECTION_ADDED;
-            case "user.deleted":
-                return USER_DELETED;
-            case "group.role.deleted":
-                return GROUP_ROLE_DELETED;
-            case "organization.created":
-                return ORGANIZATION_CREATED;
-            case "organization.member.deleted":
-                return ORGANIZATION_MEMBER_DELETED;
-            case "user.updated":
-                return USER_UPDATED;
-            case "organization.updated":
-                return ORGANIZATION_UPDATED;
-            case "group.member.added":
-                return GROUP_MEMBER_ADDED;
-            case "organization.group.role.assigned":
-                return ORGANIZATION_GROUP_ROLE_ASSIGNED;
-            case "group.created":
-                return GROUP_CREATED;
-            case "organization.connection.removed":
-                return ORGANIZATION_CONNECTION_REMOVED;
-            case "user.created":
-                return USER_CREATED;
-            case "group.member.deleted":
-                return GROUP_MEMBER_DELETED;
-            case "group.updated":
-                return GROUP_UPDATED;
-            case "group.role.assigned":
-                return GROUP_ROLE_ASSIGNED;
-            case "organization.deleted":
-                return ORGANIZATION_DELETED;
-            case "organization.member.added":
-                return ORGANIZATION_MEMBER_ADDED;
-            case "organization.group.role.deleted":
-                return ORGANIZATION_GROUP_ROLE_DELETED;
-            case "organization.member.role.assigned":
-                return ORGANIZATION_MEMBER_ROLE_ASSIGNED;
-            case "organization.member.role.deleted":
-                return ORGANIZATION_MEMBER_ROLE_DELETED;
-            default:
-                return new EventStreamDeliveryEventTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         GROUP_CREATED,
-
         GROUP_DELETED,
-
         GROUP_MEMBER_ADDED,
-
         GROUP_MEMBER_DELETED,
-
         GROUP_ROLE_ASSIGNED,
-
         GROUP_ROLE_DELETED,
-
         GROUP_UPDATED,
-
         ORGANIZATION_CONNECTION_ADDED,
-
         ORGANIZATION_CONNECTION_REMOVED,
-
         ORGANIZATION_CONNECTION_UPDATED,
-
         ORGANIZATION_CREATED,
-
         ORGANIZATION_DELETED,
-
         ORGANIZATION_GROUP_ROLE_ASSIGNED,
-
         ORGANIZATION_GROUP_ROLE_DELETED,
-
         ORGANIZATION_MEMBER_ADDED,
-
         ORGANIZATION_MEMBER_DELETED,
-
         ORGANIZATION_MEMBER_ROLE_ASSIGNED,
-
         ORGANIZATION_MEMBER_ROLE_DELETED,
-
         ORGANIZATION_UPDATED,
-
         USER_CREATED,
-
         USER_DELETED,
-
         USER_UPDATED,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitGroupCreated();
 
         T visitGroupDeleted();

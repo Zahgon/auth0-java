@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientTokenEndpointAuthMethodEnum {
-    public static final ClientTokenEndpointAuthMethodEnum CLIENT_SECRET_BASIC =
-            new ClientTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_BASIC, "client_secret_basic");
 
-    public static final ClientTokenEndpointAuthMethodEnum CLIENT_SECRET_POST =
-            new ClientTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_POST, "client_secret_post");
+    public static final ClientTokenEndpointAuthMethodEnum CLIENT_SECRET_BASIC = new ClientTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_BASIC, "client_secret_basic");
 
-    public static final ClientTokenEndpointAuthMethodEnum NONE =
-            new ClientTokenEndpointAuthMethodEnum(Value.NONE, "none");
+    public static final ClientTokenEndpointAuthMethodEnum CLIENT_SECRET_POST = new ClientTokenEndpointAuthMethodEnum(Value.CLIENT_SECRET_POST, "client_secret_post");
+
+    public static final ClientTokenEndpointAuthMethodEnum NONE = new ClientTokenEndpointAuthMethodEnum(Value.NONE, "none");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ClientTokenEndpointAuthMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientTokenEndpointAuthMethodEnum
-                        && this.string.equals(((ClientTokenEndpointAuthMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case CLIENT_SECRET_BASIC:
-                return visitor.visitClientSecretBasic();
-            case CLIENT_SECRET_POST:
-                return visitor.visitClientSecretPost();
-            case NONE:
-                return visitor.visitNone();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientTokenEndpointAuthMethodEnum valueOf(String value) {
-        switch (value) {
-            case "client_secret_basic":
-                return CLIENT_SECRET_BASIC;
-            case "client_secret_post":
-                return CLIENT_SECRET_POST;
-            case "none":
-                return NONE;
-            default:
-                return new ClientTokenEndpointAuthMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        NONE,
 
-        CLIENT_SECRET_POST,
-
-        CLIENT_SECRET_BASIC,
-
-        UNKNOWN
+        NONE, CLIENT_SECRET_POST, CLIENT_SECRET_BASIC, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitNone();
 
         T visitClientSecretPost();

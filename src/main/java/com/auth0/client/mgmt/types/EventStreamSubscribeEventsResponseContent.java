@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 public final class EventStreamSubscribeEventsResponseContent {
+
     private final Value value;
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
@@ -23,408 +24,318 @@ public final class EventStreamSubscribeEventsResponseContent {
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        return value.visit(visitor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent groupCreated(EventStreamCloudEventGroupCreated value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupCreatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent groupDeleted(EventStreamCloudEventGroupDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupDeletedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent groupMemberAdded(
-            EventStreamCloudEventGroupMemberAdded value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupMemberAddedValue(value));
+    public static EventStreamSubscribeEventsResponseContent groupMemberAdded(EventStreamCloudEventGroupMemberAdded value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent groupMemberDeleted(
-            EventStreamCloudEventGroupMemberDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupMemberDeletedValue(value));
+    public static EventStreamSubscribeEventsResponseContent groupMemberDeleted(EventStreamCloudEventGroupMemberDeleted value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent groupRoleAssigned(
-            EventStreamCloudEventGroupRoleAssigned value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupRoleAssignedValue(value));
+    public static EventStreamSubscribeEventsResponseContent groupRoleAssigned(EventStreamCloudEventGroupRoleAssigned value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent groupRoleDeleted(
-            EventStreamCloudEventGroupRoleDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupRoleDeletedValue(value));
+    public static EventStreamSubscribeEventsResponseContent groupRoleDeleted(EventStreamCloudEventGroupRoleDeleted value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent groupUpdated(EventStreamCloudEventGroupUpdated value) {
-        return new EventStreamSubscribeEventsResponseContent(new GroupUpdatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationConnectionAdded(
-            EventStreamCloudEventOrgConnectionAdded value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationConnectionAddedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationConnectionAdded(EventStreamCloudEventOrgConnectionAdded value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationConnectionRemoved(
-            EventStreamCloudEventOrgConnectionRemoved value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationConnectionRemovedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationConnectionRemoved(EventStreamCloudEventOrgConnectionRemoved value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationConnectionUpdated(
-            EventStreamCloudEventOrgConnectionUpdated value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationConnectionUpdatedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationConnectionUpdated(EventStreamCloudEventOrgConnectionUpdated value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent organizationCreated(EventStreamCloudEventOrgCreated value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationCreatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent organizationDeleted(EventStreamCloudEventOrgDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationDeletedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationGroupRoleAssigned(
-            EventStreamCloudEventOrgGroupRoleAssigned value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationGroupRoleAssignedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationGroupRoleAssigned(EventStreamCloudEventOrgGroupRoleAssigned value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationGroupRoleDeleted(
-            EventStreamCloudEventOrgGroupRoleDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationGroupRoleDeletedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationGroupRoleDeleted(EventStreamCloudEventOrgGroupRoleDeleted value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationMemberAdded(
-            EventStreamCloudEventOrgMemberAdded value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationMemberAddedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationMemberAdded(EventStreamCloudEventOrgMemberAdded value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationMemberDeleted(
-            EventStreamCloudEventOrgMemberDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationMemberDeletedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationMemberDeleted(EventStreamCloudEventOrgMemberDeleted value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationMemberRoleAssigned(
-            EventStreamCloudEventOrgMemberRoleAssigned value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationMemberRoleAssignedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationMemberRoleAssigned(EventStreamCloudEventOrgMemberRoleAssigned value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static EventStreamSubscribeEventsResponseContent organizationMemberRoleDeleted(
-            EventStreamCloudEventOrgMemberRoleDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationMemberRoleDeletedValue(value));
+    public static EventStreamSubscribeEventsResponseContent organizationMemberRoleDeleted(EventStreamCloudEventOrgMemberRoleDeleted value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent organizationUpdated(EventStreamCloudEventOrgUpdated value) {
-        return new EventStreamSubscribeEventsResponseContent(new OrganizationUpdatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent userCreated(EventStreamCloudEventUserCreated value) {
-        return new EventStreamSubscribeEventsResponseContent(new UserCreatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent userDeleted(EventStreamCloudEventUserDeleted value) {
-        return new EventStreamSubscribeEventsResponseContent(new UserDeletedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent userUpdated(EventStreamCloudEventUserUpdated value) {
-        return new EventStreamSubscribeEventsResponseContent(new UserUpdatedValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent error(EventStreamCloudEventErrorMessage value) {
-        return new EventStreamSubscribeEventsResponseContent(new ErrorValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventStreamSubscribeEventsResponseContent offsetOnly(EventStreamCloudEventOffsetOnlyMessage value) {
-        return new EventStreamSubscribeEventsResponseContent(new OffsetOnlyValue(value));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupCreated() {
-        return value instanceof GroupCreatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupDeleted() {
-        return value instanceof GroupDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupMemberAdded() {
-        return value instanceof GroupMemberAddedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupMemberDeleted() {
-        return value instanceof GroupMemberDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupRoleAssigned() {
-        return value instanceof GroupRoleAssignedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupRoleDeleted() {
-        return value instanceof GroupRoleDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isGroupUpdated() {
-        return value instanceof GroupUpdatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationConnectionAdded() {
-        return value instanceof OrganizationConnectionAddedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationConnectionRemoved() {
-        return value instanceof OrganizationConnectionRemovedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationConnectionUpdated() {
-        return value instanceof OrganizationConnectionUpdatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationCreated() {
-        return value instanceof OrganizationCreatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationDeleted() {
-        return value instanceof OrganizationDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationGroupRoleAssigned() {
-        return value instanceof OrganizationGroupRoleAssignedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationGroupRoleDeleted() {
-        return value instanceof OrganizationGroupRoleDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationMemberAdded() {
-        return value instanceof OrganizationMemberAddedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationMemberDeleted() {
-        return value instanceof OrganizationMemberDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationMemberRoleAssigned() {
-        return value instanceof OrganizationMemberRoleAssignedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationMemberRoleDeleted() {
-        return value instanceof OrganizationMemberRoleDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOrganizationUpdated() {
-        return value instanceof OrganizationUpdatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isUserCreated() {
-        return value instanceof UserCreatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isUserDeleted() {
-        return value instanceof UserDeletedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isUserUpdated() {
-        return value instanceof UserUpdatedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isError() {
-        return value instanceof ErrorValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isOffsetOnly() {
-        return value instanceof OffsetOnlyValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean _isUnknown() {
-        return value instanceof _UnknownValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupCreated> getGroupCreated() {
-        if (isGroupCreated()) {
-            return Optional.of(((GroupCreatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupDeleted> getGroupDeleted() {
-        if (isGroupDeleted()) {
-            return Optional.of(((GroupDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupMemberAdded> getGroupMemberAdded() {
-        if (isGroupMemberAdded()) {
-            return Optional.of(((GroupMemberAddedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupMemberDeleted> getGroupMemberDeleted() {
-        if (isGroupMemberDeleted()) {
-            return Optional.of(((GroupMemberDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupRoleAssigned> getGroupRoleAssigned() {
-        if (isGroupRoleAssigned()) {
-            return Optional.of(((GroupRoleAssignedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupRoleDeleted> getGroupRoleDeleted() {
-        if (isGroupRoleDeleted()) {
-            return Optional.of(((GroupRoleDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventGroupUpdated> getGroupUpdated() {
-        if (isGroupUpdated()) {
-            return Optional.of(((GroupUpdatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgConnectionAdded> getOrganizationConnectionAdded() {
-        if (isOrganizationConnectionAdded()) {
-            return Optional.of(((OrganizationConnectionAddedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgConnectionRemoved> getOrganizationConnectionRemoved() {
-        if (isOrganizationConnectionRemoved()) {
-            return Optional.of(((OrganizationConnectionRemovedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgConnectionUpdated> getOrganizationConnectionUpdated() {
-        if (isOrganizationConnectionUpdated()) {
-            return Optional.of(((OrganizationConnectionUpdatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgCreated> getOrganizationCreated() {
-        if (isOrganizationCreated()) {
-            return Optional.of(((OrganizationCreatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgDeleted> getOrganizationDeleted() {
-        if (isOrganizationDeleted()) {
-            return Optional.of(((OrganizationDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgGroupRoleAssigned> getOrganizationGroupRoleAssigned() {
-        if (isOrganizationGroupRoleAssigned()) {
-            return Optional.of(((OrganizationGroupRoleAssignedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgGroupRoleDeleted> getOrganizationGroupRoleDeleted() {
-        if (isOrganizationGroupRoleDeleted()) {
-            return Optional.of(((OrganizationGroupRoleDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgMemberAdded> getOrganizationMemberAdded() {
-        if (isOrganizationMemberAdded()) {
-            return Optional.of(((OrganizationMemberAddedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgMemberDeleted> getOrganizationMemberDeleted() {
-        if (isOrganizationMemberDeleted()) {
-            return Optional.of(((OrganizationMemberDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgMemberRoleAssigned> getOrganizationMemberRoleAssigned() {
-        if (isOrganizationMemberRoleAssigned()) {
-            return Optional.of(((OrganizationMemberRoleAssignedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgMemberRoleDeleted> getOrganizationMemberRoleDeleted() {
-        if (isOrganizationMemberRoleDeleted()) {
-            return Optional.of(((OrganizationMemberRoleDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOrgUpdated> getOrganizationUpdated() {
-        if (isOrganizationUpdated()) {
-            return Optional.of(((OrganizationUpdatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventUserCreated> getUserCreated() {
-        if (isUserCreated()) {
-            return Optional.of(((UserCreatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventUserDeleted> getUserDeleted() {
-        if (isUserDeleted()) {
-            return Optional.of(((UserDeletedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventUserUpdated> getUserUpdated() {
-        if (isUserUpdated()) {
-            return Optional.of(((UserUpdatedValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventErrorMessage> getError() {
-        if (isError()) {
-            return Optional.of(((ErrorValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<EventStreamCloudEventOffsetOnlyMessage> getOffsetOnly() {
-        if (isOffsetOnly()) {
-            return Optional.of(((OffsetOnlyValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<Object> _getUnknown() {
-        if (_isUnknown()) {
-            return Optional.of(((_UnknownValue) value).value);
-        }
-        return Optional.empty();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamSubscribeEventsResponseContent
-                && value.equals(((EventStreamSubscribeEventsResponseContent) other).value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonValue
@@ -433,6 +344,7 @@ public final class EventStreamSubscribeEventsResponseContent {
     }
 
     public interface Visitor<T> {
+
         T visitGroupCreated(EventStreamCloudEventGroupCreated groupCreated);
 
         T visitGroupDeleted(EventStreamCloudEventGroupDeleted groupDeleted);
@@ -465,8 +377,7 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         T visitOrganizationMemberDeleted(EventStreamCloudEventOrgMemberDeleted organizationMemberDeleted);
 
-        T visitOrganizationMemberRoleAssigned(
-                EventStreamCloudEventOrgMemberRoleAssigned organizationMemberRoleAssigned);
+        T visitOrganizationMemberRoleAssigned(EventStreamCloudEventOrgMemberRoleAssigned organizationMemberRoleAssigned);
 
         T visitOrganizationMemberRoleDeleted(EventStreamCloudEventOrgMemberRoleDeleted organizationMemberRoleDeleted);
 
@@ -486,46 +397,24 @@ public final class EventStreamSubscribeEventsResponseContent {
     }
 
     @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", visible = true, defaultImpl = _UnknownValue.class)
-    @JsonSubTypes({
-        @JsonSubTypes.Type(GroupCreatedValue.class),
-        @JsonSubTypes.Type(GroupDeletedValue.class),
-        @JsonSubTypes.Type(GroupMemberAddedValue.class),
-        @JsonSubTypes.Type(GroupMemberDeletedValue.class),
-        @JsonSubTypes.Type(GroupRoleAssignedValue.class),
-        @JsonSubTypes.Type(GroupRoleDeletedValue.class),
-        @JsonSubTypes.Type(GroupUpdatedValue.class),
-        @JsonSubTypes.Type(OrganizationConnectionAddedValue.class),
-        @JsonSubTypes.Type(OrganizationConnectionRemovedValue.class),
-        @JsonSubTypes.Type(OrganizationConnectionUpdatedValue.class),
-        @JsonSubTypes.Type(OrganizationCreatedValue.class),
-        @JsonSubTypes.Type(OrganizationDeletedValue.class),
-        @JsonSubTypes.Type(OrganizationGroupRoleAssignedValue.class),
-        @JsonSubTypes.Type(OrganizationGroupRoleDeletedValue.class),
-        @JsonSubTypes.Type(OrganizationMemberAddedValue.class),
-        @JsonSubTypes.Type(OrganizationMemberDeletedValue.class),
-        @JsonSubTypes.Type(OrganizationMemberRoleAssignedValue.class),
-        @JsonSubTypes.Type(OrganizationMemberRoleDeletedValue.class),
-        @JsonSubTypes.Type(OrganizationUpdatedValue.class),
-        @JsonSubTypes.Type(UserCreatedValue.class),
-        @JsonSubTypes.Type(UserDeletedValue.class),
-        @JsonSubTypes.Type(UserUpdatedValue.class),
-        @JsonSubTypes.Type(ErrorValue.class),
-        @JsonSubTypes.Type(OffsetOnlyValue.class)
-    })
+    @JsonSubTypes({ @JsonSubTypes.Type(GroupCreatedValue.class), @JsonSubTypes.Type(GroupDeletedValue.class), @JsonSubTypes.Type(GroupMemberAddedValue.class), @JsonSubTypes.Type(GroupMemberDeletedValue.class), @JsonSubTypes.Type(GroupRoleAssignedValue.class), @JsonSubTypes.Type(GroupRoleDeletedValue.class), @JsonSubTypes.Type(GroupUpdatedValue.class), @JsonSubTypes.Type(OrganizationConnectionAddedValue.class), @JsonSubTypes.Type(OrganizationConnectionRemovedValue.class), @JsonSubTypes.Type(OrganizationConnectionUpdatedValue.class), @JsonSubTypes.Type(OrganizationCreatedValue.class), @JsonSubTypes.Type(OrganizationDeletedValue.class), @JsonSubTypes.Type(OrganizationGroupRoleAssignedValue.class), @JsonSubTypes.Type(OrganizationGroupRoleDeletedValue.class), @JsonSubTypes.Type(OrganizationMemberAddedValue.class), @JsonSubTypes.Type(OrganizationMemberDeletedValue.class), @JsonSubTypes.Type(OrganizationMemberRoleAssignedValue.class), @JsonSubTypes.Type(OrganizationMemberRoleDeletedValue.class), @JsonSubTypes.Type(OrganizationUpdatedValue.class), @JsonSubTypes.Type(UserCreatedValue.class), @JsonSubTypes.Type(UserDeletedValue.class), @JsonSubTypes.Type(UserUpdatedValue.class), @JsonSubTypes.Type(ErrorValue.class), @JsonSubTypes.Type(OffsetOnlyValue.class) })
     @JsonIgnoreProperties(ignoreUnknown = true)
     private interface Value {
+
         <T> T visit(Visitor<T> visitor);
     }
 
     @JsonTypeName("group.created")
     @JsonIgnoreProperties("type")
     private static final class GroupCreatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupCreated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupCreatedValue() {}
+        private GroupCreatedValue() {
+        }
 
         private GroupCreatedValue(EventStreamCloudEventGroupCreated value) {
             this.value = value;
@@ -533,13 +422,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupCreated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupCreatedValue && equalTo((GroupCreatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupCreatedValue other) {
@@ -548,24 +436,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.deleted")
     @JsonIgnoreProperties("type")
     private static final class GroupDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupDeletedValue() {}
+        private GroupDeletedValue() {
+        }
 
         private GroupDeletedValue(EventStreamCloudEventGroupDeleted value) {
             this.value = value;
@@ -573,13 +463,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupDeletedValue && equalTo((GroupDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupDeletedValue other) {
@@ -588,24 +477,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.member.added")
     @JsonIgnoreProperties("type")
     private static final class GroupMemberAddedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupMemberAdded value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupMemberAddedValue() {}
+        private GroupMemberAddedValue() {
+        }
 
         private GroupMemberAddedValue(EventStreamCloudEventGroupMemberAdded value) {
             this.value = value;
@@ -613,13 +504,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupMemberAdded(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupMemberAddedValue && equalTo((GroupMemberAddedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupMemberAddedValue other) {
@@ -628,24 +518,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.member.deleted")
     @JsonIgnoreProperties("type")
     private static final class GroupMemberDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupMemberDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupMemberDeletedValue() {}
+        private GroupMemberDeletedValue() {
+        }
 
         private GroupMemberDeletedValue(EventStreamCloudEventGroupMemberDeleted value) {
             this.value = value;
@@ -653,13 +545,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupMemberDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupMemberDeletedValue && equalTo((GroupMemberDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupMemberDeletedValue other) {
@@ -668,24 +559,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.role.assigned")
     @JsonIgnoreProperties("type")
     private static final class GroupRoleAssignedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupRoleAssigned value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupRoleAssignedValue() {}
+        private GroupRoleAssignedValue() {
+        }
 
         private GroupRoleAssignedValue(EventStreamCloudEventGroupRoleAssigned value) {
             this.value = value;
@@ -693,13 +586,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupRoleAssigned(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupRoleAssignedValue && equalTo((GroupRoleAssignedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupRoleAssignedValue other) {
@@ -708,24 +600,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.role.deleted")
     @JsonIgnoreProperties("type")
     private static final class GroupRoleDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupRoleDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupRoleDeletedValue() {}
+        private GroupRoleDeletedValue() {
+        }
 
         private GroupRoleDeletedValue(EventStreamCloudEventGroupRoleDeleted value) {
             this.value = value;
@@ -733,13 +627,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupRoleDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupRoleDeletedValue && equalTo((GroupRoleDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupRoleDeletedValue other) {
@@ -748,24 +641,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("group.updated")
     @JsonIgnoreProperties("type")
     private static final class GroupUpdatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventGroupUpdated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private GroupUpdatedValue() {}
+        private GroupUpdatedValue() {
+        }
 
         private GroupUpdatedValue(EventStreamCloudEventGroupUpdated value) {
             this.value = value;
@@ -773,13 +668,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitGroupUpdated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof GroupUpdatedValue && equalTo((GroupUpdatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(GroupUpdatedValue other) {
@@ -788,24 +682,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.connection.added")
     @JsonIgnoreProperties("type")
     private static final class OrganizationConnectionAddedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgConnectionAdded value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationConnectionAddedValue() {}
+        private OrganizationConnectionAddedValue() {
+        }
 
         private OrganizationConnectionAddedValue(EventStreamCloudEventOrgConnectionAdded value) {
             this.value = value;
@@ -813,14 +709,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationConnectionAdded(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationConnectionAddedValue
-                    && equalTo((OrganizationConnectionAddedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationConnectionAddedValue other) {
@@ -829,24 +723,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.connection.removed")
     @JsonIgnoreProperties("type")
     private static final class OrganizationConnectionRemovedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgConnectionRemoved value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationConnectionRemovedValue() {}
+        private OrganizationConnectionRemovedValue() {
+        }
 
         private OrganizationConnectionRemovedValue(EventStreamCloudEventOrgConnectionRemoved value) {
             this.value = value;
@@ -854,14 +750,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationConnectionRemoved(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationConnectionRemovedValue
-                    && equalTo((OrganizationConnectionRemovedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationConnectionRemovedValue other) {
@@ -870,24 +764,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.connection.updated")
     @JsonIgnoreProperties("type")
     private static final class OrganizationConnectionUpdatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgConnectionUpdated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationConnectionUpdatedValue() {}
+        private OrganizationConnectionUpdatedValue() {
+        }
 
         private OrganizationConnectionUpdatedValue(EventStreamCloudEventOrgConnectionUpdated value) {
             this.value = value;
@@ -895,14 +791,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationConnectionUpdated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationConnectionUpdatedValue
-                    && equalTo((OrganizationConnectionUpdatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationConnectionUpdatedValue other) {
@@ -911,24 +805,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.created")
     @JsonIgnoreProperties("type")
     private static final class OrganizationCreatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgCreated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationCreatedValue() {}
+        private OrganizationCreatedValue() {
+        }
 
         private OrganizationCreatedValue(EventStreamCloudEventOrgCreated value) {
             this.value = value;
@@ -936,13 +832,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationCreated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationCreatedValue && equalTo((OrganizationCreatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationCreatedValue other) {
@@ -951,24 +846,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.deleted")
     @JsonIgnoreProperties("type")
     private static final class OrganizationDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationDeletedValue() {}
+        private OrganizationDeletedValue() {
+        }
 
         private OrganizationDeletedValue(EventStreamCloudEventOrgDeleted value) {
             this.value = value;
@@ -976,13 +873,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationDeletedValue && equalTo((OrganizationDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationDeletedValue other) {
@@ -991,24 +887,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.group.role.assigned")
     @JsonIgnoreProperties("type")
     private static final class OrganizationGroupRoleAssignedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgGroupRoleAssigned value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationGroupRoleAssignedValue() {}
+        private OrganizationGroupRoleAssignedValue() {
+        }
 
         private OrganizationGroupRoleAssignedValue(EventStreamCloudEventOrgGroupRoleAssigned value) {
             this.value = value;
@@ -1016,14 +914,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationGroupRoleAssigned(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationGroupRoleAssignedValue
-                    && equalTo((OrganizationGroupRoleAssignedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationGroupRoleAssignedValue other) {
@@ -1032,24 +928,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.group.role.deleted")
     @JsonIgnoreProperties("type")
     private static final class OrganizationGroupRoleDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgGroupRoleDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationGroupRoleDeletedValue() {}
+        private OrganizationGroupRoleDeletedValue() {
+        }
 
         private OrganizationGroupRoleDeletedValue(EventStreamCloudEventOrgGroupRoleDeleted value) {
             this.value = value;
@@ -1057,14 +955,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationGroupRoleDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationGroupRoleDeletedValue
-                    && equalTo((OrganizationGroupRoleDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationGroupRoleDeletedValue other) {
@@ -1073,24 +969,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.member.added")
     @JsonIgnoreProperties("type")
     private static final class OrganizationMemberAddedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgMemberAdded value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationMemberAddedValue() {}
+        private OrganizationMemberAddedValue() {
+        }
 
         private OrganizationMemberAddedValue(EventStreamCloudEventOrgMemberAdded value) {
             this.value = value;
@@ -1098,13 +996,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationMemberAdded(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationMemberAddedValue && equalTo((OrganizationMemberAddedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationMemberAddedValue other) {
@@ -1113,24 +1010,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.member.deleted")
     @JsonIgnoreProperties("type")
     private static final class OrganizationMemberDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgMemberDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationMemberDeletedValue() {}
+        private OrganizationMemberDeletedValue() {
+        }
 
         private OrganizationMemberDeletedValue(EventStreamCloudEventOrgMemberDeleted value) {
             this.value = value;
@@ -1138,13 +1037,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationMemberDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationMemberDeletedValue && equalTo((OrganizationMemberDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationMemberDeletedValue other) {
@@ -1153,24 +1051,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.member.role.assigned")
     @JsonIgnoreProperties("type")
     private static final class OrganizationMemberRoleAssignedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgMemberRoleAssigned value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationMemberRoleAssignedValue() {}
+        private OrganizationMemberRoleAssignedValue() {
+        }
 
         private OrganizationMemberRoleAssignedValue(EventStreamCloudEventOrgMemberRoleAssigned value) {
             this.value = value;
@@ -1178,14 +1078,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationMemberRoleAssigned(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationMemberRoleAssignedValue
-                    && equalTo((OrganizationMemberRoleAssignedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationMemberRoleAssignedValue other) {
@@ -1194,24 +1092,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.member.role.deleted")
     @JsonIgnoreProperties("type")
     private static final class OrganizationMemberRoleDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgMemberRoleDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationMemberRoleDeletedValue() {}
+        private OrganizationMemberRoleDeletedValue() {
+        }
 
         private OrganizationMemberRoleDeletedValue(EventStreamCloudEventOrgMemberRoleDeleted value) {
             this.value = value;
@@ -1219,14 +1119,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationMemberRoleDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationMemberRoleDeletedValue
-                    && equalTo((OrganizationMemberRoleDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationMemberRoleDeletedValue other) {
@@ -1235,24 +1133,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("organization.updated")
     @JsonIgnoreProperties("type")
     private static final class OrganizationUpdatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOrgUpdated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OrganizationUpdatedValue() {}
+        private OrganizationUpdatedValue() {
+        }
 
         private OrganizationUpdatedValue(EventStreamCloudEventOrgUpdated value) {
             this.value = value;
@@ -1260,13 +1160,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOrganizationUpdated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OrganizationUpdatedValue && equalTo((OrganizationUpdatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OrganizationUpdatedValue other) {
@@ -1275,24 +1174,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("user.created")
     @JsonIgnoreProperties("type")
     private static final class UserCreatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventUserCreated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private UserCreatedValue() {}
+        private UserCreatedValue() {
+        }
 
         private UserCreatedValue(EventStreamCloudEventUserCreated value) {
             this.value = value;
@@ -1300,13 +1201,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitUserCreated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof UserCreatedValue && equalTo((UserCreatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(UserCreatedValue other) {
@@ -1315,24 +1215,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("user.deleted")
     @JsonIgnoreProperties("type")
     private static final class UserDeletedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventUserDeleted value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private UserDeletedValue() {}
+        private UserDeletedValue() {
+        }
 
         private UserDeletedValue(EventStreamCloudEventUserDeleted value) {
             this.value = value;
@@ -1340,13 +1242,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitUserDeleted(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof UserDeletedValue && equalTo((UserDeletedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(UserDeletedValue other) {
@@ -1355,24 +1256,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("user.updated")
     @JsonIgnoreProperties("type")
     private static final class UserUpdatedValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventUserUpdated value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private UserUpdatedValue() {}
+        private UserUpdatedValue() {
+        }
 
         private UserUpdatedValue(EventStreamCloudEventUserUpdated value) {
             this.value = value;
@@ -1380,13 +1283,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitUserUpdated(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof UserUpdatedValue && equalTo((UserUpdatedValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(UserUpdatedValue other) {
@@ -1395,24 +1297,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("error")
     @JsonIgnoreProperties("type")
     private static final class ErrorValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventErrorMessage value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private ErrorValue() {}
+        private ErrorValue() {
+        }
 
         private ErrorValue(EventStreamCloudEventErrorMessage value) {
             this.value = value;
@@ -1420,13 +1324,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitError(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof ErrorValue && equalTo((ErrorValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(ErrorValue other) {
@@ -1435,24 +1338,26 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonTypeName("offset-only")
     @JsonIgnoreProperties("type")
     private static final class OffsetOnlyValue implements Value {
+
         @JsonUnwrapped
         @JsonIgnoreProperties(value = "type", allowSetters = true)
         private EventStreamCloudEventOffsetOnlyMessage value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private OffsetOnlyValue() {}
+        private OffsetOnlyValue() {
+        }
 
         private OffsetOnlyValue(EventStreamCloudEventOffsetOnlyMessage value) {
             this.value = value;
@@ -1460,13 +1365,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor.visitOffsetOnly(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof OffsetOnlyValue && equalTo((OffsetOnlyValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(OffsetOnlyValue other) {
@@ -1475,34 +1379,35 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     @JsonIgnoreProperties("type")
     private static final class _UnknownValue implements Value {
+
         private String type;
 
         @JsonValue
         private Object value;
 
         @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-        private _UnknownValue(@JsonProperty("value") Object value) {}
+        private _UnknownValue(@JsonProperty("value") Object value) {
+        }
 
         @java.lang.Override
         public <T> T visit(Visitor<T> visitor) {
-            return visitor._visitUnknown(value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public boolean equals(Object other) {
-            if (this == other) return true;
-            return other instanceof _UnknownValue && equalTo((_UnknownValue) other);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private boolean equalTo(_UnknownValue other) {
@@ -1511,12 +1416,12 @@ public final class EventStreamSubscribeEventsResponseContent {
 
         @java.lang.Override
         public int hashCode() {
-            return Objects.hash(this.type, this.value);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public String toString() {
-            return "EventStreamSubscribeEventsResponseContent{" + "type: " + type + ", value: " + value + "}";
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

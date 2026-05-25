@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = Log.Builder.class)
 public final class Log {
+
     private final Optional<LogDate> date;
 
     private final Optional<String> type;
@@ -67,29 +68,7 @@ public final class Log {
 
     private final Map<String, Object> additionalProperties;
 
-    private Log(
-            Optional<LogDate> date,
-            Optional<String> type,
-            OptionalNullable<String> description,
-            Optional<String> connection,
-            Optional<String> connectionId,
-            Optional<String> clientId,
-            Optional<String> clientName,
-            Optional<String> ip,
-            Optional<String> hostname,
-            Optional<String> userId,
-            Optional<String> userName,
-            Optional<String> audience,
-            Optional<String> scope,
-            Optional<String> strategy,
-            Optional<String> strategyType,
-            Optional<String> logId,
-            Optional<Boolean> isMobile,
-            Optional<Map<String, Object>> details,
-            Optional<String> userAgent,
-            Optional<LogSecurityContext> securityContext,
-            Optional<LogLocationInfo> locationInfo,
-            Map<String, Object> additionalProperties) {
+    private Log(Optional<LogDate> date, Optional<String> type, OptionalNullable<String> description, Optional<String> connection, Optional<String> connectionId, Optional<String> clientId, Optional<String> clientName, Optional<String> ip, Optional<String> hostname, Optional<String> userId, Optional<String> userName, Optional<String> audience, Optional<String> scope, Optional<String> strategy, Optional<String> strategyType, Optional<String> logId, Optional<Boolean> isMobile, Optional<Map<String, Object>> details, Optional<String> userAgent, Optional<LogSecurityContext> securityContext, Optional<LogLocationInfo> locationInfo, Map<String, Object> additionalProperties) {
         this.date = date;
         this.type = type;
         this.description = description;
@@ -116,7 +95,7 @@ public final class Log {
 
     @JsonProperty("date")
     public Optional<LogDate> getDate() {
-        return date;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,7 +103,7 @@ public final class Log {
      */
     @JsonProperty("type")
     public Optional<String> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,10 +112,7 @@ public final class Log {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("description")
     public OptionalNullable<String> getDescription() {
-        if (description == null) {
-            return OptionalNullable.absent();
-        }
-        return description;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -144,7 +120,7 @@ public final class Log {
      */
     @JsonProperty("connection")
     public Optional<String> getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -152,7 +128,7 @@ public final class Log {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -160,7 +136,7 @@ public final class Log {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -168,7 +144,7 @@ public final class Log {
      */
     @JsonProperty("client_name")
     public Optional<String> getClientName() {
-        return clientName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -176,7 +152,7 @@ public final class Log {
      */
     @JsonProperty("ip")
     public Optional<String> getIp() {
-        return ip;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -184,7 +160,7 @@ public final class Log {
      */
     @JsonProperty("hostname")
     public Optional<String> getHostname() {
-        return hostname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -192,7 +168,7 @@ public final class Log {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -200,7 +176,7 @@ public final class Log {
      */
     @JsonProperty("user_name")
     public Optional<String> getUserName() {
-        return userName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -208,7 +184,7 @@ public final class Log {
      */
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -216,7 +192,7 @@ public final class Log {
      */
     @JsonProperty("scope")
     public Optional<String> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -224,7 +200,7 @@ public final class Log {
      */
     @JsonProperty("strategy")
     public Optional<String> getStrategy() {
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -232,7 +208,7 @@ public final class Log {
      */
     @JsonProperty("strategy_type")
     public Optional<String> getStrategyType() {
-        return strategyType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -240,7 +216,7 @@ public final class Log {
      */
     @JsonProperty("log_id")
     public Optional<String> getLogId() {
-        return logId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -248,12 +224,12 @@ public final class Log {
      */
     @JsonProperty("isMobile")
     public Optional<Boolean> getIsMobile() {
-        return isMobile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("details")
     public Optional<Map<String, Object>> getDetails() {
-        return details;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -261,17 +237,17 @@ public final class Log {
      */
     @JsonProperty("user_agent")
     public Optional<String> getUserAgent() {
-        return userAgent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("security_context")
     public Optional<LogSecurityContext> getSecurityContext() {
-        return securityContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("location_info")
     public Optional<LogLocationInfo> getLocationInfo() {
-        return locationInfo;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -282,76 +258,35 @@ public final class Log {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof Log && equalTo((Log) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(Log other) {
-        return date.equals(other.date)
-                && type.equals(other.type)
-                && description.equals(other.description)
-                && connection.equals(other.connection)
-                && connectionId.equals(other.connectionId)
-                && clientId.equals(other.clientId)
-                && clientName.equals(other.clientName)
-                && ip.equals(other.ip)
-                && hostname.equals(other.hostname)
-                && userId.equals(other.userId)
-                && userName.equals(other.userName)
-                && audience.equals(other.audience)
-                && scope.equals(other.scope)
-                && strategy.equals(other.strategy)
-                && strategyType.equals(other.strategyType)
-                && logId.equals(other.logId)
-                && isMobile.equals(other.isMobile)
-                && details.equals(other.details)
-                && userAgent.equals(other.userAgent)
-                && securityContext.equals(other.securityContext)
-                && locationInfo.equals(other.locationInfo);
+        return date.equals(other.date) && type.equals(other.type) && description.equals(other.description) && connection.equals(other.connection) && connectionId.equals(other.connectionId) && clientId.equals(other.clientId) && clientName.equals(other.clientName) && ip.equals(other.ip) && hostname.equals(other.hostname) && userId.equals(other.userId) && userName.equals(other.userName) && audience.equals(other.audience) && scope.equals(other.scope) && strategy.equals(other.strategy) && strategyType.equals(other.strategyType) && logId.equals(other.logId) && isMobile.equals(other.isMobile) && details.equals(other.details) && userAgent.equals(other.userAgent) && securityContext.equals(other.securityContext) && locationInfo.equals(other.locationInfo);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.date,
-                this.type,
-                this.description,
-                this.connection,
-                this.connectionId,
-                this.clientId,
-                this.clientName,
-                this.ip,
-                this.hostname,
-                this.userId,
-                this.userName,
-                this.audience,
-                this.scope,
-                this.strategy,
-                this.strategyType,
-                this.logId,
-                this.isMobile,
-                this.details,
-                this.userAgent,
-                this.securityContext,
-                this.locationInfo);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<LogDate> date = Optional.empty();
 
         private Optional<String> type = Optional.empty();
@@ -397,42 +332,20 @@ public final class Log {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(Log other) {
-            date(other.getDate());
-            type(other.getType());
-            description(other.getDescription());
-            connection(other.getConnection());
-            connectionId(other.getConnectionId());
-            clientId(other.getClientId());
-            clientName(other.getClientName());
-            ip(other.getIp());
-            hostname(other.getHostname());
-            userId(other.getUserId());
-            userName(other.getUserName());
-            audience(other.getAudience());
-            scope(other.getScope());
-            strategy(other.getStrategy());
-            strategyType(other.getStrategyType());
-            logId(other.getLogId());
-            isMobile(other.getIsMobile());
-            details(other.getDetails());
-            userAgent(other.getUserAgent());
-            securityContext(other.getSecurityContext());
-            locationInfo(other.getLocationInfo());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "date", nulls = Nulls.SKIP)
         public Builder date(Optional<LogDate> date) {
-            this.date = date;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder date(LogDate date) {
-            this.date = Optional.ofNullable(date);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -440,13 +353,11 @@ public final class Log {
          */
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<String> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(String type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -454,33 +365,19 @@ public final class Log {
          */
         @JsonSetter(value = "description", nulls = Nulls.SKIP)
         public Builder description(@Nullable OptionalNullable<String> description) {
-            this.description = description;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(String description) {
-            this.description = OptionalNullable.of(description);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(Optional<String> description) {
-            if (description.isPresent()) {
-                this.description = OptionalNullable.of(description.get());
-            } else {
-                this.description = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder description(com.auth0.client.mgmt.core.Nullable<String> description) {
-            if (description.isNull()) {
-                this.description = OptionalNullable.ofNull();
-            } else if (description.isEmpty()) {
-                this.description = OptionalNullable.absent();
-            } else {
-                this.description = OptionalNullable.of(description.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -488,13 +385,11 @@ public final class Log {
          */
         @JsonSetter(value = "connection", nulls = Nulls.SKIP)
         public Builder connection(Optional<String> connection) {
-            this.connection = connection;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connection(String connection) {
-            this.connection = Optional.ofNullable(connection);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -502,13 +397,11 @@ public final class Log {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -516,13 +409,11 @@ public final class Log {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -530,13 +421,11 @@ public final class Log {
          */
         @JsonSetter(value = "client_name", nulls = Nulls.SKIP)
         public Builder clientName(Optional<String> clientName) {
-            this.clientName = clientName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientName(String clientName) {
-            this.clientName = Optional.ofNullable(clientName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -544,13 +433,11 @@ public final class Log {
          */
         @JsonSetter(value = "ip", nulls = Nulls.SKIP)
         public Builder ip(Optional<String> ip) {
-            this.ip = ip;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ip(String ip) {
-            this.ip = Optional.ofNullable(ip);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -558,13 +445,11 @@ public final class Log {
          */
         @JsonSetter(value = "hostname", nulls = Nulls.SKIP)
         public Builder hostname(Optional<String> hostname) {
-            this.hostname = hostname;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Optional.ofNullable(hostname);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -572,13 +457,11 @@ public final class Log {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -586,13 +469,11 @@ public final class Log {
          */
         @JsonSetter(value = "user_name", nulls = Nulls.SKIP)
         public Builder userName(Optional<String> userName) {
-            this.userName = userName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userName(String userName) {
-            this.userName = Optional.ofNullable(userName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -600,13 +481,11 @@ public final class Log {
          */
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -614,13 +493,11 @@ public final class Log {
          */
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<String> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(String scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -628,13 +505,11 @@ public final class Log {
          */
         @JsonSetter(value = "strategy", nulls = Nulls.SKIP)
         public Builder strategy(Optional<String> strategy) {
-            this.strategy = strategy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategy(String strategy) {
-            this.strategy = Optional.ofNullable(strategy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -642,13 +517,11 @@ public final class Log {
          */
         @JsonSetter(value = "strategy_type", nulls = Nulls.SKIP)
         public Builder strategyType(Optional<String> strategyType) {
-            this.strategyType = strategyType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategyType(String strategyType) {
-            this.strategyType = Optional.ofNullable(strategyType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -656,13 +529,11 @@ public final class Log {
          */
         @JsonSetter(value = "log_id", nulls = Nulls.SKIP)
         public Builder logId(Optional<String> logId) {
-            this.logId = logId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder logId(String logId) {
-            this.logId = Optional.ofNullable(logId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -670,24 +541,20 @@ public final class Log {
          */
         @JsonSetter(value = "isMobile", nulls = Nulls.SKIP)
         public Builder isMobile(Optional<Boolean> isMobile) {
-            this.isMobile = isMobile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder isMobile(Boolean isMobile) {
-            this.isMobile = Optional.ofNullable(isMobile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "details", nulls = Nulls.SKIP)
         public Builder details(Optional<Map<String, Object>> details) {
-            this.details = details;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder details(Map<String, Object> details) {
-            this.details = Optional.ofNullable(details);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -695,71 +562,41 @@ public final class Log {
          */
         @JsonSetter(value = "user_agent", nulls = Nulls.SKIP)
         public Builder userAgent(Optional<String> userAgent) {
-            this.userAgent = userAgent;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userAgent(String userAgent) {
-            this.userAgent = Optional.ofNullable(userAgent);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "security_context", nulls = Nulls.SKIP)
         public Builder securityContext(Optional<LogSecurityContext> securityContext) {
-            this.securityContext = securityContext;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder securityContext(LogSecurityContext securityContext) {
-            this.securityContext = Optional.ofNullable(securityContext);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "location_info", nulls = Nulls.SKIP)
         public Builder locationInfo(Optional<LogLocationInfo> locationInfo) {
-            this.locationInfo = locationInfo;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder locationInfo(LogLocationInfo locationInfo) {
-            this.locationInfo = Optional.ofNullable(locationInfo);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Log build() {
-            return new Log(
-                    date,
-                    type,
-                    description,
-                    connection,
-                    connectionId,
-                    clientId,
-                    clientName,
-                    ip,
-                    hostname,
-                    userId,
-                    userName,
-                    audience,
-                    scope,
-                    strategy,
-                    strategyType,
-                    logId,
-                    isMobile,
-                    details,
-                    userAgent,
-                    securityContext,
-                    locationInfo,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

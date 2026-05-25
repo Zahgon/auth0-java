@@ -21,14 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFlowConfig.Builder.class)
 public final class FormFlowConfig {
+
     private final String flowId;
 
     private final Optional<FormNodePointer> nextNode;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFlowConfig(
-            String flowId, Optional<FormNodePointer> nextNode, Map<String, Object> additionalProperties) {
+    private FormFlowConfig(String flowId, Optional<FormNodePointer> nextNode, Map<String, Object> additionalProperties) {
         this.flowId = flowId;
         this.nextNode = nextNode;
         this.additionalProperties = additionalProperties;
@@ -36,23 +36,22 @@ public final class FormFlowConfig {
 
     @JsonProperty("flow_id")
     public String getFlowId() {
-        return flowId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("next_node")
     public Optional<FormNodePointer> getNextNode() {
-        return nextNode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFlowConfig && equalTo((FormFlowConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFlowConfig other) {
@@ -61,25 +60,27 @@ public final class FormFlowConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.flowId, this.nextNode);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FlowIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface FlowIdStage {
+
         _FinalStage flowId(@NotNull String flowId);
 
         Builder from(FormFlowConfig other);
     }
 
     public interface _FinalStage {
+
         FormFlowConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +94,7 @@ public final class FormFlowConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements FlowIdStage, _FinalStage {
+
         private String flowId;
 
         private Optional<FormNodePointer> nextNode = Optional.empty();
@@ -100,50 +102,44 @@ public final class FormFlowConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FormFlowConfig other) {
-            flowId(other.getFlowId());
-            nextNode(other.getNextNode());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("flow_id")
         public _FinalStage flowId(@NotNull String flowId) {
-            this.flowId = Objects.requireNonNull(flowId, "flowId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nextNode(FormNodePointer nextNode) {
-            this.nextNode = Optional.ofNullable(nextNode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "next_node", nulls = Nulls.SKIP)
         public _FinalStage nextNode(Optional<FormNodePointer> nextNode) {
-            this.nextNode = nextNode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FormFlowConfig build() {
-            return new FormFlowConfig(flowId, nextNode, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

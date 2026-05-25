@@ -20,16 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FormFieldBooleanConfig.Builder.class)
 public final class FormFieldBooleanConfig {
+
     private final Optional<Boolean> defaultValue;
 
     private final Optional<FormFieldBooleanConfigOptions> options;
 
     private final Map<String, Object> additionalProperties;
 
-    private FormFieldBooleanConfig(
-            Optional<Boolean> defaultValue,
-            Optional<FormFieldBooleanConfigOptions> options,
-            Map<String, Object> additionalProperties) {
+    private FormFieldBooleanConfig(Optional<Boolean> defaultValue, Optional<FormFieldBooleanConfigOptions> options, Map<String, Object> additionalProperties) {
         this.defaultValue = defaultValue;
         this.options = options;
         this.additionalProperties = additionalProperties;
@@ -37,23 +35,22 @@ public final class FormFieldBooleanConfig {
 
     @JsonProperty("default_value")
     public Optional<Boolean> getDefaultValue() {
-        return defaultValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("options")
     public Optional<FormFieldBooleanConfigOptions> getOptions() {
-        return options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FormFieldBooleanConfig && equalTo((FormFieldBooleanConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FormFieldBooleanConfig other) {
@@ -62,20 +59,21 @@ public final class FormFieldBooleanConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.defaultValue, this.options);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> defaultValue = Optional.empty();
 
         private Optional<FormFieldBooleanConfigOptions> options = Optional.empty();
@@ -83,48 +81,41 @@ public final class FormFieldBooleanConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(FormFieldBooleanConfig other) {
-            defaultValue(other.getDefaultValue());
-            options(other.getOptions());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "default_value", nulls = Nulls.SKIP)
         public Builder defaultValue(Optional<Boolean> defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultValue(Boolean defaultValue) {
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "options", nulls = Nulls.SKIP)
         public Builder options(Optional<FormFieldBooleanConfigOptions> options) {
-            this.options = options;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder options(FormFieldBooleanConfigOptions options) {
-            this.options = Optional.ofNullable(options);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public FormFieldBooleanConfig build() {
-            return new FormFieldBooleanConfig(defaultValue, options, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentAppleStrategy {
-    public static final CreateConnectionRequestContentAppleStrategy APPLE =
-            new CreateConnectionRequestContentAppleStrategy(Value.APPLE, "apple");
+
+    public static final CreateConnectionRequestContentAppleStrategy APPLE = new CreateConnectionRequestContentAppleStrategy(Value.APPLE, "apple");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentAppleStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentAppleStrategy
-                        && this.string.equals(((CreateConnectionRequestContentAppleStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case APPLE:
-                return visitor.visitApple();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentAppleStrategy valueOf(String value) {
-        switch (value) {
-            case "apple":
-                return APPLE;
-            default:
-                return new CreateConnectionRequestContentAppleStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        APPLE,
 
-        UNKNOWN
+        APPLE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitApple();
 
         T visitUnknown(String unknownType);

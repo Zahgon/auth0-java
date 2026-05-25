@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SelfServiceProfileCustomTextLanguageEnum {
-    public static final SelfServiceProfileCustomTextLanguageEnum EN =
-            new SelfServiceProfileCustomTextLanguageEnum(Value.EN, "en");
+
+    public static final SelfServiceProfileCustomTextLanguageEnum EN = new SelfServiceProfileCustomTextLanguageEnum(Value.EN, "en");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class SelfServiceProfileCustomTextLanguageEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SelfServiceProfileCustomTextLanguageEnum
-                        && this.string.equals(((SelfServiceProfileCustomTextLanguageEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EN:
-                return visitor.visitEn();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SelfServiceProfileCustomTextLanguageEnum valueOf(String value) {
-        switch (value) {
-            case "en":
-                return EN;
-            default:
-                return new SelfServiceProfileCustomTextLanguageEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EN,
 
-        UNKNOWN
+        EN, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEn();
 
         T visitUnknown(String unknownType);

@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateOrganizationDiscoveryDomainRequestContent.Builder.class)
 public final class CreateOrganizationDiscoveryDomainRequestContent {
+
     private final String domain;
 
     private final Optional<OrganizationDiscoveryDomainStatus> status;
@@ -30,11 +31,7 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateOrganizationDiscoveryDomainRequestContent(
-            String domain,
-            Optional<OrganizationDiscoveryDomainStatus> status,
-            Optional<Boolean> useForOrganizationDiscovery,
-            Map<String, Object> additionalProperties) {
+    private CreateOrganizationDiscoveryDomainRequestContent(String domain, Optional<OrganizationDiscoveryDomainStatus> status, Optional<Boolean> useForOrganizationDiscovery, Map<String, Object> additionalProperties) {
         this.domain = domain;
         this.status = status;
         this.useForOrganizationDiscovery = useForOrganizationDiscovery;
@@ -46,12 +43,12 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
      */
     @JsonProperty("domain")
     public String getDomain() {
-        return domain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("status")
     public Optional<OrganizationDiscoveryDomainStatus> getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -59,42 +56,39 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
      */
     @JsonProperty("use_for_organization_discovery")
     public Optional<Boolean> getUseForOrganizationDiscovery() {
-        return useForOrganizationDiscovery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateOrganizationDiscoveryDomainRequestContent
-                && equalTo((CreateOrganizationDiscoveryDomainRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateOrganizationDiscoveryDomainRequestContent other) {
-        return domain.equals(other.domain)
-                && status.equals(other.status)
-                && useForOrganizationDiscovery.equals(other.useForOrganizationDiscovery);
+        return domain.equals(other.domain) && status.equals(other.status) && useForOrganizationDiscovery.equals(other.useForOrganizationDiscovery);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.domain, this.status, this.useForOrganizationDiscovery);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DomainStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DomainStage {
+
         /**
          * <p>The domain name to associate with the organization e.g. acme.com.</p>
          */
@@ -104,6 +98,7 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateOrganizationDiscoveryDomainRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +119,7 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DomainStage, _FinalStage {
+
         private String domain;
 
         private Optional<Boolean> useForOrganizationDiscovery = Optional.empty();
@@ -133,14 +129,12 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateOrganizationDiscoveryDomainRequestContent other) {
-            domain(other.getDomain());
-            status(other.getStatus());
-            useForOrganizationDiscovery(other.getUseForOrganizationDiscovery());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -151,8 +145,7 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
         @java.lang.Override
         @JsonSetter("domain")
         public _FinalStage domain(@NotNull String domain) {
-            this.domain = Objects.requireNonNull(domain, "domain must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -161,8 +154,7 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
          */
         @java.lang.Override
         public _FinalStage useForOrganizationDiscovery(Boolean useForOrganizationDiscovery) {
-            this.useForOrganizationDiscovery = Optional.ofNullable(useForOrganizationDiscovery);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -171,39 +163,33 @@ public final class CreateOrganizationDiscoveryDomainRequestContent {
         @java.lang.Override
         @JsonSetter(value = "use_for_organization_discovery", nulls = Nulls.SKIP)
         public _FinalStage useForOrganizationDiscovery(Optional<Boolean> useForOrganizationDiscovery) {
-            this.useForOrganizationDiscovery = useForOrganizationDiscovery;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage status(OrganizationDiscoveryDomainStatus status) {
-            this.status = Optional.ofNullable(status);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "status", nulls = Nulls.SKIP)
         public _FinalStage status(Optional<OrganizationDiscoveryDomainStatus> status) {
-            this.status = status;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateOrganizationDiscoveryDomainRequestContent build() {
-            return new CreateOrganizationDiscoveryDomainRequestContent(
-                    domain, status, useForOrganizationDiscovery, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

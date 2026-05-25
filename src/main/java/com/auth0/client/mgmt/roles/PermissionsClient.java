@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.roles.types.ListRolePermissionsRequestParameters;
 import com.auth0.client.mgmt.types.PermissionsResponsePayload;
 
 public class PermissionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawPermissionsClient rawClient;
@@ -25,64 +26,62 @@ public class PermissionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawPermissionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
     public SyncPagingIterable<PermissionsResponsePayload> list(String id) {
-        return this.rawClient.list(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
     public SyncPagingIterable<PermissionsResponsePayload> list(String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
-    public SyncPagingIterable<PermissionsResponsePayload> list(
-            String id, ListRolePermissionsRequestParameters request) {
-        return this.rawClient.list(id, request).body();
+    public SyncPagingIterable<PermissionsResponsePayload> list(String id, ListRolePermissionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve detailed list (name, description, resource server) of permissions granted by a specified user role.
      */
-    public SyncPagingIterable<PermissionsResponsePayload> list(
-            String id, ListRolePermissionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).body();
+    public SyncPagingIterable<PermissionsResponsePayload> list(String id, ListRolePermissionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> to a specified user role.
      */
     public void add(String id, AddRolePermissionsRequestContent request) {
-        this.rawClient.add(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Add one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> to a specified user role.
      */
     public void add(String id, AddRolePermissionsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.add(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> from a specified user role.
      */
     public void delete(String id, DeleteRolePermissionsRequestContent request) {
-        this.rawClient.delete(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Remove one or more <a href="https://auth0.com/docs/manage-users/access-control/configure-core-rbac/manage-permissions">permissions</a> from a specified user role.
      */
     public void delete(String id, DeleteRolePermissionsRequestContent request, RequestOptions requestOptions) {
-        this.rawClient.delete(id, request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListClientGrantsRequestParameters.Builder.class)
 public final class ListClientGrantsRequestParameters {
+
     private final OptionalNullable<String> from;
 
     private final OptionalNullable<Integer> take;
@@ -38,15 +39,7 @@ public final class ListClientGrantsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListClientGrantsRequestParameters(
-            OptionalNullable<String> from,
-            OptionalNullable<Integer> take,
-            OptionalNullable<String> audience,
-            OptionalNullable<String> clientId,
-            OptionalNullable<Boolean> allowAnyOrganization,
-            OptionalNullable<ClientGrantSubjectTypeEnum> subjectType,
-            OptionalNullable<ClientGrantDefaultForEnum> defaultFor,
-            Map<String, Object> additionalProperties) {
+    private ListClientGrantsRequestParameters(OptionalNullable<String> from, OptionalNullable<Integer> take, OptionalNullable<String> audience, OptionalNullable<String> clientId, OptionalNullable<Boolean> allowAnyOrganization, OptionalNullable<ClientGrantSubjectTypeEnum> subjectType, OptionalNullable<ClientGrantDefaultForEnum> defaultFor, Map<String, Object> additionalProperties) {
         this.from = from;
         this.take = take;
         this.audience = audience;
@@ -62,10 +55,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,10 +63,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getTake() {
-        if (take == null) {
-            return OptionalNullable.absent();
-        }
-        return take;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -84,10 +71,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getAudience() {
-        if (audience == null) {
-            return OptionalNullable.absent();
-        }
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,10 +79,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getClientId() {
-        if (clientId == null) {
-            return OptionalNullable.absent();
-        }
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -106,10 +87,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getAllowAnyOrganization() {
-        if (allowAnyOrganization == null) {
-            return OptionalNullable.absent();
-        }
-        return allowAnyOrganization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,10 +95,7 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<ClientGrantSubjectTypeEnum> getSubjectType() {
-        if (subjectType == null) {
-            return OptionalNullable.absent();
-        }
-        return subjectType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -128,56 +103,40 @@ public final class ListClientGrantsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<ClientGrantDefaultForEnum> getDefaultFor() {
-        if (defaultFor == null) {
-            return OptionalNullable.absent();
-        }
-        return defaultFor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListClientGrantsRequestParameters && equalTo((ListClientGrantsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListClientGrantsRequestParameters other) {
-        return from.equals(other.from)
-                && take.equals(other.take)
-                && audience.equals(other.audience)
-                && clientId.equals(other.clientId)
-                && allowAnyOrganization.equals(other.allowAnyOrganization)
-                && subjectType.equals(other.subjectType)
-                && defaultFor.equals(other.defaultFor);
+        return from.equals(other.from) && take.equals(other.take) && audience.equals(other.audience) && clientId.equals(other.clientId) && allowAnyOrganization.equals(other.allowAnyOrganization) && subjectType.equals(other.subjectType) && defaultFor.equals(other.defaultFor);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.from,
-                this.take,
-                this.audience,
-                this.clientId,
-                this.allowAnyOrganization,
-                this.subjectType,
-                this.defaultFor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<String> from = OptionalNullable.absent();
 
         private OptionalNullable<Integer> take = OptionalNullable.absent();
@@ -195,17 +154,11 @@ public final class ListClientGrantsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListClientGrantsRequestParameters other) {
-            from(other.getFrom());
-            take(other.getTake());
-            audience(other.getAudience());
-            clientId(other.getClientId());
-            allowAnyOrganization(other.getAllowAnyOrganization());
-            subjectType(other.getSubjectType());
-            defaultFor(other.getDefaultFor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,33 +166,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -247,33 +186,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "take", nulls = Nulls.SKIP)
         public Builder take(@Nullable OptionalNullable<Integer> take) {
-            this.take = take;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Integer take) {
-            this.take = OptionalNullable.of(take);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Optional<Integer> take) {
-            if (take.isPresent()) {
-                this.take = OptionalNullable.of(take.get());
-            } else {
-                this.take = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(com.auth0.client.mgmt.core.Nullable<Integer> take) {
-            if (take.isNull()) {
-                this.take = OptionalNullable.ofNull();
-            } else if (take.isEmpty()) {
-                this.take = OptionalNullable.absent();
-            } else {
-                this.take = OptionalNullable.of(take.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,33 +206,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public Builder audience(@Nullable OptionalNullable<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(String audience) {
-            this.audience = OptionalNullable.of(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(Optional<String> audience) {
-            if (audience.isPresent()) {
-                this.audience = OptionalNullable.of(audience.get());
-            } else {
-                this.audience = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder audience(com.auth0.client.mgmt.core.Nullable<String> audience) {
-            if (audience.isNull()) {
-                this.audience = OptionalNullable.ofNull();
-            } else if (audience.isEmpty()) {
-                this.audience = OptionalNullable.absent();
-            } else {
-                this.audience = OptionalNullable.of(audience.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -315,33 +226,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(@Nullable OptionalNullable<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = OptionalNullable.of(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(Optional<String> clientId) {
-            if (clientId.isPresent()) {
-                this.clientId = OptionalNullable.of(clientId.get());
-            } else {
-                this.clientId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(com.auth0.client.mgmt.core.Nullable<String> clientId) {
-            if (clientId.isNull()) {
-                this.clientId = OptionalNullable.ofNull();
-            } else if (clientId.isEmpty()) {
-                this.clientId = OptionalNullable.absent();
-            } else {
-                this.clientId = OptionalNullable.of(clientId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -349,33 +246,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "allow_any_organization", nulls = Nulls.SKIP)
         public Builder allowAnyOrganization(@Nullable OptionalNullable<Boolean> allowAnyOrganization) {
-            this.allowAnyOrganization = allowAnyOrganization;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(Boolean allowAnyOrganization) {
-            this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(Optional<Boolean> allowAnyOrganization) {
-            if (allowAnyOrganization.isPresent()) {
-                this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization.get());
-            } else {
-                this.allowAnyOrganization = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowAnyOrganization(com.auth0.client.mgmt.core.Nullable<Boolean> allowAnyOrganization) {
-            if (allowAnyOrganization.isNull()) {
-                this.allowAnyOrganization = OptionalNullable.ofNull();
-            } else if (allowAnyOrganization.isEmpty()) {
-                this.allowAnyOrganization = OptionalNullable.absent();
-            } else {
-                this.allowAnyOrganization = OptionalNullable.of(allowAnyOrganization.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -383,33 +266,19 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "subject_type", nulls = Nulls.SKIP)
         public Builder subjectType(@Nullable OptionalNullable<ClientGrantSubjectTypeEnum> subjectType) {
-            this.subjectType = subjectType;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectType(ClientGrantSubjectTypeEnum subjectType) {
-            this.subjectType = OptionalNullable.of(subjectType);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectType(Optional<ClientGrantSubjectTypeEnum> subjectType) {
-            if (subjectType.isPresent()) {
-                this.subjectType = OptionalNullable.of(subjectType.get());
-            } else {
-                this.subjectType = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subjectType(com.auth0.client.mgmt.core.Nullable<ClientGrantSubjectTypeEnum> subjectType) {
-            if (subjectType.isNull()) {
-                this.subjectType = OptionalNullable.ofNull();
-            } else if (subjectType.isEmpty()) {
-                this.subjectType = OptionalNullable.absent();
-            } else {
-                this.subjectType = OptionalNullable.of(subjectType.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -417,55 +286,31 @@ public final class ListClientGrantsRequestParameters {
          */
         @JsonSetter(value = "default_for", nulls = Nulls.SKIP)
         public Builder defaultFor(@Nullable OptionalNullable<ClientGrantDefaultForEnum> defaultFor) {
-            this.defaultFor = defaultFor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultFor(ClientGrantDefaultForEnum defaultFor) {
-            this.defaultFor = OptionalNullable.of(defaultFor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultFor(Optional<ClientGrantDefaultForEnum> defaultFor) {
-            if (defaultFor.isPresent()) {
-                this.defaultFor = OptionalNullable.of(defaultFor.get());
-            } else {
-                this.defaultFor = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder defaultFor(com.auth0.client.mgmt.core.Nullable<ClientGrantDefaultForEnum> defaultFor) {
-            if (defaultFor.isNull()) {
-                this.defaultFor = OptionalNullable.ofNull();
-            } else if (defaultFor.isEmpty()) {
-                this.defaultFor = OptionalNullable.absent();
-            } else {
-                this.defaultFor = OptionalNullable.of(defaultFor.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListClientGrantsRequestParameters build() {
-            return new ListClientGrantsRequestParameters(
-                    from,
-                    take,
-                    audience,
-                    clientId,
-                    allowAnyOrganization,
-                    subjectType,
-                    defaultFor,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

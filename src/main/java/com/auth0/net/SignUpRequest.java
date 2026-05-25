@@ -12,7 +12,8 @@ import java.util.Map;
 public class SignUpRequest extends BaseRequest<CreatedUser> {
 
     public SignUpRequest(Auth0HttpClient client, String url) {
-        super(client, null, url, HttpMethod.POST, new TypeReference<CreatedUser>() {});
+        super(client, null, url, HttpMethod.POST, new TypeReference<CreatedUser>() {
+        });
     }
 
     /**
@@ -22,7 +23,6 @@ public class SignUpRequest extends BaseRequest<CreatedUser> {
      * @return this request instance.
      */
     public SignUpRequest setCustomFields(Map<String, String> customFields) {
-        super.addParameter("user_metadata", customFields);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

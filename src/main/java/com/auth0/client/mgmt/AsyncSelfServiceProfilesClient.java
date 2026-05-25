@@ -20,6 +20,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncSelfServiceProfilesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawSelfServiceProfilesClient rawClient;
@@ -39,118 +40,112 @@ public class AsyncSelfServiceProfilesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawSelfServiceProfilesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
     public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
     public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
-    public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list(
-            ListSelfServiceProfilesRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list(ListSelfServiceProfilesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves self-service profiles.
      */
-    public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list(
-            ListSelfServiceProfilesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<SelfServiceProfile>> list(ListSelfServiceProfilesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a self-service profile.
      */
-    public CompletableFuture<CreateSelfServiceProfileResponseContent> create(
-            CreateSelfServiceProfileRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateSelfServiceProfileResponseContent> create(CreateSelfServiceProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Creates a self-service profile.
      */
-    public CompletableFuture<CreateSelfServiceProfileResponseContent> create(
-            CreateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateSelfServiceProfileResponseContent> create(CreateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a self-service profile by Id.
      */
     public CompletableFuture<GetSelfServiceProfileResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves a self-service profile by Id.
      */
     public CompletableFuture<GetSelfServiceProfileResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a self-service profile by Id.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Deletes a self-service profile by Id.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
     public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
     public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
-    public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(
-            String id, UpdateSelfServiceProfileRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(String id, UpdateSelfServiceProfileRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates a self-service profile.
      */
-    public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(
-            String id, UpdateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateSelfServiceProfileResponseContent> update(String id, UpdateSelfServiceProfileRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncCustomTextClient customText() {
-        return this.customTextClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncSsoTicketClient ssoTicket() {
-        return this.ssoTicketClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

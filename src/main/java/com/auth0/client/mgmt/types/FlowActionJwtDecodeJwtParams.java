@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionJwtDecodeJwtParams.Builder.class)
 public final class FlowActionJwtDecodeJwtParams {
+
     private final String token;
 
     private final Map<String, Object> additionalProperties;
@@ -30,18 +31,17 @@ public final class FlowActionJwtDecodeJwtParams {
 
     @JsonProperty("token")
     public String getToken() {
-        return token;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionJwtDecodeJwtParams && equalTo((FlowActionJwtDecodeJwtParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionJwtDecodeJwtParams other) {
@@ -50,25 +50,27 @@ public final class FlowActionJwtDecodeJwtParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.token);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TokenStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TokenStage {
+
         _FinalStage token(@NotNull String token);
 
         Builder from(FlowActionJwtDecodeJwtParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionJwtDecodeJwtParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -78,41 +80,39 @@ public final class FlowActionJwtDecodeJwtParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TokenStage, _FinalStage {
+
         private String token;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionJwtDecodeJwtParams other) {
-            token(other.getToken());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("token")
         public _FinalStage token(@NotNull String token) {
-            this.token = Objects.requireNonNull(token, "token must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionJwtDecodeJwtParams build() {
-            return new FlowActionJwtDecodeJwtParams(token, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

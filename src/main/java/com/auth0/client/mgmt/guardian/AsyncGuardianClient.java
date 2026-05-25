@@ -8,6 +8,7 @@ import com.auth0.client.mgmt.core.Suppliers;
 import java.util.function.Supplier;
 
 public class AsyncGuardianClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<AsyncEnrollmentsClient> enrollmentsClient;
@@ -24,14 +25,14 @@ public class AsyncGuardianClient {
     }
 
     public AsyncEnrollmentsClient enrollments() {
-        return this.enrollmentsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncFactorsClient factors() {
-        return this.factorsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncPoliciesClient policies() {
-        return this.policiesClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

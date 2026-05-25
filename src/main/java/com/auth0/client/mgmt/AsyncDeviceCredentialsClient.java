@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.ListDeviceCredentialsRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncDeviceCredentialsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawDeviceCredentialsClient rawClient;
@@ -26,68 +27,64 @@ public class AsyncDeviceCredentialsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawDeviceCredentialsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
     public CompletableFuture<SyncPagingIterable<DeviceCredential>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
     public CompletableFuture<SyncPagingIterable<DeviceCredential>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
-    public CompletableFuture<SyncPagingIterable<DeviceCredential>> list(
-            ListDeviceCredentialsRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<DeviceCredential>> list(ListDeviceCredentialsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
-    public CompletableFuture<SyncPagingIterable<DeviceCredential>> list(
-            ListDeviceCredentialsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<DeviceCredential>> list(ListDeviceCredentialsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a device credential public key to manage refresh token rotation for a given <code>user_id</code>. Device Credentials APIs are designed for ad-hoc administrative use only and paging is by default enabled for GET requests.
      * <p>When refresh token rotation is enabled, the endpoint becomes consistent. For more information, read <a href="https://auth0.com/docs/get-started/tenant-settings/signing-keys"> Signing Keys</a>.</p>
      */
-    public CompletableFuture<CreatePublicKeyDeviceCredentialResponseContent> createPublicKey(
-            CreatePublicKeyDeviceCredentialRequestContent request) {
-        return this.rawClient.createPublicKey(request).thenApply(response -> response.body());
+    public CompletableFuture<CreatePublicKeyDeviceCredentialResponseContent> createPublicKey(CreatePublicKeyDeviceCredentialRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a device credential public key to manage refresh token rotation for a given <code>user_id</code>. Device Credentials APIs are designed for ad-hoc administrative use only and paging is by default enabled for GET requests.
      * <p>When refresh token rotation is enabled, the endpoint becomes consistent. For more information, read <a href="https://auth0.com/docs/get-started/tenant-settings/signing-keys"> Signing Keys</a>.</p>
      */
-    public CompletableFuture<CreatePublicKeyDeviceCredentialResponseContent> createPublicKey(
-            CreatePublicKeyDeviceCredentialRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.createPublicKey(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreatePublicKeyDeviceCredentialResponseContent> createPublicKey(CreatePublicKeyDeviceCredentialRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete a device credential (such as a refresh token or public key) with the given ID.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete a device credential (such as a refresh token or public key) with the given ID.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

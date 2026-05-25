@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetSigningKeysResponseContent.Builder.class)
 public final class GetSigningKeysResponseContent {
+
     private final String kid;
 
     private final String cert;
@@ -47,20 +48,7 @@ public final class GetSigningKeysResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetSigningKeysResponseContent(
-            String kid,
-            String cert,
-            Optional<String> pkcs7,
-            Optional<Boolean> current,
-            Optional<Boolean> next,
-            Optional<Boolean> previous,
-            Optional<SigningKeysDate> currentSince,
-            Optional<SigningKeysDate> currentUntil,
-            String fingerprint,
-            String thumbprint,
-            Optional<Boolean> revoked,
-            Optional<SigningKeysDate> revokedAt,
-            Map<String, Object> additionalProperties) {
+    private GetSigningKeysResponseContent(String kid, String cert, Optional<String> pkcs7, Optional<Boolean> current, Optional<Boolean> next, Optional<Boolean> previous, Optional<SigningKeysDate> currentSince, Optional<SigningKeysDate> currentUntil, String fingerprint, String thumbprint, Optional<Boolean> revoked, Optional<SigningKeysDate> revokedAt, Map<String, Object> additionalProperties) {
         this.kid = kid;
         this.cert = cert;
         this.pkcs7 = pkcs7;
@@ -81,7 +69,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -89,7 +77,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("cert")
     public String getCert() {
-        return cert;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -97,7 +85,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("pkcs7")
     public Optional<String> getPkcs7() {
-        return pkcs7;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -105,7 +93,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("current")
     public Optional<Boolean> getCurrent() {
-        return current;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,7 +101,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("next")
     public Optional<Boolean> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -121,17 +109,17 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("previous")
     public Optional<Boolean> getPrevious() {
-        return previous;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("current_since")
     public Optional<SigningKeysDate> getCurrentSince() {
-        return currentSince;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("current_until")
     public Optional<SigningKeysDate> getCurrentUntil() {
-        return currentUntil;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -139,7 +127,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("fingerprint")
     public String getFingerprint() {
-        return fingerprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -147,7 +135,7 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("thumbprint")
     public String getThumbprint() {
-        return thumbprint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -155,67 +143,44 @@ public final class GetSigningKeysResponseContent {
      */
     @JsonProperty("revoked")
     public Optional<Boolean> getRevoked() {
-        return revoked;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("revoked_at")
     public Optional<SigningKeysDate> getRevokedAt() {
-        return revokedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetSigningKeysResponseContent && equalTo((GetSigningKeysResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetSigningKeysResponseContent other) {
-        return kid.equals(other.kid)
-                && cert.equals(other.cert)
-                && pkcs7.equals(other.pkcs7)
-                && current.equals(other.current)
-                && next.equals(other.next)
-                && previous.equals(other.previous)
-                && currentSince.equals(other.currentSince)
-                && currentUntil.equals(other.currentUntil)
-                && fingerprint.equals(other.fingerprint)
-                && thumbprint.equals(other.thumbprint)
-                && revoked.equals(other.revoked)
-                && revokedAt.equals(other.revokedAt);
+        return kid.equals(other.kid) && cert.equals(other.cert) && pkcs7.equals(other.pkcs7) && current.equals(other.current) && next.equals(other.next) && previous.equals(other.previous) && currentSince.equals(other.currentSince) && currentUntil.equals(other.currentUntil) && fingerprint.equals(other.fingerprint) && thumbprint.equals(other.thumbprint) && revoked.equals(other.revoked) && revokedAt.equals(other.revokedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.kid,
-                this.cert,
-                this.pkcs7,
-                this.current,
-                this.next,
-                this.previous,
-                this.currentSince,
-                this.currentUntil,
-                this.fingerprint,
-                this.thumbprint,
-                this.revoked,
-                this.revokedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KidStage {
+
         /**
          * <p>The key id of the signing key</p>
          */
@@ -225,6 +190,7 @@ public final class GetSigningKeysResponseContent {
     }
 
     public interface CertStage {
+
         /**
          * <p>The public certificate of the signing key</p>
          */
@@ -232,6 +198,7 @@ public final class GetSigningKeysResponseContent {
     }
 
     public interface FingerprintStage {
+
         /**
          * <p>The cert fingerprint</p>
          */
@@ -239,6 +206,7 @@ public final class GetSigningKeysResponseContent {
     }
 
     public interface ThumbprintStage {
+
         /**
          * <p>The cert thumbprint</p>
          */
@@ -246,6 +214,7 @@ public final class GetSigningKeysResponseContent {
     }
 
     public interface _FinalStage {
+
         GetSigningKeysResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -302,6 +271,7 @@ public final class GetSigningKeysResponseContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements KidStage, CertStage, FingerprintStage, ThumbprintStage, _FinalStage {
+
         private String kid;
 
         private String cert;
@@ -329,23 +299,12 @@ public final class GetSigningKeysResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetSigningKeysResponseContent other) {
-            kid(other.getKid());
-            cert(other.getCert());
-            pkcs7(other.getPkcs7());
-            current(other.getCurrent());
-            next(other.getNext());
-            previous(other.getPrevious());
-            currentSince(other.getCurrentSince());
-            currentUntil(other.getCurrentUntil());
-            fingerprint(other.getFingerprint());
-            thumbprint(other.getThumbprint());
-            revoked(other.getRevoked());
-            revokedAt(other.getRevokedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,8 +315,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("kid")
         public CertStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -368,8 +326,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("cert")
         public FingerprintStage cert(@NotNull String cert) {
-            this.cert = Objects.requireNonNull(cert, "cert must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -380,8 +337,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("fingerprint")
         public ThumbprintStage fingerprint(@NotNull String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint, "fingerprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -392,21 +348,18 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter("thumbprint")
         public _FinalStage thumbprint(@NotNull String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint, "thumbprint must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage revokedAt(SigningKeysDate revokedAt) {
-            this.revokedAt = Optional.ofNullable(revokedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "revoked_at", nulls = Nulls.SKIP)
         public _FinalStage revokedAt(Optional<SigningKeysDate> revokedAt) {
-            this.revokedAt = revokedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -415,8 +368,7 @@ public final class GetSigningKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage revoked(Boolean revoked) {
-            this.revoked = Optional.ofNullable(revoked);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -425,34 +377,29 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "revoked", nulls = Nulls.SKIP)
         public _FinalStage revoked(Optional<Boolean> revoked) {
-            this.revoked = revoked;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage currentUntil(SigningKeysDate currentUntil) {
-            this.currentUntil = Optional.ofNullable(currentUntil);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "current_until", nulls = Nulls.SKIP)
         public _FinalStage currentUntil(Optional<SigningKeysDate> currentUntil) {
-            this.currentUntil = currentUntil;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage currentSince(SigningKeysDate currentSince) {
-            this.currentSince = Optional.ofNullable(currentSince);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "current_since", nulls = Nulls.SKIP)
         public _FinalStage currentSince(Optional<SigningKeysDate> currentSince) {
-            this.currentSince = currentSince;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -461,8 +408,7 @@ public final class GetSigningKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage previous(Boolean previous) {
-            this.previous = Optional.ofNullable(previous);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -471,8 +417,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "previous", nulls = Nulls.SKIP)
         public _FinalStage previous(Optional<Boolean> previous) {
-            this.previous = previous;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -481,8 +426,7 @@ public final class GetSigningKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage next(Boolean next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -491,8 +435,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public _FinalStage next(Optional<Boolean> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -501,8 +444,7 @@ public final class GetSigningKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage current(Boolean current) {
-            this.current = Optional.ofNullable(current);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -511,8 +453,7 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "current", nulls = Nulls.SKIP)
         public _FinalStage current(Optional<Boolean> current) {
-            this.current = current;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -521,8 +462,7 @@ public final class GetSigningKeysResponseContent {
          */
         @java.lang.Override
         public _FinalStage pkcs7(String pkcs7) {
-            this.pkcs7 = Optional.ofNullable(pkcs7);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -531,38 +471,22 @@ public final class GetSigningKeysResponseContent {
         @java.lang.Override
         @JsonSetter(value = "pkcs7", nulls = Nulls.SKIP)
         public _FinalStage pkcs7(Optional<String> pkcs7) {
-            this.pkcs7 = pkcs7;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetSigningKeysResponseContent build() {
-            return new GetSigningKeysResponseContent(
-                    kid,
-                    cert,
-                    pkcs7,
-                    current,
-                    next,
-                    previous,
-                    currentSince,
-                    currentUntil,
-                    fingerprint,
-                    thumbprint,
-                    revoked,
-                    revokedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

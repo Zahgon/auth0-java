@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ClientSessionTransferAllowedAuthenticationMethodsEnum {
-    public static final ClientSessionTransferAllowedAuthenticationMethodsEnum QUERY =
-            new ClientSessionTransferAllowedAuthenticationMethodsEnum(Value.QUERY, "query");
 
-    public static final ClientSessionTransferAllowedAuthenticationMethodsEnum COOKIE =
-            new ClientSessionTransferAllowedAuthenticationMethodsEnum(Value.COOKIE, "cookie");
+    public static final ClientSessionTransferAllowedAuthenticationMethodsEnum QUERY = new ClientSessionTransferAllowedAuthenticationMethodsEnum(Value.QUERY, "query");
+
+    public static final ClientSessionTransferAllowedAuthenticationMethodsEnum COOKIE = new ClientSessionTransferAllowedAuthenticationMethodsEnum(Value.COOKIE, "cookie");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ClientSessionTransferAllowedAuthenticationMethodsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ClientSessionTransferAllowedAuthenticationMethodsEnum
-                        && this.string.equals(((ClientSessionTransferAllowedAuthenticationMethodsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case QUERY:
-                return visitor.visitQuery();
-            case COOKIE:
-                return visitor.visitCookie();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ClientSessionTransferAllowedAuthenticationMethodsEnum valueOf(String value) {
-        switch (value) {
-            case "query":
-                return QUERY;
-            case "cookie":
-                return COOKIE;
-            default:
-                return new ClientSessionTransferAllowedAuthenticationMethodsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        COOKIE,
 
-        QUERY,
-
-        UNKNOWN
+        COOKIE, QUERY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCookie();
 
         T visitQuery();

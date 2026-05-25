@@ -6,11 +6,10 @@ package com.auth0.client.mgmt.core;
 import java.util.Optional;
 
 public final class NullableNonemptyFilter {
+
     @Override
     public boolean equals(Object o) {
-        boolean isOptionalEmpty = isOptionalEmpty(o);
-
-        return isOptionalEmpty;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean isOptionalEmpty(Object o) {

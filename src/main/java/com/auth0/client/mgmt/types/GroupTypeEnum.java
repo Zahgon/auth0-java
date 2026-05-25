@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class GroupTypeEnum {
+
     public static final GroupTypeEnum ORGANIZATION = new GroupTypeEnum(Value.ORGANIZATION, "organization");
 
     public static final GroupTypeEnum TENANT = new GroupTypeEnum(Value.TENANT, "tenant");
@@ -23,65 +24,41 @@ public final class GroupTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof GroupTypeEnum && this.string.equals(((GroupTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ORGANIZATION:
-                return visitor.visitOrganization();
-            case TENANT:
-                return visitor.visitTenant();
-            case CONNECTION:
-                return visitor.visitConnection();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static GroupTypeEnum valueOf(String value) {
-        switch (value) {
-            case "organization":
-                return ORGANIZATION;
-            case "tenant":
-                return TENANT;
-            case "connection":
-                return CONNECTION;
-            default:
-                return new GroupTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CONNECTION,
 
-        ORGANIZATION,
-
-        TENANT,
-
-        UNKNOWN
+        CONNECTION, ORGANIZATION, TENANT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitConnection();
 
         T visitOrganization();

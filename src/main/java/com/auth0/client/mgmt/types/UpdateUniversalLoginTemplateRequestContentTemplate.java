@@ -19,31 +19,29 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateUniversalLoginTemplateRequestContentTemplate.Builder.class)
 public final class UpdateUniversalLoginTemplateRequestContentTemplate {
+
     private final String template;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateUniversalLoginTemplateRequestContentTemplate(
-            String template, Map<String, Object> additionalProperties) {
+    private UpdateUniversalLoginTemplateRequestContentTemplate(String template, Map<String, Object> additionalProperties) {
         this.template = template;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("template")
     public String getTemplate() {
-        return template;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateUniversalLoginTemplateRequestContentTemplate
-                && equalTo((UpdateUniversalLoginTemplateRequestContentTemplate) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateUniversalLoginTemplateRequestContentTemplate other) {
@@ -52,25 +50,27 @@ public final class UpdateUniversalLoginTemplateRequestContentTemplate {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.template);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TemplateStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TemplateStage {
+
         _FinalStage template(@NotNull String template);
 
         Builder from(UpdateUniversalLoginTemplateRequestContentTemplate other);
     }
 
     public interface _FinalStage {
+
         UpdateUniversalLoginTemplateRequestContentTemplate build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -80,41 +80,39 @@ public final class UpdateUniversalLoginTemplateRequestContentTemplate {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TemplateStage, _FinalStage {
+
         private String template;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(UpdateUniversalLoginTemplateRequestContentTemplate other) {
-            template(other.getTemplate());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("template")
         public _FinalStage template(@NotNull String template) {
-            this.template = Objects.requireNonNull(template, "template must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public UpdateUniversalLoginTemplateRequestContentTemplate build() {
-            return new UpdateUniversalLoginTemplateRequestContentTemplate(template, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.PostClientCredentialResponseContent;
 import java.util.List;
 
 public class CredentialsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCredentialsClient rawClient;
@@ -27,7 +28,7 @@ public class CredentialsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCredentialsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -35,7 +36,7 @@ public class CredentialsClient {
      * <p><b>Important</b>: To enable credentials to be used for a client authentication method, set the <code>client_authentication_methods</code> property on the client. To enable credentials to be used for JWT-Secured Authorization requests set the <code>signed_request_object</code> property on the client.</p>
      */
     public List<ClientCredential> list(String clientId) {
-        return this.rawClient.list(clientId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,7 +44,7 @@ public class CredentialsClient {
      * <p><b>Important</b>: To enable credentials to be used for a client authentication method, set the <code>client_authentication_methods</code> property on the client. To enable credentials to be used for JWT-Secured Authorization requests set the <code>signed_request_object</code> property on the client.</p>
      */
     public List<ClientCredential> list(String clientId, RequestOptions requestOptions) {
-        return this.rawClient.list(clientId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +79,7 @@ public class CredentialsClient {
      * </ul></p>
      */
     public PostClientCredentialResponseContent create(String clientId, PostClientCredentialRequestContent request) {
-        return this.rawClient.create(clientId, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,9 +113,8 @@ public class CredentialsClient {
      *   <li>To enable the credential for JWT-secured Authorization requests, set the <code>signed_request_object</code>property on the client. For more information, read <a href="https://auth0.com/docs/get-started/applications/configure-jar">Configure JWT-secured Authorization Requests (JAR)</a></li>
      * </ul></p>
      */
-    public PostClientCredentialResponseContent create(
-            String clientId, PostClientCredentialRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(clientId, request, requestOptions).body();
+    public PostClientCredentialResponseContent create(String clientId, PostClientCredentialRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,7 +122,7 @@ public class CredentialsClient {
      * <p><b>Important</b>: To enable credentials to be used for a client authentication method, set the <code>client_authentication_methods</code> property on the client. To enable credentials to be used for JWT-Secured Authorization requests set the <code>signed_request_object</code> property on the client.</p>
      */
     public GetClientCredentialResponseContent get(String clientId, String credentialId) {
-        return this.rawClient.get(clientId, credentialId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -130,56 +130,48 @@ public class CredentialsClient {
      * <p><b>Important</b>: To enable credentials to be used for a client authentication method, set the <code>client_authentication_methods</code> property on the client. To enable credentials to be used for JWT-Secured Authorization requests set the <code>signed_request_object</code> property on the client.</p>
      */
     public GetClientCredentialResponseContent get(String clientId, String credentialId, RequestOptions requestOptions) {
-        return this.rawClient.get(clientId, credentialId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
     public void delete(String clientId, String credentialId) {
-        this.rawClient.delete(clientId, credentialId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
     public void delete(String clientId, String credentialId, RequestOptions requestOptions) {
-        this.rawClient.delete(clientId, credentialId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
     public PatchClientCredentialResponseContent update(String clientId, String credentialId) {
-        return this.rawClient.update(clientId, credentialId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
-    public PatchClientCredentialResponseContent update(
-            String clientId, String credentialId, RequestOptions requestOptions) {
-        return this.rawClient.update(clientId, credentialId, requestOptions).body();
+    public PatchClientCredentialResponseContent update(String clientId, String credentialId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
-    public PatchClientCredentialResponseContent update(
-            String clientId, String credentialId, PatchClientCredentialRequestContent request) {
-        return this.rawClient.update(clientId, credentialId, request).body();
+    public PatchClientCredentialResponseContent update(String clientId, String credentialId, PatchClientCredentialRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Change a client credential you previously created. May be enabled or disabled. For more information, read <a href="https://www.auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow">Client Credential Flow</a>.
      */
-    public PatchClientCredentialResponseContent update(
-            String clientId,
-            String credentialId,
-            PatchClientCredentialRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient
-                .update(clientId, credentialId, request, requestOptions)
-                .body();
+    public PatchClientCredentialResponseContent update(String clientId, String credentialId, PatchClientCredentialRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

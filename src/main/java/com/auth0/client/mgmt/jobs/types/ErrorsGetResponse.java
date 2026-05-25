@@ -20,6 +20,7 @@ import java.util.Objects;
 
 @JsonDeserialize(using = ErrorsGetResponse.Deserializer.class)
 public final class ErrorsGetResponse {
+
     private final Object value;
 
     private final int type;
@@ -31,23 +32,17 @@ public final class ErrorsGetResponse {
 
     @JsonValue
     public Object get() {
-        return this.value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @SuppressWarnings("unchecked")
     public <T> T visit(Visitor<T> visitor) {
-        if (this.type == 0) {
-            return visitor.visit((List<GetJobErrorResponseContent>) this.value);
-        } else if (this.type == 1) {
-            return visitor.visit((GetJobGenericErrorResponseContent) this.value);
-        }
-        throw new IllegalStateException("Failed to visit value. This should never happen.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ErrorsGetResponse && equalTo((ErrorsGetResponse) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ErrorsGetResponse other) {
@@ -56,51 +51,38 @@ public final class ErrorsGetResponse {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.value);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return this.value.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ErrorsGetResponse of(List<GetJobErrorResponseContent> value) {
-        return new ErrorsGetResponse(value, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ErrorsGetResponse of(GetJobGenericErrorResponseContent value) {
-        return new ErrorsGetResponse(value, 1);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface Visitor<T> {
+
         T visit(List<GetJobErrorResponseContent> value);
 
         T visit(GetJobGenericErrorResponseContent value);
     }
 
     static final class Deserializer extends StdDeserializer<ErrorsGetResponse> {
+
         Deserializer() {
             super(ErrorsGetResponse.class);
         }
 
         @java.lang.Override
         public ErrorsGetResponse deserialize(JsonParser p, DeserializationContext context) throws IOException {
-            Object value = p.readValueAs(Object.class);
-            try {
-                return of(ObjectMappers.JSON_MAPPER.convertValue(
-                        value, new TypeReference<List<GetJobErrorResponseContent>>() {}));
-            } catch (RuntimeException e) {
-            }
-            if (value instanceof Map<?, ?>
-                    && ((Map<?, ?>) value).containsKey("status")
-                    && ((Map<?, ?>) value).containsKey("type")
-                    && ((Map<?, ?>) value).containsKey("id")) {
-                try {
-                    return of(ObjectMappers.JSON_MAPPER.convertValue(value, GetJobGenericErrorResponseContent.class));
-                } catch (RuntimeException e) {
-                }
-            }
-            throw new JsonParseException(p, "Failed to deserialize");
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

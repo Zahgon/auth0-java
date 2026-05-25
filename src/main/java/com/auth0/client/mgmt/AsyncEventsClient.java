@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.SubscribeEventsRequestParameters;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEventsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEventsClient rawClient;
@@ -23,37 +24,34 @@ public class AsyncEventsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEventsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
     public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe() {
-        return this.rawClient.subscribe().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
-    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(
-            RequestOptions requestOptions) {
-        return this.rawClient.subscribe(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
-    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(
-            SubscribeEventsRequestParameters request) {
-        return this.rawClient.subscribe(request).thenApply(response -> response.body());
+    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(SubscribeEventsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Subscribe to events via Server-Sent Events (SSE)
      */
-    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(
-            SubscribeEventsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.subscribe(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<Iterable<EventStreamSubscribeEventsResponseContent>> subscribe(SubscribeEventsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

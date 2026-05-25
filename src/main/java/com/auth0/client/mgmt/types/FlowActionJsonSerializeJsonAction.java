@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionJsonSerializeJsonAction {
-    public static final FlowActionJsonSerializeJsonAction SERIALIZE_JSON =
-            new FlowActionJsonSerializeJsonAction(Value.SERIALIZE_JSON, "SERIALIZE_JSON");
+
+    public static final FlowActionJsonSerializeJsonAction SERIALIZE_JSON = new FlowActionJsonSerializeJsonAction(Value.SERIALIZE_JSON, "SERIALIZE_JSON");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionJsonSerializeJsonAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionJsonSerializeJsonAction
-                        && this.string.equals(((FlowActionJsonSerializeJsonAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SERIALIZE_JSON:
-                return visitor.visitSerializeJson();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionJsonSerializeJsonAction valueOf(String value) {
-        switch (value) {
-            case "SERIALIZE_JSON":
-                return SERIALIZE_JSON;
-            default:
-                return new FlowActionJsonSerializeJsonAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SERIALIZE_JSON,
 
-        UNKNOWN
+        SERIALIZE_JSON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSerializeJson();
 
         T visitUnknown(String unknownType);

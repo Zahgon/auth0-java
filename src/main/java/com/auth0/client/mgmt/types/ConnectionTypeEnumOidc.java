@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionTypeEnumOidc {
-    public static final ConnectionTypeEnumOidc FRONT_CHANNEL =
-            new ConnectionTypeEnumOidc(Value.FRONT_CHANNEL, "front_channel");
 
-    public static final ConnectionTypeEnumOidc BACK_CHANNEL =
-            new ConnectionTypeEnumOidc(Value.BACK_CHANNEL, "back_channel");
+    public static final ConnectionTypeEnumOidc FRONT_CHANNEL = new ConnectionTypeEnumOidc(Value.FRONT_CHANNEL, "front_channel");
+
+    public static final ConnectionTypeEnumOidc BACK_CHANNEL = new ConnectionTypeEnumOidc(Value.BACK_CHANNEL, "back_channel");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class ConnectionTypeEnumOidc {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionTypeEnumOidc
-                        && this.string.equals(((ConnectionTypeEnumOidc) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FRONT_CHANNEL:
-                return visitor.visitFrontChannel();
-            case BACK_CHANNEL:
-                return visitor.visitBackChannel();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionTypeEnumOidc valueOf(String value) {
-        switch (value) {
-            case "front_channel":
-                return FRONT_CHANNEL;
-            case "back_channel":
-                return BACK_CHANNEL;
-            default:
-                return new ConnectionTypeEnumOidc(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BACK_CHANNEL,
 
-        FRONT_CHANNEL,
-
-        UNKNOWN
+        BACK_CHANNEL, FRONT_CHANNEL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBackChannel();
 
         T visitFrontChannel();

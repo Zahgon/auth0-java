@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BruteForceProtectionModeEnum {
-    public static final BruteForceProtectionModeEnum COUNT_PER_IDENTIFIER =
-            new BruteForceProtectionModeEnum(Value.COUNT_PER_IDENTIFIER, "count_per_identifier");
 
-    public static final BruteForceProtectionModeEnum COUNT_PER_IDENTIFIER_AND_IP =
-            new BruteForceProtectionModeEnum(Value.COUNT_PER_IDENTIFIER_AND_IP, "count_per_identifier_and_ip");
+    public static final BruteForceProtectionModeEnum COUNT_PER_IDENTIFIER = new BruteForceProtectionModeEnum(Value.COUNT_PER_IDENTIFIER, "count_per_identifier");
+
+    public static final BruteForceProtectionModeEnum COUNT_PER_IDENTIFIER_AND_IP = new BruteForceProtectionModeEnum(Value.COUNT_PER_IDENTIFIER_AND_IP, "count_per_identifier_and_ip");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class BruteForceProtectionModeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BruteForceProtectionModeEnum
-                        && this.string.equals(((BruteForceProtectionModeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case COUNT_PER_IDENTIFIER:
-                return visitor.visitCountPerIdentifier();
-            case COUNT_PER_IDENTIFIER_AND_IP:
-                return visitor.visitCountPerIdentifierAndIp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BruteForceProtectionModeEnum valueOf(String value) {
-        switch (value) {
-            case "count_per_identifier":
-                return COUNT_PER_IDENTIFIER;
-            case "count_per_identifier_and_ip":
-                return COUNT_PER_IDENTIFIER_AND_IP;
-            default:
-                return new BruteForceProtectionModeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        COUNT_PER_IDENTIFIER_AND_IP,
 
-        COUNT_PER_IDENTIFIER,
-
-        UNKNOWN
+        COUNT_PER_IDENTIFIER_AND_IP, COUNT_PER_IDENTIFIER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCountPerIdentifierAndIp();
 
         T visitCountPerIdentifier();

@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateConnectionRequestContentOAuth1Strategy {
-    public static final CreateConnectionRequestContentOAuth1Strategy OAUTH1 =
-            new CreateConnectionRequestContentOAuth1Strategy(Value.OAUTH1, "oauth1");
+
+    public static final CreateConnectionRequestContentOAuth1Strategy OAUTH1 = new CreateConnectionRequestContentOAuth1Strategy(Value.OAUTH1, "oauth1");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class CreateConnectionRequestContentOAuth1Strategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateConnectionRequestContentOAuth1Strategy
-                        && this.string.equals(((CreateConnectionRequestContentOAuth1Strategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OAUTH1:
-                return visitor.visitOauth1();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateConnectionRequestContentOAuth1Strategy valueOf(String value) {
-        switch (value) {
-            case "oauth1":
-                return OAUTH1;
-            default:
-                return new CreateConnectionRequestContentOAuth1Strategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OAUTH1,
 
-        UNKNOWN
+        OAUTH1, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOauth1();
 
         T visitUnknown(String unknownType);

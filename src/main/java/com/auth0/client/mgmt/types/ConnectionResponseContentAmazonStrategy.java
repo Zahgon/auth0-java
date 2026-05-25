@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentAmazonStrategy {
-    public static final ConnectionResponseContentAmazonStrategy AMAZON =
-            new ConnectionResponseContentAmazonStrategy(Value.AMAZON, "amazon");
+
+    public static final ConnectionResponseContentAmazonStrategy AMAZON = new ConnectionResponseContentAmazonStrategy(Value.AMAZON, "amazon");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentAmazonStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentAmazonStrategy
-                        && this.string.equals(((ConnectionResponseContentAmazonStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AMAZON:
-                return visitor.visitAmazon();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentAmazonStrategy valueOf(String value) {
-        switch (value) {
-            case "amazon":
-                return AMAZON;
-            default:
-                return new ConnectionResponseContentAmazonStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AMAZON,
 
-        UNKNOWN
+        AMAZON, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAmazon();
 
         T visitUnknown(String unknownType);

@@ -19,14 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupWebhook.Builder.class)
 public final class FlowsVaultConnectioSetupWebhook {
+
     private final FlowsVaultConnectioSetupTypeWebhookEnum type;
 
     private final String url;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupWebhook(
-            FlowsVaultConnectioSetupTypeWebhookEnum type, String url, Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupWebhook(FlowsVaultConnectioSetupTypeWebhookEnum type, String url, Map<String, Object> additionalProperties) {
         this.type = type;
         this.url = url;
         this.additionalProperties = additionalProperties;
@@ -34,23 +34,22 @@ public final class FlowsVaultConnectioSetupWebhook {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeWebhookEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("url")
     public String getUrl() {
-        return url;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupWebhook && equalTo((FlowsVaultConnectioSetupWebhook) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupWebhook other) {
@@ -59,29 +58,32 @@ public final class FlowsVaultConnectioSetupWebhook {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.url);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         UrlStage type(@NotNull FlowsVaultConnectioSetupTypeWebhookEnum type);
 
         Builder from(FlowsVaultConnectioSetupWebhook other);
     }
 
     public interface UrlStage {
+
         _FinalStage url(@NotNull String url);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupWebhook build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -91,6 +93,7 @@ public final class FlowsVaultConnectioSetupWebhook {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, UrlStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeWebhookEnum type;
 
         private String url;
@@ -98,44 +101,39 @@ public final class FlowsVaultConnectioSetupWebhook {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupWebhook other) {
-            type(other.getType());
-            url(other.getUrl());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public UrlStage type(@NotNull FlowsVaultConnectioSetupTypeWebhookEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("url")
         public _FinalStage url(@NotNull String url) {
-            this.url = Objects.requireNonNull(url, "url must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupWebhook build() {
-            return new FlowsVaultConnectioSetupWebhook(type, url, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

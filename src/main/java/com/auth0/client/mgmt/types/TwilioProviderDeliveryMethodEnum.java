@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class TwilioProviderDeliveryMethodEnum {
-    public static final TwilioProviderDeliveryMethodEnum TEXT =
-            new TwilioProviderDeliveryMethodEnum(Value.TEXT, "text");
 
-    public static final TwilioProviderDeliveryMethodEnum VOICE =
-            new TwilioProviderDeliveryMethodEnum(Value.VOICE, "voice");
+    public static final TwilioProviderDeliveryMethodEnum TEXT = new TwilioProviderDeliveryMethodEnum(Value.TEXT, "text");
+
+    public static final TwilioProviderDeliveryMethodEnum VOICE = new TwilioProviderDeliveryMethodEnum(Value.VOICE, "voice");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class TwilioProviderDeliveryMethodEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof TwilioProviderDeliveryMethodEnum
-                        && this.string.equals(((TwilioProviderDeliveryMethodEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TEXT:
-                return visitor.visitText();
-            case VOICE:
-                return visitor.visitVoice();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static TwilioProviderDeliveryMethodEnum valueOf(String value) {
-        switch (value) {
-            case "text":
-                return TEXT;
-            case "voice":
-                return VOICE;
-            default:
-                return new TwilioProviderDeliveryMethodEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TEXT,
 
-        VOICE,
-
-        UNKNOWN
+        TEXT, VOICE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitText();
 
         T visitVoice();

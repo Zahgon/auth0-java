@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateVerifiableCredentialTemplateRequestContent.Builder.class)
 public final class CreateVerifiableCredentialTemplateRequestContent {
+
     private final String name;
 
     private final String type;
@@ -39,14 +40,7 @@ public final class CreateVerifiableCredentialTemplateRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateVerifiableCredentialTemplateRequestContent(
-            String name,
-            String type,
-            String dialect,
-            MdlPresentationRequest presentation,
-            OptionalNullable<String> customCertificateAuthority,
-            String wellKnownTrustedIssuers,
-            Map<String, Object> additionalProperties) {
+    private CreateVerifiableCredentialTemplateRequestContent(String name, String type, String dialect, MdlPresentationRequest presentation, OptionalNullable<String> customCertificateAuthority, String wellKnownTrustedIssuers, Map<String, Object> additionalProperties) {
         this.name = name;
         this.type = type;
         this.dialect = dialect;
@@ -58,36 +52,33 @@ public final class CreateVerifiableCredentialTemplateRequestContent {
 
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("dialect")
     public String getDialect() {
-        return dialect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("presentation")
     public MdlPresentationRequest getPresentation() {
-        return presentation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("custom_certificate_authority")
     public OptionalNullable<String> getCustomCertificateAuthority() {
-        if (customCertificateAuthority == null) {
-            return OptionalNullable.absent();
-        }
-        return customCertificateAuthority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("well_known_trusted_issuers")
     public String getWellKnownTrustedIssuers() {
-        return wellKnownTrustedIssuers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -98,68 +89,61 @@ public final class CreateVerifiableCredentialTemplateRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateVerifiableCredentialTemplateRequestContent
-                && equalTo((CreateVerifiableCredentialTemplateRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateVerifiableCredentialTemplateRequestContent other) {
-        return name.equals(other.name)
-                && type.equals(other.type)
-                && dialect.equals(other.dialect)
-                && presentation.equals(other.presentation)
-                && customCertificateAuthority.equals(other.customCertificateAuthority)
-                && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers);
+        return name.equals(other.name) && type.equals(other.type) && dialect.equals(other.dialect) && presentation.equals(other.presentation) && customCertificateAuthority.equals(other.customCertificateAuthority) && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.type,
-                this.dialect,
-                this.presentation,
-                this.customCertificateAuthority,
-                this.wellKnownTrustedIssuers);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         TypeStage name(@NotNull String name);
 
         Builder from(CreateVerifiableCredentialTemplateRequestContent other);
     }
 
     public interface TypeStage {
+
         DialectStage type(@NotNull String type);
     }
 
     public interface DialectStage {
+
         PresentationStage dialect(@NotNull String dialect);
     }
 
     public interface PresentationStage {
+
         WellKnownTrustedIssuersStage presentation(@NotNull MdlPresentationRequest presentation);
     }
 
     public interface WellKnownTrustedIssuersStage {
+
         _FinalStage wellKnownTrustedIssuers(@NotNull String wellKnownTrustedIssuers);
     }
 
     public interface _FinalStage {
+
         CreateVerifiableCredentialTemplateRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -176,13 +160,8 @@ public final class CreateVerifiableCredentialTemplateRequestContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements NameStage,
-                    TypeStage,
-                    DialectStage,
-                    PresentationStage,
-                    WellKnownTrustedIssuersStage,
-                    _FinalStage {
+    public static final class Builder implements NameStage, TypeStage, DialectStage, PresentationStage, WellKnownTrustedIssuersStage, _FinalStage {
+
         private String name;
 
         private String type;
@@ -198,113 +177,78 @@ public final class CreateVerifiableCredentialTemplateRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateVerifiableCredentialTemplateRequestContent other) {
-            name(other.getName());
-            type(other.getType());
-            dialect(other.getDialect());
-            presentation(other.getPresentation());
-            customCertificateAuthority(other.getCustomCertificateAuthority());
-            wellKnownTrustedIssuers(other.getWellKnownTrustedIssuers());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public TypeStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public DialectStage type(@NotNull String type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("dialect")
         public PresentationStage dialect(@NotNull String dialect) {
-            this.dialect = Objects.requireNonNull(dialect, "dialect must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("presentation")
         public WellKnownTrustedIssuersStage presentation(@NotNull MdlPresentationRequest presentation) {
-            this.presentation = Objects.requireNonNull(presentation, "presentation must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("well_known_trusted_issuers")
         public _FinalStage wellKnownTrustedIssuers(@NotNull String wellKnownTrustedIssuers) {
-            this.wellKnownTrustedIssuers =
-                    Objects.requireNonNull(wellKnownTrustedIssuers, "wellKnownTrustedIssuers must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage customCertificateAuthority(
-                com.auth0.client.mgmt.core.Nullable<String> customCertificateAuthority) {
-            if (customCertificateAuthority.isNull()) {
-                this.customCertificateAuthority = OptionalNullable.ofNull();
-            } else if (customCertificateAuthority.isEmpty()) {
-                this.customCertificateAuthority = OptionalNullable.absent();
-            } else {
-                this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority.get());
-            }
-            return this;
+        public _FinalStage customCertificateAuthority(com.auth0.client.mgmt.core.Nullable<String> customCertificateAuthority) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customCertificateAuthority(Optional<String> customCertificateAuthority) {
-            if (customCertificateAuthority.isPresent()) {
-                this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority.get());
-            } else {
-                this.customCertificateAuthority = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage customCertificateAuthority(String customCertificateAuthority) {
-            this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "custom_certificate_authority", nulls = Nulls.SKIP)
         public _FinalStage customCertificateAuthority(@Nullable OptionalNullable<String> customCertificateAuthority) {
-            this.customCertificateAuthority = customCertificateAuthority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateVerifiableCredentialTemplateRequestContent build() {
-            return new CreateVerifiableCredentialTemplateRequestContent(
-                    name,
-                    type,
-                    dialect,
-                    presentation,
-                    customCertificateAuthority,
-                    wellKnownTrustedIssuers,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

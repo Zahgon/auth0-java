@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionEmailEmail.Builder.class)
 public final class ConnectionEmailEmail {
+
     private final Optional<String> body;
 
     private final Optional<String> from;
@@ -30,12 +31,7 @@ public final class ConnectionEmailEmail {
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionEmailEmail(
-            Optional<String> body,
-            Optional<String> from,
-            Optional<String> subject,
-            Optional<ConnectionEmailEmailSyntax> syntax,
-            Map<String, Object> additionalProperties) {
+    private ConnectionEmailEmail(Optional<String> body, Optional<String> from, Optional<String> subject, Optional<ConnectionEmailEmailSyntax> syntax, Map<String, Object> additionalProperties) {
         this.body = body;
         this.from = from;
         this.subject = subject;
@@ -45,17 +41,17 @@ public final class ConnectionEmailEmail {
 
     @JsonProperty("body")
     public Optional<String> getBody() {
-        return body;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("from")
     public Optional<String> getFrom() {
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("subject")
     public Optional<String> getSubject() {
-        return subject;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,43 +59,40 @@ public final class ConnectionEmailEmail {
      */
     @JsonProperty("syntax")
     public Optional<ConnectionEmailEmailSyntax> getSyntax() {
-        return syntax;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionEmailEmail && equalTo((ConnectionEmailEmail) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionEmailEmail other) {
-        return body.equals(other.body)
-                && from.equals(other.from)
-                && subject.equals(other.subject)
-                && syntax.equals(other.syntax);
+        return body.equals(other.body) && from.equals(other.from) && subject.equals(other.subject) && syntax.equals(other.syntax);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.body, this.from, this.subject, this.syntax);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> body = Optional.empty();
 
         private Optional<String> from = Optional.empty();
@@ -111,47 +104,38 @@ public final class ConnectionEmailEmail {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionEmailEmail other) {
-            body(other.getBody());
-            from(other.getFrom());
-            subject(other.getSubject());
-            syntax(other.getSyntax());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "body", nulls = Nulls.SKIP)
         public Builder body(Optional<String> body) {
-            this.body = body;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder body(String body) {
-            this.body = Optional.ofNullable(body);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(Optional<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = Optional.ofNullable(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "subject", nulls = Nulls.SKIP)
         public Builder subject(Optional<String> subject) {
-            this.subject = subject;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder subject(String subject) {
-            this.subject = Optional.ofNullable(subject);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -159,27 +143,23 @@ public final class ConnectionEmailEmail {
          */
         @JsonSetter(value = "syntax", nulls = Nulls.SKIP)
         public Builder syntax(Optional<ConnectionEmailEmailSyntax> syntax) {
-            this.syntax = syntax;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder syntax(ConnectionEmailEmailSyntax syntax) {
-            this.syntax = Optional.ofNullable(syntax);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionEmailEmail build() {
-            return new ConnectionEmailEmail(body, from, subject, syntax, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

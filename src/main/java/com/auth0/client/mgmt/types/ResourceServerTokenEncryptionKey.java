@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ResourceServerTokenEncryptionKey.Builder.class)
 public final class ResourceServerTokenEncryptionKey {
+
     private final Optional<String> name;
 
     private final ResourceServerTokenEncryptionAlgorithmEnum alg;
@@ -31,12 +32,7 @@ public final class ResourceServerTokenEncryptionKey {
 
     private final Map<String, Object> additionalProperties;
 
-    private ResourceServerTokenEncryptionKey(
-            Optional<String> name,
-            ResourceServerTokenEncryptionAlgorithmEnum alg,
-            Optional<String> kid,
-            String pem,
-            Map<String, Object> additionalProperties) {
+    private ResourceServerTokenEncryptionKey(Optional<String> name, ResourceServerTokenEncryptionAlgorithmEnum alg, Optional<String> kid, String pem, Map<String, Object> additionalProperties) {
         this.name = name;
         this.alg = alg;
         this.kid = kid;
@@ -49,12 +45,12 @@ public final class ResourceServerTokenEncryptionKey {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("alg")
     public ResourceServerTokenEncryptionAlgorithmEnum getAlg() {
-        return alg;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +58,7 @@ public final class ResourceServerTokenEncryptionKey {
      */
     @JsonProperty("kid")
     public Optional<String> getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,18 +66,17 @@ public final class ResourceServerTokenEncryptionKey {
      */
     @JsonProperty("pem")
     public String getPem() {
-        return pem;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ResourceServerTokenEncryptionKey && equalTo((ResourceServerTokenEncryptionKey) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ResourceServerTokenEncryptionKey other) {
@@ -90,25 +85,27 @@ public final class ResourceServerTokenEncryptionKey {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.alg, this.kid, this.pem);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static AlgStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface AlgStage {
+
         PemStage alg(@NotNull ResourceServerTokenEncryptionAlgorithmEnum alg);
 
         Builder from(ResourceServerTokenEncryptionKey other);
     }
 
     public interface PemStage {
+
         /**
          * <p>PEM-formatted public key. Must be JSON escaped.</p>
          */
@@ -116,6 +113,7 @@ public final class ResourceServerTokenEncryptionKey {
     }
 
     public interface _FinalStage {
+
         ResourceServerTokenEncryptionKey build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -139,6 +137,7 @@ public final class ResourceServerTokenEncryptionKey {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements AlgStage, PemStage, _FinalStage {
+
         private ResourceServerTokenEncryptionAlgorithmEnum alg;
 
         private String pem;
@@ -150,22 +149,18 @@ public final class ResourceServerTokenEncryptionKey {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ResourceServerTokenEncryptionKey other) {
-            name(other.getName());
-            alg(other.getAlg());
-            kid(other.getKid());
-            pem(other.getPem());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("alg")
         public PemStage alg(@NotNull ResourceServerTokenEncryptionAlgorithmEnum alg) {
-            this.alg = Objects.requireNonNull(alg, "alg must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -176,8 +171,7 @@ public final class ResourceServerTokenEncryptionKey {
         @java.lang.Override
         @JsonSetter("pem")
         public _FinalStage pem(@NotNull String pem) {
-            this.pem = Objects.requireNonNull(pem, "pem must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -186,8 +180,7 @@ public final class ResourceServerTokenEncryptionKey {
          */
         @java.lang.Override
         public _FinalStage kid(String kid) {
-            this.kid = Optional.ofNullable(kid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -196,8 +189,7 @@ public final class ResourceServerTokenEncryptionKey {
         @java.lang.Override
         @JsonSetter(value = "kid", nulls = Nulls.SKIP)
         public _FinalStage kid(Optional<String> kid) {
-            this.kid = kid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -206,8 +198,7 @@ public final class ResourceServerTokenEncryptionKey {
          */
         @java.lang.Override
         public _FinalStage name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -216,25 +207,22 @@ public final class ResourceServerTokenEncryptionKey {
         @java.lang.Override
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public _FinalStage name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ResourceServerTokenEncryptionKey build() {
-            return new ResourceServerTokenEncryptionKey(name, alg, kid, pem, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

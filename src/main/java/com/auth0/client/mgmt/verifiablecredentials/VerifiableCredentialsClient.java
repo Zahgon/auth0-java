@@ -9,6 +9,7 @@ import com.auth0.client.mgmt.verifiablecredentials.verification.VerificationClie
 import java.util.function.Supplier;
 
 public class VerifiableCredentialsClient {
+
     protected final ClientOptions clientOptions;
 
     protected final Supplier<VerificationClient> verificationClient;
@@ -19,6 +20,6 @@ public class VerifiableCredentialsClient {
     }
 
     public VerificationClient verification() {
-        return this.verificationClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

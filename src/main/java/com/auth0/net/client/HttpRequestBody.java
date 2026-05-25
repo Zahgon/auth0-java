@@ -3,36 +3,39 @@ package com.auth0.net.client;
 public class HttpRequestBody {
 
     private byte[] content;
+
     private String contentType;
+
     private Auth0MultipartRequestBody multipartRequestBody;
+
     private Auth0FormRequestBody formRequestBody;
 
     public static HttpRequestBody create(String contentType, byte[] content) {
-        return new HttpRequestBody(contentType, content);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static HttpRequestBody create(String contentType, Auth0MultipartRequestBody multipartRequestBody) {
-        return new HttpRequestBody(contentType, multipartRequestBody);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static HttpRequestBody create(String contentType, Auth0FormRequestBody formRequestBody) {
-        return new HttpRequestBody(contentType, formRequestBody);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public byte[] getContent() {
-        return this.content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Auth0MultipartRequestBody getMultipartRequestBody() {
-        return this.multipartRequestBody;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Auth0FormRequestBody getFormRequestBody() {
-        return this.formRequestBody;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getContentType() {
-        return this.contentType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private HttpRequestBody(String contentType, byte[] content) {

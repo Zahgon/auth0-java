@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateSettingsRequestContent.Builder.class)
 public final class UpdateSettingsRequestContent {
+
     private final Optional<UniversalLoginExperienceEnum> universalLoginExperience;
 
     private final OptionalNullable<Boolean> identifierFirst;
@@ -31,11 +32,7 @@ public final class UpdateSettingsRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateSettingsRequestContent(
-            Optional<UniversalLoginExperienceEnum> universalLoginExperience,
-            OptionalNullable<Boolean> identifierFirst,
-            OptionalNullable<Boolean> webauthnPlatformFirstFactor,
-            Map<String, Object> additionalProperties) {
+    private UpdateSettingsRequestContent(Optional<UniversalLoginExperienceEnum> universalLoginExperience, OptionalNullable<Boolean> identifierFirst, OptionalNullable<Boolean> webauthnPlatformFirstFactor, Map<String, Object> additionalProperties) {
         this.universalLoginExperience = universalLoginExperience;
         this.identifierFirst = identifierFirst;
         this.webauthnPlatformFirstFactor = webauthnPlatformFirstFactor;
@@ -44,7 +41,7 @@ public final class UpdateSettingsRequestContent {
 
     @JsonProperty("universal_login_experience")
     public Optional<UniversalLoginExperienceEnum> getUniversalLoginExperience() {
-        return universalLoginExperience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,10 +50,7 @@ public final class UpdateSettingsRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("identifier_first")
     public OptionalNullable<Boolean> getIdentifierFirst() {
-        if (identifierFirst == null) {
-            return OptionalNullable.absent();
-        }
-        return identifierFirst;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,10 +59,7 @@ public final class UpdateSettingsRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("webauthn_platform_first_factor")
     public OptionalNullable<Boolean> getWebauthnPlatformFirstFactor() {
-        if (webauthnPlatformFirstFactor == null) {
-            return OptionalNullable.absent();
-        }
-        return webauthnPlatformFirstFactor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -85,37 +76,35 @@ public final class UpdateSettingsRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateSettingsRequestContent && equalTo((UpdateSettingsRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateSettingsRequestContent other) {
-        return universalLoginExperience.equals(other.universalLoginExperience)
-                && identifierFirst.equals(other.identifierFirst)
-                && webauthnPlatformFirstFactor.equals(other.webauthnPlatformFirstFactor);
+        return universalLoginExperience.equals(other.universalLoginExperience) && identifierFirst.equals(other.identifierFirst) && webauthnPlatformFirstFactor.equals(other.webauthnPlatformFirstFactor);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.universalLoginExperience, this.identifierFirst, this.webauthnPlatformFirstFactor);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UniversalLoginExperienceEnum> universalLoginExperience = Optional.empty();
 
         private OptionalNullable<Boolean> identifierFirst = OptionalNullable.absent();
@@ -125,24 +114,20 @@ public final class UpdateSettingsRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateSettingsRequestContent other) {
-            universalLoginExperience(other.getUniversalLoginExperience());
-            identifierFirst(other.getIdentifierFirst());
-            webauthnPlatformFirstFactor(other.getWebauthnPlatformFirstFactor());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "universal_login_experience", nulls = Nulls.SKIP)
         public Builder universalLoginExperience(Optional<UniversalLoginExperienceEnum> universalLoginExperience) {
-            this.universalLoginExperience = universalLoginExperience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder universalLoginExperience(UniversalLoginExperienceEnum universalLoginExperience) {
-            this.universalLoginExperience = Optional.ofNullable(universalLoginExperience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -150,33 +135,19 @@ public final class UpdateSettingsRequestContent {
          */
         @JsonSetter(value = "identifier_first", nulls = Nulls.SKIP)
         public Builder identifierFirst(@Nullable OptionalNullable<Boolean> identifierFirst) {
-            this.identifierFirst = identifierFirst;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifierFirst(Boolean identifierFirst) {
-            this.identifierFirst = OptionalNullable.of(identifierFirst);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifierFirst(Optional<Boolean> identifierFirst) {
-            if (identifierFirst.isPresent()) {
-                this.identifierFirst = OptionalNullable.of(identifierFirst.get());
-            } else {
-                this.identifierFirst = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identifierFirst(com.auth0.client.mgmt.core.Nullable<Boolean> identifierFirst) {
-            if (identifierFirst.isNull()) {
-                this.identifierFirst = OptionalNullable.ofNull();
-            } else if (identifierFirst.isEmpty()) {
-                this.identifierFirst = OptionalNullable.absent();
-            } else {
-                this.identifierFirst = OptionalNullable.of(identifierFirst.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -184,49 +155,31 @@ public final class UpdateSettingsRequestContent {
          */
         @JsonSetter(value = "webauthn_platform_first_factor", nulls = Nulls.SKIP)
         public Builder webauthnPlatformFirstFactor(@Nullable OptionalNullable<Boolean> webauthnPlatformFirstFactor) {
-            this.webauthnPlatformFirstFactor = webauthnPlatformFirstFactor;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder webauthnPlatformFirstFactor(Boolean webauthnPlatformFirstFactor) {
-            this.webauthnPlatformFirstFactor = OptionalNullable.of(webauthnPlatformFirstFactor);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder webauthnPlatformFirstFactor(Optional<Boolean> webauthnPlatformFirstFactor) {
-            if (webauthnPlatformFirstFactor.isPresent()) {
-                this.webauthnPlatformFirstFactor = OptionalNullable.of(webauthnPlatformFirstFactor.get());
-            } else {
-                this.webauthnPlatformFirstFactor = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder webauthnPlatformFirstFactor(
-                com.auth0.client.mgmt.core.Nullable<Boolean> webauthnPlatformFirstFactor) {
-            if (webauthnPlatformFirstFactor.isNull()) {
-                this.webauthnPlatformFirstFactor = OptionalNullable.ofNull();
-            } else if (webauthnPlatformFirstFactor.isEmpty()) {
-                this.webauthnPlatformFirstFactor = OptionalNullable.absent();
-            } else {
-                this.webauthnPlatformFirstFactor = OptionalNullable.of(webauthnPlatformFirstFactor.get());
-            }
-            return this;
+        public Builder webauthnPlatformFirstFactor(com.auth0.client.mgmt.core.Nullable<Boolean> webauthnPlatformFirstFactor) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateSettingsRequestContent build() {
-            return new UpdateSettingsRequestContent(
-                    universalLoginExperience, identifierFirst, webauthnPlatformFirstFactor, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

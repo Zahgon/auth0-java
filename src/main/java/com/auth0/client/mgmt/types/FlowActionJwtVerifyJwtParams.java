@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionJwtVerifyJwtParams.Builder.class)
 public final class FlowActionJwtVerifyJwtParams {
+
     private final String connectionId;
 
     private final String token;
@@ -31,12 +32,7 @@ public final class FlowActionJwtVerifyJwtParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionJwtVerifyJwtParams(
-            String connectionId,
-            String token,
-            Optional<String> audience,
-            Optional<String> issuer,
-            Map<String, Object> additionalProperties) {
+    private FlowActionJwtVerifyJwtParams(String connectionId, String token, Optional<String> audience, Optional<String> issuer, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.token = token;
         this.audience = audience;
@@ -46,67 +42,66 @@ public final class FlowActionJwtVerifyJwtParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("token")
     public String getToken() {
-        return token;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("audience")
     public Optional<String> getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("issuer")
     public Optional<String> getIssuer() {
-        return issuer;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionJwtVerifyJwtParams && equalTo((FlowActionJwtVerifyJwtParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionJwtVerifyJwtParams other) {
-        return connectionId.equals(other.connectionId)
-                && token.equals(other.token)
-                && audience.equals(other.audience)
-                && issuer.equals(other.issuer);
+        return connectionId.equals(other.connectionId) && token.equals(other.token) && audience.equals(other.audience) && issuer.equals(other.issuer);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.token, this.audience, this.issuer);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         TokenStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionJwtVerifyJwtParams other);
     }
 
     public interface TokenStage {
+
         _FinalStage token(@NotNull String token);
     }
 
     public interface _FinalStage {
+
         FlowActionJwtVerifyJwtParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -124,6 +119,7 @@ public final class FlowActionJwtVerifyJwtParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, TokenStage, _FinalStage {
+
         private String connectionId;
 
         private String token;
@@ -135,72 +131,61 @@ public final class FlowActionJwtVerifyJwtParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionJwtVerifyJwtParams other) {
-            connectionId(other.getConnectionId());
-            token(other.getToken());
-            audience(other.getAudience());
-            issuer(other.getIssuer());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public TokenStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("token")
         public _FinalStage token(@NotNull String token) {
-            this.token = Objects.requireNonNull(token, "token must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage issuer(String issuer) {
-            this.issuer = Optional.ofNullable(issuer);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "issuer", nulls = Nulls.SKIP)
         public _FinalStage issuer(Optional<String> issuer) {
-            this.issuer = issuer;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage audience(String audience) {
-            this.audience = Optional.ofNullable(audience);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "audience", nulls = Nulls.SKIP)
         public _FinalStage audience(Optional<String> audience) {
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionJwtVerifyJwtParams build() {
-            return new FlowActionJwtVerifyJwtParams(connectionId, token, audience, issuer, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

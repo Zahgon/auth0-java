@@ -21,16 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionZapierTriggerWebhookParams.Builder.class)
 public final class FlowActionZapierTriggerWebhookParams {
+
     private final String connectionId;
 
     private final Optional<FlowActionZapierTriggerWebhookParamsMethod> method;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionZapierTriggerWebhookParams(
-            String connectionId,
-            Optional<FlowActionZapierTriggerWebhookParamsMethod> method,
-            Map<String, Object> additionalProperties) {
+    private FlowActionZapierTriggerWebhookParams(String connectionId, Optional<FlowActionZapierTriggerWebhookParamsMethod> method, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.method = method;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class FlowActionZapierTriggerWebhookParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("method")
     public Optional<FlowActionZapierTriggerWebhookParamsMethod> getMethod() {
-        return method;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionZapierTriggerWebhookParams
-                && equalTo((FlowActionZapierTriggerWebhookParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionZapierTriggerWebhookParams other) {
@@ -64,25 +60,27 @@ public final class FlowActionZapierTriggerWebhookParams {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.method);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         _FinalStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionZapierTriggerWebhookParams other);
     }
 
     public interface _FinalStage {
+
         FlowActionZapierTriggerWebhookParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -96,6 +94,7 @@ public final class FlowActionZapierTriggerWebhookParams {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ConnectionIdStage, _FinalStage {
+
         private String connectionId;
 
         private Optional<FlowActionZapierTriggerWebhookParamsMethod> method = Optional.empty();
@@ -103,50 +102,44 @@ public final class FlowActionZapierTriggerWebhookParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionZapierTriggerWebhookParams other) {
-            connectionId(other.getConnectionId());
-            method(other.getMethod());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public _FinalStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage method(FlowActionZapierTriggerWebhookParamsMethod method) {
-            this.method = Optional.ofNullable(method);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "method", nulls = Nulls.SKIP)
         public _FinalStage method(Optional<FlowActionZapierTriggerWebhookParamsMethod> method) {
-            this.method = method;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionZapierTriggerWebhookParams build() {
-            return new FlowActionZapierTriggerWebhookParams(connectionId, method, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

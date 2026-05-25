@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowsVaultConnectioSetupJwt.Builder.class)
 public final class FlowsVaultConnectioSetupJwt {
+
     private final FlowsVaultConnectioSetupTypeJwtEnum type;
 
     private final FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm;
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowsVaultConnectioSetupJwt(
-            FlowsVaultConnectioSetupTypeJwtEnum type,
-            FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm,
-            Map<String, Object> additionalProperties) {
+    private FlowsVaultConnectioSetupJwt(FlowsVaultConnectioSetupTypeJwtEnum type, FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm, Map<String, Object> additionalProperties) {
         this.type = type;
         this.algorithm = algorithm;
         this.additionalProperties = additionalProperties;
@@ -36,23 +34,22 @@ public final class FlowsVaultConnectioSetupJwt {
 
     @JsonProperty("type")
     public FlowsVaultConnectioSetupTypeJwtEnum getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("algorithm")
     public FlowsVaultConnectioSetupJwtAlgorithmEnum getAlgorithm() {
-        return algorithm;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowsVaultConnectioSetupJwt && equalTo((FlowsVaultConnectioSetupJwt) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowsVaultConnectioSetupJwt other) {
@@ -61,29 +58,32 @@ public final class FlowsVaultConnectioSetupJwt {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.type, this.algorithm);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static TypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface TypeStage {
+
         AlgorithmStage type(@NotNull FlowsVaultConnectioSetupTypeJwtEnum type);
 
         Builder from(FlowsVaultConnectioSetupJwt other);
     }
 
     public interface AlgorithmStage {
+
         _FinalStage algorithm(@NotNull FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm);
     }
 
     public interface _FinalStage {
+
         FlowsVaultConnectioSetupJwt build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class FlowsVaultConnectioSetupJwt {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements TypeStage, AlgorithmStage, _FinalStage {
+
         private FlowsVaultConnectioSetupTypeJwtEnum type;
 
         private FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm;
@@ -100,44 +101,39 @@ public final class FlowsVaultConnectioSetupJwt {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowsVaultConnectioSetupJwt other) {
-            type(other.getType());
-            algorithm(other.getAlgorithm());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public AlgorithmStage type(@NotNull FlowsVaultConnectioSetupTypeJwtEnum type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("algorithm")
         public _FinalStage algorithm(@NotNull FlowsVaultConnectioSetupJwtAlgorithmEnum algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm, "algorithm must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowsVaultConnectioSetupJwt build() {
-            return new FlowsVaultConnectioSetupJwt(type, algorithm, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.types.SelfServiceProfileCustomTextPageEnum;
 import java.util.Map;
 
 public class CustomTextClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawCustomTextClient rawClient;
@@ -23,48 +24,34 @@ public class CustomTextClient {
      * Get responses with HTTP metadata like headers
      */
     public RawCustomTextClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public Map<String, String> list(
-            String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page) {
-        return this.rawClient.list(id, language, page).body();
+    public Map<String, String> list(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieves text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public Map<String, String> list(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            RequestOptions requestOptions) {
-        return this.rawClient.list(id, language, page, requestOptions).body();
+    public Map<String, String> list(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public Map<String, String> set(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            Map<String, String> request) {
-        return this.rawClient.set(id, language, page, request).body();
+    public Map<String, String> set(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, Map<String, String> request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Updates text customizations for a given self-service profile, language and Self-Service Enterprise Configuration flow page.
      */
-    public Map<String, String> set(
-            String id,
-            SelfServiceProfileCustomTextLanguageEnum language,
-            SelfServiceProfileCustomTextPageEnum page,
-            Map<String, String> request,
-            RequestOptions requestOptions) {
-        return this.rawClient.set(id, language, page, request, requestOptions).body();
+    public Map<String, String> set(String id, SelfServiceProfileCustomTextLanguageEnum language, SelfServiceProfileCustomTextPageEnum page, Map<String, String> request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

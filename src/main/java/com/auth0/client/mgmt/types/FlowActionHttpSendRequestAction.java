@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionHttpSendRequestAction {
-    public static final FlowActionHttpSendRequestAction SEND_REQUEST =
-            new FlowActionHttpSendRequestAction(Value.SEND_REQUEST, "SEND_REQUEST");
+
+    public static final FlowActionHttpSendRequestAction SEND_REQUEST = new FlowActionHttpSendRequestAction(Value.SEND_REQUEST, "SEND_REQUEST");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionHttpSendRequestAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionHttpSendRequestAction
-                        && this.string.equals(((FlowActionHttpSendRequestAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SEND_REQUEST:
-                return visitor.visitSendRequest();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionHttpSendRequestAction valueOf(String value) {
-        switch (value) {
-            case "SEND_REQUEST":
-                return SEND_REQUEST;
-            default:
-                return new FlowActionHttpSendRequestAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SEND_REQUEST,
 
-        UNKNOWN
+        SEND_REQUEST, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSendRequest();
 
         T visitUnknown(String unknownType);

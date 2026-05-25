@@ -23,6 +23,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class AsyncModulesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawModulesClient rawClient;
@@ -39,159 +40,150 @@ public class AsyncModulesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawModulesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of all Actions Modules with optional filtering and totals.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleListItem>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of all Actions Modules with optional filtering and totals.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleListItem>> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of all Actions Modules with optional filtering and totals.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleListItem>> list(GetActionModulesRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a paginated list of all Actions Modules with optional filtering and totals.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleListItem>> list(
-            GetActionModulesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleListItem>> list(GetActionModulesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Actions Module for reusable code across actions.
      */
     public CompletableFuture<CreateActionModuleResponseContent> create(CreateActionModuleRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a new Actions Module for reusable code across actions.
      */
-    public CompletableFuture<CreateActionModuleResponseContent> create(
-            CreateActionModuleRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateActionModuleResponseContent> create(CreateActionModuleRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of a specific Actions Module by its unique identifier.
      */
     public CompletableFuture<GetActionModuleResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of a specific Actions Module by its unique identifier.
      */
     public CompletableFuture<GetActionModuleResponseContent> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete an Actions Module. This will fail if the module is still in use by any actions.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete an Actions Module. This will fail if the module is still in use by any actions.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update properties of an existing Actions Module, such as code, dependencies, or secrets.
      */
     public CompletableFuture<UpdateActionModuleResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update properties of an existing Actions Module, such as code, dependencies, or secrets.
      */
     public CompletableFuture<UpdateActionModuleResponseContent> update(String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update properties of an existing Actions Module, such as code, dependencies, or secrets.
      */
-    public CompletableFuture<UpdateActionModuleResponseContent> update(
-            String id, UpdateActionModuleRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateActionModuleResponseContent> update(String id, UpdateActionModuleRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update properties of an existing Actions Module, such as code, dependencies, or secrets.
      */
-    public CompletableFuture<UpdateActionModuleResponseContent> update(
-            String id, UpdateActionModuleRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateActionModuleResponseContent> update(String id, UpdateActionModuleRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Lists all actions that are using a specific Actions Module, showing which deployed action versions reference this Actions Module.
      */
     public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(String id) {
-        return this.rawClient.listActions(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Lists all actions that are using a specific Actions Module, showing which deployed action versions reference this Actions Module.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.listActions(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Lists all actions that are using a specific Actions Module, showing which deployed action versions reference this Actions Module.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(
-            String id, GetActionModuleActionsRequestParameters request) {
-        return this.rawClient.listActions(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(String id, GetActionModuleActionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Lists all actions that are using a specific Actions Module, showing which deployed action versions reference this Actions Module.
      */
-    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(
-            String id, GetActionModuleActionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.listActions(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<ActionModuleAction>> listActions(String id, GetActionModuleActionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rolls back an Actions Module's draft to a previously created version. This action copies the code, dependencies, and secrets from the specified version into the current draft.
      */
-    public CompletableFuture<RollbackActionModuleResponseContent> rollback(
-            String id, RollbackActionModuleRequestParameters request) {
-        return this.rawClient.rollback(id, request).thenApply(response -> response.body());
+    public CompletableFuture<RollbackActionModuleResponseContent> rollback(String id, RollbackActionModuleRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rolls back an Actions Module's draft to a previously created version. This action copies the code, dependencies, and secrets from the specified version into the current draft.
      */
-    public CompletableFuture<RollbackActionModuleResponseContent> rollback(
-            String id, RollbackActionModuleRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.rollback(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<RollbackActionModuleResponseContent> rollback(String id, RollbackActionModuleRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public AsyncVersionsClient versions() {
-        return this.versionsClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

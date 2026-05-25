@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamActionDestinationTypeEnum {
-    public static final EventStreamActionDestinationTypeEnum ACTION =
-            new EventStreamActionDestinationTypeEnum(Value.ACTION, "action");
+
+    public static final EventStreamActionDestinationTypeEnum ACTION = new EventStreamActionDestinationTypeEnum(Value.ACTION, "action");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class EventStreamActionDestinationTypeEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamActionDestinationTypeEnum
-                        && this.string.equals(((EventStreamActionDestinationTypeEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ACTION:
-                return visitor.visitAction();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamActionDestinationTypeEnum valueOf(String value) {
-        switch (value) {
-            case "action":
-                return ACTION;
-            default:
-                return new EventStreamActionDestinationTypeEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ACTION,
 
-        UNKNOWN
+        ACTION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAction();
 
         T visitUnknown(String unknownType);

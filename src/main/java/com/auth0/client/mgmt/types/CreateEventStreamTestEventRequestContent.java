@@ -21,16 +21,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEventStreamTestEventRequestContent.Builder.class)
 public final class CreateEventStreamTestEventRequestContent {
+
     private final EventStreamTestEventTypeEnum eventType;
 
     private final Optional<Map<String, Object>> data;
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateEventStreamTestEventRequestContent(
-            EventStreamTestEventTypeEnum eventType,
-            Optional<Map<String, Object>> data,
-            Map<String, Object> additionalProperties) {
+    private CreateEventStreamTestEventRequestContent(EventStreamTestEventTypeEnum eventType, Optional<Map<String, Object>> data, Map<String, Object> additionalProperties) {
         this.eventType = eventType;
         this.data = data;
         this.additionalProperties = additionalProperties;
@@ -38,24 +36,22 @@ public final class CreateEventStreamTestEventRequestContent {
 
     @JsonProperty("event_type")
     public EventStreamTestEventTypeEnum getEventType() {
-        return eventType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("data")
     public Optional<Map<String, Object>> getData() {
-        return data;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEventStreamTestEventRequestContent
-                && equalTo((CreateEventStreamTestEventRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEventStreamTestEventRequestContent other) {
@@ -64,25 +60,27 @@ public final class CreateEventStreamTestEventRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.eventType, this.data);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EventTypeStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EventTypeStage {
+
         _FinalStage eventType(@NotNull EventStreamTestEventTypeEnum eventType);
 
         Builder from(CreateEventStreamTestEventRequestContent other);
     }
 
     public interface _FinalStage {
+
         CreateEventStreamTestEventRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -96,6 +94,7 @@ public final class CreateEventStreamTestEventRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EventTypeStage, _FinalStage {
+
         private EventStreamTestEventTypeEnum eventType;
 
         private Optional<Map<String, Object>> data = Optional.empty();
@@ -103,50 +102,44 @@ public final class CreateEventStreamTestEventRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateEventStreamTestEventRequestContent other) {
-            eventType(other.getEventType());
-            data(other.getData());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("event_type")
         public _FinalStage eventType(@NotNull EventStreamTestEventTypeEnum eventType) {
-            this.eventType = Objects.requireNonNull(eventType, "eventType must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage data(Map<String, Object> data) {
-            this.data = Optional.ofNullable(data);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "data", nulls = Nulls.SKIP)
         public _FinalStage data(Optional<Map<String, Object>> data) {
-            this.data = data;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateEventStreamTestEventRequestContent build() {
-            return new CreateEventStreamTestEventRequestContent(eventType, data, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

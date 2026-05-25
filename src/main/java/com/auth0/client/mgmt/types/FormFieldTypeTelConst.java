@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormFieldTypeTelConst {
+
     public static final FormFieldTypeTelConst TEL = new FormFieldTypeTelConst(Value.TEL, "TEL");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormFieldTypeTelConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormFieldTypeTelConst
-                        && this.string.equals(((FormFieldTypeTelConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TEL:
-                return visitor.visitTel();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormFieldTypeTelConst valueOf(String value) {
-        switch (value) {
-            case "TEL":
-                return TEL;
-            default:
-                return new FormFieldTypeTelConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        TEL,
 
-        UNKNOWN
+        TEL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitTel();
 
         T visitUnknown(String unknownType);

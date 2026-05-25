@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 public final class RequestOptions {
+
     private final String token;
 
     private final Optional<Integer> timeout;
@@ -39,18 +40,7 @@ public final class RequestOptions {
     // Cached token supplier for per-request credentials (lazily initialized)
     private transient volatile OAuthTokenSupplier cachedTokenSupplier;
 
-    private RequestOptions(
-            String token,
-            Optional<Integer> timeout,
-            TimeUnit timeoutTimeUnit,
-            Map<String, String> headers,
-            Map<String, Supplier<String>> headerSuppliers,
-            Map<String, String> queryParameters,
-            Map<String, Supplier<String>> queryParameterSuppliers,
-            String clientId,
-            String clientSecret,
-            String audience,
-            String baseUrl) {
+    private RequestOptions(String token, Optional<Integer> timeout, TimeUnit timeoutTimeUnit, Map<String, String> headers, Map<String, Supplier<String>> headerSuppliers, Map<String, String> queryParameters, Map<String, Supplier<String>> queryParameterSuppliers, String clientId, String clientSecret, String audience, String baseUrl) {
         this.token = token;
         this.timeout = timeout;
         this.timeoutTimeUnit = timeoutTimeUnit;
@@ -65,46 +55,46 @@ public final class RequestOptions {
     }
 
     public Optional<Integer> getTimeout() {
-        return timeout;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TimeUnit getTimeoutTimeUnit() {
-        return timeoutTimeUnit;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns the client ID for per-request OAuth credentials, if set.
      */
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns the client secret for per-request OAuth credentials, if set.
      */
     public String getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Returns the audience for per-request OAuth credentials, if set.
      */
     public String getAudience() {
-        return audience;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Checks if per-request OAuth credentials have been configured.
      */
     public boolean hasClientCredentials() {
-        return clientId != null && clientSecret != null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Gets the base URL for per-request OAuth token fetching.
      */
     public String getBaseUrl() {
-        return baseUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -117,41 +107,19 @@ public final class RequestOptions {
      * @throws OAuthTokenException if OAuth token fetching fails
      */
     public Map<String, String> getHeaders() {
-        Map<String, String> headers = new HashMap<>();
-
-        if (hasClientCredentials() && baseUrl != null) {
-            if (cachedTokenSupplier == null) {
-                synchronized (this) {
-                    if (cachedTokenSupplier == null) {
-                        cachedTokenSupplier = new OAuthTokenSupplier(clientId, clientSecret, baseUrl, audience);
-                    }
-                }
-            }
-            headers.put("Authorization", "Bearer " + cachedTokenSupplier.get());
-        } else if (this.token != null) {
-            headers.put("Authorization", "Bearer " + this.token);
-        }
-
-        headers.putAll(this.headers);
-        this.headerSuppliers.forEach((key, supplier) -> {
-            headers.put(key, supplier.get());
-        });
-        return headers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, String> getQueryParameters() {
-        Map<String, String> queryParameters = new HashMap<>(this.queryParameters);
-        this.queryParameterSuppliers.forEach((key, supplier) -> {
-            queryParameters.put(key, supplier.get());
-        });
-        return queryParameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Builder {
+
         private String token = null;
 
         private Optional<Integer> timeout = Optional.empty();
@@ -175,8 +143,7 @@ public final class RequestOptions {
         private String baseUrl = null;
 
         public Builder token(String token) {
-            this.token = token;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -187,8 +154,7 @@ public final class RequestOptions {
          * @return This builder for method chaining
          */
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = baseUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -205,9 +171,7 @@ public final class RequestOptions {
          * @return This builder for method chaining
          */
         public Builder clientCredentials(String clientId, String clientSecret) {
-            this.clientId = clientId;
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,56 +185,35 @@ public final class RequestOptions {
          * @return This builder for method chaining
          */
         public Builder clientCredentialsWithAudience(String clientId, String clientSecret, String audience) {
-            this.clientId = clientId;
-            this.clientSecret = clientSecret;
-            this.audience = audience;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder timeout(Integer timeout) {
-            this.timeout = Optional.of(timeout);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder timeout(Integer timeout, TimeUnit timeoutTimeUnit) {
-            this.timeout = Optional.of(timeout);
-            this.timeoutTimeUnit = timeoutTimeUnit;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addHeader(String key, String value) {
-            this.headers.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addHeader(String key, Supplier<String> value) {
-            this.headerSuppliers.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addQueryParameter(String key, String value) {
-            this.queryParameters.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addQueryParameter(String key, Supplier<String> value) {
-            this.queryParameterSuppliers.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public RequestOptions build() {
-            return new RequestOptions(
-                    token,
-                    timeout,
-                    timeoutTimeUnit,
-                    headers,
-                    headerSuppliers,
-                    queryParameters,
-                    queryParameterSuppliers,
-                    clientId,
-                    clientSecret,
-                    audience,
-                    baseUrl);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
@@ -283,10 +226,7 @@ public final class RequestOptions {
      * @return RequestOptions configured with the provided credentials
      */
     public static RequestOptions withClientCredentials(String baseUrl, String clientId, String clientSecret) {
-        return builder()
-                .baseUrl(baseUrl)
-                .clientCredentials(clientId, clientSecret)
-                .build();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -298,11 +238,7 @@ public final class RequestOptions {
      * @param audience The custom audience for the token request
      * @return RequestOptions configured with the provided credentials and audience
      */
-    public static RequestOptions withClientCredentialsAndAudience(
-            String baseUrl, String clientId, String clientSecret, String audience) {
-        return builder()
-                .baseUrl(baseUrl)
-                .clientCredentialsWithAudience(clientId, clientSecret, audience)
-                .build();
+    public static RequestOptions withClientCredentialsAndAudience(String baseUrl, String clientId, String clientSecret, String audience) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

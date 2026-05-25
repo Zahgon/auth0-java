@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsLinkedin.Builder.class)
 public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<String> clientId;
@@ -38,8 +39,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
 
     private final Optional<Integer> strategyVersion;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> basicProfile;
 
@@ -55,22 +55,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsLinkedin(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<String> clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> freeformScopes,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<Integer> strategyVersion,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> basicProfile,
-            Optional<Boolean> email,
-            Optional<Boolean> fullProfile,
-            Optional<Boolean> network,
-            Optional<Boolean> openid,
-            Optional<Boolean> profile,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsLinkedin(Optional<List<String>> nonPersistentAttrs, Optional<String> clientId, Optional<String> clientSecret, Optional<List<String>> freeformScopes, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<Integer> strategyVersion, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> basicProfile, Optional<Boolean> email, Optional<Boolean> fullProfile, Optional<Boolean> network, Optional<Boolean> openid, Optional<Boolean> profile, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -91,32 +76,32 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("freeform_scopes")
     public Optional<List<String>> getFreeformScopes() {
-        return freeformScopes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -124,16 +109,13 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("strategy_version")
     public Optional<Integer> getStrategyVersion() {
-        return strategyVersion;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +123,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("basic_profile")
     public Optional<Boolean> getBasicProfile() {
-        return basicProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -149,7 +131,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("email")
     public Optional<Boolean> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -157,7 +139,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("full_profile")
     public Optional<Boolean> getFullProfile() {
-        return fullProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -165,7 +147,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("network")
     public Optional<Boolean> getNetwork() {
-        return network;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -173,7 +155,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("openid")
     public Optional<Boolean> getOpenid() {
-        return openid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -181,74 +163,46 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
      */
     @JsonProperty("profile")
     public Optional<Boolean> getProfile() {
-        return profile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsLinkedin && equalTo((ConnectionOptionsLinkedin) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsLinkedin other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && freeformScopes.equals(other.freeformScopes)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && strategyVersion.equals(other.strategyVersion)
-                && upstreamParams.equals(other.upstreamParams)
-                && basicProfile.equals(other.basicProfile)
-                && email.equals(other.email)
-                && fullProfile.equals(other.fullProfile)
-                && network.equals(other.network)
-                && openid.equals(other.openid)
-                && profile.equals(other.profile);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && freeformScopes.equals(other.freeformScopes) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && strategyVersion.equals(other.strategyVersion) && upstreamParams.equals(other.upstreamParams) && basicProfile.equals(other.basicProfile) && email.equals(other.email) && fullProfile.equals(other.fullProfile) && network.equals(other.network) && openid.equals(other.openid) && profile.equals(other.profile);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.clientId,
-                this.clientSecret,
-                this.freeformScopes,
-                this.scope,
-                this.setUserRootAttributes,
-                this.strategyVersion,
-                this.upstreamParams,
-                this.basicProfile,
-                this.email,
-                this.fullProfile,
-                this.network,
-                this.openid,
-                this.profile);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<String>> nonPersistentAttrs = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -263,8 +217,7 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
 
         private Optional<Integer> strategyVersion = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<Boolean> basicProfile = Optional.empty();
 
@@ -281,90 +234,65 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionOptionsLinkedin other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            freeformScopes(other.getFreeformScopes());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            strategyVersion(other.getStrategyVersion());
-            upstreamParams(other.getUpstreamParams());
-            basicProfile(other.getBasicProfile());
-            email(other.getEmail());
-            fullProfile(other.getFullProfile());
-            network(other.getNetwork());
-            openid(other.getOpenid());
-            profile(other.getProfile());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public Builder nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public Builder clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "freeform_scopes", nulls = Nulls.SKIP)
         public Builder freeformScopes(Optional<List<String>> freeformScopes) {
-            this.freeformScopes = freeformScopes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder freeformScopes(List<String> freeformScopes) {
-            this.freeformScopes = Optional.ofNullable(freeformScopes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public Builder scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public Builder setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -372,52 +300,28 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "strategy_version", nulls = Nulls.SKIP)
         public Builder strategyVersion(Optional<Integer> strategyVersion) {
-            this.strategyVersion = strategyVersion;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategyVersion(Integer strategyVersion) {
-            this.strategyVersion = Optional.ofNullable(strategyVersion);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public Builder upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public Builder upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public Builder upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public Builder upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public Builder upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -425,13 +329,11 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "basic_profile", nulls = Nulls.SKIP)
         public Builder basicProfile(Optional<Boolean> basicProfile) {
-            this.basicProfile = basicProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder basicProfile(Boolean basicProfile) {
-            this.basicProfile = Optional.ofNullable(basicProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -439,13 +341,11 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<Boolean> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(Boolean email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -453,13 +353,11 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "full_profile", nulls = Nulls.SKIP)
         public Builder fullProfile(Optional<Boolean> fullProfile) {
-            this.fullProfile = fullProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fullProfile(Boolean fullProfile) {
-            this.fullProfile = Optional.ofNullable(fullProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -467,13 +365,11 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "network", nulls = Nulls.SKIP)
         public Builder network(Optional<Boolean> network) {
-            this.network = network;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder network(Boolean network) {
-            this.network = Optional.ofNullable(network);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -481,13 +377,11 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "openid", nulls = Nulls.SKIP)
         public Builder openid(Optional<Boolean> openid) {
-            this.openid = openid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder openid(Boolean openid) {
-            this.openid = Optional.ofNullable(openid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -495,42 +389,23 @@ public final class ConnectionOptionsLinkedin implements IConnectionOptionsCommon
          */
         @JsonSetter(value = "profile", nulls = Nulls.SKIP)
         public Builder profile(Optional<Boolean> profile) {
-            this.profile = profile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder profile(Boolean profile) {
-            this.profile = Optional.ofNullable(profile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionOptionsLinkedin build() {
-            return new ConnectionOptionsLinkedin(
-                    nonPersistentAttrs,
-                    clientId,
-                    clientSecret,
-                    freeformScopes,
-                    scope,
-                    setUserRootAttributes,
-                    strategyVersion,
-                    upstreamParams,
-                    basicProfile,
-                    email,
-                    fullProfile,
-                    network,
-                    openid,
-                    profile,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

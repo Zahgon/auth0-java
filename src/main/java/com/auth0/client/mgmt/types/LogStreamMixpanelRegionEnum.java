@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamMixpanelRegionEnum {
+
     public static final LogStreamMixpanelRegionEnum US = new LogStreamMixpanelRegionEnum(Value.US, "us");
 
     public static final LogStreamMixpanelRegionEnum EU = new LogStreamMixpanelRegionEnum(Value.EU, "eu");
@@ -21,60 +22,41 @@ public final class LogStreamMixpanelRegionEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamMixpanelRegionEnum
-                        && this.string.equals(((LogStreamMixpanelRegionEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case US:
-                return visitor.visitUs();
-            case EU:
-                return visitor.visitEu();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamMixpanelRegionEnum valueOf(String value) {
-        switch (value) {
-            case "us":
-                return US;
-            case "eu":
-                return EU;
-            default:
-                return new LogStreamMixpanelRegionEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        US,
 
-        EU,
-
-        UNKNOWN
+        US, EU, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUs();
 
         T visitEu();

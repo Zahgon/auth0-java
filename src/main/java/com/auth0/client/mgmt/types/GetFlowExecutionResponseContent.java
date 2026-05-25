@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetFlowExecutionResponseContent.Builder.class)
 public final class GetFlowExecutionResponseContent {
+
     private final String id;
 
     private final String traceId;
@@ -42,17 +43,7 @@ public final class GetFlowExecutionResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetFlowExecutionResponseContent(
-            String id,
-            String traceId,
-            Optional<String> journeyId,
-            String status,
-            Optional<Map<String, Object>> debug,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            Optional<OffsetDateTime> startedAt,
-            Optional<OffsetDateTime> endedAt,
-            Map<String, Object> additionalProperties) {
+    private GetFlowExecutionResponseContent(String id, String traceId, Optional<String> journeyId, String status, Optional<Map<String, Object>> debug, OffsetDateTime createdAt, OffsetDateTime updatedAt, Optional<OffsetDateTime> startedAt, Optional<OffsetDateTime> endedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.traceId = traceId;
         this.journeyId = journeyId;
@@ -70,7 +61,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("id")
     public String getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -78,7 +69,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("trace_id")
     public String getTraceId() {
-        return traceId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -86,7 +77,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("journey_id")
     public Optional<String> getJourneyId() {
-        return journeyId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -94,12 +85,12 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("status")
     public String getStatus() {
-        return status;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("debug")
     public Optional<Map<String, Object>> getDebug() {
-        return debug;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,7 +98,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +106,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -123,7 +114,7 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("started_at")
     public Optional<OffsetDateTime> getStartedAt() {
-        return startedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -131,56 +122,39 @@ public final class GetFlowExecutionResponseContent {
      */
     @JsonProperty("ended_at")
     public Optional<OffsetDateTime> getEndedAt() {
-        return endedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetFlowExecutionResponseContent && equalTo((GetFlowExecutionResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetFlowExecutionResponseContent other) {
-        return id.equals(other.id)
-                && traceId.equals(other.traceId)
-                && journeyId.equals(other.journeyId)
-                && status.equals(other.status)
-                && debug.equals(other.debug)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && startedAt.equals(other.startedAt)
-                && endedAt.equals(other.endedAt);
+        return id.equals(other.id) && traceId.equals(other.traceId) && journeyId.equals(other.journeyId) && status.equals(other.status) && debug.equals(other.debug) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && startedAt.equals(other.startedAt) && endedAt.equals(other.endedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.traceId,
-                this.journeyId,
-                this.status,
-                this.debug,
-                this.createdAt,
-                this.updatedAt,
-                this.startedAt,
-                this.endedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static IdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface IdStage {
+
         /**
          * <p>Flow execution identifier</p>
          */
@@ -190,6 +164,7 @@ public final class GetFlowExecutionResponseContent {
     }
 
     public interface TraceIdStage {
+
         /**
          * <p>Trace id</p>
          */
@@ -197,6 +172,7 @@ public final class GetFlowExecutionResponseContent {
     }
 
     public interface StatusStage {
+
         /**
          * <p>Execution status</p>
          */
@@ -204,6 +180,7 @@ public final class GetFlowExecutionResponseContent {
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>The ISO 8601 formatted date when this flow execution was created.</p>
          */
@@ -211,6 +188,7 @@ public final class GetFlowExecutionResponseContent {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>The ISO 8601 formatted date when this flow execution was updated.</p>
          */
@@ -218,6 +196,7 @@ public final class GetFlowExecutionResponseContent {
     }
 
     public interface _FinalStage {
+
         GetFlowExecutionResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -251,8 +230,8 @@ public final class GetFlowExecutionResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements IdStage, TraceIdStage, StatusStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+    public static final class Builder implements IdStage, TraceIdStage, StatusStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+
         private String id;
 
         private String traceId;
@@ -274,20 +253,12 @@ public final class GetFlowExecutionResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetFlowExecutionResponseContent other) {
-            id(other.getId());
-            traceId(other.getTraceId());
-            journeyId(other.getJourneyId());
-            status(other.getStatus());
-            debug(other.getDebug());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            startedAt(other.getStartedAt());
-            endedAt(other.getEndedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -298,8 +269,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter("id")
         public TraceIdStage id(@NotNull String id) {
-            this.id = Objects.requireNonNull(id, "id must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -310,8 +280,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter("trace_id")
         public StatusStage traceId(@NotNull String traceId) {
-            this.traceId = Objects.requireNonNull(traceId, "traceId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -322,8 +291,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter("status")
         public CreatedAtStage status(@NotNull String status) {
-            this.status = Objects.requireNonNull(status, "status must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -334,8 +302,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -346,8 +313,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -356,8 +322,7 @@ public final class GetFlowExecutionResponseContent {
          */
         @java.lang.Override
         public _FinalStage endedAt(OffsetDateTime endedAt) {
-            this.endedAt = Optional.ofNullable(endedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -366,8 +331,7 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "ended_at", nulls = Nulls.SKIP)
         public _FinalStage endedAt(Optional<OffsetDateTime> endedAt) {
-            this.endedAt = endedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -376,8 +340,7 @@ public final class GetFlowExecutionResponseContent {
          */
         @java.lang.Override
         public _FinalStage startedAt(OffsetDateTime startedAt) {
-            this.startedAt = Optional.ofNullable(startedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -386,21 +349,18 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "started_at", nulls = Nulls.SKIP)
         public _FinalStage startedAt(Optional<OffsetDateTime> startedAt) {
-            this.startedAt = startedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage debug(Map<String, Object> debug) {
-            this.debug = Optional.ofNullable(debug);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "debug", nulls = Nulls.SKIP)
         public _FinalStage debug(Optional<Map<String, Object>> debug) {
-            this.debug = debug;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -409,8 +369,7 @@ public final class GetFlowExecutionResponseContent {
          */
         @java.lang.Override
         public _FinalStage journeyId(String journeyId) {
-            this.journeyId = Optional.ofNullable(journeyId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -419,35 +378,22 @@ public final class GetFlowExecutionResponseContent {
         @java.lang.Override
         @JsonSetter(value = "journey_id", nulls = Nulls.SKIP)
         public _FinalStage journeyId(Optional<String> journeyId) {
-            this.journeyId = journeyId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetFlowExecutionResponseContent build() {
-            return new GetFlowExecutionResponseContent(
-                    id,
-                    traceId,
-                    journeyId,
-                    status,
-                    debug,
-                    createdAt,
-                    updatedAt,
-                    startedAt,
-                    endedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

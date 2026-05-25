@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListActionsRequestParameters.Builder.class)
 public final class ListActionsRequestParameters {
+
     private final OptionalNullable<ActionTriggerTypeEnum> triggerId;
 
     private final OptionalNullable<String> actionName;
@@ -36,14 +37,7 @@ public final class ListActionsRequestParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListActionsRequestParameters(
-            OptionalNullable<ActionTriggerTypeEnum> triggerId,
-            OptionalNullable<String> actionName,
-            OptionalNullable<Boolean> deployed,
-            OptionalNullable<Integer> page,
-            OptionalNullable<Integer> perPage,
-            OptionalNullable<Boolean> installed,
-            Map<String, Object> additionalProperties) {
+    private ListActionsRequestParameters(OptionalNullable<ActionTriggerTypeEnum> triggerId, OptionalNullable<String> actionName, OptionalNullable<Boolean> deployed, OptionalNullable<Integer> page, OptionalNullable<Integer> perPage, OptionalNullable<Boolean> installed, Map<String, Object> additionalProperties) {
         this.triggerId = triggerId;
         this.actionName = actionName;
         this.deployed = deployed;
@@ -58,10 +52,7 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<ActionTriggerTypeEnum> getTriggerId() {
-        if (triggerId == null) {
-            return OptionalNullable.absent();
-        }
-        return triggerId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,10 +60,7 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getActionName() {
-        if (actionName == null) {
-            return OptionalNullable.absent();
-        }
-        return actionName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,10 +68,7 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getDeployed() {
-        if (deployed == null) {
-            return OptionalNullable.absent();
-        }
-        return deployed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,10 +76,7 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPage() {
-        if (page == null) {
-            return OptionalNullable.absent();
-        }
-        return page;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,10 +84,7 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getPerPage() {
-        if (perPage == null) {
-            return OptionalNullable.absent();
-        }
-        return perPage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,48 +92,40 @@ public final class ListActionsRequestParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getInstalled() {
-        if (installed == null) {
-            return OptionalNullable.absent();
-        }
-        return installed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListActionsRequestParameters && equalTo((ListActionsRequestParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListActionsRequestParameters other) {
-        return triggerId.equals(other.triggerId)
-                && actionName.equals(other.actionName)
-                && deployed.equals(other.deployed)
-                && page.equals(other.page)
-                && perPage.equals(other.perPage)
-                && installed.equals(other.installed);
+        return triggerId.equals(other.triggerId) && actionName.equals(other.actionName) && deployed.equals(other.deployed) && page.equals(other.page) && perPage.equals(other.perPage) && installed.equals(other.installed);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.triggerId, this.actionName, this.deployed, this.page, this.perPage, this.installed);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<ActionTriggerTypeEnum> triggerId = OptionalNullable.absent();
 
         private OptionalNullable<String> actionName = OptionalNullable.absent();
@@ -170,16 +141,11 @@ public final class ListActionsRequestParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListActionsRequestParameters other) {
-            triggerId(other.getTriggerId());
-            actionName(other.getActionName());
-            deployed(other.getDeployed());
-            page(other.getPage());
-            perPage(other.getPerPage());
-            installed(other.getInstalled());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -187,33 +153,19 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "triggerId", nulls = Nulls.SKIP)
         public Builder triggerId(@Nullable OptionalNullable<ActionTriggerTypeEnum> triggerId) {
-            this.triggerId = triggerId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder triggerId(ActionTriggerTypeEnum triggerId) {
-            this.triggerId = OptionalNullable.of(triggerId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder triggerId(Optional<ActionTriggerTypeEnum> triggerId) {
-            if (triggerId.isPresent()) {
-                this.triggerId = OptionalNullable.of(triggerId.get());
-            } else {
-                this.triggerId = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder triggerId(com.auth0.client.mgmt.core.Nullable<ActionTriggerTypeEnum> triggerId) {
-            if (triggerId.isNull()) {
-                this.triggerId = OptionalNullable.ofNull();
-            } else if (triggerId.isEmpty()) {
-                this.triggerId = OptionalNullable.absent();
-            } else {
-                this.triggerId = OptionalNullable.of(triggerId.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -221,33 +173,19 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "actionName", nulls = Nulls.SKIP)
         public Builder actionName(@Nullable OptionalNullable<String> actionName) {
-            this.actionName = actionName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = OptionalNullable.of(actionName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionName(Optional<String> actionName) {
-            if (actionName.isPresent()) {
-                this.actionName = OptionalNullable.of(actionName.get());
-            } else {
-                this.actionName = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder actionName(com.auth0.client.mgmt.core.Nullable<String> actionName) {
-            if (actionName.isNull()) {
-                this.actionName = OptionalNullable.ofNull();
-            } else if (actionName.isEmpty()) {
-                this.actionName = OptionalNullable.absent();
-            } else {
-                this.actionName = OptionalNullable.of(actionName.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -255,33 +193,19 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "deployed", nulls = Nulls.SKIP)
         public Builder deployed(@Nullable OptionalNullable<Boolean> deployed) {
-            this.deployed = deployed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deployed(Boolean deployed) {
-            this.deployed = OptionalNullable.of(deployed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deployed(Optional<Boolean> deployed) {
-            if (deployed.isPresent()) {
-                this.deployed = OptionalNullable.of(deployed.get());
-            } else {
-                this.deployed = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder deployed(com.auth0.client.mgmt.core.Nullable<Boolean> deployed) {
-            if (deployed.isNull()) {
-                this.deployed = OptionalNullable.ofNull();
-            } else if (deployed.isEmpty()) {
-                this.deployed = OptionalNullable.absent();
-            } else {
-                this.deployed = OptionalNullable.of(deployed.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -289,33 +213,19 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "page", nulls = Nulls.SKIP)
         public Builder page(@Nullable OptionalNullable<Integer> page) {
-            this.page = page;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Integer page) {
-            this.page = OptionalNullable.of(page);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(Optional<Integer> page) {
-            if (page.isPresent()) {
-                this.page = OptionalNullable.of(page.get());
-            } else {
-                this.page = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder page(com.auth0.client.mgmt.core.Nullable<Integer> page) {
-            if (page.isNull()) {
-                this.page = OptionalNullable.ofNull();
-            } else if (page.isEmpty()) {
-                this.page = OptionalNullable.absent();
-            } else {
-                this.page = OptionalNullable.of(page.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,33 +233,19 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "per_page", nulls = Nulls.SKIP)
         public Builder perPage(@Nullable OptionalNullable<Integer> perPage) {
-            this.perPage = perPage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Integer perPage) {
-            this.perPage = OptionalNullable.of(perPage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(Optional<Integer> perPage) {
-            if (perPage.isPresent()) {
-                this.perPage = OptionalNullable.of(perPage.get());
-            } else {
-                this.perPage = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder perPage(com.auth0.client.mgmt.core.Nullable<Integer> perPage) {
-            if (perPage.isNull()) {
-                this.perPage = OptionalNullable.ofNull();
-            } else if (perPage.isEmpty()) {
-                this.perPage = OptionalNullable.absent();
-            } else {
-                this.perPage = OptionalNullable.of(perPage.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -357,48 +253,31 @@ public final class ListActionsRequestParameters {
          */
         @JsonSetter(value = "installed", nulls = Nulls.SKIP)
         public Builder installed(@Nullable OptionalNullable<Boolean> installed) {
-            this.installed = installed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder installed(Boolean installed) {
-            this.installed = OptionalNullable.of(installed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder installed(Optional<Boolean> installed) {
-            if (installed.isPresent()) {
-                this.installed = OptionalNullable.of(installed.get());
-            } else {
-                this.installed = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder installed(com.auth0.client.mgmt.core.Nullable<Boolean> installed) {
-            if (installed.isNull()) {
-                this.installed = OptionalNullable.ofNull();
-            } else if (installed.isEmpty()) {
-                this.installed = OptionalNullable.absent();
-            } else {
-                this.installed = OptionalNullable.of(installed.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListActionsRequestParameters build() {
-            return new ListActionsRequestParameters(
-                    triggerId, actionName, deployed, page, perPage, installed, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

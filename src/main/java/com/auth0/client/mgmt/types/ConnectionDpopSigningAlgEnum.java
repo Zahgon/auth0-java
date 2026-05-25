@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionDpopSigningAlgEnum {
-    public static final ConnectionDpopSigningAlgEnum ED25519 =
-            new ConnectionDpopSigningAlgEnum(Value.ED25519, "Ed25519");
+
+    public static final ConnectionDpopSigningAlgEnum ED25519 = new ConnectionDpopSigningAlgEnum(Value.ED25519, "Ed25519");
 
     public static final ConnectionDpopSigningAlgEnum ES384 = new ConnectionDpopSigningAlgEnum(Value.ES384, "ES384");
 
@@ -26,72 +26,41 @@ public final class ConnectionDpopSigningAlgEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionDpopSigningAlgEnum
-                        && this.string.equals(((ConnectionDpopSigningAlgEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ED25519:
-                return visitor.visitEd25519();
-            case ES384:
-                return visitor.visitEs384();
-            case ES256:
-                return visitor.visitEs256();
-            case ES512:
-                return visitor.visitEs512();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionDpopSigningAlgEnum valueOf(String value) {
-        switch (value) {
-            case "Ed25519":
-                return ED25519;
-            case "ES384":
-                return ES384;
-            case "ES256":
-                return ES256;
-            case "ES512":
-                return ES512;
-            default:
-                return new ConnectionDpopSigningAlgEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ES256,
 
-        ES384,
-
-        ES512,
-
-        ED25519,
-
-        UNKNOWN
+        ES256, ES384, ES512, ED25519, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEs256();
 
         T visitEs384();

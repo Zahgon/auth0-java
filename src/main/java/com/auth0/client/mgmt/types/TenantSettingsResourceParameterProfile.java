@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class TenantSettingsResourceParameterProfile {
-    public static final TenantSettingsResourceParameterProfile AUDIENCE =
-            new TenantSettingsResourceParameterProfile(Value.AUDIENCE, "audience");
 
-    public static final TenantSettingsResourceParameterProfile COMPATIBILITY =
-            new TenantSettingsResourceParameterProfile(Value.COMPATIBILITY, "compatibility");
+    public static final TenantSettingsResourceParameterProfile AUDIENCE = new TenantSettingsResourceParameterProfile(Value.AUDIENCE, "audience");
+
+    public static final TenantSettingsResourceParameterProfile COMPATIBILITY = new TenantSettingsResourceParameterProfile(Value.COMPATIBILITY, "compatibility");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class TenantSettingsResourceParameterProfile {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof TenantSettingsResourceParameterProfile
-                        && this.string.equals(((TenantSettingsResourceParameterProfile) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case AUDIENCE:
-                return visitor.visitAudience();
-            case COMPATIBILITY:
-                return visitor.visitCompatibility();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static TenantSettingsResourceParameterProfile valueOf(String value) {
-        switch (value) {
-            case "audience":
-                return AUDIENCE;
-            case "compatibility":
-                return COMPATIBILITY;
-            default:
-                return new TenantSettingsResourceParameterProfile(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        AUDIENCE,
 
-        COMPATIBILITY,
-
-        UNKNOWN
+        AUDIENCE, COMPATIBILITY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitAudience();
 
         T visitCompatibility();

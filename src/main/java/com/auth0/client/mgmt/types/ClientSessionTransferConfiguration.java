@@ -24,12 +24,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientSessionTransferConfiguration.Builder.class)
 public final class ClientSessionTransferConfiguration {
+
     private final Optional<Boolean> canCreateSessionTransferToken;
 
     private final Optional<Boolean> enforceCascadeRevocation;
 
-    private final OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-            allowedAuthenticationMethods;
+    private final OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods;
 
     private final Optional<ClientSessionTransferDeviceBindingEnum> enforceDeviceBinding;
 
@@ -41,15 +41,7 @@ public final class ClientSessionTransferConfiguration {
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientSessionTransferConfiguration(
-            Optional<Boolean> canCreateSessionTransferToken,
-            Optional<Boolean> enforceCascadeRevocation,
-            OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods,
-            Optional<ClientSessionTransferDeviceBindingEnum> enforceDeviceBinding,
-            Optional<Boolean> allowRefreshToken,
-            Optional<Boolean> enforceOnlineRefreshTokens,
-            OptionalNullable<ClientSessionTransferDelegationConfiguration> delegation,
-            Map<String, Object> additionalProperties) {
+    private ClientSessionTransferConfiguration(Optional<Boolean> canCreateSessionTransferToken, Optional<Boolean> enforceCascadeRevocation, OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods, Optional<ClientSessionTransferDeviceBindingEnum> enforceDeviceBinding, Optional<Boolean> allowRefreshToken, Optional<Boolean> enforceOnlineRefreshTokens, OptionalNullable<ClientSessionTransferDelegationConfiguration> delegation, Map<String, Object> additionalProperties) {
         this.canCreateSessionTransferToken = canCreateSessionTransferToken;
         this.enforceCascadeRevocation = enforceCascadeRevocation;
         this.allowedAuthenticationMethods = allowedAuthenticationMethods;
@@ -65,7 +57,7 @@ public final class ClientSessionTransferConfiguration {
      */
     @JsonProperty("can_create_session_transfer_token")
     public Optional<Boolean> getCanCreateSessionTransferToken() {
-        return canCreateSessionTransferToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,7 +65,7 @@ public final class ClientSessionTransferConfiguration {
      */
     @JsonProperty("enforce_cascade_revocation")
     public Optional<Boolean> getEnforceCascadeRevocation() {
-        return enforceCascadeRevocation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -81,17 +73,13 @@ public final class ClientSessionTransferConfiguration {
      */
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("allowed_authentication_methods")
-    public OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-            getAllowedAuthenticationMethods() {
-        if (allowedAuthenticationMethods == null) {
-            return OptionalNullable.absent();
-        }
-        return allowedAuthenticationMethods;
+    public OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> getAllowedAuthenticationMethods() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("enforce_device_binding")
     public Optional<ClientSessionTransferDeviceBindingEnum> getEnforceDeviceBinding() {
-        return enforceDeviceBinding;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,7 +87,7 @@ public final class ClientSessionTransferConfiguration {
      */
     @JsonProperty("allow_refresh_token")
     public Optional<Boolean> getAllowRefreshToken() {
-        return allowRefreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,22 +95,18 @@ public final class ClientSessionTransferConfiguration {
      */
     @JsonProperty("enforce_online_refresh_tokens")
     public Optional<Boolean> getEnforceOnlineRefreshTokens() {
-        return enforceOnlineRefreshTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("delegation")
     public OptionalNullable<ClientSessionTransferDelegationConfiguration> getDelegation() {
-        if (delegation == null) {
-            return OptionalNullable.absent();
-        }
-        return delegation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("allowed_authentication_methods")
-    private OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-            _getAllowedAuthenticationMethods() {
+    private OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> _getAllowedAuthenticationMethods() {
         return allowedAuthenticationMethods;
     }
 
@@ -134,55 +118,40 @@ public final class ClientSessionTransferConfiguration {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientSessionTransferConfiguration
-                && equalTo((ClientSessionTransferConfiguration) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientSessionTransferConfiguration other) {
-        return canCreateSessionTransferToken.equals(other.canCreateSessionTransferToken)
-                && enforceCascadeRevocation.equals(other.enforceCascadeRevocation)
-                && allowedAuthenticationMethods.equals(other.allowedAuthenticationMethods)
-                && enforceDeviceBinding.equals(other.enforceDeviceBinding)
-                && allowRefreshToken.equals(other.allowRefreshToken)
-                && enforceOnlineRefreshTokens.equals(other.enforceOnlineRefreshTokens)
-                && delegation.equals(other.delegation);
+        return canCreateSessionTransferToken.equals(other.canCreateSessionTransferToken) && enforceCascadeRevocation.equals(other.enforceCascadeRevocation) && allowedAuthenticationMethods.equals(other.allowedAuthenticationMethods) && enforceDeviceBinding.equals(other.enforceDeviceBinding) && allowRefreshToken.equals(other.allowRefreshToken) && enforceOnlineRefreshTokens.equals(other.enforceOnlineRefreshTokens) && delegation.equals(other.delegation);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.canCreateSessionTransferToken,
-                this.enforceCascadeRevocation,
-                this.allowedAuthenticationMethods,
-                this.enforceDeviceBinding,
-                this.allowRefreshToken,
-                this.enforceOnlineRefreshTokens,
-                this.delegation);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> canCreateSessionTransferToken = Optional.empty();
 
         private Optional<Boolean> enforceCascadeRevocation = Optional.empty();
 
-        private OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-                allowedAuthenticationMethods = OptionalNullable.absent();
+        private OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods = OptionalNullable.absent();
 
         private Optional<ClientSessionTransferDeviceBindingEnum> enforceDeviceBinding = Optional.empty();
 
@@ -195,17 +164,11 @@ public final class ClientSessionTransferConfiguration {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientSessionTransferConfiguration other) {
-            canCreateSessionTransferToken(other.getCanCreateSessionTransferToken());
-            enforceCascadeRevocation(other.getEnforceCascadeRevocation());
-            allowedAuthenticationMethods(other.getAllowedAuthenticationMethods());
-            enforceDeviceBinding(other.getEnforceDeviceBinding());
-            allowRefreshToken(other.getAllowRefreshToken());
-            enforceOnlineRefreshTokens(other.getEnforceOnlineRefreshTokens());
-            delegation(other.getDelegation());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -213,13 +176,11 @@ public final class ClientSessionTransferConfiguration {
          */
         @JsonSetter(value = "can_create_session_transfer_token", nulls = Nulls.SKIP)
         public Builder canCreateSessionTransferToken(Optional<Boolean> canCreateSessionTransferToken) {
-            this.canCreateSessionTransferToken = canCreateSessionTransferToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder canCreateSessionTransferToken(Boolean canCreateSessionTransferToken) {
-            this.canCreateSessionTransferToken = Optional.ofNullable(canCreateSessionTransferToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -227,65 +188,40 @@ public final class ClientSessionTransferConfiguration {
          */
         @JsonSetter(value = "enforce_cascade_revocation", nulls = Nulls.SKIP)
         public Builder enforceCascadeRevocation(Optional<Boolean> enforceCascadeRevocation) {
-            this.enforceCascadeRevocation = enforceCascadeRevocation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforceCascadeRevocation(Boolean enforceCascadeRevocation) {
-            this.enforceCascadeRevocation = Optional.ofNullable(enforceCascadeRevocation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
          * <p>Indicates whether an app can create a session from a Session Transfer Token received via indicated methods. Can include <code>cookie</code> and/or <code>query</code>. Usually configured in the web application. Default value is an empty array [].</p>
          */
         @JsonSetter(value = "allowed_authentication_methods", nulls = Nulls.SKIP)
-        public Builder allowedAuthenticationMethods(
-                @Nullable
-                        OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-                                allowedAuthenticationMethods) {
-            this.allowedAuthenticationMethods = allowedAuthenticationMethods;
-            return this;
+        public Builder allowedAuthenticationMethods(@Nullable OptionalNullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder allowedAuthenticationMethods(
-                List<ClientSessionTransferAllowedAuthenticationMethodsEnum> allowedAuthenticationMethods) {
-            this.allowedAuthenticationMethods = OptionalNullable.of(allowedAuthenticationMethods);
-            return this;
+        public Builder allowedAuthenticationMethods(List<ClientSessionTransferAllowedAuthenticationMethodsEnum> allowedAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder allowedAuthenticationMethods(
-                Optional<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods) {
-            if (allowedAuthenticationMethods.isPresent()) {
-                this.allowedAuthenticationMethods = OptionalNullable.of(allowedAuthenticationMethods.get());
-            } else {
-                this.allowedAuthenticationMethods = OptionalNullable.absent();
-            }
-            return this;
+        public Builder allowedAuthenticationMethods(Optional<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder allowedAuthenticationMethods(
-                com.auth0.client.mgmt.core.Nullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>>
-                        allowedAuthenticationMethods) {
-            if (allowedAuthenticationMethods.isNull()) {
-                this.allowedAuthenticationMethods = OptionalNullable.ofNull();
-            } else if (allowedAuthenticationMethods.isEmpty()) {
-                this.allowedAuthenticationMethods = OptionalNullable.absent();
-            } else {
-                this.allowedAuthenticationMethods = OptionalNullable.of(allowedAuthenticationMethods.get());
-            }
-            return this;
+        public Builder allowedAuthenticationMethods(com.auth0.client.mgmt.core.Nullable<List<ClientSessionTransferAllowedAuthenticationMethodsEnum>> allowedAuthenticationMethods) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enforce_device_binding", nulls = Nulls.SKIP)
         public Builder enforceDeviceBinding(Optional<ClientSessionTransferDeviceBindingEnum> enforceDeviceBinding) {
-            this.enforceDeviceBinding = enforceDeviceBinding;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforceDeviceBinding(ClientSessionTransferDeviceBindingEnum enforceDeviceBinding) {
-            this.enforceDeviceBinding = Optional.ofNullable(enforceDeviceBinding);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -293,13 +229,11 @@ public final class ClientSessionTransferConfiguration {
          */
         @JsonSetter(value = "allow_refresh_token", nulls = Nulls.SKIP)
         public Builder allowRefreshToken(Optional<Boolean> allowRefreshToken) {
-            this.allowRefreshToken = allowRefreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder allowRefreshToken(Boolean allowRefreshToken) {
-            this.allowRefreshToken = Optional.ofNullable(allowRefreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,67 +241,40 @@ public final class ClientSessionTransferConfiguration {
          */
         @JsonSetter(value = "enforce_online_refresh_tokens", nulls = Nulls.SKIP)
         public Builder enforceOnlineRefreshTokens(Optional<Boolean> enforceOnlineRefreshTokens) {
-            this.enforceOnlineRefreshTokens = enforceOnlineRefreshTokens;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enforceOnlineRefreshTokens(Boolean enforceOnlineRefreshTokens) {
-            this.enforceOnlineRefreshTokens = Optional.ofNullable(enforceOnlineRefreshTokens);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "delegation", nulls = Nulls.SKIP)
         public Builder delegation(@Nullable OptionalNullable<ClientSessionTransferDelegationConfiguration> delegation) {
-            this.delegation = delegation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder delegation(ClientSessionTransferDelegationConfiguration delegation) {
-            this.delegation = OptionalNullable.of(delegation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder delegation(Optional<ClientSessionTransferDelegationConfiguration> delegation) {
-            if (delegation.isPresent()) {
-                this.delegation = OptionalNullable.of(delegation.get());
-            } else {
-                this.delegation = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder delegation(
-                com.auth0.client.mgmt.core.Nullable<ClientSessionTransferDelegationConfiguration> delegation) {
-            if (delegation.isNull()) {
-                this.delegation = OptionalNullable.ofNull();
-            } else if (delegation.isEmpty()) {
-                this.delegation = OptionalNullable.absent();
-            } else {
-                this.delegation = OptionalNullable.of(delegation.get());
-            }
-            return this;
+        public Builder delegation(com.auth0.client.mgmt.core.Nullable<ClientSessionTransferDelegationConfiguration> delegation) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientSessionTransferConfiguration build() {
-            return new ClientSessionTransferConfiguration(
-                    canCreateSessionTransferToken,
-                    enforceCascadeRevocation,
-                    allowedAuthenticationMethods,
-                    enforceDeviceBinding,
-                    allowRefreshToken,
-                    enforceOnlineRefreshTokens,
-                    delegation,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -21,12 +21,12 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetDirectoryProvisioningDefaultMappingResponseContent.Builder.class)
 public final class GetDirectoryProvisioningDefaultMappingResponseContent {
+
     private final Optional<List<DirectoryProvisioningMappingItem>> mapping;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetDirectoryProvisioningDefaultMappingResponseContent(
-            Optional<List<DirectoryProvisioningMappingItem>> mapping, Map<String, Object> additionalProperties) {
+    private GetDirectoryProvisioningDefaultMappingResponseContent(Optional<List<DirectoryProvisioningMappingItem>> mapping, Map<String, Object> additionalProperties) {
         this.mapping = mapping;
         this.additionalProperties = additionalProperties;
     }
@@ -36,19 +36,17 @@ public final class GetDirectoryProvisioningDefaultMappingResponseContent {
      */
     @JsonProperty("mapping")
     public Optional<List<DirectoryProvisioningMappingItem>> getMapping() {
-        return mapping;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetDirectoryProvisioningDefaultMappingResponseContent
-                && equalTo((GetDirectoryProvisioningDefaultMappingResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetDirectoryProvisioningDefaultMappingResponseContent other) {
@@ -57,30 +55,31 @@ public final class GetDirectoryProvisioningDefaultMappingResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mapping);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<DirectoryProvisioningMappingItem>> mapping = Optional.empty();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetDirectoryProvisioningDefaultMappingResponseContent other) {
-            mapping(other.getMapping());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -88,27 +87,23 @@ public final class GetDirectoryProvisioningDefaultMappingResponseContent {
          */
         @JsonSetter(value = "mapping", nulls = Nulls.SKIP)
         public Builder mapping(Optional<List<DirectoryProvisioningMappingItem>> mapping) {
-            this.mapping = mapping;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder mapping(List<DirectoryProvisioningMappingItem> mapping) {
-            this.mapping = Optional.ofNullable(mapping);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetDirectoryProvisioningDefaultMappingResponseContent build() {
-            return new GetDirectoryProvisioningDefaultMappingResponseContent(mapping, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

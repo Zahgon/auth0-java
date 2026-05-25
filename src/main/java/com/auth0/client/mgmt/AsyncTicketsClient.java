@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.VerifyEmailTicketResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTicketsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTicketsClient rawClient;
@@ -25,22 +26,21 @@ public class AsyncTicketsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTicketsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email verification ticket for a given user. An email verification ticket is a generated URL that the user can consume to verify their email address.
      */
     public CompletableFuture<VerifyEmailTicketResponseContent> verifyEmail(VerifyEmailTicketRequestContent request) {
-        return this.rawClient.verifyEmail(request).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create an email verification ticket for a given user. An email verification ticket is a generated URL that the user can consume to verify their email address.
      */
-    public CompletableFuture<VerifyEmailTicketResponseContent> verifyEmail(
-            VerifyEmailTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.verifyEmail(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<VerifyEmailTicketResponseContent> verifyEmail(VerifyEmailTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,7 +48,7 @@ public class AsyncTicketsClient {
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
     public CompletableFuture<ChangePasswordTicketResponseContent> changePassword() {
-        return this.rawClient.changePassword().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,24 +56,22 @@ public class AsyncTicketsClient {
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
     public CompletableFuture<ChangePasswordTicketResponseContent> changePassword(RequestOptions requestOptions) {
-        return this.rawClient.changePassword(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a password change ticket for a given user. A password change ticket is a generated URL that the user can consume to start a reset password flow.
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
-    public CompletableFuture<ChangePasswordTicketResponseContent> changePassword(
-            ChangePasswordTicketRequestContent request) {
-        return this.rawClient.changePassword(request).thenApply(response -> response.body());
+    public CompletableFuture<ChangePasswordTicketResponseContent> changePassword(ChangePasswordTicketRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a password change ticket for a given user. A password change ticket is a generated URL that the user can consume to start a reset password flow.
      * <p>Note: This endpoint does not verify the given user’s identity. If you call this endpoint within your application, you must design your application to verify the user’s identity.</p>
      */
-    public CompletableFuture<ChangePasswordTicketResponseContent> changePassword(
-            ChangePasswordTicketRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.changePassword(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<ChangePasswordTicketResponseContent> changePassword(ChangePasswordTicketRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -20,14 +20,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionPasswordHistoryOptions.Builder.class)
 public final class ConnectionPasswordHistoryOptions {
+
     private final boolean enable;
 
     private final Optional<Integer> size;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionPasswordHistoryOptions(
-            boolean enable, Optional<Integer> size, Map<String, Object> additionalProperties) {
+    private ConnectionPasswordHistoryOptions(boolean enable, Optional<Integer> size, Map<String, Object> additionalProperties) {
         this.enable = enable;
         this.size = size;
         this.additionalProperties = additionalProperties;
@@ -35,23 +35,22 @@ public final class ConnectionPasswordHistoryOptions {
 
     @JsonProperty("enable")
     public boolean getEnable() {
-        return enable;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("size")
     public Optional<Integer> getSize() {
-        return size;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionPasswordHistoryOptions && equalTo((ConnectionPasswordHistoryOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionPasswordHistoryOptions other) {
@@ -60,25 +59,27 @@ public final class ConnectionPasswordHistoryOptions {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enable, this.size);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static EnableStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface EnableStage {
+
         _FinalStage enable(boolean enable);
 
         Builder from(ConnectionPasswordHistoryOptions other);
     }
 
     public interface _FinalStage {
+
         ConnectionPasswordHistoryOptions build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -92,6 +93,7 @@ public final class ConnectionPasswordHistoryOptions {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements EnableStage, _FinalStage {
+
         private boolean enable;
 
         private Optional<Integer> size = Optional.empty();
@@ -99,50 +101,44 @@ public final class ConnectionPasswordHistoryOptions {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionPasswordHistoryOptions other) {
-            enable(other.getEnable());
-            size(other.getSize());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("enable")
         public _FinalStage enable(boolean enable) {
-            this.enable = enable;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage size(Integer size) {
-            this.size = Optional.ofNullable(size);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "size", nulls = Nulls.SKIP)
         public _FinalStage size(Optional<Integer> size) {
-            this.size = size;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionPasswordHistoryOptions build() {
-            return new ConnectionPasswordHistoryOptions(enable, size, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

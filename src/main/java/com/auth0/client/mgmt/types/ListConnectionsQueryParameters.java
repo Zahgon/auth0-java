@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ListConnectionsQueryParameters.Builder.class)
 public final class ListConnectionsQueryParameters {
+
     private final Optional<List<ConnectionStrategyEnum>> strategy;
 
     private final OptionalNullable<String> from;
@@ -38,14 +39,7 @@ public final class ListConnectionsQueryParameters {
 
     private final Map<String, Object> additionalProperties;
 
-    private ListConnectionsQueryParameters(
-            Optional<List<ConnectionStrategyEnum>> strategy,
-            OptionalNullable<String> from,
-            OptionalNullable<Integer> take,
-            OptionalNullable<String> name,
-            OptionalNullable<String> fields,
-            OptionalNullable<Boolean> includeFields,
-            Map<String, Object> additionalProperties) {
+    private ListConnectionsQueryParameters(Optional<List<ConnectionStrategyEnum>> strategy, OptionalNullable<String> from, OptionalNullable<Integer> take, OptionalNullable<String> name, OptionalNullable<String> fields, OptionalNullable<Boolean> includeFields, Map<String, Object> additionalProperties) {
         this.strategy = strategy;
         this.from = from;
         this.take = take;
@@ -60,10 +54,7 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public Optional<List<ConnectionStrategyEnum>> getStrategy() {
-        if (strategy == null) {
-            return Optional.empty();
-        }
-        return strategy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,10 +62,7 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFrom() {
-        if (from == null) {
-            return OptionalNullable.absent();
-        }
-        return from;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,10 +70,7 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public OptionalNullable<Integer> getTake() {
-        if (take == null) {
-            return OptionalNullable.absent();
-        }
-        return take;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -93,10 +78,7 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getName() {
-        if (name == null) {
-            return OptionalNullable.absent();
-        }
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,10 +86,7 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public OptionalNullable<String> getFields() {
-        if (fields == null) {
-            return OptionalNullable.absent();
-        }
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,48 +94,40 @@ public final class ListConnectionsQueryParameters {
      */
     @JsonIgnore
     public OptionalNullable<Boolean> getIncludeFields() {
-        if (includeFields == null) {
-            return OptionalNullable.absent();
-        }
-        return includeFields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ListConnectionsQueryParameters && equalTo((ListConnectionsQueryParameters) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ListConnectionsQueryParameters other) {
-        return strategy.equals(other.strategy)
-                && from.equals(other.from)
-                && take.equals(other.take)
-                && name.equals(other.name)
-                && fields.equals(other.fields)
-                && includeFields.equals(other.includeFields);
+        return strategy.equals(other.strategy) && from.equals(other.from) && take.equals(other.take) && name.equals(other.name) && fields.equals(other.fields) && includeFields.equals(other.includeFields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.strategy, this.from, this.take, this.name, this.fields, this.includeFields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<ConnectionStrategyEnum>> strategy = Optional.empty();
 
         private OptionalNullable<String> from = OptionalNullable.absent();
@@ -172,16 +143,11 @@ public final class ListConnectionsQueryParameters {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ListConnectionsQueryParameters other) {
-            strategy(other.getStrategy());
-            from(other.getFrom());
-            take(other.getTake());
-            name(other.getName());
-            fields(other.getFields());
-            includeFields(other.getIncludeFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -189,29 +155,19 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "strategy", nulls = Nulls.SKIP)
         public Builder strategy(@Nullable Optional<List<ConnectionStrategyEnum>> strategy) {
-            this.strategy = strategy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategy(List<ConnectionStrategyEnum> strategy) {
-            this.strategy = Optional.ofNullable(strategy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategy(com.auth0.client.mgmt.core.Nullable<List<ConnectionStrategyEnum>> strategy) {
-            if (strategy.isNull()) {
-                this.strategy = null;
-            } else if (strategy.isEmpty()) {
-                this.strategy = Optional.empty();
-            } else {
-                this.strategy = Optional.of(strategy.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder strategy(ConnectionStrategyEnum strategy) {
-            this.strategy = Optional.of(Collections.singletonList(strategy));
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -219,33 +175,19 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "from", nulls = Nulls.SKIP)
         public Builder from(@Nullable OptionalNullable<String> from) {
-            this.from = from;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(String from) {
-            this.from = OptionalNullable.of(from);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(Optional<String> from) {
-            if (from.isPresent()) {
-                this.from = OptionalNullable.of(from.get());
-            } else {
-                this.from = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder from(com.auth0.client.mgmt.core.Nullable<String> from) {
-            if (from.isNull()) {
-                this.from = OptionalNullable.ofNull();
-            } else if (from.isEmpty()) {
-                this.from = OptionalNullable.absent();
-            } else {
-                this.from = OptionalNullable.of(from.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -253,33 +195,19 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "take", nulls = Nulls.SKIP)
         public Builder take(@Nullable OptionalNullable<Integer> take) {
-            this.take = take;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Integer take) {
-            this.take = OptionalNullable.of(take);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(Optional<Integer> take) {
-            if (take.isPresent()) {
-                this.take = OptionalNullable.of(take.get());
-            } else {
-                this.take = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder take(com.auth0.client.mgmt.core.Nullable<Integer> take) {
-            if (take.isNull()) {
-                this.take = OptionalNullable.ofNull();
-            } else if (take.isEmpty()) {
-                this.take = OptionalNullable.absent();
-            } else {
-                this.take = OptionalNullable.of(take.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -287,33 +215,19 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(@Nullable OptionalNullable<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = OptionalNullable.of(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(Optional<String> name) {
-            if (name.isPresent()) {
-                this.name = OptionalNullable.of(name.get());
-            } else {
-                this.name = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(com.auth0.client.mgmt.core.Nullable<String> name) {
-            if (name.isNull()) {
-                this.name = OptionalNullable.ofNull();
-            } else if (name.isEmpty()) {
-                this.name = OptionalNullable.absent();
-            } else {
-                this.name = OptionalNullable.of(name.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -321,33 +235,19 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public Builder fields(@Nullable OptionalNullable<String> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(String fields) {
-            this.fields = OptionalNullable.of(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(Optional<String> fields) {
-            if (fields.isPresent()) {
-                this.fields = OptionalNullable.of(fields.get());
-            } else {
-                this.fields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder fields(com.auth0.client.mgmt.core.Nullable<String> fields) {
-            if (fields.isNull()) {
-                this.fields = OptionalNullable.ofNull();
-            } else if (fields.isEmpty()) {
-                this.fields = OptionalNullable.absent();
-            } else {
-                this.fields = OptionalNullable.of(fields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -355,48 +255,31 @@ public final class ListConnectionsQueryParameters {
          */
         @JsonSetter(value = "include_fields", nulls = Nulls.SKIP)
         public Builder includeFields(@Nullable OptionalNullable<Boolean> includeFields) {
-            this.includeFields = includeFields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Boolean includeFields) {
-            this.includeFields = OptionalNullable.of(includeFields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(Optional<Boolean> includeFields) {
-            if (includeFields.isPresent()) {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            } else {
-                this.includeFields = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeFields(com.auth0.client.mgmt.core.Nullable<Boolean> includeFields) {
-            if (includeFields.isNull()) {
-                this.includeFields = OptionalNullable.ofNull();
-            } else if (includeFields.isEmpty()) {
-                this.includeFields = OptionalNullable.absent();
-            } else {
-                this.includeFields = OptionalNullable.of(includeFields.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ListConnectionsQueryParameters build() {
-            return new ListConnectionsQueryParameters(
-                    strategy, from, take, name, fields, includeFields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

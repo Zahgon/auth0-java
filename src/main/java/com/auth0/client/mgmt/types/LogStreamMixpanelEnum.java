@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class LogStreamMixpanelEnum {
+
     public static final LogStreamMixpanelEnum MIXPANEL = new LogStreamMixpanelEnum(Value.MIXPANEL, "mixpanel");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class LogStreamMixpanelEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof LogStreamMixpanelEnum
-                        && this.string.equals(((LogStreamMixpanelEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MIXPANEL:
-                return visitor.visitMixpanel();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static LogStreamMixpanelEnum valueOf(String value) {
-        switch (value) {
-            case "mixpanel":
-                return MIXPANEL;
-            default:
-                return new LogStreamMixpanelEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MIXPANEL,
 
-        UNKNOWN
+        MIXPANEL, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMixpanel();
 
         T visitUnknown(String unknownType);

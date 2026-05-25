@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdMailchimpEnum {
-    public static final FlowsVaultConnectionAppIdMailchimpEnum MAILCHIMP =
-            new FlowsVaultConnectionAppIdMailchimpEnum(Value.MAILCHIMP, "MAILCHIMP");
+
+    public static final FlowsVaultConnectionAppIdMailchimpEnum MAILCHIMP = new FlowsVaultConnectionAppIdMailchimpEnum(Value.MAILCHIMP, "MAILCHIMP");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdMailchimpEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdMailchimpEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdMailchimpEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case MAILCHIMP:
-                return visitor.visitMailchimp();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdMailchimpEnum valueOf(String value) {
-        switch (value) {
-            case "MAILCHIMP":
-                return MAILCHIMP;
-            default:
-                return new FlowsVaultConnectionAppIdMailchimpEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        MAILCHIMP,
 
-        UNKNOWN
+        MAILCHIMP, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitMailchimp();
 
         T visitUnknown(String unknownType);

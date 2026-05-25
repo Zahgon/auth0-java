@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowsVaultConnectionAppIdSalesforceEnum {
-    public static final FlowsVaultConnectionAppIdSalesforceEnum SALESFORCE =
-            new FlowsVaultConnectionAppIdSalesforceEnum(Value.SALESFORCE, "SALESFORCE");
+
+    public static final FlowsVaultConnectionAppIdSalesforceEnum SALESFORCE = new FlowsVaultConnectionAppIdSalesforceEnum(Value.SALESFORCE, "SALESFORCE");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowsVaultConnectionAppIdSalesforceEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowsVaultConnectionAppIdSalesforceEnum
-                        && this.string.equals(((FlowsVaultConnectionAppIdSalesforceEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case SALESFORCE:
-                return visitor.visitSalesforce();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowsVaultConnectionAppIdSalesforceEnum valueOf(String value) {
-        switch (value) {
-            case "SALESFORCE":
-                return SALESFORCE;
-            default:
-                return new FlowsVaultConnectionAppIdSalesforceEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        SALESFORCE,
 
-        UNKNOWN
+        SALESFORCE, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitSalesforce();
 
         T visitUnknown(String unknownType);

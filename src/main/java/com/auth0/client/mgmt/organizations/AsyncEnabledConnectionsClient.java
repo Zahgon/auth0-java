@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.types.UpdateOrganizationConnectionResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncEnabledConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawEnabledConnectionsClient rawClient;
@@ -29,71 +30,65 @@ public class AsyncEnabledConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawEnabledConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
     public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(String id) {
-        return this.rawClient.list(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.list(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(
-            String id, ListOrganizationConnectionsRequestParameters request) {
-        return this.rawClient.list(id, request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(String id, ListOrganizationConnectionsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
-    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(
-            String id, ListOrganizationConnectionsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<OrganizationConnection>> list(String id, ListOrganizationConnectionsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Enable a specific connection for a given Organization. To enable a connection, it must already exist within your tenant; connections cannot be created through this action.
      * <p><a href="https://auth0.com/docs/authenticate/identity-providers">Connections</a> represent the relationship between Auth0 and a source of users. Available types of connections include database, enterprise, and social.</p>
      */
-    public CompletableFuture<AddOrganizationConnectionResponseContent> add(
-            String id, AddOrganizationConnectionRequestContent request) {
-        return this.rawClient.add(id, request).thenApply(response -> response.body());
+    public CompletableFuture<AddOrganizationConnectionResponseContent> add(String id, AddOrganizationConnectionRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Enable a specific connection for a given Organization. To enable a connection, it must already exist within your tenant; connections cannot be created through this action.
      * <p><a href="https://auth0.com/docs/authenticate/identity-providers">Connections</a> represent the relationship between Auth0 and a source of users. Available types of connections include database, enterprise, and social.</p>
      */
-    public CompletableFuture<AddOrganizationConnectionResponseContent> add(
-            String id, AddOrganizationConnectionRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.add(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<AddOrganizationConnectionResponseContent> add(String id, AddOrganizationConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
     public CompletableFuture<GetOrganizationConnectionResponseContent> get(String id, String connectionId) {
-        return this.rawClient.get(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details about a specific connection currently enabled for an Organization. Information returned includes details such as connection ID, name, strategy, and whether the connection automatically grants membership upon login.
      */
-    public CompletableFuture<GetOrganizationConnectionResponseContent> get(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.get(id, connectionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetOrganizationConnectionResponseContent> get(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,7 +96,7 @@ public class AsyncEnabledConnectionsClient {
      * <p><b>Note</b>: This action does not remove the connection from your tenant.</p>
      */
     public CompletableFuture<Void> delete(String id, String connectionId) {
-        return this.rawClient.delete(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -109,40 +104,34 @@ public class AsyncEnabledConnectionsClient {
      * <p><b>Note</b>: This action does not remove the connection from your tenant.</p>
      */
     public CompletableFuture<Void> delete(String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, connectionId, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific connection currently enabled for an Organization.
      */
     public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(String id, String connectionId) {
-        return this.rawClient.update(id, connectionId).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific connection currently enabled for an Organization.
      */
-    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(
-            String id, String connectionId, RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(String id, String connectionId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific connection currently enabled for an Organization.
      */
-    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(
-            String id, String connectionId, UpdateOrganizationConnectionRequestContent request) {
-        return this.rawClient.update(id, connectionId, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(String id, String connectionId, UpdateOrganizationConnectionRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Modify the details of a specific connection currently enabled for an Organization.
      */
-    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(
-            String id,
-            String connectionId,
-            UpdateOrganizationConnectionRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.update(id, connectionId, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateOrganizationConnectionResponseContent> update(String id, String connectionId, UpdateOrganizationConnectionRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

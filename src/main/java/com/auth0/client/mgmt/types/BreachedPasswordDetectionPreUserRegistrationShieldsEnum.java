@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class BreachedPasswordDetectionPreUserRegistrationShieldsEnum {
-    public static final BreachedPasswordDetectionPreUserRegistrationShieldsEnum BLOCK =
-            new BreachedPasswordDetectionPreUserRegistrationShieldsEnum(Value.BLOCK, "block");
 
-    public static final BreachedPasswordDetectionPreUserRegistrationShieldsEnum ADMIN_NOTIFICATION =
-            new BreachedPasswordDetectionPreUserRegistrationShieldsEnum(Value.ADMIN_NOTIFICATION, "admin_notification");
+    public static final BreachedPasswordDetectionPreUserRegistrationShieldsEnum BLOCK = new BreachedPasswordDetectionPreUserRegistrationShieldsEnum(Value.BLOCK, "block");
+
+    public static final BreachedPasswordDetectionPreUserRegistrationShieldsEnum ADMIN_NOTIFICATION = new BreachedPasswordDetectionPreUserRegistrationShieldsEnum(Value.ADMIN_NOTIFICATION, "admin_notification");
 
     private final Value value;
 
@@ -23,61 +22,41 @@ public final class BreachedPasswordDetectionPreUserRegistrationShieldsEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof BreachedPasswordDetectionPreUserRegistrationShieldsEnum
-                        && this.string.equals(
-                                ((BreachedPasswordDetectionPreUserRegistrationShieldsEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case BLOCK:
-                return visitor.visitBlock();
-            case ADMIN_NOTIFICATION:
-                return visitor.visitAdminNotification();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static BreachedPasswordDetectionPreUserRegistrationShieldsEnum valueOf(String value) {
-        switch (value) {
-            case "block":
-                return BLOCK;
-            case "admin_notification":
-                return ADMIN_NOTIFICATION;
-            default:
-                return new BreachedPasswordDetectionPreUserRegistrationShieldsEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        BLOCK,
 
-        ADMIN_NOTIFICATION,
-
-        UNKNOWN
+        BLOCK, ADMIN_NOTIFICATION, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitBlock();
 
         T visitAdminNotification();

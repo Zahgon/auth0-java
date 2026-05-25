@@ -26,6 +26,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateEmailProviderRequestContent.Builder.class)
 public final class CreateEmailProviderRequestContent {
+
     private final EmailProviderNameEnum name;
 
     private final Optional<Boolean> enabled;
@@ -38,13 +39,7 @@ public final class CreateEmailProviderRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateEmailProviderRequestContent(
-            EmailProviderNameEnum name,
-            Optional<Boolean> enabled,
-            Optional<String> defaultFromAddress,
-            EmailProviderCredentialsSchema credentials,
-            OptionalNullable<Map<String, Object>> settings,
-            Map<String, Object> additionalProperties) {
+    private CreateEmailProviderRequestContent(EmailProviderNameEnum name, Optional<Boolean> enabled, Optional<String> defaultFromAddress, EmailProviderCredentialsSchema credentials, OptionalNullable<Map<String, Object>> settings, Map<String, Object> additionalProperties) {
         this.name = name;
         this.enabled = enabled;
         this.defaultFromAddress = defaultFromAddress;
@@ -55,7 +50,7 @@ public final class CreateEmailProviderRequestContent {
 
     @JsonProperty("name")
     public EmailProviderNameEnum getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,7 +58,7 @@ public final class CreateEmailProviderRequestContent {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,21 +66,18 @@ public final class CreateEmailProviderRequestContent {
      */
     @JsonProperty("default_from_address")
     public Optional<String> getDefaultFromAddress() {
-        return defaultFromAddress;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("credentials")
     public EmailProviderCredentialsSchema getCredentials() {
-        return credentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("settings")
     public OptionalNullable<Map<String, Object>> getSettings() {
-        if (settings == null) {
-            return OptionalNullable.absent();
-        }
-        return settings;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -96,48 +88,46 @@ public final class CreateEmailProviderRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateEmailProviderRequestContent && equalTo((CreateEmailProviderRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateEmailProviderRequestContent other) {
-        return name.equals(other.name)
-                && enabled.equals(other.enabled)
-                && defaultFromAddress.equals(other.defaultFromAddress)
-                && credentials.equals(other.credentials)
-                && settings.equals(other.settings);
+        return name.equals(other.name) && enabled.equals(other.enabled) && defaultFromAddress.equals(other.defaultFromAddress) && credentials.equals(other.credentials) && settings.equals(other.settings);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.name, this.enabled, this.defaultFromAddress, this.credentials, this.settings);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         CredentialsStage name(@NotNull EmailProviderNameEnum name);
 
         Builder from(CreateEmailProviderRequestContent other);
     }
 
     public interface CredentialsStage {
+
         _FinalStage credentials(@NotNull EmailProviderCredentialsSchema credentials);
     }
 
     public interface _FinalStage {
+
         CreateEmailProviderRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -169,6 +159,7 @@ public final class CreateEmailProviderRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, CredentialsStage, _FinalStage {
+
         private EmailProviderNameEnum name;
 
         private EmailProviderCredentialsSchema credentials;
@@ -182,65 +173,45 @@ public final class CreateEmailProviderRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateEmailProviderRequestContent other) {
-            name(other.getName());
-            enabled(other.getEnabled());
-            defaultFromAddress(other.getDefaultFromAddress());
-            credentials(other.getCredentials());
-            settings(other.getSettings());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("name")
         public CredentialsStage name(@NotNull EmailProviderNameEnum name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("credentials")
         public _FinalStage credentials(@NotNull EmailProviderCredentialsSchema credentials) {
-            this.credentials = Objects.requireNonNull(credentials, "credentials must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage settings(com.auth0.client.mgmt.core.Nullable<Map<String, Object>> settings) {
-            if (settings.isNull()) {
-                this.settings = OptionalNullable.ofNull();
-            } else if (settings.isEmpty()) {
-                this.settings = OptionalNullable.absent();
-            } else {
-                this.settings = OptionalNullable.of(settings.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage settings(Optional<Map<String, Object>> settings) {
-            if (settings.isPresent()) {
-                this.settings = OptionalNullable.of(settings.get());
-            } else {
-                this.settings = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage settings(Map<String, Object> settings) {
-            this.settings = OptionalNullable.of(settings);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "settings", nulls = Nulls.SKIP)
         public _FinalStage settings(@Nullable OptionalNullable<Map<String, Object>> settings) {
-            this.settings = settings;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -249,8 +220,7 @@ public final class CreateEmailProviderRequestContent {
          */
         @java.lang.Override
         public _FinalStage defaultFromAddress(String defaultFromAddress) {
-            this.defaultFromAddress = Optional.ofNullable(defaultFromAddress);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -259,8 +229,7 @@ public final class CreateEmailProviderRequestContent {
         @java.lang.Override
         @JsonSetter(value = "default_from_address", nulls = Nulls.SKIP)
         public _FinalStage defaultFromAddress(Optional<String> defaultFromAddress) {
-            this.defaultFromAddress = defaultFromAddress;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -269,8 +238,7 @@ public final class CreateEmailProviderRequestContent {
          */
         @java.lang.Override
         public _FinalStage enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -279,26 +247,22 @@ public final class CreateEmailProviderRequestContent {
         @java.lang.Override
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public _FinalStage enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateEmailProviderRequestContent build() {
-            return new CreateEmailProviderRequestContent(
-                    name, enabled, defaultFromAddress, credentials, settings, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

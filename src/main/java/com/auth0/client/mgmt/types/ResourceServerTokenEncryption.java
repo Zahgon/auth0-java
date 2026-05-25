@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ResourceServerTokenEncryption.Builder.class)
 public final class ResourceServerTokenEncryption {
+
     private final ResourceServerTokenEncryptionFormatEnum format;
 
     private final ResourceServerTokenEncryptionKey encryptionKey;
 
     private final Map<String, Object> additionalProperties;
 
-    private ResourceServerTokenEncryption(
-            ResourceServerTokenEncryptionFormatEnum format,
-            ResourceServerTokenEncryptionKey encryptionKey,
-            Map<String, Object> additionalProperties) {
+    private ResourceServerTokenEncryption(ResourceServerTokenEncryptionFormatEnum format, ResourceServerTokenEncryptionKey encryptionKey, Map<String, Object> additionalProperties) {
         this.format = format;
         this.encryptionKey = encryptionKey;
         this.additionalProperties = additionalProperties;
@@ -36,23 +34,22 @@ public final class ResourceServerTokenEncryption {
 
     @JsonProperty("format")
     public ResourceServerTokenEncryptionFormatEnum getFormat() {
-        return format;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("encryption_key")
     public ResourceServerTokenEncryptionKey getEncryptionKey() {
-        return encryptionKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ResourceServerTokenEncryption && equalTo((ResourceServerTokenEncryption) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ResourceServerTokenEncryption other) {
@@ -61,29 +58,32 @@ public final class ResourceServerTokenEncryption {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.format, this.encryptionKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static FormatStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface FormatStage {
+
         EncryptionKeyStage format(@NotNull ResourceServerTokenEncryptionFormatEnum format);
 
         Builder from(ResourceServerTokenEncryption other);
     }
 
     public interface EncryptionKeyStage {
+
         _FinalStage encryptionKey(@NotNull ResourceServerTokenEncryptionKey encryptionKey);
     }
 
     public interface _FinalStage {
+
         ResourceServerTokenEncryption build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -93,6 +93,7 @@ public final class ResourceServerTokenEncryption {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements FormatStage, EncryptionKeyStage, _FinalStage {
+
         private ResourceServerTokenEncryptionFormatEnum format;
 
         private ResourceServerTokenEncryptionKey encryptionKey;
@@ -100,44 +101,39 @@ public final class ResourceServerTokenEncryption {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ResourceServerTokenEncryption other) {
-            format(other.getFormat());
-            encryptionKey(other.getEncryptionKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("format")
         public EncryptionKeyStage format(@NotNull ResourceServerTokenEncryptionFormatEnum format) {
-            this.format = Objects.requireNonNull(format, "format must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("encryption_key")
         public _FinalStage encryptionKey(@NotNull ResourceServerTokenEncryptionKey encryptionKey) {
-            this.encryptionKey = Objects.requireNonNull(encryptionKey, "encryptionKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ResourceServerTokenEncryption build() {
-            return new ResourceServerTokenEncryption(format, encryptionKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

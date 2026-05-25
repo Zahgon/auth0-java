@@ -14,6 +14,7 @@ import com.auth0.client.mgmt.types.ListGroupsRequestParameters;
 import java.util.function.Supplier;
 
 public class GroupsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawGroupsClient rawClient;
@@ -30,66 +31,66 @@ public class GroupsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawGroupsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public SyncPagingIterable<Group> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public SyncPagingIterable<Group> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public SyncPagingIterable<Group> list(ListGroupsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List all groups in your tenant.
      */
     public SyncPagingIterable<Group> list(ListGroupsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a group by its ID.
      */
     public GetGroupResponseContent get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve a group by its ID.
      */
     public GetGroupResponseContent get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a group by its ID.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a group by its ID.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MembersClient members() {
-        return this.membersClient.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

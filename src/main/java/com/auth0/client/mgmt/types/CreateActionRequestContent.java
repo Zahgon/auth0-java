@@ -23,6 +23,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = CreateActionRequestContent.Builder.class)
 public final class CreateActionRequestContent {
+
     private final String name;
 
     private final List<ActionTrigger> supportedTriggers;
@@ -41,16 +42,7 @@ public final class CreateActionRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private CreateActionRequestContent(
-            String name,
-            List<ActionTrigger> supportedTriggers,
-            Optional<String> code,
-            Optional<List<ActionVersionDependency>> dependencies,
-            Optional<String> runtime,
-            Optional<List<ActionSecretRequest>> secrets,
-            Optional<List<ActionModuleReference>> modules,
-            Optional<Boolean> deploy,
-            Map<String, Object> additionalProperties) {
+    private CreateActionRequestContent(String name, List<ActionTrigger> supportedTriggers, Optional<String> code, Optional<List<ActionVersionDependency>> dependencies, Optional<String> runtime, Optional<List<ActionSecretRequest>> secrets, Optional<List<ActionModuleReference>> modules, Optional<Boolean> deploy, Map<String, Object> additionalProperties) {
         this.name = name;
         this.supportedTriggers = supportedTriggers;
         this.code = code;
@@ -67,7 +59,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("name")
     public String getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -75,7 +67,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("supported_triggers")
     public List<ActionTrigger> getSupportedTriggers() {
-        return supportedTriggers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +75,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("code")
     public Optional<String> getCode() {
-        return code;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +83,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("dependencies")
     public Optional<List<ActionVersionDependency>> getDependencies() {
-        return dependencies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,7 +91,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("runtime")
     public Optional<String> getRuntime() {
-        return runtime;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -107,7 +99,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("secrets")
     public Optional<List<ActionSecretRequest>> getSecrets() {
-        return secrets;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -115,7 +107,7 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("modules")
     public Optional<List<ActionModuleReference>> getModules() {
-        return modules;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -123,54 +115,39 @@ public final class CreateActionRequestContent {
      */
     @JsonProperty("deploy")
     public Optional<Boolean> getDeploy() {
-        return deploy;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof CreateActionRequestContent && equalTo((CreateActionRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(CreateActionRequestContent other) {
-        return name.equals(other.name)
-                && supportedTriggers.equals(other.supportedTriggers)
-                && code.equals(other.code)
-                && dependencies.equals(other.dependencies)
-                && runtime.equals(other.runtime)
-                && secrets.equals(other.secrets)
-                && modules.equals(other.modules)
-                && deploy.equals(other.deploy);
+        return name.equals(other.name) && supportedTriggers.equals(other.supportedTriggers) && code.equals(other.code) && dependencies.equals(other.dependencies) && runtime.equals(other.runtime) && secrets.equals(other.secrets) && modules.equals(other.modules) && deploy.equals(other.deploy);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.name,
-                this.supportedTriggers,
-                this.code,
-                this.dependencies,
-                this.runtime,
-                this.secrets,
-                this.modules,
-                this.deploy);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static NameStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface NameStage {
+
         /**
          * <p>The name of an action.</p>
          */
@@ -180,6 +157,7 @@ public final class CreateActionRequestContent {
     }
 
     public interface _FinalStage {
+
         CreateActionRequestContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -240,6 +218,7 @@ public final class CreateActionRequestContent {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements NameStage, _FinalStage {
+
         private String name;
 
         private Optional<Boolean> deploy = Optional.empty();
@@ -259,19 +238,12 @@ public final class CreateActionRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(CreateActionRequestContent other) {
-            name(other.getName());
-            supportedTriggers(other.getSupportedTriggers());
-            code(other.getCode());
-            dependencies(other.getDependencies());
-            runtime(other.getRuntime());
-            secrets(other.getSecrets());
-            modules(other.getModules());
-            deploy(other.getDeploy());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -282,8 +254,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter("name")
         public _FinalStage name(@NotNull String name) {
-            this.name = Objects.requireNonNull(name, "name must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -292,8 +263,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage deploy(Boolean deploy) {
-            this.deploy = Optional.ofNullable(deploy);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -302,8 +272,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "deploy", nulls = Nulls.SKIP)
         public _FinalStage deploy(Optional<Boolean> deploy) {
-            this.deploy = deploy;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -312,8 +281,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage modules(List<ActionModuleReference> modules) {
-            this.modules = Optional.ofNullable(modules);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -322,8 +290,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "modules", nulls = Nulls.SKIP)
         public _FinalStage modules(Optional<List<ActionModuleReference>> modules) {
-            this.modules = modules;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -332,8 +299,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage secrets(List<ActionSecretRequest> secrets) {
-            this.secrets = Optional.ofNullable(secrets);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -342,8 +308,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "secrets", nulls = Nulls.SKIP)
         public _FinalStage secrets(Optional<List<ActionSecretRequest>> secrets) {
-            this.secrets = secrets;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -352,8 +317,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage runtime(String runtime) {
-            this.runtime = Optional.ofNullable(runtime);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -362,8 +326,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "runtime", nulls = Nulls.SKIP)
         public _FinalStage runtime(Optional<String> runtime) {
-            this.runtime = runtime;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -372,8 +335,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage dependencies(List<ActionVersionDependency> dependencies) {
-            this.dependencies = Optional.ofNullable(dependencies);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -382,8 +344,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "dependencies", nulls = Nulls.SKIP)
         public _FinalStage dependencies(Optional<List<ActionVersionDependency>> dependencies) {
-            this.dependencies = dependencies;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -392,8 +353,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage code(String code) {
-            this.code = Optional.ofNullable(code);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -402,8 +362,7 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "code", nulls = Nulls.SKIP)
         public _FinalStage code(Optional<String> code) {
-            this.code = code;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -412,10 +371,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage addAllSupportedTriggers(List<ActionTrigger> supportedTriggers) {
-            if (supportedTriggers != null) {
-                this.supportedTriggers.addAll(supportedTriggers);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -424,8 +380,7 @@ public final class CreateActionRequestContent {
          */
         @java.lang.Override
         public _FinalStage addSupportedTriggers(ActionTrigger supportedTriggers) {
-            this.supportedTriggers.add(supportedTriggers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -434,37 +389,22 @@ public final class CreateActionRequestContent {
         @java.lang.Override
         @JsonSetter(value = "supported_triggers", nulls = Nulls.SKIP)
         public _FinalStage supportedTriggers(List<ActionTrigger> supportedTriggers) {
-            this.supportedTriggers.clear();
-            if (supportedTriggers != null) {
-                this.supportedTriggers.addAll(supportedTriggers);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public CreateActionRequestContent build() {
-            return new CreateActionRequestContent(
-                    name,
-                    supportedTriggers,
-                    code,
-                    dependencies,
-                    runtime,
-                    secrets,
-                    modules,
-                    deploy,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

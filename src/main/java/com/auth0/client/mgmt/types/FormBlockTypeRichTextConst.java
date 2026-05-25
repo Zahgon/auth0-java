@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormBlockTypeRichTextConst {
-    public static final FormBlockTypeRichTextConst RICH_TEXT =
-            new FormBlockTypeRichTextConst(Value.RICH_TEXT, "RICH_TEXT");
+
+    public static final FormBlockTypeRichTextConst RICH_TEXT = new FormBlockTypeRichTextConst(Value.RICH_TEXT, "RICH_TEXT");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FormBlockTypeRichTextConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormBlockTypeRichTextConst
-                        && this.string.equals(((FormBlockTypeRichTextConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case RICH_TEXT:
-                return visitor.visitRichText();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormBlockTypeRichTextConst valueOf(String value) {
-        switch (value) {
-            case "RICH_TEXT":
-                return RICH_TEXT;
-            default:
-                return new FormBlockTypeRichTextConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        RICH_TEXT,
 
-        UNKNOWN
+        RICH_TEXT, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitRichText();
 
         T visitUnknown(String unknownType);

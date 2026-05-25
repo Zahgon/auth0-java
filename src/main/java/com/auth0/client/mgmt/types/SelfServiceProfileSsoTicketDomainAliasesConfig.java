@@ -22,16 +22,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketDomainAliasesConfig.Builder.class)
 public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
+
     private final SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification;
 
     private final Optional<List<String>> pendingDomains;
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketDomainAliasesConfig(
-            SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification,
-            Optional<List<String>> pendingDomains,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketDomainAliasesConfig(SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification, Optional<List<String>> pendingDomains, Map<String, Object> additionalProperties) {
         this.domainVerification = domainVerification;
         this.pendingDomains = pendingDomains;
         this.additionalProperties = additionalProperties;
@@ -39,7 +37,7 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
 
     @JsonProperty("domain_verification")
     public SelfServiceProfileSsoTicketDomainVerificationEnum getDomainVerification() {
-        return domainVerification;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -47,19 +45,17 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
      */
     @JsonProperty("pending_domains")
     public Optional<List<String>> getPendingDomains() {
-        return pendingDomains;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketDomainAliasesConfig
-                && equalTo((SelfServiceProfileSsoTicketDomainAliasesConfig) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketDomainAliasesConfig other) {
@@ -68,25 +64,27 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.domainVerification, this.pendingDomains);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static DomainVerificationStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface DomainVerificationStage {
+
         _FinalStage domainVerification(@NotNull SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification);
 
         Builder from(SelfServiceProfileSsoTicketDomainAliasesConfig other);
     }
 
     public interface _FinalStage {
+
         SelfServiceProfileSsoTicketDomainAliasesConfig build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -103,6 +101,7 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements DomainVerificationStage, _FinalStage {
+
         private SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification;
 
         private Optional<List<String>> pendingDomains = Optional.empty();
@@ -110,21 +109,18 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(SelfServiceProfileSsoTicketDomainAliasesConfig other) {
-            domainVerification(other.getDomainVerification());
-            pendingDomains(other.getPendingDomains());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("domain_verification")
-        public _FinalStage domainVerification(
-                @NotNull SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification) {
-            this.domainVerification = Objects.requireNonNull(domainVerification, "domainVerification must not be null");
-            return this;
+        public _FinalStage domainVerification(@NotNull SelfServiceProfileSsoTicketDomainVerificationEnum domainVerification) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,8 +129,7 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
          */
         @java.lang.Override
         public _FinalStage pendingDomains(List<String> pendingDomains) {
-            this.pendingDomains = Optional.ofNullable(pendingDomains);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -143,26 +138,22 @@ public final class SelfServiceProfileSsoTicketDomainAliasesConfig {
         @java.lang.Override
         @JsonSetter(value = "pending_domains", nulls = Nulls.SKIP)
         public _FinalStage pendingDomains(Optional<List<String>> pendingDomains) {
-            this.pendingDomains = pendingDomains;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public SelfServiceProfileSsoTicketDomainAliasesConfig build() {
-            return new SelfServiceProfileSsoTicketDomainAliasesConfig(
-                    domainVerification, pendingDomains, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

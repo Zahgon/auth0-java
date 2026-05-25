@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.SigningKeys;
 import java.util.List;
 
 public class SigningClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawSigningClient rawClient;
@@ -25,62 +26,62 @@ public class SigningClient {
      * Get responses with HTTP metadata like headers
      */
     public RawSigningClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the application signing keys associated with your tenant.
      */
     public List<SigningKeys> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of all the application signing keys associated with your tenant.
      */
     public List<SigningKeys> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotate the application signing key of your tenant.
      */
     public RotateSigningKeysResponseContent rotate() {
-        return this.rawClient.rotate().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Rotate the application signing key of your tenant.
      */
     public RotateSigningKeysResponseContent rotate(RequestOptions requestOptions) {
-        return this.rawClient.rotate(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the application signing key with the given ID.
      */
     public GetSigningKeysResponseContent get(String kid) {
-        return this.rawClient.get(kid).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve details of the application signing key with the given ID.
      */
     public GetSigningKeysResponseContent get(String kid, RequestOptions requestOptions) {
-        return this.rawClient.get(kid, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke the application signing key with the given ID.
      */
     public RevokedSigningKeysResponseContent revoke(String kid) {
-        return this.rawClient.revoke(kid).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Revoke the application signing key with the given ID.
      */
     public RevokedSigningKeysResponseContent revoke(String kid, RequestOptions requestOptions) {
-        return this.rawClient.revoke(kid, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

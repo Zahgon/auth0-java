@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class EventStreamStatusEnum {
+
     public static final EventStreamStatusEnum ENABLED = new EventStreamStatusEnum(Value.ENABLED, "enabled");
 
     public static final EventStreamStatusEnum DISABLED = new EventStreamStatusEnum(Value.DISABLED, "disabled");
@@ -21,60 +22,41 @@ public final class EventStreamStatusEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof EventStreamStatusEnum
-                        && this.string.equals(((EventStreamStatusEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case ENABLED:
-                return visitor.visitEnabled();
-            case DISABLED:
-                return visitor.visitDisabled();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static EventStreamStatusEnum valueOf(String value) {
-        switch (value) {
-            case "enabled":
-                return ENABLED;
-            case "disabled":
-                return DISABLED;
-            default:
-                return new EventStreamStatusEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        ENABLED,
 
-        DISABLED,
-
-        UNKNOWN
+        ENABLED, DISABLED, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEnabled();
 
         T visitDisabled();

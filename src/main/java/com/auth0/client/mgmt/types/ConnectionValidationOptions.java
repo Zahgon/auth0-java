@@ -23,12 +23,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionValidationOptions.Builder.class)
 public final class ConnectionValidationOptions {
+
     private final OptionalNullable<ConnectionUsernameValidationOptions> username;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionValidationOptions(
-            OptionalNullable<ConnectionUsernameValidationOptions> username, Map<String, Object> additionalProperties) {
+    private ConnectionValidationOptions(OptionalNullable<ConnectionUsernameValidationOptions> username, Map<String, Object> additionalProperties) {
         this.username = username;
         this.additionalProperties = additionalProperties;
     }
@@ -36,10 +36,7 @@ public final class ConnectionValidationOptions {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("username")
     public OptionalNullable<ConnectionUsernameValidationOptions> getUsername() {
-        if (username == null) {
-            return OptionalNullable.absent();
-        }
-        return username;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -50,13 +47,12 @@ public final class ConnectionValidationOptions {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionValidationOptions && equalTo((ConnectionValidationOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionValidationOptions other) {
@@ -65,75 +61,60 @@ public final class ConnectionValidationOptions {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.username);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<ConnectionUsernameValidationOptions> username = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionValidationOptions other) {
-            username(other.getUsername());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "username", nulls = Nulls.SKIP)
         public Builder username(@Nullable OptionalNullable<ConnectionUsernameValidationOptions> username) {
-            this.username = username;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(ConnectionUsernameValidationOptions username) {
-            this.username = OptionalNullable.of(username);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(Optional<ConnectionUsernameValidationOptions> username) {
-            if (username.isPresent()) {
-                this.username = OptionalNullable.of(username.get());
-            } else {
-                this.username = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder username(com.auth0.client.mgmt.core.Nullable<ConnectionUsernameValidationOptions> username) {
-            if (username.isNull()) {
-                this.username = OptionalNullable.ofNull();
-            } else if (username.isEmpty()) {
-                this.username = OptionalNullable.absent();
-            } else {
-                this.username = OptionalNullable.of(username.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionValidationOptions build() {
-            return new ConnectionValidationOptions(username, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

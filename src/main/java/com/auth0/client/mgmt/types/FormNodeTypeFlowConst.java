@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FormNodeTypeFlowConst {
+
     public static final FormNodeTypeFlowConst FLOW = new FormNodeTypeFlowConst(Value.FLOW, "FLOW");
 
     private final Value value;
@@ -19,54 +20,41 @@ public final class FormNodeTypeFlowConst {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FormNodeTypeFlowConst
-                        && this.string.equals(((FormNodeTypeFlowConst) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case FLOW:
-                return visitor.visitFlow();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FormNodeTypeFlowConst valueOf(String value) {
-        switch (value) {
-            case "FLOW":
-                return FLOW;
-            default:
-                return new FormNodeTypeFlowConst(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        FLOW,
 
-        UNKNOWN
+        FLOW, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitFlow();
 
         T visitUnknown(String unknownType);

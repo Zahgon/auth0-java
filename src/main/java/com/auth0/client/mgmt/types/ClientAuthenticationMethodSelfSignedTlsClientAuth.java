@@ -21,31 +21,29 @@ import java.util.Objects;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ClientAuthenticationMethodSelfSignedTlsClientAuth.Builder.class)
 public final class ClientAuthenticationMethodSelfSignedTlsClientAuth {
+
     private final List<CredentialId> credentials;
 
     private final Map<String, Object> additionalProperties;
 
-    private ClientAuthenticationMethodSelfSignedTlsClientAuth(
-            List<CredentialId> credentials, Map<String, Object> additionalProperties) {
+    private ClientAuthenticationMethodSelfSignedTlsClientAuth(List<CredentialId> credentials, Map<String, Object> additionalProperties) {
         this.credentials = credentials;
         this.additionalProperties = additionalProperties;
     }
 
     @JsonProperty("credentials")
     public List<CredentialId> getCredentials() {
-        return credentials;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ClientAuthenticationMethodSelfSignedTlsClientAuth
-                && equalTo((ClientAuthenticationMethodSelfSignedTlsClientAuth) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ClientAuthenticationMethodSelfSignedTlsClientAuth other) {
@@ -54,65 +52,56 @@ public final class ClientAuthenticationMethodSelfSignedTlsClientAuth {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.credentials);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<CredentialId> credentials = new ArrayList<>();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ClientAuthenticationMethodSelfSignedTlsClientAuth other) {
-            credentials(other.getCredentials());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "credentials", nulls = Nulls.SKIP)
         public Builder credentials(List<CredentialId> credentials) {
-            this.credentials.clear();
-            if (credentials != null) {
-                this.credentials.addAll(credentials);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addCredentials(CredentialId credentials) {
-            this.credentials.add(credentials);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllCredentials(List<CredentialId> credentials) {
-            if (credentials != null) {
-                this.credentials.addAll(credentials);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ClientAuthenticationMethodSelfSignedTlsClientAuth build() {
-            return new ClientAuthenticationMethodSelfSignedTlsClientAuth(credentials, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

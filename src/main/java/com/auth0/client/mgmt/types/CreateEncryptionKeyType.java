@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class CreateEncryptionKeyType {
-    public static final CreateEncryptionKeyType TENANT_ENCRYPTION_KEY =
-            new CreateEncryptionKeyType(Value.TENANT_ENCRYPTION_KEY, "tenant-encryption-key");
 
-    public static final CreateEncryptionKeyType CUSTOMER_PROVIDED_ROOT_KEY =
-            new CreateEncryptionKeyType(Value.CUSTOMER_PROVIDED_ROOT_KEY, "customer-provided-root-key");
+    public static final CreateEncryptionKeyType TENANT_ENCRYPTION_KEY = new CreateEncryptionKeyType(Value.TENANT_ENCRYPTION_KEY, "tenant-encryption-key");
+
+    public static final CreateEncryptionKeyType CUSTOMER_PROVIDED_ROOT_KEY = new CreateEncryptionKeyType(Value.CUSTOMER_PROVIDED_ROOT_KEY, "customer-provided-root-key");
 
     private final Value value;
 
@@ -23,60 +22,41 @@ public final class CreateEncryptionKeyType {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof CreateEncryptionKeyType
-                        && this.string.equals(((CreateEncryptionKeyType) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case TENANT_ENCRYPTION_KEY:
-                return visitor.visitTenantEncryptionKey();
-            case CUSTOMER_PROVIDED_ROOT_KEY:
-                return visitor.visitCustomerProvidedRootKey();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static CreateEncryptionKeyType valueOf(String value) {
-        switch (value) {
-            case "tenant-encryption-key":
-                return TENANT_ENCRYPTION_KEY;
-            case "customer-provided-root-key":
-                return CUSTOMER_PROVIDED_ROOT_KEY;
-            default:
-                return new CreateEncryptionKeyType(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        CUSTOMER_PROVIDED_ROOT_KEY,
 
-        TENANT_ENCRYPTION_KEY,
-
-        UNKNOWN
+        CUSTOMER_PROVIDED_ROOT_KEY, TENANT_ENCRYPTION_KEY, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitCustomerProvidedRootKey();
 
         T visitTenantEncryptionKey();

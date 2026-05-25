@@ -18,14 +18,14 @@ public class MfaChallengeResponse {
     private String oobCode;
 
     public String getChallengeType() {
-        return challengeType;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getBindingMethod() {
-        return bindingMethod;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getOobCode() {
-        return oobCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

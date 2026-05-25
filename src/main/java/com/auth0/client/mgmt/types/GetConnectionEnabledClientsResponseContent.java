@@ -22,14 +22,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetConnectionEnabledClientsResponseContent.Builder.class)
 public final class GetConnectionEnabledClientsResponseContent {
+
     private final List<ConnectionEnabledClient> clients;
 
     private final Optional<String> next;
 
     private final Map<String, Object> additionalProperties;
 
-    private GetConnectionEnabledClientsResponseContent(
-            List<ConnectionEnabledClient> clients, Optional<String> next, Map<String, Object> additionalProperties) {
+    private GetConnectionEnabledClientsResponseContent(List<ConnectionEnabledClient> clients, Optional<String> next, Map<String, Object> additionalProperties) {
         this.clients = clients;
         this.next = next;
         this.additionalProperties = additionalProperties;
@@ -40,7 +40,7 @@ public final class GetConnectionEnabledClientsResponseContent {
      */
     @JsonProperty("clients")
     public List<ConnectionEnabledClient> getClients() {
-        return clients;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -48,19 +48,17 @@ public final class GetConnectionEnabledClientsResponseContent {
      */
     @JsonProperty("next")
     public Optional<String> getNext() {
-        return next;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetConnectionEnabledClientsResponseContent
-                && equalTo((GetConnectionEnabledClientsResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetConnectionEnabledClientsResponseContent other) {
@@ -69,20 +67,21 @@ public final class GetConnectionEnabledClientsResponseContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.clients, this.next);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private List<ConnectionEnabledClient> clients = new ArrayList<>();
 
         private Optional<String> next = Optional.empty();
@@ -90,12 +89,11 @@ public final class GetConnectionEnabledClientsResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetConnectionEnabledClientsResponseContent other) {
-            clients(other.getClients());
-            next(other.getNext());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -103,23 +101,15 @@ public final class GetConnectionEnabledClientsResponseContent {
          */
         @JsonSetter(value = "clients", nulls = Nulls.SKIP)
         public Builder clients(List<ConnectionEnabledClient> clients) {
-            this.clients.clear();
-            if (clients != null) {
-                this.clients.addAll(clients);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addClients(ConnectionEnabledClient clients) {
-            this.clients.add(clients);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder addAllClients(List<ConnectionEnabledClient> clients) {
-            if (clients != null) {
-                this.clients.addAll(clients);
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -127,27 +117,23 @@ public final class GetConnectionEnabledClientsResponseContent {
          */
         @JsonSetter(value = "next", nulls = Nulls.SKIP)
         public Builder next(Optional<String> next) {
-            this.next = next;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder next(String next) {
-            this.next = Optional.ofNullable(next);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetConnectionEnabledClientsResponseContent build() {
-            return new GetConnectionEnabledClientsResponseContent(clients, next, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

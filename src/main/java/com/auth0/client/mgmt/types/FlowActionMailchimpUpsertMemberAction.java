@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class FlowActionMailchimpUpsertMemberAction {
-    public static final FlowActionMailchimpUpsertMemberAction UPSERT_MEMBER =
-            new FlowActionMailchimpUpsertMemberAction(Value.UPSERT_MEMBER, "UPSERT_MEMBER");
+
+    public static final FlowActionMailchimpUpsertMemberAction UPSERT_MEMBER = new FlowActionMailchimpUpsertMemberAction(Value.UPSERT_MEMBER, "UPSERT_MEMBER");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class FlowActionMailchimpUpsertMemberAction {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof FlowActionMailchimpUpsertMemberAction
-                        && this.string.equals(((FlowActionMailchimpUpsertMemberAction) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case UPSERT_MEMBER:
-                return visitor.visitUpsertMember();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static FlowActionMailchimpUpsertMemberAction valueOf(String value) {
-        switch (value) {
-            case "UPSERT_MEMBER":
-                return UPSERT_MEMBER;
-            default:
-                return new FlowActionMailchimpUpsertMemberAction(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        UPSERT_MEMBER,
 
-        UNKNOWN
+        UPSERT_MEMBER, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitUpsertMember();
 
         T visitUnknown(String unknownType);

@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetEncryptionKeyResponseContent.Builder.class)
 public final class GetEncryptionKeyResponseContent {
+
     private final String kid;
 
     private final EncryptionKeyType type;
@@ -41,15 +42,7 @@ public final class GetEncryptionKeyResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetEncryptionKeyResponseContent(
-            String kid,
-            EncryptionKeyType type,
-            EncryptionKeyState state,
-            OffsetDateTime createdAt,
-            OffsetDateTime updatedAt,
-            OptionalNullable<String> parentKid,
-            OptionalNullable<String> publicKey,
-            Map<String, Object> additionalProperties) {
+    private GetEncryptionKeyResponseContent(String kid, EncryptionKeyType type, EncryptionKeyState state, OffsetDateTime createdAt, OffsetDateTime updatedAt, OptionalNullable<String> parentKid, OptionalNullable<String> publicKey, Map<String, Object> additionalProperties) {
         this.kid = kid;
         this.type = type;
         this.state = state;
@@ -65,17 +58,17 @@ public final class GetEncryptionKeyResponseContent {
      */
     @JsonProperty("kid")
     public String getKid() {
-        return kid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("type")
     public EncryptionKeyType getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("state")
     public EncryptionKeyState getState() {
-        return state;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +76,7 @@ public final class GetEncryptionKeyResponseContent {
      */
     @JsonProperty("created_at")
     public OffsetDateTime getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +84,7 @@ public final class GetEncryptionKeyResponseContent {
      */
     @JsonProperty("updated_at")
     public OffsetDateTime getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,10 +93,7 @@ public final class GetEncryptionKeyResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("parent_kid")
     public OptionalNullable<String> getParentKid() {
-        if (parentKid == null) {
-            return OptionalNullable.absent();
-        }
-        return parentKid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,10 +102,7 @@ public final class GetEncryptionKeyResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("public_key")
     public OptionalNullable<String> getPublicKey() {
-        if (publicKey == null) {
-            return OptionalNullable.absent();
-        }
-        return publicKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -132,41 +119,34 @@ public final class GetEncryptionKeyResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetEncryptionKeyResponseContent && equalTo((GetEncryptionKeyResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetEncryptionKeyResponseContent other) {
-        return kid.equals(other.kid)
-                && type.equals(other.type)
-                && state.equals(other.state)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt)
-                && parentKid.equals(other.parentKid)
-                && publicKey.equals(other.publicKey);
+        return kid.equals(other.kid) && type.equals(other.type) && state.equals(other.state) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt) && parentKid.equals(other.parentKid) && publicKey.equals(other.publicKey);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.kid, this.type, this.state, this.createdAt, this.updatedAt, this.parentKid, this.publicKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static KidStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface KidStage {
+
         /**
          * <p>Key ID</p>
          */
@@ -176,14 +156,17 @@ public final class GetEncryptionKeyResponseContent {
     }
 
     public interface TypeStage {
+
         StateStage type(@NotNull EncryptionKeyType type);
     }
 
     public interface StateStage {
+
         CreatedAtStage state(@NotNull EncryptionKeyState state);
     }
 
     public interface CreatedAtStage {
+
         /**
          * <p>Key creation timestamp</p>
          */
@@ -191,6 +174,7 @@ public final class GetEncryptionKeyResponseContent {
     }
 
     public interface UpdatedAtStage {
+
         /**
          * <p>Key update timestamp</p>
          */
@@ -198,6 +182,7 @@ public final class GetEncryptionKeyResponseContent {
     }
 
     public interface _FinalStage {
+
         GetEncryptionKeyResponseContent build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -228,8 +213,8 @@ public final class GetEncryptionKeyResponseContent {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements KidStage, TypeStage, StateStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+    public static final class Builder implements KidStage, TypeStage, StateStage, CreatedAtStage, UpdatedAtStage, _FinalStage {
+
         private String kid;
 
         private EncryptionKeyType type;
@@ -247,18 +232,12 @@ public final class GetEncryptionKeyResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(GetEncryptionKeyResponseContent other) {
-            kid(other.getKid());
-            type(other.getType());
-            state(other.getState());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            parentKid(other.getParentKid());
-            publicKey(other.getPublicKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -269,22 +248,19 @@ public final class GetEncryptionKeyResponseContent {
         @java.lang.Override
         @JsonSetter("kid")
         public TypeStage kid(@NotNull String kid) {
-            this.kid = Objects.requireNonNull(kid, "kid must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("type")
         public StateStage type(@NotNull EncryptionKeyType type) {
-            this.type = Objects.requireNonNull(type, "type must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("state")
         public CreatedAtStage state(@NotNull EncryptionKeyState state) {
-            this.state = Objects.requireNonNull(state, "state must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,8 +271,7 @@ public final class GetEncryptionKeyResponseContent {
         @java.lang.Override
         @JsonSetter("created_at")
         public UpdatedAtStage createdAt(@NotNull OffsetDateTime createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt, "createdAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -307,8 +282,7 @@ public final class GetEncryptionKeyResponseContent {
         @java.lang.Override
         @JsonSetter("updated_at")
         public _FinalStage updatedAt(@NotNull OffsetDateTime updatedAt) {
-            this.updatedAt = Objects.requireNonNull(updatedAt, "updatedAt must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -317,14 +291,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage publicKey(com.auth0.client.mgmt.core.Nullable<String> publicKey) {
-            if (publicKey.isNull()) {
-                this.publicKey = OptionalNullable.ofNull();
-            } else if (publicKey.isEmpty()) {
-                this.publicKey = OptionalNullable.absent();
-            } else {
-                this.publicKey = OptionalNullable.of(publicKey.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -333,12 +300,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage publicKey(Optional<String> publicKey) {
-            if (publicKey.isPresent()) {
-                this.publicKey = OptionalNullable.of(publicKey.get());
-            } else {
-                this.publicKey = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -347,8 +309,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage publicKey(String publicKey) {
-            this.publicKey = OptionalNullable.of(publicKey);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -357,8 +318,7 @@ public final class GetEncryptionKeyResponseContent {
         @java.lang.Override
         @JsonSetter(value = "public_key", nulls = Nulls.SKIP)
         public _FinalStage publicKey(@Nullable OptionalNullable<String> publicKey) {
-            this.publicKey = publicKey;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -367,14 +327,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage parentKid(com.auth0.client.mgmt.core.Nullable<String> parentKid) {
-            if (parentKid.isNull()) {
-                this.parentKid = OptionalNullable.ofNull();
-            } else if (parentKid.isEmpty()) {
-                this.parentKid = OptionalNullable.absent();
-            } else {
-                this.parentKid = OptionalNullable.of(parentKid.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -383,12 +336,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage parentKid(Optional<String> parentKid) {
-            if (parentKid.isPresent()) {
-                this.parentKid = OptionalNullable.of(parentKid.get());
-            } else {
-                this.parentKid = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -397,8 +345,7 @@ public final class GetEncryptionKeyResponseContent {
          */
         @java.lang.Override
         public _FinalStage parentKid(String parentKid) {
-            this.parentKid = OptionalNullable.of(parentKid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -407,26 +354,22 @@ public final class GetEncryptionKeyResponseContent {
         @java.lang.Override
         @JsonSetter(value = "parent_kid", nulls = Nulls.SKIP)
         public _FinalStage parentKid(@Nullable OptionalNullable<String> parentKid) {
-            this.parentKid = parentKid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public GetEncryptionKeyResponseContent build() {
-            return new GetEncryptionKeyResponseContent(
-                    kid, type, state, createdAt, updatedAt, parentKid, publicKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

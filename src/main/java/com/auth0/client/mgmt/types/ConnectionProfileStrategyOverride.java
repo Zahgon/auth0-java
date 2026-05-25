@@ -21,16 +21,14 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionProfileStrategyOverride.Builder.class)
 public final class ConnectionProfileStrategyOverride {
+
     private final Optional<List<EnabledFeaturesEnum>> enabledFeatures;
 
     private final Optional<ConnectionProfileStrategyOverridesConnectionConfig> connectionConfig;
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionProfileStrategyOverride(
-            Optional<List<EnabledFeaturesEnum>> enabledFeatures,
-            Optional<ConnectionProfileStrategyOverridesConnectionConfig> connectionConfig,
-            Map<String, Object> additionalProperties) {
+    private ConnectionProfileStrategyOverride(Optional<List<EnabledFeaturesEnum>> enabledFeatures, Optional<ConnectionProfileStrategyOverridesConnectionConfig> connectionConfig, Map<String, Object> additionalProperties) {
         this.enabledFeatures = enabledFeatures;
         this.connectionConfig = connectionConfig;
         this.additionalProperties = additionalProperties;
@@ -38,23 +36,22 @@ public final class ConnectionProfileStrategyOverride {
 
     @JsonProperty("enabled_features")
     public Optional<List<EnabledFeaturesEnum>> getEnabledFeatures() {
-        return enabledFeatures;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection_config")
     public Optional<ConnectionProfileStrategyOverridesConnectionConfig> getConnectionConfig() {
-        return connectionConfig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionProfileStrategyOverride && equalTo((ConnectionProfileStrategyOverride) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionProfileStrategyOverride other) {
@@ -63,20 +60,21 @@ public final class ConnectionProfileStrategyOverride {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabledFeatures, this.connectionConfig);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<List<EnabledFeaturesEnum>> enabledFeatures = Optional.empty();
 
         private Optional<ConnectionProfileStrategyOverridesConnectionConfig> connectionConfig = Optional.empty();
@@ -84,48 +82,41 @@ public final class ConnectionProfileStrategyOverride {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ConnectionProfileStrategyOverride other) {
-            enabledFeatures(other.getEnabledFeatures());
-            connectionConfig(other.getConnectionConfig());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "enabled_features", nulls = Nulls.SKIP)
         public Builder enabledFeatures(Optional<List<EnabledFeaturesEnum>> enabledFeatures) {
-            this.enabledFeatures = enabledFeatures;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabledFeatures(List<EnabledFeaturesEnum> enabledFeatures) {
-            this.enabledFeatures = Optional.ofNullable(enabledFeatures);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "connection_config", nulls = Nulls.SKIP)
         public Builder connectionConfig(Optional<ConnectionProfileStrategyOverridesConnectionConfig> connectionConfig) {
-            this.connectionConfig = connectionConfig;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionConfig(ConnectionProfileStrategyOverridesConnectionConfig connectionConfig) {
-            this.connectionConfig = Optional.ofNullable(connectionConfig);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ConnectionProfileStrategyOverride build() {
-            return new ConnectionProfileStrategyOverride(enabledFeatures, connectionConfig, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

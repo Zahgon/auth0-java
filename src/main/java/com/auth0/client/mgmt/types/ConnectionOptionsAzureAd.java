@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ConnectionOptionsAzureAd.Builder.class)
 public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon {
+
     private final Optional<List<String>> nonPersistentAttrs;
 
     private final Optional<Boolean> apiEnableUsers;
@@ -151,8 +152,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
     private final Optional<List<String>> thumbprints;
 
-    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            upstreamParams;
+    private final OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams;
 
     private final Optional<Boolean> useWsfed;
 
@@ -164,76 +164,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
     private final Map<String, Object> additionalProperties;
 
-    private ConnectionOptionsAzureAd(
-            Optional<List<String>> nonPersistentAttrs,
-            Optional<Boolean> apiEnableUsers,
-            Optional<String> appDomain,
-            Optional<String> appId,
-            Optional<Boolean> basicProfile,
-            String clientId,
-            Optional<String> clientSecret,
-            Optional<List<String>> domainAliases,
-            Optional<Boolean> extAccessToken,
-            Optional<Boolean> extAccountEnabled,
-            Optional<Boolean> extAdmin,
-            Optional<Boolean> extAgreedTerms,
-            Optional<Boolean> extAssignedLicenses,
-            Optional<Boolean> extAssignedPlans,
-            Optional<Boolean> extAzureId,
-            Optional<Boolean> extCity,
-            Optional<Boolean> extCountry,
-            Optional<Boolean> extDepartment,
-            Optional<Boolean> extDirSyncEnabled,
-            Optional<Boolean> extEmail,
-            Optional<Boolean> extExpiresIn,
-            Optional<Boolean> extFamilyName,
-            Optional<Boolean> extFax,
-            Optional<Boolean> extGivenName,
-            Optional<Boolean> extGroupIds,
-            Optional<Boolean> extGroups,
-            Optional<Boolean> extIsSuspended,
-            Optional<Boolean> extJobTitle,
-            Optional<Boolean> extLastSync,
-            Optional<Boolean> extMobile,
-            Optional<Boolean> extName,
-            Optional<Boolean> extNestedGroups,
-            Optional<Boolean> extNickname,
-            Optional<Boolean> extOid,
-            Optional<Boolean> extPhone,
-            Optional<Boolean> extPhysicalDeliveryOfficeName,
-            Optional<Boolean> extPostalCode,
-            Optional<Boolean> extPreferredLanguage,
-            Optional<Boolean> extProfile,
-            Optional<Boolean> extProvisionedPlans,
-            Optional<Boolean> extProvisioningErrors,
-            Optional<Boolean> extProxyAddresses,
-            Optional<Boolean> extPuid,
-            Optional<Boolean> extRefreshToken,
-            Optional<Boolean> extRoles,
-            Optional<Boolean> extState,
-            Optional<Boolean> extStreet,
-            Optional<Boolean> extTelephoneNumber,
-            Optional<Boolean> extTenantid,
-            Optional<Boolean> extUpn,
-            Optional<Boolean> extUsageLocation,
-            Optional<Boolean> extUserId,
-            OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens,
-            Optional<Boolean> granted,
-            Optional<String> iconUrl,
-            Optional<ConnectionIdentityApiEnumAzureAd> identityApi,
-            Optional<String> maxGroupsToRetrieve,
-            Optional<List<String>> scope,
-            Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes,
-            Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection,
-            Optional<String> tenantDomain,
-            Optional<String> tenantId,
-            Optional<List<String>> thumbprints,
-            OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams,
-            Optional<Boolean> useWsfed,
-            Optional<Boolean> useCommonEndpoint,
-            Optional<ConnectionUseridAttributeEnumAzureAd> useridAttribute,
-            Optional<ConnectionWaadProtocolEnumAzureAd> waadProtocol,
-            Map<String, Object> additionalProperties) {
+    private ConnectionOptionsAzureAd(Optional<List<String>> nonPersistentAttrs, Optional<Boolean> apiEnableUsers, Optional<String> appDomain, Optional<String> appId, Optional<Boolean> basicProfile, String clientId, Optional<String> clientSecret, Optional<List<String>> domainAliases, Optional<Boolean> extAccessToken, Optional<Boolean> extAccountEnabled, Optional<Boolean> extAdmin, Optional<Boolean> extAgreedTerms, Optional<Boolean> extAssignedLicenses, Optional<Boolean> extAssignedPlans, Optional<Boolean> extAzureId, Optional<Boolean> extCity, Optional<Boolean> extCountry, Optional<Boolean> extDepartment, Optional<Boolean> extDirSyncEnabled, Optional<Boolean> extEmail, Optional<Boolean> extExpiresIn, Optional<Boolean> extFamilyName, Optional<Boolean> extFax, Optional<Boolean> extGivenName, Optional<Boolean> extGroupIds, Optional<Boolean> extGroups, Optional<Boolean> extIsSuspended, Optional<Boolean> extJobTitle, Optional<Boolean> extLastSync, Optional<Boolean> extMobile, Optional<Boolean> extName, Optional<Boolean> extNestedGroups, Optional<Boolean> extNickname, Optional<Boolean> extOid, Optional<Boolean> extPhone, Optional<Boolean> extPhysicalDeliveryOfficeName, Optional<Boolean> extPostalCode, Optional<Boolean> extPreferredLanguage, Optional<Boolean> extProfile, Optional<Boolean> extProvisionedPlans, Optional<Boolean> extProvisioningErrors, Optional<Boolean> extProxyAddresses, Optional<Boolean> extPuid, Optional<Boolean> extRefreshToken, Optional<Boolean> extRoles, Optional<Boolean> extState, Optional<Boolean> extStreet, Optional<Boolean> extTelephoneNumber, Optional<Boolean> extTenantid, Optional<Boolean> extUpn, Optional<Boolean> extUsageLocation, Optional<Boolean> extUserId, OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens, Optional<Boolean> granted, Optional<String> iconUrl, Optional<ConnectionIdentityApiEnumAzureAd> identityApi, Optional<String> maxGroupsToRetrieve, Optional<List<String>> scope, Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes, Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection, Optional<String> tenantDomain, Optional<String> tenantId, Optional<List<String>> thumbprints, OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams, Optional<Boolean> useWsfed, Optional<Boolean> useCommonEndpoint, Optional<ConnectionUseridAttributeEnumAzureAd> useridAttribute, Optional<ConnectionWaadProtocolEnumAzureAd> waadProtocol, Map<String, Object> additionalProperties) {
         this.nonPersistentAttrs = nonPersistentAttrs;
         this.apiEnableUsers = apiEnableUsers;
         this.appDomain = appDomain;
@@ -308,7 +239,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
     @JsonProperty("non_persistent_attrs")
     @java.lang.Override
     public Optional<List<String>> getNonPersistentAttrs() {
-        return nonPersistentAttrs;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -316,12 +247,12 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("api_enable_users")
     public Optional<Boolean> getApiEnableUsers() {
-        return apiEnableUsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("app_domain")
     public Optional<String> getAppDomain() {
-        return appDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -329,7 +260,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("app_id")
     public Optional<String> getAppId() {
-        return appId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -337,22 +268,22 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("basic_profile")
     public Optional<Boolean> getBasicProfile() {
-        return basicProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_id")
     public String getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_secret")
     public Optional<String> getClientSecret() {
-        return clientSecret;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("domain_aliases")
     public Optional<List<String>> getDomainAliases() {
-        return domainAliases;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -360,7 +291,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_access_token")
     public Optional<Boolean> getExtAccessToken() {
-        return extAccessToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -368,17 +299,17 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_account_enabled")
     public Optional<Boolean> getExtAccountEnabled() {
-        return extAccountEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_admin")
     public Optional<Boolean> getExtAdmin() {
-        return extAdmin;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_agreed_terms")
     public Optional<Boolean> getExtAgreedTerms() {
-        return extAgreedTerms;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -386,12 +317,12 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_assigned_licenses")
     public Optional<Boolean> getExtAssignedLicenses() {
-        return extAssignedLicenses;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_assigned_plans")
     public Optional<Boolean> getExtAssignedPlans() {
-        return extAssignedPlans;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -399,7 +330,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_azure_id")
     public Optional<Boolean> getExtAzureId() {
-        return extAzureId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -407,7 +338,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_city")
     public Optional<Boolean> getExtCity() {
-        return extCity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -415,7 +346,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_country")
     public Optional<Boolean> getExtCountry() {
-        return extCountry;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -423,7 +354,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_department")
     public Optional<Boolean> getExtDepartment() {
-        return extDepartment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -431,7 +362,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_dir_sync_enabled")
     public Optional<Boolean> getExtDirSyncEnabled() {
-        return extDirSyncEnabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -439,7 +370,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_email")
     public Optional<Boolean> getExtEmail() {
-        return extEmail;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -447,7 +378,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_expires_in")
     public Optional<Boolean> getExtExpiresIn() {
-        return extExpiresIn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -455,7 +386,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_family_name")
     public Optional<Boolean> getExtFamilyName() {
-        return extFamilyName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -463,7 +394,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_fax")
     public Optional<Boolean> getExtFax() {
-        return extFax;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -471,7 +402,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_given_name")
     public Optional<Boolean> getExtGivenName() {
-        return extGivenName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -479,17 +410,17 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_group_ids")
     public Optional<Boolean> getExtGroupIds() {
-        return extGroupIds;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_groups")
     public Optional<Boolean> getExtGroups() {
-        return extGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_is_suspended")
     public Optional<Boolean> getExtIsSuspended() {
-        return extIsSuspended;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -497,7 +428,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_job_title")
     public Optional<Boolean> getExtJobTitle() {
-        return extJobTitle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -505,7 +436,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_last_sync")
     public Optional<Boolean> getExtLastSync() {
-        return extLastSync;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -513,7 +444,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_mobile")
     public Optional<Boolean> getExtMobile() {
-        return extMobile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -521,7 +452,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_name")
     public Optional<Boolean> getExtName() {
-        return extName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -529,7 +460,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_nested_groups")
     public Optional<Boolean> getExtNestedGroups() {
-        return extNestedGroups;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -537,7 +468,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_nickname")
     public Optional<Boolean> getExtNickname() {
-        return extNickname;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -545,7 +476,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_oid")
     public Optional<Boolean> getExtOid() {
-        return extOid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -553,7 +484,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_phone")
     public Optional<Boolean> getExtPhone() {
-        return extPhone;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -561,7 +492,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_physical_delivery_office_name")
     public Optional<Boolean> getExtPhysicalDeliveryOfficeName() {
-        return extPhysicalDeliveryOfficeName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -569,7 +500,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_postal_code")
     public Optional<Boolean> getExtPostalCode() {
-        return extPostalCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -577,12 +508,12 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_preferred_language")
     public Optional<Boolean> getExtPreferredLanguage() {
-        return extPreferredLanguage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("ext_profile")
     public Optional<Boolean> getExtProfile() {
-        return extProfile;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -590,7 +521,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_provisioned_plans")
     public Optional<Boolean> getExtProvisionedPlans() {
-        return extProvisionedPlans;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -598,7 +529,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_provisioning_errors")
     public Optional<Boolean> getExtProvisioningErrors() {
-        return extProvisioningErrors;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -606,7 +537,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_proxy_addresses")
     public Optional<Boolean> getExtProxyAddresses() {
-        return extProxyAddresses;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -614,7 +545,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_puid")
     public Optional<Boolean> getExtPuid() {
-        return extPuid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -622,7 +553,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_refresh_token")
     public Optional<Boolean> getExtRefreshToken() {
-        return extRefreshToken;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -630,7 +561,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_roles")
     public Optional<Boolean> getExtRoles() {
-        return extRoles;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -638,7 +569,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_state")
     public Optional<Boolean> getExtState() {
-        return extState;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -646,7 +577,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_street")
     public Optional<Boolean> getExtStreet() {
-        return extStreet;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -654,7 +585,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_telephoneNumber")
     public Optional<Boolean> getExtTelephoneNumber() {
-        return extTelephoneNumber;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -662,7 +593,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_tenantid")
     public Optional<Boolean> getExtTenantid() {
-        return extTenantid;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -670,7 +601,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_upn")
     public Optional<Boolean> getExtUpn() {
-        return extUpn;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -678,7 +609,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_usage_location")
     public Optional<Boolean> getExtUsageLocation() {
-        return extUsageLocation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -686,16 +617,13 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("ext_user_id")
     public Optional<Boolean> getExtUserId() {
-        return extUserId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("federated_connections_access_tokens")
     public OptionalNullable<ConnectionFederatedConnectionsAccessTokens> getFederatedConnectionsAccessTokens() {
-        if (federatedConnectionsAccessTokens == null) {
-            return OptionalNullable.absent();
-        }
-        return federatedConnectionsAccessTokens;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -703,61 +631,58 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("granted")
     public Optional<Boolean> getGranted() {
-        return granted;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("icon_url")
     public Optional<String> getIconUrl() {
-        return iconUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("identity_api")
     public Optional<ConnectionIdentityApiEnumAzureAd> getIdentityApi() {
-        return identityApi;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("max_groups_to_retrieve")
     public Optional<String> getMaxGroupsToRetrieve() {
-        return maxGroupsToRetrieve;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("scope")
     public Optional<List<String>> getScope() {
-        return scope;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("set_user_root_attributes")
     public Optional<ConnectionSetUserRootAttributesEnum> getSetUserRootAttributes() {
-        return setUserRootAttributes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("should_trust_email_verified_connection")
     public Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> getShouldTrustEmailVerifiedConnection() {
-        return shouldTrustEmailVerifiedConnection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenant_domain")
     public Optional<String> getTenantDomain() {
-        return tenantDomain;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("tenantId")
     public Optional<String> getTenantId() {
-        return tenantId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("thumbprints")
     public Optional<List<String>> getThumbprints() {
-        return thumbprints;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
     public OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> getUpstreamParams() {
-        if (upstreamParams == null) {
-            return OptionalNullable.absent();
-        }
-        return upstreamParams;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -765,22 +690,22 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
      */
     @JsonProperty("use_wsfed")
     public Optional<Boolean> getUseWsfed() {
-        return useWsfed;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("useCommonEndpoint")
     public Optional<Boolean> getUseCommonEndpoint() {
-        return useCommonEndpoint;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("userid_attribute")
     public Optional<ConnectionUseridAttributeEnumAzureAd> getUseridAttribute() {
-        return useridAttribute;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("waad_protocol")
     public Optional<ConnectionWaadProtocolEnumAzureAd> getWaadProtocol() {
-        return waadProtocol;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -791,182 +716,47 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("upstream_params")
-    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-            _getUpstreamParams() {
+    private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> _getUpstreamParams() {
         return upstreamParams;
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ConnectionOptionsAzureAd && equalTo((ConnectionOptionsAzureAd) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ConnectionOptionsAzureAd other) {
-        return nonPersistentAttrs.equals(other.nonPersistentAttrs)
-                && apiEnableUsers.equals(other.apiEnableUsers)
-                && appDomain.equals(other.appDomain)
-                && appId.equals(other.appId)
-                && basicProfile.equals(other.basicProfile)
-                && clientId.equals(other.clientId)
-                && clientSecret.equals(other.clientSecret)
-                && domainAliases.equals(other.domainAliases)
-                && extAccessToken.equals(other.extAccessToken)
-                && extAccountEnabled.equals(other.extAccountEnabled)
-                && extAdmin.equals(other.extAdmin)
-                && extAgreedTerms.equals(other.extAgreedTerms)
-                && extAssignedLicenses.equals(other.extAssignedLicenses)
-                && extAssignedPlans.equals(other.extAssignedPlans)
-                && extAzureId.equals(other.extAzureId)
-                && extCity.equals(other.extCity)
-                && extCountry.equals(other.extCountry)
-                && extDepartment.equals(other.extDepartment)
-                && extDirSyncEnabled.equals(other.extDirSyncEnabled)
-                && extEmail.equals(other.extEmail)
-                && extExpiresIn.equals(other.extExpiresIn)
-                && extFamilyName.equals(other.extFamilyName)
-                && extFax.equals(other.extFax)
-                && extGivenName.equals(other.extGivenName)
-                && extGroupIds.equals(other.extGroupIds)
-                && extGroups.equals(other.extGroups)
-                && extIsSuspended.equals(other.extIsSuspended)
-                && extJobTitle.equals(other.extJobTitle)
-                && extLastSync.equals(other.extLastSync)
-                && extMobile.equals(other.extMobile)
-                && extName.equals(other.extName)
-                && extNestedGroups.equals(other.extNestedGroups)
-                && extNickname.equals(other.extNickname)
-                && extOid.equals(other.extOid)
-                && extPhone.equals(other.extPhone)
-                && extPhysicalDeliveryOfficeName.equals(other.extPhysicalDeliveryOfficeName)
-                && extPostalCode.equals(other.extPostalCode)
-                && extPreferredLanguage.equals(other.extPreferredLanguage)
-                && extProfile.equals(other.extProfile)
-                && extProvisionedPlans.equals(other.extProvisionedPlans)
-                && extProvisioningErrors.equals(other.extProvisioningErrors)
-                && extProxyAddresses.equals(other.extProxyAddresses)
-                && extPuid.equals(other.extPuid)
-                && extRefreshToken.equals(other.extRefreshToken)
-                && extRoles.equals(other.extRoles)
-                && extState.equals(other.extState)
-                && extStreet.equals(other.extStreet)
-                && extTelephoneNumber.equals(other.extTelephoneNumber)
-                && extTenantid.equals(other.extTenantid)
-                && extUpn.equals(other.extUpn)
-                && extUsageLocation.equals(other.extUsageLocation)
-                && extUserId.equals(other.extUserId)
-                && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens)
-                && granted.equals(other.granted)
-                && iconUrl.equals(other.iconUrl)
-                && identityApi.equals(other.identityApi)
-                && maxGroupsToRetrieve.equals(other.maxGroupsToRetrieve)
-                && scope.equals(other.scope)
-                && setUserRootAttributes.equals(other.setUserRootAttributes)
-                && shouldTrustEmailVerifiedConnection.equals(other.shouldTrustEmailVerifiedConnection)
-                && tenantDomain.equals(other.tenantDomain)
-                && tenantId.equals(other.tenantId)
-                && thumbprints.equals(other.thumbprints)
-                && upstreamParams.equals(other.upstreamParams)
-                && useWsfed.equals(other.useWsfed)
-                && useCommonEndpoint.equals(other.useCommonEndpoint)
-                && useridAttribute.equals(other.useridAttribute)
-                && waadProtocol.equals(other.waadProtocol);
+        return nonPersistentAttrs.equals(other.nonPersistentAttrs) && apiEnableUsers.equals(other.apiEnableUsers) && appDomain.equals(other.appDomain) && appId.equals(other.appId) && basicProfile.equals(other.basicProfile) && clientId.equals(other.clientId) && clientSecret.equals(other.clientSecret) && domainAliases.equals(other.domainAliases) && extAccessToken.equals(other.extAccessToken) && extAccountEnabled.equals(other.extAccountEnabled) && extAdmin.equals(other.extAdmin) && extAgreedTerms.equals(other.extAgreedTerms) && extAssignedLicenses.equals(other.extAssignedLicenses) && extAssignedPlans.equals(other.extAssignedPlans) && extAzureId.equals(other.extAzureId) && extCity.equals(other.extCity) && extCountry.equals(other.extCountry) && extDepartment.equals(other.extDepartment) && extDirSyncEnabled.equals(other.extDirSyncEnabled) && extEmail.equals(other.extEmail) && extExpiresIn.equals(other.extExpiresIn) && extFamilyName.equals(other.extFamilyName) && extFax.equals(other.extFax) && extGivenName.equals(other.extGivenName) && extGroupIds.equals(other.extGroupIds) && extGroups.equals(other.extGroups) && extIsSuspended.equals(other.extIsSuspended) && extJobTitle.equals(other.extJobTitle) && extLastSync.equals(other.extLastSync) && extMobile.equals(other.extMobile) && extName.equals(other.extName) && extNestedGroups.equals(other.extNestedGroups) && extNickname.equals(other.extNickname) && extOid.equals(other.extOid) && extPhone.equals(other.extPhone) && extPhysicalDeliveryOfficeName.equals(other.extPhysicalDeliveryOfficeName) && extPostalCode.equals(other.extPostalCode) && extPreferredLanguage.equals(other.extPreferredLanguage) && extProfile.equals(other.extProfile) && extProvisionedPlans.equals(other.extProvisionedPlans) && extProvisioningErrors.equals(other.extProvisioningErrors) && extProxyAddresses.equals(other.extProxyAddresses) && extPuid.equals(other.extPuid) && extRefreshToken.equals(other.extRefreshToken) && extRoles.equals(other.extRoles) && extState.equals(other.extState) && extStreet.equals(other.extStreet) && extTelephoneNumber.equals(other.extTelephoneNumber) && extTenantid.equals(other.extTenantid) && extUpn.equals(other.extUpn) && extUsageLocation.equals(other.extUsageLocation) && extUserId.equals(other.extUserId) && federatedConnectionsAccessTokens.equals(other.federatedConnectionsAccessTokens) && granted.equals(other.granted) && iconUrl.equals(other.iconUrl) && identityApi.equals(other.identityApi) && maxGroupsToRetrieve.equals(other.maxGroupsToRetrieve) && scope.equals(other.scope) && setUserRootAttributes.equals(other.setUserRootAttributes) && shouldTrustEmailVerifiedConnection.equals(other.shouldTrustEmailVerifiedConnection) && tenantDomain.equals(other.tenantDomain) && tenantId.equals(other.tenantId) && thumbprints.equals(other.thumbprints) && upstreamParams.equals(other.upstreamParams) && useWsfed.equals(other.useWsfed) && useCommonEndpoint.equals(other.useCommonEndpoint) && useridAttribute.equals(other.useridAttribute) && waadProtocol.equals(other.waadProtocol);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.nonPersistentAttrs,
-                this.apiEnableUsers,
-                this.appDomain,
-                this.appId,
-                this.basicProfile,
-                this.clientId,
-                this.clientSecret,
-                this.domainAliases,
-                this.extAccessToken,
-                this.extAccountEnabled,
-                this.extAdmin,
-                this.extAgreedTerms,
-                this.extAssignedLicenses,
-                this.extAssignedPlans,
-                this.extAzureId,
-                this.extCity,
-                this.extCountry,
-                this.extDepartment,
-                this.extDirSyncEnabled,
-                this.extEmail,
-                this.extExpiresIn,
-                this.extFamilyName,
-                this.extFax,
-                this.extGivenName,
-                this.extGroupIds,
-                this.extGroups,
-                this.extIsSuspended,
-                this.extJobTitle,
-                this.extLastSync,
-                this.extMobile,
-                this.extName,
-                this.extNestedGroups,
-                this.extNickname,
-                this.extOid,
-                this.extPhone,
-                this.extPhysicalDeliveryOfficeName,
-                this.extPostalCode,
-                this.extPreferredLanguage,
-                this.extProfile,
-                this.extProvisionedPlans,
-                this.extProvisioningErrors,
-                this.extProxyAddresses,
-                this.extPuid,
-                this.extRefreshToken,
-                this.extRoles,
-                this.extState,
-                this.extStreet,
-                this.extTelephoneNumber,
-                this.extTenantid,
-                this.extUpn,
-                this.extUsageLocation,
-                this.extUserId,
-                this.federatedConnectionsAccessTokens,
-                this.granted,
-                this.iconUrl,
-                this.identityApi,
-                this.maxGroupsToRetrieve,
-                this.scope,
-                this.setUserRootAttributes,
-                this.shouldTrustEmailVerifiedConnection,
-                this.tenantDomain,
-                this.tenantId,
-                this.thumbprints,
-                this.upstreamParams,
-                this.useWsfed,
-                this.useCommonEndpoint,
-                this.useridAttribute,
-                this.waadProtocol);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ClientIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ClientIdStage {
+
         _FinalStage clientId(@NotNull String clientId);
 
         Builder from(ConnectionOptionsAzureAd other);
     }
 
     public interface _FinalStage {
+
         ConnectionOptionsAzureAd build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -1300,19 +1090,13 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         _FinalStage extUserId(Boolean extUserId);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
-        _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens);
+        _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens);
 
         /**
          * <p>Indicates whether admin consent has been granted for the required Azure AD permissions. Read-only status field managed by Auth0 during the OAuth authorization flow.</p>
@@ -1341,11 +1125,9 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         _FinalStage setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes);
 
-        _FinalStage shouldTrustEmailVerifiedConnection(
-                Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection);
+        _FinalStage shouldTrustEmailVerifiedConnection(Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection);
 
-        _FinalStage shouldTrustEmailVerifiedConnection(
-                ConnectionShouldTrustEmailVerifiedConnectionEnum shouldTrustEmailVerifiedConnection);
+        _FinalStage shouldTrustEmailVerifiedConnection(ConnectionShouldTrustEmailVerifiedConnectionEnum shouldTrustEmailVerifiedConnection);
 
         _FinalStage tenantDomain(Optional<String> tenantDomain);
 
@@ -1359,21 +1141,13 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         _FinalStage thumbprints(List<String> thumbprints);
 
-        _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams);
+        _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
+        _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
+        _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
-        _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams);
+        _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams);
 
         /**
          * <p>Indicates WS-Federation protocol usage. When true, uses WS-Federation; when false, uses OpenID Connect.</p>
@@ -1397,6 +1171,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ClientIdStage, _FinalStage {
+
         private String clientId;
 
         private Optional<ConnectionWaadProtocolEnumAzureAd> waadProtocol = Optional.empty();
@@ -1407,8 +1182,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         private Optional<Boolean> useWsfed = Optional.empty();
 
-        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams =
-                OptionalNullable.absent();
+        private OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams = OptionalNullable.absent();
 
         private Optional<List<String>> thumbprints = Optional.empty();
 
@@ -1416,8 +1190,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         private Optional<String> tenantDomain = Optional.empty();
 
-        private Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection =
-                Optional.empty();
+        private Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection = Optional.empty();
 
         private Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes = Optional.empty();
 
@@ -1431,8 +1204,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
 
         private Optional<Boolean> granted = Optional.empty();
 
-        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens =
-                OptionalNullable.absent();
+        private OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens = OptionalNullable.absent();
 
         private Optional<Boolean> extUserId = Optional.empty();
 
@@ -1539,125 +1311,51 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(ConnectionOptionsAzureAd other) {
-            nonPersistentAttrs(other.getNonPersistentAttrs());
-            apiEnableUsers(other.getApiEnableUsers());
-            appDomain(other.getAppDomain());
-            appId(other.getAppId());
-            basicProfile(other.getBasicProfile());
-            clientId(other.getClientId());
-            clientSecret(other.getClientSecret());
-            domainAliases(other.getDomainAliases());
-            extAccessToken(other.getExtAccessToken());
-            extAccountEnabled(other.getExtAccountEnabled());
-            extAdmin(other.getExtAdmin());
-            extAgreedTerms(other.getExtAgreedTerms());
-            extAssignedLicenses(other.getExtAssignedLicenses());
-            extAssignedPlans(other.getExtAssignedPlans());
-            extAzureId(other.getExtAzureId());
-            extCity(other.getExtCity());
-            extCountry(other.getExtCountry());
-            extDepartment(other.getExtDepartment());
-            extDirSyncEnabled(other.getExtDirSyncEnabled());
-            extEmail(other.getExtEmail());
-            extExpiresIn(other.getExtExpiresIn());
-            extFamilyName(other.getExtFamilyName());
-            extFax(other.getExtFax());
-            extGivenName(other.getExtGivenName());
-            extGroupIds(other.getExtGroupIds());
-            extGroups(other.getExtGroups());
-            extIsSuspended(other.getExtIsSuspended());
-            extJobTitle(other.getExtJobTitle());
-            extLastSync(other.getExtLastSync());
-            extMobile(other.getExtMobile());
-            extName(other.getExtName());
-            extNestedGroups(other.getExtNestedGroups());
-            extNickname(other.getExtNickname());
-            extOid(other.getExtOid());
-            extPhone(other.getExtPhone());
-            extPhysicalDeliveryOfficeName(other.getExtPhysicalDeliveryOfficeName());
-            extPostalCode(other.getExtPostalCode());
-            extPreferredLanguage(other.getExtPreferredLanguage());
-            extProfile(other.getExtProfile());
-            extProvisionedPlans(other.getExtProvisionedPlans());
-            extProvisioningErrors(other.getExtProvisioningErrors());
-            extProxyAddresses(other.getExtProxyAddresses());
-            extPuid(other.getExtPuid());
-            extRefreshToken(other.getExtRefreshToken());
-            extRoles(other.getExtRoles());
-            extState(other.getExtState());
-            extStreet(other.getExtStreet());
-            extTelephoneNumber(other.getExtTelephoneNumber());
-            extTenantid(other.getExtTenantid());
-            extUpn(other.getExtUpn());
-            extUsageLocation(other.getExtUsageLocation());
-            extUserId(other.getExtUserId());
-            federatedConnectionsAccessTokens(other.getFederatedConnectionsAccessTokens());
-            granted(other.getGranted());
-            iconUrl(other.getIconUrl());
-            identityApi(other.getIdentityApi());
-            maxGroupsToRetrieve(other.getMaxGroupsToRetrieve());
-            scope(other.getScope());
-            setUserRootAttributes(other.getSetUserRootAttributes());
-            shouldTrustEmailVerifiedConnection(other.getShouldTrustEmailVerifiedConnection());
-            tenantDomain(other.getTenantDomain());
-            tenantId(other.getTenantId());
-            thumbprints(other.getThumbprints());
-            upstreamParams(other.getUpstreamParams());
-            useWsfed(other.getUseWsfed());
-            useCommonEndpoint(other.getUseCommonEndpoint());
-            useridAttribute(other.getUseridAttribute());
-            waadProtocol(other.getWaadProtocol());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("client_id")
         public _FinalStage clientId(@NotNull String clientId) {
-            this.clientId = Objects.requireNonNull(clientId, "clientId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage waadProtocol(ConnectionWaadProtocolEnumAzureAd waadProtocol) {
-            this.waadProtocol = Optional.ofNullable(waadProtocol);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "waad_protocol", nulls = Nulls.SKIP)
         public _FinalStage waadProtocol(Optional<ConnectionWaadProtocolEnumAzureAd> waadProtocol) {
-            this.waadProtocol = waadProtocol;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage useridAttribute(ConnectionUseridAttributeEnumAzureAd useridAttribute) {
-            this.useridAttribute = Optional.ofNullable(useridAttribute);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "userid_attribute", nulls = Nulls.SKIP)
         public _FinalStage useridAttribute(Optional<ConnectionUseridAttributeEnumAzureAd> useridAttribute) {
-            this.useridAttribute = useridAttribute;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage useCommonEndpoint(Boolean useCommonEndpoint) {
-            this.useCommonEndpoint = Optional.ofNullable(useCommonEndpoint);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "useCommonEndpoint", nulls = Nulls.SKIP)
         public _FinalStage useCommonEndpoint(Optional<Boolean> useCommonEndpoint) {
-            this.useCommonEndpoint = useCommonEndpoint;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1666,8 +1364,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage useWsfed(Boolean useWsfed) {
-            this.useWsfed = Optional.ofNullable(useWsfed);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1676,170 +1373,127 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "use_wsfed", nulls = Nulls.SKIP)
         public _FinalStage useWsfed(Optional<Boolean> useWsfed) {
-            this.useWsfed = useWsfed;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                com.auth0.client.mgmt.core.Nullable<
-                                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                        upstreamParams) {
-            if (upstreamParams.isNull()) {
-                this.upstreamParams = OptionalNullable.ofNull();
-            } else if (upstreamParams.isEmpty()) {
-                this.upstreamParams = OptionalNullable.absent();
-            } else {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            }
-            return this;
+        public _FinalStage upstreamParams(com.auth0.client.mgmt.core.Nullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
-            if (upstreamParams.isPresent()) {
-                this.upstreamParams = OptionalNullable.of(upstreamParams.get());
-            } else {
-                this.upstreamParams = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage upstreamParams(Optional<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage upstreamParams(
-                Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
-            this.upstreamParams = OptionalNullable.of(upstreamParams);
-            return this;
+        public _FinalStage upstreamParams(Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "upstream_params", nulls = Nulls.SKIP)
-        public _FinalStage upstreamParams(
-                @Nullable
-                        OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>>
-                                upstreamParams) {
-            this.upstreamParams = upstreamParams;
-            return this;
+        public _FinalStage upstreamParams(@Nullable OptionalNullable<Map<String, OptionalNullable<ConnectionUpstreamAdditionalProperties>>> upstreamParams) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage thumbprints(List<String> thumbprints) {
-            this.thumbprints = Optional.ofNullable(thumbprints);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "thumbprints", nulls = Nulls.SKIP)
         public _FinalStage thumbprints(Optional<List<String>> thumbprints) {
-            this.thumbprints = thumbprints;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenantId(String tenantId) {
-            this.tenantId = Optional.ofNullable(tenantId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenantId", nulls = Nulls.SKIP)
         public _FinalStage tenantId(Optional<String> tenantId) {
-            this.tenantId = tenantId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage tenantDomain(String tenantDomain) {
-            this.tenantDomain = Optional.ofNullable(tenantDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "tenant_domain", nulls = Nulls.SKIP)
         public _FinalStage tenantDomain(Optional<String> tenantDomain) {
-            this.tenantDomain = tenantDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage shouldTrustEmailVerifiedConnection(
-                ConnectionShouldTrustEmailVerifiedConnectionEnum shouldTrustEmailVerifiedConnection) {
-            this.shouldTrustEmailVerifiedConnection = Optional.ofNullable(shouldTrustEmailVerifiedConnection);
-            return this;
+        public _FinalStage shouldTrustEmailVerifiedConnection(ConnectionShouldTrustEmailVerifiedConnectionEnum shouldTrustEmailVerifiedConnection) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "should_trust_email_verified_connection", nulls = Nulls.SKIP)
-        public _FinalStage shouldTrustEmailVerifiedConnection(
-                Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection) {
-            this.shouldTrustEmailVerifiedConnection = shouldTrustEmailVerifiedConnection;
-            return this;
+        public _FinalStage shouldTrustEmailVerifiedConnection(Optional<ConnectionShouldTrustEmailVerifiedConnectionEnum> shouldTrustEmailVerifiedConnection) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage setUserRootAttributes(ConnectionSetUserRootAttributesEnum setUserRootAttributes) {
-            this.setUserRootAttributes = Optional.ofNullable(setUserRootAttributes);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "set_user_root_attributes", nulls = Nulls.SKIP)
         public _FinalStage setUserRootAttributes(Optional<ConnectionSetUserRootAttributesEnum> setUserRootAttributes) {
-            this.setUserRootAttributes = setUserRootAttributes;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage scope(List<String> scope) {
-            this.scope = Optional.ofNullable(scope);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "scope", nulls = Nulls.SKIP)
         public _FinalStage scope(Optional<List<String>> scope) {
-            this.scope = scope;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage maxGroupsToRetrieve(String maxGroupsToRetrieve) {
-            this.maxGroupsToRetrieve = Optional.ofNullable(maxGroupsToRetrieve);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "max_groups_to_retrieve", nulls = Nulls.SKIP)
         public _FinalStage maxGroupsToRetrieve(Optional<String> maxGroupsToRetrieve) {
-            this.maxGroupsToRetrieve = maxGroupsToRetrieve;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage identityApi(ConnectionIdentityApiEnumAzureAd identityApi) {
-            this.identityApi = Optional.ofNullable(identityApi);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "identity_api", nulls = Nulls.SKIP)
         public _FinalStage identityApi(Optional<ConnectionIdentityApiEnumAzureAd> identityApi) {
-            this.identityApi = identityApi;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage iconUrl(String iconUrl) {
-            this.iconUrl = Optional.ofNullable(iconUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "icon_url", nulls = Nulls.SKIP)
         public _FinalStage iconUrl(Optional<String> iconUrl) {
-            this.iconUrl = iconUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1848,8 +1502,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage granted(Boolean granted) {
-            this.granted = Optional.ofNullable(granted);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1858,49 +1511,28 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "granted", nulls = Nulls.SKIP)
         public _FinalStage granted(Optional<Boolean> granted) {
-            this.granted = granted;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens>
-                        federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isNull()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.ofNull();
-            } else if (federatedConnectionsAccessTokens.isEmpty()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(com.auth0.client.mgmt.core.Nullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            if (federatedConnectionsAccessTokens.isPresent()) {
-                this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens.get());
-            } else {
-                this.federatedConnectionsAccessTokens = OptionalNullable.absent();
-            }
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(Optional<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
-        public _FinalStage federatedConnectionsAccessTokens(
-                ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = OptionalNullable.of(federatedConnectionsAccessTokens);
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(ConnectionFederatedConnectionsAccessTokens federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "federated_connections_access_tokens", nulls = Nulls.SKIP)
-        public _FinalStage federatedConnectionsAccessTokens(
-                @Nullable
-                        OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
-            this.federatedConnectionsAccessTokens = federatedConnectionsAccessTokens;
-            return this;
+        public _FinalStage federatedConnectionsAccessTokens(@Nullable OptionalNullable<ConnectionFederatedConnectionsAccessTokens> federatedConnectionsAccessTokens) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1909,8 +1541,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extUserId(Boolean extUserId) {
-            this.extUserId = Optional.ofNullable(extUserId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1919,8 +1550,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_user_id", nulls = Nulls.SKIP)
         public _FinalStage extUserId(Optional<Boolean> extUserId) {
-            this.extUserId = extUserId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1929,8 +1559,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extUsageLocation(Boolean extUsageLocation) {
-            this.extUsageLocation = Optional.ofNullable(extUsageLocation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1939,8 +1568,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_usage_location", nulls = Nulls.SKIP)
         public _FinalStage extUsageLocation(Optional<Boolean> extUsageLocation) {
-            this.extUsageLocation = extUsageLocation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1949,8 +1577,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extUpn(Boolean extUpn) {
-            this.extUpn = Optional.ofNullable(extUpn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1959,8 +1586,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_upn", nulls = Nulls.SKIP)
         public _FinalStage extUpn(Optional<Boolean> extUpn) {
-            this.extUpn = extUpn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1969,8 +1595,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extTenantid(Boolean extTenantid) {
-            this.extTenantid = Optional.ofNullable(extTenantid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1979,8 +1604,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_tenantid", nulls = Nulls.SKIP)
         public _FinalStage extTenantid(Optional<Boolean> extTenantid) {
-            this.extTenantid = extTenantid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1989,8 +1613,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extTelephoneNumber(Boolean extTelephoneNumber) {
-            this.extTelephoneNumber = Optional.ofNullable(extTelephoneNumber);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -1999,8 +1622,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_telephoneNumber", nulls = Nulls.SKIP)
         public _FinalStage extTelephoneNumber(Optional<Boolean> extTelephoneNumber) {
-            this.extTelephoneNumber = extTelephoneNumber;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2009,8 +1631,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extStreet(Boolean extStreet) {
-            this.extStreet = Optional.ofNullable(extStreet);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2019,8 +1640,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_street", nulls = Nulls.SKIP)
         public _FinalStage extStreet(Optional<Boolean> extStreet) {
-            this.extStreet = extStreet;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2029,8 +1649,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extState(Boolean extState) {
-            this.extState = Optional.ofNullable(extState);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2039,8 +1658,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_state", nulls = Nulls.SKIP)
         public _FinalStage extState(Optional<Boolean> extState) {
-            this.extState = extState;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2049,8 +1667,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extRoles(Boolean extRoles) {
-            this.extRoles = Optional.ofNullable(extRoles);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2059,8 +1676,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_roles", nulls = Nulls.SKIP)
         public _FinalStage extRoles(Optional<Boolean> extRoles) {
-            this.extRoles = extRoles;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2069,8 +1685,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extRefreshToken(Boolean extRefreshToken) {
-            this.extRefreshToken = Optional.ofNullable(extRefreshToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2079,8 +1694,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_refresh_token", nulls = Nulls.SKIP)
         public _FinalStage extRefreshToken(Optional<Boolean> extRefreshToken) {
-            this.extRefreshToken = extRefreshToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2089,8 +1703,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extPuid(Boolean extPuid) {
-            this.extPuid = Optional.ofNullable(extPuid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2099,8 +1712,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_puid", nulls = Nulls.SKIP)
         public _FinalStage extPuid(Optional<Boolean> extPuid) {
-            this.extPuid = extPuid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2109,8 +1721,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extProxyAddresses(Boolean extProxyAddresses) {
-            this.extProxyAddresses = Optional.ofNullable(extProxyAddresses);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2119,8 +1730,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_proxy_addresses", nulls = Nulls.SKIP)
         public _FinalStage extProxyAddresses(Optional<Boolean> extProxyAddresses) {
-            this.extProxyAddresses = extProxyAddresses;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2129,8 +1739,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extProvisioningErrors(Boolean extProvisioningErrors) {
-            this.extProvisioningErrors = Optional.ofNullable(extProvisioningErrors);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2139,8 +1748,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_provisioning_errors", nulls = Nulls.SKIP)
         public _FinalStage extProvisioningErrors(Optional<Boolean> extProvisioningErrors) {
-            this.extProvisioningErrors = extProvisioningErrors;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2149,8 +1757,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extProvisionedPlans(Boolean extProvisionedPlans) {
-            this.extProvisionedPlans = Optional.ofNullable(extProvisionedPlans);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2159,21 +1766,18 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_provisioned_plans", nulls = Nulls.SKIP)
         public _FinalStage extProvisionedPlans(Optional<Boolean> extProvisionedPlans) {
-            this.extProvisionedPlans = extProvisionedPlans;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extProfile(Boolean extProfile) {
-            this.extProfile = Optional.ofNullable(extProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_profile", nulls = Nulls.SKIP)
         public _FinalStage extProfile(Optional<Boolean> extProfile) {
-            this.extProfile = extProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2182,8 +1786,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extPreferredLanguage(Boolean extPreferredLanguage) {
-            this.extPreferredLanguage = Optional.ofNullable(extPreferredLanguage);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2192,8 +1795,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_preferred_language", nulls = Nulls.SKIP)
         public _FinalStage extPreferredLanguage(Optional<Boolean> extPreferredLanguage) {
-            this.extPreferredLanguage = extPreferredLanguage;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2202,8 +1804,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extPostalCode(Boolean extPostalCode) {
-            this.extPostalCode = Optional.ofNullable(extPostalCode);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2212,8 +1813,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_postal_code", nulls = Nulls.SKIP)
         public _FinalStage extPostalCode(Optional<Boolean> extPostalCode) {
-            this.extPostalCode = extPostalCode;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2222,8 +1822,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extPhysicalDeliveryOfficeName(Boolean extPhysicalDeliveryOfficeName) {
-            this.extPhysicalDeliveryOfficeName = Optional.ofNullable(extPhysicalDeliveryOfficeName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2232,8 +1831,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_physical_delivery_office_name", nulls = Nulls.SKIP)
         public _FinalStage extPhysicalDeliveryOfficeName(Optional<Boolean> extPhysicalDeliveryOfficeName) {
-            this.extPhysicalDeliveryOfficeName = extPhysicalDeliveryOfficeName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2242,8 +1840,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extPhone(Boolean extPhone) {
-            this.extPhone = Optional.ofNullable(extPhone);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2252,8 +1849,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_phone", nulls = Nulls.SKIP)
         public _FinalStage extPhone(Optional<Boolean> extPhone) {
-            this.extPhone = extPhone;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2262,8 +1858,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extOid(Boolean extOid) {
-            this.extOid = Optional.ofNullable(extOid);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2272,8 +1867,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_oid", nulls = Nulls.SKIP)
         public _FinalStage extOid(Optional<Boolean> extOid) {
-            this.extOid = extOid;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2282,8 +1876,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extNickname(Boolean extNickname) {
-            this.extNickname = Optional.ofNullable(extNickname);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2292,8 +1885,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_nickname", nulls = Nulls.SKIP)
         public _FinalStage extNickname(Optional<Boolean> extNickname) {
-            this.extNickname = extNickname;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2302,8 +1894,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extNestedGroups(Boolean extNestedGroups) {
-            this.extNestedGroups = Optional.ofNullable(extNestedGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2312,8 +1903,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_nested_groups", nulls = Nulls.SKIP)
         public _FinalStage extNestedGroups(Optional<Boolean> extNestedGroups) {
-            this.extNestedGroups = extNestedGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2322,8 +1912,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extName(Boolean extName) {
-            this.extName = Optional.ofNullable(extName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2332,8 +1921,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_name", nulls = Nulls.SKIP)
         public _FinalStage extName(Optional<Boolean> extName) {
-            this.extName = extName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2342,8 +1930,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extMobile(Boolean extMobile) {
-            this.extMobile = Optional.ofNullable(extMobile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2352,8 +1939,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_mobile", nulls = Nulls.SKIP)
         public _FinalStage extMobile(Optional<Boolean> extMobile) {
-            this.extMobile = extMobile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2362,8 +1948,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extLastSync(Boolean extLastSync) {
-            this.extLastSync = Optional.ofNullable(extLastSync);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2372,8 +1957,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_last_sync", nulls = Nulls.SKIP)
         public _FinalStage extLastSync(Optional<Boolean> extLastSync) {
-            this.extLastSync = extLastSync;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2382,8 +1966,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extJobTitle(Boolean extJobTitle) {
-            this.extJobTitle = Optional.ofNullable(extJobTitle);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2392,34 +1975,29 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_job_title", nulls = Nulls.SKIP)
         public _FinalStage extJobTitle(Optional<Boolean> extJobTitle) {
-            this.extJobTitle = extJobTitle;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extIsSuspended(Boolean extIsSuspended) {
-            this.extIsSuspended = Optional.ofNullable(extIsSuspended);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_is_suspended", nulls = Nulls.SKIP)
         public _FinalStage extIsSuspended(Optional<Boolean> extIsSuspended) {
-            this.extIsSuspended = extIsSuspended;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extGroups(Boolean extGroups) {
-            this.extGroups = Optional.ofNullable(extGroups);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_groups", nulls = Nulls.SKIP)
         public _FinalStage extGroups(Optional<Boolean> extGroups) {
-            this.extGroups = extGroups;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2428,8 +2006,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extGroupIds(Boolean extGroupIds) {
-            this.extGroupIds = Optional.ofNullable(extGroupIds);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2438,8 +2015,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_group_ids", nulls = Nulls.SKIP)
         public _FinalStage extGroupIds(Optional<Boolean> extGroupIds) {
-            this.extGroupIds = extGroupIds;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2448,8 +2024,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extGivenName(Boolean extGivenName) {
-            this.extGivenName = Optional.ofNullable(extGivenName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2458,8 +2033,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_given_name", nulls = Nulls.SKIP)
         public _FinalStage extGivenName(Optional<Boolean> extGivenName) {
-            this.extGivenName = extGivenName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2468,8 +2042,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extFax(Boolean extFax) {
-            this.extFax = Optional.ofNullable(extFax);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2478,8 +2051,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_fax", nulls = Nulls.SKIP)
         public _FinalStage extFax(Optional<Boolean> extFax) {
-            this.extFax = extFax;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2488,8 +2060,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extFamilyName(Boolean extFamilyName) {
-            this.extFamilyName = Optional.ofNullable(extFamilyName);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2498,8 +2069,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_family_name", nulls = Nulls.SKIP)
         public _FinalStage extFamilyName(Optional<Boolean> extFamilyName) {
-            this.extFamilyName = extFamilyName;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2508,8 +2078,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extExpiresIn(Boolean extExpiresIn) {
-            this.extExpiresIn = Optional.ofNullable(extExpiresIn);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2518,8 +2087,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_expires_in", nulls = Nulls.SKIP)
         public _FinalStage extExpiresIn(Optional<Boolean> extExpiresIn) {
-            this.extExpiresIn = extExpiresIn;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2528,8 +2096,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extEmail(Boolean extEmail) {
-            this.extEmail = Optional.ofNullable(extEmail);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2538,8 +2105,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_email", nulls = Nulls.SKIP)
         public _FinalStage extEmail(Optional<Boolean> extEmail) {
-            this.extEmail = extEmail;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2548,8 +2114,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extDirSyncEnabled(Boolean extDirSyncEnabled) {
-            this.extDirSyncEnabled = Optional.ofNullable(extDirSyncEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2558,8 +2123,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_dir_sync_enabled", nulls = Nulls.SKIP)
         public _FinalStage extDirSyncEnabled(Optional<Boolean> extDirSyncEnabled) {
-            this.extDirSyncEnabled = extDirSyncEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2568,8 +2132,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extDepartment(Boolean extDepartment) {
-            this.extDepartment = Optional.ofNullable(extDepartment);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2578,8 +2141,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_department", nulls = Nulls.SKIP)
         public _FinalStage extDepartment(Optional<Boolean> extDepartment) {
-            this.extDepartment = extDepartment;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2588,8 +2150,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extCountry(Boolean extCountry) {
-            this.extCountry = Optional.ofNullable(extCountry);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2598,8 +2159,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_country", nulls = Nulls.SKIP)
         public _FinalStage extCountry(Optional<Boolean> extCountry) {
-            this.extCountry = extCountry;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2608,8 +2168,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extCity(Boolean extCity) {
-            this.extCity = Optional.ofNullable(extCity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2618,8 +2177,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_city", nulls = Nulls.SKIP)
         public _FinalStage extCity(Optional<Boolean> extCity) {
-            this.extCity = extCity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2628,8 +2186,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extAzureId(Boolean extAzureId) {
-            this.extAzureId = Optional.ofNullable(extAzureId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2638,21 +2195,18 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_azure_id", nulls = Nulls.SKIP)
         public _FinalStage extAzureId(Optional<Boolean> extAzureId) {
-            this.extAzureId = extAzureId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extAssignedPlans(Boolean extAssignedPlans) {
-            this.extAssignedPlans = Optional.ofNullable(extAssignedPlans);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_assigned_plans", nulls = Nulls.SKIP)
         public _FinalStage extAssignedPlans(Optional<Boolean> extAssignedPlans) {
-            this.extAssignedPlans = extAssignedPlans;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2661,8 +2215,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extAssignedLicenses(Boolean extAssignedLicenses) {
-            this.extAssignedLicenses = Optional.ofNullable(extAssignedLicenses);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2671,34 +2224,29 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_assigned_licenses", nulls = Nulls.SKIP)
         public _FinalStage extAssignedLicenses(Optional<Boolean> extAssignedLicenses) {
-            this.extAssignedLicenses = extAssignedLicenses;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extAgreedTerms(Boolean extAgreedTerms) {
-            this.extAgreedTerms = Optional.ofNullable(extAgreedTerms);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_agreed_terms", nulls = Nulls.SKIP)
         public _FinalStage extAgreedTerms(Optional<Boolean> extAgreedTerms) {
-            this.extAgreedTerms = extAgreedTerms;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage extAdmin(Boolean extAdmin) {
-            this.extAdmin = Optional.ofNullable(extAdmin);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "ext_admin", nulls = Nulls.SKIP)
         public _FinalStage extAdmin(Optional<Boolean> extAdmin) {
-            this.extAdmin = extAdmin;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2707,8 +2255,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extAccountEnabled(Boolean extAccountEnabled) {
-            this.extAccountEnabled = Optional.ofNullable(extAccountEnabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2717,8 +2264,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_account_enabled", nulls = Nulls.SKIP)
         public _FinalStage extAccountEnabled(Optional<Boolean> extAccountEnabled) {
-            this.extAccountEnabled = extAccountEnabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2727,8 +2273,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage extAccessToken(Boolean extAccessToken) {
-            this.extAccessToken = Optional.ofNullable(extAccessToken);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2737,34 +2282,29 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "ext_access_token", nulls = Nulls.SKIP)
         public _FinalStage extAccessToken(Optional<Boolean> extAccessToken) {
-            this.extAccessToken = extAccessToken;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage domainAliases(List<String> domainAliases) {
-            this.domainAliases = Optional.ofNullable(domainAliases);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "domain_aliases", nulls = Nulls.SKIP)
         public _FinalStage domainAliases(Optional<List<String>> domainAliases) {
-            this.domainAliases = domainAliases;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage clientSecret(String clientSecret) {
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "client_secret", nulls = Nulls.SKIP)
         public _FinalStage clientSecret(Optional<String> clientSecret) {
-            this.clientSecret = clientSecret;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2773,8 +2313,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage basicProfile(Boolean basicProfile) {
-            this.basicProfile = Optional.ofNullable(basicProfile);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2783,8 +2322,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "basic_profile", nulls = Nulls.SKIP)
         public _FinalStage basicProfile(Optional<Boolean> basicProfile) {
-            this.basicProfile = basicProfile;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2793,8 +2331,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage appId(String appId) {
-            this.appId = Optional.ofNullable(appId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2803,21 +2340,18 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "app_id", nulls = Nulls.SKIP)
         public _FinalStage appId(Optional<String> appId) {
-            this.appId = appId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage appDomain(String appDomain) {
-            this.appDomain = Optional.ofNullable(appDomain);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "app_domain", nulls = Nulls.SKIP)
         public _FinalStage appDomain(Optional<String> appDomain) {
-            this.appDomain = appDomain;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2826,8 +2360,7 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
          */
         @java.lang.Override
         public _FinalStage apiEnableUsers(Boolean apiEnableUsers) {
-            this.apiEnableUsers = Optional.ofNullable(apiEnableUsers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -2836,107 +2369,33 @@ public final class ConnectionOptionsAzureAd implements IConnectionOptionsCommon 
         @java.lang.Override
         @JsonSetter(value = "api_enable_users", nulls = Nulls.SKIP)
         public _FinalStage apiEnableUsers(Optional<Boolean> apiEnableUsers) {
-            this.apiEnableUsers = apiEnableUsers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage nonPersistentAttrs(List<String> nonPersistentAttrs) {
-            this.nonPersistentAttrs = Optional.ofNullable(nonPersistentAttrs);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "non_persistent_attrs", nulls = Nulls.SKIP)
         public _FinalStage nonPersistentAttrs(Optional<List<String>> nonPersistentAttrs) {
-            this.nonPersistentAttrs = nonPersistentAttrs;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public ConnectionOptionsAzureAd build() {
-            return new ConnectionOptionsAzureAd(
-                    nonPersistentAttrs,
-                    apiEnableUsers,
-                    appDomain,
-                    appId,
-                    basicProfile,
-                    clientId,
-                    clientSecret,
-                    domainAliases,
-                    extAccessToken,
-                    extAccountEnabled,
-                    extAdmin,
-                    extAgreedTerms,
-                    extAssignedLicenses,
-                    extAssignedPlans,
-                    extAzureId,
-                    extCity,
-                    extCountry,
-                    extDepartment,
-                    extDirSyncEnabled,
-                    extEmail,
-                    extExpiresIn,
-                    extFamilyName,
-                    extFax,
-                    extGivenName,
-                    extGroupIds,
-                    extGroups,
-                    extIsSuspended,
-                    extJobTitle,
-                    extLastSync,
-                    extMobile,
-                    extName,
-                    extNestedGroups,
-                    extNickname,
-                    extOid,
-                    extPhone,
-                    extPhysicalDeliveryOfficeName,
-                    extPostalCode,
-                    extPreferredLanguage,
-                    extProfile,
-                    extProvisionedPlans,
-                    extProvisioningErrors,
-                    extProxyAddresses,
-                    extPuid,
-                    extRefreshToken,
-                    extRoles,
-                    extState,
-                    extStreet,
-                    extTelephoneNumber,
-                    extTenantid,
-                    extUpn,
-                    extUsageLocation,
-                    extUserId,
-                    federatedConnectionsAccessTokens,
-                    granted,
-                    iconUrl,
-                    identityApi,
-                    maxGroupsToRetrieve,
-                    scope,
-                    setUserRootAttributes,
-                    shouldTrustEmailVerifiedConnection,
-                    tenantDomain,
-                    tenantId,
-                    thumbprints,
-                    upstreamParams,
-                    useWsfed,
-                    useCommonEndpoint,
-                    useridAttribute,
-                    waadProtocol,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

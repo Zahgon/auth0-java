@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EmailProviderCredentialsSchemaZero.Builder.class)
 public final class EmailProviderCredentialsSchemaZero {
+
     private final String apiKey;
 
     private final Map<String, Object> additionalProperties;
@@ -33,19 +34,17 @@ public final class EmailProviderCredentialsSchemaZero {
      */
     @JsonProperty("api_key")
     public String getApiKey() {
-        return apiKey;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EmailProviderCredentialsSchemaZero
-                && equalTo((EmailProviderCredentialsSchemaZero) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EmailProviderCredentialsSchemaZero other) {
@@ -54,19 +53,20 @@ public final class EmailProviderCredentialsSchemaZero {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.apiKey);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ApiKeyStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ApiKeyStage {
+
         /**
          * <p>API Key</p>
          */
@@ -76,6 +76,7 @@ public final class EmailProviderCredentialsSchemaZero {
     }
 
     public interface _FinalStage {
+
         EmailProviderCredentialsSchemaZero build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -85,17 +86,18 @@ public final class EmailProviderCredentialsSchemaZero {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements ApiKeyStage, _FinalStage {
+
         private String apiKey;
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EmailProviderCredentialsSchemaZero other) {
-            apiKey(other.getApiKey());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -106,25 +108,22 @@ public final class EmailProviderCredentialsSchemaZero {
         @java.lang.Override
         @JsonSetter("api_key")
         public _FinalStage apiKey(@NotNull String apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey, "apiKey must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EmailProviderCredentialsSchemaZero build() {
-            return new EmailProviderCredentialsSchemaZero(apiKey, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

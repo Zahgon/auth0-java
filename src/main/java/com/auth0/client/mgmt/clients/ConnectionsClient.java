@@ -10,6 +10,7 @@ import com.auth0.client.mgmt.core.SyncPagingIterable;
 import com.auth0.client.mgmt.types.ConnectionForList;
 
 public class ConnectionsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawConnectionsClient rawClient;
@@ -23,7 +24,7 @@ public class ConnectionsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawConnectionsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -38,7 +39,7 @@ public class ConnectionsClient {
      * </ul></p>
      */
     public SyncPagingIterable<ConnectionForList> get(String id) {
-        return this.rawClient.get(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -53,7 +54,7 @@ public class ConnectionsClient {
      * </ul></p>
      */
     public SyncPagingIterable<ConnectionForList> get(String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +69,7 @@ public class ConnectionsClient {
      * </ul></p>
      */
     public SyncPagingIterable<ConnectionForList> get(String id, ConnectionsGetRequest request) {
-        return this.rawClient.get(id, request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -82,8 +83,7 @@ public class ConnectionsClient {
      *   </li>
      * </ul></p>
      */
-    public SyncPagingIterable<ConnectionForList> get(
-            String id, ConnectionsGetRequest request, RequestOptions requestOptions) {
-        return this.rawClient.get(id, request, requestOptions).body();
+    public SyncPagingIterable<ConnectionForList> get(String id, ConnectionsGetRequest request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

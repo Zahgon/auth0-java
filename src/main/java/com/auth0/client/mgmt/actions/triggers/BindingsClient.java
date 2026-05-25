@@ -13,6 +13,7 @@ import com.auth0.client.mgmt.types.ActionTriggerTypeEnum;
 import com.auth0.client.mgmt.types.UpdateActionBindingsResponseContent;
 
 public class BindingsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawBindingsClient rawClient;
@@ -26,71 +27,62 @@ public class BindingsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawBindingsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
     public SyncPagingIterable<ActionBinding> list(ActionTriggerTypeEnum triggerId) {
-        return this.rawClient.list(triggerId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
     public SyncPagingIterable<ActionBinding> list(ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
-        return this.rawClient.list(triggerId, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
-    public SyncPagingIterable<ActionBinding> list(
-            ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request) {
-        return this.rawClient.list(triggerId, request).body();
+    public SyncPagingIterable<ActionBinding> list(ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve the actions that are bound to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The list of actions returned reflects the order in which they will be executed during the appropriate flow.
      */
-    public SyncPagingIterable<ActionBinding> list(
-            ActionTriggerTypeEnum triggerId,
-            ListActionTriggerBindingsRequestParameters request,
-            RequestOptions requestOptions) {
-        return this.rawClient.list(triggerId, request, requestOptions).body();
+    public SyncPagingIterable<ActionBinding> list(ActionTriggerTypeEnum triggerId, ListActionTriggerBindingsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
     public UpdateActionBindingsResponseContent updateMany(ActionTriggerTypeEnum triggerId) {
-        return this.rawClient.updateMany(triggerId).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public UpdateActionBindingsResponseContent updateMany(
-            ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
-        return this.rawClient.updateMany(triggerId, requestOptions).body();
+    public UpdateActionBindingsResponseContent updateMany(ActionTriggerTypeEnum triggerId, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public UpdateActionBindingsResponseContent updateMany(
-            ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request) {
-        return this.rawClient.updateMany(triggerId, request).body();
+    public UpdateActionBindingsResponseContent updateMany(ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the actions that are bound (i.e. attached) to a trigger. Once an action is created and deployed, it must be attached (i.e. bound) to a trigger so that it will be executed as part of a flow. The order in which the actions are provided will determine the order in which they are executed.
      */
-    public UpdateActionBindingsResponseContent updateMany(
-            ActionTriggerTypeEnum triggerId,
-            UpdateActionBindingsRequestContent request,
-            RequestOptions requestOptions) {
-        return this.rawClient.updateMany(triggerId, request, requestOptions).body();
+    public UpdateActionBindingsResponseContent updateMany(ActionTriggerTypeEnum triggerId, UpdateActionBindingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

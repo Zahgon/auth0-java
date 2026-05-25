@@ -12,6 +12,7 @@ import com.auth0.client.mgmt.types.DeviceCredential;
 import com.auth0.client.mgmt.types.ListDeviceCredentialsRequestParameters;
 
 public class DeviceCredentialsClient {
+
     protected final ClientOptions clientOptions;
 
     private final RawDeviceCredentialsClient rawClient;
@@ -25,67 +26,64 @@ public class DeviceCredentialsClient {
      * Get responses with HTTP metadata like headers
      */
     public RawDeviceCredentialsClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
     public SyncPagingIterable<DeviceCredential> list() {
-        return this.rawClient.list().body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
     public SyncPagingIterable<DeviceCredential> list(RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
     public SyncPagingIterable<DeviceCredential> list(ListDeviceCredentialsRequestParameters request) {
-        return this.rawClient.list(request).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Retrieve device credential information (<code>public_key</code>, <code>refresh_token</code>, or <code>rotating_refresh_token</code>) associated with a specific user.
      */
-    public SyncPagingIterable<DeviceCredential> list(
-            ListDeviceCredentialsRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).body();
+    public SyncPagingIterable<DeviceCredential> list(ListDeviceCredentialsRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a device credential public key to manage refresh token rotation for a given <code>user_id</code>. Device Credentials APIs are designed for ad-hoc administrative use only and paging is by default enabled for GET requests.
      * <p>When refresh token rotation is enabled, the endpoint becomes consistent. For more information, read <a href="https://auth0.com/docs/get-started/tenant-settings/signing-keys"> Signing Keys</a>.</p>
      */
-    public CreatePublicKeyDeviceCredentialResponseContent createPublicKey(
-            CreatePublicKeyDeviceCredentialRequestContent request) {
-        return this.rawClient.createPublicKey(request).body();
+    public CreatePublicKeyDeviceCredentialResponseContent createPublicKey(CreatePublicKeyDeviceCredentialRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a device credential public key to manage refresh token rotation for a given <code>user_id</code>. Device Credentials APIs are designed for ad-hoc administrative use only and paging is by default enabled for GET requests.
      * <p>When refresh token rotation is enabled, the endpoint becomes consistent. For more information, read <a href="https://auth0.com/docs/get-started/tenant-settings/signing-keys"> Signing Keys</a>.</p>
      */
-    public CreatePublicKeyDeviceCredentialResponseContent createPublicKey(
-            CreatePublicKeyDeviceCredentialRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.createPublicKey(request, requestOptions).body();
+    public CreatePublicKeyDeviceCredentialResponseContent createPublicKey(CreatePublicKeyDeviceCredentialRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete a device credential (such as a refresh token or public key) with the given ID.
      */
     public void delete(String id) {
-        this.rawClient.delete(id).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Permanently delete a device credential (such as a refresh token or public key) with the given ID.
      */
     public void delete(String id, RequestOptions requestOptions) {
-        this.rawClient.delete(id, requestOptions).body();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateBrandingIdentifiers.Builder.class)
 public final class UpdateBrandingIdentifiers {
+
     private final Optional<UpdateBrandingLoginDisplayEnum> loginDisplay;
 
     private final Optional<Boolean> otpAutocomplete;
@@ -31,11 +32,7 @@ public final class UpdateBrandingIdentifiers {
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateBrandingIdentifiers(
-            Optional<UpdateBrandingLoginDisplayEnum> loginDisplay,
-            Optional<Boolean> otpAutocomplete,
-            OptionalNullable<UpdateBrandingPhoneDisplay> phoneDisplay,
-            Map<String, Object> additionalProperties) {
+    private UpdateBrandingIdentifiers(Optional<UpdateBrandingLoginDisplayEnum> loginDisplay, Optional<Boolean> otpAutocomplete, OptionalNullable<UpdateBrandingPhoneDisplay> phoneDisplay, Map<String, Object> additionalProperties) {
         this.loginDisplay = loginDisplay;
         this.otpAutocomplete = otpAutocomplete;
         this.phoneDisplay = phoneDisplay;
@@ -44,7 +41,7 @@ public final class UpdateBrandingIdentifiers {
 
     @JsonProperty("login_display")
     public Optional<UpdateBrandingLoginDisplayEnum> getLoginDisplay() {
-        return loginDisplay;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -52,16 +49,13 @@ public final class UpdateBrandingIdentifiers {
      */
     @JsonProperty("otp_autocomplete")
     public Optional<Boolean> getOtpAutocomplete() {
-        return otpAutocomplete;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("phone_display")
     public OptionalNullable<UpdateBrandingPhoneDisplay> getPhoneDisplay() {
-        if (phoneDisplay == null) {
-            return OptionalNullable.absent();
-        }
-        return phoneDisplay;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -72,37 +66,35 @@ public final class UpdateBrandingIdentifiers {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateBrandingIdentifiers && equalTo((UpdateBrandingIdentifiers) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateBrandingIdentifiers other) {
-        return loginDisplay.equals(other.loginDisplay)
-                && otpAutocomplete.equals(other.otpAutocomplete)
-                && phoneDisplay.equals(other.phoneDisplay);
+        return loginDisplay.equals(other.loginDisplay) && otpAutocomplete.equals(other.otpAutocomplete) && phoneDisplay.equals(other.phoneDisplay);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.loginDisplay, this.otpAutocomplete, this.phoneDisplay);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<UpdateBrandingLoginDisplayEnum> loginDisplay = Optional.empty();
 
         private Optional<Boolean> otpAutocomplete = Optional.empty();
@@ -112,24 +104,20 @@ public final class UpdateBrandingIdentifiers {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateBrandingIdentifiers other) {
-            loginDisplay(other.getLoginDisplay());
-            otpAutocomplete(other.getOtpAutocomplete());
-            phoneDisplay(other.getPhoneDisplay());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "login_display", nulls = Nulls.SKIP)
         public Builder loginDisplay(Optional<UpdateBrandingLoginDisplayEnum> loginDisplay) {
-            this.loginDisplay = loginDisplay;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder loginDisplay(UpdateBrandingLoginDisplayEnum loginDisplay) {
-            this.loginDisplay = Optional.ofNullable(loginDisplay);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -137,58 +125,40 @@ public final class UpdateBrandingIdentifiers {
          */
         @JsonSetter(value = "otp_autocomplete", nulls = Nulls.SKIP)
         public Builder otpAutocomplete(Optional<Boolean> otpAutocomplete) {
-            this.otpAutocomplete = otpAutocomplete;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder otpAutocomplete(Boolean otpAutocomplete) {
-            this.otpAutocomplete = Optional.ofNullable(otpAutocomplete);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "phone_display", nulls = Nulls.SKIP)
         public Builder phoneDisplay(@Nullable OptionalNullable<UpdateBrandingPhoneDisplay> phoneDisplay) {
-            this.phoneDisplay = phoneDisplay;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneDisplay(UpdateBrandingPhoneDisplay phoneDisplay) {
-            this.phoneDisplay = OptionalNullable.of(phoneDisplay);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneDisplay(Optional<UpdateBrandingPhoneDisplay> phoneDisplay) {
-            if (phoneDisplay.isPresent()) {
-                this.phoneDisplay = OptionalNullable.of(phoneDisplay.get());
-            } else {
-                this.phoneDisplay = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder phoneDisplay(com.auth0.client.mgmt.core.Nullable<UpdateBrandingPhoneDisplay> phoneDisplay) {
-            if (phoneDisplay.isNull()) {
-                this.phoneDisplay = OptionalNullable.ofNull();
-            } else if (phoneDisplay.isEmpty()) {
-                this.phoneDisplay = OptionalNullable.absent();
-            } else {
-                this.phoneDisplay = OptionalNullable.of(phoneDisplay.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateBrandingIdentifiers build() {
-            return new UpdateBrandingIdentifiers(loginDisplay, otpAutocomplete, phoneDisplay, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

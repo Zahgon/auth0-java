@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionResponseContentOktaStrategy {
-    public static final ConnectionResponseContentOktaStrategy OKTA =
-            new ConnectionResponseContentOktaStrategy(Value.OKTA, "okta");
+
+    public static final ConnectionResponseContentOktaStrategy OKTA = new ConnectionResponseContentOktaStrategy(Value.OKTA, "okta");
 
     private final Value value;
 
@@ -20,54 +20,41 @@ public final class ConnectionResponseContentOktaStrategy {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionResponseContentOktaStrategy
-                        && this.string.equals(((ConnectionResponseContentOktaStrategy) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OKTA:
-                return visitor.visitOkta();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionResponseContentOktaStrategy valueOf(String value) {
-        switch (value) {
-            case "okta":
-                return OKTA;
-            default:
-                return new ConnectionResponseContentOktaStrategy(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        OKTA,
 
-        UNKNOWN
+        OKTA, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOkta();
 
         T visitUnknown(String unknownType);

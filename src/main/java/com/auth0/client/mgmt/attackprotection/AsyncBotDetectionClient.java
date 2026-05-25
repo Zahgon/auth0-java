@@ -11,6 +11,7 @@ import com.auth0.client.mgmt.types.UpdateBotDetectionSettingsResponseContent;
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncBotDetectionClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawBotDetectionClient rawClient;
@@ -24,50 +25,48 @@ public class AsyncBotDetectionClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawBotDetectionClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the Bot Detection configuration of your tenant.
      */
     public CompletableFuture<GetBotDetectionSettingsResponseContent> get() {
-        return this.rawClient.get().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get the Bot Detection configuration of your tenant.
      */
     public CompletableFuture<GetBotDetectionSettingsResponseContent> get(RequestOptions requestOptions) {
-        return this.rawClient.get(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
     public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update() {
-        return this.rawClient.update().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
     public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update(RequestOptions requestOptions) {
-        return this.rawClient.update(requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update(
-            UpdateBotDetectionSettingsRequestContent request) {
-        return this.rawClient.update(request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update(UpdateBotDetectionSettingsRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update the Bot Detection configuration of your tenant.
      */
-    public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update(
-            UpdateBotDetectionSettingsRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateBotDetectionSettingsResponseContent> update(UpdateBotDetectionSettingsRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

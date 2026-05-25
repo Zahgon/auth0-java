@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = ChangePasswordTicketRequestContent.Builder.class)
 public final class ChangePasswordTicketRequestContent {
+
     private final Optional<String> resultUrl;
 
     private final Optional<String> userId;
@@ -42,18 +43,7 @@ public final class ChangePasswordTicketRequestContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private ChangePasswordTicketRequestContent(
-            Optional<String> resultUrl,
-            Optional<String> userId,
-            Optional<String> clientId,
-            Optional<String> organizationId,
-            Optional<String> connectionId,
-            Optional<String> email,
-            Optional<Integer> ttlSec,
-            Optional<Boolean> markEmailAsVerified,
-            Optional<Boolean> includeEmailInRedirect,
-            Optional<ChangePasswordTicketIdentity> identity,
-            Map<String, Object> additionalProperties) {
+    private ChangePasswordTicketRequestContent(Optional<String> resultUrl, Optional<String> userId, Optional<String> clientId, Optional<String> organizationId, Optional<String> connectionId, Optional<String> email, Optional<Integer> ttlSec, Optional<Boolean> markEmailAsVerified, Optional<Boolean> includeEmailInRedirect, Optional<ChangePasswordTicketIdentity> identity, Map<String, Object> additionalProperties) {
         this.resultUrl = resultUrl;
         this.userId = userId;
         this.clientId = clientId;
@@ -72,7 +62,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("result_url")
     public Optional<String> getResultUrl() {
-        return resultUrl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +70,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("user_id")
     public Optional<String> getUserId() {
-        return userId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +78,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,7 +86,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("organization_id")
     public Optional<String> getOrganizationId() {
-        return organizationId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -104,7 +94,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("connection_id")
     public Optional<String> getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -112,7 +102,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("email")
     public Optional<String> getEmail() {
-        return email;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -120,7 +110,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("ttl_sec")
     public Optional<Integer> getTtlSec() {
-        return ttlSec;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -128,7 +118,7 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("mark_email_as_verified")
     public Optional<Boolean> getMarkEmailAsVerified() {
-        return markEmailAsVerified;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -136,65 +126,45 @@ public final class ChangePasswordTicketRequestContent {
      */
     @JsonProperty("includeEmailInRedirect")
     public Optional<Boolean> getIncludeEmailInRedirect() {
-        return includeEmailInRedirect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("identity")
     public Optional<ChangePasswordTicketIdentity> getIdentity() {
-        return identity;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof ChangePasswordTicketRequestContent
-                && equalTo((ChangePasswordTicketRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(ChangePasswordTicketRequestContent other) {
-        return resultUrl.equals(other.resultUrl)
-                && userId.equals(other.userId)
-                && clientId.equals(other.clientId)
-                && organizationId.equals(other.organizationId)
-                && connectionId.equals(other.connectionId)
-                && email.equals(other.email)
-                && ttlSec.equals(other.ttlSec)
-                && markEmailAsVerified.equals(other.markEmailAsVerified)
-                && includeEmailInRedirect.equals(other.includeEmailInRedirect)
-                && identity.equals(other.identity);
+        return resultUrl.equals(other.resultUrl) && userId.equals(other.userId) && clientId.equals(other.clientId) && organizationId.equals(other.organizationId) && connectionId.equals(other.connectionId) && email.equals(other.email) && ttlSec.equals(other.ttlSec) && markEmailAsVerified.equals(other.markEmailAsVerified) && includeEmailInRedirect.equals(other.includeEmailInRedirect) && identity.equals(other.identity);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.resultUrl,
-                this.userId,
-                this.clientId,
-                this.organizationId,
-                this.connectionId,
-                this.email,
-                this.ttlSec,
-                this.markEmailAsVerified,
-                this.includeEmailInRedirect,
-                this.identity);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> resultUrl = Optional.empty();
 
         private Optional<String> userId = Optional.empty();
@@ -218,20 +188,11 @@ public final class ChangePasswordTicketRequestContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(ChangePasswordTicketRequestContent other) {
-            resultUrl(other.getResultUrl());
-            userId(other.getUserId());
-            clientId(other.getClientId());
-            organizationId(other.getOrganizationId());
-            connectionId(other.getConnectionId());
-            email(other.getEmail());
-            ttlSec(other.getTtlSec());
-            markEmailAsVerified(other.getMarkEmailAsVerified());
-            includeEmailInRedirect(other.getIncludeEmailInRedirect());
-            identity(other.getIdentity());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -239,13 +200,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "result_url", nulls = Nulls.SKIP)
         public Builder resultUrl(Optional<String> resultUrl) {
-            this.resultUrl = resultUrl;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder resultUrl(String resultUrl) {
-            this.resultUrl = Optional.ofNullable(resultUrl);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -253,13 +212,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "user_id", nulls = Nulls.SKIP)
         public Builder userId(Optional<String> userId) {
-            this.userId = userId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder userId(String userId) {
-            this.userId = Optional.ofNullable(userId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -267,13 +224,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -281,13 +236,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "organization_id", nulls = Nulls.SKIP)
         public Builder organizationId(Optional<String> organizationId) {
-            this.organizationId = organizationId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -295,13 +248,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "connection_id", nulls = Nulls.SKIP)
         public Builder connectionId(Optional<String> connectionId) {
-            this.connectionId = connectionId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -309,13 +260,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "email", nulls = Nulls.SKIP)
         public Builder email(Optional<String> email) {
-            this.email = email;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder email(String email) {
-            this.email = Optional.ofNullable(email);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -323,13 +272,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "ttl_sec", nulls = Nulls.SKIP)
         public Builder ttlSec(Optional<Integer> ttlSec) {
-            this.ttlSec = ttlSec;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder ttlSec(Integer ttlSec) {
-            this.ttlSec = Optional.ofNullable(ttlSec);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -337,13 +284,11 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "mark_email_as_verified", nulls = Nulls.SKIP)
         public Builder markEmailAsVerified(Optional<Boolean> markEmailAsVerified) {
-            this.markEmailAsVerified = markEmailAsVerified;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder markEmailAsVerified(Boolean markEmailAsVerified) {
-            this.markEmailAsVerified = Optional.ofNullable(markEmailAsVerified);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -351,49 +296,32 @@ public final class ChangePasswordTicketRequestContent {
          */
         @JsonSetter(value = "includeEmailInRedirect", nulls = Nulls.SKIP)
         public Builder includeEmailInRedirect(Optional<Boolean> includeEmailInRedirect) {
-            this.includeEmailInRedirect = includeEmailInRedirect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder includeEmailInRedirect(Boolean includeEmailInRedirect) {
-            this.includeEmailInRedirect = Optional.ofNullable(includeEmailInRedirect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "identity", nulls = Nulls.SKIP)
         public Builder identity(Optional<ChangePasswordTicketIdentity> identity) {
-            this.identity = identity;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder identity(ChangePasswordTicketIdentity identity) {
-            this.identity = Optional.ofNullable(identity);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public ChangePasswordTicketRequestContent build() {
-            return new ChangePasswordTicketRequestContent(
-                    resultUrl,
-                    userId,
-                    clientId,
-                    organizationId,
-                    connectionId,
-                    email,
-                    ttlSec,
-                    markEmailAsVerified,
-                    includeEmailInRedirect,
-                    identity,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

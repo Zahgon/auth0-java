@@ -16,6 +16,7 @@ import com.auth0.client.mgmt.verifiablecredentials.verification.types.UpdateVeri
 import java.util.concurrent.CompletableFuture;
 
 public class AsyncTemplatesClient {
+
     protected final ClientOptions clientOptions;
 
     private final AsyncRawTemplatesClient rawClient;
@@ -29,113 +30,104 @@ public class AsyncTemplatesClient {
      * Get responses with HTTP metadata like headers
      */
     public AsyncRawTemplatesClient withRawResponse() {
-        return this.rawClient;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
     public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list() {
-        return this.rawClient.list().thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
-    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(
-            RequestOptions requestOptions) {
-        return this.rawClient.list(requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
-    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(
-            ListVerifiableCredentialTemplatesRequestParameters request) {
-        return this.rawClient.list(request).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(ListVerifiableCredentialTemplatesRequestParameters request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * List verifiable credential templates.
      */
-    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(
-            ListVerifiableCredentialTemplatesRequestParameters request, RequestOptions requestOptions) {
-        return this.rawClient.list(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<SyncPagingIterable<VerifiableCredentialTemplateResponse>> list(ListVerifiableCredentialTemplatesRequestParameters request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a verifiable credential template.
      */
-    public CompletableFuture<CreateVerifiableCredentialTemplateResponseContent> create(
-            CreateVerifiableCredentialTemplateRequestContent request) {
-        return this.rawClient.create(request).thenApply(response -> response.body());
+    public CompletableFuture<CreateVerifiableCredentialTemplateResponseContent> create(CreateVerifiableCredentialTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Create a verifiable credential template.
      */
-    public CompletableFuture<CreateVerifiableCredentialTemplateResponseContent> create(
-            CreateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.create(request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<CreateVerifiableCredentialTemplateResponseContent> create(CreateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a verifiable credential template.
      */
     public CompletableFuture<GetVerifiableCredentialTemplateResponseContent> get(String id) {
-        return this.rawClient.get(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Get a verifiable credential template.
      */
-    public CompletableFuture<GetVerifiableCredentialTemplateResponseContent> get(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.get(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<GetVerifiableCredentialTemplateResponseContent> get(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a verifiable credential template.
      */
     public CompletableFuture<Void> delete(String id) {
-        return this.rawClient.delete(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Delete a verifiable credential template.
      */
     public CompletableFuture<Void> delete(String id, RequestOptions requestOptions) {
-        return this.rawClient.delete(id, requestOptions).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
     public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(String id) {
-        return this.rawClient.update(id).thenApply(response -> response.body());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
-    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(
-            String id, RequestOptions requestOptions) {
-        return this.rawClient.update(id, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(String id, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
-    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(
-            String id, UpdateVerifiableCredentialTemplateRequestContent request) {
-        return this.rawClient.update(id, request).thenApply(response -> response.body());
+    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(String id, UpdateVerifiableCredentialTemplateRequestContent request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Update a verifiable credential template.
      */
-    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(
-            String id, UpdateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
-        return this.rawClient.update(id, request, requestOptions).thenApply(response -> response.body());
+    public CompletableFuture<UpdateVerifiableCredentialTemplateResponseContent> update(String id, UpdateVerifiableCredentialTemplateRequestContent request, RequestOptions requestOptions) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

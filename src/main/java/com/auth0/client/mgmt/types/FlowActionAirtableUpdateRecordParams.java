@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = FlowActionAirtableUpdateRecordParams.Builder.class)
 public final class FlowActionAirtableUpdateRecordParams {
+
     private final String connectionId;
 
     private final String baseId;
@@ -33,13 +34,7 @@ public final class FlowActionAirtableUpdateRecordParams {
 
     private final Map<String, Object> additionalProperties;
 
-    private FlowActionAirtableUpdateRecordParams(
-            String connectionId,
-            String baseId,
-            String tableName,
-            String recordId,
-            Optional<Map<String, Object>> fields,
-            Map<String, Object> additionalProperties) {
+    private FlowActionAirtableUpdateRecordParams(String connectionId, String baseId, String tableName, String recordId, Optional<Map<String, Object>> fields, Map<String, Object> additionalProperties) {
         this.connectionId = connectionId;
         this.baseId = baseId;
         this.tableName = tableName;
@@ -50,82 +45,81 @@ public final class FlowActionAirtableUpdateRecordParams {
 
     @JsonProperty("connection_id")
     public String getConnectionId() {
-        return connectionId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("base_id")
     public String getBaseId() {
-        return baseId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("table_name")
     public String getTableName() {
-        return tableName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("record_id")
     public String getRecordId() {
-        return recordId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("fields")
     public Optional<Map<String, Object>> getFields() {
-        return fields;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof FlowActionAirtableUpdateRecordParams
-                && equalTo((FlowActionAirtableUpdateRecordParams) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(FlowActionAirtableUpdateRecordParams other) {
-        return connectionId.equals(other.connectionId)
-                && baseId.equals(other.baseId)
-                && tableName.equals(other.tableName)
-                && recordId.equals(other.recordId)
-                && fields.equals(other.fields);
+        return connectionId.equals(other.connectionId) && baseId.equals(other.baseId) && tableName.equals(other.tableName) && recordId.equals(other.recordId) && fields.equals(other.fields);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.connectionId, this.baseId, this.tableName, this.recordId, this.fields);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static ConnectionIdStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface ConnectionIdStage {
+
         BaseIdStage connectionId(@NotNull String connectionId);
 
         Builder from(FlowActionAirtableUpdateRecordParams other);
     }
 
     public interface BaseIdStage {
+
         TableNameStage baseId(@NotNull String baseId);
     }
 
     public interface TableNameStage {
+
         RecordIdStage tableName(@NotNull String tableName);
     }
 
     public interface RecordIdStage {
+
         _FinalStage recordId(@NotNull String recordId);
     }
 
     public interface _FinalStage {
+
         FlowActionAirtableUpdateRecordParams build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -138,8 +132,8 @@ public final class FlowActionAirtableUpdateRecordParams {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder
-            implements ConnectionIdStage, BaseIdStage, TableNameStage, RecordIdStage, _FinalStage {
+    public static final class Builder implements ConnectionIdStage, BaseIdStage, TableNameStage, RecordIdStage, _FinalStage {
+
         private String connectionId;
 
         private String baseId;
@@ -153,75 +147,62 @@ public final class FlowActionAirtableUpdateRecordParams {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(FlowActionAirtableUpdateRecordParams other) {
-            connectionId(other.getConnectionId());
-            baseId(other.getBaseId());
-            tableName(other.getTableName());
-            recordId(other.getRecordId());
-            fields(other.getFields());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection_id")
         public BaseIdStage connectionId(@NotNull String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId, "connectionId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("base_id")
         public TableNameStage baseId(@NotNull String baseId) {
-            this.baseId = Objects.requireNonNull(baseId, "baseId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("table_name")
         public RecordIdStage tableName(@NotNull String tableName) {
-            this.tableName = Objects.requireNonNull(tableName, "tableName must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("record_id")
         public _FinalStage recordId(@NotNull String recordId) {
-            this.recordId = Objects.requireNonNull(recordId, "recordId must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public _FinalStage fields(Map<String, Object> fields) {
-            this.fields = Optional.ofNullable(fields);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter(value = "fields", nulls = Nulls.SKIP)
         public _FinalStage fields(Optional<Map<String, Object>> fields) {
-            this.fields = fields;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public FlowActionAirtableUpdateRecordParams build() {
-            return new FlowActionAirtableUpdateRecordParams(
-                    connectionId, baseId, tableName, recordId, fields, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

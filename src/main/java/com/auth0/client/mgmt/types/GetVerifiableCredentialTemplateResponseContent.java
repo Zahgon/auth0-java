@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = GetVerifiableCredentialTemplateResponseContent.Builder.class)
 public final class GetVerifiableCredentialTemplateResponseContent {
+
     private final Optional<String> id;
 
     private final Optional<String> name;
@@ -44,17 +45,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
 
     private final Map<String, Object> additionalProperties;
 
-    private GetVerifiableCredentialTemplateResponseContent(
-            Optional<String> id,
-            Optional<String> name,
-            Optional<String> type,
-            Optional<String> dialect,
-            Optional<MdlPresentationRequest> presentation,
-            OptionalNullable<String> customCertificateAuthority,
-            OptionalNullable<String> wellKnownTrustedIssuers,
-            Optional<OffsetDateTime> createdAt,
-            Optional<OffsetDateTime> updatedAt,
-            Map<String, Object> additionalProperties) {
+    private GetVerifiableCredentialTemplateResponseContent(Optional<String> id, Optional<String> name, Optional<String> type, Optional<String> dialect, Optional<MdlPresentationRequest> presentation, OptionalNullable<String> customCertificateAuthority, OptionalNullable<String> wellKnownTrustedIssuers, Optional<OffsetDateTime> createdAt, Optional<OffsetDateTime> updatedAt, Map<String, Object> additionalProperties) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -72,7 +63,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("id")
     public Optional<String> getId() {
-        return id;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,7 +71,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("name")
     public Optional<String> getName() {
-        return name;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -88,7 +79,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("type")
     public Optional<String> getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -96,12 +87,12 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("dialect")
     public Optional<String> getDialect() {
-        return dialect;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("presentation")
     public Optional<MdlPresentationRequest> getPresentation() {
-        return presentation;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -110,10 +101,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("custom_certificate_authority")
     public OptionalNullable<String> getCustomCertificateAuthority() {
-        if (customCertificateAuthority == null) {
-            return OptionalNullable.absent();
-        }
-        return customCertificateAuthority;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -122,10 +110,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("well_known_trusted_issuers")
     public OptionalNullable<String> getWellKnownTrustedIssuers() {
-        if (wellKnownTrustedIssuers == null) {
-            return OptionalNullable.absent();
-        }
-        return wellKnownTrustedIssuers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -133,7 +118,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("created_at")
     public Optional<OffsetDateTime> getCreatedAt() {
-        return createdAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -141,7 +126,7 @@ public final class GetVerifiableCredentialTemplateResponseContent {
      */
     @JsonProperty("updated_at")
     public Optional<OffsetDateTime> getUpdatedAt() {
-        return updatedAt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -158,53 +143,35 @@ public final class GetVerifiableCredentialTemplateResponseContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof GetVerifiableCredentialTemplateResponseContent
-                && equalTo((GetVerifiableCredentialTemplateResponseContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(GetVerifiableCredentialTemplateResponseContent other) {
-        return id.equals(other.id)
-                && name.equals(other.name)
-                && type.equals(other.type)
-                && dialect.equals(other.dialect)
-                && presentation.equals(other.presentation)
-                && customCertificateAuthority.equals(other.customCertificateAuthority)
-                && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers)
-                && createdAt.equals(other.createdAt)
-                && updatedAt.equals(other.updatedAt);
+        return id.equals(other.id) && name.equals(other.name) && type.equals(other.type) && dialect.equals(other.dialect) && presentation.equals(other.presentation) && customCertificateAuthority.equals(other.customCertificateAuthority) && wellKnownTrustedIssuers.equals(other.wellKnownTrustedIssuers) && createdAt.equals(other.createdAt) && updatedAt.equals(other.updatedAt);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(
-                this.id,
-                this.name,
-                this.type,
-                this.dialect,
-                this.presentation,
-                this.customCertificateAuthority,
-                this.wellKnownTrustedIssuers,
-                this.createdAt,
-                this.updatedAt);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<String> id = Optional.empty();
 
         private Optional<String> name = Optional.empty();
@@ -226,19 +193,11 @@ public final class GetVerifiableCredentialTemplateResponseContent {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(GetVerifiableCredentialTemplateResponseContent other) {
-            id(other.getId());
-            name(other.getName());
-            type(other.getType());
-            dialect(other.getDialect());
-            presentation(other.getPresentation());
-            customCertificateAuthority(other.getCustomCertificateAuthority());
-            wellKnownTrustedIssuers(other.getWellKnownTrustedIssuers());
-            createdAt(other.getCreatedAt());
-            updatedAt(other.getUpdatedAt());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -246,13 +205,11 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "id", nulls = Nulls.SKIP)
         public Builder id(Optional<String> id) {
-            this.id = id;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder id(String id) {
-            this.id = Optional.ofNullable(id);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -260,13 +217,11 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "name", nulls = Nulls.SKIP)
         public Builder name(Optional<String> name) {
-            this.name = name;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder name(String name) {
-            this.name = Optional.ofNullable(name);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -274,13 +229,11 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "type", nulls = Nulls.SKIP)
         public Builder type(Optional<String> type) {
-            this.type = type;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder type(String type) {
-            this.type = Optional.ofNullable(type);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -288,24 +241,20 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "dialect", nulls = Nulls.SKIP)
         public Builder dialect(Optional<String> dialect) {
-            this.dialect = dialect;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder dialect(String dialect) {
-            this.dialect = Optional.ofNullable(dialect);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "presentation", nulls = Nulls.SKIP)
         public Builder presentation(Optional<MdlPresentationRequest> presentation) {
-            this.presentation = presentation;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder presentation(MdlPresentationRequest presentation) {
-            this.presentation = Optional.ofNullable(presentation);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -313,34 +262,19 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "custom_certificate_authority", nulls = Nulls.SKIP)
         public Builder customCertificateAuthority(@Nullable OptionalNullable<String> customCertificateAuthority) {
-            this.customCertificateAuthority = customCertificateAuthority;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customCertificateAuthority(String customCertificateAuthority) {
-            this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder customCertificateAuthority(Optional<String> customCertificateAuthority) {
-            if (customCertificateAuthority.isPresent()) {
-                this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority.get());
-            } else {
-                this.customCertificateAuthority = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder customCertificateAuthority(
-                com.auth0.client.mgmt.core.Nullable<String> customCertificateAuthority) {
-            if (customCertificateAuthority.isNull()) {
-                this.customCertificateAuthority = OptionalNullable.ofNull();
-            } else if (customCertificateAuthority.isEmpty()) {
-                this.customCertificateAuthority = OptionalNullable.absent();
-            } else {
-                this.customCertificateAuthority = OptionalNullable.of(customCertificateAuthority.get());
-            }
-            return this;
+        public Builder customCertificateAuthority(com.auth0.client.mgmt.core.Nullable<String> customCertificateAuthority) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -348,33 +282,19 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "well_known_trusted_issuers", nulls = Nulls.SKIP)
         public Builder wellKnownTrustedIssuers(@Nullable OptionalNullable<String> wellKnownTrustedIssuers) {
-            this.wellKnownTrustedIssuers = wellKnownTrustedIssuers;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(String wellKnownTrustedIssuers) {
-            this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(Optional<String> wellKnownTrustedIssuers) {
-            if (wellKnownTrustedIssuers.isPresent()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers.get());
-            } else {
-                this.wellKnownTrustedIssuers = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder wellKnownTrustedIssuers(com.auth0.client.mgmt.core.Nullable<String> wellKnownTrustedIssuers) {
-            if (wellKnownTrustedIssuers.isNull()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.ofNull();
-            } else if (wellKnownTrustedIssuers.isEmpty()) {
-                this.wellKnownTrustedIssuers = OptionalNullable.absent();
-            } else {
-                this.wellKnownTrustedIssuers = OptionalNullable.of(wellKnownTrustedIssuers.get());
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -382,13 +302,11 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "created_at", nulls = Nulls.SKIP)
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            this.createdAt = createdAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -396,37 +314,23 @@ public final class GetVerifiableCredentialTemplateResponseContent {
          */
         @JsonSetter(value = "updated_at", nulls = Nulls.SKIP)
         public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder updatedAt(OffsetDateTime updatedAt) {
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public GetVerifiableCredentialTemplateResponseContent build() {
-            return new GetVerifiableCredentialTemplateResponseContent(
-                    id,
-                    name,
-                    type,
-                    dialect,
-                    presentation,
-                    customCertificateAuthority,
-                    wellKnownTrustedIssuers,
-                    createdAt,
-                    updatedAt,
-                    additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

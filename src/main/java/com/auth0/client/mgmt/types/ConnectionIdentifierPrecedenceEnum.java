@@ -7,14 +7,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class ConnectionIdentifierPrecedenceEnum {
-    public static final ConnectionIdentifierPrecedenceEnum EMAIL =
-            new ConnectionIdentifierPrecedenceEnum(Value.EMAIL, "email");
 
-    public static final ConnectionIdentifierPrecedenceEnum PHONE_NUMBER =
-            new ConnectionIdentifierPrecedenceEnum(Value.PHONE_NUMBER, "phone_number");
+    public static final ConnectionIdentifierPrecedenceEnum EMAIL = new ConnectionIdentifierPrecedenceEnum(Value.EMAIL, "email");
 
-    public static final ConnectionIdentifierPrecedenceEnum USERNAME =
-            new ConnectionIdentifierPrecedenceEnum(Value.USERNAME, "username");
+    public static final ConnectionIdentifierPrecedenceEnum PHONE_NUMBER = new ConnectionIdentifierPrecedenceEnum(Value.PHONE_NUMBER, "phone_number");
+
+    public static final ConnectionIdentifierPrecedenceEnum USERNAME = new ConnectionIdentifierPrecedenceEnum(Value.USERNAME, "username");
 
     private final Value value;
 
@@ -26,66 +24,41 @@ public final class ConnectionIdentifierPrecedenceEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof ConnectionIdentifierPrecedenceEnum
-                        && this.string.equals(((ConnectionIdentifierPrecedenceEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case EMAIL:
-                return visitor.visitEmail();
-            case PHONE_NUMBER:
-                return visitor.visitPhoneNumber();
-            case USERNAME:
-                return visitor.visitUsername();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static ConnectionIdentifierPrecedenceEnum valueOf(String value) {
-        switch (value) {
-            case "email":
-                return EMAIL;
-            case "phone_number":
-                return PHONE_NUMBER;
-            case "username":
-                return USERNAME;
-            default:
-                return new ConnectionIdentifierPrecedenceEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
-        EMAIL,
 
-        PHONE_NUMBER,
-
-        USERNAME,
-
-        UNKNOWN
+        EMAIL, PHONE_NUMBER, USERNAME, UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitEmail();
 
         T visitPhoneNumber();

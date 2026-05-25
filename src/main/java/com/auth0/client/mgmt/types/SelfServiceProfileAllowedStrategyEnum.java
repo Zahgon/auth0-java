@@ -7,35 +7,26 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public final class SelfServiceProfileAllowedStrategyEnum {
-    public static final SelfServiceProfileAllowedStrategyEnum OKTA_SAMLP =
-            new SelfServiceProfileAllowedStrategyEnum(Value.OKTA_SAMLP, "okta-samlp");
 
-    public static final SelfServiceProfileAllowedStrategyEnum PINGFEDERATE =
-            new SelfServiceProfileAllowedStrategyEnum(Value.PINGFEDERATE, "pingfederate");
+    public static final SelfServiceProfileAllowedStrategyEnum OKTA_SAMLP = new SelfServiceProfileAllowedStrategyEnum(Value.OKTA_SAMLP, "okta-samlp");
 
-    public static final SelfServiceProfileAllowedStrategyEnum OKTA =
-            new SelfServiceProfileAllowedStrategyEnum(Value.OKTA, "okta");
+    public static final SelfServiceProfileAllowedStrategyEnum PINGFEDERATE = new SelfServiceProfileAllowedStrategyEnum(Value.PINGFEDERATE, "pingfederate");
 
-    public static final SelfServiceProfileAllowedStrategyEnum SAMLP =
-            new SelfServiceProfileAllowedStrategyEnum(Value.SAMLP, "samlp");
+    public static final SelfServiceProfileAllowedStrategyEnum OKTA = new SelfServiceProfileAllowedStrategyEnum(Value.OKTA, "okta");
 
-    public static final SelfServiceProfileAllowedStrategyEnum WAAD =
-            new SelfServiceProfileAllowedStrategyEnum(Value.WAAD, "waad");
+    public static final SelfServiceProfileAllowedStrategyEnum SAMLP = new SelfServiceProfileAllowedStrategyEnum(Value.SAMLP, "samlp");
 
-    public static final SelfServiceProfileAllowedStrategyEnum AUTH0SAMLP =
-            new SelfServiceProfileAllowedStrategyEnum(Value.AUTH0SAMLP, "auth0-samlp");
+    public static final SelfServiceProfileAllowedStrategyEnum WAAD = new SelfServiceProfileAllowedStrategyEnum(Value.WAAD, "waad");
 
-    public static final SelfServiceProfileAllowedStrategyEnum KEYCLOAK_SAMLP =
-            new SelfServiceProfileAllowedStrategyEnum(Value.KEYCLOAK_SAMLP, "keycloak-samlp");
+    public static final SelfServiceProfileAllowedStrategyEnum AUTH0SAMLP = new SelfServiceProfileAllowedStrategyEnum(Value.AUTH0SAMLP, "auth0-samlp");
 
-    public static final SelfServiceProfileAllowedStrategyEnum OIDC =
-            new SelfServiceProfileAllowedStrategyEnum(Value.OIDC, "oidc");
+    public static final SelfServiceProfileAllowedStrategyEnum KEYCLOAK_SAMLP = new SelfServiceProfileAllowedStrategyEnum(Value.KEYCLOAK_SAMLP, "keycloak-samlp");
 
-    public static final SelfServiceProfileAllowedStrategyEnum ADFS =
-            new SelfServiceProfileAllowedStrategyEnum(Value.ADFS, "adfs");
+    public static final SelfServiceProfileAllowedStrategyEnum OIDC = new SelfServiceProfileAllowedStrategyEnum(Value.OIDC, "oidc");
 
-    public static final SelfServiceProfileAllowedStrategyEnum GOOGLE_APPS =
-            new SelfServiceProfileAllowedStrategyEnum(Value.GOOGLE_APPS, "google-apps");
+    public static final SelfServiceProfileAllowedStrategyEnum ADFS = new SelfServiceProfileAllowedStrategyEnum(Value.ADFS, "adfs");
+
+    public static final SelfServiceProfileAllowedStrategyEnum GOOGLE_APPS = new SelfServiceProfileAllowedStrategyEnum(Value.GOOGLE_APPS, "google-apps");
 
     private final Value value;
 
@@ -47,108 +38,51 @@ public final class SelfServiceProfileAllowedStrategyEnum {
     }
 
     public Value getEnumValue() {
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     @JsonValue
     public String toString() {
-        return this.string;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        return (this == other)
-                || (other instanceof SelfServiceProfileAllowedStrategyEnum
-                        && this.string.equals(((SelfServiceProfileAllowedStrategyEnum) other).string));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public int hashCode() {
-        return this.string.hashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> T visit(Visitor<T> visitor) {
-        switch (value) {
-            case OKTA_SAMLP:
-                return visitor.visitOktaSamlp();
-            case PINGFEDERATE:
-                return visitor.visitPingfederate();
-            case OKTA:
-                return visitor.visitOkta();
-            case SAMLP:
-                return visitor.visitSamlp();
-            case WAAD:
-                return visitor.visitWaad();
-            case AUTH0SAMLP:
-                return visitor.visitAuth0Samlp();
-            case KEYCLOAK_SAMLP:
-                return visitor.visitKeycloakSamlp();
-            case OIDC:
-                return visitor.visitOidc();
-            case ADFS:
-                return visitor.visitAdfs();
-            case GOOGLE_APPS:
-                return visitor.visitGoogleApps();
-            case UNKNOWN:
-            default:
-                return visitor.visitUnknown(string);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
     public static SelfServiceProfileAllowedStrategyEnum valueOf(String value) {
-        switch (value) {
-            case "okta-samlp":
-                return OKTA_SAMLP;
-            case "pingfederate":
-                return PINGFEDERATE;
-            case "okta":
-                return OKTA;
-            case "samlp":
-                return SAMLP;
-            case "waad":
-                return WAAD;
-            case "auth0-samlp":
-                return AUTH0SAMLP;
-            case "keycloak-samlp":
-                return KEYCLOAK_SAMLP;
-            case "oidc":
-                return OIDC;
-            case "adfs":
-                return ADFS;
-            case "google-apps":
-                return GOOGLE_APPS;
-            default:
-                return new SelfServiceProfileAllowedStrategyEnum(Value.UNKNOWN, value);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public enum Value {
+
         OIDC,
-
         SAMLP,
-
         WAAD,
-
         GOOGLE_APPS,
-
         ADFS,
-
         OKTA,
-
         AUTH0SAMLP,
-
         OKTA_SAMLP,
-
         KEYCLOAK_SAMLP,
-
         PINGFEDERATE,
-
         UNKNOWN
     }
 
     public interface Visitor<T> {
+
         T visitOidc();
 
         T visitSamlp();

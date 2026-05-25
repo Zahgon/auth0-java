@@ -20,6 +20,7 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = SelfServiceProfileSsoTicketIdpInitiatedOptions.Builder.class)
 public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
+
     private final Optional<Boolean> enabled;
 
     private final Optional<String> clientId;
@@ -30,12 +31,7 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
 
     private final Map<String, Object> additionalProperties;
 
-    private SelfServiceProfileSsoTicketIdpInitiatedOptions(
-            Optional<Boolean> enabled,
-            Optional<String> clientId,
-            Optional<SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum> clientProtocol,
-            Optional<String> clientAuthorizequery,
-            Map<String, Object> additionalProperties) {
+    private SelfServiceProfileSsoTicketIdpInitiatedOptions(Optional<Boolean> enabled, Optional<String> clientId, Optional<SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum> clientProtocol, Optional<String> clientAuthorizequery, Map<String, Object> additionalProperties) {
         this.enabled = enabled;
         this.clientId = clientId;
         this.clientProtocol = clientProtocol;
@@ -48,7 +44,7 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
      */
     @JsonProperty("enabled")
     public Optional<Boolean> getEnabled() {
-        return enabled;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -56,12 +52,12 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
      */
     @JsonProperty("client_id")
     public Optional<String> getClientId() {
-        return clientId;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("client_protocol")
     public Optional<SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum> getClientProtocol() {
-        return clientProtocol;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,44 +65,40 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
      */
     @JsonProperty("client_authorizequery")
     public Optional<String> getClientAuthorizequery() {
-        return clientAuthorizequery;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof SelfServiceProfileSsoTicketIdpInitiatedOptions
-                && equalTo((SelfServiceProfileSsoTicketIdpInitiatedOptions) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(SelfServiceProfileSsoTicketIdpInitiatedOptions other) {
-        return enabled.equals(other.enabled)
-                && clientId.equals(other.clientId)
-                && clientProtocol.equals(other.clientProtocol)
-                && clientAuthorizequery.equals(other.clientAuthorizequery);
+        return enabled.equals(other.enabled) && clientId.equals(other.clientId) && clientProtocol.equals(other.clientProtocol) && clientAuthorizequery.equals(other.clientAuthorizequery);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.enabled, this.clientId, this.clientProtocol, this.clientAuthorizequery);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private Optional<Boolean> enabled = Optional.empty();
 
         private Optional<String> clientId = Optional.empty();
@@ -118,14 +110,11 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(SelfServiceProfileSsoTicketIdpInitiatedOptions other) {
-            enabled(other.getEnabled());
-            clientId(other.getClientId());
-            clientProtocol(other.getClientProtocol());
-            clientAuthorizequery(other.getClientAuthorizequery());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -133,13 +122,11 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
          */
         @JsonSetter(value = "enabled", nulls = Nulls.SKIP)
         public Builder enabled(Optional<Boolean> enabled) {
-            this.enabled = enabled;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Optional.ofNullable(enabled);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -147,25 +134,20 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
          */
         @JsonSetter(value = "client_id", nulls = Nulls.SKIP)
         public Builder clientId(Optional<String> clientId) {
-            this.clientId = clientId;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @JsonSetter(value = "client_protocol", nulls = Nulls.SKIP)
-        public Builder clientProtocol(
-                Optional<SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum> clientProtocol) {
-            this.clientProtocol = clientProtocol;
-            return this;
+        public Builder clientProtocol(Optional<SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum> clientProtocol) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientProtocol(SelfServiceProfileSsoTicketIdpInitiatedClientProtocolEnum clientProtocol) {
-            this.clientProtocol = Optional.ofNullable(clientProtocol);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -173,28 +155,23 @@ public final class SelfServiceProfileSsoTicketIdpInitiatedOptions {
          */
         @JsonSetter(value = "client_authorizequery", nulls = Nulls.SKIP)
         public Builder clientAuthorizequery(Optional<String> clientAuthorizequery) {
-            this.clientAuthorizequery = clientAuthorizequery;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder clientAuthorizequery(String clientAuthorizequery) {
-            this.clientAuthorizequery = Optional.ofNullable(clientAuthorizequery);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public SelfServiceProfileSsoTicketIdpInitiatedOptions build() {
-            return new SelfServiceProfileSsoTicketIdpInitiatedOptions(
-                    enabled, clientId, clientProtocol, clientAuthorizequery, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

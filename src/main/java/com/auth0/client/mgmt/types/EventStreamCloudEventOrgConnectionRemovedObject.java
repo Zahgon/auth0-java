@@ -19,16 +19,14 @@ import org.jetbrains.annotations.NotNull;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = EventStreamCloudEventOrgConnectionRemovedObject.Builder.class)
 public final class EventStreamCloudEventOrgConnectionRemovedObject {
+
     private final EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization;
 
     private final EventStreamCloudEventOrgConnectionRemovedObjectConnection connection;
 
     private final Map<String, Object> additionalProperties;
 
-    private EventStreamCloudEventOrgConnectionRemovedObject(
-            EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization,
-            EventStreamCloudEventOrgConnectionRemovedObjectConnection connection,
-            Map<String, Object> additionalProperties) {
+    private EventStreamCloudEventOrgConnectionRemovedObject(EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization, EventStreamCloudEventOrgConnectionRemovedObjectConnection connection, Map<String, Object> additionalProperties) {
         this.organization = organization;
         this.connection = connection;
         this.additionalProperties = additionalProperties;
@@ -36,24 +34,22 @@ public final class EventStreamCloudEventOrgConnectionRemovedObject {
 
     @JsonProperty("organization")
     public EventStreamCloudEventOrgConnectionRemovedObjectOrganization getOrganization() {
-        return organization;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonProperty("connection")
     public EventStreamCloudEventOrgConnectionRemovedObjectConnection getConnection() {
-        return connection;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof EventStreamCloudEventOrgConnectionRemovedObject
-                && equalTo((EventStreamCloudEventOrgConnectionRemovedObject) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(EventStreamCloudEventOrgConnectionRemovedObject other) {
@@ -62,29 +58,32 @@ public final class EventStreamCloudEventOrgConnectionRemovedObject {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.organization, this.connection);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static OrganizationStage builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public interface OrganizationStage {
+
         ConnectionStage organization(@NotNull EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization);
 
         Builder from(EventStreamCloudEventOrgConnectionRemovedObject other);
     }
 
     public interface ConnectionStage {
+
         _FinalStage connection(@NotNull EventStreamCloudEventOrgConnectionRemovedObjectConnection connection);
     }
 
     public interface _FinalStage {
+
         EventStreamCloudEventOrgConnectionRemovedObject build();
 
         _FinalStage additionalProperty(String key, Object value);
@@ -94,6 +93,7 @@ public final class EventStreamCloudEventOrgConnectionRemovedObject {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder implements OrganizationStage, ConnectionStage, _FinalStage {
+
         private EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization;
 
         private EventStreamCloudEventOrgConnectionRemovedObjectConnection connection;
@@ -101,45 +101,39 @@ public final class EventStreamCloudEventOrgConnectionRemovedObject {
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         @java.lang.Override
         public Builder from(EventStreamCloudEventOrgConnectionRemovedObject other) {
-            organization(other.getOrganization());
-            connection(other.getConnection());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("organization")
-        public ConnectionStage organization(
-                @NotNull EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization) {
-            this.organization = Objects.requireNonNull(organization, "organization must not be null");
-            return this;
+        public ConnectionStage organization(@NotNull EventStreamCloudEventOrgConnectionRemovedObjectOrganization organization) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         @JsonSetter("connection")
         public _FinalStage connection(@NotNull EventStreamCloudEventOrgConnectionRemovedObjectConnection connection) {
-            this.connection = Objects.requireNonNull(connection, "connection must not be null");
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public EventStreamCloudEventOrgConnectionRemovedObject build() {
-            return new EventStreamCloudEventOrgConnectionRemovedObject(organization, connection, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @java.lang.Override
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

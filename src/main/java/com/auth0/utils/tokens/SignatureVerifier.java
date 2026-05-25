@@ -21,6 +21,7 @@ import com.auth0.utils.Asserts;
 public abstract class SignatureVerifier {
 
     private final JWTVerifier verifier;
+
     private final Algorithm algorithm;
 
     /**
@@ -30,7 +31,7 @@ public abstract class SignatureVerifier {
      * @return a {@code SignatureVerifier} for use with tokens signed using the HS256 signing algorithm.
      */
     public static SignatureVerifier forHS256(String secret) {
-        return new HS256SignatureVerifier(secret);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -43,7 +44,7 @@ public abstract class SignatureVerifier {
      * @see PublicKeyProvider
      */
     public static SignatureVerifier forRS256(PublicKeyProvider publicKeyProvider) {
-        return new RS256SignatureVerifier(publicKeyProvider);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -65,22 +66,7 @@ public abstract class SignatureVerifier {
      * @throws IdTokenValidationException if the signature verification failed.
      */
     DecodedJWT verifySignature(String token) throws IdTokenValidationException {
-        DecodedJWT decoded = decodeToken(token);
-
-        try {
-            this.verifier.verify(decoded);
-        } catch (AlgorithmMismatchException algorithmMismatchException) {
-            String message = String.format(
-                    "Signature algorithm of \"%s\" is not supported. Expected the ID token to be signed with \"%s\"",
-                    decoded.getAlgorithm(), this.algorithm.getName());
-            throw new IdTokenValidationException(message, algorithmMismatchException);
-        } catch (SignatureVerificationException signatureVerificationException) {
-            throw new IdTokenValidationException("Invalid ID token signature", signatureVerificationException);
-        } catch (JWTVerificationException ignored) {
-            // no-op. Would only occur for expired tokens, which will be handle during claims validation
-        }
-
-        return decoded;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private DecodedJWT decodeToken(String token) throws IdTokenValidationException {

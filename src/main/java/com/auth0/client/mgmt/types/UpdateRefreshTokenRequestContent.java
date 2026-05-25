@@ -23,12 +23,12 @@ import org.jetbrains.annotations.Nullable;
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonDeserialize(builder = UpdateRefreshTokenRequestContent.Builder.class)
 public final class UpdateRefreshTokenRequestContent {
+
     private final OptionalNullable<Map<String, Object>> refreshTokenMetadata;
 
     private final Map<String, Object> additionalProperties;
 
-    private UpdateRefreshTokenRequestContent(
-            OptionalNullable<Map<String, Object>> refreshTokenMetadata, Map<String, Object> additionalProperties) {
+    private UpdateRefreshTokenRequestContent(OptionalNullable<Map<String, Object>> refreshTokenMetadata, Map<String, Object> additionalProperties) {
         this.refreshTokenMetadata = refreshTokenMetadata;
         this.additionalProperties = additionalProperties;
     }
@@ -39,10 +39,7 @@ public final class UpdateRefreshTokenRequestContent {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
     @JsonProperty("refresh_token_metadata")
     public OptionalNullable<Map<String, Object>> getRefreshTokenMetadata() {
-        if (refreshTokenMetadata == null) {
-            return OptionalNullable.absent();
-        }
-        return refreshTokenMetadata;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -53,13 +50,12 @@ public final class UpdateRefreshTokenRequestContent {
 
     @java.lang.Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        return other instanceof UpdateRefreshTokenRequestContent && equalTo((UpdateRefreshTokenRequestContent) other);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean equalTo(UpdateRefreshTokenRequestContent other) {
@@ -68,30 +64,31 @@ public final class UpdateRefreshTokenRequestContent {
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.refreshTokenMetadata);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @java.lang.Override
     public String toString() {
-        return ObjectMappers.stringify(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static Builder builder() {
-        return new Builder();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+
         private OptionalNullable<Map<String, Object>> refreshTokenMetadata = OptionalNullable.absent();
 
         @JsonAnySetter
         private Map<String, Object> additionalProperties = new HashMap<>();
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder from(UpdateRefreshTokenRequestContent other) {
-            refreshTokenMetadata(other.getRefreshTokenMetadata());
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         /**
@@ -99,48 +96,31 @@ public final class UpdateRefreshTokenRequestContent {
          */
         @JsonSetter(value = "refresh_token_metadata", nulls = Nulls.SKIP)
         public Builder refreshTokenMetadata(@Nullable OptionalNullable<Map<String, Object>> refreshTokenMetadata) {
-            this.refreshTokenMetadata = refreshTokenMetadata;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshTokenMetadata(Map<String, Object> refreshTokenMetadata) {
-            this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder refreshTokenMetadata(Optional<Map<String, Object>> refreshTokenMetadata) {
-            if (refreshTokenMetadata.isPresent()) {
-                this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata.get());
-            } else {
-                this.refreshTokenMetadata = OptionalNullable.absent();
-            }
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public Builder refreshTokenMetadata(
-                com.auth0.client.mgmt.core.Nullable<Map<String, Object>> refreshTokenMetadata) {
-            if (refreshTokenMetadata.isNull()) {
-                this.refreshTokenMetadata = OptionalNullable.ofNull();
-            } else if (refreshTokenMetadata.isEmpty()) {
-                this.refreshTokenMetadata = OptionalNullable.absent();
-            } else {
-                this.refreshTokenMetadata = OptionalNullable.of(refreshTokenMetadata.get());
-            }
-            return this;
+        public Builder refreshTokenMetadata(com.auth0.client.mgmt.core.Nullable<Map<String, Object>> refreshTokenMetadata) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public UpdateRefreshTokenRequestContent build() {
-            return new UpdateRefreshTokenRequestContent(refreshTokenMetadata, additionalProperties);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperty(String key, Object value) {
-            this.additionalProperties.put(key, value);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Builder additionalProperties(Map<String, Object> additionalProperties) {
-            this.additionalProperties.putAll(additionalProperties);
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }
